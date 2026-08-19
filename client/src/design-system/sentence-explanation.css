@@ -1,0 +1,133 @@
+.sentence-lesson {
+  margin-top: var(--space-5);
+  overflow: hidden;
+  border: 1px solid var(--border-brand);
+  border-radius: var(--radius-medium);
+  background: var(--surface-brand-subtle);
+}
+
+.lesson-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-6);
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--border-brand);
+  background: var(--surface-raised);
+}
+
+.lesson-heading h3 {
+  margin-top: var(--space-1);
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+}
+
+.lesson-heading > p {
+  display: grid;
+  gap: 0.15rem;
+  text-align: right;
+}
+
+.lesson-heading > p span,
+.sentence-pattern span {
+  color: var(--text-secondary);
+  font-size: 0.68rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lesson-heading > p strong {
+  color: var(--text-primary);
+}
+
+.sentence-pattern {
+  display: grid;
+  gap: 0.3rem;
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--border-brand);
+}
+
+.sentence-parts {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sentence-parts li {
+  display: grid;
+  grid-template-columns: minmax(7rem, 0.35fr) 1fr;
+  gap: var(--space-5);
+  padding: var(--space-5);
+}
+
+.sentence-parts li + li {
+  border-top: 1px solid var(--border-brand);
+}
+
+.part-word {
+  display: grid;
+  align-content: start;
+  gap: 0.15rem;
+}
+
+.part-word span {
+  color: var(--text-brand);
+  font-size: 0.65rem;
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.part-word strong {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+}
+
+.part-word small,
+.sentence-parts dt {
+  color: var(--text-secondary);
+}
+
+.sentence-parts dl {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.sentence-parts dl div {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  gap: var(--space-3);
+}
+
+.sentence-parts dt {
+  font-size: 0.72rem;
+  font-weight: var(--weight-bold);
+}
+
+.sentence-parts dd {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+@media (width <= 560px) {
+  .lesson-heading,
+  .sentence-parts li,
+  .sentence-parts dl div {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-heading > p {
+    text-align: left;
+  }
+
+  .sentence-parts dl div {
+    gap: 0.15rem;
+  }
+}

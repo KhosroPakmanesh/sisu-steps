@@ -1,0 +1,21 @@
+<header class="site-header">
+  <a class="brand" [routerLink]="paths.home" aria-label="Sisu Steps home">
+    <span class="brand-mark" aria-hidden="true">S</span>
+    <span><strong>Sisu Steps</strong><small>Finnish exercise book</small></span>
+  </a>
+  <nav aria-label="Primary navigation">
+    <a
+      [routerLink]="paths.home"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      >Topics</a
+    >
+    <a [routerLink]="paths.reports" routerLinkActive="active">Reports</a>
+    <a [routerLink]="paths.data" routerLinkActive="active">Data</a>
+  </nav>
+</header>
+<router-outlet />
+<footer class="site-footer">
+  <p><strong>Sisu Steps</strong> · Your progress stays in this browser.</p>
+  <p>Static lessons · local progress</p>
+</footer>

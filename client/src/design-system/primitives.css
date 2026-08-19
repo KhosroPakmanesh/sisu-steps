@@ -1,0 +1,131 @@
+.page-shell {
+  width: min(100% - 2rem, var(--page-width));
+  margin: 0 auto;
+}
+
+.narrow-page {
+  width: min(100% - 2rem, var(--page-width-narrow));
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 2rem;
+  padding: 4rem 0 2rem;
+}
+
+.page-heading h1 {
+  margin-top: var(--space-1);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+}
+
+.eyebrow,
+.card-kicker {
+  color: var(--text-brand);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.card-kicker {
+  font-size: 0.62rem;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--control-height);
+  padding: 0.72rem 1.05rem;
+  border: 1px solid transparent;
+  border-radius: 0.65rem;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    transform var(--motion-fast) ease,
+    background var(--motion-fast) ease,
+    border-color var(--motion-fast) ease;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.button.primary {
+  background: var(--blue-700);
+  color: var(--surface-raised);
+}
+
+.button.primary:hover:not(:disabled) {
+  background: var(--blue-800);
+}
+
+.button.secondary {
+  border-color: var(--border-control);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+}
+
+.button.compact {
+  min-height: var(--control-height-compact);
+  padding: 0.55rem 0.8rem;
+  background: var(--blue-700);
+  color: var(--surface-raised);
+}
+
+.button.text-button {
+  color: var(--text-brand);
+}
+
+.button.danger {
+  background: var(--red-700);
+  color: var(--surface-raised);
+}
+
+.score-badge {
+  flex: 0 0 auto;
+  padding: 0.32rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background: var(--surface-success);
+  color: var(--text-success);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-bold);
+}
+
+.score-badge.quiet {
+  background: var(--surface-canvas);
+  color: var(--text-secondary);
+}
+
+.state-card {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-4);
+  width: min(100% - 2rem, 42rem);
+  margin: 6rem auto;
+  padding: 3rem;
+  text-align: center;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-large);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-small);
+}
+
+.state-card h1 {
+  font-size: 2.4rem;
+}
+
+.error-card {
+  border-color: var(--red-200);
+}

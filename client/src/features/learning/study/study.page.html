@@ -1,0 +1,287 @@
+<main class="runner-shell">
+  @if (completedAttempt(); as result) {
+    <section class="result-card" aria-live="polite">
+      @if (result.mode !== 'review') {
+        <div class="result-ring" [class.excellent]="result.percentage >= 80">
+          <strong>{{ result.percentage }}%</strong><span>score</span>
+        </div>
+      }
+      <p class="eyebrow">
+        {{ result.mode === 'review' ? 'Unscored review complete' : 'Session complete' }}
+      </p>
+      <h1>{{ result.title }}</h1>
+      <p>
+        You answered <strong>{{ result.correctCount }}</strong> of
+        <strong>{{ result.total }}</strong> correctly.
+      </p>
+      <div class="result-breakdown" aria-label="Session answer counts">
+        <span
+          ><strong>{{ result.correctCount }}</strong> correct</span
+        >
+        <span
+          ><strong>{{ result.incorrectCount ?? result.total - result.correctCount }}</strong>
+          incorrect</span
+        >
+        <span
+          ><strong>{{ result.skippedCount ?? 0 }}</strong> skipped</span
+        >
+      </div>
+      <div class="result-actions">
+        <a class="button primary" [routerLink]="paths.topic(result.topicId)">Return to topic</a>
+        @if (mistakeCountForTopic(result.topicId) > 0) {
+          <a class="button secondary" [routerLink]="paths.mistakes(result.topicId)"
+            >Practice mistakes</a
+          >
+        }
+        <a class="button text-button" [routerLink]="paths.reports">Open reports</a>
+      </div>
+    </section>
+  } @else if (pageError()) {
+    <section class="state-card error-card" role="alert">
+      <p class="eyebrow">Study session</p>
+      <h1>We could not continue</h1>
+      <p>{{ pageError() }}</p>
+      <a class="button primary" [routerLink]="paths.home">Back to topics</a>
+    </section>
+  } @else if (session(); as activeSession) {
+    @if (exercise(); as currentExercise) {
+      <header class="runner-header">
+        <a
+          class="back-link"
+          [routerLink]="paths.topic(activeSession.topicId)"
+          aria-label="Leave test and save progress"
+          >← Save & leave</a
+        >
+        <div class="runner-heading">
+          <p class="card-kicker">
+            {{
+              activeSession.mode === 'mistakes'
+                ? 'Focused review'
+                : activeSession.mode === 'review'
+                  ? 'Scheduled review · optional and unscored'
+                  : activeTest()?.set === 'extended'
+                    ? 'Extended test · optional additional depth'
+                    : activeTest()?.stage === 'guided-combination'
+                      ? 'Guided combination'
+                      : activeTest()?.stage === 'review'
+                        ? 'Review'
+                        : 'Focused test'
+            }}
+          </p>
+          <h1>{{ activeSession.title }}</h1>
+        </div>
+        <span class="question-count"
+          >{{ activeSession.currentIndex + 1 }} / {{ activeSession.exerciseIds.length }}</span
+        >
+      </header>
+      <div class="progress-track" aria-hidden="true">
+        <span
+          [style.width.%]="
+            ((activeSession.currentIndex + (feedback() ? 1 : 0)) /
+              activeSession.exerciseIds.length) *
+            100
+          "
+        ></span>
+      </div>
+      @if (activeTest(); as testFocus) {
+        <aside class="test-focus" aria-label="Test learning focus">
+          <strong>{{ testFocus.stage === 'review' ? 'Skills reviewed' : 'Your target' }}:</strong>
+          {{ testFocus.targetSkills.join(', ') }}
+          @if (testFocus.prerequisiteSkills.length > 0) {
+            <span>Uses earlier skills: {{ testFocus.prerequisiteSkills.join(', ') }}</span>
+          }
+        </aside>
+      }
+      <section class="exercise-card">
+        <div class="exercise-context">
+          <span class="type-label">{{ currentExercise.type.replace('-', ' ') }}</span>
+          <p>{{ currentExercise.instruction }}</p>
+        </div>
+        <h2>{{ currentExercise.prompt }}</h2>
+
+        @if (currentExercise.type === 'multiple-choice') {
+          <fieldset class="choice-list" [disabled]="!!feedback()">
+            <legend class="visually-hidden">Choose one answer</legend>
+            @for (option of currentExercise.options; track option) {
+              <label [class.selected]="response() === option">
+                <input
+                  type="radio"
+                  name="answer"
+                  [value]="option"
+                  [ngModel]="response()"
+                  (ngModelChange)="response.set($event)"
+                />
+                <span>{{ option }}</span>
+              </label>
+            }
+          </fieldset>
+        } @else if (currentExercise.type === 'word-order') {
+          <div class="word-builder">
+            <div class="answer-zone" aria-label="Your sentence">
+              @if (selectedTokenIndexes().length === 0) {
+                <span class="placeholder">Build the sentence here</span>
+              }
+              @for (tokenIndex of selectedTokenIndexes(); track $index; let position = $index) {
+                <button type="button" (click)="removeToken(position)">
+                  {{ currentExercise.tokens?.[tokenIndex] }}
+                </button>
+              }
+            </div>
+            <div class="token-bank" aria-label="Available words">
+              @for (token of currentExercise.tokens; track $index; let index = $index) {
+                <button
+                  type="button"
+                  [disabled]="selectedTokenIndexes().includes(index) || !!feedback()"
+                  (click)="chooseToken(index)"
+                >
+                  {{ token }}
+                </button>
+              }
+            </div>
+          </div>
+        } @else {
+          <label class="text-answer">
+            <span>Your answer</span>
+            <input
+              type="text"
+              autocomplete="off"
+              [disabled]="!!feedback()"
+              [ngModel]="response()"
+              (ngModelChange)="response.set($event)"
+              (keydown.enter)="submit()"
+              placeholder="Type your answer…"
+            />
+          </label>
+        }
+
+        @if (feedback(); as answer) {
+          <aside
+            class="feedback"
+            [class.correct]="answer.correct"
+            [class.incorrect]="!answer.correct && !answer.skipped"
+            [class.skipped]="answer.skipped"
+            aria-live="polite"
+          >
+            <div class="feedback-icon" aria-hidden="true">
+              {{ answer.skipped ? '?' : answer.correct ? '✓' : '!' }}
+            </div>
+            <div>
+              <p class="feedback-title">
+                {{
+                  answer.skipped
+                    ? 'Answer revealed'
+                    : answer.correct
+                      ? 'Correct — hyvä!'
+                      : 'Not quite yet'
+                }}
+              </p>
+              @if (!answer.correct && !answer.skipped) {
+                <p>
+                  Your answer: <strong>{{ answer.submittedAnswer }}</strong>
+                </p>
+              }
+              @if (answer.skipped) {
+                <p>
+                  This exercise was recorded as skipped, not incorrect, and did not change your
+                  mistakes.
+                </p>
+              }
+              @if (!answer.correct && !answer.skipped && answer.diagnosticExplanation) {
+                <p class="diagnostic">
+                  <strong>What happened:</strong> {{ answer.diagnosticExplanation }}
+                </p>
+              }
+              <p>
+                Correct answer: <strong lang="fi">{{ currentExercise.acceptedAnswers[0] }}</strong>
+              </p>
+              <p class="explanation">
+                <strong>How the correct answer is built:</strong> {{ currentExercise.explanation }}
+              </p>
+            </div>
+          </aside>
+          @if (currentExercise.sentenceExplanation; as lesson) {
+            <section class="sentence-lesson" aria-labelledby="sentence-lesson-title">
+              <div class="lesson-heading">
+                <div>
+                  <p class="card-kicker">Step-by-step explanation</p>
+                  <h3 id="sentence-lesson-title">How this sentence is built</h3>
+                </div>
+                <p>
+                  <span>Complete meaning</span><strong>{{ lesson.translation }}</strong>
+                </p>
+              </div>
+              <div class="sentence-pattern">
+                <span>Sentence pattern</span>
+                <strong>{{ lesson.pattern }}</strong>
+              </div>
+              <ol class="sentence-parts">
+                @for (part of lesson.parts; track $index) {
+                  <li>
+                    <div class="part-word">
+                      <span>Part {{ $index + 1 }}</span>
+                      <strong lang="fi">{{ part.finnish }}</strong>
+                      <small>{{ part.meaning }}</small>
+                    </div>
+                    <dl>
+                      <div>
+                        <dt>Job in this sentence</dt>
+                        <dd>{{ part.role }}</dd>
+                      </div>
+                      <div>
+                        <dt>Base form</dt>
+                        <dd lang="fi">{{ part.baseForm }}</dd>
+                      </div>
+                      <div>
+                        <dt>How it is made</dt>
+                        <dd>{{ part.formation }}</dd>
+                      </div>
+                    </dl>
+                  </li>
+                }
+              </ol>
+            </section>
+          }
+          <button
+            class="button primary continue-button"
+            type="button"
+            [disabled]="busy()"
+            (click)="continue()"
+          >
+            {{
+              activeSession.currentIndex === activeSession.exerciseIds.length - 1
+                ? 'See result'
+                : 'Continue'
+            }}
+          </button>
+        } @else {
+          <div class="answer-actions">
+            <button
+              class="button primary submit-button"
+              type="button"
+              [disabled]="!canSubmit(currentExercise)"
+              (click)="submit()"
+            >
+              Check answer
+            </button>
+            <button
+              class="button secondary reveal-button"
+              type="button"
+              [disabled]="!canRevealAnswer()"
+              (click)="showAnswer()"
+            >
+              Show answer <kbd>Alt+A</kbd>
+            </button>
+          </div>
+          <p class="reveal-note">
+            Showing the answer records this exercise as skipped and does not add it to mistakes.
+          </p>
+        }
+      </section>
+    }
+  } @else {
+    <section class="state-card" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Preparing your test…</p>
+    </section>
+  }
+</main>

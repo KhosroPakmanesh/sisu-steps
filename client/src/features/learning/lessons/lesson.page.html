@@ -1,0 +1,216 @@
+<main class="page-shell lesson-page">
+  @if (pageError()) {
+    <section class="state-card error-card" role="alert">
+      <p class="eyebrow">Learn first</p>
+      <h1>We could not open this lesson</h1>
+      <p>{{ pageError() }}</p>
+      <a class="button primary" [routerLink]="paths.home">Back to topics</a>
+    </section>
+  } @else if (test(); as activeTest) {
+    @if (currentLesson(); as current) {
+      <header class="lesson-hero">
+        <div>
+          <a class="back-link" [routerLink]="paths.topic(topicId())">← Back to topic</a>
+          <p class="eyebrow">
+            {{ activeTest.set === 'extended' ? 'Extended set' : 'Core set' }} · Optional preparation
+            ·
+            {{
+              activeTest.stage === 'guided-combination'
+                ? 'Guided combination'
+                : activeTest.stage === 'review'
+                  ? 'Review'
+                  : 'Focused'
+            }}
+            · {{ activeTest.title }}
+          </p>
+          <h1>Learn first, then practise with confidence.</h1>
+          <p>{{ activeTest.focus }}</p>
+        </div>
+        <a class="button primary" [routerLink]="paths.study(topicId(), activeTest.id)"
+          >Start test now</a
+        >
+      </header>
+
+      <div class="lesson-progress" aria-label="Lesson progress">
+        <span>{{ completedCount() }} of {{ lessons().length }} lessons completed</span>
+        <div aria-hidden="true">
+          <span [style.width.%]="(completedCount() / lessons().length) * 100"></span>
+        </div>
+      </div>
+
+      <div class="lesson-layout">
+        <nav class="lesson-list" aria-label="Preparation lessons">
+          @for (lesson of lessons(); track lesson.id; let index = $index) {
+            <button
+              type="button"
+              [class.active]="index === lessonIndex()"
+              [attr.aria-current]="index === lessonIndex() ? 'step' : null"
+              (click)="openLesson(index)"
+            >
+              <span>{{ index + 1 }}</span>
+              <span>
+                <strong>{{ lesson.title }}</strong>
+                <small>{{
+                  isCompleted(lesson) ? 'Completed · review anytime' : 'Ready to read'
+                }}</small>
+              </span>
+              @if (isCompleted(lesson)) {
+                <span class="lesson-check" aria-label="Completed">✓</span>
+              }
+            </button>
+          }
+        </nav>
+
+        <article class="lesson-reader">
+          <header class="reader-heading">
+            <div>
+              <p class="card-kicker">Lesson {{ lessonIndex() + 1 }} of {{ lessons().length }}</p>
+              <h2>{{ current.title }}</h2>
+              <p>{{ current.summary }}</p>
+            </div>
+            @if (isCompleted(current)) {
+              <span class="completed-badge">✓ Completed</span>
+            }
+          </header>
+
+          <section class="focus-contract" aria-labelledby="focus-contract-title">
+            <p class="card-kicker">
+              {{
+                current.stage === 'guided-combination'
+                  ? 'Guided combination'
+                  : current.stage === 'review'
+                    ? 'Review'
+                    : 'Focused lesson'
+              }}
+            </p>
+            <h3 id="focus-contract-title">What receives your attention</h3>
+            <p>
+              <strong>{{ current.stage === 'review' ? 'Skills reviewed' : 'Target' }}:</strong>
+              {{ current.targetSkills.join(', ') }}
+            </p>
+            @if (current.prerequisiteSkills.length > 0) {
+              <p>
+                <strong>Already introduced:</strong> {{ current.prerequisiteSkills.join(', ') }}
+              </p>
+            } @else {
+              <p>No earlier grammar is required.</p>
+            }
+            <p class="focus-promise">
+              Anything else is supplied directly and is not a hidden part of the question.
+            </p>
+          </section>
+
+          <section class="lesson-objectives" aria-labelledby="lesson-objectives-title">
+            <h3 id="lesson-objectives-title">After this lesson, you can</h3>
+            <ul>
+              @for (objective of current.objectives; track objective) {
+                <li>{{ objective }}</li>
+              }
+            </ul>
+          </section>
+
+          @for (section of current.sections; track section.title) {
+            <section class="teaching-section">
+              <h3>{{ section.title }}</h3>
+              @for (paragraph of section.paragraphs; track paragraph) {
+                <p>{{ paragraph }}</p>
+              }
+              <ul class="key-points">
+                @for (point of section.keyPoints; track point) {
+                  <li>{{ point }}</li>
+                }
+              </ul>
+            </section>
+          }
+
+          <section class="worked-examples" aria-labelledby="worked-examples-title">
+            <p class="card-kicker">See every step</p>
+            <h3 id="worked-examples-title">Worked examples</h3>
+            <div class="example-grid">
+              @for (example of current.examples; track example.finnish) {
+                <article>
+                  <p>
+                    <strong lang="fi">{{ example.finnish }}</strong>
+                    <span>{{ example.english }}</span>
+                  </p>
+                  <ol>
+                    @for (step of example.steps; track step) {
+                      <li>{{ step }}</li>
+                    }
+                  </ol>
+                </article>
+              }
+            </div>
+          </section>
+
+          <section class="lesson-vocabulary" aria-labelledby="lesson-vocabulary-title">
+            <p class="card-kicker">Words used here</p>
+            <h3 id="lesson-vocabulary-title">Lesson vocabulary</h3>
+            @if (current.introducedVocabulary.length > 0) {
+              <p>
+                These are the new Finnish words that may appear in this lesson or its associated
+                test.
+              </p>
+              <dl>
+                @for (word of current.introducedVocabulary; track word.finnish) {
+                  <div>
+                    <dt lang="fi">{{ word.finnish }}</dt>
+                    <dd>{{ word.english }}</dd>
+                  </div>
+                }
+              </dl>
+            } @else {
+              <p>
+                No new vocabulary is introduced here. This lesson reuses words from its prerequisite
+                lesson.
+              </p>
+            }
+          </section>
+
+          <aside class="mistake-notes">
+            <p class="card-kicker">Avoid these traps</p>
+            <h3>Common mistakes</h3>
+            <ul>
+              @for (mistake of current.commonMistakes; track mistake) {
+                <li>{{ mistake }}</li>
+              }
+            </ul>
+          </aside>
+
+          <app-lesson-practice [lesson]="current" />
+
+          @if (preparationFinished()) {
+            <div class="preparation-complete" aria-live="polite">
+              <p class="eyebrow">Preparation complete</p>
+              <h3>You can return anytime to review.</h3>
+              <a class="button primary" [routerLink]="paths.study(topicId(), activeTest.id)"
+                >Start {{ activeTest.title }}</a
+              >
+            </div>
+          } @else {
+            <footer class="lesson-footer">
+              <p>Optional practice is not required. Finish whenever you have read enough.</p>
+              <button
+                class="button primary"
+                type="button"
+                [disabled]="busy()"
+                (click)="finishLesson()"
+              >
+                {{
+                  lessonIndex() === lessons().length - 1
+                    ? 'Finish lesson'
+                    : 'Finish lesson & continue'
+                }}
+              </button>
+            </footer>
+          }
+        </article>
+      </div>
+    }
+  } @else {
+    <section class="state-card" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Preparing your lesson…</p>
+    </section>
+  }
+</main>

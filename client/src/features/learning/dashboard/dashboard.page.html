@@ -1,0 +1,149 @@
+<main class="page-shell">
+  @if (store.loading()) {
+    <section class="state-card" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Opening your exercise book…</p>
+    </section>
+  } @else if (store.error()) {
+    <section class="state-card error-card" role="alert">
+      <p class="eyebrow">Something needs attention</p>
+      <h1>Your exercise book could not open</h1>
+      <p>{{ store.error() }}</p>
+      <button class="button primary" type="button" (click)="store.initialize()">Try again</button>
+    </section>
+  } @else if (store.packs().length > 0) {
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Your Finnish workbook</p>
+        <h1>Choose one topic.<br /><span>Take one clear step.</span></h1>
+        <p class="hero-copy">
+          Your topics stay compact here. Open one learning map when you want its lessons, tests,
+          mistakes, and reviews.
+        </p>
+      </div>
+
+      @if (continueTarget(); as target) {
+        <aside class="continue-card" aria-labelledby="continue-heading">
+          <p class="card-kicker">Continue learning</p>
+          <h2 id="continue-heading">{{ target.title }}</h2>
+          <p class="continue-topic">{{ target.topicTitle }}</p>
+          <p>{{ target.description }}</p>
+          <div class="card-actions">
+            <a class="button primary" [routerLink]="continuePath(target)">{{
+              target.actionLabel
+            }}</a>
+            <a class="button secondary" [routerLink]="paths.topic(target.topicId)">View topic</a>
+          </div>
+        </aside>
+      }
+    </section>
+
+    <section class="catalog-stats" aria-label="Learning overview">
+      <div>
+        <strong>{{ store.packs().length }}</strong>
+        <span>{{ store.packs().length === 1 ? 'topic pack' : 'topic packs' }}</span>
+      </div>
+      <div>
+        <strong>{{ exerciseCount() }}</strong>
+        <span>scored exercises</span>
+      </div>
+      <div>
+        <strong>{{ attemptCount() }}</strong>
+        <span>completed attempts</span>
+      </div>
+      <div>
+        <strong>{{ average() === null ? '—' : average() + '%' }}</strong>
+        <span>overall average</span>
+      </div>
+    </section>
+
+    <section class="topic-catalog" aria-labelledby="topics-heading">
+      <header class="section-heading">
+        <div>
+          <p class="eyebrow">Topic catalog</p>
+          <h2 id="topics-heading">What would you like to practise?</h2>
+        </div>
+        <p>Each topic opens into its own ordered learning map.</p>
+      </header>
+
+      <div class="topic-grid">
+        @for (summary of topicSummaries(); track summary.pack.id) {
+          <article class="topic-card">
+            <header>
+              <p class="card-kicker">{{ summary.pack.level }}</p>
+              <h3>{{ summary.pack.title }}</h3>
+              <p>{{ summary.pack.summary }}</p>
+            </header>
+
+            <div class="topic-progress">
+              <div>
+                <span>Tests tried</span>
+                <strong>{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong>
+              </div>
+              <progress
+                [attr.aria-label]="summary.pack.title + ' tests tried'"
+                [max]="summary.pack.tests.length"
+                [value]="summary.attemptedTests"
+              ></progress>
+              <div>
+                <span>Lessons read</span>
+                <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
+              </div>
+              <progress
+                [attr.aria-label]="summary.pack.title + ' lessons read'"
+                [max]="summary.totalLessons"
+                [value]="summary.completedLessons"
+              ></progress>
+            </div>
+
+            <dl class="topic-meta">
+              <div>
+                <dt>Attempts</dt>
+                <dd>{{ summary.attempts }}</dd>
+              </div>
+              <div>
+                <dt>Average</dt>
+                <dd>{{ summary.average === null ? '—' : summary.average + '%' }}</dd>
+              </div>
+              <div>
+                <dt>Mistakes</dt>
+                <dd>{{ summary.mistakes }}</dd>
+              </div>
+              <div>
+                <dt>Reviews due</dt>
+                <dd>{{ summary.reviewsDue }}</dd>
+              </div>
+            </dl>
+
+            <section
+              class="topic-objectives"
+              [attr.aria-label]="summary.pack.title + ' objectives'"
+            >
+              <h4>What you will learn</h4>
+              <ul>
+                @for (objective of summary.pack.objectives; track objective) {
+                  <li>{{ objective }}</li>
+                }
+              </ul>
+            </section>
+
+            <div class="topic-card-actions">
+              @if (summary.reviewsDue > 0 || summary.reviewInProgress) {
+                <a class="button review-action" [routerLink]="paths.review(summary.pack.id)">
+                  {{
+                    summary.reviewInProgress
+                      ? 'Resume optional review'
+                      : 'Optional review due · ' + summary.reviewsDue
+                  }}
+                </a>
+              }
+              <a class="button primary" [routerLink]="paths.topic(summary.pack.id)">
+                Open learning map
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  }
+</main>

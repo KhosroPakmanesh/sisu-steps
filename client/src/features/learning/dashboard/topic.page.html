@@ -1,0 +1,183 @@
+<main class="page-shell topic-page">
+  @if (errorMessage(); as error) {
+    <section class="state-card error-card" role="alert">
+      <p class="eyebrow">Topic catalog</p>
+      <h1>We could not open this topic</h1>
+      <p>{{ error }}</p>
+      <a class="button primary" [routerLink]="paths.home">Back to topics</a>
+    </section>
+  } @else if (pack(); as activePack) {
+    @let topicSummary = summary();
+    <header class="topic-hero">
+      <div>
+        <a class="back-link" [routerLink]="paths.home">← All topics</a>
+        <p class="eyebrow">{{ activePack.level }} · {{ activePack.tests.length }} tests</p>
+        <h1>{{ activePack.title }}</h1>
+        <p>{{ activePack.summary }}</p>
+      </div>
+      @if (topicSummary) {
+        <dl class="topic-overview" aria-label="Topic progress">
+          <div>
+            <dt>Tests tried</dt>
+            <dd>{{ topicSummary.attemptedTests }}/{{ activePack.tests.length }}</dd>
+          </div>
+          <div>
+            <dt>Lessons read</dt>
+            <dd>{{ topicSummary.completedLessons }}/{{ topicSummary.totalLessons }}</dd>
+          </div>
+          <div>
+            <dt>Average</dt>
+            <dd>{{ topicSummary.average === null ? '—' : topicSummary.average + '%' }}</dd>
+          </div>
+          <div>
+            <dt>Exercises</dt>
+            <dd>{{ topicSummary.exercises }}</dd>
+          </div>
+        </dl>
+      }
+    </header>
+
+    @if (topicSummary) {
+      <section class="topic-actions" aria-label="Topic practice options">
+        @if (topicSummary.mistakes > 0) {
+          <a class="button secondary" [routerLink]="paths.mistakes(activePack.id)">
+            Practice {{ topicSummary.mistakes }} mistakes
+          </a>
+        }
+        @if (topicSummary.reviewsDue > 0 || reviewSession(activePack.id)) {
+          <a class="button review-action" [routerLink]="paths.review(activePack.id)">
+            {{
+              reviewSession(activePack.id)
+                ? 'Resume optional review'
+                : 'Optional review due · ' + topicSummary.reviewsDue
+            }}
+          </a>
+        }
+      </section>
+    }
+
+    <section class="objective-panel" aria-labelledby="objectives-heading">
+      <p class="eyebrow">What you will practise</p>
+      <h2 id="objectives-heading">Goals for this topic</h2>
+      <div class="objective-grid">
+        @for (objective of activePack.objectives; track objective; let index = $index) {
+          <div>
+            <span>{{ index + 1 }}</span>
+            <p>{{ objective }}</p>
+          </div>
+        }
+      </div>
+    </section>
+
+    <section class="learning-map" aria-labelledby="learning-map-heading">
+      <header class="section-heading">
+        <div>
+          <p class="eyebrow">Ordered learning map</p>
+          <h2 id="learning-map-heading">Lessons and tests</h2>
+        </div>
+        <p>
+          Preparation is optional. Every test remains available, and lesson progress never locks
+          your next step.
+        </p>
+      </header>
+
+      <div class="test-list">
+        @for (test of activePack.tests; track test.id; let index = $index) {
+          @if (index === 0) {
+            <header class="section-heading test-group-heading" id="core-tests-heading">
+              <div>
+                <p class="eyebrow">Necessary sequence</p>
+                <h3>Core tests</h3>
+              </div>
+              <p>These tests collectively cover every important grammar point in this pack.</p>
+            </header>
+          }
+          @if (test.set === 'extended' && index > 0 && activePack.tests[index - 1].set === 'core') {
+            <header
+              class="section-heading test-group-heading extended-heading"
+              id="extended-tests-heading"
+            >
+              <div>
+                <p class="eyebrow">Optional additional depth</p>
+                <h3>Extended tests</h3>
+              </div>
+              <p>Use these after the core sequence for extra retrieval and combined practice.</p>
+            </header>
+          }
+          @let report = testReport(activePack, test.id);
+          @let session = testSession(activePack.id, test.id);
+          @let lessonStatus = lessonProgress(activePack.id, test.id);
+          <article class="test-card" [class.extended-test]="test.set === 'extended'">
+            <div class="test-number">{{ (index + 1).toString().padStart(2, '0') }}</div>
+            <div class="test-body">
+              <div class="test-title-row">
+                <div>
+                  <p class="card-kicker">
+                    <span class="set-badge" [class.extended]="test.set === 'extended'">
+                      {{ test.set === 'extended' ? 'Extended set' : 'Core set' }}
+                    </span>
+                    ·
+                    <span
+                      class="stage-badge"
+                      [class.combination]="test.stage === 'guided-combination'"
+                      [class.review]="test.stage === 'review'"
+                      >{{
+                        test.stage === 'guided-combination'
+                          ? 'Guided combination'
+                          : test.stage === 'review'
+                            ? 'Review'
+                            : 'Focused'
+                      }}</span
+                    >
+                    · {{ test.exercises.length }} exercises
+                  </p>
+                  <h3>{{ test.title }}</h3>
+                </div>
+                @if (report.latest !== null) {
+                  <span class="score-badge">Latest {{ report.latest }}%</span>
+                } @else {
+                  <span class="score-badge quiet">Ready</span>
+                }
+              </div>
+              <p>{{ test.focus }}</p>
+              <p class="skill-line">
+                <strong>{{ test.stage === 'review' ? 'Skills reviewed' : 'Target' }}:</strong>
+                {{ test.targetSkills.join(', ') }}
+              </p>
+              @if (test.prerequisiteSkills.length > 0) {
+                <p class="skill-line">
+                  <strong>Uses earlier skills:</strong> {{ test.prerequisiteSkills.join(', ') }}
+                </p>
+              }
+              <div class="test-meta">
+                <span
+                  >{{ report.attempts }} {{ report.attempts === 1 ? 'attempt' : 'attempts' }}</span
+                >
+                <span>{{ report.mistakes }} unresolved</span>
+                <span>{{ lessonStatus.completed }}/{{ lessonStatus.total }} lessons read</span>
+                @if (session) {
+                  <span>{{ session.currentIndex + 1 }}/{{ session.exerciseIds.length }} saved</span>
+                }
+              </div>
+            </div>
+            <div class="test-actions">
+              <a class="button secondary" [routerLink]="paths.learn(activePack.id, test.id)">
+                {{
+                  lessonStatus.completed === lessonStatus.total ? 'Review lessons' : 'Learn first'
+                }}
+              </a>
+              <a class="button compact" [routerLink]="paths.study(activePack.id, test.id)">
+                {{ session ? 'Resume' : report.attempts ? 'Try again' : 'Start test' }}
+              </a>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  } @else {
+    <section class="state-card" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Opening this topic…</p>
+    </section>
+  }
+</main>

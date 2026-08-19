@@ -1,0 +1,125 @@
+:host {
+  display: block;
+  min-height: 100dvh;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  min-height: 4.5rem;
+  padding: 0.75rem max(1rem, calc((100vw - 76rem) / 2));
+  border-bottom: 1px solid rgb(218 214 204 / 70%);
+  background: rgb(248 247 243 / 90%);
+  backdrop-filter: blur(14px);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--ink-900);
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 0.65rem;
+  background: var(--blue-700);
+  color: white;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+}
+
+.brand > span:last-child {
+  display: grid;
+}
+
+.brand strong {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+}
+
+.brand small {
+  color: var(--stone-600);
+  font-size: 0.64rem;
+}
+
+nav {
+  display: flex;
+  gap: 0.25rem;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.5rem;
+  color: var(--stone-700);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+nav a:hover,
+nav a.active {
+  background: white;
+  color: var(--blue-800);
+}
+
+nav span {
+  display: grid;
+  place-items: center;
+  min-width: 1.15rem;
+  height: 1.15rem;
+  padding: 0 0.25rem;
+  border-radius: 1rem;
+  background: var(--amber-400);
+  color: var(--ink-900);
+  font-size: 0.65rem;
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem max(1rem, calc((100vw - 76rem) / 2));
+  border-top: 1px solid var(--stone-200);
+  color: var(--stone-500);
+  font-size: 0.75rem;
+}
+
+@media (width <= 620px) {
+  .site-header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+    align-items: start;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav a {
+    flex: 1;
+    justify-content: center;
+    padding: 0.55rem 0.5rem;
+  }
+
+  .site-footer {
+    display: grid;
+  }
+}

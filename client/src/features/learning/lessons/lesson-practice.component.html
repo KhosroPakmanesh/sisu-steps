@@ -1,0 +1,192 @@
+<section class="lesson-practice" aria-labelledby="lesson-practice-title">
+  <div class="practice-heading">
+    <div>
+      <p class="card-kicker">Optional · unscored</p>
+      <h3 id="lesson-practice-title">Try the pattern</h3>
+    </div>
+    <span>{{ lesson.practiceExercises.length }} practice questions</span>
+  </div>
+  <p>
+    These questions work like the test, but answers stay on this page and never change scores,
+    reports, sessions, or mistakes.
+  </p>
+
+  @if (!started()) {
+    <button class="button secondary" type="button" (click)="start()">
+      Start optional practice
+    </button>
+  } @else if (finished()) {
+    <div class="practice-complete" aria-live="polite">
+      <strong>Practice complete</strong>
+      <p>You can repeat it, finish the lesson, or start the test.</p>
+      <button class="button secondary compact" type="button" (click)="start()">
+        Practise again
+      </button>
+    </div>
+  } @else if (exercise(); as currentExercise) {
+    <div class="practice-card">
+      <div class="practice-count">
+        Question {{ exerciseIndex() + 1 }} of {{ lesson.practiceExercises.length }}
+      </div>
+      <p>{{ currentExercise.instruction }}</p>
+      <h4>{{ currentExercise.prompt }}</h4>
+
+      @if (currentExercise.type === 'multiple-choice') {
+        <fieldset class="practice-choices" [disabled]="!!feedback()">
+          <legend class="visually-hidden">Choose one answer</legend>
+          @for (option of currentExercise.options; track option) {
+            <label [class.selected]="response() === option">
+              <input
+                type="radio"
+                name="practice-answer"
+                [value]="option"
+                [ngModel]="response()"
+                (ngModelChange)="response.set($event)"
+              />
+              <span>{{ option }}</span>
+            </label>
+          }
+        </fieldset>
+      } @else if (currentExercise.type === 'word-order') {
+        <div class="practice-word-builder">
+          <div class="practice-answer-zone" aria-label="Your sentence">
+            @if (selectedTokenIndexes().length === 0) {
+              <span>Build the sentence here</span>
+            }
+            @for (tokenIndex of selectedTokenIndexes(); track $index; let position = $index) {
+              <button type="button" (click)="removeToken(position)">
+                {{ currentExercise.tokens?.[tokenIndex] }}
+              </button>
+            }
+          </div>
+          <div class="practice-token-bank" aria-label="Available words">
+            @for (token of currentExercise.tokens; track $index; let index = $index) {
+              <button
+                type="button"
+                [disabled]="selectedTokenIndexes().includes(index) || !!feedback()"
+                (click)="chooseToken(index)"
+              >
+                {{ token }}
+              </button>
+            }
+          </div>
+        </div>
+      } @else {
+        <label class="practice-text-answer">
+          <span>Your answer</span>
+          <input
+            type="text"
+            autocomplete="off"
+            [disabled]="!!feedback()"
+            [ngModel]="response()"
+            (ngModelChange)="response.set($event)"
+            (keydown.enter)="submit()"
+          />
+        </label>
+      }
+
+      @if (feedback(); as answer) {
+        <aside
+          class="feedback"
+          [class.correct]="answer.correct"
+          [class.incorrect]="!answer.correct && !answer.skipped"
+          [class.skipped]="answer.skipped"
+          aria-live="polite"
+        >
+          <div class="feedback-icon" aria-hidden="true">
+            {{ answer.skipped ? '?' : answer.correct ? '✓' : '!' }}
+          </div>
+          <div>
+            <p class="feedback-title">
+              {{
+                answer.skipped
+                  ? 'Answer revealed'
+                  : answer.correct
+                    ? 'Correct — hyvä!'
+                    : 'Not quite yet'
+              }}
+            </p>
+            @if (!answer.correct && !answer.skipped) {
+              <p>
+                Your answer: <strong>{{ answer.submittedAnswer }}</strong>
+              </p>
+              @if (answer.diagnosticExplanation) {
+                <p><strong>What happened:</strong> {{ answer.diagnosticExplanation }}</p>
+              }
+            }
+            <p>
+              Correct answer: <strong lang="fi">{{ currentExercise.acceptedAnswers[0] }}</strong>
+            </p>
+            <p class="explanation">{{ currentExercise.explanation }}</p>
+            <p>
+              <small
+                >This was optional practice. Nothing was added to your test history or
+                mistakes.</small
+              >
+            </p>
+          </div>
+        </aside>
+        @if (currentExercise.sentenceExplanation; as sentence) {
+          <section class="sentence-lesson" aria-label="How this practice sentence is built">
+            <div class="lesson-heading">
+              <div>
+                <p class="card-kicker">Step-by-step explanation</p>
+                <h3>How this sentence is built</h3>
+              </div>
+              <p>
+                <span>Complete meaning</span><strong>{{ sentence.translation }}</strong>
+              </p>
+            </div>
+            <div class="sentence-pattern">
+              <span>Sentence pattern</span><strong>{{ sentence.pattern }}</strong>
+            </div>
+            <ol class="sentence-parts">
+              @for (part of sentence.parts; track $index) {
+                <li>
+                  <div class="part-word">
+                    <span>Part {{ $index + 1 }}</span>
+                    <strong lang="fi">{{ part.finnish }}</strong>
+                    <small>{{ part.meaning }}</small>
+                  </div>
+                  <dl>
+                    <div>
+                      <dt>Job in this sentence</dt>
+                      <dd>{{ part.role }}</dd>
+                    </div>
+                    <div>
+                      <dt>Base form</dt>
+                      <dd lang="fi">{{ part.baseForm }}</dd>
+                    </div>
+                    <div>
+                      <dt>How it is made</dt>
+                      <dd>{{ part.formation }}</dd>
+                    </div>
+                  </dl>
+                </li>
+              }
+            </ol>
+          </section>
+        }
+        <button class="button primary practice-continue" type="button" (click)="continue()">
+          {{
+            exerciseIndex() === lesson.practiceExercises.length - 1 ? 'Finish practice' : 'Continue'
+          }}
+        </button>
+      } @else {
+        <div class="practice-actions">
+          <button
+            class="button primary"
+            type="button"
+            [disabled]="!canSubmit(currentExercise)"
+            (click)="submit()"
+          >
+            Check answer
+          </button>
+          <button class="button secondary" type="button" (click)="showAnswer()">
+            Show answer <kbd>Alt+A</kbd>
+          </button>
+        </div>
+      }
+    </div>
+  }
+</section>

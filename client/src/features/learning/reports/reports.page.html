@@ -1,0 +1,124 @@
+<main class="page-shell narrow-page">
+  <header class="page-heading">
+    <div>
+      <p class="eyebrow">Your progress</p>
+      <h1>Reports</h1>
+    </div>
+    <a class="button secondary compact" [routerLink]="paths.home">Back to topics</a>
+  </header>
+  @if (store.packs().length > 0) {
+    <section class="report-hero">
+      <div>
+        <strong>{{ attemptCount() }}</strong
+        ><span>completed attempts</span>
+      </div>
+      <div>
+        <strong>{{ average() === null ? '—' : average() + '%' }}</strong
+        ><span>overall average</span>
+      </div>
+      <div>
+        <strong>{{ mistakeCount() }}</strong
+        ><span>unresolved mistakes</span>
+      </div>
+      <div>
+        <strong>{{ correctedCount() }}</strong
+        ><span>corrected · review pending</span>
+      </div>
+      <div>
+        <strong>{{ masteredCount() }}</strong
+        ><span>mastered after review</span>
+      </div>
+    </section>
+    @for (pack of store.packs(); track pack.id) {
+      <header class="page-heading">
+        <div>
+          <p class="eyebrow">{{ pack.level }}</p>
+          <h2>{{ pack.title }}</h2>
+        </div>
+      </header>
+      <section class="report-table" [attr.aria-label]="pack.title + ' results by test'">
+        <div class="table-heading">
+          <h2>Results by test</h2>
+          <span>First · Latest · Best · Average</span>
+        </div>
+        @for (test of pack.tests; track test.id; let index = $index) {
+          @let report = testReport(pack, test.id);
+          <article>
+            <div class="report-name">
+              <span>{{ index + 1 }}</span>
+              <div>
+                <h3>{{ test.title }}</h3>
+                <p>
+                  {{ report.attempts }} attempts · {{ report.mistakes }} unresolved ·
+                  {{ report.corrected }} corrected · {{ report.mastered }} mastered
+                </p>
+                <p>
+                  Latest independent: {{ report.independentCorrect }}/{{ test.exercises.length }} ·
+                  skipped: {{ report.skipped }}
+                </p>
+              </div>
+            </div>
+            <div class="score-set">
+              <div>
+                <strong>{{ report.firstAttempt === null ? '—' : report.firstAttempt + '%' }}</strong
+                ><span>First</span>
+              </div>
+              <div>
+                <strong>{{ report.latest === null ? '—' : report.latest + '%' }}</strong
+                ><span>Latest</span>
+              </div>
+              <div>
+                <strong>{{ report.best === null ? '—' : report.best + '%' }}</strong
+                ><span>Best</span>
+              </div>
+              <div>
+                <strong>{{ report.average === null ? '—' : report.average + '%' }}</strong
+                ><span>Average</span>
+              </div>
+            </div>
+          </article>
+        }
+      </section>
+      <section class="skill-report" [attr.aria-label]="pack.title + ' learning by skill'">
+        <div class="table-heading">
+          <h2>Learning by skill</h2>
+          <span>First answers · corrections · delayed mastery</span>
+        </div>
+        @for (report of skillReports(pack); track report.skill) {
+          <article>
+            <div>
+              <h3>{{ report.skill }}</h3>
+              <p>
+                {{ report.independentCorrect }}/{{ report.firstAnswers }} independently correct
+                first time · {{ report.skipped }} skipped
+              </p>
+              @if (report.misconceptions.length > 0) {
+                <p>
+                  Most common: {{ report.misconceptions[0].category }} ({{
+                    report.misconceptions[0].count
+                  }})
+                </p>
+              }
+            </div>
+            <div class="mastery-set">
+              <span
+                ><strong>{{ report.corrected }}</strong> corrected</span
+              ><span
+                ><strong>{{ report.mastered }}</strong> mastered</span
+              >
+            </div>
+          </article>
+        }
+      </section>
+      @if (topicMistakeCount(pack) > 0) {
+        <section class="mistake-cta">
+          <div>
+            <p class="eyebrow">Turn errors into patterns</p>
+            <h2>{{ topicMistakeCount(pack) }} exercises are ready to revisit.</h2>
+          </div>
+          <a class="button primary" [routerLink]="paths.mistakes(pack.id)">Practice mistakes</a>
+        </section>
+      }
+    }
+  }
+</main>

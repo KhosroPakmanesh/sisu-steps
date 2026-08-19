@@ -1,0 +1,117 @@
+:host {
+  display: block;
+}
+
+.lead {
+  max-width: 58ch;
+  margin: -1rem 0 2rem;
+  font-size: 1.05rem;
+}
+
+.settings-card,
+.danger-zone {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border: 1px solid var(--stone-200);
+  border-radius: var(--radius-medium);
+  background: white;
+}
+
+.settings-card h2,
+.danger-zone h2 {
+  margin: 0.25rem 0 0.4rem;
+  font-size: 1.3rem;
+}
+
+.settings-card p,
+.danger-zone p {
+  max-width: 50ch;
+}
+
+.settings-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.file-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.file-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.stacked {
+  display: block;
+}
+
+.clear-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.clear-list div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-top: 1px solid var(--stone-200);
+  font-size: 0.86rem;
+}
+
+.clear-list button {
+  border: 0;
+  background: transparent;
+  color: var(--red-700);
+  font: inherit;
+  font-size: 0.75rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.danger-zone {
+  margin-top: 2rem;
+  border-color: var(--red-200);
+  background: var(--red-50);
+}
+
+.notice {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-small);
+  font-weight: 700;
+}
+
+.notice.success {
+  background: var(--green-50);
+  color: var(--green-900);
+}
+
+.notice.failure {
+  background: var(--red-50);
+  color: var(--red-800);
+}
+
+@media (width <= 700px) {
+  .settings-card,
+  .danger-zone {
+    display: grid;
+  }
+
+  .clear-list {
+    grid-template-columns: 1fr;
+  }
+}
