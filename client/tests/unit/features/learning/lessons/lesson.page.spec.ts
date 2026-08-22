@@ -39,6 +39,11 @@ describe('LessonPage', () => {
   it('shows first-principles teaching and keeps direct test entry available', () => {
     const element = fixture.nativeElement as HTMLElement;
 
+    expect(element.querySelector('h1')?.textContent).toContain('Test 1');
+    expect(element.querySelector('.lesson-layout.single-lesson')).not.toBeNull();
+    expect(element.querySelector('.lesson-list')).toBeNull();
+    expect(element.querySelector('.lesson-picker')).toBeNull();
+    expect(element.querySelector('.lesson-progress')).toBeNull();
     expect(element.textContent).toContain('Vowel harmony');
     expect(element.textContent).toContain('Worked examples');
     expect(element.textContent).toContain('Common mistakes');

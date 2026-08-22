@@ -10,8 +10,7 @@ const allowedTypes = new Set([
   'translation-en',
   'word-order',
 ]);
-const allowedStages = new Set(['focused', 'guided-combination', 'review']);
-const allowedTestSets = new Set(['core', 'extended']);
+const allowedStages = new Set(['focused', 'review']);
 const lessons = pack.lessons ?? [];
 const exercises = pack.tests.flatMap((test) => test.exercises);
 const practiceExercises = lessons.flatMap((lesson) => lesson.practiceExercises ?? []);
@@ -36,6 +35,21 @@ const checkFocus = (item, label) => {
   if (!hasTextArray(item.prerequisiteSkills)) errors.push(`${label}: invalid prerequisite skills`);
   if (item.stage === 'focused' && item.targetSkills?.length !== 1)
     errors.push(`${label}: focused material must have exactly one target skill`);
+};
+const lessonsAvailableForTest = (test) => {
+  const availableIds = new Set(test.lessonIds ?? []);
+  const visitedSkills = new Set();
+  const pendingSkills = [...(test.prerequisiteSkills ?? [])];
+  while (pendingSkills.length > 0) {
+    const skill = pendingSkills.pop();
+    if (visitedSkills.has(skill)) continue;
+    visitedSkills.add(skill);
+    for (const lesson of lessons.filter((candidate) => candidate.targetSkills?.includes(skill))) {
+      availableIds.add(lesson.id);
+      pendingSkills.push(...(lesson.prerequisiteSkills ?? []));
+    }
+  }
+  return lessons.filter((lesson) => availableIds.has(lesson.id));
 };
 if (pack.schemaVersion !== 1) errors.push('schemaVersion must be 1');
 if (exercises.length < 200 || exercises.length > 1000)
@@ -70,16 +84,17 @@ for (const lesson of lessons) {
   }
   for (const skill of lesson.targetSkills ?? []) taughtSkills.add(skill);
 }
-const coreCoveredSkills = new Set();
-let coreTestCount = 0;
-let extendedTestsStarted = false;
+const focusedCoveredSkills = new Set();
+const focusedReferencedLessonIds = new Set();
+let focusedTestCount = 0;
+let reviewsStarted = false;
 for (const [testIndex, test] of pack.tests.entries()) {
   checkFocus(test, test.id);
-  if (!allowedTestSets.has(test.set)) errors.push(`${test.id}: invalid test set`);
-  if (test.set === 'extended') extendedTestsStarted = true;
-  else if (test.set === 'core') {
-    if (extendedTestsStarted) errors.push(`${test.id}: core test appears after extended tests`);
-    coreTestCount += 1;
+  if (Object.hasOwn(test, 'set')) errors.push(`${test.id}: removed set metadata is not allowed`);
+  if (test.stage === 'review') reviewsStarted = true;
+  else if (test.stage === 'focused') {
+    if (reviewsStarted) errors.push(`${test.id}: focused test appears after reviews`);
+    focusedTestCount += 1;
   }
   if (!Array.isArray(test.exercises) || test.exercises.length === 0)
     errors.push(`${test.id}: test must contain at least one exercise`);
@@ -91,7 +106,16 @@ for (const [testIndex, test] of pack.tests.entries()) {
     if (!lessonIds.includes(lessonId))
       errors.push(`${test.id} references missing lesson ${lessonId}`);
   }
+  if (test.stage === 'focused')
+    for (const lessonId of test.lessonIds ?? []) focusedReferencedLessonIds.add(lessonId);
   const referencedLessons = lessons.filter((lesson) => test.lessonIds?.includes(lesson.id));
+  if (
+    test.stage === 'focused' &&
+    referencedLessons.some(
+      (lesson) => lesson.stage !== 'focused' || lesson.targetSkills?.[0] !== test.targetSkills?.[0],
+    )
+  )
+    errors.push(`${test.id}: focused test references a lesson for another target skill`);
   const lessonSkills = new Set(
     referencedLessons.flatMap((lesson) => [
       ...(lesson.targetSkills ?? []),
@@ -105,12 +129,12 @@ for (const [testIndex, test] of pack.tests.entries()) {
   for (const skill of declaredSkills)
     if (!lessonSkills.has(skill))
       errors.push(`${test.id}: skill ${skill} is not taught by a referenced lesson`);
-  if (test.set === 'extended')
+  if (test.stage === 'review')
     for (const skill of declaredSkills)
-      if (!coreCoveredSkills.has(skill))
-        errors.push(`${test.id}: extended test introduces core-uncovered skill ${skill}`);
+      if (!focusedCoveredSkills.has(skill))
+        errors.push(`${test.id}: review introduces a skill not covered by focused tests: ${skill}`);
   const availableWords = new Set(
-    referencedLessons.flatMap((lesson) =>
+    lessonsAvailableForTest(test).flatMap((lesson) =>
       (lesson.introducedVocabulary ?? []).map((item) => item.finnish),
     ),
   );
@@ -125,12 +149,14 @@ for (const [testIndex, test] of pack.tests.entries()) {
     for (const skill of exercise.requiredSkills ?? [])
       if (!declaredSkills.has(skill))
         errors.push(`${exercise.id}: undeclared required skill ${skill}`);
-    if (test.set === 'core')
-      for (const skill of exercise.requiredSkills ?? []) coreCoveredSkills.add(skill);
-    else if (test.set === 'extended')
+    if (test.stage === 'focused')
+      for (const skill of exercise.requiredSkills ?? []) focusedCoveredSkills.add(skill);
+    else if (test.stage === 'review')
       for (const skill of exercise.requiredSkills ?? [])
-        if (!coreCoveredSkills.has(skill))
-          errors.push(`${exercise.id}: extended exercise requires core-uncovered skill ${skill}`);
+        if (!focusedCoveredSkills.has(skill))
+          errors.push(
+            `${exercise.id}: review requires a skill not covered by focused tests: ${skill}`,
+          );
     if (test.stage === 'focused' && !(exercise.requiredSkills ?? []).includes(test.targetSkills[0]))
       errors.push(`${exercise.id}: focused target is not required by the exercise`);
     if (!hasTextArray(exercise.vocabulary))
@@ -140,10 +166,10 @@ for (const [testIndex, test] of pack.tests.entries()) {
         errors.push(`${exercise.id}: vocabulary ${word} is not introduced by a referenced lesson`);
   }
 }
-if (coreTestCount === 0) errors.push('pack must contain at least one core test');
+if (focusedTestCount === 0) errors.push('pack must contain at least one focused test');
 for (const skill of pack.importantSkills ?? [])
-  if (!coreCoveredSkills.has(skill))
-    errors.push(`important skill ${skill} is not covered by a core test`);
+  if (!focusedCoveredSkills.has(skill))
+    errors.push(`important skill ${skill} is not covered by a focused test`);
 if (new Set(ids).size !== ids.length) errors.push('exercise ids must be unique');
 if (new Set(allIds).size !== allIds.length)
   errors.push('scored and practice exercise ids must be unique together');
@@ -216,6 +242,9 @@ const referencedLessonIds = new Set(pack.tests.flatMap((test) => test.lessonIds 
 for (const lessonId of lessonIds)
   if (!referencedLessonIds.has(lessonId))
     errors.push(`${lessonId}: lesson is not referenced by a test`);
+for (const lesson of lessons)
+  if (lesson.stage === 'focused' && !focusedReferencedLessonIds.has(lesson.id))
+    errors.push(`${lesson.id}: focused lesson is not referenced by a focused test`);
 for (const exercise of allExercises) {
   if (!allowedTypes.has(exercise.type)) errors.push(`${exercise.id}: unsupported type`);
   if (!exercise.acceptedAnswers?.length) errors.push(`${exercise.id}: missing accepted answer`);
@@ -341,9 +370,6 @@ const stageCounts = Object.fromEntries(
     pack.tests.filter((test) => test.stage === stage).length,
   ]),
 );
-const setCounts = Object.fromEntries(
-  [...allowedTestSets].map((set) => [set, pack.tests.filter((test) => test.set === set).length]),
-);
 console.log(
   JSON.stringify(
     {
@@ -353,7 +379,6 @@ console.log(
       lessons: lessons.length,
       practiceExercises: practiceExercises.length,
       sentenceExercises,
-      setCounts,
       stageCounts,
       typeCounts,
       practiceTypeCounts,

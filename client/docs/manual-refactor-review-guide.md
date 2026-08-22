@@ -12,7 +12,7 @@ Use this after `npm --prefix client run check` and `npm --prefix client run test
 
 ## Learner workflow review
 
-1. Open the dashboard and verify 14 ordered tests remain grouped into Core and Extended sections.
+1. Open the dashboard and verify 15 ordered tests remain grouped into **Focused tests** and **Reviews** sections without repeated classification badges on the cards.
 2. Open Learn first, move through lesson navigation, run and reveal optional practice, and confirm it does not affect attempts or mistakes.
 3. Start a test, answer incorrectly, reload, and verify the session and feedback recover.
 4. Reveal with `Alt+A`; confirm it records a skip and does not create or resolve a mistake.

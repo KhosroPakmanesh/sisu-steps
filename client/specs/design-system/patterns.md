@@ -40,7 +40,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 ## Topic catalog and learning map
 
 - Keep home at catalog level: one compact summary per installed topic pack plus one prominent continue-learning action.
-- Put an individual pack's objectives, core/extended sequence, lesson progress, and test actions on its topic route.
+- Put an individual pack's objectives, Focused/Review sequence, lesson progress, and test actions on its topic route. Communicate the two learning groups through section headings instead of repeating classification badges on every test card.
 - Do not render lesson teaching sections or multiple expanded test sequences on home.
 - Name progress truthfully: count distinct attempted tests as **tests tried** unless a separate completion threshold is specified.
 - When a saved session references installed content, prefer resuming it; otherwise recommend the first untried test in catalog and authored order.

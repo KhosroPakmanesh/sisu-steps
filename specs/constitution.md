@@ -26,16 +26,16 @@ Create a calm, local-first interactive exercise book that helps one English-spea
 
 - Each content pack declares its topic, CEFR range, learning objectives, ordered test groups, and version.
 - Each grammatical-topic pack contains between 200 and 1,000 authored scored exercises, with the exact total chosen from the topic's pedagogical coverage needs rather than a fixed default.
-- Each pack declares its important grammatical skills. Core tests collectively cover every declared important skill before any extended test appears.
-- Every test is labelled as either core or extended. Extended tests follow the complete core sequence, add depth and retrieval practice, and do not introduce an undeclared grammatical requirement.
+- Each pack declares its important grammatical skills. Focused tests collectively cover every declared important skill before any Review appears.
+- Every test is either Focused or Review. Focused tests introduce and assess one target at a time; Reviews follow the focused sequence, mix previously introduced skills, and do not introduce an undeclared grammatical requirement.
 - Every new or materially revised pack receives a Finnish-teaching pedagogy assessment twice: once before bulk authoring to approve scope, prerequisites, progression, vocabulary load, and question count, and once after authoring to audit the finished lessons, exercises, explanations, and answer model.
 - Each pack keeps a reviewable pedagogy record that states the assessment evidence, decisions, limitations, and final disposition.
 - Each exercise has a stable ID, prompt, answer definition, explanation, and tags.
-- Reusable lessons have stable IDs and versions, teach from first principles, and may be referenced by more than one test without duplicating their content.
+- Reusable lessons have stable IDs and versions and teach from first principles. Focused tests reference only lessons for their own target skill; review tests may reuse earlier lessons without duplicating their content.
 - Lesson practice is authored separately from scored test exercises and never changes attempts, reports, or mistake status.
 - Each sentence exercise explains the complete meaning, sentence pattern, and every displayed part, including its English meaning, grammatical job, base form, endings, and relevant sound or stem changes.
 - Explanations introduce grammar terms in plain English before using them and do not rely on unstated prerequisite knowledge.
-- Every lesson and test is labelled as focused, guided combination, or review. Focused material has one target skill; guided combinations name every prerequisite; reviews may combine only previously introduced skills.
+- Every lesson and test is labelled as focused or review. Focused material has one target skill, declares any previously taught prerequisites, and does not repeat prerequisite lessons on its preparation page. Reviews are the only material that may combine multiple previously introduced skills.
 - Scored vocabulary is introduced in the current or a referenced prerequisite lesson. Any unfamiliar contextual word is translated where it appears and is never an unannounced grading requirement.
 - Finnish diacritics remain significant during typed-answer grading.
 - Content changes must not silently corrupt or reinterpret stored attempt history.

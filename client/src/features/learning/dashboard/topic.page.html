@@ -84,53 +84,37 @@
       <div class="test-list">
         @for (test of activePack.tests; track test.id; let index = $index) {
           @if (index === 0) {
-            <header class="section-heading test-group-heading" id="core-tests-heading">
+            <header class="section-heading test-group-heading" id="focused-tests-heading">
               <div>
-                <p class="eyebrow">Necessary sequence</p>
-                <h3>Core tests</h3>
+                <p class="eyebrow">One target at a time</p>
+                <h3>Focused tests</h3>
               </div>
-              <p>These tests collectively cover every important grammar point in this pack.</p>
+              <p>Learn and practise each important grammar point separately.</p>
             </header>
           }
-          @if (test.set === 'extended' && index > 0 && activePack.tests[index - 1].set === 'core') {
+          @if (
+            test.stage === 'review' && index > 0 && activePack.tests[index - 1].stage === 'focused'
+          ) {
             <header
-              class="section-heading test-group-heading extended-heading"
-              id="extended-tests-heading"
+              class="section-heading test-group-heading review-heading"
+              id="review-tests-heading"
             >
               <div>
-                <p class="eyebrow">Optional additional depth</p>
-                <h3>Extended tests</h3>
+                <p class="eyebrow">Mixed practice</p>
+                <h3>Reviews</h3>
               </div>
-              <p>Use these after the core sequence for extra retrieval and combined practice.</p>
+              <p>Mix previously learned patterns in cumulative retrieval practice.</p>
             </header>
           }
           @let report = testReport(activePack, test.id);
           @let session = testSession(activePack.id, test.id);
           @let lessonStatus = lessonProgress(activePack.id, test.id);
-          <article class="test-card" [class.extended-test]="test.set === 'extended'">
+          <article class="test-card" [class.review-test]="test.stage === 'review'">
             <div class="test-number">{{ (index + 1).toString().padStart(2, '0') }}</div>
             <div class="test-body">
               <div class="test-title-row">
                 <div>
-                  <p class="card-kicker">
-                    <span class="set-badge" [class.extended]="test.set === 'extended'">
-                      {{ test.set === 'extended' ? 'Extended set' : 'Core set' }}
-                    </span>
-                    ·
-                    <span
-                      class="stage-badge"
-                      [class.combination]="test.stage === 'guided-combination'"
-                      [class.review]="test.stage === 'review'"
-                      >{{
-                        test.stage === 'guided-combination'
-                          ? 'Guided combination'
-                          : test.stage === 'review'
-                            ? 'Review'
-                            : 'Focused'
-                      }}</span
-                    >
-                    · {{ test.exercises.length }} exercises
-                  </p>
+                  <p class="card-kicker">{{ test.exercises.length }} exercises</p>
                   <h3>{{ test.title }}</h3>
                 </div>
                 @if (report.latest !== null) {

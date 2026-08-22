@@ -63,6 +63,10 @@ export class LessonPage implements OnInit {
     this.preparationFinished.set(false);
   }
 
+  protected openLessonFromSelect(event: Event): void {
+    this.openLesson(Number((event.currentTarget as HTMLSelectElement).value));
+  }
+
   protected async finishLesson(): Promise<void> {
     const lesson = this.currentLesson();
     if (!lesson || this.busy()) return;

@@ -52,7 +52,7 @@ Adopt the applicable engineering governance from `D:\\Repositories\\unnamed-app-
 
 - Moving standalone components can break lazy route imports or test discovery.
 - Splitting the learner-state workflow can alter atomic save ordering, mistake correction, or review scheduling if state transitions are not preserved exactly.
-- Splitting validation can weaken cross-pack ID or core/extended coverage checks if context is lost.
+- Splitting validation can weaken cross-pack ID or Focused/Review coverage checks if context is lost.
 - CSS ownership changes can alter cascade order or expose currently undefined custom properties.
 - Angular template linting can expose real accessibility defects that require small markup corrections.
 - The target has no Git history; the retained baseline copy is required for an auditable pre/post comparison.

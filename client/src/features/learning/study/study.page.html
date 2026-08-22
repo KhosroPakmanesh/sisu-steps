@@ -59,13 +59,9 @@
                 ? 'Focused review'
                 : activeSession.mode === 'review'
                   ? 'Scheduled review · optional and unscored'
-                  : activeTest()?.set === 'extended'
-                    ? 'Extended test · optional additional depth'
-                    : activeTest()?.stage === 'guided-combination'
-                      ? 'Guided combination'
-                      : activeTest()?.stage === 'review'
-                        ? 'Review'
-                        : 'Focused test'
+                  : activeTest()?.stage === 'review'
+                    ? 'Review · mixed practice'
+                    : 'Focused test'
             }}
           </p>
           <h1>{{ activeSession.title }}</h1>

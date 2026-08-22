@@ -1,8 +1,6 @@
-import { Exercise, ExerciseTest, Lesson, TestSet } from '../content.models';
+import { Exercise, ExerciseTest, Lesson } from '../content.models';
 import { validateExercise } from './exercise.validator';
 import { hasText, isRecord, validateStage } from './validation-primitives';
-
-const TEST_SETS = new Set<TestSet>(['core', 'extended']);
 
 export function validateTests(
   tests: unknown[],
@@ -15,14 +13,16 @@ export function validateTests(
 
   for (const candidate of tests) {
     const test = validateTestShape(candidate, context.lessonIds);
-    if (test.set === 'extended') context.extendedTestsStarted = true;
-    else if (context.extendedTestsStarted) {
-      throw new Error('A core test cannot appear after the extended test set has started.');
-    } else context.coreTestCount += 1;
+    validateStage(candidate as Record<string, unknown>, `Test ${test.id}`);
+    if (test.stage === 'review') context.reviewsStarted = true;
+    else if (context.reviewsStarted) {
+      throw new Error('A focused test cannot appear after the review group has started.');
+    } else context.focusedTestCount += 1;
     if (context.testIds.has(test.id)) throw new Error(`Duplicate test id: ${test.id}`);
     context.testIds.add(test.id);
-    validateStage(candidate as Record<string, unknown>, `Test ${test.id}`);
     test.lessonIds.forEach((id) => context.referencedLessonIds.add(id));
+    if (test.stage === 'focused')
+      test.lessonIds.forEach((id) => context.focusedReferencedLessonIds.add(id));
     validateTestExercises(test, lessons, seenIds, context);
     validated.push(test);
   }
@@ -35,23 +35,28 @@ export function validateTests(
 function createContext(lessons: Lesson[]) {
   return {
     lessonIds: new Set(lessons.map((lesson) => lesson.id)),
+    focusedLessonIds: new Set(
+      lessons.filter((lesson) => lesson.stage === 'focused').map((lesson) => lesson.id),
+    ),
     referencedLessonIds: new Set<string>(),
+    focusedReferencedLessonIds: new Set<string>(),
     testIds: new Set<string>(),
-    coreCoveredSkills: new Set<string>(),
+    focusedCoveredSkills: new Set<string>(),
     scoredExercises: [] as Exercise[],
-    coreTestCount: 0,
-    extendedTestsStarted: false,
+    focusedTestCount: 0,
+    reviewsStarted: false,
   };
 }
 
 function validateTestShape(value: unknown, lessonIds: Set<string>): ExerciseTest {
+  if (isRecord(value) && 'set' in value) {
+    throw new Error('An exercise test must not declare Core/Extended set metadata.');
+  }
   if (
     !isRecord(value) ||
     !hasText(value['id']) ||
     !hasText(value['title']) ||
     !hasText(value['focus']) ||
-    !hasText(value['set']) ||
-    !TEST_SETS.has(value['set'] as TestSet) ||
     !Array.isArray(value['lessonIds']) ||
     value['lessonIds'].length === 0 ||
     !value['lessonIds'].every(hasText) ||
@@ -72,6 +77,14 @@ function validateTestExercises(
   context: ReturnType<typeof createContext>,
 ): void {
   const referencedLessons = test.lessonIds.map((id) => lessons.find((lesson) => lesson.id === id)!);
+  if (
+    test.stage === 'focused' &&
+    referencedLessons.some(
+      (lesson) => lesson.stage !== 'focused' || lesson.targetSkills[0] !== test.targetSkills[0],
+    )
+  ) {
+    throw new Error(`Focused test ${test.id} references a lesson for another target skill.`);
+  }
   const lessonSkills = new Set(
     referencedLessons.flatMap((lesson) => [...lesson.targetSkills, ...lesson.prerequisiteSkills]),
   );
@@ -80,13 +93,15 @@ function validateTestExercises(
     throw new Error(`Test ${test.id} declares a skill not taught by its lessons.`);
   }
   if (
-    test.set === 'extended' &&
-    [...declaredSkills].some((skill) => !context.coreCoveredSkills.has(skill))
+    test.stage === 'review' &&
+    [...declaredSkills].some((skill) => !context.focusedCoveredSkills.has(skill))
   ) {
-    throw new Error(`Extended test ${test.id} introduces a skill not covered by core tests.`);
+    throw new Error(`Review test ${test.id} introduces a skill not covered by focused tests.`);
   }
   const vocabulary = new Set(
-    referencedLessons.flatMap((lesson) => lesson.introducedVocabulary.map((item) => item.finnish)),
+    lessonsAvailableForTest(test, lessons).flatMap((lesson) =>
+      lesson.introducedVocabulary.map((item) => item.finnish),
+    ),
   );
 
   for (const candidate of test.exercises) {
@@ -102,10 +117,10 @@ function validateTestExercises(
     if (exercise.requiredSkills.some((skill) => !declaredSkills.has(skill))) {
       throw new Error(`Exercise ${exercise.id} requires a skill outside test ${test.id}.`);
     }
-    if (test.set === 'core')
-      exercise.requiredSkills.forEach((skill) => context.coreCoveredSkills.add(skill));
-    else if (exercise.requiredSkills.some((skill) => !context.coreCoveredSkills.has(skill))) {
-      throw new Error(`Extended test ${test.id} introduces a skill not covered by core tests.`);
+    if (test.stage === 'focused')
+      exercise.requiredSkills.forEach((skill) => context.focusedCoveredSkills.add(skill));
+    else if (exercise.requiredSkills.some((skill) => !context.focusedCoveredSkills.has(skill))) {
+      throw new Error(`Review test ${test.id} introduces a skill not covered by focused tests.`);
     }
     if (exercise.vocabulary.some((word) => !vocabulary.has(word))) {
       throw new Error(
@@ -115,19 +130,45 @@ function validateTestExercises(
   }
 }
 
+function lessonsAvailableForTest(test: ExerciseTest, lessons: Lesson[]): Lesson[] {
+  const availableIds = new Set(test.lessonIds);
+  const visitedSkills = new Set<string>();
+  const pendingSkills = [...test.prerequisiteSkills];
+
+  while (pendingSkills.length > 0) {
+    const skill = pendingSkills.pop()!;
+    if (visitedSkills.has(skill)) continue;
+    visitedSkills.add(skill);
+    for (const lesson of lessons.filter((candidate) => candidate.targetSkills.includes(skill))) {
+      availableIds.add(lesson.id);
+      pendingSkills.push(...lesson.prerequisiteSkills);
+    }
+  }
+
+  return lessons.filter((lesson) => availableIds.has(lesson.id));
+}
+
 function validateCompleteSequence(
   importantSkills: string[],
   context: ReturnType<typeof createContext>,
 ): void {
-  if (context.coreTestCount === 0)
-    throw new Error('The exercise pack must contain at least one core test.');
+  if (context.focusedTestCount === 0)
+    throw new Error('The exercise pack must contain at least one focused test.');
   for (const skill of importantSkills) {
-    if (!context.coreCoveredSkills.has(skill)) {
-      throw new Error(`Important skill ${skill} is not covered by a core test.`);
+    if (!context.focusedCoveredSkills.has(skill)) {
+      throw new Error(`Important skill ${skill} is not covered by a focused test.`);
     }
   }
   if ([...context.lessonIds].some((id) => !context.referencedLessonIds.has(id))) {
     throw new Error('The exercise pack contains a lesson that no test uses.');
+  }
+  const unreferencedFocusedLessonId = [...context.focusedLessonIds].find(
+    (id) => !context.focusedReferencedLessonIds.has(id),
+  );
+  if (unreferencedFocusedLessonId) {
+    throw new Error(
+      `Focused lesson ${unreferencedFocusedLessonId} is not referenced by a focused test.`,
+    );
   }
 }
 

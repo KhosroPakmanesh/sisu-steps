@@ -62,17 +62,17 @@
 - **REQ-G001-046:** Lesson-practice responses and reveals shall be temporary and shall not create or change test attempts, percentages, reports, unfinished test sessions, or unresolved mistakes.
 - **REQ-G001-047:** The learner shall be able to finish a lesson without completing its optional practice, and **Finish lesson** shall record that lesson as completed.
 - **REQ-G001-048:** Lesson completion shall be stored in IndexedDB with the stable lesson ID, lesson version, and completion timestamp and shall be included in learner backup and restore.
-- **REQ-G001-049:** A completed lesson shall be visibly marked for every test that reuses it and shall remain available for rereading and optional practice.
+- **REQ-G001-049:** A completed lesson shall remain available for rereading and optional practice and shall be visibly marked wherever a review test reuses it.
 - **REQ-G001-050:** Every test shall reference at least one valid lesson, and the app shall show a recoverable error for malformed lesson content or references.
 - **REQ-G001-051:** Clearing topic or all learner history shall remove lesson completions; clearing one test shall retain completions because lessons can be shared by multiple tests.
 - **REQ-G001-052:** Lesson reading and practice controls shall be keyboard operable and usable from a 320-pixel viewport upward.
-- **REQ-G001-053:** Every lesson and ordinary test shall declare and visibly display one of three learning stages: **Focused**, **Guided combination**, or **Review**.
+- **REQ-G001-053:** Every lesson and ordinary test shall declare and visibly display one of two learning stages: **Focused** or **Review**.
 - **REQ-G001-054:** A focused lesson or test shall introduce and assess one target grammatical skill; any supporting grammar shall be limited to declared previously taught prerequisites and shall not require an additional new decision.
-- **REQ-G001-055:** A guided-combination lesson or test shall declare every target and prerequisite skill that the learner must combine, and its interface shall state that the material combines learned patterns.
-- **REQ-G001-056:** A review test may combine multiple skills only when each skill is introduced by one of its referenced lessons.
+- **REQ-G001-055:** A focused test shall reference only preparation lessons whose target skill matches that test's target skill; earlier supporting skills shall remain declared prerequisites without adding their lessons to that test's **Learn first** list.
+- **REQ-G001-056:** Review material is the only material that may combine multiple target skills, and it may combine a skill only after that skill has been introduced by an earlier Focused lesson and covered by the Focused test sequence.
 - **REQ-G001-057:** Each lesson shall declare the Finnish vocabulary it introduces with a plain-English meaning.
 - **REQ-G001-058:** Every scored or lesson-practice exercise shall declare its required grammatical skills, and those skills shall be contained in the targets and prerequisites of its containing test or lesson.
-- **REQ-G001-059:** Every scored word shall be introduced by the current lesson set or a declared prerequisite lesson; an unfamiliar contextual word may be supplied with an English meaning but shall not itself determine whether the answer is correct.
+- **REQ-G001-059:** Every scored word shall be introduced by the current focused lesson or by the transitive lesson chain for a declared prerequisite skill; an unfamiliar contextual word may be supplied with an English meaning but shall not itself determine whether the answer is correct.
 - **REQ-G001-060:** Focused exercises shall not use irregular stems, undeclared inflection, or unrelated spelling transformations unless the complete non-target form is supplied directly in the prompt.
 - **REQ-G001-061:** When the installed content-pack version differs from the version associated with local learner data, the system shall clear incompatible attempts, sessions, mistakes, and lesson completions once and store the installed version before study continues.
 - **REQ-G001-062:** The first topic pack shall describe its level as Pre-A1–A1.3 Finnish grammar foundations and shall not present its results as proof of overall CEFR proficiency.
@@ -89,16 +89,16 @@
 - **REQ-G001-073:** The system shall persist correction, review eligibility, review attempts, and mastery records in native IndexedDB and include them in validated JSON backup and restore.
 - **REQ-G001-074:** Reports shall distinguish first-attempt accuracy, latest, best, average, independently correct, skipped, corrected, and mastered counts.
 - **REQ-G001-075:** Reports shall aggregate performance by declared target skill and misconception category.
-- **REQ-G001-076:** The KPT teaching sequence shall separately introduce double consonants, common single-consonant changes, special `k` changes, consonant clusters, and mixed recognition before guided noun, verb, or plural production.
+- **REQ-G001-076:** The KPT teaching sequence shall separately introduce double consonants, common single-consonant changes, special `k` changes, consonant clusters, and mixed recognition before focused noun, verb, or plural production.
 - **REQ-G001-077:** Each difficult KPT lesson shall contain four or five optional unscored practice exercises, at least two worked contrasts, and no more than ten newly introduced scored vocabulary items.
 - **REQ-G001-078:** When a materially revised pack is installed, learner data from an incompatible earlier content version shall be cleared once and the installed version shall be stored before study continues.
 - **REQ-G001-079:** A focused lesson shall introduce no more than ten scored vocabulary items and shall reuse its core words across response formats before adding further lexical load.
-- **REQ-G001-080:** Each grammatical-topic pack shall declare a non-empty, duplicate-free list of the important grammatical skills that its core tests are responsible for covering.
-- **REQ-G001-081:** Every ordinary test shall declare whether it belongs to the **Core** set or the **Extended** set.
-- **REQ-G001-082:** All core tests shall appear before the first extended test in authored order, and the authored boundary shall not lock or hide either set.
-- **REQ-G001-083:** The scored exercises in the core-test sequence shall collectively require every important grammatical skill declared by the pack.
-- **REQ-G001-084:** Extended tests shall reinforce, combine, or deepen skills already covered by the core sequence and shall not introduce a new required grammatical skill.
-- **REQ-G001-085:** Each topic page shall present core and extended tests as visibly distinct groups and shall describe extended tests as optional additional depth after the core sequence.
+- **REQ-G001-080:** Each grammatical-topic pack shall declare a non-empty, duplicate-free list of the important grammatical skills that its Focused tests are responsible for covering.
+- **REQ-G001-081:** Every ordinary test shall use its **Focused** or **Review** stage as its only learning-group classification and shall not declare a separate Core or Extended set.
+- **REQ-G001-082:** All Focused tests shall appear before the first Review in authored order, and neither group shall lock or hide the other.
+- **REQ-G001-083:** The scored exercises in the Focused-test sequence shall collectively require every important grammatical skill declared by the pack.
+- **REQ-G001-084:** Reviews shall reinforce, mix, or deepen skills already covered by the Focused sequence and shall not introduce a new required grammatical skill.
+- **REQ-G001-085:** Each topic page shall present **Focused tests** and **Reviews** as visibly separate sections and shall not repeat either classification as a badge on every test card.
 - **REQ-G001-086:** The bundled content directory shall contain a versioned catalog that lists every installed topic-pack ID and JSON filename in authored order.
 - **REQ-G001-087:** Application initialization shall validate the catalog, load every listed pack, require catalog IDs to match pack IDs, and reject duplicate pack, lesson, or scored-exercise IDs across the installed collection.
 - **REQ-G001-088:** The catalog, topic, lesson, and study routes shall identify the owning topic and test where applicable, display every installed topic pack, and keep every lesson and test directly accessible through its topic page.
@@ -109,11 +109,12 @@
 - **REQ-G001-093:** Test and lesson IDs shall be unique within their pack, and lesson and scored-exercise IDs shall be globally unique across all installed packs.
 - **REQ-G001-094:** The generic content validator shall validate every catalog entry and every pack, then apply clearly separated topic-specific checks only to the pack they target.
 - **REQ-G001-095:** The content-generation workflow shall run every registered deterministic pack generator before validating the complete catalog.
-- **REQ-G001-096:** A reusable `finnish-grammar-content-creator` skill shall guide future topic authoring by reading the repository contract, creating a source-grounded coverage map, selecting 200–1,000 questions from pedagogical need, and producing the established lesson, core-test, extended-test, diagnostic, explanation, review, and mastery structure.
-- **REQ-G001-097:** Before bulk question authoring, the content workflow shall perform and record a Finnish-teaching pedagogy assessment of topic boundaries, prerequisite assumptions, cognitive focus, vocabulary load, recognition-to-production progression, likely misconceptions, core coverage, extended scope, and proposed question count.
+- **REQ-G001-096:** A reusable `finnish-grammar-content-creator` skill shall guide future topic authoring by reading the repository contract, creating a source-grounded coverage map, selecting 200–1,000 questions from pedagogical need, producing separate Focused tests for individual topics, and producing the established lesson, diagnostic, explanation, mixed Review, and mastery structure.
+- **REQ-G001-097:** Before bulk question authoring, the content workflow shall perform and record a Finnish-teaching pedagogy assessment of topic boundaries, prerequisite assumptions, cognitive focus, vocabulary load, recognition-to-production progression, likely misconceptions, Focused coverage, Review scope, and proposed question count.
 - **REQ-G001-098:** After authoring, the content workflow shall perform and record a second Finnish-teaching pedagogy assessment of Finnish correctness, natural accepted alternatives, distractor quality, explanation clarity, sentence construction notes, lexical control, progression, purposeful repetition, transfer, and delayed-mastery pair quality.
 - **REQ-G001-099:** A pack shall not receive final authoring approval when either pedagogy assessment identifies an unresolved high-impact gap; the assessment record shall state approval, approval with explicit limitations, or revision required.
 - **REQ-G001-100:** Content research and authoring may use verified sources during development, but the shipped application shall remain static and shall make no runtime AI, network research, or content-generation call.
+- **REQ-G001-101:** A focused preparation route with one lesson shall present that lesson in a centered reading hierarchy without redundant lesson navigation or aggregate progress. A multi-lesson review shall provide a persistent lesson navigator below the application header on wide viewports and a compact labelled lesson selector before the reader at 800 pixels and below.
 
 ## Acceptance criteria
 
@@ -132,17 +133,17 @@
 - Given an unresolved mistake that is skipped during mistake practice, when learner progress is saved, then the mistake remains unresolved.
 - Given a completed session containing skipped exercises, when results appear, then correct, incorrect, and skipped counts are shown separately and the percentage uses the full exercise count.
 - Given any test card, when it is displayed, then separate **Learn first** and direct test actions are available and neither is locked.
-- Given a test that references overlapping concepts, when **Learn first** opens, then each referenced lesson appears once in authored order.
+- Given a focused test with declared prerequisite skills, when **Learn first** opens, then only preparation lessons targeting that test's skill appear and earlier prerequisite lessons are not repeated.
 - Given a lesson, when it opens, then first-principles teaching, worked examples, common mistakes, and two to five separate practice exercises are available.
 - Given an optional practice response or answer reveal, when feedback appears, then no learner score, attempt, test session, report, or mistake status changes.
 - Given unfinished optional practice, when **Finish lesson** is selected, then the lesson is stored as completed and remains available to reread.
-- Given a lesson reused by multiple tests, when it is completed from one test, then every referencing test displays that lesson as completed.
+- Given a lesson reused by review tests, when it is completed from one route, then every referencing review test displays that lesson as completed.
 - Given a lesson completion, when learner data is exported and restored, then the lesson ID, version, and completion timestamp are preserved.
 - Given a topic or all-history clear, when it completes, then lesson completions are removed; given a single-test clear, they are retained.
 - Given a test or lesson card, when it is displayed, then its learning stage, target skills, and prerequisite skills are understandable before the learner starts.
 - Given a focused exercise, when its metadata is validated, then it declares exactly one target skill and no required skill outside its declared prerequisites.
-- Given an exercise containing Finnish vocabulary, when the content pack is validated, then the vocabulary is declared by one of the lessons referenced for that test or supplied as translated non-graded context.
-- Given a guided-combination or review test, when it is displayed, then the learner is explicitly told that previously introduced patterns will be combined.
+- Given an exercise containing Finnish vocabulary, when the content pack is validated, then the vocabulary is declared by its focused lesson, by the transitive lesson chain for a declared prerequisite skill, or supplied as translated non-graded context.
+- Given a review test, when it is displayed, then the learner is explicitly told that previously introduced patterns will be combined; given any focused test, then it declares exactly one target and does not display combination guidance.
 - Given learner data associated with an older content-pack version, when the revised pack first loads, then incompatible progress is cleared once and subsequent loads of the same version preserve new progress.
 - Given a focused grammar-production question, when vocabulary is not the target, then the Finnish base word and its English meaning are visible in the prompt.
 - Given an incorrect multiple-choice answer, when feedback appears, then the learner sees why the selected option is wrong as well as the correct construction.
@@ -154,9 +155,9 @@
 - Given completed work, when reports open, then first-attempt, independent, skipped, corrected, mastered, skill, and misconception summaries reflect stored learner records.
 - Given a focused lesson, when its content is validated, then it introduces at most ten scored Finnish words and its associated test supplies English meanings where vocabulary is not the target.
 - Given a valid grammatical-topic pack, when its content is validated, then it contains at least 200 and at most 1,000 scored exercises.
-- Given a declared important grammatical skill, when the pack is validated, then at least one core scored exercise requires that skill.
-- Given a test after the first extended test, when the pack is validated, then that test is also extended.
-- Given an extended test, when it is displayed, then it appears under an **Extended tests** heading and remains directly accessible.
+- Given a declared important grammatical skill, when the pack is validated, then at least one Focused scored exercise requires that skill.
+- Given a test after the first Review, when the pack is validated, then that test is also a Review.
+- Given a topic learning map, when tests are displayed, then they appear under separate **Focused tests** and **Reviews** headings without per-card stage or set badges, and every test remains directly accessible.
 - Given two cataloged topic packs, when the app loads, then both appear in catalog order and their tests use topic-aware lesson and study links.
 - Given progress in two packs, when one pack version changes, then only that pack's attempts, sessions, mistakes, corrections, mastery, and lesson completions are cleared.
 - Given a new pack added to the catalog, when the app initializes, then existing progress is preserved and the new pack version is recorded.
@@ -164,3 +165,5 @@
 - Given a legacy single-pack backup whose version matches the installed first pack, when it is restored, then it is migrated to the per-pack version map without losing compatible progress.
 - Given a future topic and level, when the content-creator skill is used, then a saved pre-authoring pedagogy assessment approves the blueprint before bulk exercises are written.
 - Given a completed future pack, when final validation runs, then a saved final pedagogy assessment records its disposition and blocks approval for unresolved high-impact findings.
+- Given a focused test with one preparation lesson, when **Learn first** opens, then the test title is the page heading and the lesson reader is centered without a one-item navigator or aggregate progress bar.
+- Given a review with multiple preparation lessons, when **Learn first** opens at a wide viewport, then the lesson navigator remains visible below the sticky application header; at 800 pixels and below, then a labelled selector appears immediately before the reader instead of the complete navigation list.

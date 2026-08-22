@@ -1,8 +1,7 @@
 export type ExerciseType =
   'multiple-choice' | 'fill-blank' | 'translation-fi' | 'translation-en' | 'word-order';
 
-export type LearningStage = 'focused' | 'guided-combination' | 'review';
-export type TestSet = 'core' | 'extended';
+export type LearningStage = 'focused' | 'review';
 
 export interface VocabularyItem {
   finnish: string;
@@ -53,7 +52,6 @@ export interface ExerciseTest {
   id: string;
   title: string;
   focus: string;
-  set: TestSet;
   stage: LearningStage;
   targetSkills: string[];
   prerequisiteSkills: string[];

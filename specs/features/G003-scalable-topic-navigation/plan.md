@@ -29,7 +29,7 @@ Separate catalog-level discovery from pack-level study navigation so additional 
 1. Add typed topic-route metadata and lazy route composition.
 2. Extract pure topic-summary and continue-learning queries.
 3. Replace the expanded home map with catalog cards and a continue-learning action.
-4. Move the ordered core/extended test map and objectives into a topic route page.
+4. Move the ordered Focused/Review test map and objectives into a topic route page.
 5. Point valid lesson and study exits back to their owning topic.
 6. Update unit, end-to-end, architecture, design-system, and changelog evidence.
 

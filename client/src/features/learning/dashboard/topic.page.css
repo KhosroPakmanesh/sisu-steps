@@ -128,7 +128,7 @@
   margin: var(--space-3) 0 var(--space-1);
 }
 
-.test-group-heading.extended-heading {
+.test-group-heading.review-heading {
   margin-top: 2.25rem;
   padding-top: var(--space-6);
   border-top: 1px solid var(--border-default);
@@ -149,7 +149,7 @@
     box-shadow var(--motion-standard) ease;
 }
 
-.test-card.extended-test {
+.test-card.review-test {
   border-color: var(--border-brand);
   background: color-mix(in srgb, var(--surface-brand-subtle) 48%, white);
 }
@@ -184,37 +184,6 @@
 
 .test-card p {
   font-size: 0.93rem;
-}
-
-.stage-badge,
-.set-badge {
-  display: inline-block;
-  padding: 0.18rem 0.45rem;
-  border-radius: var(--radius-pill);
-}
-
-.stage-badge {
-  background: var(--surface-success);
-  color: var(--text-success);
-}
-
-.set-badge {
-  background: var(--text-primary);
-  color: var(--surface-raised);
-}
-
-.set-badge.extended {
-  background: var(--blue-700);
-}
-
-.stage-badge.combination {
-  background: var(--surface-warning);
-  color: var(--text-warning);
-}
-
-.stage-badge.review {
-  background: var(--surface-brand-subtle);
-  color: var(--text-brand);
 }
 
 .test-card .skill-line {

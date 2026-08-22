@@ -73,7 +73,6 @@ export const learningPack: TopicPack = {
       id: 'test-1',
       title: 'Test 1',
       focus: 'Choose the inessive ending.',
-      set: 'core',
       stage: 'focused',
       targetSkills: ['Vowel harmony'],
       prerequisiteSkills: [],
@@ -97,9 +96,8 @@ export const learningPack: TopicPack = {
     },
     {
       id: 'test-2',
-      title: 'Extended review',
+      title: 'Review test',
       focus: 'Retrieve the same pattern in a new word.',
-      set: 'extended',
       stage: 'review',
       targetSkills: ['Vowel harmony'],
       prerequisiteSkills: [],

@@ -9,22 +9,70 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.getByRole('link', { name: 'Open learning map' }).click();
 
   await expect(page).toHaveURL(/\/topics\/finnish-foundations-a1$/);
-  await expect(page.locator('.test-card')).toHaveCount(14);
+  await expect(page.locator('.test-card')).toHaveCount(15);
+  await expect(page.locator('.test-group-heading h3')).toHaveText(['Focused tests', 'Reviews']);
+  await expect(page.locator('.set-badge, .stage-badge')).toHaveCount(0);
+  await expect(page.locator('body')).not.toContainText('Core set');
+  await expect(page.locator('body')).not.toContainText('Extended set');
   await expect(
     page.locator('.test-card').first().getByRole('link', { name: 'Learn first' }),
   ).toHaveAttribute('href', /\/learn\/finnish-foundations-a1\//);
   await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toContainText(
     'Topics',
   );
+
+  await page.goto('/learn/finnish-foundations-a1/kpt-nouns');
+  await expect(page.locator('.lesson-hero h1')).toHaveText('KPT in nouns');
+  await expect(page.locator('.lesson-layout')).toHaveClass(/single-lesson/);
+  await expect(page.locator('.lesson-list')).toHaveCount(0);
+  await expect(page.locator('.lesson-picker')).toHaveCount(0);
+  await expect(page.locator('.lesson-progress')).toHaveCount(0);
+  await expect(page.locator('.reader-heading h2')).toHaveText('Building noun forms with -n');
+  await expect(page.locator('body')).not.toContainText('Guided combination');
+
+  if ((page.viewportSize()?.width ?? 0) > 800) {
+    const readerBox = await page.locator('.lesson-reader').boundingBox();
+    const viewportCenter = (page.viewportSize()?.width ?? 0) / 2;
+    expect(readerBox).not.toBeNull();
+    expect(
+      Math.abs((readerBox?.x ?? 0) + (readerBox?.width ?? 0) / 2 - viewportCenter),
+    ).toBeLessThan(2);
+  }
+
+  await page.goto('/learn/finnish-foundations-a1/guided-review');
+  await expect(page.locator('.lesson-list button')).toHaveCount(13);
+  await expect(page.locator('.lesson-hero .eyebrow')).toContainText('Review');
+  await expect(page.locator('.lesson-hero h1')).toHaveText('Foundations checkpoint review');
+
+  if ((page.viewportSize()?.width ?? 0) <= 800) {
+    await expect(page.locator('.lesson-list')).toBeHidden();
+    await expect(page.locator('.lesson-picker')).toBeVisible();
+    await expect(page.locator('.lesson-picker option')).toHaveCount(13);
+    await page.locator('.lesson-picker select').selectOption('1');
+    await expect(page.locator('.reader-heading h2')).toContainText('Saying “in”');
+
+    const pickerBox = await page.locator('.lesson-picker').boundingBox();
+    const readerBox = await page.locator('.lesson-reader').boundingBox();
+    expect(pickerBox).not.toBeNull();
+    expect(readerBox).not.toBeNull();
+    expect((readerBox?.y ?? 0) - ((pickerBox?.y ?? 0) + (pickerBox?.height ?? 0))).toBeLessThan(40);
+  } else {
+    await expect(page.locator('.lesson-list')).toBeVisible();
+    await expect(page.locator('.lesson-picker')).toBeHidden();
+    await page.evaluate(() => window.scrollTo(0, 560));
+    const positions = await page.evaluate(() => ({
+      headerBottom: document.querySelector('.site-header')?.getBoundingClientRect().bottom ?? 0,
+      listTop: document.querySelector('.lesson-list')?.getBoundingClientRect().top ?? 0,
+    }));
+    expect(positions.listTop).toBeGreaterThanOrEqual(positions.headerBottom);
+  }
 });
 
 test('keeps optional lesson practice separate from scored progress', async ({ page }) => {
   await page.goto('/topics/finnish-foundations-a1');
   await page.locator('.test-card').first().getByRole('link', { name: 'Learn first' }).click();
 
-  await expect(
-    page.getByRole('heading', { name: 'Learn first, then practise with confidence.' }),
-  ).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Vowel families' })).toBeVisible();
   await page.getByRole('button', { name: 'Start optional practice' }).click();
   await page.getByRole('button', { name: /Show answer/ }).click();
 

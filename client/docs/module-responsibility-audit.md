@@ -29,7 +29,7 @@ The former `app/core` and `app/pages` topology has been removed. Production owne
 - Public paths remain `/`, `/learn/:topicId/:testId`, `/study/:topicId/:testId`, `/mistakes/:topicId`, `/review/:topicId`, `/reports`, and `/data`.
 - IndexedDB remains database `sisu-steps`, version `1`, store `learner-state`, key `current`.
 - Backup type/version and learner-state interfaces remain stable.
-- The catalog still contains one pack at version 4.1.0 with 200 scored exercises, 13 lessons, and 44 unscored practice exercises.
+- The catalog contains one pack at version 5.0.0 with 15 tests, 200 scored exercises, 13 lessons, and 44 unscored practice exercises.
 - The source prototype was not modified.
 
 ## Exceptions

@@ -4,7 +4,7 @@
 
 - **VAL-G003-001** (`REQ-G003-001`, `002`, `007`): Dashboard component tests verify one summary per pack, compact progress, topic links, and absence of expanded test cards.
 - **VAL-G003-002** (`REQ-G003-003`): Query and dashboard tests verify recent valid session resume, invalid-session fallback, and the first unattempted test recommendation.
-- **VAL-G003-003** (`REQ-G003-004`, `005`): Topic-page tests verify authored test order, separate core/extended groups, stage and skill labels, lesson progress, and direct lesson/test links.
+- **VAL-G003-003** (`REQ-G003-004`, `005`): Topic-page tests verify authored test order, separate Focused/Review sections without repeated classification badges, stage and skill guidance, lesson progress, and direct lesson/test links.
 - **VAL-G003-004** (`REQ-G003-006`): Topic-page tests verify a recoverable unknown-topic state and home link.
 - **VAL-G003-005** (`REQ-G003-008`): Existing learning, persistence, content, reports, and backup tests remain green without learner-state migration.
 - **VAL-G003-006** (`REQ-G003-009`, `010`): Lint, typecheck, production build, and Playwright verify semantic navigation, lazy routing, and 320-pixel catalog/topic usability.
@@ -12,7 +12,7 @@
 ## Manual checks
 
 - Open home at 320, 768, and 1440 pixels and confirm topic cards do not clip or create horizontal scrolling.
-- Open a topic at each width and confirm core/extended headings, test actions, and objectives remain readable.
+- Open a topic at each width and confirm Focused/Review headings, test actions, and objectives remain readable.
 - Navigate home, a topic, Learn first, and a test using only the keyboard; confirm visible focus and logical order.
 - Create or resume a saved session and confirm the home continue action names and opens the correct workflow.
 

@@ -6,7 +6,7 @@
 - **REQ-G003-002:** The home route shall not render the full test sequence or lesson teaching content for any topic pack.
 - **REQ-G003-003:** The home route shall provide one prominent continue-learning action that resumes the most recently updated valid saved session or, when no session exists, starts the first test that has not yet been attempted.
 - **REQ-G003-004:** Selecting a topic pack shall open `/topics/:topicId`, where the pack's objectives and every authored test appear in order.
-- **REQ-G003-005:** The topic route shall preserve separate, directly accessible **Learn first** and test actions, visible core and extended groups, stage and skill guidance, topic-scoped mistakes, and optional review actions.
+- **REQ-G003-005:** The topic route shall preserve separate, directly accessible **Learn first** and test actions, visible **Focused tests** and **Reviews** sections without repeated classification badges, stage and skill guidance, topic-scoped mistakes, and optional review actions.
 - **REQ-G003-006:** An unknown topic ID shall produce a recoverable page-level error with a route back to the topic catalog.
 - **REQ-G003-007:** Adding another valid catalog entry shall add one topic summary to home without expanding that pack's tests or lessons on home.
 - **REQ-G003-008:** Existing lesson, study, mistake, review, report, content-version, and learner-persistence contracts shall remain unchanged.

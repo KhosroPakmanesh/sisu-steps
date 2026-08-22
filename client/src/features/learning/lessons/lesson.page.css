@@ -19,6 +19,11 @@
   max-width: 50rem;
 }
 
+.single-lesson-page .lesson-hero {
+  max-width: var(--page-width-narrow);
+  margin-inline: auto;
+}
+
 .back-link {
   color: var(--text-secondary);
   text-decoration: none;
@@ -58,11 +63,20 @@
   padding-bottom: 5rem;
 }
 
+.lesson-layout.single-lesson {
+  grid-template-columns: minmax(0, var(--page-width-narrow));
+  justify-content: center;
+}
+
 .lesson-list {
   position: sticky;
-  top: var(--space-4);
+  top: calc(4.5rem + var(--space-4));
   display: grid;
   gap: var(--space-2);
+}
+
+.lesson-picker {
+  display: none;
 }
 
 .lesson-list button {
@@ -157,8 +171,8 @@
 }
 
 .focus-contract {
-  margin: var(--space-5) 0;
-  padding: var(--space-5);
+  margin: var(--space-5) var(--space-3);
+  padding: var(--space-5) calc(var(--space-8) - var(--space-3));
   border: 1px solid var(--border-brand);
   border-radius: var(--radius-medium);
   background: var(--surface-brand-subtle);
@@ -334,16 +348,32 @@
   }
 
   .lesson-list {
-    position: static;
-    grid-template-columns: repeat(2, 1fr);
+    display: none;
+  }
+
+  .lesson-picker {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .lesson-picker select {
+    width: 100%;
+    min-height: var(--touch-target);
+    padding: var(--space-3);
+    border: 1px solid var(--border-control);
+    border-radius: var(--radius-control);
+    background: var(--surface-raised);
+    color: var(--text-primary);
+    font: inherit;
+  }
+
+  .lesson-picker select:focus-visible {
+    outline: 3px solid var(--focus-ring);
+    outline-offset: 3px;
   }
 }
 
 @media (width <= 560px) {
-  .lesson-list {
-    grid-template-columns: 1fr;
-  }
-
   .lesson-footer {
     display: grid;
   }

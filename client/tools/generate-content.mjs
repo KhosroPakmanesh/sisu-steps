@@ -161,7 +161,7 @@ const lessonProfiles = {
     practiceVocabulary: ['kenkä', 'kampa', 'pelto', 'ranta'],
   },
   'kpt-basics': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['KPT recognition'],
     prerequisiteSkills: [
       'KPT double consonants',
@@ -173,7 +173,7 @@ const lessonProfiles = {
     practiceVocabulary: ['pankki', 'jalka', 'poika', 'kenkä'],
   },
   'genitive-nouns': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['Genitive -n'],
     prerequisiteSkills: ['KPT recognition'],
     introducedVocabulary: [
@@ -185,7 +185,7 @@ const lessonProfiles = {
     practiceVocabulary: ['pankki', 'kauppa', 'matto'],
   },
   'verb-kpt': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['Minä verb forms with KPT'],
     prerequisiteSkills: ['KPT recognition'],
     introducedVocabulary: [
@@ -213,7 +213,7 @@ const lessonProfiles = {
     practiceVocabulary: ['kissa', 'pallo', 'ystävä'],
   },
   'kpt-t-plural': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['T-plural with KPT'],
     prerequisiteSkills: ['KPT recognition', 'Regular T-plural'],
     introducedVocabulary: [
@@ -246,7 +246,7 @@ const lessonProfiles = {
     practiceVocabulary: ['laulaa', 'kysyä', 'asua'],
   },
   'plural-sentences': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['Plural subject + ovat'],
     prerequisiteSkills: ['Regular T-plural'],
     introducedVocabulary: [
@@ -291,8 +291,13 @@ const testProfiles = {
     targetSkills: ['KPT consonant clusters'],
     prerequisiteSkills: [],
   },
+  'test-kpt-special-k': {
+    stage: 'focused',
+    targetSkills: ['KPT special k changes'],
+    prerequisiteSkills: [],
+  },
   'kpt-patterns': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['KPT recognition'],
     prerequisiteSkills: [
       'KPT double consonants',
@@ -302,12 +307,12 @@ const testProfiles = {
     ],
   },
   'kpt-nouns': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['Genitive -n'],
     prerequisiteSkills: ['KPT recognition'],
   },
   'kpt-verbs': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['Minä verb forms with KPT'],
     prerequisiteSkills: ['KPT recognition'],
   },
@@ -317,7 +322,7 @@ const testProfiles = {
     prerequisiteSkills: [],
   },
   'test-kpt-t-plural': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['T-plural with KPT'],
     prerequisiteSkills: ['KPT recognition', 'Regular T-plural'],
   },
@@ -327,7 +332,7 @@ const testProfiles = {
     prerequisiteSkills: ['Vowel harmony'],
   },
   'plural-in-sentences': {
-    stage: 'guided-combination',
+    stage: 'focused',
     targetSkills: ['Plural subject + ovat'],
     prerequisiteSkills: ['Regular T-plural'],
   },
@@ -387,7 +392,7 @@ const inferTargetSkill = (exercise, fallback) => {
 const renumberExercises = (testNumber, exercises) =>
   exercises.map((exercise, index) => ({ ...exercise, id: idFor(testNumber, index) }));
 
-const test = (id, title, focus, lessonIds, exercises, set = 'core') => {
+const test = (id, title, focus, lessonIds, exercises) => {
   const profile = testProfiles[id];
   if (!profile) throw new Error(`Missing test focus profile for ${id}.`);
   const vocabulary = vocabularyForLessons(lessonIds);
@@ -396,7 +401,6 @@ const test = (id, title, focus, lessonIds, exercises, set = 'core') => {
     id,
     title,
     focus,
-    set,
     lessonIds,
     ...profile,
     exercises: exercises.map((exercise) => {
@@ -422,7 +426,7 @@ const lesson = (
   practiceExercises,
 ) => ({
   id,
-  version: '4.1.0',
+  version: '5.0.0',
   ...lessonProfiles[id],
   title,
   summary,
@@ -693,6 +697,12 @@ const clusterKptItems = [
   ['ranta', 'rannan', 'beach', 'nt → nn'],
   ['silta', 'sillan', 'bridge', 'lt → ll'],
 ];
+const specialKptItems = [
+  ['poika', 'pojan', 'boy', 'k → j'],
+  ['puku', 'puvun', 'suit', 'k → v'],
+  ['aika', 'ajan', 'time', 'k → j'],
+  ['luku', 'luvun', 'number or chapter', 'k → v'],
+];
 const mixedKptItems = [
   ['poika', 'pojan', 'boy', 'k → j'],
   ['puku', 'puvun', 'suit', 'k → v'],
@@ -707,7 +717,18 @@ const mixedKptItems = [
 const kptDoublePool = buildKptBlock(doubleKptItems, 14, 'KPT double consonants');
 const kptSinglePool = buildKptBlock(singleKptItems, 14, 'KPT common single consonants');
 const kptClusterPool = buildKptBlock(clusterKptItems, 14, 'KPT consonant clusters');
+const kptSpecialPool = buildKptBlock(specialKptItems, 8, 'KPT special k changes');
 const kptMixedPool = buildKptBlock(mixedKptItems, 16, 'KPT recognition');
+const mixedKptRecognitionPool = [
+  test3[0],
+  test3[3],
+  test3[4],
+  test3[5],
+  test3[6],
+  test3[8],
+  test3[10],
+  test3[11],
+];
 
 const nounGenitives = [
   ['pankki', 'pankin', "the bank's / of the bank", 'kk weakens to k.'],
@@ -2183,8 +2204,8 @@ const lessons = [
 ];
 
 const reviewPool = [
-  ...test1.slice(10, 14),
-  ...test2.slice(15, 18),
+  ...test1.slice(10, 12),
+  ...test2.slice(15, 16),
   ...kptDoublePool.slice(12, 14),
   ...kptSinglePool.slice(12, 14),
   ...kptClusterPool.slice(12, 14),
@@ -2235,7 +2256,7 @@ const importantSkills = [
 const pack = {
   schemaVersion: 1,
   id: 'finnish-foundations-a1',
-  version: '4.1.0',
+  version: '5.0.0',
   title: 'Vowel harmony, KPT & T-plural',
   level: 'Pre-A1–A1.3 Finnish grammar foundations',
   summary:
@@ -2274,7 +2295,7 @@ const pack = {
       'harmony-in-forms',
       'Harmony in real forms',
       'Build and translate common -ssa/-ssä forms.',
-      ['vowel-harmony-basics', 'inside-ending'],
+      ['inside-ending'],
       renumberExercises(2, test2.slice(0, 15)),
     ),
     test(
@@ -2299,24 +2320,31 @@ const pack = {
       renumberExercises(5, kptClusterPool.slice(0, 12)),
     ),
     test(
+      'test-kpt-special-k',
+      'KPT: two special k changes',
+      'Focus only on the separately learned k → j and k → v word families.',
+      ['kpt-special-k'],
+      renumberExercises(15, kptSpecialPool),
+    ),
+    test(
       'kpt-patterns',
       'KPT: distinguish the families',
-      'Combine the separately learned KPT families, including the two special k patterns.',
-      allKptLessonIds,
-      renumberExercises(6, kptMixedPool.slice(0, 12)),
+      'Distinguish the separately learned KPT families, including the two special k patterns.',
+      ['kpt-basics'],
+      renumberExercises(6, mixedKptRecognitionPool),
     ),
     test(
       'kpt-nouns',
       'KPT in nouns',
       'Produce weak-grade genitive forms of familiar nouns.',
-      [...allKptLessonIds, 'genitive-nouns'],
+      ['genitive-nouns'],
       renumberExercises(7, test4.slice(0, 15)),
     ),
     test(
       'kpt-verbs',
       'KPT in verbs',
       'Use familiar strong-to-weak KPT changes in common minä forms; no strengthening patterns are included.',
-      [...allKptLessonIds, 'verb-kpt'],
+      ['verb-kpt'],
       renumberExercises(8, test5.slice(0, 15)),
     ),
     test(
@@ -2330,38 +2358,36 @@ const pack = {
       'test-kpt-t-plural',
       'T-plural with KPT',
       'Use weak noun stems before the plural -t ending.',
-      [...allKptLessonIds, 't-plural-basics', 'kpt-t-plural'],
+      ['kpt-t-plural'],
       renumberExercises(10, test7.slice(0, 15)),
     ),
     test(
       'plural-verb-harmony',
       'They do: -vat or -vät',
       'Choose and attach -vat or -vät to a verb stem that is always supplied.',
-      ['vowel-harmony-basics', 'he-verbs'],
+      ['he-verbs'],
       renumberExercises(11, test8.slice(0, 15)),
     ),
     test(
       'plural-in-sentences',
       'Plurals in sentences',
-      'Combine regular T-plural subjects with ovat and supplied fixed place or state words.',
-      ['t-plural-basics', 'plural-sentences'],
+      'Build regular T-plural subjects with ovat and supplied fixed place or state words.',
+      ['plural-sentences'],
       renumberExercises(12, test9.slice(0, 15)),
     ),
     test(
       'guided-review',
-      'Guided foundations review',
+      'Foundations checkpoint review',
       'Retrieve earlier patterns in a fixed, mixed checkpoint.',
       allLessonIds,
-      renumberExercises(13, reviewPool.slice(0, 18)),
-      'extended',
+      renumberExercises(13, reviewPool.slice(0, 16)),
     ),
     test(
       'foundations-review',
       'Foundations review',
       'Bring vowel harmony, KPT, and T-plural together.',
       allLessonIds,
-      renumberExercises(14, reviewPool.slice(18)),
-      'extended',
+      renumberExercises(14, reviewPool.slice(16)),
     ),
   ],
 };

@@ -32,7 +32,7 @@ describe('DashboardPage', () => {
     expect(card?.textContent).toContain('Tests tried');
     expect(card?.textContent).toContain('0/2');
     expect(card?.querySelector('a[href="/topics/topic"]')).toBeTruthy();
-    expect(card?.textContent).not.toContain('Extended review');
+    expect(card?.textContent).not.toContain('Review test');
   });
 
   it('renders one independent summary for every installed topic pack', () => {

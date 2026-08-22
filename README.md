@@ -5,9 +5,9 @@ A local-first interactive Finnish exercise book for one English-speaking learner
 ## What it includes
 
 - Authored grammar packs may contain 200–1,000 scored exercises according to the topic's coverage needs; the current pack contains 200
-- A complete **Core tests** sequence covering every declared important grammar point, followed by visibly separate optional **Extended tests**
-- Visible **Focused**, **Guided combination**, and **Review** stages so each test states whether it introduces one target or combines learned patterns
-- Separate **Learn first** preparation for every test, built from thirteen reusable beginner lessons
+- Separate **Focused tests** for every declared important grammar point, followed by visibly separate mixed **Reviews**
+- Visible **Focused** and **Review** stages; focused tests teach one topic and only reviews combine previously learned patterns
+- Separate **Learn first** preparation for every test; focused tests show only their topic-specific lesson while reviews may reuse earlier lessons
 - Declared lesson targets, prerequisites, and English vocabulary lists with no hidden grammar in focused exercises
 - Worked examples, common mistakes, and 44 optional unscored practice questions that never affect test history
 - Multiple-choice, fill-in-the-blank, bidirectional translation, and word-order practice

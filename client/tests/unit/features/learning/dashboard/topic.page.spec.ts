@@ -35,28 +35,29 @@ describe('TopicPage', () => {
 
     expect(cards.map((card) => card.querySelector('h3')?.textContent?.trim())).toEqual([
       'Test 1',
-      'Extended review',
+      'Review test',
     ]);
     expect(links.map((link) => link.textContent?.trim())).toEqual(['Learn first', 'Start test']);
     expect(links.map((link) => link.getAttribute('href'))).toEqual([
       '/learn/topic/test-1',
       '/study/topic/test-1',
     ]);
-    expect(cards[0].textContent).toContain('Focused');
     expect(cards[0].textContent).toContain('Target: Vowel harmony');
+    expect(cards[0].querySelector('.set-badge, .stage-badge')).toBeNull();
   });
 
-  it('separates core tests from visibly labelled extended tests', () => {
+  it('separates focused tests from reviews without repeating stage badges', () => {
     const element = fixture.nativeElement as HTMLElement;
     const headings = [...element.querySelectorAll('.test-group-heading h3')].map((heading) =>
       heading.textContent?.trim(),
     );
     const cards = [...element.querySelectorAll('.test-card')];
 
-    expect(headings).toEqual(['Core tests', 'Extended tests']);
-    expect(cards[1].textContent).toContain('Extended set');
+    expect(headings).toEqual(['Focused tests', 'Reviews']);
+    expect(element.querySelector('.set-badge, .stage-badge')).toBeNull();
+    expect(cards[1].classList).toContain('review-test');
     expect(cards[1].querySelector('a[href="/study/topic/test-2"]')).toBeTruthy();
-    expect(element.textContent).toContain('Optional additional depth');
+    expect(element.textContent).toContain('Mixed practice');
   });
 
   it('marks shared preparation as available to review after completion', () => {

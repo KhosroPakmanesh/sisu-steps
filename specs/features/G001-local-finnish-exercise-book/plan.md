@@ -8,13 +8,13 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 
 - Topic dashboard and ordered test selection
 - Authored grammar packs containing 200–1,000 scored exercises according to coverage needs
-- A complete core-test sequence followed by visibly separate extended tests
-- Declared important-skill coverage that prevents a core grammar point from being omitted
+- A complete Focused-test sequence followed by visibly separate mixed Reviews
+- Declared important-skill coverage that prevents a focused grammar point from being omitted
 - Multiple choice, fill-in-the-blank, bidirectional translation, and word-order exercises
 - Immediate answer grading, correction, and English explanation
 - Answer reveal with a visible control and `Alt+A`, recorded separately from incorrect answers
 - First-principles sentence feedback with full translation, sentence pattern, and part-by-part formation notes
-- Optional **Learn first** preparation for every test, assembled from reusable lessons
+- Optional **Learn first** preparation for every focused test, limited to lessons for that test's target skill; review tests may reuse earlier lessons
 - Worked examples, common-mistake guidance, and separate unscored practice in each lesson
 - Local, version-aware lesson completion that never locks a test
 - Learner-friendly typed-answer normalization with significant Finnish diacritics
@@ -23,7 +23,8 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Latest, best, and average score reporting
 - JSON backup/restore and test/topic/all-history clearing
 - Responsive, keyboard-usable interface
-- Explicit focused, guided-combination, and review stages with visible targets and prerequisites
+- A focused single-lesson reading hierarchy and responsive multi-lesson review navigation that never obscures or buries the active lesson
+- Explicit focused and review stages with visible targets and prerequisites; only review combines previously taught topics
 - Lesson vocabulary lists and exercise skill declarations that prevent hidden grammar or vocabulary requirements
 - One-time learner-progress reset when the materially revised content-pack version is first installed
 - Smaller KPT learning blocks for double consonants, common single-consonant changes, special `k` changes, clusters, and mixed recognition
@@ -58,7 +59,7 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Pack-version alignment for learner data
 - Review scheduling, parallel-exercise relationships, misconception metadata, and mastery persistence
 - Dashboard review recommendations and expanded skill-level reports
-- Core/extended test metadata, coverage validation, and dashboard grouping
+- Focused/Review stage metadata, coverage validation, and dashboard grouping
 - A catalog of independently versioned topic packs with topic-aware routes, progress, reports, review, and clearing
 - A reusable Finnish grammar content-creator skill and saved two-stage pedagogy assessments
 
@@ -69,17 +70,19 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 3. Build the dashboard, test runner, and immediate feedback flow.
 4. Add IndexedDB-backed attempt and session persistence.
 5. Add mistake practice, reporting, export/import, and clearing.
-6. Author the 200-exercise Pre-A1–A1.3 grammar-foundation pack as fourteen progressive tests.
+6. Author the 200-exercise Pre-A1–A1.3 grammar-foundation pack as fifteen progressive tests.
 7. Validate grading, storage, recovery, accessibility, tests, and production build.
-8. Add reusable first-principles lessons and optional unscored preparation for all fourteen tests.
-9. Refactor the pack around one-new-decision focused learning, explicitly labelled combinations, declared vocabulary, and automatic focus validation.
+8. Add reusable first-principles lessons and optional unscored preparation for all fifteen tests.
+9. Refactor the pack around one-new-decision focused learning, declared prerequisites, declared vocabulary, and automatic focus validation.
 10. Reorganize the 200 exercises into fourteen shorter groups and split KPT into smaller authored learning blocks.
 11. Add per-option feedback, typed-error classification, parallel review exercises, optional due reviews, and delayed mastery.
 12. Expand reporting to distinguish first attempts, independent work, reveals, corrected mistakes, and delayed mastery by skill.
-13. Generalize the authored content policy to 200–1,000 scored exercises per grammatical-topic pack, require declared important-skill coverage in the core sequence, and label later tests as extended.
+13. Generalize the authored content policy to 200–1,000 scored exercises per grammatical-topic pack and require declared important-skill coverage in the Focused sequence before mixed Reviews.
 14. Add a static content catalog, load every bundled pack, and make navigation and learner workflows topic-aware.
 15. Replace the single content version with per-pack version alignment so adding or changing one topic does not erase unrelated progress.
 16. Create a reusable content-authoring skill with pre-authoring and final Finnish-teaching pedagogy assessments and a saved assessment record.
+17. Remove the guided-combination stage, give every non-review topic separate focused preparation and testing, and reserve multi-topic combination for review.
+18. Remove the redundant Core/Extended test-set classification, group the learning map by Focused tests and Reviews, and communicate each group through its section rather than repeated card badges.
 
 ## Risks
 
@@ -87,7 +90,7 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Finnish prompts may allow more than one natural answer; exercises must declare accepted alternatives rather than depend on a single surface form.
 - KPT terminology and applicable word/verb types can overwhelm an A1 learner; tests must progress from recognition to controlled production.
 - Updating bundled content while retaining old attempts requires stable exercise IDs and pack versions.
-- Shared lessons can drift away from the exercises that reference them; content validation must reject missing, duplicate, or unreferenced lesson mappings.
+- Topic-specific lessons can drift away from the exercises that reference them; content validation must reject missing, duplicate, unrelated, or unreferenced lesson mappings.
 - Lesson practice can be mistaken for scored work; the interface must repeatedly and clearly label it optional and unscored.
 - Metadata cannot discover Finnish morphology by itself; authored skill and vocabulary declarations still require a content review for truthfulness.
 - A learner may memorize an exact correction; delayed mastery therefore depends on a different authored exercise in the same skill family.

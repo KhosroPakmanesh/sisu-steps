@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "finnish-foundations-a1",
-  "version": "4.1.0",
+  "version": "5.0.0",
   "title": "Vowel harmony, KPT & T-plural",
   "level": "Pre-A1–A1.3 Finnish grammar foundations",
   "summary": "A progressive set of short, focused tests for the sound and stem patterns that make Finnish endings feel predictable.",
@@ -43,7 +43,7 @@
   "lessons": [
     {
       "id": "vowel-harmony-basics",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "Vowel harmony"
@@ -262,7 +262,7 @@
     },
     {
       "id": "inside-ending",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "Inessive -ssa/-ssä"
@@ -448,7 +448,7 @@
     },
     {
       "id": "kpt-doubles",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "KPT double consonants"
@@ -677,7 +677,7 @@
     },
     {
       "id": "kpt-singles",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "KPT common single consonants"
@@ -905,7 +905,7 @@
     },
     {
       "id": "kpt-special-k",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "KPT special k changes"
@@ -1108,7 +1108,7 @@
     },
     {
       "id": "kpt-clusters",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "KPT consonant clusters"
@@ -1358,8 +1358,8 @@
     },
     {
       "id": "kpt-basics",
-      "version": "4.1.0",
-      "stage": "guided-combination",
+      "version": "5.0.0",
+      "stage": "focused",
       "targetSkills": [
         "KPT recognition"
       ],
@@ -1596,8 +1596,8 @@
     },
     {
       "id": "genitive-nouns",
-      "version": "4.1.0",
-      "stage": "guided-combination",
+      "version": "5.0.0",
+      "stage": "focused",
       "targetSkills": [
         "Genitive -n"
       ],
@@ -1771,8 +1771,8 @@
     },
     {
       "id": "verb-kpt",
-      "version": "4.1.0",
-      "stage": "guided-combination",
+      "version": "5.0.0",
+      "stage": "focused",
       "targetSkills": [
         "Minä verb forms with KPT"
       ],
@@ -1937,7 +1937,7 @@
     },
     {
       "id": "t-plural-basics",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "Regular T-plural"
@@ -2130,8 +2130,8 @@
     },
     {
       "id": "kpt-t-plural",
-      "version": "4.1.0",
-      "stage": "guided-combination",
+      "version": "5.0.0",
+      "stage": "focused",
       "targetSkills": [
         "T-plural with KPT"
       ],
@@ -2319,7 +2319,7 @@
     },
     {
       "id": "he-verbs",
-      "version": "4.1.0",
+      "version": "5.0.0",
       "stage": "focused",
       "targetSkills": [
         "Third-person plural -vat/-vät"
@@ -2519,8 +2519,8 @@
     },
     {
       "id": "plural-sentences",
-      "version": "4.1.0",
-      "stage": "guided-combination",
+      "version": "5.0.0",
+      "stage": "focused",
       "targetSkills": [
         "Plural subject + ovat"
       ],
@@ -2801,7 +2801,6 @@
       "id": "vowel-families",
       "title": "Vowel families",
       "focus": "Recognise back, front, and neutral vowels, then choose the matching ending.",
-      "set": "core",
       "lessonIds": [
         "vowel-harmony-basics"
       ],
@@ -3147,9 +3146,7 @@
       "id": "harmony-in-forms",
       "title": "Harmony in real forms",
       "focus": "Build and translate common -ssa/-ssä forms.",
-      "set": "core",
       "lessonIds": [
-        "vowel-harmony-basics",
         "inside-ending"
       ],
       "stage": "focused",
@@ -3558,7 +3555,7 @@
           ],
           "targetSkill": "Inessive -ssa/-ssä",
           "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e05"
+          "parallelExerciseId": "ff-a1-t13-e03"
         }
       ]
     },
@@ -3566,7 +3563,6 @@
       "id": "test-kpt-doubles",
       "title": "KPT: double consonants",
       "focus": "Focus only on kk → k, pp → p, and tt → t.",
-      "set": "core",
       "lessonIds": [
         "kpt-doubles"
       ],
@@ -4016,7 +4012,6 @@
       "id": "test-kpt-singles",
       "title": "KPT: common single consonants",
       "focus": "Focus only on k disappearing, p → v, and t → d.",
-      "set": "core",
       "lessonIds": [
         "kpt-singles"
       ],
@@ -4466,7 +4461,6 @@
       "id": "test-kpt-clusters",
       "title": "KPT: consonant clusters",
       "focus": "Focus on nk, mp, nt, lt, and rt cluster changes.",
-      "set": "core",
       "lessonIds": [
         "kpt-clusters"
       ],
@@ -4913,30 +4907,20 @@
       ]
     },
     {
-      "id": "kpt-patterns",
-      "title": "KPT: distinguish the families",
-      "focus": "Combine the separately learned KPT families, including the two special k patterns.",
-      "set": "core",
+      "id": "test-kpt-special-k",
+      "title": "KPT: two special k changes",
+      "focus": "Focus only on the separately learned k → j and k → v word families.",
       "lessonIds": [
-        "kpt-doubles",
-        "kpt-singles",
-        "kpt-special-k",
-        "kpt-clusters",
-        "kpt-basics"
+        "kpt-special-k"
       ],
-      "stage": "guided-combination",
+      "stage": "focused",
       "targetSkills": [
-        "KPT recognition"
+        "KPT special k changes"
       ],
-      "prerequisiteSkills": [
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT special k changes",
-        "KPT consonant clusters"
-      ],
+      "prerequisiteSkills": [],
       "exercises": [
         {
-          "id": "ff-a1-t06-e01",
+          "id": "ff-a1-t15-e01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
           "prompt": "What change appears in poika → pojan? (boy)",
@@ -4949,11 +4933,7 @@
             "recognition"
           ],
           "requiredSkills": [
-            "KPT recognition",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT special k changes",
-            "KPT consonant clusters"
+            "KPT special k changes"
           ],
           "vocabulary": [
             "poika"
@@ -4968,21 +4948,21 @@
             "tt → t": "“tt → t” does not show the required pattern. Compare the supplied forms poika and pojan. The consonant change is k → j.",
             "t → d": "“t → d” does not show the required pattern. Compare the supplied forms poika and pojan. The consonant change is k → j."
           },
-          "targetSkill": "KPT recognition",
+          "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
             {
               "answers": [
                 "poika"
               ],
-              "category": "KPT recognition: KPT change omitted",
+              "category": "KPT special k changes: KPT change omitted",
               "explanation": "The unchanged form poika does not show the required k → j change."
             }
           ],
-          "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e02"
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e02"
         },
         {
-          "id": "ff-a1-t06-e02",
+          "id": "ff-a1-t15-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
           "prompt": "What change appears in puku → puvun? (suit)",
@@ -4995,11 +4975,7 @@
             "recognition"
           ],
           "requiredSkills": [
-            "KPT recognition",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT special k changes",
-            "KPT consonant clusters"
+            "KPT special k changes"
           ],
           "vocabulary": [
             "puku"
@@ -5014,21 +4990,21 @@
             "k → ∅": "“k → ∅” does not show the required pattern. Compare the supplied forms puku and puvun. The consonant change is k → v.",
             "nk → ng": "“nk → ng” does not show the required pattern. Compare the supplied forms puku and puvun. The consonant change is k → v."
           },
-          "targetSkill": "KPT recognition",
+          "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
             {
               "answers": [
                 "puku"
               ],
-              "category": "KPT recognition: KPT change omitted",
+              "category": "KPT special k changes: KPT change omitted",
               "explanation": "The unchanged form puku does not show the required k → v change."
             }
           ],
-          "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e01"
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e01"
         },
         {
-          "id": "ff-a1-t06-e03",
+          "id": "ff-a1-t15-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
           "prompt": "What change appears in aika → ajan? (time)",
@@ -5041,11 +5017,7 @@
             "recognition"
           ],
           "requiredSkills": [
-            "KPT recognition",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT special k changes",
-            "KPT consonant clusters"
+            "KPT special k changes"
           ],
           "vocabulary": [
             "aika"
@@ -5060,21 +5032,21 @@
             "k → v": "“k → v” does not show the required pattern. Compare the supplied forms aika and ajan. The consonant change is k → j.",
             "mp → mm": "“mp → mm” does not show the required pattern. Compare the supplied forms aika and ajan. The consonant change is k → j."
           },
-          "targetSkill": "KPT recognition",
+          "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
             {
               "answers": [
                 "aika"
               ],
-              "category": "KPT recognition: KPT change omitted",
+              "category": "KPT special k changes: KPT change omitted",
               "explanation": "The unchanged form aika does not show the required k → j change."
             }
           ],
-          "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e04"
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e04"
         },
         {
-          "id": "ff-a1-t06-e04",
+          "id": "ff-a1-t15-e04",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
           "prompt": "What change appears in luku → luvun? (number or chapter)",
@@ -5087,11 +5059,7 @@
             "recognition"
           ],
           "requiredSkills": [
-            "KPT recognition",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT special k changes",
-            "KPT consonant clusters"
+            "KPT special k changes"
           ],
           "vocabulary": [
             "luku"
@@ -5106,28 +5074,176 @@
             "p → v": "“p → v” does not show the required pattern. Compare the supplied forms luku and luvun. The consonant change is k → v.",
             "nt → nn": "“nt → nn” does not show the required pattern. Compare the supplied forms luku and luvun. The consonant change is k → v."
           },
-          "targetSkill": "KPT recognition",
+          "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
             {
               "answers": [
                 "luku"
               ],
-              "category": "KPT recognition: KPT change omitted",
+              "category": "KPT special k changes: KPT change omitted",
               "explanation": "The unchanged form luku does not show the required k → v change."
             }
           ],
-          "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e03"
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e03"
         },
         {
-          "id": "ff-a1-t06-e05",
+          "id": "ff-a1-t15-e05",
+          "type": "fill-blank",
+          "instruction": "Complete the Finnish form.",
+          "prompt": "poika (“boy”) → ____ · apply k → j",
+          "acceptedAnswers": [
+            "pojan"
+          ],
+          "explanation": "Compare the supplied forms poika and pojan. The consonant change is k → j.",
+          "tags": [
+            "kpt",
+            "controlled-production"
+          ],
+          "requiredSkills": [
+            "KPT special k changes"
+          ],
+          "vocabulary": [
+            "poika"
+          ],
+          "targetSkill": "KPT special k changes",
+          "answerDiagnostics": [
+            {
+              "answers": [
+                "poika"
+              ],
+              "category": "KPT special k changes: KPT change omitted",
+              "explanation": "The unchanged form poika does not show the required k → j change."
+            }
+          ],
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e06"
+        },
+        {
+          "id": "ff-a1-t15-e06",
+          "type": "fill-blank",
+          "instruction": "Complete the Finnish form.",
+          "prompt": "puku (“suit”) → ____ · apply k → v",
+          "acceptedAnswers": [
+            "puvun"
+          ],
+          "explanation": "Compare the supplied forms puku and puvun. The consonant change is k → v.",
+          "tags": [
+            "kpt",
+            "controlled-production"
+          ],
+          "requiredSkills": [
+            "KPT special k changes"
+          ],
+          "vocabulary": [
+            "puku"
+          ],
+          "targetSkill": "KPT special k changes",
+          "answerDiagnostics": [
+            {
+              "answers": [
+                "puku"
+              ],
+              "category": "KPT special k changes: KPT change omitted",
+              "explanation": "The unchanged form puku does not show the required k → v change."
+            }
+          ],
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e05"
+        },
+        {
+          "id": "ff-a1-t15-e07",
+          "type": "fill-blank",
+          "instruction": "Complete the Finnish form.",
+          "prompt": "aika (“time”) → ____ · apply k → j",
+          "acceptedAnswers": [
+            "ajan"
+          ],
+          "explanation": "Compare the supplied forms aika and ajan. The consonant change is k → j.",
+          "tags": [
+            "kpt",
+            "controlled-production"
+          ],
+          "requiredSkills": [
+            "KPT special k changes"
+          ],
+          "vocabulary": [
+            "aika"
+          ],
+          "targetSkill": "KPT special k changes",
+          "answerDiagnostics": [
+            {
+              "answers": [
+                "aika"
+              ],
+              "category": "KPT special k changes: KPT change omitted",
+              "explanation": "The unchanged form aika does not show the required k → j change."
+            }
+          ],
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e08"
+        },
+        {
+          "id": "ff-a1-t15-e08",
+          "type": "fill-blank",
+          "instruction": "Complete the Finnish form.",
+          "prompt": "luku (“number or chapter”) → ____ · apply k → v",
+          "acceptedAnswers": [
+            "luvun"
+          ],
+          "explanation": "Compare the supplied forms luku and luvun. The consonant change is k → v.",
+          "tags": [
+            "kpt",
+            "controlled-production"
+          ],
+          "requiredSkills": [
+            "KPT special k changes"
+          ],
+          "vocabulary": [
+            "luku"
+          ],
+          "targetSkill": "KPT special k changes",
+          "answerDiagnostics": [
+            {
+              "answers": [
+                "luku"
+              ],
+              "category": "KPT special k changes: KPT change omitted",
+              "explanation": "The unchanged form luku does not show the required k → v change."
+            }
+          ],
+          "misconceptionCategory": "KPT special k changes: form not yet correct",
+          "parallelExerciseId": "ff-a1-t15-e07"
+        }
+      ]
+    },
+    {
+      "id": "kpt-patterns",
+      "title": "KPT: distinguish the families",
+      "focus": "Distinguish the separately learned KPT families, including the two special k patterns.",
+      "lessonIds": [
+        "kpt-basics"
+      ],
+      "stage": "focused",
+      "targetSkills": [
+        "KPT recognition"
+      ],
+      "prerequisiteSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
+      "exercises": [
+        {
+          "id": "ff-a1-t06-e01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in pankki → pankin? (bank)",
+          "prompt": "What KPT change appears in pankki → pankin?",
           "acceptedAnswers": [
             "kk → k"
           ],
-          "explanation": "Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
+          "explanation": "A double k weakens to one k.",
           "tags": [
             "kpt",
             "recognition"
@@ -5144,147 +5260,67 @@
           ],
           "options": [
             "kk → k",
+            "k → j",
+            "nk → ng"
+          ],
+          "optionFeedback": {
+            "kk → k": "Correct. A double k weakens to one k.",
+            "k → j": "“k → j” does not show the required pattern. A double k weakens to one k.",
+            "nk → ng": "“nk → ng” does not show the required pattern. A double k weakens to one k."
+          },
+          "targetSkill": "KPT recognition",
+          "misconceptionCategory": "KPT recognition: form not yet correct",
+          "parallelExerciseId": "ff-a1-t06-e02"
+        },
+        {
+          "id": "ff-a1-t06-e02",
+          "type": "multiple-choice",
+          "instruction": "Choose the best answer.",
+          "prompt": "What KPT change appears in jalka → jalan?",
+          "acceptedAnswers": [
+            "k → ∅"
+          ],
+          "explanation": "A single k can disappear in the weak grade.",
+          "tags": [
+            "kpt",
+            "recognition"
+          ],
+          "requiredSkills": [
+            "KPT recognition",
+            "KPT double consonants",
+            "KPT common single consonants",
+            "KPT special k changes",
+            "KPT consonant clusters"
+          ],
+          "vocabulary": [
+            "jalka"
+          ],
+          "options": [
+            "k → ∅",
             "t → d",
             "lt → ll"
           ],
           "optionFeedback": {
-            "kk → k": "Correct. Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
-            "t → d": "“t → d” does not show the required pattern. Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
-            "lt → ll": "“lt → ll” does not show the required pattern. Compare the supplied forms pankki and pankin. The consonant change is kk → k."
+            "k → ∅": "Correct. A single k can disappear in the weak grade.",
+            "t → d": "“t → d” does not show the required pattern. A single k can disappear in the weak grade.",
+            "lt → ll": "“lt → ll” does not show the required pattern. A single k can disappear in the weak grade."
           },
           "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "pankki"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form pankki does not show the required kk → k change."
-            }
-          ],
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e06"
+          "parallelExerciseId": "ff-a1-t06-e01"
         },
         {
-          "id": "ff-a1-t06-e06",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "leipä (“bread”) → ____ · apply p → v",
+          "id": "ff-a1-t06-e03",
+          "type": "multiple-choice",
+          "instruction": "Choose the best answer.",
+          "prompt": "What KPT change appears in poika → pojan?",
           "acceptedAnswers": [
-            "leivän"
+            "k → j"
           ],
-          "explanation": "Compare the supplied forms leipä and leivän. The consonant change is p → v.",
+          "explanation": "Between an i and the next vowel, k can change to j.",
           "tags": [
             "kpt",
-            "controlled-production"
-          ],
-          "requiredSkills": [
-            "KPT recognition",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT special k changes",
-            "KPT consonant clusters"
-          ],
-          "vocabulary": [
-            "leipä"
-          ],
-          "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "leipä"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form leipä does not show the required p → v change."
-            }
-          ],
-          "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e05"
-        },
-        {
-          "id": "ff-a1-t06-e07",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "kenkä (“shoe”) → ____ · apply nk → ng",
-          "acceptedAnswers": [
-            "kengän"
-          ],
-          "explanation": "Compare the supplied forms kenkä and kengän. The consonant change is nk → ng.",
-          "tags": [
-            "kpt",
-            "controlled-production"
-          ],
-          "requiredSkills": [
-            "KPT recognition",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT special k changes",
-            "KPT consonant clusters"
-          ],
-          "vocabulary": [
-            "kenkä"
-          ],
-          "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "kenkä"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form kenkä does not show the required nk → ng change."
-            }
-          ],
-          "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e08"
-        },
-        {
-          "id": "ff-a1-t06-e08",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "pelto (“field”) → ____ · apply lt → ll",
-          "acceptedAnswers": [
-            "pellon"
-          ],
-          "explanation": "Compare the supplied forms pelto and pellon. The consonant change is lt → ll.",
-          "tags": [
-            "kpt",
-            "controlled-production"
-          ],
-          "requiredSkills": [
-            "KPT recognition",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT special k changes",
-            "KPT consonant clusters"
-          ],
-          "vocabulary": [
-            "pelto"
-          ],
-          "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "pelto"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form pelto does not show the required lt → ll change."
-            }
-          ],
-          "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e07"
-        },
-        {
-          "id": "ff-a1-t06-e09",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "poika (“boy”) → ____ · apply k → j",
-          "acceptedAnswers": [
-            "pojan"
-          ],
-          "explanation": "Compare the supplied forms poika and pojan. The consonant change is k → j.",
-          "tags": [
-            "kpt",
-            "controlled-production"
+            "recognition"
           ],
           "requiredSkills": [
             "KPT recognition",
@@ -5296,31 +5332,32 @@
           "vocabulary": [
             "poika"
           ],
-          "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "poika"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form poika does not show the required k → j change."
-            }
+          "options": [
+            "k → j",
+            "nk → ng",
+            "rt → rr"
           ],
+          "optionFeedback": {
+            "k → j": "Correct. Between an i and the next vowel, k can change to j.",
+            "nk → ng": "“nk → ng” does not show the required pattern. Between an i and the next vowel, k can change to j.",
+            "rt → rr": "“rt → rr” does not show the required pattern. Between an i and the next vowel, k can change to j."
+          },
+          "targetSkill": "KPT recognition",
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e10"
+          "parallelExerciseId": "ff-a1-t06-e04"
         },
         {
-          "id": "ff-a1-t06-e10",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "puku (“suit”) → ____ · apply k → v",
+          "id": "ff-a1-t06-e04",
+          "type": "multiple-choice",
+          "instruction": "Choose the best answer.",
+          "prompt": "What KPT change appears in puku → puvun?",
           "acceptedAnswers": [
-            "puvun"
+            "k → v"
           ],
-          "explanation": "Compare the supplied forms puku and puvun. The consonant change is k → v.",
+          "explanation": "In this pattern, k changes to v.",
           "tags": [
             "kpt",
-            "controlled-production"
+            "recognition"
           ],
           "requiredSkills": [
             "KPT recognition",
@@ -5332,31 +5369,32 @@
           "vocabulary": [
             "puku"
           ],
-          "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "puku"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form puku does not show the required k → v change."
-            }
+          "options": [
+            "k → v",
+            "mp → mm",
+            "kk → k"
           ],
+          "optionFeedback": {
+            "k → v": "Correct. In this pattern, k changes to v.",
+            "mp → mm": "“mp → mm” does not show the required pattern. In this pattern, k changes to v.",
+            "kk → k": "“kk → k” does not show the required pattern. In this pattern, k changes to v."
+          },
+          "targetSkill": "KPT recognition",
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e09"
+          "parallelExerciseId": "ff-a1-t06-e03"
         },
         {
-          "id": "ff-a1-t06-e11",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "aika (“time”) → ____ · apply k → j",
+          "id": "ff-a1-t06-e05",
+          "type": "multiple-choice",
+          "instruction": "Choose the best answer.",
+          "prompt": "What KPT change appears in leipä → leivän?",
           "acceptedAnswers": [
-            "ajan"
+            "p → v"
           ],
-          "explanation": "Compare the supplied forms aika and ajan. The consonant change is k → j.",
+          "explanation": "A single p can weaken to v.",
           "tags": [
             "kpt",
-            "controlled-production"
+            "recognition"
           ],
           "requiredSkills": [
             "KPT recognition",
@@ -5366,33 +5404,34 @@
             "KPT consonant clusters"
           ],
           "vocabulary": [
-            "aika"
+            "leipä"
           ],
+          "options": [
+            "p → v",
+            "nt → nn",
+            "pp → p"
+          ],
+          "optionFeedback": {
+            "p → v": "Correct. A single p can weaken to v.",
+            "nt → nn": "“nt → nn” does not show the required pattern. A single p can weaken to v.",
+            "pp → p": "“pp → p” does not show the required pattern. A single p can weaken to v."
+          },
           "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "aika"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form aika does not show the required k → j change."
-            }
-          ],
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e12"
+          "parallelExerciseId": "ff-a1-t06-e06"
         },
         {
-          "id": "ff-a1-t06-e12",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "luku (“number or chapter”) → ____ · apply k → v",
+          "id": "ff-a1-t06-e06",
+          "type": "multiple-choice",
+          "instruction": "Choose the best answer.",
+          "prompt": "What KPT change appears in kaupunki → kaupungin?",
           "acceptedAnswers": [
-            "luvun"
+            "nk → ng"
           ],
-          "explanation": "Compare the supplied forms luku and luvun. The consonant change is k → v.",
+          "explanation": "The cluster nk weakens to ng.",
           "tags": [
             "kpt",
-            "controlled-production"
+            "recognition"
           ],
           "requiredSkills": [
             "KPT recognition",
@@ -5402,20 +5441,95 @@
             "KPT consonant clusters"
           ],
           "vocabulary": [
-            "luku"
+            "kaupunki"
           ],
+          "options": [
+            "nk → ng",
+            "rt → rr",
+            "k → ∅"
+          ],
+          "optionFeedback": {
+            "nk → ng": "Correct. The cluster nk weakens to ng.",
+            "rt → rr": "“rt → rr” does not show the required pattern. The cluster nk weakens to ng.",
+            "k → ∅": "“k → ∅” does not show the required pattern. The cluster nk weakens to ng."
+          },
           "targetSkill": "KPT recognition",
-          "answerDiagnostics": [
-            {
-              "answers": [
-                "luku"
-              ],
-              "category": "KPT recognition: KPT change omitted",
-              "explanation": "The unchanged form luku does not show the required k → v change."
-            }
-          ],
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t06-e11"
+          "parallelExerciseId": "ff-a1-t06-e05"
+        },
+        {
+          "id": "ff-a1-t06-e07",
+          "type": "multiple-choice",
+          "instruction": "Choose the best answer.",
+          "prompt": "What KPT change appears in kampa → kamman?",
+          "acceptedAnswers": [
+            "mp → mm"
+          ],
+          "explanation": "The cluster mp weakens to mm.",
+          "tags": [
+            "kpt",
+            "recognition"
+          ],
+          "requiredSkills": [
+            "KPT recognition",
+            "KPT double consonants",
+            "KPT common single consonants",
+            "KPT special k changes",
+            "KPT consonant clusters"
+          ],
+          "vocabulary": [
+            "kampa"
+          ],
+          "options": [
+            "mp → mm",
+            "pp → p",
+            "k → v"
+          ],
+          "optionFeedback": {
+            "mp → mm": "Correct. The cluster mp weakens to mm.",
+            "pp → p": "“pp → p” does not show the required pattern. The cluster mp weakens to mm.",
+            "k → v": "“k → v” does not show the required pattern. The cluster mp weakens to mm."
+          },
+          "targetSkill": "KPT recognition",
+          "misconceptionCategory": "KPT recognition: form not yet correct",
+          "parallelExerciseId": "ff-a1-t06-e08"
+        },
+        {
+          "id": "ff-a1-t06-e08",
+          "type": "multiple-choice",
+          "instruction": "Choose the best answer.",
+          "prompt": "What KPT change appears in pelto → pellon?",
+          "acceptedAnswers": [
+            "lt → ll"
+          ],
+          "explanation": "The cluster lt weakens to ll.",
+          "tags": [
+            "kpt",
+            "recognition"
+          ],
+          "requiredSkills": [
+            "KPT recognition",
+            "KPT double consonants",
+            "KPT common single consonants",
+            "KPT special k changes",
+            "KPT consonant clusters"
+          ],
+          "vocabulary": [
+            "pelto"
+          ],
+          "options": [
+            "lt → ll",
+            "tt → t",
+            "p → v"
+          ],
+          "optionFeedback": {
+            "lt → ll": "Correct. The cluster lt weakens to ll.",
+            "tt → t": "“tt → t” does not show the required pattern. The cluster lt weakens to ll.",
+            "p → v": "“p → v” does not show the required pattern. The cluster lt weakens to ll."
+          },
+          "targetSkill": "KPT recognition",
+          "misconceptionCategory": "KPT recognition: form not yet correct",
+          "parallelExerciseId": "ff-a1-t06-e07"
         }
       ]
     },
@@ -5423,16 +5537,10 @@
       "id": "kpt-nouns",
       "title": "KPT in nouns",
       "focus": "Produce weak-grade genitive forms of familiar nouns.",
-      "set": "core",
       "lessonIds": [
-        "kpt-doubles",
-        "kpt-singles",
-        "kpt-special-k",
-        "kpt-clusters",
-        "kpt-basics",
         "genitive-nouns"
       ],
-      "stage": "guided-combination",
+      "stage": "focused",
       "targetSkills": [
         "Genitive -n"
       ],
@@ -5853,7 +5961,7 @@
           },
           "targetSkill": "Genitive -n",
           "misconceptionCategory": "Genitive -n: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e18"
+          "parallelExerciseId": "ff-a1-t13-e14"
         }
       ]
     },
@@ -5861,16 +5969,10 @@
       "id": "kpt-verbs",
       "title": "KPT in verbs",
       "focus": "Use familiar strong-to-weak KPT changes in common minä forms; no strengthening patterns are included.",
-      "set": "core",
       "lessonIds": [
-        "kpt-doubles",
-        "kpt-singles",
-        "kpt-special-k",
-        "kpt-clusters",
-        "kpt-basics",
         "verb-kpt"
       ],
-      "stage": "guided-combination",
+      "stage": "focused",
       "targetSkills": [
         "Minä verb forms with KPT"
       ],
@@ -6276,7 +6378,7 @@
           },
           "targetSkill": "Minä verb forms with KPT",
           "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e03"
+          "parallelExerciseId": "ff-a1-t14-e01"
         }
       ]
     },
@@ -6284,7 +6386,6 @@
       "id": "regular-t-plural",
       "title": "Regular T-plurals",
       "focus": "Add nominative plural -t to stable stems.",
-      "set": "core",
       "lessonIds": [
         "t-plural-basics"
       ],
@@ -6677,7 +6778,7 @@
           },
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e06"
+          "parallelExerciseId": "ff-a1-t14-e04"
         }
       ]
     },
@@ -6685,17 +6786,10 @@
       "id": "test-kpt-t-plural",
       "title": "T-plural with KPT",
       "focus": "Use weak noun stems before the plural -t ending.",
-      "set": "core",
       "lessonIds": [
-        "kpt-doubles",
-        "kpt-singles",
-        "kpt-special-k",
-        "kpt-clusters",
-        "kpt-basics",
-        "t-plural-basics",
         "kpt-t-plural"
       ],
-      "stage": "guided-combination",
+      "stage": "focused",
       "targetSkills": [
         "T-plural with KPT"
       ],
@@ -7117,7 +7211,7 @@
           },
           "targetSkill": "T-plural with KPT",
           "misconceptionCategory": "T-plural with KPT: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e11"
+          "parallelExerciseId": "ff-a1-t14-e09"
         }
       ]
     },
@@ -7125,9 +7219,7 @@
       "id": "plural-verb-harmony",
       "title": "They do: -vat or -vät",
       "focus": "Choose and attach -vat or -vät to a verb stem that is always supplied.",
-      "set": "core",
       "lessonIds": [
-        "vowel-harmony-basics",
         "he-verbs"
       ],
       "stage": "focused",
@@ -7901,20 +7993,18 @@
           },
           "targetSkill": "Third-person plural -vat/-vät",
           "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e14"
+          "parallelExerciseId": "ff-a1-t14-e12"
         }
       ]
     },
     {
       "id": "plural-in-sentences",
       "title": "Plurals in sentences",
-      "focus": "Combine regular T-plural subjects with ovat and supplied fixed place or state words.",
-      "set": "core",
+      "focus": "Build regular T-plural subjects with ovat and supplied fixed place or state words.",
       "lessonIds": [
-        "t-plural-basics",
         "plural-sentences"
       ],
-      "stage": "guided-combination",
+      "stage": "focused",
       "targetSkills": [
         "Plural subject + ovat"
       ],
@@ -8750,15 +8840,14 @@
           },
           "targetSkill": "Plural subject + ovat",
           "misconceptionCategory": "Plural subject + ovat: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e17"
+          "parallelExerciseId": "ff-a1-t14-e15"
         }
       ]
     },
     {
       "id": "guided-review",
-      "title": "Guided foundations review",
+      "title": "Foundations checkpoint review",
       "focus": "Retrieve earlier patterns in a fixed, mixed checkpoint.",
-      "set": "extended",
       "lessonIds": [
         "vowel-harmony-basics",
         "inside-ending",
@@ -8877,90 +8966,6 @@
         },
         {
           "id": "ff-a1-t13-e03",
-          "type": "multiple-choice",
-          "instruction": "Choose the best answer.",
-          "prompt": "Which inessive ending fits “auto”?",
-          "acceptedAnswers": [
-            "-ssa"
-          ],
-          "explanation": "auto contains a and u, so use -ssa.",
-          "tags": [
-            "vowel-harmony",
-            "suffix-choice"
-          ],
-          "requiredSkills": [
-            "Vowel harmony",
-            "Inessive -ssa/-ssä",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT consonant clusters",
-            "KPT recognition",
-            "Genitive -n",
-            "Minä verb forms with KPT",
-            "Regular T-plural",
-            "T-plural with KPT",
-            "Third-person plural -vat/-vät",
-            "Plural subject + ovat"
-          ],
-          "vocabulary": [
-            "auto"
-          ],
-          "options": [
-            "-ssa",
-            "-ssä"
-          ],
-          "optionFeedback": {
-            "-ssa": "Correct. auto contains a and u, so use -ssa.",
-            "-ssä": "“-ssä” does not show the required pattern. auto contains a and u, so use -ssa."
-          },
-          "targetSkill": "Vowel harmony",
-          "misconceptionCategory": "Vowel harmony: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e04"
-        },
-        {
-          "id": "ff-a1-t13-e04",
-          "type": "multiple-choice",
-          "instruction": "Choose the best answer.",
-          "prompt": "Which inessive ending fits “päivä”?",
-          "acceptedAnswers": [
-            "-ssä"
-          ],
-          "explanation": "päivä contains ä, so use the front-vowel ending -ssä.",
-          "tags": [
-            "vowel-harmony",
-            "suffix-choice"
-          ],
-          "requiredSkills": [
-            "Vowel harmony",
-            "Inessive -ssa/-ssä",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT consonant clusters",
-            "KPT recognition",
-            "Genitive -n",
-            "Minä verb forms with KPT",
-            "Regular T-plural",
-            "T-plural with KPT",
-            "Third-person plural -vat/-vät",
-            "Plural subject + ovat"
-          ],
-          "vocabulary": [
-            "päivä"
-          ],
-          "options": [
-            "-ssa",
-            "-ssä"
-          ],
-          "optionFeedback": {
-            "-ssa": "“-ssa” does not show the required pattern. päivä contains ä, so use the front-vowel ending -ssä.",
-            "-ssä": "Correct. päivä contains ä, so use the front-vowel ending -ssä."
-          },
-          "targetSkill": "Vowel harmony",
-          "misconceptionCategory": "Vowel harmony: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e03"
-        },
-        {
-          "id": "ff-a1-t13-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "puisto (“in the park”) → ____ · use -ssa or -ssä",
@@ -8994,85 +8999,7 @@
           "parallelExerciseId": "ff-a1-t02-e15"
         },
         {
-          "id": "ff-a1-t13-e06",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "kahvila (“in the café”) + -ssa/-ssä → ____",
-          "acceptedAnswers": [
-            "kahvilassa"
-          ],
-          "explanation": "The back vowel a selects -ssa.",
-          "tags": [
-            "vowel-harmony",
-            "inessive"
-          ],
-          "requiredSkills": [
-            "Vowel harmony",
-            "Inessive -ssa/-ssä",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT consonant clusters",
-            "KPT recognition",
-            "Genitive -n",
-            "Minä verb forms with KPT",
-            "Regular T-plural",
-            "T-plural with KPT",
-            "Third-person plural -vat/-vät",
-            "Plural subject + ovat"
-          ],
-          "vocabulary": [
-            "kahvila"
-          ],
-          "targetSkill": "Inessive -ssa/-ssä",
-          "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e07"
-        },
-        {
-          "id": "ff-a1-t13-e07",
-          "type": "multiple-choice",
-          "instruction": "Choose the best answer.",
-          "prompt": "Choose the correct form of “toimisto”.",
-          "acceptedAnswers": [
-            "toimistossa"
-          ],
-          "explanation": "The back vowel o selects -ssa.",
-          "tags": [
-            "vowel-harmony",
-            "inessive"
-          ],
-          "requiredSkills": [
-            "Vowel harmony",
-            "Inessive -ssa/-ssä",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT consonant clusters",
-            "KPT recognition",
-            "Genitive -n",
-            "Minä verb forms with KPT",
-            "Regular T-plural",
-            "T-plural with KPT",
-            "Third-person plural -vat/-vät",
-            "Plural subject + ovat"
-          ],
-          "vocabulary": [
-            "toimisto"
-          ],
-          "options": [
-            "toimistossa",
-            "toimistossä",
-            "toimisto"
-          ],
-          "optionFeedback": {
-            "toimistossa": "Correct. The back vowel o selects -ssa.",
-            "toimistossä": "“toimistossä” does not show the required pattern. The back vowel o selects -ssa.",
-            "toimisto": "“toimisto” does not show the required pattern. The back vowel o selects -ssa."
-          },
-          "targetSkill": "Inessive -ssa/-ssä",
-          "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e06"
-        },
-        {
-          "id": "ff-a1-t13-e08",
+          "id": "ff-a1-t13-e04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "hattu (“hat”) → ____ · apply tt → t",
@@ -9112,10 +9039,10 @@
             }
           ],
           "misconceptionCategory": "KPT double consonants: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e09"
+          "parallelExerciseId": "ff-a1-t13-e05"
         },
         {
-          "id": "ff-a1-t13-e09",
+          "id": "ff-a1-t13-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "lippu (“ticket”) → ____ · apply pp → p",
@@ -9155,10 +9082,10 @@
             }
           ],
           "misconceptionCategory": "KPT double consonants: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e08"
+          "parallelExerciseId": "ff-a1-t13-e04"
         },
         {
-          "id": "ff-a1-t13-e10",
+          "id": "ff-a1-t13-e06",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "pöytä (“table”) → ____ · apply t → d",
@@ -9198,10 +9125,10 @@
             }
           ],
           "misconceptionCategory": "KPT common single consonants: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e11"
+          "parallelExerciseId": "ff-a1-t13-e07"
         },
         {
-          "id": "ff-a1-t13-e11",
+          "id": "ff-a1-t13-e07",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "hakea (“to fetch → I fetch”) → ____ · apply k → ∅",
@@ -9241,10 +9168,10 @@
             }
           ],
           "misconceptionCategory": "KPT common single consonants: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e10"
+          "parallelExerciseId": "ff-a1-t13-e06"
         },
         {
-          "id": "ff-a1-t13-e12",
+          "id": "ff-a1-t13-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "kampa (“comb”) → ____ · apply mp → mm",
@@ -9284,10 +9211,10 @@
             }
           ],
           "misconceptionCategory": "KPT consonant clusters: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e13"
+          "parallelExerciseId": "ff-a1-t13-e09"
         },
         {
-          "id": "ff-a1-t13-e13",
+          "id": "ff-a1-t13-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "pelto (“field”) → ____ · apply lt → ll",
@@ -9327,10 +9254,10 @@
             }
           ],
           "misconceptionCategory": "KPT consonant clusters: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e12"
+          "parallelExerciseId": "ff-a1-t13-e08"
         },
         {
-          "id": "ff-a1-t13-e14",
+          "id": "ff-a1-t13-e10",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "pankki (“bank”) → ____ · apply kk → k",
@@ -9370,10 +9297,10 @@
             }
           ],
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e15"
+          "parallelExerciseId": "ff-a1-t13-e11"
         },
         {
-          "id": "ff-a1-t13-e15",
+          "id": "ff-a1-t13-e11",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "leipä (“bread”) → ____ · apply p → v",
@@ -9413,10 +9340,10 @@
             }
           ],
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e14"
+          "parallelExerciseId": "ff-a1-t13-e10"
         },
         {
-          "id": "ff-a1-t13-e16",
+          "id": "ff-a1-t13-e12",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "kenkä (“shoe”) → ____ · apply nk → ng",
@@ -9456,10 +9383,10 @@
             }
           ],
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e17"
+          "parallelExerciseId": "ff-a1-t13-e13"
         },
         {
-          "id": "ff-a1-t13-e17",
+          "id": "ff-a1-t13-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "pelto (“field”) → ____ · apply lt → ll",
@@ -9499,10 +9426,10 @@
             }
           ],
           "misconceptionCategory": "KPT recognition: form not yet correct",
-          "parallelExerciseId": "ff-a1-t13-e16"
+          "parallelExerciseId": "ff-a1-t13-e12"
         },
         {
-          "id": "ff-a1-t13-e18",
+          "id": "ff-a1-t13-e14",
           "type": "translation-en",
           "instruction": "Translate into English.",
           "prompt": "hatun",
@@ -9535,6 +9462,76 @@
           "targetSkill": "Genitive -n",
           "misconceptionCategory": "Genitive -n: form not yet correct",
           "parallelExerciseId": "ff-a1-t07-e15"
+        },
+        {
+          "id": "ff-a1-t13-e15",
+          "type": "fill-blank",
+          "instruction": "Complete the Finnish form.",
+          "prompt": "lippu (“the ticket's / of the ticket”) → ____ (genitive)",
+          "acceptedAnswers": [
+            "lipun"
+          ],
+          "explanation": "The genitive ends in -n. pp weakens to p.",
+          "tags": [
+            "kpt",
+            "noun",
+            "genitive"
+          ],
+          "requiredSkills": [
+            "Vowel harmony",
+            "Inessive -ssa/-ssä",
+            "KPT double consonants",
+            "KPT common single consonants",
+            "KPT consonant clusters",
+            "KPT recognition",
+            "Genitive -n",
+            "Minä verb forms with KPT",
+            "Regular T-plural",
+            "T-plural with KPT",
+            "Third-person plural -vat/-vät",
+            "Plural subject + ovat"
+          ],
+          "vocabulary": [
+            "lippu"
+          ],
+          "targetSkill": "Genitive -n",
+          "misconceptionCategory": "Genitive -n: form not yet correct",
+          "parallelExerciseId": "ff-a1-t13-e16"
+        },
+        {
+          "id": "ff-a1-t13-e16",
+          "type": "translation-fi",
+          "instruction": "Translate into Finnish.",
+          "prompt": "the flower's / of the flower — use the supplied base kukka",
+          "acceptedAnswers": [
+            "kukan"
+          ],
+          "explanation": "The genitive ends in -n. kk weakens to k.",
+          "tags": [
+            "kpt",
+            "noun",
+            "genitive"
+          ],
+          "requiredSkills": [
+            "Vowel harmony",
+            "Inessive -ssa/-ssä",
+            "KPT double consonants",
+            "KPT common single consonants",
+            "KPT consonant clusters",
+            "KPT recognition",
+            "Genitive -n",
+            "Minä verb forms with KPT",
+            "Regular T-plural",
+            "T-plural with KPT",
+            "Third-person plural -vat/-vät",
+            "Plural subject + ovat"
+          ],
+          "vocabulary": [
+            "kukka"
+          ],
+          "targetSkill": "Genitive -n",
+          "misconceptionCategory": "Genitive -n: form not yet correct",
+          "parallelExerciseId": "ff-a1-t13-e15"
         }
       ]
     },
@@ -9542,7 +9539,6 @@
       "id": "foundations-review",
       "title": "Foundations review",
       "focus": "Bring vowel harmony, KPT, and T-plural together.",
-      "set": "extended",
       "lessonIds": [
         "vowel-harmony-basics",
         "inside-ending",
@@ -9577,76 +9573,6 @@
       "exercises": [
         {
           "id": "ff-a1-t14-e01",
-          "type": "fill-blank",
-          "instruction": "Complete the Finnish form.",
-          "prompt": "lippu (“the ticket's / of the ticket”) → ____ (genitive)",
-          "acceptedAnswers": [
-            "lipun"
-          ],
-          "explanation": "The genitive ends in -n. pp weakens to p.",
-          "tags": [
-            "kpt",
-            "noun",
-            "genitive"
-          ],
-          "requiredSkills": [
-            "Vowel harmony",
-            "Inessive -ssa/-ssä",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT consonant clusters",
-            "KPT recognition",
-            "Genitive -n",
-            "Minä verb forms with KPT",
-            "Regular T-plural",
-            "T-plural with KPT",
-            "Third-person plural -vat/-vät",
-            "Plural subject + ovat"
-          ],
-          "vocabulary": [
-            "lippu"
-          ],
-          "targetSkill": "Genitive -n",
-          "misconceptionCategory": "Genitive -n: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e02"
-        },
-        {
-          "id": "ff-a1-t14-e02",
-          "type": "translation-fi",
-          "instruction": "Translate into Finnish.",
-          "prompt": "the flower's / of the flower — use the supplied base kukka",
-          "acceptedAnswers": [
-            "kukan"
-          ],
-          "explanation": "The genitive ends in -n. kk weakens to k.",
-          "tags": [
-            "kpt",
-            "noun",
-            "genitive"
-          ],
-          "requiredSkills": [
-            "Vowel harmony",
-            "Inessive -ssa/-ssä",
-            "KPT double consonants",
-            "KPT common single consonants",
-            "KPT consonant clusters",
-            "KPT recognition",
-            "Genitive -n",
-            "Minä verb forms with KPT",
-            "Regular T-plural",
-            "T-plural with KPT",
-            "Third-person plural -vat/-vät",
-            "Plural subject + ovat"
-          ],
-          "vocabulary": [
-            "kukka"
-          ],
-          "targetSkill": "Genitive -n",
-          "misconceptionCategory": "Genitive -n: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e01"
-        },
-        {
-          "id": "ff-a1-t14-e03",
           "type": "translation-en",
           "instruction": "Translate into English.",
           "prompt": "haen",
@@ -9680,7 +9606,7 @@
           "parallelExerciseId": "ff-a1-t08-e15"
         },
         {
-          "id": "ff-a1-t14-e04",
+          "id": "ff-a1-t14-e02",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "antaa (“I give”) → minä ____",
@@ -9711,10 +9637,10 @@
           ],
           "targetSkill": "Minä verb forms with KPT",
           "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e05"
+          "parallelExerciseId": "ff-a1-t14-e03"
         },
         {
-          "id": "ff-a1-t14-e05",
+          "id": "ff-a1-t14-e03",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
           "prompt": "I fly — use the supplied dictionary form lentää",
@@ -9745,10 +9671,10 @@
           ],
           "targetSkill": "Minä verb forms with KPT",
           "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e04"
+          "parallelExerciseId": "ff-a1-t14-e02"
         },
         {
-          "id": "ff-a1-t14-e06",
+          "id": "ff-a1-t14-e04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "kuva (“pictures”) → ____ · add plural -t",
@@ -9782,7 +9708,7 @@
           "parallelExerciseId": "ff-a1-t09-e15"
         },
         {
-          "id": "ff-a1-t14-e07",
+          "id": "ff-a1-t14-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "tuoli (“chairs”) → ____ (plural)",
@@ -9813,10 +9739,10 @@
           ],
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e08"
+          "parallelExerciseId": "ff-a1-t14-e06"
         },
         {
-          "id": "ff-a1-t14-e08",
+          "id": "ff-a1-t14-e06",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
           "prompt": "cats — use the supplied base kissa",
@@ -9847,10 +9773,10 @@
           ],
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e07"
+          "parallelExerciseId": "ff-a1-t14-e05"
         },
         {
-          "id": "ff-a1-t14-e09",
+          "id": "ff-a1-t14-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
           "prompt": "Choose the plural of “pallo”.",
@@ -9891,10 +9817,10 @@
           },
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e10"
+          "parallelExerciseId": "ff-a1-t14-e08"
         },
         {
-          "id": "ff-a1-t14-e10",
+          "id": "ff-a1-t14-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "ystävä (“friends”) → ____ · add plural -t",
@@ -9925,10 +9851,10 @@
           ],
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e09"
+          "parallelExerciseId": "ff-a1-t14-e07"
         },
         {
-          "id": "ff-a1-t14-e11",
+          "id": "ff-a1-t14-e09",
           "type": "translation-en",
           "instruction": "Translate into English.",
           "prompt": "rannat",
@@ -9962,7 +9888,7 @@
           "parallelExerciseId": "ff-a1-t10-e15"
         },
         {
-          "id": "ff-a1-t14-e12",
+          "id": "ff-a1-t14-e10",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "pelto (“fields”) → ____ (plural)",
@@ -9993,10 +9919,10 @@
           ],
           "targetSkill": "T-plural with KPT",
           "misconceptionCategory": "T-plural with KPT: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e13"
+          "parallelExerciseId": "ff-a1-t14-e11"
         },
         {
-          "id": "ff-a1-t14-e13",
+          "id": "ff-a1-t14-e11",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
           "prompt": "combs — use the supplied base kampa",
@@ -10027,10 +9953,10 @@
           ],
           "targetSkill": "T-plural with KPT",
           "misconceptionCategory": "T-plural with KPT: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e12"
+          "parallelExerciseId": "ff-a1-t14-e10"
         },
         {
-          "id": "ff-a1-t14-e14",
+          "id": "ff-a1-t14-e12",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
           "prompt": "they leave — use the supplied stem lähte-",
@@ -10087,7 +10013,7 @@
           "parallelExerciseId": "ff-a1-t11-e15"
         },
         {
-          "id": "ff-a1-t14-e15",
+          "id": "ff-a1-t14-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "istu- + -vat → ____ (they sit)",
@@ -10140,10 +10066,10 @@
           },
           "targetSkill": "Third-person plural -vat/-vät",
           "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e16"
+          "parallelExerciseId": "ff-a1-t14-e14"
         },
         {
-          "id": "ff-a1-t14-e16",
+          "id": "ff-a1-t14-e14",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
           "prompt": "Which ending completes sano- (“say”)?",
@@ -10204,10 +10130,10 @@
           },
           "targetSkill": "Third-person plural -vat/-vät",
           "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e15"
+          "parallelExerciseId": "ff-a1-t14-e13"
         },
         {
-          "id": "ff-a1-t14-e17",
+          "id": "ff-a1-t14-e15",
           "type": "translation-en",
           "instruction": "Translate into English.",
           "prompt": "Kuvat ovat kotona.",
@@ -10271,7 +10197,7 @@
           "parallelExerciseId": "ff-a1-t12-e15"
         },
         {
-          "id": "ff-a1-t14-e18",
+          "id": "ff-a1-t14-e16",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
           "prompt": "____ ovat ulkona. (tuoli)",
@@ -10332,10 +10258,10 @@
           },
           "targetSkill": "Plural subject + ovat",
           "misconceptionCategory": "Plural subject + ovat: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e19"
+          "parallelExerciseId": "ff-a1-t14-e17"
         },
         {
-          "id": "ff-a1-t14-e19",
+          "id": "ff-a1-t14-e17",
           "type": "word-order",
           "instruction": "Put the words in the correct order.",
           "prompt": "Build the Finnish sentence.",
@@ -10401,7 +10327,7 @@
           },
           "targetSkill": "Plural subject + ovat",
           "misconceptionCategory": "Plural subject + ovat: form not yet correct",
-          "parallelExerciseId": "ff-a1-t14-e18"
+          "parallelExerciseId": "ff-a1-t14-e16"
         }
       ]
     }

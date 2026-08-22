@@ -1,4 +1,4 @@
-<main class="page-shell lesson-page">
+<main class="page-shell lesson-page" [class.single-lesson-page]="lessons().length === 1">
   @if (pageError()) {
     <section class="state-card error-card" role="alert">
       <p class="eyebrow">Learn first</p>
@@ -12,18 +12,10 @@
         <div>
           <a class="back-link" [routerLink]="paths.topic(topicId())">← Back to topic</a>
           <p class="eyebrow">
-            {{ activeTest.set === 'extended' ? 'Extended set' : 'Core set' }} · Optional preparation
-            ·
-            {{
-              activeTest.stage === 'guided-combination'
-                ? 'Guided combination'
-                : activeTest.stage === 'review'
-                  ? 'Review'
-                  : 'Focused'
-            }}
-            · {{ activeTest.title }}
+            Optional preparation ·
+            {{ activeTest.stage === 'review' ? 'Review' : 'Focused' }}
           </p>
-          <h1>Learn first, then practise with confidence.</h1>
+          <h1>{{ activeTest.title }}</h1>
           <p>{{ activeTest.focus }}</p>
         </div>
         <a class="button primary" [routerLink]="paths.study(topicId(), activeTest.id)"
@@ -31,40 +23,61 @@
         >
       </header>
 
-      <div class="lesson-progress" aria-label="Lesson progress">
-        <span>{{ completedCount() }} of {{ lessons().length }} lessons completed</span>
-        <div aria-hidden="true">
-          <span [style.width.%]="(completedCount() / lessons().length) * 100"></span>
+      @if (lessons().length > 1) {
+        <div class="lesson-progress" aria-label="Lesson progress">
+          <span>{{ completedCount() }} of {{ lessons().length }} lessons completed</span>
+          <div aria-hidden="true">
+            <span [style.width.%]="(completedCount() / lessons().length) * 100"></span>
+          </div>
         </div>
-      </div>
+      }
 
-      <div class="lesson-layout">
-        <nav class="lesson-list" aria-label="Preparation lessons">
-          @for (lesson of lessons(); track lesson.id; let index = $index) {
-            <button
-              type="button"
-              [class.active]="index === lessonIndex()"
-              [attr.aria-current]="index === lessonIndex() ? 'step' : null"
-              (click)="openLesson(index)"
-            >
-              <span>{{ index + 1 }}</span>
-              <span>
-                <strong>{{ lesson.title }}</strong>
-                <small>{{
-                  isCompleted(lesson) ? 'Completed · review anytime' : 'Ready to read'
-                }}</small>
-              </span>
-              @if (isCompleted(lesson)) {
-                <span class="lesson-check" aria-label="Completed">✓</span>
+      <div class="lesson-layout" [class.single-lesson]="lessons().length === 1">
+        @if (lessons().length > 1) {
+          <nav class="lesson-list" aria-label="Preparation lessons">
+            @for (lesson of lessons(); track lesson.id; let index = $index) {
+              <button
+                type="button"
+                [class.active]="index === lessonIndex()"
+                [attr.aria-current]="index === lessonIndex() ? 'step' : null"
+                (click)="openLesson(index)"
+              >
+                <span>{{ index + 1 }}</span>
+                <span>
+                  <strong>{{ lesson.title }}</strong>
+                  <small>{{
+                    isCompleted(lesson) ? 'Completed · review anytime' : 'Ready to read'
+                  }}</small>
+                </span>
+                @if (isCompleted(lesson)) {
+                  <span class="lesson-check" aria-label="Completed">✓</span>
+                }
+              </button>
+            }
+          </nav>
+
+          <label class="lesson-picker">
+            <span class="card-kicker">Preparation lesson</span>
+            <select [value]="lessonIndex()" (change)="openLessonFromSelect($event)">
+              @for (lesson of lessons(); track lesson.id; let index = $index) {
+                <option [value]="index">
+                  {{ index + 1 }}. {{ lesson.title }}{{ isCompleted(lesson) ? ' — completed' : '' }}
+                </option>
               }
-            </button>
-          }
-        </nav>
+            </select>
+          </label>
+        }
 
         <article class="lesson-reader">
           <header class="reader-heading">
             <div>
-              <p class="card-kicker">Lesson {{ lessonIndex() + 1 }} of {{ lessons().length }}</p>
+              <p class="card-kicker">
+                @if (lessons().length > 1) {
+                  Lesson {{ lessonIndex() + 1 }} of {{ lessons().length }}
+                } @else {
+                  Preparation lesson
+                }
+              </p>
               <h2>{{ current.title }}</h2>
               <p>{{ current.summary }}</p>
             </div>
@@ -75,13 +88,7 @@
 
           <section class="focus-contract" aria-labelledby="focus-contract-title">
             <p class="card-kicker">
-              {{
-                current.stage === 'guided-combination'
-                  ? 'Guided combination'
-                  : current.stage === 'review'
-                    ? 'Review'
-                    : 'Focused lesson'
-              }}
+              {{ current.stage === 'review' ? 'Review' : 'Focused lesson' }}
             </p>
             <h3 id="focus-contract-title">What receives your attention</h3>
             <p>

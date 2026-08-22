@@ -85,7 +85,6 @@ const validPack = (): TopicPack => ({
       id: 'test',
       title: 'Test',
       focus: 'Focus',
-      set: 'core',
       stage: 'focused',
       targetSkills: ['Rule'],
       prerequisiteSkills: [],
@@ -98,6 +97,13 @@ const validPack = (): TopicPack => ({
 describe('content-pack validation', () => {
   it('accepts a well-formed pack', () => {
     expect(validateTopicPack(validPack()).id).toBe('pack');
+  });
+  it('rejects removed Core/Extended set metadata', () => {
+    const pack = validPack();
+    (pack.tests[0] as unknown as Record<string, unknown>)['set'] = 'core';
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'An exercise test must not declare Core/Extended set metadata.',
+    );
   });
   it('rejects duplicate stable exercise ids', () => {
     const pack = validPack();
@@ -149,6 +155,58 @@ describe('content-pack validation', () => {
     pack.tests[0].targetSkills = ['Rule', 'Hidden rule'];
     expect(() => validateTopicPack(pack)).toThrowError(
       'Test test must declare exactly one focused target skill.',
+    );
+  });
+  it('rejects the removed guided-combination stage', () => {
+    const pack = validPack();
+    (pack.tests[0] as unknown as { stage: string }).stage = 'guided-combination';
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Test test has incomplete focus information.',
+    );
+  });
+  it('rejects a focused test that repeats a prerequisite lesson', () => {
+    const pack = validPack();
+    const prerequisiteLesson = structuredClone(pack.lessons[0]);
+    prerequisiteLesson.id = 'prerequisite-lesson';
+    prerequisiteLesson.targetSkills = ['Prerequisite rule'];
+    prerequisiteLesson.practiceExercises = prerequisiteLesson.practiceExercises.map(
+      (exercise, index) => ({
+        ...exercise,
+        id: `prerequisite-practice-${index + 1}`,
+        requiredSkills: ['Prerequisite rule'],
+      }),
+    );
+    pack.lessons.push(prerequisiteLesson);
+    pack.tests[0].prerequisiteSkills = ['Prerequisite rule'];
+    pack.tests[0].lessonIds.push(prerequisiteLesson.id);
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Focused test test references a lesson for another target skill.',
+    );
+  });
+  it('rejects a focused lesson that is available only through review', () => {
+    const pack = validPack();
+    const reviewOnlyLesson = structuredClone(pack.lessons[0]);
+    reviewOnlyLesson.id = 'review-only-lesson';
+    reviewOnlyLesson.practiceExercises = reviewOnlyLesson.practiceExercises.map(
+      (exercise, index) => ({ ...exercise, id: `review-only-practice-${index + 1}` }),
+    );
+    pack.lessons.push(reviewOnlyLesson);
+    pack.tests.push({
+      ...pack.tests[0],
+      id: 'review-test',
+      stage: 'review',
+      lessonIds: [reviewOnlyLesson.id],
+      exercises: [],
+    });
+    pack.tests[1].exercises = scoredExercises(2).map((exercise, index) => ({
+      ...exercise,
+      id: `review-exercise-${index + 1}`,
+      parallelExerciseId: `review-exercise-${index === 0 ? 2 : 1}`,
+    }));
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Focused lesson review-only-lesson is not referenced by a focused test.',
     );
   });
   it('rejects an exercise skill outside its declared test focus', () => {
@@ -207,11 +265,11 @@ describe('content-pack validation', () => {
       'The exercise pack must contain between 200 and 1,000 scored exercises.',
     );
   });
-  it('rejects an important skill that core exercises do not cover', () => {
+  it('rejects an important skill that focused exercises do not cover', () => {
     const pack = validPack();
     pack.importantSkills = ['Rule', 'Missing important point'];
     expect(() => validateTopicPack(pack)).toThrowError(
-      'Important skill Missing important point is not covered by a core test.',
+      'Important skill Missing important point is not covered by a focused test.',
     );
   });
   it('rejects missing or duplicate important-skill declarations', () => {
@@ -227,7 +285,7 @@ describe('content-pack validation', () => {
       'The exercise pack must declare unique important skills.',
     );
   });
-  it('rejects a new grammatical requirement introduced only by an extended test', () => {
+  it('rejects a new grammatical requirement introduced only by a review', () => {
     const pack = validPack();
     const newLesson = structuredClone(pack.lessons[0]);
     newLesson.id = 'lesson-2';
@@ -238,35 +296,40 @@ describe('content-pack validation', () => {
       requiredSkills: ['New rule'],
     }));
     pack.lessons.push(newLesson);
-    const extendedExercises = scoredExercises(2).map((exercise, index) => ({
+    const reviewExercises = scoredExercises(2).map((exercise, index) => ({
       ...exercise,
-      id: `extended-exercise-${index + 1}`,
+      id: `review-exercise-${index + 1}`,
       requiredSkills: ['New rule'],
       targetSkill: 'New rule',
-      parallelExerciseId: `extended-exercise-${index === 0 ? 2 : 1}`,
+      parallelExerciseId: `review-exercise-${index === 0 ? 2 : 1}`,
     }));
     pack.tests.push({
       ...pack.tests[0],
-      id: 'extended-test',
-      set: 'extended',
+      id: 'review-test',
+      stage: 'review',
       targetSkills: ['New rule'],
       lessonIds: [newLesson.id],
-      exercises: extendedExercises,
+      exercises: reviewExercises,
     });
     expect(() => validateTopicPack(pack)).toThrowError(
-      'Extended test extended-test introduces a skill not covered by core tests.',
+      'Review test review-test introduces a skill not covered by focused tests.',
     );
   });
-  it('rejects a core test after the extended set has started', () => {
+  it('rejects a focused test after the review group has started', () => {
     const pack = validPack();
     const exercises = pack.tests[0].exercises;
     pack.tests = [
-      { ...pack.tests[0], id: 'first-core-test', exercises: exercises.slice(0, 2) },
-      { ...pack.tests[0], id: 'extended-test', set: 'extended', exercises: exercises.slice(2, 4) },
-      { ...pack.tests[0], id: 'later-core-test', exercises: exercises.slice(4) },
+      { ...pack.tests[0], id: 'first-focused-test', exercises: exercises.slice(0, 2) },
+      {
+        ...pack.tests[0],
+        id: 'review-test',
+        stage: 'review',
+        exercises: exercises.slice(2, 4),
+      },
+      { ...pack.tests[0], id: 'later-focused-test', exercises: exercises.slice(4) },
     ];
     expect(() => validateTopicPack(pack)).toThrowError(
-      'A core test cannot appear after the extended test set has started.',
+      'A focused test cannot appear after the review group has started.',
     );
   });
 });

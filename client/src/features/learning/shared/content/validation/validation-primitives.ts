@@ -1,6 +1,6 @@
 import { LearningStage } from '../content.models';
 
-const LEARNING_STAGES = new Set<LearningStage>(['focused', 'guided-combination', 'review']);
+const LEARNING_STAGES = new Set<LearningStage>(['focused', 'review']);
 
 export function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
