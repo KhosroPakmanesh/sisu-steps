@@ -1,0 +1,49 @@
+/* Drafting sheets for loading, empty, and recovery states. */
+main.page-shell .state-card,
+main.runner-shell .state-card {
+  position: relative;
+  border: 1px dashed var(--border-control);
+  border-left: 0.32rem solid var(--blue-500);
+  border-radius: 0.08rem;
+  background-color: var(--surface-raised);
+  background-image:
+    linear-gradient(
+      to right,
+      transparent 1.8rem,
+      var(--notebook-margin) 1.8rem 1.86rem,
+      transparent 0
+    ),
+    repeating-linear-gradient(to bottom, transparent 0 1.7rem, var(--notebook-rule) 1.7rem 1.76rem);
+  clip-path: polygon(0.2rem 0, 98% 0.12rem, 100% 96%, 96% 100%, 2% 98%, 0 0.4rem);
+  box-shadow: none;
+  filter: drop-shadow(0.25rem 0.32rem 0 var(--paper-edge))
+    drop-shadow(0.45rem 0.65rem 0.7rem var(--notebook-shadow));
+  transform: rotate(-0.2deg);
+}
+
+main.page-shell .state-card::before,
+main.runner-shell .state-card::before {
+  position: absolute;
+  top: 0.2rem;
+  left: 50%;
+  width: 4.6rem;
+  height: 0.85rem;
+  background: color-mix(in srgb, var(--amber-300) 48%, transparent);
+  content: '';
+  transform: translateX(-50%) rotate(1deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main.page-shell .continue-card,
+  main.page-shell .catalog-stats,
+  main.page-shell .topic-card,
+  main.topic-page .objective-panel,
+  main.topic-page .test-card,
+  main.lesson-page .example-grid article,
+  main.runner-shell .test-focus,
+  main.runner-shell .feedback,
+  main.lesson-page .lesson-practice .feedback,
+  main.narrow-page .mistake-cta {
+    transform: none;
+  }
+}

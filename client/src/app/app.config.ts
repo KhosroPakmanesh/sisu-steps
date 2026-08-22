@@ -1,5 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { provideRouter, withViewTransitions } from '@angular/router';
 import {
   BrowserJsonResourceLoader,
   JSON_RESOURCE_LOADER,
@@ -11,7 +11,7 @@ import { routes } from './app.routes';
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideRouter(routes),
+    provideRouter(routes, withViewTransitions({ skipInitialTransition: true })),
     { provide: JSON_RESOURCE_LOADER, useClass: BrowserJsonResourceLoader },
     { provide: LEARNER_STATE_REPOSITORY, useClass: IndexedDbLearnerStateRepository },
   ],

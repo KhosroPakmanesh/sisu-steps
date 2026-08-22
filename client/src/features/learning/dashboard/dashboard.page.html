@@ -81,22 +81,42 @@
                 <span>Tests tried</span>
                 <strong>{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong>
               </div>
-              <progress
-                class="notebook-progress"
-                [attr.aria-label]="summary.pack.title + ' tests tried'"
-                [max]="summary.pack.tests.length"
-                [value]="summary.attemptedTests"
-              ></progress>
+              <div
+                class="progress-ruler"
+                [style.--progress]="
+                  summary.pack.tests.length
+                    ? (summary.attemptedTests / summary.pack.tests.length) * 100 + '%'
+                    : '0%'
+                "
+              >
+                <span class="progress-pencil" aria-hidden="true"></span>
+                <progress
+                  class="notebook-progress"
+                  [attr.aria-label]="summary.pack.title + ' tests tried'"
+                  [max]="summary.pack.tests.length"
+                  [value]="summary.attemptedTests"
+                ></progress>
+              </div>
               <div>
                 <span>Lessons read</span>
                 <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
               </div>
-              <progress
-                class="notebook-progress"
-                [attr.aria-label]="summary.pack.title + ' lessons read'"
-                [max]="summary.totalLessons"
-                [value]="summary.completedLessons"
-              ></progress>
+              <div
+                class="progress-ruler"
+                [style.--progress]="
+                  summary.totalLessons
+                    ? (summary.completedLessons / summary.totalLessons) * 100 + '%'
+                    : '0%'
+                "
+              >
+                <span class="progress-pencil" aria-hidden="true"></span>
+                <progress
+                  class="notebook-progress"
+                  [attr.aria-label]="summary.pack.title + ' lessons read'"
+                  [max]="summary.totalLessons"
+                  [value]="summary.completedLessons"
+                ></progress>
+              </div>
             </div>
 
             <dl class="topic-meta">

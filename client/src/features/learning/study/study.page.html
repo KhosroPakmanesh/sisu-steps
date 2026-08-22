@@ -70,12 +70,22 @@
           >{{ activeSession.currentIndex + 1 }} / {{ activeSession.exerciseIds.length }}</span
         >
       </header>
-      <progress
-        class="notebook-progress runner-progress"
-        [max]="activeSession.exerciseIds.length"
-        [value]="activeSession.currentIndex + (feedback() ? 1 : 0)"
-        aria-label="Exercises completed in this session"
-      ></progress>
+      <div
+        class="progress-ruler runner-ruler"
+        [style.--progress]="
+          ((activeSession.currentIndex + (feedback() ? 1 : 0)) / activeSession.exerciseIds.length) *
+            100 +
+          '%'
+        "
+      >
+        <span class="progress-pencil" aria-hidden="true"></span>
+        <progress
+          class="notebook-progress runner-progress"
+          [max]="activeSession.exerciseIds.length"
+          [value]="activeSession.currentIndex + (feedback() ? 1 : 0)"
+          aria-label="Exercises completed in this session"
+        ></progress>
+      </div>
       @if (activeTest(); as testFocus) {
         <aside class="test-focus" aria-label="Test learning focus">
           <strong>{{ testFocus.stage === 'review' ? 'Skills reviewed' : 'Your target' }}:</strong>

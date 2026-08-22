@@ -1,0 +1,22 @@
+<dialog
+  #dialog
+  class="confirmation-sheet"
+  aria-labelledby="confirmation-title"
+  aria-describedby="confirmation-message"
+  (cancel)="cancel($event)"
+>
+  @if (request(); as details) {
+    <div class="sheet-clip" aria-hidden="true"></div>
+    <p class="card-kicker">{{ details.eyebrow }}</p>
+    <h2 id="confirmation-title">{{ details.title }}</h2>
+    <p id="confirmation-message">{{ details.message }}</p>
+    <div class="confirmation-actions">
+      <button #cancelButton class="button secondary" type="button" autofocus (click)="cancel()">
+        Keep my history
+      </button>
+      <button class="button danger" type="button" (click)="confirm()">
+        {{ details.confirmLabel }}
+      </button>
+    </div>
+  }
+</dialog>

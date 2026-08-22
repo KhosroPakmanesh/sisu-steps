@@ -1,0 +1,142 @@
+/* Reports and data: school ledger pages beside a labelled archive drawer. */
+.report-hero {
+  border-radius: 0.15rem;
+  background-image: linear-gradient(
+    90deg,
+    transparent 49.7%,
+    var(--overlay-line) 50%,
+    transparent 50.3%
+  );
+  box-shadow:
+    0.24rem 0.32rem 0 var(--paper-edge),
+    var(--shadow-large);
+}
+
+.report-table,
+.skill-report {
+  border-radius: 0.15rem 0.4rem 0.3rem;
+  box-shadow:
+    inset 2.2rem 0 0 color-mix(in srgb, var(--notebook-margin) 35%, transparent),
+    0.28rem 0.32rem 0 var(--paper-edge),
+    var(--shadow-small);
+}
+
+.report-table article:hover,
+.skill-report article:hover {
+  background: color-mix(in srgb, var(--surface-brand-subtle) 68%, transparent);
+}
+
+.settings-card,
+.danger-zone {
+  clip-path: polygon(
+    0 0.32rem,
+    28% 0.32rem,
+    33% 0,
+    58% 0,
+    62% 0.32rem,
+    100% 0.32rem,
+    100% 100%,
+    0 100%
+  );
+}
+
+.settings-card.stacked {
+  background-image:
+    linear-gradient(to right, var(--notebook-margin) 0 0.22rem, transparent 0),
+    repeating-linear-gradient(to bottom, transparent 0 1.95rem, var(--notebook-rule) 1.95rem 2rem);
+  box-shadow:
+    0.25rem 0.3rem 0 var(--paper-edge),
+    0.48rem 0.58rem 0 var(--surface-subtle),
+    var(--shadow-small);
+}
+
+.clear-list div {
+  background: color-mix(in srgb, var(--surface-paper) 58%, transparent);
+}
+
+.notice {
+  clip-path: polygon(0 0.15rem, 98% 0, 100% 93%, 3% 100%);
+  animation: note-unfold var(--motion-standard) ease-out;
+}
+
+.state-card.error-card {
+  clip-path: polygon(0 0.3rem, 3% 0, 8% 0.3rem, 13% 0, 100% 0.2rem, 98% 100%, 0 97%);
+  border-style: dashed;
+  transform: rotate(-0.3deg);
+}
+
+@keyframes note-unfold {
+  from {
+    opacity: 0;
+    transform: translateX(1rem) rotate(2deg) scale(0.94);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .notice {
+    animation: none;
+  }
+}
+
+/* Ledger totals and marks use the same clipped school-record material. */
+main.narrow-page .report-hero {
+  border: 0.18rem double var(--overlay-line);
+  border-left: 0.42rem solid var(--red-700);
+  border-radius: 0.06rem;
+  background-image:
+    linear-gradient(90deg, transparent 49.8%, var(--overlay-line) 50%, transparent 50.2%),
+    repeating-linear-gradient(to bottom, transparent 0 1.8rem, var(--overlay-line) 1.8rem 1.84rem);
+  clip-path: polygon(0.2rem 0, 99% 0.12rem, 100% 94%, 98% 100%, 0 98%);
+  filter: drop-shadow(0.25rem 0.32rem 0 var(--paper-edge));
+}
+
+main.narrow-page .report-table,
+main.narrow-page .skill-report {
+  border-radius: 0.06rem;
+  clip-path: polygon(0.12rem 0, 100% 0.08rem, calc(100% - 0.18rem) 100%, 0 98%);
+}
+
+main.narrow-page .mastery-set span {
+  border: 0.12rem double var(--green-700);
+  border-radius: 0.06rem;
+  background: var(--surface-success);
+  color: var(--text-success);
+  font-weight: var(--weight-bold);
+  transform: rotate(-1deg);
+}
+
+main.narrow-page .mastery-set span:nth-child(even) {
+  transform: rotate(0.8deg);
+}
+
+main.narrow-page .mistake-cta {
+  position: relative;
+  border-style: dashed;
+  border-radius: 0.06rem;
+  clip-path: polygon(0.18rem 0, 98% 0.12rem, 100% 93%, 97% 100%, 0 97%);
+  filter: drop-shadow(0.2rem 0.25rem 0 var(--paper-edge));
+  transform: rotate(-0.18deg);
+}
+
+/* Each history target is a labelled archive-divider strip. */
+main.narrow-page .clear-list div {
+  padding: 0.65rem 0.55rem 0.65rem 0.8rem;
+  border: 1px dashed var(--border-default);
+  border-left: 0.25rem solid var(--blue-500);
+  background-color: color-mix(in srgb, var(--surface-paper) 78%, transparent);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 72%,
+    var(--notebook-rule) 73% 77%,
+    transparent 78%
+  );
+  clip-path: polygon(0 0.12rem, calc(100% - 0.5rem) 0, 100% 0.45rem, 100% 100%, 0.1rem 96%);
+}
+
+main.narrow-page .clear-list div:nth-child(3n + 2) {
+  border-left-color: var(--green-500);
+}
+
+main.narrow-page .clear-list div:nth-child(3n) {
+  border-left-color: var(--amber-400);
+}

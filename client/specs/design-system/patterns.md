@@ -15,6 +15,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - State which attempts, sessions, mistakes, lessons, corrections, and mastery records will be removed.
 - State that bundled lessons and exercises remain available.
 - State when the action cannot be undone without a backup.
+- Present the consequence on a modal loose sheet, focus the safe cancellation action first, let Escape cancel, and return focus to the action that opened it.
 
 ## Backup restore
 
@@ -40,14 +41,17 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 ## Topic catalog and learning map
 
 - Keep home at catalog level: one compact summary per installed topic pack plus one prominent continue-learning action.
+- Render each catalog topic as a bound exercise-book cover with a spine, page edge, and printed cover fields. Render the continue recommendation as a clipped assignment slip and the catalog totals as one printed record strip.
 - Put an individual pack's objectives, Focused/Review sequence, lesson progress, and test actions on its topic route. Communicate the two learning groups through section headings instead of repeating classification badges on every test card.
+- Build the topic route from one taped objective sheet, binder-divider group headings, and one family of connected punched index cards; vary accent and stamp state without reverting to generic cards.
 - Do not render lesson teaching sections or multiple expanded test sequences on home.
 - Name progress truthfully: count distinct attempted tests as **tests tried** unless a separate completion threshold is specified.
 - When a saved session references installed content, prefer resuming it; otherwise recommend the first untried test in catalog and authored order.
 
 ## Appearance choice
 
-- Offer **Automatic**, **Light**, and **Dark** as a native labelled radio group in the application shell; each option may include a non-essential paper swatch.
+- Offer **Automatic**, **Day**, and **Night** as a native labelled radio group presented as desk-light scenes. Day maps to the existing explicit Light value and Night maps to the existing explicit Dark value.
+- Retain **Appearance** as the radio group's accessible name, but do not show a redundant group heading. Keep the three choices beside the unnumbered primary tabs in one continuous header control row.
 - Let Automatic follow `prefers-color-scheme`, including changes made while the app is open.
 - Store only explicit Light or Dark overrides; removing an override returns to Automatic.
 - Treat missing, invalid, or unavailable browser storage as Automatic and never block learning because an appearance preference cannot be read or saved.
@@ -55,9 +59,19 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Stationery controls
 
-- Present primary navigation as subject-divider tabs without changing link order, wording, destinations, or active-page semantics.
-- Present actions as restrained notebook labels or teacher stamps; primary actions remain the strongest and destructive actions remain explicitly labelled.
+- Present primary navigation as unnumbered subject-divider tabs without changing link order, wording, destinations, or active-page semantics.
+- Present every action as the same recognisable cut-paper piece. Primary, secondary, compact, text, review, file, dialog, disabled, and destructive variants keep one silhouette and physical behavior; vary only paper tint, ink, edge accent, internal marks, and explicit wording.
 - Present answer radios as pencil-marked circles, text answers as ruled fields, and word-order buttons as movable vocabulary cards while preserving native form behavior.
+- Put answer radios on perforated ruled slips, place selected word cards on a sentence-building strip, keep available word cards in a labelled paper pocket, and present keyboard shortcuts as margin annotations rather than computer keycaps.
 - Present progress as printed ruler scales and state badges as teacher marks, always paired with readable text or numbers.
-- Present reports as ledgers and data actions as archive labels without hiding values, local-storage scope, restore behavior, or clearing consequences.
+- Present reports as ledgers and data actions as cut-paper archive labels without hiding values, local-storage scope, restore behavior, or clearing consequences.
+- Use folded-corner back links on every secondary route. A back link does not become a generic action slip merely because it appears in a page heading.
 - Use the physical metaphor only as a visual aid. Do not require object recognition to discover, understand, or operate a control.
+
+## Interactive workbook world
+
+- Place route content on the same desk-and-workbook stage, but give each route a distinct physical scene that reinforces its purpose.
+- Use exercise-book covers for topics, an unbroken connected path for the topic map, a facing-page reference layout for lessons, a loose worksheet for study, a returned marked paper for results, a ledger for reports, and labelled folders for data.
+- Use immediate page-turn, tab-slide, lift, settle, stamp, pencil, and light motion only as confirmation of a state change; never wait for animation before navigation, content, or input becomes available.
+- At 800 pixels and below, collapse facing pages into semantic reading order. At 560 pixels and below, remove desk props and present the page as a pocket notebook.
+- Treat the visual craft as atmosphere, not gamification: do not add locks, points, lives, currency, rewards, streak pressure, or leaderboards.

@@ -1,3 +1,10 @@
+<div class="desk-stage" aria-hidden="true">
+  <span class="desk-lamp"><span></span></span>
+  <span class="desk-light"></span>
+  <span class="desk-ruler"></span>
+  <span class="desk-pencil"></span>
+  <span class="desk-paperclip"></span>
+</div>
 <header class="site-header">
   <a class="brand" [routerLink]="paths.home" aria-label="Sisu Steps home">
     <span class="brand-mark" aria-hidden="true">S</span>
@@ -15,7 +22,7 @@
       <a [routerLink]="paths.data" routerLinkActive="active">Data & backup</a>
     </nav>
     <fieldset class="appearance-control">
-      <legend>Appearance</legend>
+      <legend class="visually-hidden">Appearance</legend>
       <div class="appearance-options">
         <label [class.selected]="appearance === 'automatic'">
           <input
@@ -25,7 +32,7 @@
             [checked]="appearance === 'automatic'"
             (change)="changeAppearance('automatic')"
           />
-          <span class="appearance-swatch automatic" aria-hidden="true"></span>
+          <span class="appearance-scene automatic" aria-hidden="true"><i></i></span>
           <span>Automatic</span>
         </label>
         <label [class.selected]="appearance === 'light'">
@@ -36,8 +43,8 @@
             [checked]="appearance === 'light'"
             (change)="changeAppearance('light')"
           />
-          <span class="appearance-swatch light" aria-hidden="true"></span>
-          <span>Light</span>
+          <span class="appearance-scene day" aria-hidden="true"><i></i></span>
+          <span>Day</span>
         </label>
         <label [class.selected]="appearance === 'dark'">
           <input
@@ -47,8 +54,8 @@
             [checked]="appearance === 'dark'"
             (change)="changeAppearance('dark')"
           />
-          <span class="appearance-swatch dark" aria-hidden="true"></span>
-          <span>Dark</span>
+          <span class="appearance-scene night" aria-hidden="true"><i></i></span>
+          <span>Night</span>
         </label>
       </div>
     </fieldset>

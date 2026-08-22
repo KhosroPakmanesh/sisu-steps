@@ -100,6 +100,14 @@
   --runner-width: 56rem;
   --motion-fast: 150ms;
   --motion-standard: 250ms;
+  --motion-page: 420ms;
+  --desk-wood: color-mix(in srgb, var(--surface-desk) 82%, var(--amber-900));
+  --desk-groove: color-mix(in srgb, var(--surface-desk) 74%, var(--text-primary));
+  --desk-glow: color-mix(in srgb, var(--surface-paper) 48%, transparent);
+  --desk-metal: color-mix(in srgb, var(--stone-300) 72%, var(--text-primary));
+  --graphite: color-mix(in srgb, var(--text-primary) 78%, var(--stone-500));
+  --paper-edge: color-mix(in srgb, var(--surface-paper) 68%, var(--border-default));
+  --paper-depth: 0.55rem;
 
   color: var(--text-primary);
   background: var(--surface-desk);

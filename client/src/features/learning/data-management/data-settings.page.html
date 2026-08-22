@@ -4,7 +4,7 @@
       <p class="eyebrow">Local ownership</p>
       <h1>Data & backup</h1>
     </div>
-    <a class="button secondary compact" [routerLink]="paths.home">Back to topics</a>
+    <a class="back-link" [routerLink]="paths.home">← Back to topics</a>
   </header>
   <p class="lead">
     Your progress lives only in this browser. Download a backup before clearing browser data or
@@ -26,9 +26,8 @@
       </p>
     </div>
     <div class="settings-actions">
-      <button class="button primary archive-action" type="button" (click)="exportBackup()">
-        Download backup</button
-      ><label class="button secondary file-button restore-action"
+      <button class="button primary" type="button" (click)="exportBackup()">Download backup</button
+      ><label class="button secondary file-button"
         >Restore backup<input
           type="file"
           accept="application/json,.json"
@@ -48,7 +47,7 @@
           <div>
             <span>{{ index + 1 }}. {{ test.title }}</span
             ><button
-              class="clear-action"
+              class="button danger compact clear-action"
               type="button"
               (click)="clearTest(pack.id, test.id, test.title)"
             >
@@ -79,3 +78,7 @@
     </section>
   }
 </main>
+<app-confirmation-sheet
+  [request]="pendingClear()?.request ?? null"
+  (resolved)="resolveClear($event)"
+/>

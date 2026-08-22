@@ -1,0 +1,213 @@
+.back-link {
+  position: relative;
+  min-height: var(--control-height-compact);
+  padding: 0.65rem 1rem 0.55rem 1.6rem;
+  border: 1px solid var(--border-control);
+  border-left: 0.35rem solid var(--red-700);
+  background: var(--surface-warning);
+  box-shadow: 0.16rem 0.18rem 0 var(--notebook-shadow);
+  clip-path: polygon(0.55rem 0, 100% 0, calc(100% - 0.3rem) 100%, 0 92%);
+  transition:
+    transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.back-link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 0.62rem solid var(--surface-desk);
+  border-right: 0.62rem solid transparent;
+  content: '';
+}
+
+.back-link:hover {
+  transform: translateX(-0.2rem) rotate(-0.4deg);
+}
+
+.choice-list label,
+.practice-choices label {
+  transition:
+    transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.choice-list label:hover,
+.practice-choices label:hover {
+  transform: translateY(-0.12rem) rotate(-0.15deg);
+}
+
+.choice-list input[type='radio'],
+.practice-choices input[type='radio'] {
+  position: relative;
+  border-color: var(--graphite);
+  box-shadow: inset 0 0 0 0.1rem var(--surface-paper);
+  transition: transform var(--motion-fast) ease;
+}
+
+.choice-list input[type='radio']:checked,
+.practice-choices input[type='radio']:checked {
+  border-color: var(--graphite);
+  background: radial-gradient(
+    ellipse at 48% 52%,
+    transparent 0 0.23rem,
+    var(--graphite) 0.25rem 0.34rem,
+    transparent 0.36rem
+  );
+  animation: pencil-circle var(--motion-standard) ease-out;
+}
+
+input[type='checkbox'] {
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 2px solid var(--graphite);
+  border-radius: 0.08rem;
+  background: var(--surface-paper);
+  appearance: none;
+}
+
+input[type='checkbox']:checked {
+  background:
+    linear-gradient(45deg, transparent 39%, var(--graphite) 40% 51%, transparent 52%),
+    linear-gradient(-48deg, transparent 46%, var(--graphite) 47% 57%, transparent 58%),
+    var(--surface-paper);
+}
+
+input.notebook-input {
+  border: 0;
+  border-bottom: 0.18rem solid var(--graphite);
+  border-radius: 0;
+  background-color: color-mix(in srgb, var(--surface-raised) 42%, transparent);
+  background-image:
+    linear-gradient(to right, var(--notebook-margin) 0 2px, transparent 2px),
+    repeating-linear-gradient(to bottom, transparent 0 1.7rem, var(--notebook-rule) 1.7rem 1.76rem);
+  caret-color: var(--graphite);
+  box-shadow: 0 0.32rem 0 -0.25rem var(--notebook-shadow);
+}
+
+input.notebook-input:focus-visible {
+  background-color: var(--surface-raised);
+  box-shadow: 0 0.42rem 0 -0.2rem var(--blue-500);
+}
+
+.notebook-select {
+  border-block: 0.12rem solid var(--border-control);
+  border-right: 0.3rem solid var(--amber-400);
+  border-left-width: 0.45rem;
+  border-radius: 0 0.35rem 0.35rem 0;
+  background-color: var(--surface-paper);
+  box-shadow:
+    0.25rem 0.25rem 0 var(--surface-subtle),
+    0.45rem 0.45rem 0 var(--paper-edge),
+    var(--shadow-control);
+}
+
+.word-token {
+  border-width: 0.12rem;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 72%,
+    var(--notebook-rule) 73% 77%,
+    transparent 78%
+  );
+  transition:
+    transform var(--motion-standard) cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow var(--motion-standard) ease;
+}
+
+.word-token:hover:not(:disabled),
+.word-token:focus-visible {
+  z-index: 2;
+  box-shadow:
+    0 0.45rem 0 var(--notebook-shadow),
+    0 0.65rem 1rem var(--notebook-shadow);
+  transform: translateY(-0.35rem) rotate(0.6deg);
+}
+
+.word-token.selected-token {
+  animation: token-settle var(--motion-standard) cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.progress-ruler {
+  position: relative;
+  padding-top: 0.6rem;
+}
+
+.progress-pencil {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: clamp(0.4rem, var(--progress), calc(100% - 0.8rem));
+  width: 1.25rem;
+  height: 0.38rem;
+  border-radius: 0.06rem;
+  background: linear-gradient(to bottom, var(--amber-300) 0 60%, var(--red-700) 61%);
+  box-shadow: 0 0.15rem 0.2rem var(--notebook-shadow);
+  transform: translateX(-50%) rotate(-8deg);
+  transition: left var(--motion-page) cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.progress-pencil::after {
+  position: absolute;
+  right: -0.45rem;
+  border-block: 0.19rem solid transparent;
+  border-left: 0.48rem solid var(--stone-200);
+  content: '';
+}
+
+.feedback {
+  overflow: visible;
+}
+
+.feedback-icon,
+.result-ring,
+.score-badge,
+.completed-badge {
+  animation: stamp-land var(--motion-standard) cubic-bezier(0.2, 0.9, 0.3, 1.25);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+label:has(input:focus-visible) {
+  outline: 0.22rem solid var(--focus-ring);
+  outline-offset: 0.22rem;
+  box-shadow:
+    0 0 0 0.12rem var(--surface-paper),
+    0.18rem 0.24rem 0 var(--notebook-shadow);
+  animation: focus-draw var(--motion-fast) ease-out;
+}
+
+@keyframes pencil-circle {
+  from {
+    clip-path: polygon(0 0, 10% 0, 10% 100%, 0 100%);
+    transform: rotate(-12deg) scale(0.85);
+  }
+}
+
+@keyframes token-settle {
+  from {
+    transform: translateY(-0.6rem) rotate(2deg);
+  }
+}
+
+@keyframes stamp-land {
+  from {
+    opacity: 0.3;
+    transform: translateY(-0.45rem) rotate(-5deg) scale(1.2);
+  }
+}
+
+@keyframes focus-draw {
+  from {
+    outline-color: transparent;
+    outline-offset: 0.55rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-pencil {
+    transition: none;
+  }
+}

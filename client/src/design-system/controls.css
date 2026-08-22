@@ -1,4 +1,9 @@
 .button {
+  --action-paper: var(--surface-raised);
+  --action-ink: var(--text-primary);
+  --action-edge: var(--blue-500);
+  --action-angle: -0.16deg;
+
   position: relative;
   isolation: isolate;
   display: inline-flex;
@@ -8,8 +13,28 @@
   min-height: var(--control-height);
   padding: 0.72rem 1.05rem;
   overflow: hidden;
-  border: 1px solid transparent;
-  border-radius: 0.28rem;
+  border: 0;
+  border-radius: 0.12rem;
+  background:
+    linear-gradient(to bottom, transparent calc(100% - 0.18rem), var(--notebook-rule) 0),
+    repeating-linear-gradient(
+      92deg,
+      transparent 0 1.35rem,
+      color-mix(in srgb, var(--notebook-grid) 52%, transparent) 1.35rem 1.39rem
+    ),
+    var(--action-paper);
+  color: var(--action-ink);
+  clip-path: polygon(
+    0.18rem 0,
+    34% 0.07rem,
+    58% 0,
+    calc(100% - 0.12rem) 0.1rem,
+    100% calc(100% - 0.2rem),
+    69% 100%,
+    41% calc(100% - 0.08rem),
+    0 calc(100% - 0.13rem),
+    0.08rem 42%
+  );
   font: inherit;
   font-size: 0.84rem;
   font-weight: var(--weight-bold);
@@ -17,76 +42,86 @@
   text-align: center;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: var(--shadow-control);
+  box-shadow:
+    inset 0.34rem 0 0 var(--action-edge),
+    inset 0 0 0 1px color-mix(in srgb, var(--action-edge) 40%, transparent);
+  filter: drop-shadow(0.16rem 0.2rem 0 var(--paper-edge))
+    drop-shadow(0.24rem 0.34rem 0.28rem var(--notebook-shadow));
+  transform: rotate(var(--action-angle));
   transition:
     transform var(--motion-fast) ease,
-    background var(--motion-fast) ease,
-    border-color var(--motion-fast) ease,
+    filter var(--motion-fast) ease,
     box-shadow var(--motion-fast) ease;
 }
 
 .button::before {
   position: absolute;
   z-index: -1;
-  inset: 0.18rem;
-  border: 1px solid color-mix(in srgb, currentcolor 18%, transparent);
+  inset: 0.2rem 0.24rem;
+  border: 1px dashed color-mix(in srgb, var(--action-edge) 48%, transparent);
   content: '';
   pointer-events: none;
 }
 
 .button::after {
   position: absolute;
-  z-index: -1;
-  right: -0.12rem;
-  bottom: -0.12rem;
-  width: 0.75rem;
-  height: 0.75rem;
-  background: color-mix(in srgb, currentcolor 12%, transparent);
+  z-index: 1;
+  right: 0.08rem;
+  bottom: 0.08rem;
+  width: 0.68rem;
+  height: 0.68rem;
+  background: color-mix(in srgb, var(--action-edge) 18%, transparent);
   clip-path: polygon(100% 0, 100% 100%, 0 100%);
   content: '';
   pointer-events: none;
 }
 
 .button:hover:not(:disabled) {
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-control-hover);
+  filter: drop-shadow(0.2rem 0.28rem 0 var(--paper-edge))
+    drop-shadow(0.34rem 0.48rem 0.4rem var(--notebook-shadow));
+  transform: translateY(-0.16rem) rotate(0deg);
 }
 
 .button:active:not(:disabled) {
-  transform: translateY(2px);
-  box-shadow: 0 1px 0 var(--notebook-shadow);
+  filter: drop-shadow(0.08rem 0.1rem 0 var(--paper-edge));
+  transform: translateY(0.12rem) rotate(0deg);
 }
 
 .button:disabled {
   cursor: default;
-  box-shadow: none;
+  filter: grayscale(0.45);
+  opacity: 0.58;
+  transform: none;
 }
 
 .button.primary:disabled,
 .button.compact:not(.secondary):disabled {
-  border-color: var(--border-control);
-  background: var(--surface-subtle);
-  color: var(--text-secondary);
+  --action-paper: var(--surface-subtle);
+  --action-ink: var(--text-secondary);
+  --action-edge: var(--border-control);
 }
 
 .button.primary,
 .button.compact:not(.secondary) {
-  border-color: var(--blue-800);
-  background: var(--blue-700);
-  color: var(--surface-paper);
+  --action-paper: color-mix(in srgb, var(--surface-brand-subtle) 78%, var(--surface-raised));
+  --action-ink: var(--text-brand);
+  --action-edge: var(--blue-700);
+
+  box-shadow:
+    inset 0.42rem 0 0 var(--action-edge),
+    inset 0 -0.18rem 0 color-mix(in srgb, var(--action-edge) 58%, transparent),
+    inset 0 0 0 1px color-mix(in srgb, var(--action-edge) 52%, transparent);
 }
 
 .button.primary:hover:not(:disabled),
 .button.compact:not(.secondary):hover:not(:disabled) {
-  background: var(--blue-800);
+  --action-paper: color-mix(in srgb, var(--surface-brand-subtle) 88%, var(--surface-raised));
 }
 
 .button.secondary {
-  border-color: var(--border-control);
-  background:
-    linear-gradient(to bottom, transparent calc(100% - 0.22rem), var(--notebook-rule) 0),
-    var(--surface-raised);
-  color: var(--text-primary);
+  --action-paper: var(--surface-raised);
+  --action-ink: var(--text-primary);
+  --action-edge: var(--blue-500);
 }
 
 .button.compact {
@@ -95,27 +130,29 @@
 }
 
 .button.text-button {
-  min-height: var(--control-height-compact);
-  padding-inline: var(--space-2);
-  overflow: visible;
-  border-color: transparent;
-  background: transparent;
-  color: var(--text-brand);
-  box-shadow: inset 0 -1px 0 var(--notebook-margin);
-}
+  --action-paper: color-mix(in srgb, var(--surface-warning) 48%, var(--surface-paper));
+  --action-ink: var(--text-brand);
+  --action-edge: var(--notebook-margin);
 
-.button.text-button::before,
-.button.text-button::after {
-  display: none;
+  min-height: var(--control-height-compact);
+  padding-inline: var(--space-3);
 }
 
 .button.danger {
-  border: 2px dashed var(--red-700);
-  background: var(--surface-danger);
-  color: var(--text-danger);
+  --action-paper: var(--surface-danger);
+  --action-ink: var(--text-danger);
+  --action-edge: var(--red-700);
+
   box-shadow:
-    inset 0 0 0 0.18rem color-mix(in srgb, var(--red-700) 9%, transparent),
-    var(--shadow-control);
+    inset 0.42rem 0 0 var(--action-edge),
+    inset 0 0 0 1px color-mix(in srgb, var(--action-edge) 58%, transparent);
+}
+
+.button.review-action {
+  --action-paper: var(--surface-warning);
+  --action-ink: var(--text-warning);
+  --action-edge: var(--amber-400);
+  --action-angle: 0.14deg;
 }
 
 .back-link {

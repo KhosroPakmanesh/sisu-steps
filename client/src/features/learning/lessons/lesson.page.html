@@ -27,12 +27,18 @@
       @if (lessons().length > 1) {
         <div class="lesson-progress" aria-label="Lesson progress">
           <span>{{ completedCount() }} of {{ lessons().length }} lessons completed</span>
-          <progress
-            class="notebook-progress"
-            [max]="lessons().length"
-            [value]="completedCount()"
-            aria-label="Preparation lessons completed"
-          ></progress>
+          <div
+            class="progress-ruler"
+            [style.--progress]="(completedCount() / lessons().length) * 100 + '%'"
+          >
+            <span class="progress-pencil" aria-hidden="true"></span>
+            <progress
+              class="notebook-progress"
+              [max]="lessons().length"
+              [value]="completedCount()"
+              aria-label="Preparation lessons completed"
+            ></progress>
+          </div>
         </div>
       }
 
@@ -95,103 +101,109 @@
             }
           </header>
 
-          <section class="focus-contract" aria-labelledby="focus-contract-title">
-            <p class="card-kicker">
-              {{ current.stage === 'review' ? 'Review' : 'Focused lesson' }}
-            </p>
-            <h3 id="focus-contract-title">What receives your attention</h3>
-            <p>
-              <strong>{{ current.stage === 'review' ? 'Skills reviewed' : 'Target' }}:</strong>
-              {{ current.targetSkills.join(', ') }}
-            </p>
-            @if (current.prerequisiteSkills.length > 0) {
-              <p>
-                <strong>Already introduced:</strong> {{ current.prerequisiteSkills.join(', ') }}
-              </p>
-            } @else {
-              <p>No earlier grammar is required.</p>
-            }
-            <p class="focus-promise">
-              Anything else is supplied directly and is not a hidden part of the question.
-            </p>
-          </section>
-
-          <section class="lesson-objectives" aria-labelledby="lesson-objectives-title">
-            <h3 id="lesson-objectives-title">After this lesson, you can</h3>
-            <ul>
-              @for (objective of current.objectives; track objective) {
-                <li>{{ objective }}</li>
-              }
-            </ul>
-          </section>
-
-          @for (section of current.sections; track section.title) {
-            <section class="teaching-section">
-              <h3>{{ section.title }}</h3>
-              @for (paragraph of section.paragraphs; track paragraph) {
-                <p>{{ paragraph }}</p>
-              }
-              <ul class="key-points">
-                @for (point of section.keyPoints; track point) {
-                  <li>{{ point }}</li>
-                }
-              </ul>
-            </section>
-          }
-
-          <section class="worked-examples" aria-labelledby="worked-examples-title">
-            <p class="card-kicker">See every step</p>
-            <h3 id="worked-examples-title">Worked examples</h3>
-            <div class="example-grid">
-              @for (example of current.examples; track example.finnish) {
-                <article>
+          <div class="lesson-spread">
+            <div class="lesson-left-page">
+              <section class="focus-contract" aria-labelledby="focus-contract-title">
+                <p class="card-kicker">
+                  {{ current.stage === 'review' ? 'Review' : 'Focused lesson' }}
+                </p>
+                <h3 id="focus-contract-title">What receives your attention</h3>
+                <p>
+                  <strong>{{ current.stage === 'review' ? 'Skills reviewed' : 'Target' }}:</strong>
+                  {{ current.targetSkills.join(', ') }}
+                </p>
+                @if (current.prerequisiteSkills.length > 0) {
                   <p>
-                    <strong lang="fi">{{ example.finnish }}</strong>
-                    <span>{{ example.english }}</span>
+                    <strong>Already introduced:</strong> {{ current.prerequisiteSkills.join(', ') }}
                   </p>
-                  <ol>
-                    @for (step of example.steps; track step) {
-                      <li>{{ step }}</li>
+                } @else {
+                  <p>No earlier grammar is required.</p>
+                }
+                <p class="focus-promise">
+                  Anything else is supplied directly and is not a hidden part of the question.
+                </p>
+              </section>
+
+              <section class="lesson-objectives" aria-labelledby="lesson-objectives-title">
+                <h3 id="lesson-objectives-title">After this lesson, you can</h3>
+                <ul>
+                  @for (objective of current.objectives; track objective) {
+                    <li>{{ objective }}</li>
+                  }
+                </ul>
+              </section>
+
+              @for (section of current.sections; track section.title) {
+                <section class="teaching-section">
+                  <h3>{{ section.title }}</h3>
+                  @for (paragraph of section.paragraphs; track paragraph) {
+                    <p>{{ paragraph }}</p>
+                  }
+                  <ul class="key-points">
+                    @for (point of section.keyPoints; track point) {
+                      <li>{{ point }}</li>
                     }
-                  </ol>
-                </article>
+                  </ul>
+                </section>
               }
             </div>
-          </section>
 
-          <section class="lesson-vocabulary" aria-labelledby="lesson-vocabulary-title">
-            <p class="card-kicker">Words used here</p>
-            <h3 id="lesson-vocabulary-title">Lesson vocabulary</h3>
-            @if (current.introducedVocabulary.length > 0) {
-              <p>
-                These are the new Finnish words that may appear in this lesson or its associated
-                test.
-              </p>
-              <dl>
-                @for (word of current.introducedVocabulary; track word.finnish) {
-                  <div>
-                    <dt lang="fi">{{ word.finnish }}</dt>
-                    <dd>{{ word.english }}</dd>
-                  </div>
+            <div class="lesson-right-page">
+              <section class="worked-examples" aria-labelledby="worked-examples-title">
+                <p class="card-kicker">See every step</p>
+                <h3 id="worked-examples-title">Worked examples</h3>
+                <div class="example-grid">
+                  @for (example of current.examples; track example.finnish) {
+                    <article>
+                      <p>
+                        <strong lang="fi">{{ example.finnish }}</strong>
+                        <span>{{ example.english }}</span>
+                      </p>
+                      <ol>
+                        @for (step of example.steps; track step) {
+                          <li>{{ step }}</li>
+                        }
+                      </ol>
+                    </article>
+                  }
+                </div>
+              </section>
+
+              <section class="lesson-vocabulary" aria-labelledby="lesson-vocabulary-title">
+                <p class="card-kicker">Words used here</p>
+                <h3 id="lesson-vocabulary-title">Lesson vocabulary</h3>
+                @if (current.introducedVocabulary.length > 0) {
+                  <p>
+                    These are the new Finnish words that may appear in this lesson or its associated
+                    test.
+                  </p>
+                  <dl>
+                    @for (word of current.introducedVocabulary; track word.finnish) {
+                      <div>
+                        <dt lang="fi">{{ word.finnish }}</dt>
+                        <dd>{{ word.english }}</dd>
+                      </div>
+                    }
+                  </dl>
+                } @else {
+                  <p>
+                    No new vocabulary is introduced here. This lesson reuses words from its
+                    prerequisite lesson.
+                  </p>
                 }
-              </dl>
-            } @else {
-              <p>
-                No new vocabulary is introduced here. This lesson reuses words from its prerequisite
-                lesson.
-              </p>
-            }
-          </section>
+              </section>
 
-          <aside class="mistake-notes">
-            <p class="card-kicker">Avoid these traps</p>
-            <h3>Common mistakes</h3>
-            <ul>
-              @for (mistake of current.commonMistakes; track mistake) {
-                <li>{{ mistake }}</li>
-              }
-            </ul>
-          </aside>
+              <aside class="mistake-notes">
+                <p class="card-kicker">Avoid these traps</p>
+                <h3>Common mistakes</h3>
+                <ul>
+                  @for (mistake of current.commonMistakes; track mistake) {
+                    <li>{{ mistake }}</li>
+                  }
+                </ul>
+              </aside>
+            </div>
+          </div>
 
           <app-lesson-practice [lesson]="current" />
 

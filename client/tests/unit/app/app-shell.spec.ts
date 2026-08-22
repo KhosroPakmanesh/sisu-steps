@@ -26,8 +26,15 @@ describe('AppShell', () => {
     expect(element.querySelector('nav')?.textContent).toContain('Topics');
     expect(element.querySelector('nav')?.textContent).toContain('Reports');
     expect(element.querySelector('nav')?.textContent).toContain('Data & backup');
+    expect(element.querySelectorAll('.tab-number')).toHaveLength(0);
     expect(element.querySelector('nav a[href="/mistakes/topic"]')).toBeNull();
-    expect(element.querySelector('.appearance-control')?.textContent).toContain('Appearance');
+    const appearanceControl = element.querySelector('.appearance-control');
+    const appearanceLegend = appearanceControl?.querySelector('legend');
+    expect(appearanceLegend?.textContent?.trim()).toBe('Appearance');
+    expect(appearanceLegend?.classList.contains('visually-hidden')).toBe(true);
+    expect(appearanceControl?.textContent).not.toContain('Desk light');
+    expect(appearanceControl?.textContent).toContain('Day');
+    expect(appearanceControl?.textContent).toContain('Night');
     expect(element.querySelectorAll('.appearance-control input[type="radio"]')).toHaveLength(3);
     expect(element.querySelector('footer')?.textContent).toContain('stays safely in this browser');
   });
@@ -40,15 +47,15 @@ describe('AppShell', () => {
 
     const fixture = TestBed.createComponent(AppShell);
     fixture.detectChanges();
-    const darkChoice = fixture.nativeElement.querySelector(
+    const nightChoice = fixture.nativeElement.querySelector(
       '.appearance-control input[value="dark"]',
     ) as HTMLInputElement;
 
-    darkChoice.click();
+    nightChoice.click();
     fixture.detectChanges();
 
     expect(document.documentElement.dataset['appearance']).toBe('dark');
     expect(localStorage.getItem(appearancePreferenceStorageKey)).toBe('dark');
-    expect(darkChoice.checked).toBe(true);
+    expect(nightChoice.checked).toBe(true);
   });
 });

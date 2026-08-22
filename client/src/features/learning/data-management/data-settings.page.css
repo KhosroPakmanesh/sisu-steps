@@ -65,12 +65,7 @@
 .file-button {
   position: relative;
   overflow: hidden;
-  border-top: 0.28rem solid var(--amber-400);
   cursor: pointer;
-}
-
-.archive-action {
-  border-top: 0.28rem solid var(--blue-300);
 }
 
 .file-button input {
@@ -102,23 +97,8 @@
   font-size: 0.86rem;
 }
 
-.clear-list button {
-  min-height: var(--control-height-compact);
-  padding: var(--space-2) var(--space-3);
-  border: 1px dashed var(--red-700);
-  border-radius: 0.18rem;
-  background: var(--surface-danger);
-  color: var(--red-700);
-  font: inherit;
+.clear-list .clear-action {
   font-size: 0.75rem;
-  font-weight: 800;
-  cursor: pointer;
-  box-shadow: 0 2px 0 var(--notebook-shadow);
-}
-
-.clear-list button:hover {
-  border-style: solid;
-  transform: translateY(-1px);
 }
 
 .danger-zone {

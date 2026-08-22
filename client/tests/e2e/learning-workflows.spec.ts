@@ -1,4 +1,9 @@
-import { expect, test } from '@playwright/test';
+import { expect, type Locator, test } from '@playwright/test';
+
+async function expectClippedPaper(locator: Locator) {
+  await expect(locator).toBeVisible();
+  expect(await locator.evaluate((element) => getComputedStyle(element).clipPath)).not.toBe('none');
+}
 
 test('opens the catalog and exposes stable learning routes', async ({ page }) => {
   await page.goto('/');
@@ -20,6 +25,9 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toContainText(
     'Topics',
   );
+  await expect(page.locator('.tab-number')).toHaveCount(0);
+  await expect(page.getByRole('group', { name: 'Appearance' })).toBeVisible();
+  await expect(page.getByText('Desk light', { exact: true })).toHaveCount(0);
 
   await page.goto('/learn/finnish-foundations-a1/kpt-nouns');
   await expect(page.locator('.lesson-hero h1')).toHaveText('KPT in nouns');
@@ -110,6 +118,30 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   );
 });
 
+test('uses dedicated notebook objects for repeated surfaces and return links', async ({ page }) => {
+  await page.goto('/');
+  await expectClippedPaper(page.locator('.continue-card'));
+  await expectClippedPaper(page.locator('.topic-card').first());
+
+  await page.goto('/topics/finnish-foundations-a1');
+  await expectClippedPaper(page.locator('.test-card').first());
+  expect(
+    await page
+      .locator('.objective-grid span')
+      .first()
+      .evaluate((element) => Number.parseFloat(getComputedStyle(element).borderRadius)),
+  ).toBeLessThan(4);
+
+  await page.goto('/study/finnish-foundations-a1/vowel-families');
+  await expectClippedPaper(page.locator('.choice-list label').first());
+
+  await page.goto('/reports');
+  await expect(page.getByRole('link', { name: /Back to topics/ })).toHaveClass(/back-link/);
+
+  await page.goto('/data');
+  await expect(page.getByRole('link', { name: /Back to topics/ })).toHaveClass(/back-link/);
+});
+
 test('restores an unfinished scored session from browser storage', async ({ page }) => {
   await page.goto('/topics/finnish-foundations-a1');
   await page.locator('.test-card').first().getByRole('link', { name: 'Start test' }).click();
@@ -131,6 +163,19 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
 
   await expect(page.locator('.topic-card')).toHaveCount(1);
   await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toContainText('Data');
+  const headerLayout = await page.locator('.header-tools').evaluate((header) => {
+    const controlTops = [...header.querySelectorAll('nav a, .appearance-options label')].map(
+      (control) => control.getBoundingClientRect().top,
+    );
+    return {
+      controlCount: controlTops.length,
+      topSpread: Math.max(...controlTops) - Math.min(...controlTops),
+      flexWrap: getComputedStyle(header).flexWrap,
+    };
+  });
+  expect(headerLayout.controlCount).toBe(6);
+  expect(headerLayout.topSpread).toBeLessThan(2);
+  expect(headerLayout.flexWrap).toBe('nowrap');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );
@@ -156,12 +201,25 @@ test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => 
   );
 });
 
-test('shows deliberate backup and clearing controls without performing them', async ({ page }) => {
+test('uses a deliberate confirmation sheet for destructive clearing', async ({ page }) => {
   await page.goto('/data');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Data & backup');
   await expect(page.getByRole('button', { name: 'Download backup' })).toBeVisible();
-  await expect(page.getByRole('button', { name: 'Clear all history' })).toBeVisible();
+  const clearHistory = page.getByRole('button', { name: 'Clear all history' });
+  await clearHistory.click();
+
+  const dialog = page.getByRole('dialog');
+  await expect(dialog).toContainText('Every attempt, unfinished session, mistake');
+  await expect(dialog.getByRole('button', { name: 'Keep my history' })).toBeFocused();
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+  await expect(clearHistory).toBeFocused();
+  await expect(page.getByRole('status')).toHaveCount(0);
+
+  await clearHistory.click();
+  await dialog.getByRole('button', { name: 'Clear all history' }).click();
+  await expect(page.getByRole('status')).toContainText('All learner history was cleared');
 });
 
 test('remembers an appearance override and can return to automatic', async ({ page }) => {
@@ -169,17 +227,32 @@ test('remembers an appearance override and can return to automatic', async ({ pa
   await page.goto('/');
 
   const automatic = page.getByRole('radio', { name: 'Automatic' });
-  const light = page.getByRole('radio', { name: 'Light' });
+  const day = page.getByRole('radio', { name: 'Day' });
   await expect(automatic).toBeChecked();
   await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
 
-  await light.focus();
+  await day.focus();
   await page.keyboard.press('Space');
   await expect(page.locator('html')).toHaveAttribute('data-appearance', 'light');
   await page.reload();
-  await expect(light).toBeChecked();
+  await expect(day).toBeChecked();
 
   await automatic.focus();
   await page.keyboard.press('Space');
   await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
+});
+
+test('keeps the workbook world immediate when reduced motion is requested', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/');
+
+  const animationDurationMs = await page.locator('.desk-light').evaluate((element) => {
+    const style = getComputedStyle(element);
+    const duration = Number.parseFloat(style.animationDuration);
+    return style.animationDuration.endsWith('ms') ? duration : duration * 1000;
+  });
+  expect(animationDurationMs).toBeLessThanOrEqual(1);
+
+  await page.getByRole('link', { name: 'Open topic' }).click();
+  await expect(page.getByRole('heading', { name: 'Lessons and tests' })).toBeVisible();
 });

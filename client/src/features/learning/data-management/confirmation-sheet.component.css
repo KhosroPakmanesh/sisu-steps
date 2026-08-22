@@ -1,0 +1,76 @@
+:host {
+  display: contents;
+}
+
+.confirmation-sheet {
+  position: fixed;
+  width: min(calc(100% - 2rem), 34rem);
+  max-height: min(90dvh, 38rem);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  overflow: visible auto;
+  border: 1px solid var(--border-control);
+  border-left: 0.35rem solid var(--red-700);
+  border-radius: 0.18rem 0.5rem 0.25rem 0.35rem;
+  background-color: var(--surface-paper);
+  background-image:
+    linear-gradient(to right, transparent 2rem, var(--notebook-margin) 2rem 2.05rem, transparent 0),
+    repeating-linear-gradient(to bottom, transparent 0 1.95rem, var(--notebook-rule) 1.95rem 2rem);
+  color: var(--text-primary);
+  box-shadow:
+    0.28rem 0.35rem 0 var(--surface-subtle),
+    0 2rem 5rem rgb(0 0 0 / 38%);
+  transform: rotate(-0.35deg);
+  animation: sheet-arrives var(--motion-standard) cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.confirmation-sheet::backdrop {
+  background:
+    radial-gradient(circle at center, transparent, rgb(9 15 14 / 46%)), rgb(9 15 14 / 38%);
+  backdrop-filter: blur(3px);
+}
+
+.sheet-clip {
+  position: absolute;
+  top: -0.65rem;
+  right: 2.3rem;
+  width: 1.15rem;
+  height: 3.5rem;
+  border: 0.18rem solid var(--desk-metal);
+  border-bottom: 0;
+  border-radius: 0.6rem 0.6rem 0 0;
+  filter: drop-shadow(1px 2px 1px var(--notebook-shadow));
+  transform: rotate(7deg);
+}
+
+.confirmation-sheet h2 {
+  max-width: 15ch;
+  margin: var(--space-2) 0 var(--space-4);
+  font-size: clamp(1.7rem, 6vw, 2.5rem);
+}
+
+.confirmation-sheet p:not(.card-kicker) {
+  max-width: 48ch;
+}
+
+.confirmation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 1px dashed var(--red-200);
+}
+
+@keyframes sheet-arrives {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem) rotate(1.5deg) scale(0.96);
+  }
+}
+
+@media (width <= 480px) {
+  .confirmation-actions {
+    display: grid;
+  }
+}

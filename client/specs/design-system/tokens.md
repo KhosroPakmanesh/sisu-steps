@@ -6,12 +6,12 @@ The canonical implementation is `client/src/design-system/tokens.css`.
 
 - Ink and surfaces: primary, secondary, muted, desk, canvas, paper, raised, ink-dark, and header surfaces and borders.
 - Brand and state: focus, success, warning, danger, skipped/review, disabled, and selected treatments.
-- Notebook atmosphere: ruling, margin, grid, overlay, paper shadow, and sheet-gutter values.
+- Notebook atmosphere: ruling, margin, grid, overlay, paper shadow, sheet gutter, paper edge, desk wood, groove, glow, metal, and graphite values.
 - Typography: readable body/display stacks plus a decorative note stack, reusable sizes, line heights, and weights.
 - Spacing: a consistent step scale for gaps and padding.
 - Radius and shadow: restrained control, pressed-label, card, panel, and pill geometry.
 - Layout: readable page widths, runner width, control heights, touch target, and breakpoints.
-- Motion: short interaction timings with reduced-motion overrides.
+- Motion: short interaction, standard object, and page-scene timings with reduced-motion overrides.
 
 ## Rules
 

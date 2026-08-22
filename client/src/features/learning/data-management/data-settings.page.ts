@@ -1,15 +1,24 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { ConfirmationAdapter } from '@/shared/browser/confirmation.adapter';
 import { TextFileAdapter } from '@/shared/browser/text-file.adapter';
 import { routePaths } from '@/shared/navigation/route-paths';
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import { BackupService } from './backup.service';
 import { ClearProgressService } from './clear-progress.service';
+import {
+  ConfirmationSheetComponent,
+  ConfirmationSheetRequest,
+} from './confirmation-sheet.component';
+
+interface PendingClear {
+  request: ConfirmationSheetRequest;
+  action: () => Promise<void>;
+  successMessage: string;
+}
 
 @Component({
   selector: 'app-data-settings',
-  imports: [RouterLink],
+  imports: [RouterLink, ConfirmationSheetComponent],
   templateUrl: './data-settings.page.html',
   styleUrl: './data-settings.page.css',
 })
@@ -18,10 +27,10 @@ export class DataSettingsPage {
   protected readonly paths = routePaths;
   protected readonly message = signal<string | null>(null);
   protected readonly error = signal<string | null>(null);
+  protected readonly pendingClear = signal<PendingClear | null>(null);
   private readonly backups = inject(BackupService);
   private readonly clearing = inject(ClearProgressService);
   private readonly files = inject(TextFileAdapter);
-  private readonly confirmation = inject(ConfirmationAdapter);
 
   protected exportBackup(): void {
     const filename = `finnish-exercise-book-${new Date().toISOString().slice(0, 10)}.json`;
@@ -44,28 +53,52 @@ export class DataSettingsPage {
     }
   }
 
-  protected async clearTest(topicId: string, testId: string, title: string): Promise<void> {
-    if (!this.confirmation.confirm(`Clear all saved attempts and mistakes for “${title}”?`)) return;
-    await this.runClear(
+  protected clearTest(topicId: string, testId: string, title: string): void {
+    this.requestClear(
+      {
+        eyebrow: 'One test only',
+        title: `Clear “${title}”?`,
+        message: 'All saved attempts and mistakes for this test will be removed.',
+        confirmLabel: 'Clear this test',
+      },
       () => this.clearing.clearTest(topicId, testId),
       `${title} history was cleared.`,
     );
   }
 
-  protected async clearTopic(topicId: string, title: string): Promise<void> {
-    const confirmed = this.confirmation.confirm(
-      `Clear all saved progress for “${title}”? The exercises will remain available.`,
+  protected clearTopic(topicId: string, title: string): void {
+    this.requestClear(
+      {
+        eyebrow: 'This topic only',
+        title: `Clear “${title}”?`,
+        message:
+          'All saved progress for this topic will be removed. Its exercises remain available.',
+        confirmLabel: 'Clear this topic',
+      },
+      () => this.clearing.clearTopic(topicId),
+      `${title} history was cleared.`,
     );
-    if (!confirmed) return;
-    await this.runClear(() => this.clearing.clearTopic(topicId), `${title} history was cleared.`);
   }
 
-  protected async clearAll(): Promise<void> {
-    const confirmed = this.confirmation.confirm(
-      'Clear every attempt, unfinished session, mistake, and lesson completion? This cannot be undone without a backup.',
+  protected clearAll(): void {
+    this.requestClear(
+      {
+        eyebrow: 'Every topic and test',
+        title: 'Clear all learner history?',
+        message:
+          'Every attempt, unfinished session, mistake, and lesson completion will be removed. This cannot be undone without a backup.',
+        confirmLabel: 'Clear all history',
+      },
+      () => this.clearing.clearAll(),
+      'All learner history was cleared.',
     );
-    if (!confirmed) return;
-    await this.runClear(() => this.clearing.clearAll(), 'All learner history was cleared.');
+  }
+
+  protected async resolveClear(confirmed: boolean): Promise<void> {
+    const pending = this.pendingClear();
+    this.pendingClear.set(null);
+    if (!confirmed || !pending) return;
+    await this.runClear(pending.action, pending.successMessage);
   }
 
   private async runClear(action: () => Promise<void>, successMessage: string): Promise<void> {
@@ -81,5 +114,13 @@ export class DataSettingsPage {
   private resetNotices(): void {
     this.message.set(null);
     this.error.set(null);
+  }
+
+  private requestClear(
+    request: ConfirmationSheetRequest,
+    action: () => Promise<void>,
+    successMessage: string,
+  ): void {
+    this.pendingClear.set({ request, action, successMessage });
   }
 }

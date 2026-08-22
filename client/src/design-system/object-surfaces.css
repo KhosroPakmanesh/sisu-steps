@@ -1,0 +1,387 @@
+/* Repeated content surfaces use a small, recognisable school-stationery vocabulary. */
+
+/* Catalog: clipped assignment, printed record strip, and bound topic covers. */
+main.page-shell .continue-card {
+  padding-left: calc(var(--space-6) + 0.35rem);
+  border: 1px dashed var(--border-control);
+  border-left: 0.35rem solid var(--red-700);
+  border-radius: 0.08rem;
+  background-color: var(--surface-warning);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.65rem,
+    var(--notebook-rule) 1.65rem 1.7rem
+  );
+  color: var(--text-primary);
+  clip-path: polygon(0.3rem 0, 100% 0.18rem, calc(100% - 0.25rem) 96%, 97% 100%, 0 98%);
+  box-shadow: none;
+  filter: drop-shadow(0.22rem 0.28rem 0 var(--paper-edge))
+    drop-shadow(0.42rem 0.58rem 0.65rem var(--notebook-shadow));
+}
+
+main.page-shell .continue-card::before {
+  top: 0.18rem;
+}
+
+main.page-shell .continue-card::after {
+  position: absolute;
+  right: 0.12rem;
+  bottom: 0.08rem;
+  border-top: 1rem solid color-mix(in srgb, var(--amber-400) 28%, transparent);
+  border-left: 1rem solid transparent;
+  content: '';
+}
+
+main.page-shell .hero .continue-card .card-kicker,
+main.page-shell .hero .continue-card .continue-topic {
+  color: var(--text-brand);
+}
+
+main.page-shell .hero .continue-card > p:not(.card-kicker) {
+  color: var(--text-secondary);
+}
+
+main.page-shell .catalog-stats {
+  border: 1px dashed var(--border-control);
+  border-block-width: 0.18rem;
+  border-radius: 0;
+  background-color: color-mix(in srgb, var(--surface-warning) 58%, var(--surface-paper));
+  background-image:
+    repeating-linear-gradient(90deg, transparent 0 0.9rem, var(--notebook-rule) 0.9rem 0.94rem),
+    linear-gradient(to bottom, transparent 72%, var(--notebook-rule) 73% 77%, transparent 78%);
+  clip-path: polygon(
+    0.45rem 0,
+    calc(100% - 0.45rem) 0,
+    100% 50%,
+    calc(100% - 0.45rem) 100%,
+    0.45rem 100%,
+    0 50%
+  );
+  box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
+  transform: rotate(0.08deg);
+}
+
+main.page-shell .catalog-stats div + div {
+  border-left-style: dashed;
+}
+
+main.page-shell .topic-card {
+  padding-left: calc(var(--space-6) + 0.9rem);
+  border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
+  background-color: color-mix(in srgb, var(--surface-brand-subtle) 72%, var(--surface-raised));
+  background-image:
+    linear-gradient(135deg, var(--overlay-soft), transparent 32%),
+    repeating-linear-gradient(to bottom, transparent 0 1.95rem, var(--notebook-rule) 1.95rem 2rem);
+  clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
+  filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
+    drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
+}
+
+main.page-shell .topic-card::before {
+  position: absolute;
+  z-index: 1;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  left: 0.5rem;
+  width: 0.28rem;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.32rem,
+    transparent 0.32rem 0.68rem
+  );
+  content: '';
+  opacity: 0.72;
+}
+
+main.page-shell .topic-card::after {
+  top: 0.45rem;
+  right: 0.08rem;
+  width: 0.55rem;
+  height: calc(100% - 0.9rem);
+  border: 0;
+  border-radius: 0 0.35rem 0.35rem 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.28rem,
+    var(--notebook-rule) 0.28rem 0.31rem
+  );
+}
+
+/* Topic route: inside-cover pocket, taped goals, dividers, and punched map cards. */
+main.topic-page .topic-overview {
+  position: relative;
+  border: 1px solid var(--overlay-line);
+  border-radius: 0.08rem;
+  background-image: linear-gradient(150deg, var(--overlay-soft), transparent 44%);
+  clip-path: polygon(0 0.5rem, 50% 0, 100% 0.5rem, 98% 100%, 2% 100%);
+  filter: drop-shadow(0.22rem 0.3rem 0 var(--paper-edge))
+    drop-shadow(0.4rem 0.55rem 0.55rem var(--notebook-shadow));
+}
+
+main.topic-page .objective-panel {
+  border-style: dashed;
+  border-radius: 0.08rem;
+  clip-path: polygon(0.2rem 0, 99% 0.18rem, 100% 97%, 98% 100%, 0 98%);
+}
+
+main.topic-page .objective-panel .objective-grid span {
+  border: 0.12rem solid var(--graphite);
+  border-radius: 0.08rem;
+  background: var(--surface-paper);
+  box-shadow: 0.1rem 0.12rem 0 var(--notebook-shadow);
+  transform: rotate(-3deg);
+}
+
+main.topic-page .test-group-heading {
+  border: 0;
+  border-left: 0.45rem solid var(--blue-500);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--surface-subtle) 84%, var(--surface-paper));
+  clip-path: polygon(
+    0 0,
+    calc(100% - 2.2rem) 0,
+    calc(100% - 1.7rem) 0.48rem,
+    100% 0.48rem,
+    100% 100%,
+    0 96%
+  );
+  filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge));
+}
+
+main.topic-page .test-card {
+  padding-left: calc(var(--space-5) + 0.65rem);
+  border: 1px dashed var(--border-control);
+  border-left: 0.28rem solid var(--blue-500);
+  border-radius: 0.08rem;
+  background-color: var(--surface-raised);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.9rem,
+    var(--notebook-rule) 1.9rem 1.95rem
+  );
+  clip-path: polygon(0.3rem 0, 98% 0.12rem, 100% 94%, 98% 100%, 0 98%);
+  box-shadow: none;
+  filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge))
+    drop-shadow(0.28rem 0.4rem 0.45rem var(--notebook-shadow));
+}
+
+main.topic-page .test-card::before {
+  position: absolute;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  left: 0.22rem;
+  width: 0.46rem;
+  background: radial-gradient(
+      circle,
+      var(--surface-paper) 0 0.1rem,
+      var(--border-control) 0.11rem 0.14rem,
+      transparent 0.15rem
+    )
+    center top / 0.46rem 1.55rem repeat-y;
+  content: '';
+}
+
+/* Lessons: binder tabs, clipped reference slips, flashcards, and vocabulary cards. */
+main.lesson-page .lesson-list .subject-tab {
+  border-radius: 0.08rem;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 76%,
+    var(--notebook-rule) 77% 80%,
+    transparent 81%
+  );
+  clip-path: polygon(0 0.12rem, calc(100% - 0.7rem) 0, 100% 0.72rem, 100% 100%, 0.4rem 98%, 0 80%);
+  filter: drop-shadow(0.15rem 0.2rem 0 var(--paper-edge));
+}
+
+main.lesson-page .lesson-list .subject-tab.active {
+  filter: drop-shadow(0.25rem 0.3rem 0 var(--paper-edge))
+    drop-shadow(0.3rem 0.4rem 0.35rem var(--notebook-shadow));
+}
+
+main.lesson-page .lesson-picker {
+  position: relative;
+  padding: var(--space-3);
+  border-left: 0.35rem solid var(--blue-500);
+  background: var(--surface-warning);
+  clip-path: polygon(0 0.2rem, 96% 0, 100% 88%, 98% 100%, 0 96%);
+  filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge));
+}
+
+main.lesson-page .lesson-picker .notebook-select {
+  border-radius: 0.05rem;
+  background-color: var(--surface-paper);
+  clip-path: polygon(0 0.12rem, 100% 0, calc(100% - 0.2rem) 100%, 0.12rem 96%);
+}
+
+main.lesson-page .focus-contract {
+  position: relative;
+  border-style: dashed;
+  border-radius: 0.08rem;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.7rem,
+    var(--notebook-rule) 1.7rem 1.75rem
+  );
+  clip-path: polygon(0.2rem 0, 98% 0.12rem, 100% 95%, 97% 100%, 0 98%);
+  filter: drop-shadow(0.18rem 0.2rem 0 var(--paper-edge));
+}
+
+main.lesson-page .key-points li {
+  position: relative;
+  padding-left: 1.25rem;
+  border-left: 0.22rem solid var(--green-500);
+  border-radius: 0.05rem;
+  background: var(--surface-warning);
+  clip-path: polygon(0.12rem 0, 100% 0.08rem, calc(100% - 0.12rem) 100%, 0 94%);
+  box-shadow: 0.1rem 0.12rem 0 var(--paper-edge);
+}
+
+main.lesson-page .example-grid article {
+  border-style: dashed;
+  border-radius: 0.06rem;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 72%,
+    var(--notebook-rule) 73% 77%,
+    transparent 78%
+  );
+  clip-path: polygon(0.18rem 0, 100% 0.12rem, calc(100% - 0.18rem) 100%, 0 96%);
+  filter: drop-shadow(0.14rem 0.18rem 0 var(--paper-edge));
+  transform: rotate(-0.18deg);
+}
+
+main.lesson-page .example-grid article:nth-child(even) {
+  transform: rotate(0.22deg);
+}
+
+main.lesson-page .lesson-vocabulary dl div {
+  border-radius: 0.05rem;
+  border-left: 0.28rem solid var(--amber-400);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 74%,
+    var(--notebook-rule) 75% 79%,
+    transparent 80%
+  );
+  clip-path: polygon(0 0.12rem, calc(100% - 0.5rem) 0, 100% 0.48rem, 100% 100%, 0.12rem 96%);
+  box-shadow: 0.12rem 0.16rem 0 var(--paper-edge);
+}
+
+main.lesson-page .lesson-practice .practice-card {
+  border-style: dashed;
+  border-radius: 0.08rem;
+  clip-path: polygon(0.2rem 0, 99% 0.15rem, 100% 96%, 97% 100%, 0 98%);
+  filter: drop-shadow(0.2rem 0.25rem 0 var(--paper-edge));
+}
+
+/* Study and practice: perforated answers, sentence strip, vocabulary pocket, and teacher notes. */
+main.runner-shell .test-focus {
+  position: relative;
+  border-style: dashed;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.5rem,
+    var(--notebook-rule) 1.5rem 1.55rem
+  );
+  clip-path: polygon(0.15rem 0, 99% 0.12rem, 100% 94%, 0 100%);
+  box-shadow: 0.14rem 0.18rem 0 var(--paper-edge);
+  transform: rotate(-0.12deg);
+}
+
+main.runner-shell .exercise-card .choice-list label,
+main.lesson-page .lesson-practice .practice-choices label {
+  border: 1px dashed var(--border-control);
+  border-left: 0.28rem solid var(--notebook-margin);
+  border-radius: 0.05rem;
+  background-color: var(--surface-paper);
+  background-image:
+    radial-gradient(
+      circle at 0.38rem 50%,
+      var(--surface-desk) 0 0.09rem,
+      var(--border-default) 0.1rem 0.13rem,
+      transparent 0.14rem
+    ),
+    linear-gradient(to bottom, transparent 72%, var(--notebook-rule) 73% 77%, transparent 78%);
+  clip-path: polygon(0.18rem 0, 99% 0.08rem, 100% 92%, calc(100% - 0.15rem) 100%, 0 96%);
+  box-shadow: 0.12rem 0.16rem 0 var(--paper-edge);
+}
+
+main.runner-shell .exercise-card .choice-list label:hover,
+main.runner-shell .exercise-card .choice-list label.selected,
+main.lesson-page .lesson-practice .practice-choices label:hover,
+main.lesson-page .lesson-practice .practice-choices label.selected {
+  filter: drop-shadow(0.18rem 0.24rem 0.22rem var(--notebook-shadow));
+  transform: translateY(-0.12rem) rotate(-0.12deg);
+}
+
+main.runner-shell .answer-zone,
+main.lesson-page .practice-answer-zone {
+  border-style: solid;
+  border-radius: 0.04rem;
+  clip-path: polygon(0 0.12rem, 100% 0, calc(100% - 0.2rem) 100%, 0.15rem 96%);
+  box-shadow: 0.15rem 0.2rem 0 var(--paper-edge);
+}
+
+main.runner-shell .token-bank,
+main.lesson-page .practice-token-bank {
+  position: relative;
+  padding-top: 1.35rem;
+  border: 1px dashed var(--border-control);
+  border-radius: 0.06rem;
+  background-image: linear-gradient(155deg, var(--overlay-soft) 0 48%, transparent 49%);
+  clip-path: polygon(0 0.45rem, 50% 0, 100% 0.45rem, 98% 100%, 2% 100%);
+  box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
+}
+
+button kbd {
+  padding: 0.18rem 0.42rem;
+  border: 1px dashed var(--border-control);
+  border-bottom-width: 1px;
+  border-radius: 0.04rem;
+  background: var(--surface-warning);
+  color: var(--text-secondary);
+  box-shadow: none;
+  font-family: var(--font-note);
+  transform: rotate(-1deg);
+}
+
+main.runner-shell .feedback,
+main.lesson-page .lesson-practice .feedback {
+  border-style: dashed;
+  border-radius: 0.05rem;
+  clip-path: polygon(0.2rem 0, 97% 0.12rem, 100% 94%, 98% 100%, 0 97%);
+  filter: drop-shadow(0.18rem 0.24rem 0 var(--paper-edge));
+  transform: rotate(-0.15deg);
+}
+
+main.runner-shell .sentence-lesson,
+main.lesson-page .lesson-practice .sentence-lesson {
+  position: relative;
+  border-radius: 0.06rem;
+  clip-path: polygon(0 0.18rem, 99% 0, 100% 98%, 2% 100%, 0 94%);
+  filter: drop-shadow(0.22rem 0.28rem 0 var(--paper-edge));
+}
+
+@media (width <= 560px) {
+  main.page-shell .topic-card,
+  main.topic-page .test-card {
+    padding-left: var(--space-5);
+  }
+
+  main.topic-page .test-card::before,
+  main.page-shell .topic-card::before {
+    display: none;
+  }
+
+  main.page-shell .catalog-stats {
+    clip-path: polygon(
+      0.25rem 0,
+      calc(100% - 0.25rem) 0,
+      100% 0.25rem,
+      calc(100% - 0.25rem) 100%,
+      0.25rem 100%,
+      0 0.25rem
+    );
+  }
+}
