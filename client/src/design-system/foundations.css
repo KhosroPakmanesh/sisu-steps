@@ -4,39 +4,57 @@
 
 html {
   min-width: 320px;
-  background: var(--surface-canvas);
+  background: var(--surface-desk);
 }
 
 body {
   min-height: 100dvh;
   margin: 0;
   background:
-    radial-gradient(circle at 8% 0%, rgb(217 237 237 / 65%), transparent 28rem),
-    var(--surface-canvas);
+    radial-gradient(circle at 12% 0%, var(--notebook-grid), transparent 27rem),
+    linear-gradient(115deg, transparent 0 48%, var(--notebook-grid) 49% 50%, transparent 51%),
+    var(--surface-desk);
+  background-attachment: fixed;
 }
 
 button,
-input {
+input,
+select {
   font: inherit;
 }
 
 button,
-a {
+a,
+select {
   -webkit-tap-highlight-color: transparent;
 }
 
 button:focus-visible,
 a:focus-visible,
-input:focus-visible {
+input:focus-visible,
+select:focus-visible {
   outline: 3px solid var(--focus-ring);
   outline-offset: 3px;
+}
+
+::selection {
+  background: var(--blue-200);
+  color: var(--text-primary);
 }
 
 h1,
 h2,
 h3,
+h4,
 p {
   margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
 }
 
 h1,
@@ -45,19 +63,32 @@ h2 {
 }
 
 h1 {
-  font-size: clamp(2.6rem, 7vw, 5rem);
-  line-height: 0.98;
-  letter-spacing: -0.035em;
+  font-size: clamp(2.45rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.025em;
 }
 
 h2 {
-  font-size: clamp(1.8rem, 4vw, 2.65rem);
-  line-height: 1.05;
+  font-size: clamp(1.75rem, 4vw, 2.55rem);
+  line-height: 1.08;
+}
+
+p,
+li,
+dd {
+  text-wrap: pretty;
 }
 
 p {
-  color: var(--stone-700);
+  color: var(--text-secondary);
   line-height: var(--line-body);
+}
+
+a,
+button,
+input,
+select {
+  accent-color: var(--blue-700);
 }
 
 .visually-hidden {

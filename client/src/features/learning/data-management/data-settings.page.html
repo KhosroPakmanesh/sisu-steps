@@ -10,6 +10,7 @@
     Your progress lives only in this browser. Download a backup before clearing browser data or
     moving the app.
   </p>
+  <p class="notebook-note" aria-hidden="true">your work belongs to you</p>
   @if (message()) {
     <p class="notice success" role="status">{{ message() }}</p>
   }
@@ -18,11 +19,10 @@
   }
   <section class="settings-card">
     <div>
-      <p class="card-kicker">Portable copy</p>
+      <p class="card-kicker">Keep a safe copy</p>
       <h2>Backup and restore</h2>
       <p>
-        Export attempts, unfinished sessions, mistake status, and completed lessons as a versioned
-        JSON file.
+        Save your attempts, unfinished sessions, mistakes, and completed lessons in one backup file.
       </p>
     </div>
     <div class="settings-actions">
@@ -38,7 +38,7 @@
   @for (pack of store.packs(); track pack.id) {
     <section class="settings-card stacked">
       <div>
-        <p class="card-kicker">{{ pack.level }} · Fine-grained reset</p>
+        <p class="card-kicker">{{ pack.level }} · Choose what to clear</p>
         <h2>{{ pack.title }}</h2>
         <p>Clear one test, or clear this topic without affecting any other topic pack.</p>
       </div>
@@ -46,7 +46,9 @@
         @for (test of pack.tests; track test.id; let index = $index) {
           <div>
             <span>{{ index + 1 }}. {{ test.title }}</span
-            ><button type="button" (click)="clearTest(pack.id, test.id, test.title)">Clear</button>
+            ><button type="button" (click)="clearTest(pack.id, test.id, test.title)">
+              Clear this test
+            </button>
           </div>
         }
       </div>

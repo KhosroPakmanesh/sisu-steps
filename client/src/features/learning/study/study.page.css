@@ -3,9 +3,9 @@
 }
 
 .runner-shell {
-  width: min(100% - 2rem, 56rem);
-  margin: 0 auto;
-  padding: 2rem 0 5rem;
+  width: min(100% - 2rem, var(--runner-width));
+  margin: 1.25rem auto 2rem;
+  padding: 2rem var(--sheet-gutter) 5rem;
 }
 
 .runner-header {
@@ -24,7 +24,7 @@
 }
 
 .back-link {
-  color: var(--stone-700);
+  color: var(--text-secondary);
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 700;
@@ -32,7 +32,7 @@
 
 .question-count {
   justify-self: end;
-  color: var(--stone-600);
+  color: var(--text-secondary);
   font-size: 0.85rem;
   font-weight: 800;
 }
@@ -42,7 +42,8 @@
   margin: 1.5rem 0 2rem;
   overflow: hidden;
   border-radius: 1rem;
-  background: var(--stone-200);
+  background: var(--border-default);
+  box-shadow: inset 0 1px 2px var(--notebook-shadow);
 }
 
 .progress-track span {
@@ -55,30 +56,47 @@
 
 .test-focus {
   padding: 0.75rem;
-  background: var(--blue-50);
+  border: 1px solid var(--border-brand);
+  border-left: 0.3rem solid var(--blue-500);
+  background: var(--surface-brand-subtle);
 }
 
 .exercise-card {
+  position: relative;
   padding: clamp(1.5rem, 5vw, 3.5rem);
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--border-default);
+  border-top: 0.3rem solid var(--blue-500);
   border-radius: var(--radius-large);
-  background: white;
+  background: var(--surface-raised);
   box-shadow: var(--shadow-large);
+}
+
+.exercise-card::before,
+.result-card::before {
+  position: absolute;
+  top: -0.58rem;
+  left: 50%;
+  width: 5.2rem;
+  height: 1.05rem;
+  background: color-mix(in srgb, var(--amber-300) 48%, transparent);
+  clip-path: polygon(2% 8%, 100% 0, 97% 94%, 0 100%);
+  content: '';
+  transform: translateX(-50%) rotate(-1deg);
 }
 
 .exercise-context {
   display: flex;
   gap: 0.75rem;
   align-items: center;
-  color: var(--stone-600);
+  color: var(--text-secondary);
   font-size: 0.9rem;
 }
 
 .type-label {
   padding: 0.3rem 0.55rem;
   border-radius: 99px;
-  background: var(--blue-50);
-  color: var(--blue-700);
+  background: var(--surface-brand-subtle);
+  color: var(--text-brand);
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.08em;
@@ -105,16 +123,18 @@
   gap: 0.85rem;
   align-items: center;
   padding: 1rem;
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--border-default);
   border-radius: var(--radius-small);
+  background: var(--surface-paper);
+  box-shadow: 0 1px 0 var(--notebook-shadow);
   cursor: pointer;
   transition: 0.15s ease;
 }
 
 .choice-list label:hover,
 .choice-list label.selected {
-  border-color: var(--blue-500);
-  background: var(--blue-50);
+  border-color: var(--border-brand-strong);
+  background: var(--surface-brand-subtle);
 }
 
 .choice-list input {
@@ -124,7 +144,7 @@
 .text-answer {
   display: grid;
   gap: 0.5rem;
-  color: var(--stone-700);
+  color: var(--text-secondary);
   font-size: 0.82rem;
   font-weight: 800;
 }
@@ -132,15 +152,16 @@
 .text-answer input {
   width: 100%;
   padding: 1rem 1.1rem;
-  border: 1px solid var(--stone-300);
+  border: 1px solid var(--border-control);
   border-radius: var(--radius-small);
+  background: var(--surface-raised);
+  color: var(--text-primary);
   font: inherit;
   font-size: 1.05rem;
 }
 
-.text-answer input:focus {
-  outline: 3px solid var(--blue-100);
-  border-color: var(--blue-600);
+.text-answer input:focus-visible {
+  border-color: var(--border-brand-strong);
 }
 
 .word-builder {
@@ -160,20 +181,20 @@
 }
 
 .answer-zone {
-  border: 2px dashed var(--blue-200);
-  background: var(--blue-50);
+  border: 2px dashed var(--border-brand);
+  background: var(--surface-brand-subtle);
 }
 
 .token-bank {
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--border-default);
 }
 
 .word-builder button {
   padding: 0.55rem 0.75rem;
-  border: 1px solid var(--stone-300);
+  border: 1px solid var(--border-control);
   border-radius: 0.45rem;
-  background: white;
-  color: var(--ink-900);
+  background: var(--surface-raised);
+  color: var(--text-primary);
   font: inherit;
   cursor: pointer;
 }
@@ -184,7 +205,7 @@
 }
 
 .placeholder {
-  color: var(--stone-500);
+  color: var(--text-muted);
   align-self: center;
 }
 
@@ -224,14 +245,18 @@
 }
 
 .result-card {
+  position: relative;
   margin: 5rem auto 0;
   max-width: 38rem;
   padding: clamp(2rem, 6vw, 4rem);
   text-align: center;
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--border-default);
+  border-top: 0.3rem solid var(--blue-500);
   border-radius: var(--radius-large);
-  background: white;
-  box-shadow: var(--shadow-large);
+  background: var(--surface-raised);
+  box-shadow:
+    0.18rem 0.18rem 0 var(--surface-subtle),
+    var(--shadow-large);
 }
 
 .result-ring {
@@ -255,7 +280,7 @@
 }
 
 .result-ring span {
-  color: var(--stone-600);
+  color: var(--text-secondary);
   font-size: 0.75rem;
 }
 
@@ -286,6 +311,10 @@
 }
 
 @media (width <= 560px) {
+  .runner-shell {
+    width: calc(100% - 0.75rem);
+  }
+
   .answer-actions {
     grid-template-columns: 1fr;
   }

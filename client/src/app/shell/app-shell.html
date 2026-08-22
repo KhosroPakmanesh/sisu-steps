@@ -3,19 +3,29 @@
     <span class="brand-mark" aria-hidden="true">S</span>
     <span><strong>Sisu Steps</strong><small>Finnish exercise book</small></span>
   </a>
-  <nav aria-label="Primary navigation">
-    <a
-      [routerLink]="paths.home"
-      [routerLinkActiveOptions]="{ exact: true }"
-      routerLinkActive="active"
-      >Topics</a
-    >
-    <a [routerLink]="paths.reports" routerLinkActive="active">Reports</a>
-    <a [routerLink]="paths.data" routerLinkActive="active">Data</a>
-  </nav>
+  <div class="header-tools">
+    <nav aria-label="Primary navigation">
+      <a
+        [routerLink]="paths.home"
+        [routerLinkActiveOptions]="{ exact: true }"
+        routerLinkActive="active"
+        >Topics</a
+      >
+      <a [routerLink]="paths.reports" routerLinkActive="active">Reports</a>
+      <a [routerLink]="paths.data" routerLinkActive="active">Data & backup</a>
+    </nav>
+    <label class="appearance-control">
+      <span>Appearance</span>
+      <select [value]="appearance" (change)="changeAppearance($event)">
+        <option value="automatic">Automatic</option>
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+    </label>
+  </div>
 </header>
 <router-outlet />
 <footer class="site-footer">
-  <p><strong>Sisu Steps</strong> · Your progress stays in this browser.</p>
-  <p>Static lessons · local progress</p>
+  <p><strong>Sisu Steps</strong> · Your progress stays safely in this browser.</p>
+  <p>Quiet study · one step at a time</p>
 </footer>

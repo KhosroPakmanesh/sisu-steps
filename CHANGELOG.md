@@ -27,6 +27,7 @@
 
 ### Changed
 
+- Redesigned the complete browser client as an immersive Nordic school notebook with warm low-glare Light and Dark palettes, Automatic device-theme following plus a remembered override, restrained decorative handwriting, clearer novice-friendly labels, and responsive accessible paper-and-ink components across catalog, topic, lesson, study, reports, and data workflows. Physical workbook cues now include a punched binding edge, subtle paper grain, stacked sheets, printed Finnish workbook marks, masking tape, index tabs, and ledger dividers.
 - The grammar-foundation pack is now version 5.0.0 with fifteen tests: thirteen single-topic Focused tests and two cumulative mixed Reviews. Focused **Learn first** pages now show only target-specific lessons, a dedicated special-`k` test covers that topic separately, and loading the new version clears only this pack's incompatible older progress.
 - Reorganized the root Git workspace so product guidance remains at the root, Angular/browser implementation guidance lives with `client/`, and documentation-only .NET backend guidance lives with `server/`; updated shared VS Code tasks, indexes, specifications, and ignore rules without adding backend behavior.
 - Reorganized production code into app composition, Learning workflow slices, design-system foundations, and app-agnostic shared infrastructure without changing public routes or persisted-data contracts.

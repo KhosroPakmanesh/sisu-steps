@@ -15,7 +15,7 @@
   margin: 0.65rem 0;
 }
 
-.lesson-hero > div > p:last-child {
+.lesson-hero > div > p:not(.eyebrow, .notebook-note) {
   max-width: 50rem;
 }
 
@@ -70,7 +70,7 @@
 
 .lesson-list {
   position: sticky;
-  top: calc(4.5rem + var(--space-4));
+  top: calc(var(--header-height) + var(--space-4));
   display: grid;
   gap: var(--space-2);
 }
@@ -128,6 +128,7 @@
 .lesson-reader {
   overflow: hidden;
   border: 1px solid var(--border-default);
+  border-top: 0.32rem solid var(--blue-500);
   border-radius: var(--radius-large);
   background: var(--surface-raised);
   box-shadow: var(--shadow-large);
@@ -146,8 +147,8 @@
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  background: var(--text-primary);
-  color: var(--surface-raised);
+  background: var(--surface-ink);
+  color: var(--text-on-ink);
 }
 
 .reader-heading h2 {
@@ -156,7 +157,7 @@
 }
 
 .reader-heading p {
-  color: var(--stone-300);
+  color: var(--text-on-ink-muted);
 }
 
 .completed-badge {
@@ -164,8 +165,8 @@
   white-space: nowrap;
   padding: 0.4rem 0.65rem;
   border-radius: var(--radius-pill);
-  background: var(--green-500);
-  color: var(--green-900);
+  background: var(--green-700);
+  color: var(--surface-paper);
   font-size: 0.75rem;
   font-weight: var(--weight-heavy);
 }

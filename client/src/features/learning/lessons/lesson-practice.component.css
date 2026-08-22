@@ -4,6 +4,7 @@
 
 .lesson-practice {
   padding: var(--space-8);
+  border-top: 1px solid var(--border-default);
 }
 
 .lesson-practice h3 {
@@ -34,6 +35,12 @@
   border: 1px solid var(--border-brand);
   border-radius: var(--radius-medium);
   background: var(--surface-brand-subtle);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--notebook-line-height) - 1px),
+    var(--notebook-rule) var(--notebook-line-height)
+  );
 }
 
 .practice-count {

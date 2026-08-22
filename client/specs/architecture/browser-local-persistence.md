@@ -1,6 +1,6 @@
 # Browser-local persistence architecture
 
-Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exercises remain versioned static JSON; mutable learner data remains separate.
+Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exercises remain versioned static JSON; mutable learner data remains separate. Small presentation-only preferences may use browser key-value storage behind a purpose-named adapter.
 
 ## Canonical contract
 
@@ -29,6 +29,7 @@ Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exerc
 - The app layer provides the native repository adapter through Angular dependency injection.
 - Shared persistence remains product-operation neutral; lesson completion, session, reporting, backup, and clearing behavior belongs to the owning Learning workflow.
 - Pure policies, validators, queries, and mappers must not access browser globals.
+- The Appearance choice is presentation-only, uses `shared/browser/appearance-preference.adapter.ts`, and must never enter learner state or backup data.
 
 ## Content and learner data
 

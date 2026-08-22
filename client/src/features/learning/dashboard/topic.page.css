@@ -15,8 +15,13 @@
   margin: var(--space-2) 0;
 }
 
-.topic-hero > div > p:last-child {
+.topic-hero > div > p:not(.eyebrow, .notebook-note) {
   max-width: 58rem;
+}
+
+.topic-hero .notebook-note {
+  width: fit-content;
+  margin: var(--space-4) 0 0 auto;
 }
 
 .back-link {
@@ -31,8 +36,9 @@
   grid-template-columns: 1fr 1fr;
   padding: var(--space-5);
   border-radius: var(--radius-large);
-  background: var(--text-primary);
-  color: var(--surface-raised);
+  border-left: 0.35rem solid var(--red-700);
+  background: var(--surface-ink);
+  color: var(--text-on-ink);
   box-shadow: var(--shadow-large);
 }
 
@@ -43,7 +49,7 @@
 }
 
 .topic-overview dt {
-  color: var(--stone-300);
+  color: var(--text-on-ink-muted);
   font-size: var(--text-caption);
 }
 
@@ -70,7 +76,12 @@
   margin: var(--space-5) 0;
   padding: var(--space-8);
   border-radius: var(--radius-large);
-  background: var(--surface-brand-subtle);
+  border: 1px solid var(--border-brand);
+  background:
+    linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px),
+    var(--surface-brand-subtle);
+  background-size: 1.5rem 1.5rem;
 }
 
 .objective-panel h2 {
@@ -126,6 +137,8 @@
 
 .test-group-heading {
   margin: var(--space-3) 0 var(--space-1);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--notebook-rule);
 }
 
 .test-group-heading.review-heading {
@@ -141,8 +154,10 @@
   gap: var(--space-5);
   padding: var(--space-5);
   border: 1px solid var(--border-default);
+  border-left: 0.28rem solid var(--blue-500);
   border-radius: var(--radius-medium);
   background: var(--surface-raised);
+  box-shadow: 0.16rem 0.16rem 0 var(--surface-subtle);
   transition:
     transform var(--motion-standard) ease,
     border-color var(--motion-standard) ease,
@@ -151,7 +166,8 @@
 
 .test-card.review-test {
   border-color: var(--border-brand);
-  background: color-mix(in srgb, var(--surface-brand-subtle) 48%, white);
+  border-left-color: var(--amber-400);
+  background: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-raised));
 }
 
 .test-card:hover {
@@ -161,6 +177,11 @@
 }
 
 .test-number {
+  display: flex;
+  align-self: stretch;
+  align-items: center;
+  padding-right: var(--space-4);
+  border-right: 1px solid var(--notebook-margin);
   font-family: var(--font-display);
   font-size: 1.3rem;
   color: var(--text-brand);
@@ -233,6 +254,10 @@
   .test-actions {
     grid-column: 1 / -1;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .test-number {
+    align-self: start;
   }
 
   .test-title-row {

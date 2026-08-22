@@ -17,6 +17,7 @@
           </p>
           <h1>{{ activeTest.title }}</h1>
           <p>{{ activeTest.focus }}</p>
+          <p class="notebook-note" aria-hidden="true">notes before practice</p>
         </div>
         <a class="button primary" [routerLink]="paths.study(topicId(), activeTest.id)"
           >Start test now</a

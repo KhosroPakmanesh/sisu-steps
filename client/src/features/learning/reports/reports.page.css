@@ -8,8 +8,10 @@
   margin: 2rem 0;
   overflow: hidden;
   border-radius: var(--radius-large);
-  background: var(--ink-900);
-  color: white;
+  border-left: 0.35rem solid var(--red-700);
+  background: var(--surface-ink);
+  color: var(--text-on-ink);
+  box-shadow: var(--shadow-large);
 }
 
 .report-hero div {
@@ -19,7 +21,7 @@
 }
 
 .report-hero div + div {
-  border-left: 1px solid rgb(255 255 255 / 15%);
+  border-left: 1px solid var(--overlay-line);
 }
 
 .report-hero strong {
@@ -28,15 +30,18 @@
 }
 
 .report-hero span {
-  color: var(--stone-300);
+  color: var(--text-on-ink-muted);
   font-size: 0.8rem;
 }
 
 .report-table {
   overflow: hidden;
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--border-default);
   border-radius: var(--radius-large);
-  background: white;
+  background: var(--surface-raised);
+  box-shadow:
+    0.18rem 0.18rem 0 var(--surface-subtle),
+    var(--shadow-small);
 }
 
 .table-heading {
@@ -44,11 +49,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.25rem 1.5rem;
-  background: var(--stone-50);
+  background: var(--surface-subtle);
+  box-shadow: inset 0 -0.18rem 0 var(--notebook-grid);
 }
 
 .table-heading span {
-  color: var(--stone-500);
+  color: var(--text-muted);
   font-size: 0.75rem;
 }
 
@@ -58,7 +64,7 @@
   align-items: center;
   gap: 1rem;
   padding: 1.25rem 1.5rem;
-  border-top: 1px solid var(--stone-200);
+  border-top: 1px solid var(--border-default);
 }
 
 .report-name {
@@ -73,8 +79,8 @@
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background: var(--blue-50);
-  color: var(--blue-700);
+  background: var(--surface-brand-subtle);
+  color: var(--text-brand);
   font-weight: 900;
 }
 
@@ -99,7 +105,7 @@
 }
 
 .score-set span {
-  color: var(--stone-500);
+  color: var(--text-muted);
   font-size: 0.68rem;
 }
 
@@ -111,7 +117,9 @@
   margin: 2rem 0 5rem;
   padding: 2rem;
   border-radius: var(--radius-large);
-  background: var(--amber-50);
+  border: 1px solid var(--amber-300);
+  border-left: 0.35rem solid var(--red-700);
+  background: var(--surface-warning);
 }
 
 .mistake-cta h2 {
@@ -122,9 +130,12 @@
 .skill-report {
   margin-top: 2rem;
   overflow: hidden;
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--border-default);
   border-radius: var(--radius-large);
-  background: white;
+  background: var(--surface-raised);
+  box-shadow:
+    0.18rem 0.18rem 0 var(--surface-subtle),
+    var(--shadow-small);
 }
 
 .skill-report article {
@@ -132,7 +143,7 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  border-top: 1px solid var(--stone-200);
+  border-top: 1px solid var(--border-default);
 }
 
 .skill-report h3 {
@@ -168,7 +179,7 @@
   }
 
   .report-hero div + div {
-    border-top: 1px solid rgb(255 255 255 / 15%);
+    border-top: 1px solid var(--overlay-line);
     border-left: 0;
   }
 

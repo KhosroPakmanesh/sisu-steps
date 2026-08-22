@@ -14,7 +14,11 @@ Sisu Steps should feel calm, encouraging, precise, and private during repeated F
 
 ## Product feel
 
-- Quiet, warm, and uncluttered.
+- An immersive Nordic school notebook: warm paper, softened ink, muted blue and pine, and restrained red-pencil accents.
+- Quiet, low-glare, and uncluttered during long study sessions in both light and dark appearances.
 - Beginner-friendly without looking childish.
 - Trustworthy and focused on learning.
 - Local and under the learner's control.
+- Handwriting is decorative only; required information always uses highly readable print typography.
+- Notebook ruling, margins, tabs, stamps, labels, and layered paper remain subordinate to teaching content and never imitate controls.
+- Binding holes, paper grain, tape, and stacked-sheet effects are CSS-only surface cues; keep them subtle, non-interactive, and outside the reading flow.

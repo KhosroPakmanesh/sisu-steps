@@ -1,6 +1,66 @@
-.page-shell {
+.page-shell,
+.runner-shell {
+  position: relative;
+  isolation: isolate;
   width: min(100% - 2rem, var(--page-width));
-  margin: 0 auto;
+  margin: 1.25rem auto 2rem;
+  padding-inline: var(--sheet-gutter);
+  overflow: clip;
+  border: 1px solid var(--border-default);
+  border-radius: 0.3rem;
+  background-color: var(--surface-paper);
+  background-image:
+    radial-gradient(
+      circle at 0.65rem 1rem,
+      var(--surface-desk) 0 0.18rem,
+      var(--border-default) 0.19rem 0.25rem,
+      transparent 0.26rem
+    ),
+    linear-gradient(
+      to right,
+      transparent 0,
+      transparent calc(var(--sheet-gutter) - 0.55rem),
+      var(--notebook-margin) calc(var(--sheet-gutter) - 0.5rem),
+      var(--notebook-margin) calc(var(--sheet-gutter) - 0.45rem),
+      transparent calc(var(--sheet-gutter) - 0.4rem)
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--notebook-line-height) - 1px),
+      var(--notebook-rule) var(--notebook-line-height)
+    ),
+    radial-gradient(circle at 30% 28%, var(--notebook-grid) 0 0.035rem, transparent 0.045rem);
+  background-repeat: repeat-y, no-repeat, repeat, repeat;
+  background-size:
+    100% var(--notebook-line-height),
+    100% 100%,
+    100% 100%,
+    0.65rem 0.8rem;
+  box-shadow:
+    0.2rem 0.22rem 0 var(--surface-subtle),
+    0.4rem 0.45rem 0 color-mix(in srgb, var(--surface-paper) 65%, var(--border-default)),
+    var(--shadow-large);
+}
+
+.page-shell::after,
+.runner-shell::after {
+  position: absolute;
+  z-index: 0;
+  top: 0.65rem;
+  right: 1rem;
+  padding: 0.22rem 0.45rem;
+  border: 1px solid var(--notebook-grid);
+  color: var(--text-muted);
+  content: 'HARJOITUSVIHKO · SUOMI';
+  font-size: 0.52rem;
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.12em;
+  line-height: 1;
+  pointer-events: none;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+  user-select: none;
 }
 
 .narrow-page {
@@ -12,12 +72,12 @@
   justify-content: space-between;
   align-items: end;
   gap: 2rem;
-  padding: 4rem 0 2rem;
+  padding: 3.5rem 0 2rem;
 }
 
 .page-heading h1 {
   margin-top: var(--space-1);
-  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-size: clamp(2.4rem, 7vw, 4.2rem);
 }
 
 .eyebrow,
@@ -25,12 +85,21 @@
   color: var(--text-brand);
   font-size: var(--text-caption);
   font-weight: var(--weight-heavy);
-  letter-spacing: 0.13em;
+  letter-spacing: 0.115em;
   text-transform: uppercase;
 }
 
 .card-kicker {
-  font-size: 0.62rem;
+  font-size: 0.66rem;
+}
+
+.notebook-note {
+  margin-top: var(--space-4);
+  color: var(--red-700);
+  font-family: var(--font-note);
+  font-size: clamp(0.92rem, 2vw, 1.1rem);
+  line-height: 1.35;
+  transform: rotate(-1.5deg);
 }
 
 .button {
@@ -40,34 +109,46 @@
   min-height: var(--control-height);
   padding: 0.72rem 1.05rem;
   border: 1px solid transparent;
-  border-radius: 0.65rem;
+  border-radius: var(--radius-control);
   font: inherit;
-  font-size: 0.82rem;
+  font-size: 0.84rem;
   font-weight: var(--weight-bold);
-  line-height: 1;
+  line-height: 1.15;
+  text-align: center;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 0 2px 0 var(--notebook-shadow);
   transition:
     transform var(--motion-fast) ease,
     background var(--motion-fast) ease,
-    border-color var(--motion-fast) ease;
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
 }
 
 .button:hover:not(:disabled) {
   transform: translateY(-1px);
+  box-shadow: 0 3px 0 var(--notebook-shadow);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+  box-shadow: none;
 }
 
 .button:disabled {
-  opacity: 0.45;
+  opacity: 0.5;
   cursor: default;
+  box-shadow: none;
 }
 
-.button.primary {
+.button.primary,
+.button.compact {
   background: var(--blue-700);
-  color: var(--surface-raised);
+  color: var(--surface-paper);
 }
 
-.button.primary:hover:not(:disabled) {
+.button.primary:hover:not(:disabled),
+.button.compact:hover:not(:disabled) {
   background: var(--blue-800);
 }
 
@@ -80,22 +161,22 @@
 .button.compact {
   min-height: var(--control-height-compact);
   padding: 0.55rem 0.8rem;
-  background: var(--blue-700);
-  color: var(--surface-raised);
 }
 
 .button.text-button {
   color: var(--text-brand);
+  box-shadow: none;
 }
 
 .button.danger {
   background: var(--red-700);
-  color: var(--surface-raised);
+  color: var(--surface-paper);
 }
 
 .score-badge {
   flex: 0 0 auto;
   padding: 0.32rem 0.55rem;
+  border: 1px solid color-mix(in srgb, currentcolor 28%, transparent);
   border-radius: var(--radius-pill);
   background: var(--surface-success);
   color: var(--text-success);
@@ -104,7 +185,7 @@
 }
 
 .score-badge.quiet {
-  background: var(--surface-canvas);
+  background: var(--surface-subtle);
   color: var(--text-secondary);
 }
 
@@ -117,9 +198,12 @@
   padding: 3rem;
   text-align: center;
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-large);
+  border-left: 0.3rem solid var(--blue-500);
+  border-radius: var(--radius-medium);
   background: var(--surface-raised);
-  box-shadow: var(--shadow-small);
+  box-shadow:
+    0.18rem 0.18rem 0 var(--surface-subtle),
+    var(--shadow-small);
 }
 
 .state-card h1 {
@@ -128,4 +212,21 @@
 
 .error-card {
   border-color: var(--red-200);
+  border-left-color: var(--red-700);
+}
+
+@media (width <= 560px) {
+  .page-shell,
+  .runner-shell,
+  .narrow-page {
+    width: calc(100% - 0.75rem);
+    margin-top: 0.4rem;
+  }
+
+  .page-heading {
+    display: grid;
+    align-items: start;
+    gap: var(--space-4);
+    padding-top: 2.5rem;
+  }
 }

@@ -3,6 +3,7 @@
     <div>
       <p class="eyebrow">Your progress</p>
       <h1>Reports</h1>
+      <p class="notebook-note" aria-hidden="true">progress, not perfection</p>
     </div>
     <a class="button secondary compact" [routerLink]="paths.home">Back to topics</a>
   </header>
@@ -18,7 +19,7 @@
       </div>
       <div>
         <strong>{{ mistakeCount() }}</strong
-        ><span>unresolved mistakes</span>
+        ><span>mistakes to practise</span>
       </div>
       <div>
         <strong>{{ correctedCount() }}</strong
@@ -49,7 +50,7 @@
               <div>
                 <h3>{{ test.title }}</h3>
                 <p>
-                  {{ report.attempts }} attempts · {{ report.mistakes }} unresolved ·
+                  {{ report.attempts }} attempts · {{ report.mistakes }} to practise ·
                   {{ report.corrected }} corrected · {{ report.mastered }} mastered
                 </p>
                 <p>

@@ -8,17 +8,41 @@
   font-size: 1.05rem;
 }
 
+.notebook-note {
+  width: fit-content;
+  margin: -1rem 0 1.75rem auto;
+}
+
 .settings-card,
 .danger-zone {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
   margin-bottom: 1rem;
   padding: 1.5rem;
-  border: 1px solid var(--stone-200);
+  border: 1px solid var(--border-default);
+  border-left: 0.3rem solid var(--blue-500);
   border-radius: var(--radius-medium);
-  background: white;
+  background: var(--surface-raised);
+  box-shadow:
+    0.18rem 0.18rem 0 var(--surface-subtle),
+    var(--shadow-small);
+}
+
+.settings-card::after {
+  position: absolute;
+  top: 1rem;
+  right: -0.38rem;
+  width: 0.85rem;
+  height: 2.75rem;
+  border: 1px solid var(--border-default);
+  border-left: 0;
+  border-radius: 0 var(--radius-small) var(--radius-small) 0;
+  background: var(--surface-brand-subtle);
+  box-shadow: 1px 1px 0 var(--notebook-shadow);
+  content: '';
 }
 
 .settings-card h2,
@@ -68,7 +92,7 @@
   align-items: center;
   gap: 1rem;
   padding: 0.65rem 0;
-  border-top: 1px solid var(--stone-200);
+  border-top: 1px solid var(--border-default);
   font-size: 0.86rem;
 }
 
@@ -85,7 +109,8 @@
 .danger-zone {
   margin-top: 2rem;
   border-color: var(--red-200);
-  background: var(--red-50);
+  border-left-color: var(--red-700);
+  background: var(--surface-danger);
 }
 
 .notice {
@@ -96,13 +121,13 @@
 }
 
 .notice.success {
-  background: var(--green-50);
-  color: var(--green-900);
+  background: var(--surface-success);
+  color: var(--text-success);
 }
 
 .notice.failure {
-  background: var(--red-50);
-  color: var(--red-800);
+  background: var(--surface-danger);
+  color: var(--text-danger);
 }
 
 @media (width <= 700px) {

@@ -44,3 +44,11 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - Do not render lesson teaching sections or multiple expanded test sequences on home.
 - Name progress truthfully: count distinct attempted tests as **tests tried** unless a separate completion threshold is specified.
 - When a saved session references installed content, prefer resuming it; otherwise recommend the first untried test in catalog and authored order.
+
+## Appearance choice
+
+- Offer the native labelled choices **Automatic**, **Light**, and **Dark** in the application shell.
+- Let Automatic follow `prefers-color-scheme`, including changes made while the app is open.
+- Store only explicit Light or Dark overrides; removing an override returns to Automatic.
+- Treat missing, invalid, or unavailable browser storage as Automatic and never block learning because an appearance preference cannot be read or saved.
+- Keep the chosen appearance independent of learner progress, IndexedDB, backup, restore, and clear-history behavior.

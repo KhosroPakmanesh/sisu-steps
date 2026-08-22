@@ -17,9 +17,10 @@
         <p class="eyebrow">Your Finnish workbook</p>
         <h1>Choose one topic.<br /><span>Take one clear step.</span></h1>
         <p class="hero-copy">
-          Your topics stay compact here. Open one learning map when you want its lessons, tests,
-          mistakes, and reviews.
+          Open a topic to see its lessons, tests, mistakes, and reviews. Nothing is locked, so you
+          can always choose the next step that feels right.
         </p>
+        <p class="notebook-note" aria-hidden="true">small steps make strong Finnish</p>
       </div>
 
       @if (continueTarget(); as target) {
@@ -60,7 +61,7 @@
     <section class="topic-catalog" aria-labelledby="topics-heading">
       <header class="section-heading">
         <div>
-          <p class="eyebrow">Topic catalog</p>
+          <p class="eyebrow">Your topics</p>
           <h2 id="topics-heading">What would you like to practise?</h2>
         </div>
         <p>Each topic opens into its own ordered learning map.</p>
@@ -137,9 +138,7 @@
                   }}
                 </a>
               }
-              <a class="button primary" [routerLink]="paths.topic(summary.pack.id)">
-                Open learning map
-              </a>
+              <a class="button primary" [routerLink]="paths.topic(summary.pack.id)"> Open topic </a>
             </div>
           </article>
         }

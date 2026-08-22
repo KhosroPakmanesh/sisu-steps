@@ -4,7 +4,7 @@ Create or extract a reusable component only when real screens share the behavior
 
 ## Current vocabulary
 
-- App shell, brand, primary navigation, and footer.
+- App shell, brand, primary navigation, labelled Appearance selector, and footer.
 - Page heading, eyebrow, card kicker, and readable page shell.
 - Primary, secondary, compact, text, review, and destructive buttons.
 - Loading, empty, error, success, and operation notice states.
@@ -24,3 +24,4 @@ Create or extract a reusable component only when real screens share the behavior
 - Preserve entered values when validation or persistence fails.
 - Put guidance beside the control it describes and operation-level failures in an alert or live region.
 - Put the primary action last in visual and keyboard order when the layout permits.
+- Keep notebook ornament in CSS or `aria-hidden` elements so it cannot add noise to the accessibility tree.

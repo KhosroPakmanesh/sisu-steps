@@ -6,7 +6,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
   await expect(page.locator('.topic-card')).toHaveCount(1);
   await expect(page.locator('.test-card')).toHaveCount(0);
-  await page.getByRole('link', { name: 'Open learning map' }).click();
+  await page.getByRole('link', { name: 'Open topic' }).click();
 
   await expect(page).toHaveURL(/\/topics\/finnish-foundations-a1$/);
   await expect(page.locator('.test-card')).toHaveCount(15);
@@ -107,7 +107,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
     true,
   );
 
-  await page.getByRole('link', { name: 'Open learning map' }).click();
+  await page.getByRole('link', { name: 'Open topic' }).click();
   await expect(page.locator('.test-card').first()).toBeVisible();
   await expect(
     page.locator('.test-card').first().getByRole('link', { name: 'Learn first' }),
@@ -134,4 +134,21 @@ test('shows deliberate backup and clearing controls without performing them', as
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Data & backup');
   await expect(page.getByRole('button', { name: 'Download backup' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Clear all history' })).toBeVisible();
+});
+
+test('remembers an appearance override and can return to automatic', async ({ page }) => {
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('/');
+
+  const appearance = page.getByLabel('Appearance');
+  await expect(appearance).toHaveValue('automatic');
+  await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
+
+  await appearance.selectOption('light');
+  await expect(page.locator('html')).toHaveAttribute('data-appearance', 'light');
+  await page.reload();
+  await expect(appearance).toHaveValue('light');
+
+  await appearance.selectOption('automatic');
+  await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
 });
