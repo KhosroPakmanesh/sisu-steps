@@ -9,7 +9,7 @@ The canonical implementation is `client/src/design-system/tokens.css`.
 - Notebook atmosphere: ruling, margin, grid, overlay, paper shadow, and sheet-gutter values.
 - Typography: readable body/display stacks plus a decorative note stack, reusable sizes, line heights, and weights.
 - Spacing: a consistent step scale for gaps and padding.
-- Radius and shadow: restrained control, card, panel, and pill geometry.
+- Radius and shadow: restrained control, pressed-label, card, panel, and pill geometry.
 - Layout: readable page widths, runner width, control heights, touch target, and breakpoints.
 - Motion: short interaction timings with reduced-motion overrides.
 

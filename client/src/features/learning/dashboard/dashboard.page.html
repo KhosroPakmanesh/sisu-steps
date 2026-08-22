@@ -82,6 +82,7 @@
                 <strong>{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong>
               </div>
               <progress
+                class="notebook-progress"
                 [attr.aria-label]="summary.pack.title + ' tests tried'"
                 [max]="summary.pack.tests.length"
                 [value]="summary.attemptedTests"
@@ -91,6 +92,7 @@
                 <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
               </div>
               <progress
+                class="notebook-progress"
                 [attr.aria-label]="summary.pack.title + ' lessons read'"
                 [max]="summary.totalLessons"
                 [value]="summary.completedLessons"

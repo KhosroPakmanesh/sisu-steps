@@ -18,6 +18,7 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Ensure disabled states remain understandable and do not remove the explanation for why an action is unavailable.
 - Keep required text in readable print typography; decorative handwriting must be brief, optional, and hidden from assistive technology.
 - Preserve text contrast, visible focus, state meaning, and control boundaries in warm Light, low-glare Dark, and Automatic appearances.
+- Ensure every stationery-inspired control remains understandable from its visible label, native role, and state without requiring recognition of the represented object.
 
 ## Validation
 

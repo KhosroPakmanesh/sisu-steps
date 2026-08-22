@@ -93,31 +93,71 @@ nav {
 }
 
 nav a {
+  --tab-accent: var(--blue-300);
+
+  position: relative;
   display: flex;
   align-items: center;
   min-height: var(--control-height-compact);
-  padding: 0.55rem 0.78rem;
-  border: 1px solid transparent;
-  border-radius: var(--radius-control) var(--radius-control) 0 0;
+  padding: 0.52rem 0.78rem 0.58rem;
+  border: 1px solid var(--overlay-line);
+  border-top: 0.24rem solid var(--tab-accent);
+  border-radius: 0.3rem 0.3rem 0 0;
+  background: color-mix(in srgb, var(--surface-header) 78%, var(--tab-accent));
   color: var(--text-on-ink-muted);
   text-decoration: none;
   font-size: 0.82rem;
   font-weight: var(--weight-bold);
+  box-shadow: 0 2px 0 var(--notebook-shadow);
+  transition:
+    transform var(--motion-fast) ease,
+    background var(--motion-fast) ease;
+}
+
+nav a:nth-child(2) {
+  --tab-accent: var(--green-500);
+}
+
+nav a:nth-child(3) {
+  --tab-accent: var(--amber-400);
+}
+
+nav a::before {
+  width: 0.34rem;
+  height: 0.34rem;
+  margin-right: var(--space-2);
+  border: 1px solid var(--overlay-line);
+  border-radius: 50%;
+  background: var(--surface-header);
+  content: '';
 }
 
 nav a:hover {
   border-color: var(--overlay-line);
   color: var(--text-on-ink);
+  transform: translateY(-0.1rem);
 }
 
 nav a.active {
   border-color: var(--border-default);
+  border-top-color: var(--tab-accent);
   background: var(--surface-paper);
   color: var(--text-brand);
-  box-shadow: inset 0 -0.2rem 0 var(--blue-500);
+  box-shadow:
+    inset 0 -0.18rem 0 var(--tab-accent),
+    0 2px 0 var(--notebook-shadow);
+}
+
+nav a.active::before {
+  border-color: var(--border-default);
+  background: var(--surface-desk);
 }
 
 .appearance-control {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
@@ -127,14 +167,86 @@ nav a.active {
   font-weight: var(--weight-bold);
 }
 
-.appearance-control select {
+.appearance-control legend {
+  padding: 0;
+}
+
+.appearance-options {
+  display: flex;
+  gap: 0.28rem;
+}
+
+.appearance-options label {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 0.28rem;
   min-height: var(--control-height-compact);
-  padding: 0.45rem 2rem 0.45rem 0.65rem;
+  padding: 0.3rem 0.45rem;
   border: 1px solid var(--border-default);
-  border-radius: var(--radius-control);
+  border-radius: 0.22rem;
+  background: color-mix(in srgb, var(--surface-header) 72%, transparent);
+  color: var(--text-on-ink-muted);
+  cursor: pointer;
+  box-shadow: 0 2px 0 var(--notebook-shadow);
+}
+
+.appearance-options label.selected {
   background: var(--surface-paper);
   color: var(--text-primary);
-  cursor: pointer;
+  box-shadow:
+    inset 0 -0.16rem 0 var(--blue-500),
+    0 2px 0 var(--notebook-shadow);
+}
+
+.appearance-options input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.appearance-options input:focus-visible + .appearance-swatch {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.appearance-options input:focus-visible {
+  outline: 0;
+}
+
+.appearance-swatch {
+  display: block;
+  width: 1.1rem;
+  height: 1.35rem;
+  border: 1px solid var(--border-default);
+  border-left: 0.16rem solid var(--red-700);
+  border-radius: 0.08rem;
+  background-color: #fbf6ea;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 0.3rem,
+    rgb(69 119 145 / 20%) 0.3rem 0.35rem
+  );
+  box-shadow: 1px 1px 0 var(--notebook-shadow);
+}
+
+.appearance-swatch.automatic {
+  background:
+    linear-gradient(90deg, transparent 0 50%, rgb(29 40 39 / 92%) 50%),
+    repeating-linear-gradient(to bottom, #fbf6ea 0 0.3rem, rgb(69 119 145 / 20%) 0.3rem 0.35rem);
+}
+
+.appearance-swatch.dark {
+  border-color: #5b6661;
+  border-left-color: #d38a81;
+  background-color: #252b2a;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 0.3rem,
+    rgb(114 149 148 / 28%) 0.3rem 0.35rem
+  );
 }
 
 .site-footer {
@@ -191,7 +303,11 @@ nav a.active {
   }
 
   .appearance-control {
-    grid-template-columns: 1fr auto;
+    grid-template-columns: auto 1fr;
+  }
+
+  .appearance-options {
+    justify-content: end;
   }
 
   .site-footer {
@@ -202,5 +318,10 @@ nav a.active {
 @media (width <= 390px) {
   nav a {
     font-size: 0.75rem;
+  }
+
+  .appearance-options label {
+    padding-inline: 0.32rem;
+    font-size: 0.66rem;
   }
 }

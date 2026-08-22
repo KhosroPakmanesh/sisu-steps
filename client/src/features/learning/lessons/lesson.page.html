@@ -27,9 +27,12 @@
       @if (lessons().length > 1) {
         <div class="lesson-progress" aria-label="Lesson progress">
           <span>{{ completedCount() }} of {{ lessons().length }} lessons completed</span>
-          <div aria-hidden="true">
-            <span [style.width.%]="(completedCount() / lessons().length) * 100"></span>
-          </div>
+          <progress
+            class="notebook-progress"
+            [max]="lessons().length"
+            [value]="completedCount()"
+            aria-label="Preparation lessons completed"
+          ></progress>
         </div>
       }
 
@@ -38,6 +41,7 @@
           <nav class="lesson-list" aria-label="Preparation lessons">
             @for (lesson of lessons(); track lesson.id; let index = $index) {
               <button
+                class="subject-tab"
                 type="button"
                 [class.active]="index === lessonIndex()"
                 [attr.aria-current]="index === lessonIndex() ? 'step' : null"
@@ -59,7 +63,11 @@
 
           <label class="lesson-picker">
             <span class="card-kicker">Preparation lesson</span>
-            <select [value]="lessonIndex()" (change)="openLessonFromSelect($event)">
+            <select
+              class="notebook-select"
+              [value]="lessonIndex()"
+              (change)="openLessonFromSelect($event)"
+            >
               @for (lesson of lessons(); track lesson.id; let index = $index) {
                 <option [value]="index">
                   {{ index + 1 }}. {{ lesson.title }}{{ isCompleted(lesson) ? ' — completed' : '' }}

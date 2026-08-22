@@ -3,7 +3,6 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import {
   AppearancePreference,
   AppearancePreferenceAdapter,
-  isAppearancePreference,
 } from '@/shared/browser/appearance-preference.adapter';
 import { routePaths } from '@/shared/navigation/route-paths';
 
@@ -23,14 +22,9 @@ export class AppShell {
     this.appearancePreferences.apply(this.appearance);
   }
 
-  protected changeAppearance(event: Event): void {
-    const value = (event.target as HTMLSelectElement).value;
-    if (!isAppearancePreference(value)) {
-      return;
-    }
-
-    this.appearance = value;
-    this.appearancePreferences.apply(value);
-    this.appearancePreferences.save(value);
+  protected changeAppearance(preference: AppearancePreference): void {
+    this.appearance = preference;
+    this.appearancePreferences.apply(preference);
+    this.appearancePreferences.save(preference);
   }
 }

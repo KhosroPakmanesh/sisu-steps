@@ -6,7 +6,7 @@ Give the complete Sisu Steps client an immersive Nordic school-notebook atmosphe
 
 ## Requirement slice
 
-- `REQ-G004-001`–`REQ-G004-012`
+- `REQ-G004-001`–`REQ-G004-019`
 - Refines the presentation and interaction clarity required by `REQ-G001-028`–`REQ-G001-030` and `REQ-G003-009` without changing learning, content, routing, or persistence semantics.
 
 ## Included
@@ -17,6 +17,7 @@ Give the complete Sisu Steps client an immersive Nordic school-notebook atmosphe
 - Automatic theme selection that follows the learner's device preference.
 - Immersive but non-interactive paper, ruling, margin, label, tab, stamp, and annotation details.
 - Plain-language labels and simplified visual hierarchy for learners with little computer experience.
+- Native navigation, appearance, action, answer, progress, status, report, and data controls presented through restrained real-stationery cues.
 - Design-system guidance, targeted automated coverage, responsive visual checks, and changelog evidence.
 
 ## Non-goals
@@ -36,6 +37,7 @@ Give the complete Sisu Steps client an immersive Nordic school-notebook atmosphe
 5. Simplify unclear presentation labels where this does not alter product behavior.
 6. Add automated appearance-preference coverage and run the repository client quality gate.
 7. Inspect representative routes at 320, 768, and 1440 pixels in light and dark appearances.
+8. Map existing controls to subject tabs, paper swatches, notebook labels, pencil marks, ruled fields, word cards, rulers, teacher stamps, ledgers, and archive labels without adding interaction behavior.
 
 ## Risks
 

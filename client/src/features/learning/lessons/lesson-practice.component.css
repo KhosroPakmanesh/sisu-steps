@@ -75,26 +75,24 @@
   grid-template-columns: auto 1fr;
   padding: var(--space-3);
   border: 1px solid var(--border-default);
+  border-left: 0.22rem solid var(--notebook-margin);
   border-radius: var(--radius-control);
-  background: var(--surface-raised);
+  background:
+    linear-gradient(to bottom, transparent calc(100% - 1px), var(--notebook-rule) 0),
+    var(--surface-raised);
   cursor: pointer;
+  box-shadow: 0 2px 0 var(--notebook-shadow);
 }
 
 .practice-choices label.selected {
   border-color: var(--border-brand-strong);
+  border-left-color: var(--red-700);
+  background: var(--surface-brand-subtle);
 }
 
 .practice-text-answer {
   font-size: var(--text-small);
   font-weight: var(--weight-bold);
-}
-
-.practice-text-answer input {
-  width: 100%;
-  min-height: var(--control-height);
-  padding: var(--space-3);
-  border: 1px solid var(--border-control);
-  border-radius: var(--radius-control);
 }
 
 .practice-answer-zone,
@@ -112,16 +110,19 @@
 .practice-answer-zone {
   border-style: dashed;
   border-color: var(--border-focus);
+  border-left: 0.25rem solid var(--red-700);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--notebook-line-height) - 1px),
+      var(--notebook-rule) var(--notebook-line-height)
+    ),
+    var(--surface-raised);
 }
 
-.practice-answer-zone button,
-.practice-token-bank button {
-  min-height: var(--control-height-compact);
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--border-control);
-  border-radius: var(--radius-small);
-  background: var(--surface-raised);
-  cursor: pointer;
+.practice-token-bank {
+  background: color-mix(in srgb, var(--surface-subtle) 68%, transparent);
 }
 
 .practice-actions {
@@ -129,12 +130,6 @@
   grid-template-columns: 1fr auto;
   gap: var(--space-3);
   margin-top: var(--space-4);
-}
-
-.practice-actions kbd {
-  margin-left: var(--space-2);
-  font: inherit;
-  font-size: var(--text-caption);
 }
 
 .practice-continue {
@@ -145,9 +140,12 @@
 .practice-complete {
   margin-top: var(--space-4);
   padding: var(--space-4);
-  border-radius: var(--radius-medium);
+  border: 2px double var(--green-700);
+  border-radius: 0.2rem;
   background: var(--surface-success);
   color: var(--text-success);
+  box-shadow: 0 2px 0 var(--notebook-shadow);
+  transform: rotate(-0.3deg);
 }
 
 .practice-complete p {

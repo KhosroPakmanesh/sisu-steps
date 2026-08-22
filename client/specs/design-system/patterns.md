@@ -47,8 +47,17 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Appearance choice
 
-- Offer the native labelled choices **Automatic**, **Light**, and **Dark** in the application shell.
+- Offer **Automatic**, **Light**, and **Dark** as a native labelled radio group in the application shell; each option may include a non-essential paper swatch.
 - Let Automatic follow `prefers-color-scheme`, including changes made while the app is open.
 - Store only explicit Light or Dark overrides; removing an override returns to Automatic.
 - Treat missing, invalid, or unavailable browser storage as Automatic and never block learning because an appearance preference cannot be read or saved.
 - Keep the chosen appearance independent of learner progress, IndexedDB, backup, restore, and clear-history behavior.
+
+## Stationery controls
+
+- Present primary navigation as subject-divider tabs without changing link order, wording, destinations, or active-page semantics.
+- Present actions as restrained notebook labels or teacher stamps; primary actions remain the strongest and destructive actions remain explicitly labelled.
+- Present answer radios as pencil-marked circles, text answers as ruled fields, and word-order buttons as movable vocabulary cards while preserving native form behavior.
+- Present progress as printed ruler scales and state badges as teacher marks, always paired with readable text or numbers.
+- Present reports as ledgers and data actions as archive labels without hiding values, local-storage scope, restore behavior, or clearing consequences.
+- Use the physical metaphor only as a visual aid. Do not require object recognition to discover, understand, or operate a control.

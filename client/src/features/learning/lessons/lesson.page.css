@@ -40,19 +40,12 @@
   font-weight: 700;
 }
 
-.lesson-progress > div {
-  height: 0.4rem;
-  overflow: hidden;
-  border-radius: var(--radius-pill);
-  background: var(--border-default);
+.lesson-progress .notebook-progress::-webkit-progress-value {
+  background: color-mix(in srgb, var(--green-500) 84%, transparent);
 }
 
-.lesson-progress > div span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--green-500);
-  transition: width var(--motion-standard) ease;
+.lesson-progress .notebook-progress::-moz-progress-bar {
+  background: color-mix(in srgb, var(--green-500) 84%, transparent);
 }
 
 .lesson-layout {
@@ -86,17 +79,7 @@
   align-items: center;
   min-height: var(--touch-target);
   padding: 0.85rem;
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-small);
-  background: var(--surface-raised);
-  color: var(--text-primary);
   text-align: left;
-  cursor: pointer;
-}
-
-.lesson-list button.active {
-  border-color: var(--border-brand-strong);
-  background: var(--surface-brand-subtle);
 }
 
 .lesson-list button > span:first-child {
@@ -104,11 +87,13 @@
   place-items: center;
   width: 1.7rem;
   height: 1.7rem;
-  border-radius: 50%;
+  border: 1px solid var(--border-default);
+  border-radius: 0.15rem;
   background: var(--surface-subtle);
   color: var(--text-brand);
   font-size: 0.72rem;
   font-weight: var(--weight-heavy);
+  transform: rotate(-1deg);
 }
 
 .lesson-list button > span:nth-child(2) {
@@ -163,12 +148,6 @@
 .completed-badge {
   align-self: start;
   white-space: nowrap;
-  padding: 0.4rem 0.65rem;
-  border-radius: var(--radius-pill);
-  background: var(--green-700);
-  color: var(--surface-paper);
-  font-size: 0.75rem;
-  font-weight: var(--weight-heavy);
 }
 
 .focus-contract {
@@ -359,18 +338,6 @@
 
   .lesson-picker select {
     width: 100%;
-    min-height: var(--touch-target);
-    padding: var(--space-3);
-    border: 1px solid var(--border-control);
-    border-radius: var(--radius-control);
-    background: var(--surface-raised);
-    color: var(--text-primary);
-    font: inherit;
-  }
-
-  .lesson-picker select:focus-visible {
-    outline: 3px solid var(--focus-ring);
-    outline-offset: 3px;
   }
 }
 

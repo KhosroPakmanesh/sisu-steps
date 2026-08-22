@@ -6,6 +6,8 @@
 - **VAL-G004-002** (`REQ-G004-001`–`006`): Existing component and browser tests remain green after the shared visual and plain-language hierarchy changes.
 - **VAL-G004-003** (`REQ-G004-011`, `012`): Lint, template accessibility lint, Stylelint, production/test typechecks, build, unit tests, and Playwright complete without regression.
 - **VAL-G004-004** (`REQ-G004-011`, `012`): Browser checks cover labelled Appearance operation, keyboard reachability, and absence of horizontal page overflow at configured mobile, tablet, and wide viewports.
+- **VAL-G004-005** (`REQ-G004-013`–`019`): Shell tests verify the three native labelled Appearance radio choices, remembered selection, and semantic primary navigation after the stationery-control restyle.
+- **VAL-G004-006** (`REQ-G004-015`–`019`): Browser workflows exercise action buttons and links, native choice and text controls, word tokens, progress, reports, file restore, and destructive-action entry points across the responsive matrix.
 
 ## Manual checks
 
@@ -17,6 +19,8 @@
 - Confirm correct, incorrect, skipped, review, warning, and danger states remain understandable without color.
 - Confirm focus indicators are clearly visible on paper, raised, state, and dark surfaces.
 - Confirm notebook ornament never resembles an unlabelled control and does not obscure lesson or feedback text.
+- Confirm subject tabs, paper swatches, notebook labels, pencil circles, ruled inputs, word cards, rulers, teacher marks, ledgers, and archive labels remain understandable when their visual metaphor is ignored.
+- Confirm selected, active, disabled, correct, incorrect, skipped, completed, review, and destructive states retain text, structure, symbols, or native semantics in addition to color.
 
 ## Completion evidence
 
@@ -41,3 +45,12 @@
 - Visual inspection covered the Light catalog and active study screens at 1440 pixels, the Dark topic screen at 1440 pixels, and the Dark catalog plus Light data settings at 320 pixels. The ornament remained behind or outside the reading flow, and primary actions stayed visually dominant.
 - `npm run check`: passed the complete quality gate after the immersion changes, including the production build at a 68.72 kB estimated initial transfer size and all 77 unit tests.
 - Playwright: all 21 runs passed against the current server across 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide Chromium projects, including horizontal-overflow and Appearance-preference checks.
+
+### 2026-08-22 stationery-control pass
+
+- Extended the visual contract through `REQ-G004-013`–`019` and mapped existing controls to subject dividers, labelled paper swatches, notebook labels, pencil circles, ruled fields, vocabulary cards, ruler scales, teacher marks, ledgers, and archive labels. Native link, radio, input, button, progress, select, and file-input semantics were retained.
+- `npm run check`: passed ESLint and Angular template accessibility lint, Stylelint, purposeful-module size, source reachability, architecture boundaries, repository-wide Prettier, production and test TypeScript checks, content validation, production build, and all 77 unit tests.
+- The reusable subject-tab skin was moved from the lesson component to the shared control layer after the aggregate run surfaced a non-failing component-style warning. The follow-up production build passed without warnings at a 70.34 kB estimated initial transfer size.
+- Playwright: all 24 runs passed across 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide Chromium projects. New coverage operates native answer radios, a labelled text field, vocabulary-card buttons, semantic progress, and all three Appearance radio choices. A final six-run targeted pass also confirmed Space-key operation of Light and Automatic choices in every viewport project.
+- Visual inspection: Light and Dark catalog shells, Appearance swatches, topic map, cumulative lesson tabs, multiple-choice study, typed-answer study, word-order study, reports, and data settings were inspected at representative 1440- and 320-pixel widths. Primary actions and required labels remained more prominent than the stationery effects.
+- Behavior review: no route, content, grading, session, attempt, mistake, report-value, backup, restore, IndexedDB, or confirmation contract changed. Destructive actions retain their consequence-specific native confirmation flow.

@@ -14,14 +14,44 @@
       <a [routerLink]="paths.reports" routerLinkActive="active">Reports</a>
       <a [routerLink]="paths.data" routerLinkActive="active">Data & backup</a>
     </nav>
-    <label class="appearance-control">
-      <span>Appearance</span>
-      <select [value]="appearance" (change)="changeAppearance($event)">
-        <option value="automatic">Automatic</option>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-    </label>
+    <fieldset class="appearance-control">
+      <legend>Appearance</legend>
+      <div class="appearance-options">
+        <label [class.selected]="appearance === 'automatic'">
+          <input
+            type="radio"
+            name="appearance"
+            value="automatic"
+            [checked]="appearance === 'automatic'"
+            (change)="changeAppearance('automatic')"
+          />
+          <span class="appearance-swatch automatic" aria-hidden="true"></span>
+          <span>Automatic</span>
+        </label>
+        <label [class.selected]="appearance === 'light'">
+          <input
+            type="radio"
+            name="appearance"
+            value="light"
+            [checked]="appearance === 'light'"
+            (change)="changeAppearance('light')"
+          />
+          <span class="appearance-swatch light" aria-hidden="true"></span>
+          <span>Light</span>
+        </label>
+        <label [class.selected]="appearance === 'dark'">
+          <input
+            type="radio"
+            name="appearance"
+            value="dark"
+            [checked]="appearance === 'dark'"
+            (change)="changeAppearance('dark')"
+          />
+          <span class="appearance-swatch dark" aria-hidden="true"></span>
+          <span>Dark</span>
+        </label>
+      </div>
+    </fieldset>
   </div>
 </header>
 <router-outlet />

@@ -70,15 +70,12 @@
           >{{ activeSession.currentIndex + 1 }} / {{ activeSession.exerciseIds.length }}</span
         >
       </header>
-      <div class="progress-track" aria-hidden="true">
-        <span
-          [style.width.%]="
-            ((activeSession.currentIndex + (feedback() ? 1 : 0)) /
-              activeSession.exerciseIds.length) *
-            100
-          "
-        ></span>
-      </div>
+      <progress
+        class="notebook-progress runner-progress"
+        [max]="activeSession.exerciseIds.length"
+        [value]="activeSession.currentIndex + (feedback() ? 1 : 0)"
+        aria-label="Exercises completed in this session"
+      ></progress>
       @if (activeTest(); as testFocus) {
         <aside class="test-focus" aria-label="Test learning focus">
           <strong>{{ testFocus.stage === 'review' ? 'Skills reviewed' : 'Your target' }}:</strong>
@@ -118,7 +115,11 @@
                 <span class="placeholder">Build the sentence here</span>
               }
               @for (tokenIndex of selectedTokenIndexes(); track $index; let position = $index) {
-                <button type="button" (click)="removeToken(position)">
+                <button
+                  class="word-token selected-token"
+                  type="button"
+                  (click)="removeToken(position)"
+                >
                   {{ currentExercise.tokens?.[tokenIndex] }}
                 </button>
               }
@@ -126,6 +127,7 @@
             <div class="token-bank" aria-label="Available words">
               @for (token of currentExercise.tokens; track $index; let index = $index) {
                 <button
+                  class="word-token"
                   type="button"
                   [disabled]="selectedTokenIndexes().includes(index) || !!feedback()"
                   (click)="chooseToken(index)"
@@ -139,6 +141,7 @@
           <label class="text-answer">
             <span>Your answer</span>
             <input
+              class="notebook-input"
               type="text"
               autocomplete="off"
               [disabled]="!!feedback()"

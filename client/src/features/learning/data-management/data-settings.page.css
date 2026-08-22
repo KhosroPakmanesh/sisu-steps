@@ -65,7 +65,12 @@
 .file-button {
   position: relative;
   overflow: hidden;
+  border-top: 0.28rem solid var(--amber-400);
   cursor: pointer;
+}
+
+.archive-action {
+  border-top: 0.28rem solid var(--blue-300);
 }
 
 .file-button input {
@@ -88,6 +93,7 @@
 
 .clear-list div {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
@@ -97,13 +103,22 @@
 }
 
 .clear-list button {
-  border: 0;
-  background: transparent;
+  min-height: var(--control-height-compact);
+  padding: var(--space-2) var(--space-3);
+  border: 1px dashed var(--red-700);
+  border-radius: 0.18rem;
+  background: var(--surface-danger);
   color: var(--red-700);
   font: inherit;
   font-size: 0.75rem;
   font-weight: 800;
   cursor: pointer;
+  box-shadow: 0 2px 0 var(--notebook-shadow);
+}
+
+.clear-list button:hover {
+  border-style: solid;
+  transform: translateY(-1px);
 }
 
 .danger-zone {
@@ -114,10 +129,25 @@
 }
 
 .notice {
+  position: relative;
   margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: var(--radius-small);
+  padding: 1rem 2rem 1rem 1rem;
+  border: 1px solid currentcolor;
+  border-radius: 0.18rem;
   font-weight: 700;
+  box-shadow: 0.18rem 0.2rem 0 var(--notebook-shadow);
+  transform: rotate(-0.2deg);
+}
+
+.notice::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0.85rem;
+  height: 0.85rem;
+  background: color-mix(in srgb, currentcolor 18%, transparent);
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  content: '';
 }
 
 .notice.success {

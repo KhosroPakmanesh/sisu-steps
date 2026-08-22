@@ -28,7 +28,7 @@ describe('AppShell', () => {
     expect(element.querySelector('nav')?.textContent).toContain('Data & backup');
     expect(element.querySelector('nav a[href="/mistakes/topic"]')).toBeNull();
     expect(element.querySelector('.appearance-control')?.textContent).toContain('Appearance');
-    expect(element.querySelectorAll('.appearance-control option')).toHaveLength(3);
+    expect(element.querySelectorAll('.appearance-control input[type="radio"]')).toHaveLength(3);
     expect(element.querySelector('footer')?.textContent).toContain('stays safely in this browser');
   });
 
@@ -40,15 +40,15 @@ describe('AppShell', () => {
 
     const fixture = TestBed.createComponent(AppShell);
     fixture.detectChanges();
-    const select = fixture.nativeElement.querySelector(
-      '.appearance-control select',
-    ) as HTMLSelectElement;
+    const darkChoice = fixture.nativeElement.querySelector(
+      '.appearance-control input[value="dark"]',
+    ) as HTMLInputElement;
 
-    select.value = 'dark';
-    select.dispatchEvent(new Event('change'));
+    darkChoice.click();
     fixture.detectChanges();
 
     expect(document.documentElement.dataset['appearance']).toBe('dark');
     expect(localStorage.getItem(appearancePreferenceStorageKey)).toBe('dark');
+    expect(darkChoice.checked).toBe(true);
   });
 });

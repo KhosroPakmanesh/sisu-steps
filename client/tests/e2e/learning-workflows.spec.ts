@@ -82,6 +82,34 @@ test('keeps optional lesson practice separate from scored progress', async ({ pa
   );
 });
 
+test('keeps stationery exercise controls native and keyboard usable', async ({ page }) => {
+  await page.goto('/study/finnish-foundations-a1/vowel-families');
+
+  const firstChoice = page.getByRole('radio', { name: 'back vowels' });
+  await firstChoice.check();
+  await expect(firstChoice).toBeChecked();
+  await expect(
+    page.getByRole('progressbar', { name: 'Exercises completed in this session' }),
+  ).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Check answer' })).toBeEnabled();
+
+  await page.goto('/study/finnish-foundations-a1/harmony-in-forms');
+  const answer = page.getByRole('textbox', { name: 'Your answer' });
+  await answer.fill('talossa');
+  await expect(answer).toHaveValue('talossa');
+
+  await page.goto('/study/finnish-foundations-a1/plural-in-sentences');
+  await page.getByRole('button', { name: /Show answer/ }).click();
+  await page.getByRole('button', { name: 'Continue' }).click();
+  const availableWords = page.getByLabel('Available words');
+  const firstWord = availableWords.locator('button:not(:disabled)').first();
+  const word = (await firstWord.textContent())?.trim();
+  await firstWord.click();
+  await expect(page.getByLabel('Your sentence').getByRole('button')).toContainText(
+    word ?? 'missing word token',
+  );
+});
+
 test('restores an unfinished scored session from browser storage', async ({ page }) => {
   await page.goto('/topics/finnish-foundations-a1');
   await page.locator('.test-card').first().getByRole('link', { name: 'Start test' }).click();
@@ -140,15 +168,18 @@ test('remembers an appearance override and can return to automatic', async ({ pa
   await page.emulateMedia({ colorScheme: 'dark' });
   await page.goto('/');
 
-  const appearance = page.getByLabel('Appearance');
-  await expect(appearance).toHaveValue('automatic');
+  const automatic = page.getByRole('radio', { name: 'Automatic' });
+  const light = page.getByRole('radio', { name: 'Light' });
+  await expect(automatic).toBeChecked();
   await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
 
-  await appearance.selectOption('light');
+  await light.focus();
+  await page.keyboard.press('Space');
   await expect(page.locator('html')).toHaveAttribute('data-appearance', 'light');
   await page.reload();
-  await expect(appearance).toHaveValue('light');
+  await expect(light).toBeChecked();
 
-  await appearance.selectOption('automatic');
+  await automatic.focus();
+  await page.keyboard.press('Space');
   await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
 });

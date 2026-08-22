@@ -158,22 +158,12 @@
   border-radius: var(--radius-medium);
   background: var(--surface-raised);
   box-shadow: 0.16rem 0.16rem 0 var(--surface-subtle);
-  transition:
-    transform var(--motion-standard) ease,
-    border-color var(--motion-standard) ease,
-    box-shadow var(--motion-standard) ease;
 }
 
 .test-card.review-test {
   border-color: var(--border-brand);
   border-left-color: var(--amber-400);
   background: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-raised));
-}
-
-.test-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--blue-300);
-  box-shadow: var(--shadow-small);
 }
 
 .test-number {

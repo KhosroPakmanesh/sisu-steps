@@ -32,26 +32,20 @@
 
 .question-count {
   justify-self: end;
+  padding: 0.28rem 0.48rem;
+  border: 1px solid var(--border-default);
+  border-bottom: 0.18rem solid var(--red-700);
+  border-radius: 0.18rem;
+  background: var(--surface-raised);
   color: var(--text-secondary);
   font-size: 0.85rem;
   font-weight: 800;
+  box-shadow: 1px 2px 0 var(--notebook-shadow);
 }
 
-.progress-track {
-  height: 0.35rem;
-  margin: 1.5rem 0 2rem;
-  overflow: hidden;
-  border-radius: 1rem;
-  background: var(--border-default);
-  box-shadow: inset 0 1px 2px var(--notebook-shadow);
-}
-
-.progress-track span {
+.runner-progress {
   display: block;
-  height: 100%;
-  border-radius: inherit;
-  background: var(--blue-600);
-  transition: width 0.3s ease;
+  margin: 1.5rem 0 2rem;
 }
 
 .test-focus {
@@ -94,13 +88,15 @@
 
 .type-label {
   padding: 0.3rem 0.55rem;
-  border-radius: 99px;
+  border: 2px double var(--blue-600);
+  border-radius: 0.18rem;
   background: var(--surface-brand-subtle);
   color: var(--text-brand);
   font-size: 0.68rem;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  transform: rotate(-1deg);
 }
 
 .exercise-card h2 {
@@ -124,9 +120,12 @@
   align-items: center;
   padding: 1rem;
   border: 1px solid var(--border-default);
+  border-left: 0.22rem solid var(--notebook-margin);
   border-radius: var(--radius-small);
-  background: var(--surface-paper);
-  box-shadow: 0 1px 0 var(--notebook-shadow);
+  background:
+    linear-gradient(to bottom, transparent calc(100% - 1px), var(--notebook-rule) 0),
+    var(--surface-paper);
+  box-shadow: 0 2px 0 var(--notebook-shadow);
   cursor: pointer;
   transition: 0.15s ease;
 }
@@ -134,11 +133,11 @@
 .choice-list label:hover,
 .choice-list label.selected {
   border-color: var(--border-brand-strong);
+  border-left-color: var(--red-700);
   background: var(--surface-brand-subtle);
-}
-
-.choice-list input {
-  accent-color: var(--blue-700);
+  box-shadow:
+    inset 0 0 0 0.16rem var(--notebook-grid),
+    0 2px 0 var(--notebook-shadow);
 }
 
 .text-answer {
@@ -147,17 +146,6 @@
   color: var(--text-secondary);
   font-size: 0.82rem;
   font-weight: 800;
-}
-
-.text-answer input {
-  width: 100%;
-  padding: 1rem 1.1rem;
-  border: 1px solid var(--border-control);
-  border-radius: var(--radius-small);
-  background: var(--surface-raised);
-  color: var(--text-primary);
-  font: inherit;
-  font-size: 1.05rem;
 }
 
 .text-answer input:focus-visible {
@@ -181,27 +169,22 @@
 }
 
 .answer-zone {
+  position: relative;
   border: 2px dashed var(--border-brand);
-  background: var(--surface-brand-subtle);
+  border-left: 0.28rem solid var(--red-700);
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--notebook-line-height) - 1px),
+      var(--notebook-rule) var(--notebook-line-height)
+    ),
+    var(--surface-brand-subtle);
 }
 
 .token-bank {
   border: 1px solid var(--border-default);
-}
-
-.word-builder button {
-  padding: 0.55rem 0.75rem;
-  border: 1px solid var(--border-control);
-  border-radius: 0.45rem;
-  background: var(--surface-raised);
-  color: var(--text-primary);
-  font: inherit;
-  cursor: pointer;
-}
-
-.word-builder button:disabled {
-  opacity: 0.35;
-  cursor: default;
+  background: color-mix(in srgb, var(--surface-subtle) 68%, transparent);
 }
 
 .placeholder {
@@ -221,15 +204,6 @@
   gap: 0.6rem;
   align-items: center;
   justify-content: center;
-}
-
-.reveal-button kbd {
-  padding: 0.12rem 0.35rem;
-  border: 1px solid currentcolor;
-  border-radius: 0.25rem;
-  font: inherit;
-  font-size: 0.68rem;
-  opacity: 0.75;
 }
 
 .reveal-note {
@@ -266,8 +240,12 @@
   width: 8rem;
   height: 8rem;
   margin: 0 auto 1.5rem;
-  border: 0.65rem solid var(--amber-300);
+  border: 0.52rem double var(--amber-300);
   border-radius: 50%;
+  box-shadow:
+    inset 0 0 0 0.18rem var(--surface-raised),
+    0 0 0 0.1rem var(--amber-300);
+  transform: rotate(-2deg);
 }
 
 .result-ring.excellent {
@@ -304,6 +282,11 @@
   margin-top: var(--space-4);
   color: var(--text-secondary);
   font-size: 0.85rem;
+}
+
+.result-breakdown span {
+  padding: 0.35rem 0.5rem;
+  border-bottom: 1px solid var(--notebook-rule);
 }
 
 .result-breakdown strong {

@@ -1,4 +1,5 @@
 .feedback {
+  position: relative;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: var(--space-4);
@@ -6,21 +7,30 @@
   padding: 1.2rem;
   border: 1px solid currentcolor;
   border-left-width: 0.35rem;
-  border-radius: var(--radius-medium);
+  border-radius: 0.25rem;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent calc(var(--notebook-line-height) - 1px),
+    var(--notebook-rule) var(--notebook-line-height)
+  );
+  box-shadow:
+    inset 0.25rem 0 0 color-mix(in srgb, currentcolor 10%, transparent),
+    0.18rem 0.18rem 0 var(--notebook-shadow);
 }
 
 .feedback.correct {
-  background: var(--surface-success);
+  background-color: var(--surface-success);
   color: var(--text-success);
 }
 
 .feedback.incorrect {
-  background: var(--surface-warning);
+  background-color: var(--surface-warning);
   color: var(--text-warning);
 }
 
 .feedback.skipped {
-  background: var(--surface-brand-subtle);
+  background-color: var(--surface-brand-subtle);
   color: var(--text-brand);
 }
 
@@ -29,10 +39,13 @@
   place-items: center;
   width: 2rem;
   height: 2rem;
+  border: 0.22rem double currentcolor;
   border-radius: 50%;
-  background: currentcolor;
-  color: var(--surface-raised);
+  background: var(--surface-raised);
+  color: inherit;
   font-weight: var(--weight-heavy);
+  box-shadow: 0 0 0 0.1rem var(--surface-raised);
+  transform: rotate(-5deg);
 }
 
 .feedback-title {
