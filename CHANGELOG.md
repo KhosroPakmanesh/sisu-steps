@@ -29,6 +29,10 @@
 
 ### Changed
 
+- Added a restrained informational hover lift to the **Focused tests** and **Reviews** group-divider sheets, with static reduced-motion behavior.
+- Increased the topic header's vertical separation between the folded **All topics** return link and the level/test eyebrow.
+- Warmed the topic goals sheet without changing its grid-paper construction, added a restrained hover lift, moved the topic note after the complete lessons-and-tests map with normal adjacent spacing, and gave the note matching hover and focus-within motion.
+- Replaced the topic page's dark progress card with the landing page's warm taped, ruled-paper continue-learning assignment pattern, added an informational paper-lift hover, retained high-contrast charcoal labels, matched all four value colors to the continue-learning topic subtitle's muted ink, and preserved the compact 2×2 layout.
 - Reworked the header Appearance choices into a compact side-view mechanical toggle whose metal lever tilts toward accessible Day, Automatic, and Night icons, removed the enclosing panel, and added clear spacing between it and the Topics/Reports/Data & backup navigation pack without changing native radio or saved-preference behavior.
 - Aligned the landing-page topic covers with the continue-learning assignment's warm amber paper palette, gave the assignment the same restrained hover and keyboard-focus lift as the topic covers, and made the informational catalog statistics strip lift slightly on hover without becoming clickable.
 - Strengthened the interactive stationery vocabulary with immediate answer, lesson, practice, and session stamps; forward-moving active tabs and focusable cards; restrained ruled-input feedback; and ruler-only progress with every progress pencil marker removed. No accordion, disclosure, or collapse/expand interaction was added.

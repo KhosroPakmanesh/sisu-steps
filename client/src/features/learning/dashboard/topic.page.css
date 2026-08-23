@@ -31,6 +31,10 @@
   font-weight: var(--weight-bold);
 }
 
+.topic-hero .back-link + .eyebrow {
+  margin-top: var(--space-5);
+}
+
 .topic-overview {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -49,12 +53,14 @@
 }
 
 .topic-overview dt {
-  color: var(--text-on-ink-muted);
+  color: var(--text-primary);
   font-size: var(--text-caption);
+  font-weight: var(--weight-bold);
 }
 
 .topic-overview dd {
   margin: 0;
+  color: var(--text-secondary);
   font-family: var(--font-display);
   font-size: 1.35rem;
 }
@@ -79,8 +85,7 @@
   border: 1px solid var(--border-brand);
   background:
     linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px),
-    var(--surface-brand-subtle);
+    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px), var(--surface-warning);
   background-size: 1.5rem 1.5rem;
 }
 
@@ -115,7 +120,7 @@
 }
 
 .learning-map {
-  padding: 3rem 0 5rem;
+  padding: 3rem 0 0;
 }
 
 .section-heading {
@@ -139,6 +144,11 @@
   margin: var(--space-3) 0 var(--space-1);
   padding-bottom: var(--space-3);
   border-bottom: 1px solid var(--notebook-rule);
+  transition: transform var(--motion-standard) ease;
+}
+
+.test-group-heading:hover {
+  transform: translateY(-0.45rem);
 }
 
 .test-group-heading.review-heading {
@@ -257,5 +267,12 @@
   .score-badge {
     display: inline-block;
     margin-top: var(--space-2);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .test-group-heading,
+  .test-group-heading:hover {
+    transform: none;
   }
 }

@@ -1,7 +1,8 @@
 /* Repeated content surfaces use a small, recognisable school-stationery vocabulary. */
 
 /* Catalog: clipped assignment, printed record strip, and bound topic covers. */
-main.page-shell .continue-card {
+main.page-shell .assignment-sheet {
+  position: relative;
   padding-left: calc(var(--space-6) + 0.35rem);
   border: 1px dashed var(--border-control);
   border-left: 0.35rem solid var(--red-700);
@@ -19,11 +20,19 @@ main.page-shell .continue-card {
     drop-shadow(0.42rem 0.58rem 0.65rem var(--notebook-shadow));
 }
 
-main.page-shell .continue-card::before {
+main.page-shell .assignment-sheet::before {
+  position: absolute;
   top: 0.18rem;
+  right: 1.4rem;
+  width: 4.4rem;
+  height: 1.1rem;
+  background: color-mix(in srgb, var(--amber-300) 52%, transparent);
+  clip-path: polygon(3% 8%, 100% 0, 97% 100%, 0 93%);
+  content: '';
+  transform: rotate(2deg);
 }
 
-main.page-shell .continue-card::after {
+main.page-shell .assignment-sheet::after {
   position: absolute;
   right: 0.12rem;
   bottom: 0.08rem;
@@ -108,16 +117,6 @@ main.page-shell .topic-card::after {
 }
 
 /* Topic route: inside-cover pocket, taped goals, dividers, and punched map cards. */
-main.topic-page .topic-overview {
-  position: relative;
-  border: 1px solid var(--overlay-line);
-  border-radius: 0.08rem;
-  background-image: linear-gradient(150deg, var(--overlay-soft), transparent 44%);
-  clip-path: polygon(0 0.5rem, 50% 0, 100% 0.5rem, 98% 100%, 2% 100%);
-  filter: drop-shadow(0.22rem 0.3rem 0 var(--paper-edge))
-    drop-shadow(0.4rem 0.55rem 0.55rem var(--notebook-shadow));
-}
-
 main.topic-page .objective-panel {
   border-style: dashed;
   border-radius: 0.08rem;

@@ -149,12 +149,28 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   const topicCard = page.locator('.topic-card').first();
   await expectClippedPaper(continueCard);
   await expectClippedPaper(topicCard);
+  await expect(continueCard).toHaveClass(/assignment-sheet/);
 
   const [continueColor, topicColor] = await Promise.all([
     continueCard.evaluate((element) => getComputedStyle(element).backgroundColor),
     topicCard.evaluate((element) => getComputedStyle(element).backgroundColor),
   ]);
   expect(topicColor).toBe(continueColor);
+  const continueTopicColor = await continueCard
+    .locator('.continue-topic')
+    .evaluate((element) => getComputedStyle(element).color);
+  const assignmentPattern = await continueCard.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return {
+      backgroundColor: style.backgroundColor,
+      backgroundImage: style.backgroundImage,
+      borderLeftColor: style.borderLeftColor,
+      borderLeftWidth: style.borderLeftWidth,
+      clipPath: style.clipPath,
+      foldColor: getComputedStyle(element, '::after').borderTopColor,
+      tapeColor: getComputedStyle(element, '::before').backgroundColor,
+    };
+  });
 
   const restingTransform = await continueCard.evaluate(
     (element) => getComputedStyle(element).transform,
@@ -207,6 +223,116 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     .toBeCloseTo(expectedStatsLift, 2);
 
   await page.goto('/topics/finnish-foundations-a1');
+  await expect(page.locator('.topic-hero .back-link + .eyebrow')).toHaveCSS('margin-top', '20px');
+  const topicOverview = page.locator('.topic-overview');
+  await expect(topicOverview).toHaveClass(/assignment-sheet/);
+  expect(
+    await topicOverview.evaluate((element) => {
+      const style = getComputedStyle(element);
+      return {
+        backgroundColor: style.backgroundColor,
+        backgroundImage: style.backgroundImage,
+        borderLeftColor: style.borderLeftColor,
+        borderLeftWidth: style.borderLeftWidth,
+        clipPath: style.clipPath,
+        foldColor: getComputedStyle(element, '::after').borderTopColor,
+        tapeColor: getComputedStyle(element, '::before').backgroundColor,
+      };
+    }),
+  ).toEqual(assignmentPattern);
+  await expect(topicOverview.locator('div')).toHaveCount(4);
+  await expect(topicOverview).toContainText('Tests tried');
+  await expect(topicOverview).toContainText('Lessons read');
+  await expect(topicOverview).toContainText('Average');
+  await expect(topicOverview).toContainText('Exercises');
+  expect([
+    ...new Set(
+      await topicOverview
+        .locator('dd')
+        .evaluateAll((values) => values.map((value) => getComputedStyle(value).color)),
+    ),
+  ]).toEqual([continueTopicColor]);
+  const labelPresentation = await topicOverview
+    .locator('dt')
+    .first()
+    .evaluate((element) => {
+      const probe = document.createElement('span');
+      probe.style.color = 'var(--text-primary)';
+      document.body.append(probe);
+      const presentation = {
+        color: getComputedStyle(element).color,
+        expectedColor: getComputedStyle(probe).color,
+        weight: Number.parseInt(getComputedStyle(element).fontWeight, 10),
+      };
+      probe.remove();
+      return presentation;
+    });
+  expect(labelPresentation.color).toBe(labelPresentation.expectedColor);
+  expect(labelPresentation.weight).toBeGreaterThanOrEqual(700);
+
+  const overviewRestingTransform = await topicOverview.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  await topicOverview.hover();
+  await expect
+    .poll(() =>
+      topicOverview.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+  await page.mouse.move(0, 0);
+  await expect
+    .poll(() => topicOverview.evaluate((element) => getComputedStyle(element).transform))
+    .toBe(overviewRestingTransform);
+
+  const objectivePanel = page.locator('.objective-panel');
+  expect(
+    await objectivePanel.evaluate((element) => {
+      const style = getComputedStyle(element);
+      return {
+        backgroundColor: style.backgroundColor,
+        gridLayers: style.backgroundImage.match(/linear-gradient/g)?.length ?? 0,
+        backgroundSize: style.backgroundSize,
+      };
+    }),
+  ).toEqual({
+    backgroundColor: continueColor,
+    gridLayers: 2,
+    backgroundSize: '24px 24px, 24px 24px, 24px 24px',
+  });
+  await objectivePanel.hover();
+  await expect
+    .poll(() =>
+      objectivePanel.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+
+  const topicNote = page.locator('.sticky-note');
+  await expect(page.locator('.learning-map + app-sticky-note .sticky-note')).toBeVisible();
+  await expect(page.locator('.learning-map')).toHaveCSS('padding-bottom', '0px');
+  await topicNote.hover();
+  await expect
+    .poll(() =>
+      topicNote.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+  const groupHeadings = page.locator('.test-group-heading');
+  await expect(groupHeadings).toHaveCount(2);
+  for (const heading of await groupHeadings.all()) {
+    await heading.hover();
+    await expect
+      .poll(() =>
+        heading.evaluate(
+          (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+        ),
+      )
+      .toBeCloseTo(expectedLift, 2);
+  }
   await expectClippedPaper(page.locator('.test-card').first());
   expect(
     await page
@@ -359,4 +485,14 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
 
   await page.getByRole('link', { name: 'Open topic' }).click();
   await expect(page.getByRole('heading', { name: 'Lessons and tests' })).toBeVisible();
+  for (const surface of [
+    page.locator('.objective-panel'),
+    page.locator('.sticky-note'),
+    page.locator('.test-group-heading').first(),
+  ]) {
+    await surface.hover();
+    await expect
+      .poll(() => surface.evaluate((element) => getComputedStyle(element).transform))
+      .toBe('none');
+  }
 });

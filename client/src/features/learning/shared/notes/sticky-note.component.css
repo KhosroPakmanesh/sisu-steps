@@ -19,6 +19,17 @@
     0.28rem 0.34rem 0 var(--paper-edge),
     0.5rem 0.7rem 1rem var(--notebook-shadow);
   transform: rotate(-0.25deg);
+  transition:
+    transform var(--motion-standard) ease,
+    box-shadow var(--motion-standard) ease;
+}
+
+.sticky-note:hover,
+.sticky-note:focus-within {
+  box-shadow:
+    0.42rem 0.52rem 0 var(--paper-edge),
+    0.72rem 0.95rem 1.5rem var(--notebook-shadow);
+  transform: translateY(-0.45rem) rotate(0);
 }
 
 .sticky-note::before {
@@ -124,5 +135,13 @@ footer {
   footer {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sticky-note,
+  .sticky-note:hover,
+  .sticky-note:focus-within {
+    transform: none;
   }
 }

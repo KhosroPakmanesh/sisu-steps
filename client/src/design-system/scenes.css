@@ -16,7 +16,8 @@
   pointer-events: none;
 }
 
-.continue-card {
+.continue-card,
+.topic-page .topic-overview {
   clip-path: polygon(0.35rem 0, 100% 0.2rem, calc(100% - 0.2rem) 100%, 0 98%);
   transform: rotate(0.45deg);
   transition:
@@ -25,7 +26,8 @@
 }
 
 main.page-shell .continue-card:hover,
-main.page-shell .continue-card:focus-within {
+main.page-shell .continue-card:focus-within,
+main.topic-page .topic-overview:hover {
   z-index: 2;
   filter: drop-shadow(0.45rem 0.6rem 0 var(--paper-edge))
     drop-shadow(0.7rem 1rem 1.7rem var(--notebook-shadow));
@@ -110,6 +112,11 @@ main.page-shell .topic-card:hover {
     0.3rem 0.32rem 0 var(--surface-subtle),
     var(--shadow-small);
   transform: rotate(-0.2deg);
+  transition: transform var(--motion-standard) ease;
+}
+
+.topic-page .objective-panel:hover {
+  transform: translateY(-0.45rem) rotate(0);
 }
 
 .topic-page .objective-panel::after {

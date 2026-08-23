@@ -60,6 +60,14 @@ describe('TopicPage', () => {
     expect(element.textContent).toContain('Mixed practice');
   });
 
+  it('places the topic note after the complete learning map', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const learningMap = element.querySelector('.learning-map');
+
+    expect(learningMap?.nextElementSibling?.tagName).toBe('APP-STICKY-NOTE');
+    expect(learningMap?.nextElementSibling?.textContent).toContain('Notes for this topic');
+  });
+
   it('marks shared preparation as available to review after completion', () => {
     store.learnerState.update((state) => ({
       ...state,

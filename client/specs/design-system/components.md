@@ -8,12 +8,12 @@ Create or extract a reusable component only when real screens share the behavior
 - Page heading, eyebrow, card kicker, and readable page shell.
 - One cut-paper action family with primary, secondary, compact, text, review, file, dialog, disabled, and destructive ink-and-edge variants.
 - Pencil-sketch loading on a loose drafting sheet, plain empty sheet, torn correction error, attached success/failure notice, and operation states.
-- Bound exercise-book topic cover, clipped continue-learning assignment, printed catalog record strip, inside-cover topic pocket, taped objective sheet, binder group divider, connected punched test card, stage/score stamp, and ledger summary.
+- Bound exercise-book topic cover, shared clipped continue-learning/topic-progress assignment sheet, printed catalog record strip, inside-cover topic pocket, taped objective sheet, binder group divider, connected punched test card, stage/score stamp, and ledger summary.
 - Labelled answer-line text input, correction/eraser draft controls, perforated answer slip with animated pencil-circle radio, cut-paper archive file input, tab-stack select, and lift-and-settle vocabulary-card word-order builder with ruled sentence strip and vocabulary pocket.
 - Teacher correction-slip answer feedback, answer reveal, returned-paper session result, and fold-out sentence-construction diagram.
 - Binder-index lesson navigation, clipped focus contract, margin key-point labels, example flashcards, vocabulary index cards, detachable optional-practice sheet, and completion stamp.
 - Consequence-specific modal confirmation sheet for clear-test, clear-topic, and clear-all actions.
-- Attached topic/lesson sticky note with a native textarea and explicit save/removal status, a paper-clipped native report filter checkbox, ruler-only progress, and readable teacher-stamp feedback.
+- Attached topic/lesson sticky note with a native textarea, explicit save/removal status, and paper-lift hover/focus response; the topic note follows the complete learning map. Also included are a paper-clipped native report filter checkbox, ruler-only progress, and readable teacher-stamp feedback.
 - Catalog exercise-book covers, connected fold-out topic map, two-page lesson spread, loose study and returned-result sheets, Finnish school ledger, and archive-drawer data scene.
 
 ## Rules

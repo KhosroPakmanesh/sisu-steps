@@ -17,7 +17,7 @@
         <p class="notebook-note" aria-hidden="true">one clear idea at a time</p>
       </div>
       @if (topicSummary) {
-        <dl class="topic-overview" aria-label="Topic progress">
+        <dl class="topic-overview assignment-sheet" aria-label="Topic progress">
           <div>
             <dt>Tests tried</dt>
             <dd>{{ topicSummary.attemptedTests }}/{{ activePack.tests.length }}</dd>
@@ -69,8 +69,6 @@
         }
       </div>
     </section>
-
-    <app-sticky-note [topicId]="activePack.id" heading="Notes for this topic" />
 
     <section class="learning-map" aria-labelledby="learning-map-heading">
       <header class="section-heading">
@@ -165,6 +163,8 @@
         }
       </div>
     </section>
+
+    <app-sticky-note [topicId]="activePack.id" heading="Notes for this topic" />
   } @else {
     <section class="state-card" aria-live="polite">
       <span class="spinner" aria-hidden="true"></span>

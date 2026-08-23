@@ -4,13 +4,13 @@
 
 - **VAL-G005-001** (`REQ-G005-001`–`005`): Shell unit and browser tests verify semantic unnumbered navigation, one continuous header row with separated navigation and Appearance groups, compact unframed side-view switch hardware, three accessible icons and labelled native radio choices in Day/Automatic/Night order, a switch height no greater than navigation, state-linked lever positions, and unchanged preference values.
 - **VAL-G005-002** (`REQ-G005-006`–`011`): Existing component and browser workflows operate actions, choices, text fields, selects, word tokens, progress, file controls, feedback, and focus after the object-control restyle.
-- **VAL-G005-003** (`REQ-G005-012`–`016`, `REQ-G005-019`): Browser tests open every route scene across configured mobile, tablet, and wide projects and verify there is no horizontal page overflow.
+- **VAL-G005-003** (`REQ-G005-012`–`016`, `REQ-G005-019`): Browser tests open every route scene across configured mobile, tablet, and wide projects, verify the continue-learning assignment and topic progress summary share the clipped assignment-sheet pattern, and verify there is no horizontal page overflow.
 - **VAL-G005-004** (`REQ-G005-017`): Unit or browser coverage verifies the confirmation sheet's consequence text, safe initial focus, Escape/Cancel behavior, focus return, and confirm-only execution.
 - **VAL-G005-005** (`REQ-G005-018`): A reduced-motion browser check verifies animations are disabled without delaying navigation or state changes.
 - **VAL-G005-006** (`REQ-G005-019`): ESLint and Angular template accessibility lint, Stylelint, module-size and architecture checks, Prettier, production/test typechecks, content validation, production build, unit tests, and Playwright complete without regression.
-- **VAL-G005-007** (`REQ-G005-010`, `020`, `025`, `026`): Component and browser checks verify ruler-only progress, readable static/animated teacher stamps, matched continue/topic-card hover and focus-within reactions, the informational catalog-record hover lift, selected tab and card reactions, ruled non-handwritten input, and reduced-motion suppression.
+- **VAL-G005-007** (`REQ-G005-010`, `020`, `025`, `026`): Component and browser checks verify ruler-only progress, readable static/animated teacher stamps, matched continue/topic-card/goals-sheet/sticky-note/group-divider lift reactions, the informational catalog-record hover lift, selected tab and card reactions, ruled non-handwritten input, and reduced-motion suppression.
 - **VAL-G005-008** (`REQ-G005-022`): Study component and browser tests verify choice clearing, typed-draft clearing, word-order undo/clear, and no stored-state mutation before submission.
-- **VAL-G005-009** (`REQ-G005-023`, `REQ-G001-102`–`106`): Topic and lesson browser workflows verify the sticky-note field, limit, save/removal status, persistence after navigation, backup/restore inclusion, and clearing semantics.
+- **VAL-G005-009** (`REQ-G005-023`, `REQ-G001-102`–`106`): Topic and lesson component/browser workflows verify the sticky-note field, limit, save/removal status, persistence after navigation, backup/restore inclusion, clearing semantics, and topic-note placement after the complete learning map.
 - **VAL-G005-010** (`REQ-G005-024`): Report component and browser checks operate the native paper-clipped checkbox by pointer and keyboard and verify visible-row filtering without changing report values.
 - **VAL-G005-011** (`REQ-G005-027`): Template and browser inspection verify that the stationery refinement introduces no accordion, disclosure, collapsible panel, expandable toolbar, or hidden tool tray.
 
@@ -26,6 +26,10 @@
 - Confirm no remote assets, external fonts, route changes, grading changes, or unapproved data-contract changes occur; the only learner-state extension is `REQ-G001-102`–`106`.
 - Confirm every progress surface is a ruler without a pencil marker; stamp feedback remains readable and static under reduced motion.
 - Confirm the catalog continue assignment and topic covers share the warm amber paper palette, retain distinct silhouettes, and lift equally on hover and focus-within; confirm the statistics record strip has a smaller whole-strip hover lift, retains a normal cursor, and stays static under reduced motion.
+- Confirm the topic progress summary uses the same warm ruled paper, dashed border, red left edge, tape strip, folded corner, and clipped silhouette as the continue-learning assignment while retaining all four values in a readable 2×2 layout; confirm its primary-ink labels remain legible, its values match the continue-learning topic subtitle's muted secondary ink, and the whole sheet lifts on hover without a click cursor or action.
+- Confirm the topic header leaves a clear `var(--space-5)` gap between the folded **All topics** link and the level/test eyebrow at supported widths.
+- Confirm both topic group-divider sheets lift as complete informational objects on hover, retain a normal cursor, and remain static under reduced motion.
+- Confirm the goals sheet uses warm landing-page paper and the shared hover lift while its grid, tape, clipping, spacing, typography, objectives, and informational cursor remain unchanged; confirm the topic note follows the last mapped test with only its normal margin and lifts on hover and focus-within without changing its form behavior.
 - Use correction/eraser actions for choice, text, and word-order exercises without submitting.
 - Save and remove topic and lesson sticky notes, navigate away and back, and verify backup, restore, topic clearing, and all-history clearing behavior.
 - Operate **Show studied tests only** with pointer and keyboard and confirm its paper clip does not obscure the checkbox, label, or focus outline.
@@ -102,3 +106,27 @@ No generated learning content or AI quality-evaluation layer is part of this pre
 - `npm --prefix client run check` passed the complete client gate without CSS-budget warnings, including the production build at a 78.18 kB estimated initial transfer size and all 85 unit tests.
 - Six focused Playwright cases passed across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. Computed transforms verify the requested hover lift and confirm that the strip remains at `transform: none` after hover when reduced motion is requested.
 - Visual inspection of hovered Day catalogs at 1440 and 320 pixels confirmed that the full strip moves as one paper object, the deeper shadow remains unclipped, all four values stay readable, and adjacent catalog content does not overlap.
+
+### 2026-08-23 topic progress assignment alignment
+
+- Reused the continue-learning assignment-sheet construction for the topic progress summary: warm ruled paper, dashed edge, red binding edge, translucent tape, clipped silhouette, and folded corner. The existing Tests tried, Lessons read, Average, and Exercises values remain in their original 2×2 reading order.
+- Added the same restrained `0.45rem` paper lift on pointer hover without adding click semantics or a pointer cursor, and included the summary in the reduced-motion transform reset.
+- Rendered all four labels in bold primary charcoal ink and all four values in the same muted secondary ink as the continue-learning topic subtitle.
+- `npm --prefix client run check` passed the complete client gate without CSS-budget warnings, including the production build at a 78.20 kB estimated initial transfer size and all 85 unit tests.
+- Six focused Playwright cases passed across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. Computed-style assertions verify the shared assignment pattern, preserved values, primary-ink labels, exact value/subtitle color matching, hover lift and resting return; the 320-pixel workflow confirms no horizontal page overflow.
+- Visual inspection of the Automatic/Day-rendered topic route at 1440 and 320 pixels confirmed readable charcoal labels, an unobscured 2×2 summary, distinct tape and folded-corner details, and no overlap with the topic heading or objectives sheet.
+
+### 2026-08-23 goals-sheet and topic-note refinement
+
+- Changed only the goals sheet's base paper from the cool brand surface to the warm landing-page paper token; its two grid layers, `1.5rem` grid size, tape, clipped silhouette, spacing, typography, and objective content remain unchanged. The whole sheet now lifts `0.45rem` on hover.
+- Moved the existing topic sticky-note component after the complete learning map and added the shared `0.45rem` hover/focus-within lift without changing its textarea, draft, save/removal actions, status, or local persistence behavior.
+- `npm --prefix client run check` passed the complete client gate without CSS-budget warnings, including the production build at a 78.19 kB estimated initial transfer size and all 86 unit tests. New component coverage verifies that the note host immediately follows the learning map.
+- Twelve focused Playwright cases passed with one worker across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. Coverage verifies warm color, preserved grid layers and sizing, both lifts, note placement, note persistence, reduced-motion suppression, and the minimum-width layout.
+- Visual inspection of the hovered goals sheet and end-positioned topic note at 1440 pixels confirmed warm readable surfaces, preserved constructions, and unobscured content. The page reported zero horizontal overflow and DOM inspection confirmed the note immediately follows the map.
+
+### 2026-08-23 topic-route finishing refinements
+
+- Matched all four topic-progress values to the exact muted secondary ink used by the continue-learning topic subtitle, increased the **All topics**-to-eyebrow separation to `var(--space-5)`, removed the learning map's redundant five-rem bottom padding so the following note uses only its normal margin, and added the shared `0.45rem` hover lift to both group-divider sheets.
+- `npm --prefix client run check` passed the complete client gate without CSS-budget warnings, including the production build at a 78.19 kB estimated initial transfer size and all 86 unit tests.
+- Six final focused Playwright cases passed with one worker across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. Coverage verifies exact value/subtitle color matching, the 20-pixel header gap, zero map bottom padding, both group-divider lifts, and static reduced-motion behavior while retaining all preceding assignment, note, and overflow assertions.
+- Visual inspection at 1440 pixels confirmed unclipped divider content and a normal last-test-to-note gap. Computed layout reported a 20-pixel header gap, a 38.8-pixel last-card-to-note gap, `rgb(98, 94, 87)` progress-value ink, and zero horizontal overflow.
