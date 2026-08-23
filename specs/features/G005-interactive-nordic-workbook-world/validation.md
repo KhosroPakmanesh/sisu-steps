@@ -2,13 +2,13 @@
 
 ## Automated validation
 
-- **VAL-G005-001** (`REQ-G005-001`–`005`): Shell unit and browser tests verify semantic unnumbered navigation, one continuous header control row, and the Automatic, Day, and Night labelled radio choices with an accessible group name and unchanged preference values.
+- **VAL-G005-001** (`REQ-G005-001`–`005`): Shell unit and browser tests verify semantic unnumbered navigation, one continuous header row with separated navigation and Appearance groups, compact unframed side-view switch hardware, three accessible icons and labelled native radio choices in Day/Automatic/Night order, a switch height no greater than navigation, state-linked lever positions, and unchanged preference values.
 - **VAL-G005-002** (`REQ-G005-006`–`011`): Existing component and browser workflows operate actions, choices, text fields, selects, word tokens, progress, file controls, feedback, and focus after the object-control restyle.
 - **VAL-G005-003** (`REQ-G005-012`–`016`, `REQ-G005-019`): Browser tests open every route scene across configured mobile, tablet, and wide projects and verify there is no horizontal page overflow.
 - **VAL-G005-004** (`REQ-G005-017`): Unit or browser coverage verifies the confirmation sheet's consequence text, safe initial focus, Escape/Cancel behavior, focus return, and confirm-only execution.
 - **VAL-G005-005** (`REQ-G005-018`): A reduced-motion browser check verifies animations are disabled without delaying navigation or state changes.
 - **VAL-G005-006** (`REQ-G005-019`): ESLint and Angular template accessibility lint, Stylelint, module-size and architecture checks, Prettier, production/test typechecks, content validation, production build, unit tests, and Playwright complete without regression.
-- **VAL-G005-007** (`REQ-G005-010`, `020`, `025`, `026`): Component and browser checks verify ruler-only progress, readable static/animated teacher stamps, selected/focus-within tab and card reactions, ruled non-handwritten input, and reduced-motion suppression.
+- **VAL-G005-007** (`REQ-G005-010`, `020`, `025`, `026`): Component and browser checks verify ruler-only progress, readable static/animated teacher stamps, matched continue/topic-card hover and focus-within reactions, the informational catalog-record hover lift, selected tab and card reactions, ruled non-handwritten input, and reduced-motion suppression.
 - **VAL-G005-008** (`REQ-G005-022`): Study component and browser tests verify choice clearing, typed-draft clearing, word-order undo/clear, and no stored-state mutation before submission.
 - **VAL-G005-009** (`REQ-G005-023`, `REQ-G001-102`–`106`): Topic and lesson browser workflows verify the sticky-note field, limit, save/removal status, persistence after navigation, backup/restore inclusion, and clearing semantics.
 - **VAL-G005-010** (`REQ-G005-024`): Report component and browser checks operate the native paper-clipped checkbox by pointer and keyboard and verify visible-row filtering without changing report values.
@@ -18,13 +18,14 @@
 
 - Inspect the catalog, topic map, single and cumulative lessons, multiple-choice, typed-answer, word-order, results, reports, and data settings in Day and Night appearances.
 - At 320, 768, and 1440 pixels, confirm the desktop becomes a pocket notebook where necessary and no page, object, label, dialog, or action overlaps, clips, or causes horizontal scrolling.
-- Confirm the unnumbered subject dividers and Automatic, Day, and Night desk-light choices form one continuous header row without visible group headings, and that all stationery controls remain understandable without relying on the physical metaphor.
+- Confirm the unnumbered subject dividers and compact side-view Day/Automatic/Night mechanical toggle form one continuous header row with a clear gap between navigation and appearance, no visible group headings or enclosing switch panel, an unmistakable metal mounting-base/lever silhouette, and icons that remain understandable through their accessible names without relying on the physical metaphor.
 - Use only the keyboard to navigate, change appearance, answer each exercise type, open and cancel the confirmation sheet with Escape, and restore focus to the initiating action.
 - Confirm Day and Night text, focus, state, destructive, and disabled combinations meet WCAG 2.2 AA and remain meaningful without color.
 - Confirm reduced motion removes page, tab, paper, stamp, pencil, token, desk-light, and parallax movement while preserving immediate state changes.
 - Confirm no topic appears locked and no point, reward, currency, streak, life, leaderboard, or other gameplay behavior is introduced.
 - Confirm no remote assets, external fonts, route changes, grading changes, or unapproved data-contract changes occur; the only learner-state extension is `REQ-G001-102`–`106`.
 - Confirm every progress surface is a ruler without a pencil marker; stamp feedback remains readable and static under reduced motion.
+- Confirm the catalog continue assignment and topic covers share the warm amber paper palette, retain distinct silhouettes, and lift equally on hover and focus-within; confirm the statistics record strip has a smaller whole-strip hover lift, retains a normal cursor, and stays static under reduced motion.
 - Use correction/eraser actions for choice, text, and word-order exercises without submitting.
 - Save and remove topic and lesson sticky notes, navigate away and back, and verify backup, restore, topic clearing, and all-history clearing behavior.
 - Operate **Show studied tests only** with pointer and keyboard and confirm its paper clip does not obscure the checkbox, label, or focus outline.
@@ -80,3 +81,24 @@ No generated learning content or AI quality-evaluation layer is part of this pre
 - `npm --prefix client run check` passed ESLint and Angular template accessibility lint, Stylelint, module-size, source-reachability, architecture, repository formatting, production/test typechecks, catalog validation, the production build at a 77.68 kB estimated initial transfer size, and all 85 unit tests after the pencil-case withdrawal.
 - Playwright passed all 33 cases with one worker across 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide Chromium projects after the withdrawal. Coverage includes native answer correction tools, erasing/undo, ruler-only progress, topic-note persistence, report filtering, reduced motion, and horizontal overflow. On Windows, the wrapper required interruption only after every case passed while its managed development server was shutting down; port 4200 was confirmed stopped.
 - Visual inspection covered the Day topic map with its sticky note at 1440 pixels, the compact study ruler and answer correction tools at 1440 pixels, and the complete paper-clipped reports ledger at 320 pixels. Required labels and content remained clearer than the stationery effects.
+
+### 2026-08-23 catalog palette and lift alignment
+
+- Refined `REQ-G005-012` and `REQ-G005-025` so the continue-learning assignment and catalog topic covers share the warm amber paper palette and the same restrained lift distance while keeping distinct clipped-slip and bound-cover silhouettes.
+- `npm --prefix client run check` passed the complete client gate, including the production build at a 77.65 kB estimated initial transfer size and all 85 unit tests.
+- Focused Playwright checks passed in the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. Computed-style assertions verify identical paper background colors plus the same `-0.45rem` lift on assignment hover, assignment focus-within, and topic-cover hover. The Windows wrapper again required interruption only after every case passed while stopping its managed development server.
+- Visual inspection of the full 1440-pixel Day catalog with the continue assignment hovered confirmed the matched warm surfaces, readable content, distinct silhouettes, and stronger lifted-paper shadow without clipping.
+
+### 2026-08-23 appearance switch refinement
+
+- Refined `REQ-G005-003` and `REQ-G005-004` so Appearance is one compact, unframed side-view mechanical toggle with accessible Day/Automatic/Night icons in left-to-right order, a lever that tilts left/upright/right, and a clear gap separating it from the Topics/Reports/Data & backup navigation pack while both groups remain in one header row.
+- `npm --prefix client run check` passed the complete client gate without CSS-budget warnings, including the production build at a 78.16 kB estimated initial transfer size and all 85 unit tests.
+- Nine focused Playwright cases passed across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. Coverage verifies the three icons and accessible names, metal-switch hardware, native radio operation, state-linked lever classes, the inter-group gap, a switch height no greater than navigation, aligned one-row layout, header-only narrow scrolling without document overflow, explicit Day persistence, and return to Automatic.
+- Visual inspection covered the 1440-pixel Automatic and Day headers plus the 320-pixel header scrolled to the complete switch. The mounting base and upright/left-tilted lever read as a side profile, the icons remained distinct and unclipped, no enclosing colored panel or border remained, and the switch stayed visibly shorter than the navigation tabs.
+
+### 2026-08-23 catalog statistics-strip interaction
+
+- Refined `REQ-G005-025` so the complete informational catalog statistics record strip lifts `0.35rem` with stronger paper depth on pointer hover without gaining a click action, pointer cursor, data change, or navigation behavior.
+- `npm --prefix client run check` passed the complete client gate without CSS-budget warnings, including the production build at a 78.18 kB estimated initial transfer size and all 85 unit tests.
+- Six focused Playwright cases passed across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. Computed transforms verify the requested hover lift and confirm that the strip remains at `transform: none` after hover when reduced motion is requested.
+- Visual inspection of hovered Day catalogs at 1440 and 320 pixels confirmed that the full strip moves as one paper object, the deeper shadow remains unclipped, all four values stay readable, and adjacent catalog content does not overlap.

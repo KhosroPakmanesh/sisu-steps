@@ -36,6 +36,14 @@ describe('AppShell', () => {
     expect(appearanceControl?.textContent).toContain('Day');
     expect(appearanceControl?.textContent).toContain('Night');
     expect(element.querySelectorAll('.appearance-control input[type="radio"]')).toHaveLength(3);
+    expect(
+      [...element.querySelectorAll('.appearance-options label')].map((label) =>
+        label.textContent?.trim(),
+      ),
+    ).toEqual(['Day', 'Automatic', 'Night']);
+    expect(element.querySelector('.appearance-toggle-hardware')).not.toBeNull();
+    expect(element.querySelectorAll('.appearance-choice-icon')).toHaveLength(3);
+    expect(element.querySelector('.appearance-switch')?.classList).toContain('automatic-selected');
     expect(element.querySelector('footer')?.textContent).toContain('stays safely in this browser');
   });
 
@@ -57,5 +65,8 @@ describe('AppShell', () => {
     expect(document.documentElement.dataset['appearance']).toBe('dark');
     expect(localStorage.getItem(appearancePreferenceStorageKey)).toBe('dark');
     expect(nightChoice.checked).toBe(true);
+    expect(fixture.nativeElement.querySelector('.appearance-switch')?.classList).toContain(
+      'night-selected',
+    );
   });
 });

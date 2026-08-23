@@ -28,6 +28,9 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await expect(page.locator('.tab-number')).toHaveCount(0);
   await expect(page.getByRole('group', { name: 'Appearance' })).toBeVisible();
   await expect(page.getByText('Desk light', { exact: true })).toHaveCount(0);
+  await expect(page.locator('.appearance-options label')).toHaveText([/Day/, /Automatic/, /Night/]);
+  await expect(page.locator('.appearance-toggle-hardware')).toBeVisible();
+  await expect(page.locator('.appearance-choice-icon')).toHaveCount(3);
 
   await page.goto('/learn/finnish-foundations-a1/kpt-nouns');
   await expect(page.locator('.lesson-hero h1')).toHaveText('KPT in nouns');
@@ -142,8 +145,66 @@ test('saves a private sticky note without leaving the workbook', async ({ page }
 
 test('uses dedicated notebook objects for repeated surfaces and return links', async ({ page }) => {
   await page.goto('/');
-  await expectClippedPaper(page.locator('.continue-card'));
-  await expectClippedPaper(page.locator('.topic-card').first());
+  const continueCard = page.locator('.continue-card');
+  const topicCard = page.locator('.topic-card').first();
+  await expectClippedPaper(continueCard);
+  await expectClippedPaper(topicCard);
+
+  const [continueColor, topicColor] = await Promise.all([
+    continueCard.evaluate((element) => getComputedStyle(element).backgroundColor),
+    topicCard.evaluate((element) => getComputedStyle(element).backgroundColor),
+  ]);
+  expect(topicColor).toBe(continueColor);
+
+  const restingTransform = await continueCard.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  const expectedLift = await page.evaluate(
+    () => Number.parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.45,
+  );
+  await continueCard.hover();
+  await expect
+    .poll(() =>
+      continueCard.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+
+  await page.mouse.move(0, 0);
+  await expect
+    .poll(() => continueCard.evaluate((element) => getComputedStyle(element).transform))
+    .toBe(restingTransform);
+  await continueCard.getByRole('link').first().focus();
+  await expect
+    .poll(() =>
+      continueCard.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+
+  await topicCard.hover();
+  await expect
+    .poll(() =>
+      topicCard.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+
+  const catalogStats = page.locator('.catalog-stats');
+  const expectedStatsLift = await page.evaluate(
+    () => Number.parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.35,
+  );
+  await catalogStats.hover();
+  await expect
+    .poll(() =>
+      catalogStats.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedStatsLift, 2);
 
   await page.goto('/topics/finnish-foundations-a1');
   await expectClippedPaper(page.locator('.test-card').first());
@@ -186,18 +247,26 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await expect(page.locator('.topic-card')).toHaveCount(1);
   await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toContainText('Data');
   const headerLayout = await page.locator('.header-tools').evaluate((header) => {
-    const controlTops = [...header.querySelectorAll('nav a, .appearance-options label')].map(
-      (control) => control.getBoundingClientRect().top,
-    );
+    const controls = [...header.querySelectorAll('nav a, .appearance-options label')];
+    const navigation = header.querySelector('nav')?.getBoundingClientRect();
+    const appearance = header.querySelector('.appearance-switch')?.getBoundingClientRect();
     return {
-      controlCount: controlTops.length,
-      topSpread: Math.max(...controlTops) - Math.min(...controlTops),
+      controlCount: controls.length,
+      groupCenterSpread: Math.abs(
+        ((appearance?.top ?? 0) + (appearance?.bottom ?? 0)) / 2 -
+          ((navigation?.top ?? 0) + (navigation?.bottom ?? 0)) / 2,
+      ),
       flexWrap: getComputedStyle(header).flexWrap,
+      groupGap: (appearance?.left ?? 0) - (navigation?.right ?? 0),
+      navigationHeight: navigation?.height ?? 0,
+      switchHeight: appearance?.height ?? 0,
     };
   });
   expect(headerLayout.controlCount).toBe(6);
-  expect(headerLayout.topSpread).toBeLessThan(2);
+  expect(headerLayout.groupCenterSpread).toBeLessThan(2);
   expect(headerLayout.flexWrap).toBe('nowrap');
+  expect(headerLayout.groupGap).toBeGreaterThanOrEqual(8);
+  expect(headerLayout.switchHeight).toBeLessThanOrEqual(headerLayout.navigationHeight);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );
@@ -253,18 +322,22 @@ test('remembers an appearance override and can return to automatic', async ({ pa
 
   const automatic = page.getByRole('radio', { name: 'Automatic' });
   const day = page.getByRole('radio', { name: 'Day' });
+  const switchBody = page.locator('.appearance-switch');
   await expect(automatic).toBeChecked();
+  await expect(switchBody).toHaveClass(/automatic-selected/);
   await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
 
   await day.focus();
   await page.keyboard.press('Space');
   await expect(page.locator('html')).toHaveAttribute('data-appearance', 'light');
+  await expect(switchBody).toHaveClass(/day-selected/);
   await page.reload();
   await expect(day).toBeChecked();
 
   await automatic.focus();
   await page.keyboard.press('Space');
   await expect(page.locator('html')).not.toHaveAttribute('data-appearance');
+  await expect(switchBody).toHaveClass(/automatic-selected/);
 });
 
 test('keeps the workbook world immediate when reduced motion is requested', async ({ page }) => {
@@ -277,6 +350,12 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     return style.animationDuration.endsWith('ms') ? duration : duration * 1000;
   });
   expect(animationDurationMs).toBeLessThanOrEqual(1);
+  await page.locator('.catalog-stats').hover();
+  await expect
+    .poll(() =>
+      page.locator('.catalog-stats').evaluate((element) => getComputedStyle(element).transform),
+    )
+    .toBe('none');
 
   await page.getByRole('link', { name: 'Open topic' }).click();
   await expect(page.getByRole('heading', { name: 'Lessons and tests' })).toBeVisible();

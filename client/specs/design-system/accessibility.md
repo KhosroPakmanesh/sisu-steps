@@ -30,4 +30,4 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Manually verify keyboard navigation, focus visibility, `Alt+A`, file restore, and destructive confirmation for affected workflows.
 - Check 320, 768, and 1440 pixel widths for overlap, clipping, hidden actions, and horizontal scrolling.
 - Verify status meaning remains understandable without color and with reduced motion enabled.
-- Verify the labelled Automatic/Day/Night Appearance control by keyboard and confirm Automatic responds to device color-scheme changes while explicit Day and Night choices remain stable.
+- Verify the icon-led Day/Automatic/Night Appearance toggle exposes all three text names to assistive technology, works by keyboard, keeps focus visible despite its unframed presentation, and confirms its decorative lever follows the native radio state while Automatic responds to device color-scheme changes and explicit Day and Night choices remain stable.

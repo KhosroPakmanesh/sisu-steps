@@ -4,7 +4,7 @@ Create or extract a reusable component only when real screens share the behavior
 
 ## Current vocabulary
 
-- App shell, brand, unnumbered subject-divider primary navigation, a screen-reader-named Appearance group with only Automatic/Day/Night visible in the shared header control row, decorative desk stage, and footer.
+- App shell, brand, unnumbered subject-divider primary navigation, a screen-reader-named compact side-view mechanical Appearance toggle with accessible Day/Automatic/Night icons separated from navigation within the shared header row, decorative desk stage, and footer.
 - Page heading, eyebrow, card kicker, and readable page shell.
 - One cut-paper action family with primary, secondary, compact, text, review, file, dialog, disabled, and destructive ink-and-edge variants.
 - Pencil-sketch loading on a loose drafting sheet, plain empty sheet, torn correction error, attached success/failure notice, and operation states.

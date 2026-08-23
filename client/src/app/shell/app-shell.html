@@ -23,40 +23,62 @@
     </nav>
     <fieldset class="appearance-control">
       <legend class="visually-hidden">Appearance</legend>
-      <div class="appearance-options">
-        <label [class.selected]="appearance === 'automatic'">
-          <input
-            type="radio"
-            name="appearance"
-            value="automatic"
-            [checked]="appearance === 'automatic'"
-            (change)="changeAppearance('automatic')"
-          />
-          <span class="appearance-scene automatic" aria-hidden="true"><i></i></span>
-          <span>Automatic</span>
-        </label>
-        <label [class.selected]="appearance === 'light'">
-          <input
-            type="radio"
-            name="appearance"
-            value="light"
-            [checked]="appearance === 'light'"
-            (change)="changeAppearance('light')"
-          />
-          <span class="appearance-scene day" aria-hidden="true"><i></i></span>
-          <span>Day</span>
-        </label>
-        <label [class.selected]="appearance === 'dark'">
-          <input
-            type="radio"
-            name="appearance"
-            value="dark"
-            [checked]="appearance === 'dark'"
-            (change)="changeAppearance('dark')"
-          />
-          <span class="appearance-scene night" aria-hidden="true"><i></i></span>
-          <span>Night</span>
-        </label>
+      <div
+        class="appearance-switch"
+        [class.day-selected]="appearance === 'light'"
+        [class.automatic-selected]="appearance === 'automatic'"
+        [class.night-selected]="appearance === 'dark'"
+      >
+        <span class="appearance-toggle-hardware" aria-hidden="true"></span>
+        <div class="appearance-options">
+          <label [class.selected]="appearance === 'light'">
+            <input
+              type="radio"
+              name="appearance"
+              value="light"
+              [checked]="appearance === 'light'"
+              (change)="changeAppearance('light')"
+            />
+            <svg class="appearance-choice-icon day-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path
+                d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"
+              ></path>
+            </svg>
+            <span class="visually-hidden">Day</span>
+          </label>
+          <label [class.selected]="appearance === 'automatic'">
+            <input
+              type="radio"
+              name="appearance"
+              value="automatic"
+              [checked]="appearance === 'automatic'"
+              (change)="changeAppearance('automatic')"
+            />
+            <svg
+              class="appearance-choice-icon automatic-icon"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="8"></circle>
+              <path d="M12 4a8 8 0 0 1 0 16Z"></path>
+            </svg>
+            <span class="visually-hidden">Automatic</span>
+          </label>
+          <label [class.selected]="appearance === 'dark'">
+            <input
+              type="radio"
+              name="appearance"
+              value="dark"
+              [checked]="appearance === 'dark'"
+              (change)="changeAppearance('dark')"
+            />
+            <svg class="appearance-choice-icon night-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M19 15.3A8 8 0 0 1 8.7 5 8 8 0 1 0 19 15.3Z"></path>
+            </svg>
+            <span class="visually-hidden">Night</span>
+          </label>
+        </div>
       </div>
     </fieldset>
   </div>

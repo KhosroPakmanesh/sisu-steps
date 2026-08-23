@@ -41,7 +41,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 ## Topic catalog and learning map
 
 - Keep home at catalog level: one compact summary per installed topic pack plus one prominent continue-learning action.
-- Render each catalog topic as a bound exercise-book cover with a spine, page edge, and printed cover fields. Render the continue recommendation as a clipped assignment slip and the catalog totals as one printed record strip.
+- Render each catalog topic as a bound exercise-book cover with a spine, page edge, and printed cover fields. Render the continue recommendation as a clipped assignment slip and the catalog totals as one printed record strip. Give the assignment and topic covers one warm amber paper palette while preserving their distinct constructions, and let both lift by the same amount on hover or focus-within. Let the complete statistics record strip lift by a smaller amount on pointer hover, but keep the cursor and semantics informational so motion never implies a click action.
 - Put an individual pack's objectives, Focused/Review sequence, lesson progress, and test actions on its topic route. Communicate the two learning groups through section headings instead of repeating classification badges on every test card.
 - Build the topic route from one taped objective sheet, binder-divider group headings, and one family of connected punched index cards; vary accent and stamp state without reverting to generic cards.
 - Do not render lesson teaching sections or multiple expanded test sequences on home.
@@ -50,8 +50,8 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Appearance choice
 
-- Offer **Automatic**, **Day**, and **Night** as a native labelled radio group presented as desk-light scenes. Day maps to the existing explicit Light value and Night maps to the existing explicit Dark value.
-- Retain **Appearance** as the radio group's accessible name, but do not show a redundant group heading. Keep the three choices beside the unnumbered primary tabs in one continuous header control row.
+- Offer **Day**, **Automatic**, and **Night**, in that left-to-right order, as a native labelled radio group presented through accessible sun, half-day/half-night, and moon icons around one compact side-view mechanical toggle. Show the metal mounting base and tilt the lever left for Day, keep it upright for Automatic, and tilt it right for Night. Do not enclose the switch in a colored panel or border, and keep it no taller than the navigation pack. Day maps to the existing explicit Light value and Night maps to the existing explicit Dark value.
+- Retain **Appearance** as the radio group's accessible name, but do not show a redundant group heading. Keep the switch and unnumbered primary tabs in one continuous header row while using a clear gap to distinguish the navigation pack from the appearance switch.
 - Let Automatic follow `prefers-color-scheme`, including changes made while the app is open.
 - Store only explicit Light or Dark overrides; removing an override returns to Automatic.
 - Treat missing, invalid, or unavailable browser storage as Automatic and never block learning because an appearance preference cannot be read or saved.

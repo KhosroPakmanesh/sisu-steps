@@ -13,7 +13,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 
 - A softly lit desk environment with notebook depth, binding, paper stacks, restrained parallax, and appearance-aware lighting.
 - Binder-divider navigation, folded-corner back links, consistently cut-paper action controls, answer controls, ruler-only progress, teacher feedback stamps, sticky notes, paper-clip checkboxes, and paper-based system states.
-- An Appearance control presented as Automatic, Day, and Night desk-light scenes while retaining the existing `automatic`, `light`, and `dark` preference values.
+- An Appearance control presented as one compact, unframed side-view mechanical toggle with Day, Automatic, and Night icons, a metal mounting base, and three lever positions while retaining the existing `automatic`, `light`, and `dark` preference values.
 - Route-specific physical scenes for the topic catalog, topic learning map, lessons, study, results, reports, and data management.
 - Immediate page-turn, tab-slide, paper-lift, stamp, pencil-circle, token-snap, answer-line, and light-change motion with a static reduced-motion mode.
 - Clearly labelled correction or eraser actions that affect only the current unsubmitted response.
