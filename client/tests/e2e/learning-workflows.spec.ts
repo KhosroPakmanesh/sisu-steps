@@ -99,12 +99,16 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   await expect(
     page.getByRole('progressbar', { name: 'Exercises completed in this session' }),
   ).toBeVisible();
+  await expect(page.locator('.progress-ruler')).toBeVisible();
+  await expect(page.locator('.progress-pencil')).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Check answer' })).toBeEnabled();
 
   await page.goto('/study/finnish-foundations-a1/harmony-in-forms');
   const answer = page.getByRole('textbox', { name: 'Your answer' });
   await answer.fill('talossa');
   await expect(answer).toHaveValue('talossa');
+  await page.getByRole('button', { name: 'Erase answer' }).click();
+  await expect(answer).toHaveValue('');
 
   await page.goto('/study/finnish-foundations-a1/plural-in-sentences');
   await page.getByRole('button', { name: /Show answer/ }).click();
@@ -115,6 +119,24 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   await firstWord.click();
   await expect(page.getByLabel('Your sentence').getByRole('button')).toContainText(
     word ?? 'missing word token',
+  );
+  await page.getByRole('button', { name: 'Undo last word' }).click();
+  await expect(page.getByLabel('Your sentence').getByRole('button')).toHaveCount(0);
+  await expect(page.locator('details, [aria-expanded]')).toHaveCount(0);
+});
+
+test('saves a private sticky note without leaving the workbook', async ({ page }) => {
+  await page.goto('/topics/finnish-foundations-a1');
+
+  const note = page.getByRole('textbox', { name: 'Topic note' });
+  await note.fill('Practise front-vowel endings tomorrow.');
+  await page.getByRole('button', { name: 'Save note' }).click();
+  await expect(page.getByRole('status')).toContainText('Note saved locally');
+
+  await page.getByRole('link', { name: 'All topics' }).click();
+  await page.getByRole('link', { name: 'Open topic' }).click();
+  await expect(page.getByRole('textbox', { name: 'Topic note' })).toHaveValue(
+    'Practise front-vowel endings tomorrow.',
   );
 });
 
@@ -196,6 +218,9 @@ test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => 
 
   await expect(page.getByRole('heading', { name: 'Reports', exact: true })).toBeVisible();
   await expect(page.getByRole('region', { name: /results by test/i })).toBeVisible();
+  const filter = page.getByRole('checkbox', { name: /Show studied tests only/ });
+  await filter.check();
+  await expect(filter).toBeChecked();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );

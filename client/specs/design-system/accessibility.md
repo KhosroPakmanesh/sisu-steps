@@ -19,7 +19,8 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Keep required text in readable print typography; decorative handwriting must be brief, optional, and hidden from assistive technology.
 - Preserve text contrast, visible focus, state meaning, and control boundaries in warm Light, low-glare Dark, and Automatic appearances.
 - Ensure every stationery-inspired control remains understandable from its visible label, native role, and state without requiring recognition of the represented object.
-- Permit fully custom control appearance only while the underlying link, button, input, radio, checkbox, select, file input, progress, or dialog semantics and keyboard behavior remain native.
+- Permit fully custom control appearance only while the underlying link, button, input, textarea, radio, checkbox, select, file input, progress, or dialog semantics and keyboard behavior remain native.
+- Keep correction/eraser actions, sticky-note fields, and the report filter visible, labelled, focusable, and understandable without recognizing their stationery metaphors; do not put them behind collapse/expand controls.
 - For destructive confirmation, focus the safe Cancel action when the modal sheet opens, cancel on Escape, return focus to the initiating control, and execute only through explicit confirmation.
 - Keep route content available immediately during page-turn effects, and reduce all desk, page, tab, paper, stamp, pencil, light, and token movement to a static state under `prefers-reduced-motion`.
 

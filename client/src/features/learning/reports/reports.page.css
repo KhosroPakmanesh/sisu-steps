@@ -34,6 +34,53 @@
   font-size: 0.8rem;
 }
 
+.paperclip-filter {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 var(--space-6) auto;
+  padding: 0.75rem 1rem 0.75rem 1.35rem;
+  border: 1px dashed var(--border-control);
+  background: var(--surface-warning);
+  clip-path: polygon(0.15rem 0, 100% 0.08rem, calc(100% - 0.18rem) 100%, 0 94%);
+  box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
+  cursor: pointer;
+  transform: rotate(0.18deg);
+}
+
+.paperclip-filter::before {
+  position: absolute;
+  top: -0.55rem;
+  left: 0.4rem;
+  width: 1.1rem;
+  height: 2.25rem;
+  border: 0.17rem solid var(--desk-metal);
+  border-bottom: 0;
+  border-radius: 0.65rem 0.65rem 0 0;
+  content: '';
+  filter: drop-shadow(0.08rem 0.12rem 0.08rem var(--notebook-shadow));
+  pointer-events: none;
+  transform: rotate(-8deg);
+}
+
+.paperclip-filter span {
+  display: grid;
+  gap: var(--space-1);
+}
+
+.paperclip-filter small {
+  color: var(--text-secondary);
+}
+
+.filtered-empty {
+  padding: var(--space-6);
+  color: var(--text-secondary);
+  text-align: center;
+}
+
 .report-table {
   overflow: hidden;
   border: 1px solid var(--border-default);

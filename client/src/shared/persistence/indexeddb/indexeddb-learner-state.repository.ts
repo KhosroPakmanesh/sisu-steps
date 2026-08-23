@@ -27,6 +27,7 @@ export class IndexedDbLearnerStateRepository implements LearnerStateRepository {
       ...state,
       lessonCompletions: state.lessonCompletions ?? [],
       correctionRecords: state.correctionRecords ?? [],
+      learnerNotes: state.learnerNotes ?? [],
     };
   }
 

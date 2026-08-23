@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { BackupService } from '@/features/learning/data-management/backup.service';
 import { ClearProgressService } from '@/features/learning/data-management/clear-progress.service';
 import { LessonProgressService } from '@/features/learning/lessons/lesson-progress.service';
+import { LearnerNoteService } from '@/features/learning/shared/notes/learner-note.service';
 import { getSkillReports, getTestReport } from '@/features/learning/reports/report.queries';
 import { ContentCatalogService } from '@/features/learning/shared/content/content-catalog.service';
 import { TopicPack } from '@/features/learning/shared/content/content.models';
@@ -49,6 +50,7 @@ describe('learning workflows', () => {
   let sessions: SessionStartService;
   let answers: SessionAnswerService;
   let lessons: LessonProgressService;
+  let notes: LearnerNoteService;
   let clearing: ClearProgressService;
   let backups: BackupService;
   let repository: FakeLearnerStateRepository;
@@ -70,6 +72,7 @@ describe('learning workflows', () => {
     sessions = TestBed.inject(SessionStartService);
     answers = TestBed.inject(SessionAnswerService);
     lessons = TestBed.inject(LessonProgressService);
+    notes = TestBed.inject(LearnerNoteService);
     clearing = TestBed.inject(ClearProgressService);
     backups = TestBed.inject(BackupService);
     repository = TestBed.inject(LEARNER_STATE_REPOSITORY) as unknown as FakeLearnerStateRepository;
@@ -221,6 +224,43 @@ describe('learning workflows', () => {
     ).toBe(0);
   });
 
+  it('saves, backs up, restores, and deliberately clears learner notes', async () => {
+    await notes.save('topic', undefined, 'Review vowel harmony.');
+    await notes.save('topic', 'lesson-1', 'Remember the back vowels.');
+    const backup = backups.create();
+
+    await clearing.clearTest('topic', 'test-1');
+    expect(store.learnerState().learnerNotes).toHaveLength(2);
+
+    await clearing.clearTopic('topic');
+    expect(store.learnerState().learnerNotes).toEqual([]);
+
+    await backups.restore(backup);
+    expect(store.learnerState().learnerNotes?.map((note) => note.text)).toEqual([
+      'Review vowel harmony.',
+      'Remember the back vowels.',
+    ]);
+
+    await clearing.clearAll();
+    expect(store.learnerState().learnerNotes).toEqual([]);
+  });
+
+  it('rejects note scopes that are not installed', async () => {
+    const backup = backups.create();
+    backup.state.learnerNotes = [
+      {
+        topicId: 'topic',
+        lessonId: 'missing',
+        text: 'Orphaned note',
+        updatedAt: backup.exportedAt,
+      },
+    ];
+
+    await expect(backups.restore(backup)).rejects.toThrowError(
+      'This backup refers to note topics or lessons that are not installed.',
+    );
+  });
+
   it('rejects backup references to unavailable content or incompatible corrections', async () => {
     const missingLesson = backups.create();
     missingLesson.state.lessonCompletions = [
@@ -290,10 +330,18 @@ describe('content-pack version alignment', () => {
       completedAttempt('old-topic-attempt', 'topic', 'test-1'),
       completedAttempt('other-topic-attempt', 'topic-two', 'topic-two-test-1'),
     ];
+    state.learnerNotes = [
+      {
+        topicId: 'topic',
+        text: 'Keep this topic note.',
+        updatedAt: '2026-08-18T00:00:00.000Z',
+      },
+    ];
 
     const aligned = alignLearnerStateWithPacks(state, [learningPack, secondPack]);
     expect(aligned.attempts.map((attempt) => attempt.id)).toEqual(['other-topic-attempt']);
     expect(aligned.unresolvedMistakeIds).toEqual(['topic-two-exercise-1']);
+    expect(aligned.learnerNotes?.map((note) => note.text)).toEqual(['Keep this topic note.']);
   });
 });
 

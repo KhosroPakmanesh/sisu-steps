@@ -30,6 +30,13 @@
         ><span>mastered after review</span>
       </div>
     </section>
+    <label class="paperclip-filter">
+      <input type="checkbox" [checked]="studiedOnly()" (change)="updateStudiedOnly($event)" />
+      <span>
+        <strong>Show studied tests only</strong>
+        <small>Filters this ledger without changing your saved results.</small>
+      </span>
+    </label>
     @for (pack of store.packs(); track pack.id) {
       <header class="page-heading">
         <div>
@@ -42,11 +49,11 @@
           <h2>Results by test</h2>
           <span>First · Latest · Best · Average</span>
         </div>
-        @for (test of pack.tests; track test.id; let index = $index) {
+        @for (test of visibleTests(pack); track test.id) {
           @let report = testReport(pack, test.id);
           <article>
             <div class="report-name">
-              <span>{{ index + 1 }}</span>
+              <span>{{ pack.tests.indexOf(test) + 1 }}</span>
               <div>
                 <h3>{{ test.title }}</h3>
                 <p>
@@ -78,6 +85,11 @@
               </div>
             </div>
           </article>
+        }
+        @if (visibleTests(pack).length === 0) {
+          <p class="filtered-empty">
+            No completed attempts yet. Unclip the filter to see all tests.
+          </p>
         }
       </section>
       <section class="skill-report" [attr.aria-label]="pack.title + ' learning by skill'">

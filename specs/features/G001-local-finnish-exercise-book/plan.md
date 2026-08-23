@@ -32,6 +32,7 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Prominent but optional fixed review sessions with locally calculated due dates
 - Separate corrected and delayed-mastery states using pre-authored parallel exercises
 - Skill-level reporting for first attempts, independent answers, reveals, corrections, mastery, and common error categories
+- Private topic and lesson notes stored with local learner data and included in backup and restore
 
 ## Non-goals
 
@@ -54,6 +55,7 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Lesson completion persistence, backup, restore, and clearing behavior
 - IndexedDB persistence and migrations
 - Reports, mistake practice, backup, and clearing controls
+- Topic and lesson note persistence, validation, backup, restore, and clearing semantics
 - Automated tests and accessibility checks
 - Content focus metadata, vocabulary declarations, dependency validation, and stage labels
 - Pack-version alignment for learner data
@@ -83,6 +85,7 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 16. Create a reusable content-authoring skill with pre-authoring and final Finnish-teaching pedagogy assessments and a saved assessment record.
 17. Remove the guided-combination stage, give every non-review topic separate focused preparation and testing, and reserve multi-topic combination for review.
 18. Remove the redundant Core/Extended test-set classification, group the learning map by Focused tests and Reviews, and communicate each group through its section rather than repeated card badges.
+19. Add one private sticky note per topic and lesson with validated local persistence, backup/restore coverage, and explicit clearing behavior.
 
 ## Risks
 
@@ -99,3 +102,4 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - A declared coverage list can still be incomplete through author error; automated validation proves that declared points are assessed, while pedagogical review must confirm that the declared list itself is exhaustive.
 - Exercise and lesson IDs must remain globally unique because mistakes, corrections, mastery, and lesson completion refer to them outside a single active topic.
 - Multi-pack backup migration must preserve compatible existing progress while rejecting unknown or internally inconsistent references.
+- Learner-authored notes must survive compatible pack updates without retaining references to removed topics or lessons, and destructive clearing text must state when notes are affected.

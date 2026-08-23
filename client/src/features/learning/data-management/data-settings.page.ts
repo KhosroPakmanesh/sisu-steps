@@ -72,7 +72,7 @@ export class DataSettingsPage {
         eyebrow: 'This topic only',
         title: `Clear “${title}”?`,
         message:
-          'All saved progress for this topic will be removed. Its exercises remain available.',
+          'All saved progress and private notes for this topic will be removed. Its lessons and exercises remain available.',
         confirmLabel: 'Clear this topic',
       },
       () => this.clearing.clearTopic(topicId),
@@ -86,7 +86,7 @@ export class DataSettingsPage {
         eyebrow: 'Every topic and test',
         title: 'Clear all learner history?',
         message:
-          'Every attempt, unfinished session, mistake, and lesson completion will be removed. This cannot be undone without a backup.',
+          'Every attempt, unfinished session, mistake, lesson completion, and private note will be removed. This cannot be undone without a backup.',
         confirmLabel: 'Clear all history',
       },
       () => this.clearing.clearAll(),

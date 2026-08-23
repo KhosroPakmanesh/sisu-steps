@@ -47,6 +47,7 @@ export class ClearProgressService {
       correctionRecords: (state.correctionRecords ?? []).filter(
         (record) => !exerciseIds.has(record.exerciseId),
       ),
+      learnerNotes: (state.learnerNotes ?? []).filter((note) => note.topicId !== topicId),
     }));
   }
 

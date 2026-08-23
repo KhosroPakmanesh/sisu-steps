@@ -17,6 +17,7 @@
     </button>
   } @else if (finished()) {
     <div class="practice-complete" aria-live="polite">
+      <span class="teacher-stamp practice-stamp" aria-hidden="true">PRACTISED</span>
       <strong>Practice complete</strong>
       <p>You can repeat it, finish the lesson, or start the test.</p>
       <button class="button secondary compact" type="button" (click)="start()">
@@ -47,6 +48,16 @@
             </label>
           }
         </fieldset>
+        <div class="answer-tool-row" role="toolbar" aria-label="Choice correction tools">
+          <button
+            class="answer-tool eraser-tool"
+            type="button"
+            [disabled]="!response() || !!feedback()"
+            (click)="eraseResponse()"
+          >
+            Erase choice
+          </button>
+        </div>
       } @else if (currentExercise.type === 'word-order') {
         <div class="practice-word-builder">
           <div class="practice-answer-zone" aria-label="Your sentence">
@@ -76,11 +87,30 @@
             }
           </div>
         </div>
+        <div class="answer-tool-row" role="toolbar" aria-label="Sentence correction tools">
+          <button
+            class="answer-tool correction-tape-tool"
+            type="button"
+            [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
+            (click)="undoLastWord()"
+          >
+            Undo last word
+          </button>
+          <button
+            class="answer-tool eraser-tool"
+            type="button"
+            [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
+            (click)="clearWordOrder()"
+          >
+            Clear sentence
+          </button>
+        </div>
       } @else {
         <label class="practice-text-answer">
           <span>Your answer</span>
           <input
             class="notebook-input"
+            [class.has-writing]="response().length > 0"
             type="text"
             autocomplete="off"
             [disabled]="!!feedback()"
@@ -89,6 +119,16 @@
             (keydown.enter)="submit()"
           />
         </label>
+        <div class="answer-tool-row" role="toolbar" aria-label="Answer correction tools">
+          <button
+            class="answer-tool eraser-tool"
+            type="button"
+            [disabled]="!response() || !!feedback()"
+            (click)="eraseResponse()"
+          >
+            Erase answer
+          </button>
+        </div>
       }
 
       @if (feedback(); as answer) {
@@ -99,6 +139,9 @@
           [class.skipped]="answer.skipped"
           aria-live="polite"
         >
+          <span class="teacher-stamp feedback-stamp" aria-hidden="true">
+            {{ answer.skipped ? 'SHOWN' : answer.correct ? 'HYVÄ' : 'CHECK' }}
+          </span>
           <div class="feedback-icon" aria-hidden="true">
             {{ answer.skipped ? '?' : answer.correct ? '✓' : '!' }}
           </div>

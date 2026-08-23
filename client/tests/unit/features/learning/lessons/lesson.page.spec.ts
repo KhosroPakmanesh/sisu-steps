@@ -55,6 +55,8 @@ describe('LessonPage', () => {
       link.textContent?.includes('Start test now'),
     );
     expect(startTest?.getAttribute('href')).toBe('/study/topic/test-1');
+    expect(element.querySelector('.sticky-note textarea')).not.toBeNull();
+    expect(element.querySelector('.sticky-note')?.textContent).toContain('Lesson note');
   });
 
   it('grades optional practice locally without touching scored state', () => {

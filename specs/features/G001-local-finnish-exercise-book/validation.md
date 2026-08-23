@@ -39,6 +39,9 @@
 - **VAL-G001-055** (`REQ-G001-096`): Run the official skill quick validator and inspect its discovery description, repository-contract routing, authoring workflow, validation commands, and stopping conditions.
 - **VAL-G001-056** (`REQ-G001-097`–`099`): Inspect the skill and saved assessment template for distinct pre-authoring and final Finnish-teaching pedagogy gates, required rubric dimensions, recorded limitations, and revision blocking for unresolved high-impact findings.
 - **VAL-G001-058** (`REQ-G001-029`, `052`, `101`): Lesson component and Playwright tests verify a centered single-lesson reader without redundant navigation, compact multi-lesson selection at 320 and 768 pixels, desktop lesson navigation below the sticky application header, consistent route-specific page headings, and no horizontal overflow.
+- **VAL-G001-060** (`REQ-G001-102`–`104`): Note-service and topic/lesson component tests verify one note per scope, the 1,000-character limit, explicit save/removal, local commit behavior, visible status, and preservation of a failed draft.
+- **VAL-G001-061** (`REQ-G001-105`): Backup tests accept valid topic and lesson notes and atomically reject malformed, duplicate, over-limit, unknown-topic, unknown-lesson, and cross-topic lesson references.
+- **VAL-G001-062** (`REQ-G001-106`): Clearing and state-alignment tests verify that test clearing preserves notes, topic clearing removes only owning notes, all-history clearing removes every note, compatible pack updates preserve valid notes, and removed owners are discarded.
 
 ## Content-quality validation
 
@@ -67,6 +70,7 @@
 - **VAL-G001-023** (`REQ-G001-035`–`039`): Use the reveal control and shortcut in ordinary and mistake-practice sessions; verify focus behavior, separate result counts, and persistence after reloading.
 - **VAL-G001-029** (`REQ-G001-040`–`052`): Read, practise, skip practice, finish, reread, and start the associated test using keyboard-only navigation at 320, 768, and 1440 pixel widths.
 - **VAL-G001-059** (`REQ-G001-101`): At 320, 768, and 1440 pixels, inspect one focused preparation route and one cumulative review route for consistent section gutters, immediate access to the active lesson, visible selected-lesson state, and absence of overlap with the sticky application header.
+- **VAL-G001-063** (`REQ-G001-102`–`106`): Save, edit, remove, export, restore, and clear topic and lesson notes using pointer and keyboard at 320 and 1440 pixels; verify plain-text rendering, readable status, retained drafts on failure, and the documented clearing consequences.
 
 ## Completion evidence
 
@@ -138,3 +142,11 @@
 - Live route inspection at 320, 768, and 1440 pixels confirmed route-specific page headings, aligned lesson-reader gutters, immediate access to the active lesson, no horizontal overflow, and no overlap with the sticky application header. The special-`k`, mixed-KPT, KPT-noun, KPT-verb, and KPT T-plural focused routes each display one target-specific lesson and no **Guided combination** label, while both Review routes retain all thirteen lessons.
 - The updated `$finnish-grammar-content-creator` skill passed the official `quick_validate.py` structural check and now creates complete Focused coverage followed only by mixed Reviews, without a second set classification.
 - Loading version 5.0.0 invokes the existing pack-scoped version-alignment reset for incompatible older progress; no manual IndexedDB deletion is required.
+
+## Execution evidence — 2026-08-23 private learner notes
+
+- Implemented `REQ-G001-102`–`106` as one plain-text note per topic or lesson with a 1,000-character limit, explicit save/removal, failure-safe drafts, native IndexedDB persistence, and no network dependency.
+- Backup validation accepts valid notes and rejects malformed, duplicate, over-limit, unknown-topic, unknown-lesson, and cross-topic lesson references before replacement. Existing backups without notes remain compatible.
+- Unit coverage verifies save, removal, failure retention, backup/restore, test-clear preservation, topic-scoped clearing, all-history clearing, and note preservation across compatible installed owners; all 85 unit tests passed.
+- Playwright verified topic-note persistence after navigation and native field/button operation in all three configured browser projects; all 33 runs passed across 320-, 768-, and 1440-pixel viewports.
+- Data & backup text now states that backups include private notes, one-test clearing keeps them, topic clearing removes the owning notes, and all-history clearing removes every note.

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap, provideRouter } from '@angular/router';
-import { beforeEach, describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { TopicPage } from '@/features/learning/dashboard/topic.page';
 import { LearningStateStore } from '@/features/learning/shared/state/learning-state.store';
 import { FakeLearningStateStore, learningPack } from '../../../fixtures/learning-content.fixture';
@@ -101,6 +101,60 @@ describe('TopicPage', () => {
       'Optional review due · 1',
     );
     expect(element.querySelector('a[href="/study/topic/test-1"]')).toBeTruthy();
+  });
+
+  it('saves a private topic note locally', async () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const textarea = element.querySelector('.sticky-note textarea') as HTMLTextAreaElement;
+    textarea.value = 'Review the back-vowel examples.';
+    textarea.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    const save = [...element.querySelectorAll('button')].find((button) =>
+      button.textContent?.includes('Save note'),
+    ) as HTMLButtonElement;
+    save.click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(store.learnerState().learnerNotes).toMatchObject([
+      { topicId: 'topic', text: 'Review the back-vowel examples.' },
+    ]);
+    expect(element.querySelector('[role="status"]')?.textContent).toContain('Note saved locally.');
+
+    textarea.value = '';
+    textarea.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    const remove = [...element.querySelectorAll('button')].find((button) =>
+      button.textContent?.includes('Remove saved note'),
+    ) as HTMLButtonElement;
+    remove.click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(store.learnerState().learnerNotes).toEqual([]);
+    expect(element.querySelector('[role="status"]')?.textContent).toContain('Saved note removed.');
+  });
+
+  it('keeps the note draft visible when saving fails', async () => {
+    vi.spyOn(store, 'commit').mockRejectedValueOnce(new Error('Local storage is unavailable.'));
+    const element = fixture.nativeElement as HTMLElement;
+    const textarea = element.querySelector('.sticky-note textarea') as HTMLTextAreaElement;
+    textarea.value = 'Keep this unfinished thought.';
+    textarea.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    const save = [...element.querySelectorAll('button')].find((button) =>
+      button.textContent?.includes('Save note'),
+    ) as HTMLButtonElement;
+    save.click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(textarea.value).toBe('Keep this unfinished thought.');
+    expect(element.querySelector('[role="alert"]')?.textContent).toContain(
+      'Local storage is unavailable.',
+    );
   });
 
   it('shows a recoverable error for an unknown topic', async () => {

@@ -5,12 +5,13 @@ import { ExerciseTest, Lesson } from '../shared/content/content.models';
 import { findTest, lessonsForTest } from '../shared/content/content.queries';
 import { isLessonCompleted } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
+import { StickyNoteComponent } from '../shared/notes/sticky-note.component';
 import { LessonPracticeComponent } from './lesson-practice.component';
 import { LessonProgressService } from './lesson-progress.service';
 
 @Component({
   selector: 'app-lesson',
-  imports: [LessonPracticeComponent, RouterLink],
+  imports: [LessonPracticeComponent, RouterLink, StickyNoteComponent],
   templateUrl: './lesson.page.html',
   styleUrl: './lesson.page.css',
 })

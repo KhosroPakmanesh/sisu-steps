@@ -24,9 +24,12 @@
 - A reusable Finnish grammar content-authoring workflow with saved pre-authoring and final Finnish-teaching pedagogy assessments.
 - A static multi-topic content catalog with topic-aware study, review, reporting, progress versioning, and clearing.
 - A compact topic catalog, prominent continue-learning recommendation, and lazy topic-detail route for scalable multi-pack navigation.
+- Private topic and lesson sticky notes with validated IndexedDB storage, backup/restore support, explicit removal, failure-safe drafts, and topic/all-history clearing semantics.
+- Safe choice/text/word-order correction controls and a native paper-clipped **Show studied tests only** report filter.
 
 ### Changed
 
+- Strengthened the interactive stationery vocabulary with immediate answer, lesson, practice, and session stamps; forward-moving active tabs and focusable cards; restrained ruled-input feedback; and ruler-only progress with every progress pencil marker removed. No accordion, disclosure, or collapse/expand interaction was added.
 - Completed the notebook-object pass across repeated UI surfaces: the catalog now uses a clipped assignment slip, printed record strip, and bound topic cover; topic maps use taped objectives and connected punched test cards; lessons use binder tabs, flashcards, vocabulary index cards, and practice sheets; study uses pinned targets, perforated answer slips, sentence strips, word pockets, correction slips, and foldouts; reports and data use ledger stamps, archive strips, and drafting sheets. Reports and Data & backup return navigation now uses the same folded paper link as the rest of the workbook.
 - Extended the Nordic notebook into a fully interactive workbook world: a lit wooden desk and physical page stack now frame exercise-book topic covers, a connected fold-out learning map, a true two-page lesson spread, a loose study sheet, returned result paper, school ledger, and archive drawer. Every action variant now shares one cut-paper construction with hierarchy expressed through readable ink and edge accents; answer controls, selects, fields, word cutouts, progress rulers, feedback, loading, notices, errors, focus, and scroll position use complementary physical-object styling with immediate page, tab, stamp, pencil, and paper motion plus a static reduced-motion mode.
 - Renamed the visible Light and Dark Appearance choices to the friendlier desk-light labels **Day** and **Night** without changing stored preference values or Automatic device-theme behavior. The header now removes numeric navigation prefixes and the redundant visible Appearance and Desk light headings, placing Topics, Reports, Data & backup, Automatic, Day, and Night in one continuous row while preserving an accessible group name. Destructive browser prompts are now accessible clipped confirmation sheets that focus Cancel, support Escape, restore focus, and preserve consequence-specific clear behavior.
@@ -51,6 +54,7 @@
 
 ### Removed
 
+- The experimental pencil-case toolbar and its `ä`/`ö` quick-insert buttons from scored answers and optional lesson practice.
 - The redundant Core/Extended test-set field, validation rules, labels, and badges. Tests are now grouped only as **Focused tests** and mixed **Reviews**.
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 

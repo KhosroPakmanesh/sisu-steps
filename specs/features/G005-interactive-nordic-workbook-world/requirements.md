@@ -14,7 +14,7 @@
 - **REQ-G005-007:** Radio choices shall place pencil-drawn circles on perforated answer slips, checkboxes shall resemble marked notebook boxes, text fields shall resemble true answer lines, and selects shall resemble tabbed card selectors rather than browser-form fields while retaining visible state, labels, keyboard use, touch targets, and assistive-technology semantics.
 - **REQ-G005-008:** Word-order controls shall resemble physical vocabulary cutouts that lift and settle when activated; clicking and keyboard operation shall remain complete, and dragging shall never be required.
 - **REQ-G005-009:** Backup and restore controls shall use the shared cut-paper action construction with archive-appropriate labels and accents while preserving accepted file types, action labels, status text, and deliberate restore behavior.
-- **REQ-G005-010:** Test, lesson, and topic progress shall resemble printed rulers with a pencil position, and completion, score, correct, incorrect, skipped, warning, and danger states shall retain explicit text or symbols in addition to physical styling and color.
+- **REQ-G005-010:** Test, lesson, and topic progress shall resemble printed rulers without a pencil marker, and completion, score, correct, incorrect, skipped, warning, and danger states shall retain explicit text or symbols in addition to physical styling and color.
 - **REQ-G005-011:** Focus shall be strongly visible as a pencil or ink outline on every surface, and tooltips or margin notes shall contain only supplemental information that is also available through accessible text when needed.
 
 ## Page-scene requirements
@@ -31,6 +31,20 @@
 - **REQ-G005-018:** At reduced motion, route, paper, stamp, pencil, token, light, and parallax motion shall become immediate static states; at all preferences, navigation and content shall not wait for animation.
 - **REQ-G005-019:** From 320 pixels upward, the world shall become a readable pocket-notebook composition without horizontal page scrolling, clipped labels, inaccessible controls, or loss of WCAG 2.2 AA contrast; it shall preserve semantic landmarks, local-only operation, practical touch targets, and existing learning and data behavior.
 
+## Stationery-refinement requirements
+
+- **REQ-G005-020:** Correct, incorrect, skipped, lesson-complete, and session-complete state changes shall receive a brief readable teacher-stamp response that never delays feedback and becomes static under reduced motion.
+- **REQ-G005-022:** Before submission, each applicable answer type shall provide clearly labelled correction or eraser actions for clearing the current choice or typed draft and for undoing or clearing the current word-order draft. These actions shall not alter stored attempts, mistakes, scores, or history.
+- **REQ-G005-023:** The private topic and lesson notes required by `REQ-G001-102`–`106` shall resemble attached sticky notes while retaining a visible label, native textarea, character count, save/removal wording, keyboard access, and status text.
+- **REQ-G005-024:** Reports shall provide a native **Show studied tests only** checkbox presented as a paper-clipped filter label; checking it shall filter only the visible test ledger rows and shall not alter learner data or report calculations.
+- **REQ-G005-025:** Active subject tabs, selected lesson tabs, and interactive topic or test cards shall move forward or lift briefly on active, selected, hover, or focus-within states without changing navigation order or requiring pointer hover.
+- **REQ-G005-026:** Typed learner input shall remain visibly aligned to a ruled answer line and may receive restrained graphite feedback while non-empty without using handwriting for the learner's text.
+- **REQ-G005-027:** The stationery refinement shall introduce no accordion, disclosure, collapsible panel, expandable tool tray, or other collapse/expand behavior.
+
+## Withdrawn refinement requirements
+
+- **REQ-G005-021 (withdrawn 2026-08-23):** The proposed Finnish-character pencil-case toolbar was removed from scope at the learner's request. Typed answers continue to use the native text field and keyboard.
+
 ## Acceptance criteria
 
 - Given any learner-facing route, when it opens in Day or Night appearance, then it clearly belongs to the same physical workbook world and its required content remains easier to find than its decoration.
@@ -45,4 +59,9 @@
 - Given a learner who cannot perceive color or metaphor, when any progress, answer, feedback, score, warning, or destructive state appears, then its meaning remains available through visible words, symbols, borders, or structure.
 - Given reduced motion, when the learner navigates and interacts, then all content and state changes remain immediate and the desk, paper, stamp, pencil, and token animations are suppressed.
 - Given the catalog, topic, lesson, study, results, reports, and data routes at 320, 768, and 1440 pixels, then each has its approved scene identity without overlap, clipping, or horizontal page scrolling.
-- Given any G005 presentation change, when the existing learning and persistence suites run, then routes, content, grading, sessions, reports, backup, restore, and clearing behavior remain unchanged.
+- Given any G005 refinement, when the existing learning and persistence suites run, then routes, content, grading, sessions, report values, and all pre-existing learner-data behavior remain unchanged while note storage follows `REQ-G001-102`–`106`.
+- Given answer feedback, lesson completion, or session completion, when the state changes, then a teacher stamp appears immediately with the complete text feedback still present and no animation under reduced motion.
+- Given an unsubmitted answer, when the learner uses its correction or eraser action, then only the current choice, typed draft, or word-order draft changes and persisted learner history is untouched.
+- Given a topic or lesson note, when it is displayed, edited, saved, removed, or reports a failure, then its native field, scope, character limit, explicit action, draft, and status remain understandable without recognizing the sticky-note metaphor.
+- Given Reports, when **Show studied tests only** is checked, then only tests with completed attempts remain in the visible ledger and the underlying report values and learner data do not change.
+- Given any stationery-refinement screen, when it is used at a supported width, then no stationery tool or teaching section opens or closes through a disclosure interaction.

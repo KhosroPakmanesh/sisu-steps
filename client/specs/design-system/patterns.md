@@ -63,15 +63,19 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - Present every action as the same recognisable cut-paper piece. Primary, secondary, compact, text, review, file, dialog, disabled, and destructive variants keep one silhouette and physical behavior; vary only paper tint, ink, edge accent, internal marks, and explicit wording.
 - Present answer radios as pencil-marked circles, text answers as ruled fields, and word-order buttons as movable vocabulary cards while preserving native form behavior.
 - Put answer radios on perforated ruled slips, place selected word cards on a sentence-building strip, keep available word cards in a labelled paper pocket, and present keyboard shortcuts as margin annotations rather than computer keycaps.
-- Present progress as printed ruler scales and state badges as teacher marks, always paired with readable text or numbers.
+- Present progress as printed ruler scales without a pencil marker and state changes as readable teacher stamps, always paired with visible text, symbols, or numbers.
 - Present reports as ledgers and data actions as cut-paper archive labels without hiding values, local-storage scope, restore behavior, or clearing consequences.
 - Use folded-corner back links on every secondary route. A back link does not become a generic action slip merely because it appears in a page heading.
 - Use the physical metaphor only as a visual aid. Do not require object recognition to discover, understand, or operate a control.
+- Use correction/eraser controls only for the current unsubmitted choice, typed answer, or word-order draft. Stored learner history continues to use explicit consequence-specific clearing controls.
+- Present topic and lesson notes as always-visible sticky notes with a native textarea, character count, explicit save/removal wording, and visible status; never render saved text as HTML.
+- Present the native **Show studied tests only** report checkbox on a paper-clipped filter label. Filtering changes visible ledger rows only.
+- Do not introduce an accordion, disclosure, collapsible stationery tool, expandable tray, or other collapse/expand interaction.
 
 ## Interactive workbook world
 
 - Place route content on the same desk-and-workbook stage, but give each route a distinct physical scene that reinforces its purpose.
 - Use exercise-book covers for topics, an unbroken connected path for the topic map, a facing-page reference layout for lessons, a loose worksheet for study, a returned marked paper for results, a ledger for reports, and labelled folders for data.
-- Use immediate page-turn, tab-slide, lift, settle, stamp, pencil, and light motion only as confirmation of a state change; never wait for animation before navigation, content, or input becomes available.
+- Use immediate page-turn, tab-slide, lift, settle, stamp, pencil-circle, answer-line, and light motion only as confirmation of a state change; never wait for animation before navigation, content, or input becomes available.
 - At 800 pixels and below, collapse facing pages into semantic reading order. At 560 pixels and below, remove desk props and present the page as a pocket notebook.
 - Treat the visual craft as atmosphere, not gamification: do not add locks, points, lives, currency, rewards, streak pressure, or leaderboards.

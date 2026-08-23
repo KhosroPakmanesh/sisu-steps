@@ -27,11 +27,7 @@
       @if (lessons().length > 1) {
         <div class="lesson-progress" aria-label="Lesson progress">
           <span>{{ completedCount() }} of {{ lessons().length }} lessons completed</span>
-          <div
-            class="progress-ruler"
-            [style.--progress]="(completedCount() / lessons().length) * 100 + '%'"
-          >
-            <span class="progress-pencil" aria-hidden="true"></span>
+          <div class="progress-ruler">
             <progress
               class="notebook-progress"
               [max]="lessons().length"
@@ -205,10 +201,17 @@
             </div>
           </div>
 
+          <app-sticky-note
+            [topicId]="topicId()"
+            [lessonId]="current.id"
+            heading="Notes for this lesson"
+          />
+
           <app-lesson-practice [lesson]="current" />
 
           @if (preparationFinished()) {
             <div class="preparation-complete" aria-live="polite">
+              <span class="teacher-stamp completion-stamp" aria-hidden="true">READ</span>
               <p class="eyebrow">Preparation complete</p>
               <h3>You can return anytime to review.</h3>
               <a class="button primary" [routerLink]="paths.study(topicId(), activeTest.id)"

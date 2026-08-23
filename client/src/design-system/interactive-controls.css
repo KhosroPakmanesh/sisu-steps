@@ -64,6 +64,8 @@ input[type='checkbox'] {
   border-radius: 0.08rem;
   background: var(--surface-paper);
   appearance: none;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0.12rem var(--surface-paper);
 }
 
 input[type='checkbox']:checked {
@@ -71,6 +73,11 @@ input[type='checkbox']:checked {
     linear-gradient(45deg, transparent 39%, var(--graphite) 40% 51%, transparent 52%),
     linear-gradient(-48deg, transparent 46%, var(--graphite) 47% 57%, transparent 58%),
     var(--surface-paper);
+}
+
+.paperclip-filter input[type='checkbox'] {
+  flex: 0 0 auto;
+  margin: 0;
 }
 
 input.notebook-input {
@@ -88,6 +95,13 @@ input.notebook-input {
 input.notebook-input:focus-visible {
   background-color: var(--surface-raised);
   box-shadow: 0 0.42rem 0 -0.2rem var(--blue-500);
+}
+
+input.notebook-input.has-writing {
+  background-color: color-mix(in srgb, var(--surface-raised) 78%, transparent);
+  color: var(--graphite);
+  text-shadow: 0.02rem 0.02rem 0 color-mix(in srgb, var(--graphite) 22%, transparent);
+  animation: answer-line-settle var(--motion-fast) ease-out;
 }
 
 .notebook-select {
@@ -130,40 +144,152 @@ input.notebook-input:focus-visible {
 
 .progress-ruler {
   position: relative;
-  padding-top: 0.6rem;
+  padding: 0.78rem 0.32rem 0.28rem;
+  border: 1px solid color-mix(in srgb, var(--amber-900) 48%, transparent);
+  border-radius: 0.14rem;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 0.46rem,
+      color-mix(in srgb, var(--amber-900) 54%, transparent) 0.47rem 0.5rem
+    ),
+    color-mix(in srgb, var(--amber-300) 68%, var(--surface-paper));
+  box-shadow:
+    inset 0 0.18rem 0 color-mix(in srgb, var(--surface-paper) 36%, transparent),
+    0 0.2rem 0.32rem var(--notebook-shadow);
+  clip-path: polygon(0.12rem 0, 100% 0.08rem, calc(100% - 0.12rem) 100%, 0 94%);
 }
 
-.progress-pencil {
+.progress-ruler::before {
   position: absolute;
-  z-index: 2;
   top: 0;
-  left: clamp(0.4rem, var(--progress), calc(100% - 0.8rem));
-  width: 1.25rem;
-  height: 0.38rem;
-  border-radius: 0.06rem;
-  background: linear-gradient(to bottom, var(--amber-300) 0 60%, var(--red-700) 61%);
-  box-shadow: 0 0.15rem 0.2rem var(--notebook-shadow);
-  transform: translateX(-50%) rotate(-8deg);
-  transition: left var(--motion-page) cubic-bezier(0.2, 0.8, 0.2, 1);
+  right: 0.32rem;
+  left: 0.32rem;
+  height: 0.42rem;
+  background: repeating-linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--amber-900) 68%, transparent) 0 0.04rem,
+    transparent 0.04rem 2.5rem
+  );
+  content: '';
+  pointer-events: none;
 }
 
-.progress-pencil::after {
-  position: absolute;
-  right: -0.45rem;
-  border-block: 0.19rem solid transparent;
-  border-left: 0.48rem solid var(--stone-200);
-  content: '';
+.progress-ruler .notebook-progress {
+  position: relative;
+  z-index: 1;
+  display: block;
+  height: 0.72rem;
+  margin: 0;
+  border-color: color-mix(in srgb, var(--amber-900) 42%, var(--border-control));
+}
+
+.answer-tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+  margin-top: var(--space-3);
+}
+
+.answer-tool {
+  min-height: var(--control-height-compact);
+  padding: 0.48rem 0.7rem;
+  border: 1px solid var(--border-control);
+  border-radius: 0.12rem;
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font: inherit;
+  font-size: var(--text-small);
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+  box-shadow: 0 0.14rem 0 var(--notebook-shadow);
+  transition:
+    transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.eraser-tool {
+  border-left: 0.38rem solid var(--red-700);
+  background: linear-gradient(110deg, var(--surface-danger) 0 48%, var(--surface-paper) 49%);
+}
+
+.correction-tape-tool {
+  border-left: 0.38rem solid var(--blue-500);
+  background: linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 64%,
+    var(--notebook-rule) 65% 72%,
+    var(--surface-paper) 73%
+  );
+}
+
+.answer-tool:hover:not(:disabled) {
+  box-shadow: 0 0.28rem 0 var(--notebook-shadow);
+  transform: translateY(-0.12rem);
+}
+
+.answer-tool:active:not(:disabled) {
+  box-shadow: none;
+  transform: translateY(0.08rem);
+}
+
+.answer-tool:disabled {
+  cursor: default;
+  filter: grayscale(0.35);
+  opacity: 0.52;
 }
 
 .feedback {
   overflow: visible;
 }
 
-.feedback-icon,
-.result-ring,
-.score-badge,
-.completed-badge {
+.teacher-stamp {
+  position: absolute;
+  z-index: 3;
+  padding: 0.25rem 0.42rem;
+  border: 0.2rem double currentcolor;
+  border-radius: 50%;
+  color: currentcolor;
+  font-size: 0.62rem;
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.08em;
+  line-height: 1;
+  transform: rotate(-8deg);
   animation: stamp-land var(--motion-standard) cubic-bezier(0.2, 0.9, 0.3, 1.25);
+}
+
+.feedback-stamp {
+  top: -0.8rem;
+  right: 1rem;
+}
+
+.result-stamp,
+.completion-stamp,
+.practice-stamp {
+  top: 1rem;
+  right: 1rem;
+}
+
+.preparation-complete,
+.practice-complete {
+  position: relative;
+}
+
+.site-header nav a.active {
+  transform: translateX(0.12rem);
+}
+
+.subject-tab.active {
+  transform: translateX(0.48rem);
+}
+
+.topic-card:focus-within,
+.topic-page .test-card:focus-within {
+  z-index: 2;
+  filter: drop-shadow(0.32rem 0.42rem 0 var(--paper-edge))
+    drop-shadow(0.5rem 0.7rem 0.8rem var(--notebook-shadow));
+  transform: translateY(-0.18rem) rotate(0);
 }
 
 button:focus-visible,
@@ -206,8 +332,17 @@ label:has(input:focus-visible) {
   }
 }
 
+@keyframes answer-line-settle {
+  from {
+    background-position:
+      0.48rem 0,
+      -0.2rem 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .progress-pencil {
-    transition: none;
+  .teacher-stamp,
+  input.notebook-input.has-writing {
+    animation: none;
   }
 }

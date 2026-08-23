@@ -115,6 +115,11 @@
 - **REQ-G001-099:** A pack shall not receive final authoring approval when either pedagogy assessment identifies an unresolved high-impact gap; the assessment record shall state approval, approval with explicit limitations, or revision required.
 - **REQ-G001-100:** Content research and authoring may use verified sources during development, but the shipped application shall remain static and shall make no runtime AI, network research, or content-generation call.
 - **REQ-G001-101:** A focused preparation route with one lesson shall present that lesson in a centered reading hierarchy without redundant lesson navigation or aggregate progress. A multi-lesson review shall provide a persistent lesson navigator below the application header on wide viewports and a compact labelled lesson selector before the reader at 800 pixels and below.
+- **REQ-G001-102:** Each topic and each lesson shall provide one visibly labelled private note field with an explicit save action; saving an empty field shall explicitly remove the saved note.
+- **REQ-G001-103:** Learner notes shall be plain text of at most 1,000 characters and shall be stored in native IndexedDB as at most one timestamped record for each topic scope or lesson scope without a backend, account, or network request.
+- **REQ-G001-104:** A failed note save or removal shall leave the learner's current draft visible and shall show a recoverable error message.
+- **REQ-G001-105:** Learner notes shall be included in versioned JSON backup and restore. Restore shall atomically reject malformed notes, over-limit text, duplicate note scopes, unknown topics, or lessons that do not belong to the recorded topic.
+- **REQ-G001-106:** Clearing one test shall preserve learner notes; clearing one topic shall remove its topic and lesson notes; clearing all learner history shall remove every note. Compatible pack updates shall preserve notes whose topic and optional lesson still exist and discard only notes whose owner is no longer installed.
 
 ## Acceptance criteria
 
@@ -167,3 +172,8 @@
 - Given a completed future pack, when final validation runs, then a saved final pedagogy assessment records its disposition and blocks approval for unresolved high-impact findings.
 - Given a focused test with one preparation lesson, when **Learn first** opens, then the test title is the page heading and the lesson reader is centered without a one-item navigator or aggregate progress bar.
 - Given a review with multiple preparation lessons, when **Learn first** opens at a wide viewport, then the lesson navigator remains visible below the sticky application header; at 800 pixels and below, then a labelled selector appears immediately before the reader instead of the complete navigation list.
+- Given a topic or lesson, when the learner writes and saves a private note, then reopening the same scope in the same browser shows that note without any network dependency.
+- Given a note draft whose save fails, when the error is reported, then the draft remains visible and can be retried.
+- Given a backup containing valid notes, when it is restored, then every note returns to its topic or lesson; given an invalid, duplicate, over-limit, or unknown note reference, then restore fails without replacing existing learner data.
+- Given saved notes, when one test is cleared, then all notes remain; when one topic is cleared, then only notes belonging to that topic are removed; when all learner history is cleared, then no notes remain.
+- Given a compatible topic-pack update, when a noted topic or lesson still exists, then its note remains available; when its owner is removed from the installed catalog, then the orphaned note is discarded.

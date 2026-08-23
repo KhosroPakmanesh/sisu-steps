@@ -8,6 +8,11 @@
 - **VAL-G005-004** (`REQ-G005-017`): Unit or browser coverage verifies the confirmation sheet's consequence text, safe initial focus, Escape/Cancel behavior, focus return, and confirm-only execution.
 - **VAL-G005-005** (`REQ-G005-018`): A reduced-motion browser check verifies animations are disabled without delaying navigation or state changes.
 - **VAL-G005-006** (`REQ-G005-019`): ESLint and Angular template accessibility lint, Stylelint, module-size and architecture checks, Prettier, production/test typechecks, content validation, production build, unit tests, and Playwright complete without regression.
+- **VAL-G005-007** (`REQ-G005-010`, `020`, `025`, `026`): Component and browser checks verify ruler-only progress, readable static/animated teacher stamps, selected/focus-within tab and card reactions, ruled non-handwritten input, and reduced-motion suppression.
+- **VAL-G005-008** (`REQ-G005-022`): Study component and browser tests verify choice clearing, typed-draft clearing, word-order undo/clear, and no stored-state mutation before submission.
+- **VAL-G005-009** (`REQ-G005-023`, `REQ-G001-102`–`106`): Topic and lesson browser workflows verify the sticky-note field, limit, save/removal status, persistence after navigation, backup/restore inclusion, and clearing semantics.
+- **VAL-G005-010** (`REQ-G005-024`): Report component and browser checks operate the native paper-clipped checkbox by pointer and keyboard and verify visible-row filtering without changing report values.
+- **VAL-G005-011** (`REQ-G005-027`): Template and browser inspection verify that the stationery refinement introduces no accordion, disclosure, collapsible panel, expandable toolbar, or hidden tool tray.
 
 ## Manual checks
 
@@ -18,7 +23,12 @@
 - Confirm Day and Night text, focus, state, destructive, and disabled combinations meet WCAG 2.2 AA and remain meaningful without color.
 - Confirm reduced motion removes page, tab, paper, stamp, pencil, token, desk-light, and parallax movement while preserving immediate state changes.
 - Confirm no topic appears locked and no point, reward, currency, streak, life, leaderboard, or other gameplay behavior is introduced.
-- Confirm no remote assets, external fonts, storage shape changes, route changes, grading changes, or data-contract changes occur.
+- Confirm no remote assets, external fonts, route changes, grading changes, or unapproved data-contract changes occur; the only learner-state extension is `REQ-G001-102`–`106`.
+- Confirm every progress surface is a ruler without a pencil marker; stamp feedback remains readable and static under reduced motion.
+- Use correction/eraser actions for choice, text, and word-order exercises without submitting.
+- Save and remove topic and lesson sticky notes, navigate away and back, and verify backup, restore, topic clearing, and all-history clearing behavior.
+- Operate **Show studied tests only** with pointer and keyboard and confirm its paper clip does not obscure the checkbox, label, or focus outline.
+- Confirm no new section or stationery tool can be collapsed or expanded.
 
 ## Completion evidence
 
@@ -62,3 +72,11 @@ No generated learning content or AI quality-evaluation layer is part of this pre
 - Playwright: all 30 runs passed with one worker across 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide Chromium projects. New coverage verifies clipped catalog, topic-map, and answer surfaces; square notebook objective labels; and folded Reports and Data & backup return links while retaining native control semantics and keyboard operation.
 - Visual inspection: Day catalog, topic map, single and cumulative lesson pages, study sheet, reports, and data archive were inspected on wide or 320-pixel layouts; Night catalog, topic map, and study sheet were inspected at 1440 pixels. Text remained readable, the corrected assignment slip retained comfortable ink contrast, and the physical silhouettes remained distinct without obscuring labels or state.
 - Behavior review: no routes, learning sequence, Finnish content, form-control semantics, keyboard behavior, grading, progress, persistence, backup, restore, clearing consequence, or stored-data contract changed. The refinement is presentation-only.
+
+### 2026-08-23 stationery interaction refinement
+
+- Implemented `REQ-G005-020` and `REQ-G005-022`–`027`: readable state stamps; safe choice, text, and word-order correction controls; attached topic/lesson notes; a native paper-clipped report filter; stronger active/focus states; ruled-input feedback; and no new collapse/expand behavior. `REQ-G005-021` was withdrawn and its pencil-case toolbar was removed at the learner's request.
+- Updated `REQ-G005-010` and every progress template to use ruler-only progress. No `.progress-pencil` element or progress-pencil CSS remains.
+- `npm --prefix client run check` passed ESLint and Angular template accessibility lint, Stylelint, module-size, source-reachability, architecture, repository formatting, production/test typechecks, catalog validation, the production build at a 77.68 kB estimated initial transfer size, and all 85 unit tests after the pencil-case withdrawal.
+- Playwright passed all 33 cases with one worker across 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide Chromium projects after the withdrawal. Coverage includes native answer correction tools, erasing/undo, ruler-only progress, topic-note persistence, report filtering, reduced motion, and horizontal overflow. On Windows, the wrapper required interruption only after every case passed while its managed development server was shutting down; port 4200 was confirmed stopped.
+- Visual inspection covered the Day topic map with its sticky note at 1440 pixels, the compact study ruler and answer correction tools at 1440 pixels, and the complete paper-clipped reports ledger at 320 pixels. Required labels and content remained clearer than the stationery effects.

@@ -93,4 +93,37 @@ describe('learner-backup validation', () => {
       ),
     ).toThrowError('The backup contains invalid correction and mastery data.');
   });
+
+  it('accepts valid topic and lesson notes', () => {
+    const state = createEmptyLearnerState({ topic: '1.0.0' });
+    state.learnerNotes = [
+      { topicId: 'topic', text: 'Review vowel harmony.', updatedAt: exportedAt },
+      {
+        topicId: 'topic',
+        lessonId: 'lesson-1',
+        text: 'Remember the back vowels.',
+        updatedAt: exportedAt,
+      },
+    ];
+
+    expect(parseLearnerBackup(backupWithState(state)).state.learnerNotes).toEqual(
+      state.learnerNotes,
+    );
+  });
+
+  it('rejects malformed, over-limit, and duplicate learner notes', () => {
+    const state = createEmptyLearnerState({ topic: '1.0.0' });
+    state.learnerNotes = [
+      { topicId: 'topic', text: 'First', updatedAt: exportedAt },
+      { topicId: 'topic', text: 'Duplicate', updatedAt: exportedAt },
+    ];
+    expect(() => parseLearnerBackup(backupWithState(state))).toThrowError(
+      'The backup contains duplicate learner notes.',
+    );
+
+    state.learnerNotes = [{ topicId: 'topic', text: 'x'.repeat(1001), updatedAt: exportedAt }];
+    expect(() => parseLearnerBackup(backupWithState(state))).toThrowError(
+      'The backup contains invalid learner notes.',
+    );
+  });
 });

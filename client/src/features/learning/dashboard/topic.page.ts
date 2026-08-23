@@ -10,11 +10,12 @@ import {
   lessonProgressForTest,
 } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
+import { StickyNoteComponent } from '../shared/notes/sticky-note.component';
 import { getTopicSummary } from './dashboard.queries';
 
 @Component({
   selector: 'app-topic',
-  imports: [RouterLink],
+  imports: [RouterLink, StickyNoteComponent],
   templateUrl: './topic.page.html',
   styleUrl: './topic.page.css',
 })

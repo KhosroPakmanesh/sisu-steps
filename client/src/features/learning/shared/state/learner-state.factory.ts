@@ -11,5 +11,6 @@ export function createEmptyLearnerState(
     unresolvedMistakeIds: [],
     lessonCompletions: [],
     correctionRecords: [],
+    learnerNotes: [],
   };
 }

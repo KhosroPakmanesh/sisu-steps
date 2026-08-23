@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { routePaths } from '@/shared/navigation/route-paths';
 import { TopicPack } from '../shared/content/content.models';
@@ -20,6 +20,7 @@ import { getSkillReports, getTestReport } from './report.queries';
 export class ReportsPage {
   protected readonly store = inject(LearningStateStore);
   protected readonly paths = routePaths;
+  protected readonly studiedOnly = signal(false);
   protected readonly attemptCount = computed(() =>
     completedAttemptCount(this.store.learnerState()),
   );
@@ -42,5 +43,15 @@ export class ReportsPage {
 
   protected topicMistakeCount(pack: TopicPack): number {
     return mistakeCount(this.store.learnerState(), pack);
+  }
+
+  protected visibleTests(pack: TopicPack) {
+    return this.studiedOnly()
+      ? pack.tests.filter((test) => this.testReport(pack, test.id).attempts > 0)
+      : pack.tests;
+  }
+
+  protected updateStudiedOnly(event: Event): void {
+    this.studiedOnly.set((event.currentTarget as HTMLInputElement).checked);
   }
 }

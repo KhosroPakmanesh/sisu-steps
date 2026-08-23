@@ -1,0 +1,47 @@
+<aside class="sticky-note" [attr.aria-label]="heading">
+  <header>
+    <div>
+      <p class="card-kicker">Private · saved in this browser</p>
+      <h3>{{ heading }}</h3>
+    </div>
+    <span class="note-count" [class.over-limit]="draft().length > maxLength">
+      {{ draft().length }}/{{ maxLength }}
+    </span>
+  </header>
+  <label>
+    <span>{{ lessonId ? 'Lesson note' : 'Topic note' }}</span>
+    <textarea
+      [value]="draft()"
+      [attr.maxlength]="maxLength"
+      rows="5"
+      (input)="updateDraft($event)"
+      placeholder="Write a reminder, example, or question…"
+    ></textarea>
+  </label>
+  <p class="note-help">Plain text only. This note stays with your local learner data.</p>
+  @if (message()) {
+    <p class="note-status success" role="status">{{ message() }}</p>
+  }
+  @if (error()) {
+    <p class="note-status failure" role="alert">{{ error() }}</p>
+  }
+  <footer>
+    <button
+      class="button secondary compact"
+      type="button"
+      [disabled]="!hasChanges() || busy()"
+      (click)="resetDraft()"
+    >
+      Reset draft
+    </button>
+    <button
+      class="button compact"
+      [class.danger]="willRemove()"
+      type="button"
+      [disabled]="!hasChanges() || busy() || draft().length > maxLength"
+      (click)="save()"
+    >
+      {{ willRemove() ? 'Remove saved note' : 'Save note' }}
+    </button>
+  </footer>
+</aside>

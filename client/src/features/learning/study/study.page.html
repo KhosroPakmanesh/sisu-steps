@@ -6,6 +6,7 @@
           <strong>{{ result.percentage }}%</strong><span>score</span>
         </div>
       }
+      <span class="teacher-stamp result-stamp" aria-hidden="true">DONE</span>
       <p class="eyebrow">
         {{ result.mode === 'review' ? 'Unscored review complete' : 'Session complete' }}
       </p>
@@ -70,15 +71,7 @@
           >{{ activeSession.currentIndex + 1 }} / {{ activeSession.exerciseIds.length }}</span
         >
       </header>
-      <div
-        class="progress-ruler runner-ruler"
-        [style.--progress]="
-          ((activeSession.currentIndex + (feedback() ? 1 : 0)) / activeSession.exerciseIds.length) *
-            100 +
-          '%'
-        "
-      >
-        <span class="progress-pencil" aria-hidden="true"></span>
+      <div class="progress-ruler runner-ruler">
         <progress
           class="notebook-progress runner-progress"
           [max]="activeSession.exerciseIds.length"
@@ -118,6 +111,16 @@
               </label>
             }
           </fieldset>
+          <div class="answer-tool-row" role="toolbar" aria-label="Choice correction tools">
+            <button
+              class="answer-tool eraser-tool"
+              type="button"
+              [disabled]="!response() || !!feedback()"
+              (click)="eraseResponse()"
+            >
+              Erase choice
+            </button>
+          </div>
         } @else if (currentExercise.type === 'word-order') {
           <div class="word-builder">
             <div class="answer-zone" aria-label="Your sentence">
@@ -147,11 +150,30 @@
               }
             </div>
           </div>
+          <div class="answer-tool-row" role="toolbar" aria-label="Sentence correction tools">
+            <button
+              class="answer-tool correction-tape-tool"
+              type="button"
+              [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
+              (click)="undoLastWord()"
+            >
+              Undo last word
+            </button>
+            <button
+              class="answer-tool eraser-tool"
+              type="button"
+              [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
+              (click)="clearWordOrder()"
+            >
+              Clear sentence
+            </button>
+          </div>
         } @else {
           <label class="text-answer">
             <span>Your answer</span>
             <input
               class="notebook-input"
+              [class.has-writing]="response().length > 0"
               type="text"
               autocomplete="off"
               [disabled]="!!feedback()"
@@ -161,6 +183,16 @@
               placeholder="Type your answer…"
             />
           </label>
+          <div class="answer-tool-row" role="toolbar" aria-label="Answer correction tools">
+            <button
+              class="answer-tool eraser-tool"
+              type="button"
+              [disabled]="!response() || !!feedback()"
+              (click)="eraseResponse()"
+            >
+              Erase answer
+            </button>
+          </div>
         }
 
         @if (feedback(); as answer) {
@@ -171,6 +203,9 @@
             [class.skipped]="answer.skipped"
             aria-live="polite"
           >
+            <span class="teacher-stamp feedback-stamp" aria-hidden="true">
+              {{ answer.skipped ? 'SHOWN' : answer.correct ? 'HYVÄ' : 'CHECK' }}
+            </span>
             <div class="feedback-icon" aria-hidden="true">
               {{ answer.skipped ? '?' : answer.correct ? '✓' : '!' }}
             </div>

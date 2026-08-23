@@ -17,6 +17,7 @@ export function compatibleBackupState(
   validateTopicAndTestReferences(backup.state, installedPacks);
   validateCorrectionReferences(backup.state, installedPacks);
   validateLessonReferences(backup.state, installedPacks);
+  validateNoteReferences(backup.state, installedPacks);
   validateReferencedTopicVersions(
     backup.state,
     backupVersions,
@@ -29,6 +30,7 @@ export function compatibleBackupState(
       contentPackVersions: backupVersions,
       lessonCompletions: backup.state.lessonCompletions ?? [],
       correctionRecords: backup.state.correctionRecords ?? [],
+      learnerNotes: backup.state.learnerNotes ?? [],
     },
     installedPacks,
   );
@@ -125,6 +127,19 @@ function validateLessonReferences(state: LearnerState, packs: TopicPack[]): void
   }
 }
 
+function validateNoteReferences(state: LearnerState, packs: TopicPack[]): void {
+  if (
+    (state.learnerNotes ?? []).some((note) => {
+      const pack = packs.find((candidate) => candidate.id === note.topicId);
+      return (
+        !pack || (!!note.lessonId && !pack.lessons.some((lesson) => lesson.id === note.lessonId))
+      );
+    })
+  ) {
+    throw new Error('This backup refers to note topics or lessons that are not installed.');
+  }
+}
+
 function validateReferencedTopicVersions(
   state: LearnerState,
   versions: Record<string, string> | undefined,
@@ -134,6 +149,7 @@ function validateReferencedTopicVersions(
   const topicIds = new Set([
     ...state.attempts.map((attempt) => attempt.topicId),
     ...state.sessions.map((session) => session.topicId),
+    ...(state.learnerNotes ?? []).map((note) => note.topicId),
   ]);
   for (const pack of packs) {
     const exerciseIds = new Set(

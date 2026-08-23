@@ -22,7 +22,8 @@
       <p class="card-kicker">Keep a safe copy</p>
       <h2>Backup and restore</h2>
       <p>
-        Save your attempts, unfinished sessions, mistakes, and completed lessons in one backup file.
+        Save your attempts, unfinished sessions, mistakes, completed lessons, and private notes in
+        one backup file.
       </p>
     </div>
     <div class="settings-actions">
@@ -40,7 +41,10 @@
       <div>
         <p class="card-kicker">{{ pack.level }} · Choose what to clear</p>
         <h2>{{ pack.title }}</h2>
-        <p>Clear one test, or clear this topic without affecting any other topic pack.</p>
+        <p>
+          Clearing one test keeps your notes. Clearing this topic also removes its topic and lesson
+          notes without affecting any other topic pack.
+        </p>
       </div>
       <div class="clear-list">
         @for (test of pack.tests; track test.id; let index = $index) {
@@ -69,7 +73,8 @@
         <p class="card-kicker">Destructive action</p>
         <h2>Clear all history</h2>
         <p>
-          This removes progress from every topic. Bundled lessons and exercises are never removed.
+          This removes progress and private notes from every topic. Bundled lessons and exercises
+          are never removed.
         </p>
       </div>
       <div class="settings-actions">

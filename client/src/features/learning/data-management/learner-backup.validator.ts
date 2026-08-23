@@ -7,6 +7,7 @@ export function parseLearnerBackup(value: unknown): LearnerBackup {
   validateContentVersions(value.state);
   validateLessonCompletions(value.state.lessonCompletions ?? []);
   validateCorrectionRecords(value.state.correctionRecords ?? []);
+  validateLearnerNotes(value.state.learnerNotes);
   return { ...value, state: value.state };
 }
 
@@ -88,6 +89,40 @@ function validateCorrectionRecords(records: unknown[]): void {
   if (records.some((record) => !isCorrectionRecord(record))) {
     throw new Error('The backup contains invalid correction and mastery data.');
   }
+}
+
+function validateLearnerNotes(notes: unknown): void {
+  if (notes === undefined) return;
+  if (!Array.isArray(notes)) throw new Error('The backup contains invalid learner notes.');
+  const scopes = new Set<string>();
+  for (const note of notes) {
+    if (!isLearnerNote(note)) throw new Error('The backup contains invalid learner notes.');
+    const scope = `${note.topicId}\u0000${note.lessonId ?? ''}`;
+    if (scopes.has(scope)) throw new Error('The backup contains duplicate learner notes.');
+    scopes.add(scope);
+  }
+}
+
+function isLearnerNote(
+  note: unknown,
+): note is { topicId: string; lessonId?: string; text: string; updatedAt: string } {
+  return (
+    typeof note === 'object' &&
+    note !== null &&
+    !Array.isArray(note) &&
+    'topicId' in note &&
+    typeof note.topicId === 'string' &&
+    note.topicId.trim().length > 0 &&
+    (!('lessonId' in note) ||
+      note.lessonId === undefined ||
+      (typeof note.lessonId === 'string' && note.lessonId.trim().length > 0)) &&
+    'text' in note &&
+    typeof note.text === 'string' &&
+    note.text.trim().length > 0 &&
+    note.text.length <= 1000 &&
+    'updatedAt' in note &&
+    validDate(note.updatedAt)
+  );
 }
 
 function isCorrectionRecord(record: unknown): boolean {

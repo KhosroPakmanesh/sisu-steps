@@ -77,5 +77,31 @@ describe('StudyPage', () => {
     expect(fixture.nativeElement.querySelector('.feedback')?.textContent).toContain(
       'The word talo has back vowels, so the ending is -ssa.',
     );
+    expect(fixture.nativeElement.querySelector('.feedback-stamp')?.textContent).toContain('CHECK');
   });
+
+  it('clears a typed draft without storing it', async () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const input = element.querySelector('.text-answer input') as HTMLInputElement;
+    input.value = 'talo';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    expect(input.value).toBe('talo');
+    expect(storeSnapshot()).toEqual({ attempts: 0, answers: 0 });
+
+    (element.querySelector('.eraser-tool') as HTMLButtonElement).click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    expect(input.value).toBe('');
+    expect(storeSnapshot()).toEqual({ attempts: 0, answers: 0 });
+  });
+
+  function storeSnapshot() {
+    const state = TestBed.inject(LearningStateStore).learnerState();
+    return {
+      attempts: state.attempts.length,
+      answers: state.sessions.flatMap((session) => session.answers).length,
+    };
+  }
 });

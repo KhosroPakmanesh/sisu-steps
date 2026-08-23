@@ -9,10 +9,11 @@ Create or extract a reusable component only when real screens share the behavior
 - One cut-paper action family with primary, secondary, compact, text, review, file, dialog, disabled, and destructive ink-and-edge variants.
 - Pencil-sketch loading on a loose drafting sheet, plain empty sheet, torn correction error, attached success/failure notice, and operation states.
 - Bound exercise-book topic cover, clipped continue-learning assignment, printed catalog record strip, inside-cover topic pocket, taped objective sheet, binder group divider, connected punched test card, stage/score stamp, and ledger summary.
-- Labelled answer-line text input, perforated answer slip with animated pencil-circle radio, cut-paper archive file input, tab-stack select, and lift-and-settle vocabulary-card word-order builder with ruled sentence strip and vocabulary pocket.
+- Labelled answer-line text input, correction/eraser draft controls, perforated answer slip with animated pencil-circle radio, cut-paper archive file input, tab-stack select, and lift-and-settle vocabulary-card word-order builder with ruled sentence strip and vocabulary pocket.
 - Teacher correction-slip answer feedback, answer reveal, returned-paper session result, and fold-out sentence-construction diagram.
 - Binder-index lesson navigation, clipped focus contract, margin key-point labels, example flashcards, vocabulary index cards, detachable optional-practice sheet, and completion stamp.
 - Consequence-specific modal confirmation sheet for clear-test, clear-topic, and clear-all actions.
+- Attached topic/lesson sticky note with a native textarea and explicit save/removal status, a paper-clipped native report filter checkbox, ruler-only progress, and readable teacher-stamp feedback.
 - Catalog exercise-book covers, connected fold-out topic map, two-page lesson spread, loose study and returned-result sheets, Finnish school ledger, and archive-drawer data scene.
 
 ## Rules
@@ -28,5 +29,6 @@ Create or extract a reusable component only when real screens share the behavior
 - Keep notebook ornament in CSS or `aria-hidden` elements so it cannot add noise to the accessibility tree.
 - Controls may look wholly custom and object-like, but their DOM semantics remain familiar: visual tabs stay links, desk lights and answer circles stay radios, answer lines stay inputs, selectors stay selects, and vocabulary cutouts stay buttons.
 - Every action button and action-link uses the same torn silhouette, inset cut line, folded corner, paper depth, and lift/press behavior. Use paper tint, ink, edge accent, and explicit wording—not a different construction—to communicate hierarchy and state.
+- A correction, filter, or note control remains visible and directly operable; do not hide it in a disclosure or replace its native semantics with a stationery object.
 - Repeated information surfaces use a small material vocabulary: bound covers for topics, punched index cards for mapped tests, flashcards and margin labels inside lessons, perforated slips for answer choices, ledger rows and stamps for reports, and file dividers for data. Do not use a generic rounded-card fallback.
 - Prefer a native `<dialog>` for the confirmation sheet; focus Cancel on open, cancel on Escape, return focus on close, and emit the destructive decision only from the labelled confirm action.

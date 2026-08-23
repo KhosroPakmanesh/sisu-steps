@@ -8,7 +8,8 @@ function hasLearnerProgress(state: LearnerState): boolean {
     state.sessions.length > 0 ||
     state.unresolvedMistakeIds.length > 0 ||
     (state.lessonCompletions?.length ?? 0) > 0 ||
-    (state.correctionRecords?.length ?? 0) > 0
+    (state.correctionRecords?.length ?? 0) > 0 ||
+    (state.learnerNotes?.length ?? 0) > 0
   );
 }
 
@@ -76,6 +77,12 @@ export function alignLearnerStateWithPacks(state: LearnerState, packs: TopicPack
         installedExerciseIds.has(record.exerciseId) &&
         installedExerciseIds.has(record.parallelExerciseId),
     ),
+    learnerNotes: (next.learnerNotes ?? []).filter((note) => {
+      const pack = packs.find((candidate) => candidate.id === note.topicId);
+      return (
+        !!pack && (!note.lessonId || pack.lessons.some((lesson) => lesson.id === note.lessonId))
+      );
+    }),
   };
 }
 

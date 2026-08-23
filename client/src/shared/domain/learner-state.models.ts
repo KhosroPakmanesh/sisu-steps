@@ -4,6 +4,13 @@ export interface LessonCompletion {
   completedAt: string;
 }
 
+export interface LearnerNote {
+  topicId: string;
+  lessonId?: string;
+  text: string;
+  updatedAt: string;
+}
+
 export interface SubmittedAnswer {
   exerciseId: string;
   submittedAnswer: string;
@@ -68,6 +75,7 @@ export interface LearnerState {
   unresolvedMistakeIds: string[];
   lessonCompletions?: LessonCompletion[];
   correctionRecords?: CorrectionRecord[];
+  learnerNotes?: LearnerNote[];
 }
 
 export interface LearnerBackup {

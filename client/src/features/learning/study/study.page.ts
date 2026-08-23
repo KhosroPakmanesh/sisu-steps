@@ -109,6 +109,20 @@ export class StudyPage implements OnInit {
     }
   }
 
+  protected eraseResponse(): void {
+    if (!this.feedback()) this.response.set('');
+  }
+
+  protected undoLastWord(): void {
+    if (!this.feedback()) {
+      this.selectedTokenIndexes.update((indexes) => indexes.slice(0, -1));
+    }
+  }
+
+  protected clearWordOrder(): void {
+    if (!this.feedback()) this.selectedTokenIndexes.set([]);
+  }
+
   protected canSubmit(exercise: Exercise): boolean {
     const answer = exercise.type === 'word-order' ? this.assembledWordOrder() : this.response();
     return answer.trim().length > 0 && !this.feedback() && !this.busy();
