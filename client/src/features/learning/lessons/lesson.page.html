@@ -19,10 +19,13 @@
           <p>{{ activeTest.focus }}</p>
           <p class="notebook-note" aria-hidden="true">notes before practice</p>
         </div>
+      </header>
+
+      <section class="lesson-actions" aria-label="Lesson actions">
         <a class="button primary" [routerLink]="paths.study(topicId(), activeTest.id)"
           >Start test now</a
         >
-      </header>
+      </section>
 
       @if (lessons().length > 1) {
         <div class="lesson-progress" aria-label="Lesson progress">
@@ -99,29 +102,30 @@
 
           <div class="lesson-spread">
             <div class="lesson-left-page">
-              <section class="focus-contract" aria-labelledby="focus-contract-title">
-                <p class="card-kicker">
-                  {{ current.stage === 'review' ? 'Review' : 'Focused lesson' }}
-                </p>
-                <h3 id="focus-contract-title">What receives your attention</h3>
-                <p>
-                  <strong>{{ current.stage === 'review' ? 'Skills reviewed' : 'Target' }}:</strong>
-                  {{ current.targetSkills.join(', ') }}
-                </p>
-                @if (current.prerequisiteSkills.length > 0) {
-                  <p>
-                    <strong>Already introduced:</strong> {{ current.prerequisiteSkills.join(', ') }}
+              <header class="section-heading" aria-labelledby="focus-contract-title">
+                <div>
+                  <p class="eyebrow">
+                    {{ current.stage === 'review' ? 'Review' : 'Focused lesson' }}
                   </p>
-                } @else {
-                  <p>No earlier grammar is required.</p>
-                }
-                <p class="focus-promise">
+                  <h2 id="focus-contract-title">What receives your attention</h2>
+                </div>
+                <p>
+                  {{ current.stage === 'review' ? 'Skills reviewed' : 'Target' }}:
+                  {{ current.targetSkills.join(', ') }}.
+                  @if (current.prerequisiteSkills.length > 0) {
+                    Already introduced: {{ current.prerequisiteSkills.join(', ') }}.
+                  } @else {
+                    No earlier grammar is required.
+                  }
                   Anything else is supplied directly and is not a hidden part of the question.
                 </p>
-              </section>
+              </header>
 
               <section class="lesson-objectives" aria-labelledby="lesson-objectives-title">
-                <h3 id="lesson-objectives-title">After this lesson, you can</h3>
+                <div>
+                  <p class="eyebrow">Lesson objectives</p>
+                  <h3 id="lesson-objectives-title">After this lesson, you can</h3>
+                </div>
                 <ul>
                   @for (objective of current.objectives; track objective) {
                     <li>{{ objective }}</li>
@@ -201,12 +205,6 @@
             </div>
           </div>
 
-          <app-sticky-note
-            [topicId]="topicId()"
-            [lessonId]="current.id"
-            heading="Notes for this lesson"
-          />
-
           <app-lesson-practice [lesson]="current" />
 
           @if (preparationFinished()) {
@@ -235,6 +233,12 @@
               </button>
             </footer>
           }
+
+          <app-sticky-note
+            [topicId]="topicId()"
+            [lessonId]="current.id"
+            heading="Notes for this lesson"
+          />
         </article>
       </div>
     }

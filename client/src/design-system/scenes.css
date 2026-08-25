@@ -201,79 +201,27 @@ main.page-shell .topic-card:hover {
 }
 
 /* Lessons: a true two-page spread with reference material on the facing page. */
-.lesson-page .lesson-reader {
-  position: relative;
-  overflow: visible;
-  border: 0;
-  border-radius: 0.35rem;
-  box-shadow:
-    -0.25rem 0.35rem 0 var(--paper-edge),
-    0.25rem 0.35rem 0 var(--paper-edge),
-    0 1rem 2.2rem var(--notebook-shadow);
-}
-
 .lesson-page .lesson-reader::after {
-  position: absolute;
-  z-index: 3;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1.2rem;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--notebook-shadow),
-    rgb(255 255 255 / 8%),
-    transparent
-  );
-  content: '';
-  pointer-events: none;
-  transform: translateX(-50%);
-}
-
-.lesson-page .reader-heading {
-  position: relative;
-  z-index: 4;
-  border-radius: 0.3rem 0.3rem 0 0;
+  display: none;
 }
 
 .lesson-spread {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   align-items: stretch;
-  background:
-    linear-gradient(90deg, var(--surface-raised) 0 50%, var(--surface-paper) 50%),
-    repeating-linear-gradient(to bottom, transparent 0 1.95rem, var(--notebook-rule) 1.95rem 2rem);
 }
 
 .lesson-left-page,
 .lesson-right-page {
   min-width: 0;
-  padding-bottom: var(--space-6);
 }
 
 .lesson-left-page {
-  padding-right: 0.6rem;
+  padding-right: 0;
 }
 
 .lesson-right-page {
-  padding-left: 0.6rem;
-}
-
-.lesson-spread .focus-contract {
-  transform: rotate(-0.25deg);
-}
-
-.lesson-spread .lesson-objectives {
-  margin-inline: var(--space-3);
-  border-left: 0.3rem solid var(--green-500);
-}
-
-.lesson-spread .worked-examples {
-  margin: var(--space-5) var(--space-3) 0;
-  border: 1px solid var(--border-default);
-  box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
-  transform: rotate(0.18deg);
+  padding-left: 0;
 }
 
 .lesson-spread .lesson-vocabulary {
@@ -282,9 +230,8 @@ main.page-shell .topic-card:hover {
 
 .lesson-spread .mistake-notes {
   position: relative;
-  margin: var(--space-3);
-  border: 0;
-  box-shadow: 0.2rem 0.24rem 0 var(--notebook-shadow);
+  margin: var(--space-3) 0;
+  box-shadow: 0.2rem 0.24rem 0 var(--paper-edge);
   transform: rotate(0.45deg);
 }
 
@@ -351,20 +298,6 @@ main.page-shell .topic-card:hover {
   .topic-page .test-card:nth-of-type(even) {
     transform: none;
   }
-
-  .lesson-spread {
-    grid-template-columns: 1fr;
-    background: var(--surface-raised);
-  }
-
-  .lesson-page .lesson-reader::after {
-    display: none;
-  }
-
-  .lesson-left-page,
-  .lesson-right-page {
-    padding-inline: 0;
-  }
 }
 
 @media (width <= 560px) {
@@ -388,10 +321,5 @@ main.page-shell .topic-card:hover {
   .topic-page .test-number {
     width: 2.5rem;
     height: 2.5rem;
-  }
-
-  .lesson-spread .worked-examples,
-  .lesson-spread .mistake-notes {
-    margin-inline: 0;
   }
 }

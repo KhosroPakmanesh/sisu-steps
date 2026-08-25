@@ -3,8 +3,23 @@
 }
 
 .lesson-practice {
-  padding: var(--space-8);
-  border-top: 1px solid var(--border-default);
+  margin: var(--space-3) 0;
+  padding: var(--space-6);
+  border: 1px dashed var(--border-control);
+  border-radius: var(--radius-medium);
+  background-color: var(--surface-warning);
+  box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
+  transition: transform var(--motion-standard) ease;
+}
+
+.lesson-practice:hover {
+  transform: translateY(-0.45rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lesson-practice:hover {
+    transform: none;
+  }
 }
 
 .lesson-practice h3 {

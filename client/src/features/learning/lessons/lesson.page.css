@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: end;
   gap: 2rem;
-  padding: 3rem 0 1.5rem;
+  padding: 3rem 0 var(--space-8);
 }
 
 .lesson-hero h1 {
@@ -19,9 +19,16 @@
   max-width: 50rem;
 }
 
-.single-lesson-page .lesson-hero {
-  max-width: var(--page-width-narrow);
-  margin-inline: auto;
+.lesson-hero .notebook-note {
+  width: fit-content;
+  margin: var(--space-4) 0 0 auto;
+}
+
+.lesson-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  padding-bottom: var(--space-6);
 }
 
 .back-link {
@@ -29,6 +36,10 @@
   text-decoration: none;
   font-size: 0.88rem;
   font-weight: 700;
+}
+
+.lesson-hero .back-link + .eyebrow {
+  margin-top: var(--space-5);
 }
 
 .lesson-progress {
@@ -53,12 +64,10 @@
   grid-template-columns: minmax(15rem, 0.35fr) minmax(0, 1fr);
   gap: var(--space-5);
   align-items: start;
-  padding-bottom: 5rem;
 }
 
 .lesson-layout.single-lesson {
-  grid-template-columns: minmax(0, var(--page-width-narrow));
-  justify-content: center;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .lesson-list {
@@ -111,29 +120,66 @@
 }
 
 .lesson-reader {
-  overflow: hidden;
-  border: 1px solid var(--border-default);
-  border-top: 0.32rem solid var(--blue-500);
-  border-radius: var(--radius-large);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow-large);
+  overflow: visible;
 }
 
-.reader-heading,
-.teaching-section,
 .worked-examples,
 .mistake-notes,
-.lesson-footer,
 .preparation-complete {
-  padding: var(--space-8);
+  padding: var(--space-6);
+}
+
+.teaching-section {
+  margin: var(--space-3) 0;
+  padding: var(--space-6);
+  border: 1px solid var(--border-brand);
+  border-radius: var(--radius-medium);
+  background-color: var(--surface-warning);
+  transition: transform var(--motion-standard) ease;
+}
+
+.teaching-section:hover,
+.lesson-vocabulary:hover {
+  transform: translateY(-0.45rem);
 }
 
 .reader-heading {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: end;
   gap: 2rem;
-  background: var(--surface-ink);
-  color: var(--text-on-ink);
+  margin: var(--space-3) 0;
+  padding: var(--space-8);
+  border: 1px dashed var(--border-brand);
+  border-radius: 0.08rem;
+  background:
+    linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px),
+    var(--surface-warning);
+  background-size: 1.5rem 1.5rem;
+  clip-path: polygon(0.2rem 0, 99% 0.18rem, 100% 97%, 98% 100%, 0 98%);
+  box-shadow:
+    0.3rem 0.32rem 0 var(--surface-subtle),
+    var(--shadow-small);
+  transform: rotate(-0.2deg);
+  transition: transform var(--motion-standard) ease;
+}
+
+.reader-heading:hover {
+  transform: translateY(-0.45rem) rotate(0);
+}
+
+.reader-heading::after {
+  position: absolute;
+  top: -0.55rem;
+  left: 15%;
+  width: 5rem;
+  height: 1rem;
+  background: color-mix(in srgb, var(--amber-300) 48%, transparent);
+  clip-path: polygon(2% 8%, 100% 0, 97% 96%, 0 100%);
+  content: '';
+  transform: rotate(-2deg);
 }
 
 .reader-heading h2 {
@@ -141,8 +187,8 @@
   font-size: clamp(1.8rem, 4vw, 2.5rem);
 }
 
-.reader-heading p {
-  color: var(--text-on-ink-muted);
+.reader-heading p:not(.card-kicker) {
+  color: var(--text-secondary);
 }
 
 .completed-badge {
@@ -150,38 +196,49 @@
   white-space: nowrap;
 }
 
-.focus-contract {
-  margin: var(--space-5) var(--space-3);
-  padding: var(--space-5) calc(var(--space-8) - var(--space-3));
-  border: 1px solid var(--border-brand);
-  border-radius: var(--radius-medium);
-  background: var(--surface-brand-subtle);
+.lesson-reader .section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-8);
+  margin: 3rem 0 var(--space-6);
 }
 
-.focus-contract h3 {
-  margin: var(--space-1) 0 0.7rem;
-}
-
-.focus-contract p + p {
-  margin-top: 0.35rem;
-}
-
-.focus-promise {
-  color: var(--text-brand);
-  font-weight: 700;
+.lesson-reader .section-heading > p {
+  max-width: 34rem;
 }
 
 .lesson-objectives {
-  padding: var(--space-6) var(--space-8);
-  background: var(--surface-brand-subtle);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-8);
+  margin: var(--space-3) 0 var(--space-1);
+  padding: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--notebook-rule);
+  transition: transform var(--motion-standard) ease;
+}
+
+.lesson-objectives:hover {
+  transform: translateY(-0.45rem);
+}
+
+.lesson-objectives > ul {
+  max-width: 34rem;
 }
 
 .lesson-objectives h3,
 .teaching-section h3,
 .worked-examples h3,
 .mistake-notes h3 {
-  margin-bottom: 0.8rem;
   font-family: var(--font-display);
+}
+
+.teaching-section h3,
+.worked-examples h3,
+.mistake-notes h3 {
+  margin-bottom: 0.8rem;
 }
 
 .lesson-objectives ul,
@@ -189,10 +246,6 @@
   display: grid;
   gap: 0.45rem;
   padding-left: 1.2rem;
-}
-
-.teaching-section + .teaching-section {
-  border-top: 1px solid var(--border-default);
 }
 
 .teaching-section p + p {
@@ -214,22 +267,23 @@
   background: var(--surface-subtle);
   font-size: var(--text-small);
   font-weight: 750;
+  transition: transform var(--motion-standard) ease;
 }
 
-.worked-examples {
-  background: var(--surface-subtle);
+.key-points li:hover {
+  transform: translateY(-0.25rem);
 }
 
 .example-grid {
   display: grid;
-  gap: 0.8rem;
+  gap: var(--space-3);
 }
 
 .example-grid article {
   padding: var(--space-4);
-  border: 1px solid var(--border-default);
-  border-radius: var(--radius-small);
-  background: var(--surface-raised);
+  border: 1px dashed var(--border-brand);
+  border-radius: 0.08rem;
+  background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-warning));
 }
 
 .example-grid article > p {
@@ -259,8 +313,13 @@
 }
 
 .lesson-vocabulary {
-  margin-top: 2rem;
-  padding: 0 var(--space-8) var(--space-8);
+  margin: var(--space-3) 0;
+  padding: var(--space-6);
+  border: 1px dashed var(--border-control);
+  border-radius: var(--radius-medium);
+  background-color: var(--surface-warning);
+  box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
+  transition: transform var(--motion-standard) ease;
 }
 
 .lesson-vocabulary > p {
@@ -279,6 +338,11 @@
   border: 1px solid var(--border-default);
   border-radius: var(--radius-small);
   background: var(--surface-raised);
+  transition: transform var(--motion-standard) ease;
+}
+
+.lesson-vocabulary dl div:hover {
+  transform: translateY(-0.25rem);
 }
 
 .lesson-vocabulary dt {
@@ -291,8 +355,19 @@
 }
 
 .mistake-notes {
-  border-block: 1px solid var(--amber-300);
+  margin: var(--space-3) 0;
+  border: 1px dashed color-mix(in srgb, var(--amber-900) 35%, transparent);
+  border-radius: var(--radius-medium);
   background: var(--surface-warning);
+  transition: transform var(--motion-standard) ease;
+}
+
+.worked-examples:hover {
+  transform: translateY(-0.45rem) rotate(-0.35deg);
+}
+
+.mistake-notes:hover {
+  transform: translateY(-0.45rem) rotate(0.45deg);
 }
 
 .lesson-footer {
@@ -300,7 +375,7 @@
   justify-content: space-between;
   align-items: center;
   gap: var(--space-6);
-  border-top: 1px solid var(--border-default);
+  padding: var(--space-6) 0 0;
 }
 
 .lesson-footer p {
@@ -308,6 +383,8 @@
 }
 
 .preparation-complete {
+  margin-top: var(--space-5);
+  border-radius: var(--radius-medium);
   text-align: center;
   background: var(--surface-success);
   color: var(--text-success);
@@ -319,8 +396,15 @@
 
 @media (width <= 800px) {
   .lesson-hero,
-  .reader-heading {
-    display: grid;
+  .reader-heading,
+  .lesson-reader .section-heading,
+  .lesson-objectives {
+    display: block;
+  }
+
+  .lesson-reader .section-heading > p,
+  .lesson-objectives > ul {
+    margin-top: var(--space-3);
   }
 
   .lesson-layout {
@@ -338,6 +422,27 @@
 
   .lesson-picker select {
     width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-heading,
+  .reader-heading:hover,
+  .lesson-objectives,
+  .lesson-objectives:hover,
+  .teaching-section:hover,
+  .lesson-vocabulary:hover,
+  .key-points li:hover,
+  .lesson-vocabulary dl div:hover {
+    transform: none;
+  }
+
+  .worked-examples:hover {
+    transform: rotate(-0.35deg);
+  }
+
+  .mistake-notes:hover {
+    transform: rotate(0.45deg);
   }
 }
 

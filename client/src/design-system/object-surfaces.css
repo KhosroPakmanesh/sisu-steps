@@ -183,6 +183,23 @@ main.topic-page .test-card::before {
 }
 
 /* Lessons: binder tabs, clipped reference slips, flashcards, and vocabulary cards. */
+main.lesson-page .lesson-objectives {
+  border: 0;
+  border-left: 0.45rem solid var(--blue-500);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--surface-subtle) 84%, var(--surface-paper));
+  box-shadow: 0.18rem 0.18rem 0 var(--paper-edge);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 2.2rem) 0,
+    calc(100% - 1.7rem) 0.48rem,
+    100% 0.48rem,
+    100% 100%,
+    0 96%
+  );
+  filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge));
+}
+
 main.lesson-page .lesson-list .subject-tab {
   border-radius: 0.08rem;
   background-image: linear-gradient(
@@ -215,7 +232,10 @@ main.lesson-page .lesson-picker .notebook-select {
   clip-path: polygon(0 0.12rem, 100% 0, calc(100% - 0.2rem) 100%, 0.12rem 96%);
 }
 
-main.lesson-page .focus-contract {
+main.lesson-page .teaching-section,
+main.lesson-page .lesson-vocabulary,
+main.lesson-page .mistake-notes,
+main.lesson-page .lesson-practice {
   position: relative;
   border-style: dashed;
   border-radius: 0.08rem;
@@ -228,6 +248,23 @@ main.lesson-page .focus-contract {
   filter: drop-shadow(0.18rem 0.2rem 0 var(--paper-edge));
 }
 
+/* Each lesson card carries the accent colour of its content, like the test cards. */
+main.lesson-page .lesson-practice {
+  border-left: 0.28rem solid var(--blue-500);
+}
+
+main.lesson-page .teaching-section {
+  border-left: 0.28rem solid var(--green-500);
+}
+
+main.lesson-page .lesson-vocabulary {
+  border-left: 0.28rem solid var(--amber-400);
+}
+
+main.lesson-page .mistake-notes {
+  border-left: 0.28rem solid var(--red-700);
+}
+
 main.lesson-page .key-points li {
   position: relative;
   padding-left: 1.25rem;
@@ -238,22 +275,91 @@ main.lesson-page .key-points li {
   box-shadow: 0.1rem 0.12rem 0 var(--paper-edge);
 }
 
-main.lesson-page .example-grid article {
-  border-style: dashed;
-  border-radius: 0.06rem;
-  background-image: linear-gradient(
+/* Worked examples: a bound topic-cover holding punched example slips. */
+main.lesson-page .worked-examples {
+  position: relative;
+  margin: var(--space-3) 0;
+  padding-left: calc(var(--space-6) + 0.9rem);
+  border: 0;
+  border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
+  background-color: var(--surface-warning);
+  background-image: repeating-linear-gradient(
     to bottom,
-    transparent 72%,
-    var(--notebook-rule) 73% 77%,
-    transparent 78%
+    transparent 0 1.95rem,
+    var(--notebook-rule) 1.95rem 2rem
   );
-  clip-path: polygon(0.18rem 0, 100% 0.12rem, calc(100% - 0.18rem) 100%, 0 96%);
-  filter: drop-shadow(0.14rem 0.18rem 0 var(--paper-edge));
-  transform: rotate(-0.18deg);
+  clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
+  box-shadow:
+    inset 0.45rem 0 0 var(--amber-400),
+    inset 0.72rem 0 0 color-mix(in srgb, var(--surface-paper) 65%, transparent);
+  filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
+    drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
+  transform: rotate(-0.35deg);
 }
 
-main.lesson-page .example-grid article:nth-child(even) {
-  transform: rotate(0.22deg);
+main.lesson-page .worked-examples::before {
+  position: absolute;
+  z-index: 1;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  left: 0.5rem;
+  width: 0.28rem;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.32rem,
+    transparent 0.32rem 0.68rem
+  );
+  content: '';
+  opacity: 0.72;
+}
+
+main.lesson-page .worked-examples::after {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.08rem;
+  width: 0.55rem;
+  height: calc(100% - 0.9rem);
+  border: 0;
+  border-radius: 0 0.35rem 0.35rem 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.28rem,
+    var(--notebook-rule) 0.28rem 0.31rem
+  );
+  content: '';
+}
+
+main.lesson-page .example-grid article {
+  position: relative;
+  padding-left: calc(var(--space-4) + 0.65rem);
+  border: 1px dashed var(--border-brand);
+  border-left: 0.28rem solid var(--amber-400);
+  border-radius: 0.08rem;
+  background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-warning));
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.9rem,
+    var(--notebook-rule) 1.9rem 1.95rem
+  );
+  clip-path: polygon(0.3rem 0, 98% 0.12rem, 100% 94%, 98% 100%, 0 98%);
+  filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge))
+    drop-shadow(0.28rem 0.4rem 0.45rem var(--notebook-shadow));
+}
+
+main.lesson-page .example-grid article::before {
+  position: absolute;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  left: 0.22rem;
+  width: 0.46rem;
+  background: radial-gradient(
+      circle,
+      var(--surface-paper) 0 0.1rem,
+      var(--border-control) 0.11rem 0.14rem,
+      transparent 0.15rem
+    )
+    center top / 0.46rem 1.55rem repeat-y;
+  content: '';
 }
 
 main.lesson-page .lesson-vocabulary dl div {
@@ -366,12 +472,17 @@ main.lesson-page .lesson-practice .sentence-lesson {
 
 @media (width <= 560px) {
   main.page-shell .topic-card,
-  main.topic-page .test-card {
+  main.topic-page .test-card,
+  main.lesson-page .worked-examples,
+  main.lesson-page .example-grid article {
     padding-left: var(--space-5);
   }
 
   main.topic-page .test-card::before,
-  main.page-shell .topic-card::before {
+  main.page-shell .topic-card::before,
+  main.lesson-page .worked-examples::before,
+  main.lesson-page .worked-examples::after,
+  main.lesson-page .example-grid article::before {
     display: none;
   }
 
