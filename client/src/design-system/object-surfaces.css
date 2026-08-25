@@ -78,9 +78,11 @@ main.page-shell .topic-card {
   padding-left: calc(var(--space-6) + 0.9rem);
   border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
   background-color: var(--surface-warning);
-  background-image:
-    linear-gradient(135deg, var(--overlay-soft), transparent 32%),
-    repeating-linear-gradient(to bottom, transparent 0 1.95rem, var(--notebook-rule) 1.95rem 2rem);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.95rem,
+    var(--notebook-rule) 1.95rem 2rem
+  );
   clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
   filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
     drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
@@ -152,7 +154,7 @@ main.topic-page .test-card {
   border: 1px dashed var(--border-control);
   border-left: 0.28rem solid var(--blue-500);
   border-radius: 0.08rem;
-  background-color: var(--surface-raised);
+  background-color: var(--surface-warning);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.9rem,
