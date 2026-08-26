@@ -23,7 +23,7 @@
 - **VAL-G001-034** (`REQ-G001-063`–`066`): Content and runner tests verify supplied base-word meanings, per-option explanations, authored misconception matching, and general diagnostic fallback.
 - **VAL-G001-035** (`REQ-G001-067`–`072`): Service tests verify corrected-versus-mastered transitions, different parallel exercises, review eligibility, the one/three/seven-day schedule, optional access, and reveal behavior.
 - **VAL-G001-036** (`REQ-G001-073`): Persistence and backup tests verify correction, due-review, review-attempt, and mastery records and reject malformed records atomically.
-- **VAL-G001-037** (`REQ-G001-074`, `075`): Reporting tests verify first-attempt, independent, skipped, corrected, mastered, per-skill, and misconception summaries.
+- **VAL-G001-037** (`REQ-G001-074`): Reporting tests verify first-attempt, independent, skipped, corrected, and mastered per-test summaries.
 - **VAL-G001-038** (`REQ-G001-076`, `077`): Content validation verifies the five KPT learning blocks, four-to-five practice items for difficult KPT lessons, worked contrasts, and the vocabulary ceiling.
 - **VAL-G001-039** (`REQ-G001-062`, `070`): Catalog and topic-page tests verify grammar-foundations wording and a prominent optional review action that does not gate tests.
 - **VAL-G001-040** (`REQ-G001-078`): Version-alignment tests verify a one-time reset from an incompatible prior content version and preservation after the revised version is stored.

@@ -31,7 +31,6 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Diagnostic feedback for authored distractors and common typed-answer misconceptions
 - Prominent but optional fixed review sessions with locally calculated due dates
 - Separate corrected and delayed-mastery states using pre-authored parallel exercises
-- Skill-level reporting for first attempts, independent answers, reveals, corrections, mastery, and common error categories
 - Private topic and lesson notes stored with local learner data and included in backup and restore
 
 ## Non-goals

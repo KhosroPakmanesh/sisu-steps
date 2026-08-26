@@ -88,7 +88,7 @@
 - **REQ-G001-072:** Skipping a parallel exercise in review shall not grant mastery and shall leave the review available.
 - **REQ-G001-073:** The system shall persist correction, review eligibility, review attempts, and mastery records in native IndexedDB and include them in validated JSON backup and restore.
 - **REQ-G001-074:** Reports shall distinguish first-attempt accuracy, latest, best, average, independently correct, skipped, corrected, and mastered counts.
-- **REQ-G001-075:** Reports shall aggregate performance by declared target skill and misconception category.
+- **REQ-G001-075 (withdrawn 2026-08-26):** Skill and misconception aggregation was removed from Reports at the learner's request. Authored skill and misconception metadata remains available to teaching, validation, feedback, correction, and review workflows.
 - **REQ-G001-076:** The KPT teaching sequence shall separately introduce double consonants, common single-consonant changes, special `k` changes, consonant clusters, and mixed recognition before focused noun, verb, or plural production.
 - **REQ-G001-077:** Each difficult KPT lesson shall contain four or five optional unscored practice exercises, at least two worked contrasts, and no more than ten newly introduced scored vocabulary items.
 - **REQ-G001-078:** When a materially revised pack is installed, learner data from an incompatible earlier content version shall be cleared once and the installed version shall be stored before study continues.
@@ -157,7 +157,7 @@
 - Given a corrected exercise whose review is due, when its different parallel exercise is answered correctly in review, then the original is marked mastered.
 - Given a due review, when the dashboard is displayed, then a prominent review action is available and every ordinary test remains directly accessible.
 - Given a review answer is revealed, when progress is stored, then no mastery is granted and the review remains available.
-- Given completed work, when reports open, then first-attempt, independent, skipped, corrected, mastered, skill, and misconception summaries reflect stored learner records.
+- Given completed work, when reports open, then first-attempt, independent, skipped, corrected, and mastered test summaries reflect stored learner records.
 - Given a focused lesson, when its content is validated, then it introduces at most ten scored Finnish words and its associated test supplies English meanings where vocabulary is not the target.
 - Given a valid grammatical-topic pack, when its content is validated, then it contains at least 200 and at most 1,000 scored exercises.
 - Given a declared important grammatical skill, when the pack is validated, then at least one Focused scored exercise requires that skill.

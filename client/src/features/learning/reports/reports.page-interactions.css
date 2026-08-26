@@ -1,0 +1,28 @@
+.ledger-sheet tbody .report-row :is(.report-name > span, .report-name > div, td > strong) {
+  transition: transform var(--motion-fast) ease;
+}
+
+.ledger-sheet tbody .report-row td > strong {
+  display: inline-block;
+}
+
+.ledger-sheet tbody .report-row:hover .report-name > div {
+  transform: translateX(0.25rem);
+}
+
+.ledger-sheet tbody .report-row:hover .report-name > span {
+  transform: translateX(0.25rem) rotate(-4deg);
+}
+
+.ledger-sheet tbody .report-row:hover td > strong {
+  transform: translateY(-0.12rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ledger-sheet tbody .report-row :is(.report-name > span, .report-name > div, td > strong),
+  .ledger-sheet tbody .report-row:hover .report-name > div,
+  .ledger-sheet tbody .report-row:hover .report-name > span,
+  .ledger-sheet tbody .report-row:hover td > strong {
+    transform: none;
+  }
+}

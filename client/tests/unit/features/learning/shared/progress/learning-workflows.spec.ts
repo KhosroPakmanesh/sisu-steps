@@ -4,7 +4,7 @@ import { BackupService } from '@/features/learning/data-management/backup.servic
 import { ClearProgressService } from '@/features/learning/data-management/clear-progress.service';
 import { LessonProgressService } from '@/features/learning/lessons/lesson-progress.service';
 import { LearnerNoteService } from '@/features/learning/shared/notes/learner-note.service';
-import { getSkillReports, getTestReport } from '@/features/learning/reports/report.queries';
+import { getTestReport } from '@/features/learning/reports/report.queries';
 import { ContentCatalogService } from '@/features/learning/shared/content/content-catalog.service';
 import { TopicPack } from '@/features/learning/shared/content/content.models';
 import {
@@ -143,12 +143,6 @@ describe('learning workflows', () => {
       expect(getTestReport(store.learnerState(), store.packs()[0], 'test-1')).toMatchObject({
         firstAttempt: 0,
         corrected: 0,
-        mastered: 1,
-      });
-      expect(getSkillReports(store.learnerState(), store.packs()[0])[0]).toMatchObject({
-        skill: 'Vowel harmony',
-        firstAnswers: 1,
-        independentCorrect: 0,
         mastered: 1,
       });
     } finally {

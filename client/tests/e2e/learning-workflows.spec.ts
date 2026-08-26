@@ -246,6 +246,9 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     .toBeCloseTo(expectedStatsLift, 2);
 
   await page.goto('/topics/finnish-foundations-a1');
+  const topicPageWidth = await page
+    .locator('main.topic-page')
+    .evaluate((element) => element.getBoundingClientRect().width);
   await expect(page.locator('.topic-hero .back-link + .eyebrow')).toHaveCSS('margin-top', '20px');
   const topicOverview = page.locator('.topic-overview');
   await expect(topicOverview).toHaveClass(/assignment-sheet/);
@@ -366,9 +369,143 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
 
   await page.goto('/study/finnish-foundations-a1/vowel-families');
   await expectClippedPaper(page.locator('.choice-list label').first());
+  await page.getByRole('radio', { name: 'front vowels' }).check();
+  await page.getByRole('button', { name: 'Check answer' }).click();
+  await page.getByRole('button', { name: 'Continue' }).click();
 
   await page.goto('/reports');
-  await expect(page.getByRole('link', { name: /Back to topics/ })).toHaveClass(/back-link/);
+  await expect(page.locator('main.reports-page')).not.toHaveClass(/narrow-page/);
+  expect(
+    await page
+      .locator('main.reports-page')
+      .evaluate((element) => element.getBoundingClientRect().width),
+  ).toBeCloseTo(topicPageWidth, 1);
+  const reportBackLink = page.getByRole('link', { name: /Back to topics/ });
+  await expect(reportBackLink).toHaveClass(/back-link/);
+  await expect(page.locator('.reports-hero .back-link + .eyebrow')).toHaveCSS('margin-top', '20px');
+  const reportOverview = page.locator('.report-overview');
+  const heroTopDelta = await page.locator('.reports-hero').evaluate((hero) => {
+    const content = hero.firstElementChild as HTMLElement | null;
+    const overview = hero.querySelector('.report-overview') as HTMLElement | null;
+    return Math.abs((content?.offsetTop ?? 0) - (overview?.offsetTop ?? 0));
+  });
+  if ((page.viewportSize()?.width ?? 0) > 800) {
+    expect(heroTopDelta).toBeLessThanOrEqual(1);
+  } else {
+    expect(heroTopDelta).toBeGreaterThan(0);
+  }
+  await expect(reportOverview).toHaveClass(/assignment-sheet/);
+  await expect(reportOverview.locator(':scope > div')).toHaveCount(5);
+  expect(
+    await reportOverview.evaluate((element) => {
+      const style = getComputedStyle(element);
+      return {
+        backgroundColor: style.backgroundColor,
+        backgroundImage: style.backgroundImage,
+        borderLeftColor: style.borderLeftColor,
+        borderLeftWidth: style.borderLeftWidth,
+        clipPath: style.clipPath,
+        foldColor: getComputedStyle(element, '::after').borderTopColor,
+        tapeColor: getComputedStyle(element, '::before').backgroundColor,
+      };
+    }),
+  ).toEqual(assignmentPattern);
+  await reportOverview.hover();
+  await expect
+    .poll(() =>
+      reportOverview.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+  const reportTopicSheet = page.locator('.report-topic-sheet');
+  await expectClippedPaper(reportTopicSheet);
+  expect(
+    await reportTopicSheet.evaluate(
+      (element) => getComputedStyle(element).backgroundImage.match(/linear-gradient/g)?.length ?? 0,
+    ),
+  ).toBe(2);
+  await reportTopicSheet.hover();
+  await expect
+    .poll(() =>
+      reportTopicSheet.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
+  await expect(page.locator('.report-table > .report-section-heading .eyebrow')).toHaveText(
+    'Test history',
+  );
+  await expect(page.locator('.report-table > .report-section-heading h3')).toHaveText(
+    'Results by test',
+  );
+  await expect(page.locator('.report-table > .report-section-heading > p')).toHaveCount(0);
+  await expect(page.locator('.table-heading')).toHaveCount(0);
+  await expect(page.locator('.ledger-sheet table')).toHaveCount(1);
+  await expect(page.getByRole('heading', { name: 'Learning by skill' })).toHaveCount(0);
+  await expect(page.getByRole('checkbox', { name: /Show studied tests only/ })).toHaveCount(0);
+  await expectClippedPaper(page.locator('.report-ledger'));
+  const firstReportRow = page.locator('.report-row').first();
+  const restingRowSurface = await firstReportRow.locator('th').evaluate((element) => ({
+    background: getComputedStyle(element).backgroundColor,
+    shadow: getComputedStyle(element).boxShadow,
+  }));
+  const expectedTextShift = await page.evaluate(
+    () => Number.parseFloat(getComputedStyle(document.documentElement).fontSize) * 0.25,
+  );
+  await firstReportRow.hover();
+  await expect
+    .poll(() =>
+      firstReportRow
+        .locator('.report-name > div')
+        .evaluate((element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m41),
+    )
+    .toBeCloseTo(expectedTextShift, 2);
+  expect(
+    await firstReportRow.locator('th').evaluate((element) => ({
+      background: getComputedStyle(element).backgroundColor,
+      shadow: getComputedStyle(element).boxShadow,
+    })),
+  ).toEqual(restingRowSurface);
+  if ((page.viewportSize()?.width ?? 0) > 650) {
+    await expect(page.locator('.report-column-heading span')).toHaveText([
+      'Test',
+      'First',
+      'Latest',
+      'Best',
+      'Average',
+    ]);
+    await expectClippedPaper(page.locator('.report-column-heading'));
+    const ledgerAlignment = await page.evaluate(() => {
+      const centers = (selector: string) =>
+        [...document.querySelectorAll(selector)].map((element) => {
+          const box = element.getBoundingClientRect();
+          return (box.left + box.right) / 2;
+        });
+      const heading = document.querySelector('.report-column-heading')?.getBoundingClientRect();
+      const ledger = document.querySelector('.report-ledger')?.getBoundingClientRect();
+      const headings = centers('.report-column-heading span:not(:first-child)');
+      const values = centers('.report-row:first-child > td');
+      return {
+        leftEdgeDelta: Math.abs((heading?.left ?? 0) - (ledger?.left ?? 0)),
+        valueDeltas: headings.map((center, index) => Math.abs(center - values[index])),
+      };
+    });
+    expect(ledgerAlignment.leftEdgeDelta).toBeLessThanOrEqual(1);
+    expect(Math.max(...ledgerAlignment.valueDeltas)).toBeLessThanOrEqual(2);
+  } else {
+    await expect(page.locator('.report-column-heading')).toBeHidden();
+  }
+  const mistakeCta = page.locator('.mistake-cta');
+  await expect(mistakeCta).toContainText('Turn errors into patterns');
+  await mistakeCta.hover();
+  await expect
+    .poll(() =>
+      mistakeCta.evaluate(
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+      ),
+    )
+    .toBeCloseTo(expectedLift, 2);
 
   await page.goto('/data');
   await expect(page.getByRole('link', { name: /Back to topics/ })).toHaveClass(/back-link/);
@@ -436,9 +573,20 @@ test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => 
 
   await expect(page.getByRole('heading', { name: 'Reports', exact: true })).toBeVisible();
   await expect(page.getByRole('region', { name: /results by test/i })).toBeVisible();
-  const filter = page.getByRole('checkbox', { name: /Show studied tests only/ });
-  await filter.check();
-  await expect(filter).toBeChecked();
+  await expect(page.locator('.reports-hero .back-link + .eyebrow')).toBeVisible();
+  await expect(page.locator('.report-overview')).toBeVisible();
+  await expect(page.locator('.report-ledger .semantic-ledger-head')).toHaveCSS(
+    'clip-path',
+    'inset(50%)',
+  );
+  const firstReportRow = page.locator('.report-row').first();
+  await expect(firstReportRow).toBeVisible();
+  await expect(firstReportRow.locator('td')).toHaveCount(4);
+  expect(
+    await firstReportRow.evaluate((element) => getComputedStyle(element).gridTemplateColumns),
+  ).toMatch(/\S+\s+\S+/);
+  await expect(page.getByRole('checkbox', { name: /Show studied tests only/ })).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'Learning by skill' })).toHaveCount(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );

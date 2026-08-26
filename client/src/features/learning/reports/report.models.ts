@@ -11,13 +11,3 @@ export interface TestReport {
   corrected: number;
   mastered: number;
 }
-
-export interface SkillReport {
-  skill: string;
-  firstAnswers: number;
-  independentCorrect: number;
-  skipped: number;
-  corrected: number;
-  mastered: number;
-  misconceptions: { category: string; count: number }[];
-}

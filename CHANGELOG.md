@@ -19,16 +19,16 @@
 - Automated content checks for one-target focused material, skill dependencies, introduced vocabulary, supplied verb stems, stable inessive stems, and fixed plural-sentence context.
 - Diagnostic feedback for individual answer options and authored typed-answer misconceptions.
 - Prominent optional review sessions with fixed parallel exercises, due dates, corrected states, and delayed mastery.
-- Skill-level reporting for first attempts, independent answers, reveals, corrections, mastery, and misconception categories.
 - Focused tests and mixed Reviews, with a declared important-skill coverage contract and visibly separate dashboard groups.
 - A reusable Finnish grammar content-authoring workflow with saved pre-authoring and final Finnish-teaching pedagogy assessments.
 - A static multi-topic content catalog with topic-aware study, review, reporting, progress versioning, and clearing.
 - A compact topic catalog, prominent continue-learning recommendation, and lazy topic-detail route for scalable multi-pack navigation.
 - Private topic and lesson sticky notes with validated IndexedDB storage, backup/restore support, explicit removal, failure-safe drafts, and topic/all-history clearing semantics.
-- Safe choice/text/word-order correction controls and a native paper-clipped **Show studied tests only** report filter.
+- Safe choice, text, and word-order correction controls.
 
 ### Changed
 
+- Redesigned Reports as a full-width workbook ledger aligned with the Topic and Lesson page hierarchy: return navigation now precedes the page eyebrow, totals use the shared attached progress slip, the topic title sits on an interactive graph-paper sheet, the test ledger uses a vertically aligned clipped header, row text and number stamps respond without a colored row highlight, and the mistake-practice slip lifts on hover or keyboard focus. The studied-only filter and Learning by skill ledger were removed at the learner's request.
 - Refined the study worksheet with a wider ruled exercise sheet, a clipped learning-focus note, compact question hierarchy, and truthful responsive guidance for Focused and Review tests; reorganized the owning stylesheets without changing routes, controls, grading, or learner data.
 - Added a restrained informational hover lift to the **Focused tests** and **Reviews** group-divider sheets, with static reduced-motion behavior.
 - Increased the topic header's vertical separation between the folded **All topics** return link and the level/test eyebrow.

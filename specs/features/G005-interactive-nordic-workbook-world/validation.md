@@ -11,7 +11,6 @@
 - **VAL-G005-007** (`REQ-G005-010`, `020`, `025`, `026`): Component and browser checks verify ruler-only progress, readable static/animated teacher stamps, matched continue/topic-card/goals-sheet/sticky-note/group-divider lift reactions, the informational catalog-record hover lift, selected tab and card reactions, ruled non-handwritten input, and reduced-motion suppression.
 - **VAL-G005-008** (`REQ-G005-022`): Study component and browser tests verify choice clearing, typed-draft clearing, word-order undo/clear, and no stored-state mutation before submission.
 - **VAL-G005-009** (`REQ-G005-023`, `REQ-G001-102`–`106`): Topic and lesson component/browser workflows verify the sticky-note field, limit, save/removal status, persistence after navigation, backup/restore inclusion, clearing semantics, and topic-note placement after the complete learning map.
-- **VAL-G005-010** (`REQ-G005-024`): Report component and browser checks operate the native paper-clipped checkbox by pointer and keyboard and verify visible-row filtering without changing report values.
 - **VAL-G005-011** (`REQ-G005-027`): Template and browser inspection verify that the stationery refinement introduces no accordion, disclosure, collapsible panel, expandable toolbar, or hidden tool tray.
 
 ## Manual checks
@@ -32,7 +31,6 @@
 - Confirm the goals sheet uses warm landing-page paper and the shared hover lift while its grid, tape, clipping, spacing, typography, objectives, and informational cursor remain unchanged; confirm the topic note follows the last mapped test with only its normal margin and lifts on hover and focus-within without changing its form behavior.
 - Use correction/eraser actions for choice, text, and word-order exercises without submitting.
 - Save and remove topic and lesson sticky notes, navigate away and back, and verify backup, restore, topic clearing, and all-history clearing behavior.
-- Operate **Show studied tests only** with pointer and keyboard and confirm its paper clip does not obscure the checkbox, label, or focus outline.
 - Confirm no new section or stationery tool can be collapsed or expanded.
 
 ## Completion evidence
@@ -138,3 +136,12 @@ No generated learning content or AI quality-evaluation layer is part of this pre
 - Playwright passed all 36 cases with one worker across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide projects. New coverage verifies the target note's responsive display, same-level heading, Focused guidance, Review guidance, and absence of horizontal document overflow; the existing reduced-motion and learning workflows remained green. On Windows, the wrapper required interruption only after every case passed while its managed development server was shutting down, and port 4200 was confirmed stopped.
 - Direct browser inspection covered the Focused study sheet at 320 and 1440 pixels in light/Day, the study sheet at 1440 pixels in Night, and the Review study and lesson layouts at 768 pixels in Night. The target note remained readable, the responsive lesson picker remained intact, no inspected page overflowed horizontally, and the browser console reported no warnings or errors.
 - Behavior review confirmed no route, content, grading, session, attempt, mistake, report, persistence, backup, restore, or clearing contract changed.
+
+### 2026-08-26 reports ledger refinement
+
+- Refined `REQ-G005-005` and `REQ-G005-015` so Reports uses the same full-width page shell and top-aligned return-link hierarchy as Topic and Lesson, presents its topic title on an interactive graph-paper sheet, and renders one semantic test ledger beneath a vertically aligned clipped divider header. `REQ-G005-024` and `REQ-G001-075` were withdrawn at the learner's request together with the studied-only filter and Learning by skill ledger.
+- Limited report-row feedback to the row text, number stamp, and score marks without a colored row surface, shadow, pointer cursor, or click action. The mistake-practice slip retains hover and keyboard-focus lift, and reduced-motion preferences suppress the remaining transforms.
+- `npm --prefix client run check` passed the complete client gate without CSS-budget warnings, including the production build at a 77.80 kB estimated initial transfer size and all 88 unit tests. Report presentation styles remain split across purpose-named modules below the repository line and component-budget limits.
+- Playwright passed all 36 cases with one worker across the 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide Chromium projects. Coverage verifies page-width parity with Topic, top-aligned hero content, title-sheet construction and lift, text-only row feedback, mistake-slip lift, aligned header and ledger edges, exact desktop header-to-cell alignment within two pixels, removal of the helper copy, filter, and skill ledger, semantic table headers, responsive row labels, reduced motion, and horizontal overflow. On Windows, the wrapper required interruption only after every case passed while its managed development server was shutting down.
+- Direct browser inspection covered Reports at 320, 768, and 1440 pixels in Day and Night. At 1440 pixels the report content width matched Topic at 1216 pixels, visible header and value centers differed by at most one pixel, and no inspected layout overflowed horizontally.
+- Behavior review confirmed that per-test report calculations, learner data, routes, content, grading, sessions, attempts, mistakes, corrections, mastery records, persistence, backup, restore, and clearing contracts remain unchanged; only the studied-only view filter and skill/misconception report aggregation were removed.

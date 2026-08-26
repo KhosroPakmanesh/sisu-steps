@@ -20,20 +20,32 @@ describe('ReportsPage', () => {
     fixture.detectChanges();
   });
 
-  it('uses a native paper-clipped checkbox to filter visible ledger rows only', () => {
+  it('renders every test without a studied-only filter or skill ledger', () => {
     const element = fixture.nativeElement as HTMLElement;
-    const filter = element.querySelector('.paperclip-filter input') as HTMLInputElement;
-    expect(filter.type).toBe('checkbox');
-    expect(element.querySelectorAll('.report-table article')).toHaveLength(2);
-
-    filter.checked = true;
-    filter.dispatchEvent(new Event('change'));
-    fixture.detectChanges();
-
-    expect(element.querySelectorAll('.report-table article')).toHaveLength(0);
-    expect(element.querySelector('.filtered-empty')?.textContent).toContain(
-      'No completed attempts yet.',
-    );
+    expect(element.querySelectorAll('.report-row')).toHaveLength(2);
+    expect(element.querySelector('.paperclip-filter')).toBeNull();
+    expect(element.querySelector('.skill-report')).toBeNull();
     expect(TestBed.inject(LearningStateStore).learnerState().attempts).toHaveLength(0);
+  });
+
+  it('matches the reference-page hierarchy and uses semantic ledger tables', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const hero = element.querySelector('.reports-hero') as HTMLElement;
+    const backLink = hero.querySelector('.back-link') as HTMLAnchorElement;
+    const overview = hero.querySelector('.report-overview') as HTMLDListElement;
+
+    expect(backLink.nextElementSibling?.classList.contains('eyebrow')).toBe(true);
+    expect(overview.classList.contains('assignment-sheet')).toBe(true);
+    expect(overview.querySelectorAll(':scope > div')).toHaveLength(5);
+    expect(element.querySelector('.report-topic-heading h2')?.textContent?.trim()).toBe(
+      'Finnish foundations',
+    );
+    expect(element.querySelector('.report-topic-sheet')).not.toBeNull();
+    expect(element.querySelector('.report-table .report-section-heading h3')?.textContent).toBe(
+      'Results by test',
+    );
+    expect(element.querySelectorAll('.ledger-column-heading')).toHaveLength(1);
+    expect(element.querySelectorAll('.semantic-ledger-head')).toHaveLength(1);
+    expect(element.querySelectorAll('.ledger-sheet table')).toHaveLength(1);
   });
 });

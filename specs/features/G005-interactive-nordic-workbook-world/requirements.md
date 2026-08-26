@@ -36,7 +36,6 @@
 - **REQ-G005-020:** Correct, incorrect, skipped, lesson-complete, and session-complete state changes shall receive a brief readable teacher-stamp response that never delays feedback and becomes static under reduced motion.
 - **REQ-G005-022:** Before submission, each applicable answer type shall provide clearly labelled correction or eraser actions for clearing the current choice or typed draft and for undoing or clearing the current word-order draft. These actions shall not alter stored attempts, mistakes, scores, or history.
 - **REQ-G005-023:** The private topic and lesson notes required by `REQ-G001-102`–`106` shall resemble attached sticky notes while retaining a visible label, native textarea, character count, save/removal wording, keyboard access, and status text. The topic note shall appear after the complete lessons-and-tests learning map and shall lift on hover or focus-within without changing its form semantics or stored-note behavior.
-- **REQ-G005-024:** Reports shall provide a native **Show studied tests only** checkbox presented as a paper-clipped filter label; checking it shall filter only the visible test ledger rows and shall not alter learner data or report calculations.
 - **REQ-G005-025:** Active subject tabs, selected lesson tabs, the continue-learning assignment, the catalog statistics record strip, the topic goals sheet, sticky note and group-divider sheets, and interactive topic or test cards shall move forward or lift briefly on active, selected, hover, or focus-within states without changing navigation order or requiring pointer hover. The continue-learning assignment, topic goals sheet, topic sticky note, topic group dividers, and catalog topic covers shall use the same lift distance; the informational record strip may use a smaller hover-only lift without implying that it is clickable.
 - **REQ-G005-026:** Typed learner input shall remain visibly aligned to a ruled answer line and may receive restrained graphite feedback while non-empty without using handwriting for the learner's text.
 - **REQ-G005-027:** The stationery refinement shall introduce no accordion, disclosure, collapsible panel, expandable tool tray, or other collapse/expand behavior.
@@ -44,6 +43,7 @@
 ## Withdrawn refinement requirements
 
 - **REQ-G005-021 (withdrawn 2026-08-23):** The proposed Finnish-character pencil-case toolbar was removed from scope at the learner's request. Typed answers continue to use the native text field and keyboard.
+- **REQ-G005-024 (withdrawn 2026-08-26):** The paper-clipped **Show studied tests only** report filter was removed at the learner's request. Reports now show every test row.
 
 ## Acceptance criteria
 
@@ -64,7 +64,6 @@
 - Given answer feedback, lesson completion, or session completion, when the state changes, then a teacher stamp appears immediately with the complete text feedback still present and no animation under reduced motion.
 - Given an unsubmitted answer, when the learner uses its correction or eraser action, then only the current choice, typed draft, or word-order draft changes and persisted learner history is untouched.
 - Given a topic or lesson note, when it is displayed, edited, saved, removed, or reports a failure, then its native field, scope, character limit, explicit action, draft, and status remain understandable without recognizing the sticky-note metaphor.
-- Given Reports, when **Show studied tests only** is checked, then only tests with completed attempts remain in the visible ledger and the underlying report values and learner data do not change.
 - Given the catalog, when the continue-learning assignment and topic covers appear, then they use the same warm amber paper palette while remaining visually distinct, and hovering or focusing within either surface produces the same restrained lift.
 - Given the catalog statistics record strip, when a pointer hovers over it, then the whole strip lifts slightly with stronger paper depth without changing its values, gaining a click action, or moving under reduced motion.
 - Given the continue-learning assignment and topic progress summary, when both are inspected, then they use the same warm ruled paper, dashed border, red left edge, tape strip, folded corner, and clipped assignment silhouette while the topic summary preserves its four values and 2×2 layout; when the summary is hovered, it lifts without gaining click semantics, its labels remain strongly contrasted against the paper, and its values use the same muted secondary ink as the continue-learning topic subtitle.
