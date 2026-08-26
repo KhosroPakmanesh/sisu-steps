@@ -128,6 +128,29 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   await expect(page.locator('details, [aria-expanded]')).toHaveCount(0);
 });
 
+test('keeps study targets truthful and readable at every supported width', async ({ page }) => {
+  await page.goto('/study/finnish-foundations-a1/vowel-families');
+
+  const focusedTarget = page.getByRole('complementary', { name: 'Test learning focus' });
+  await expect(
+    focusedTarget.getByRole('heading', { level: 2, name: 'Your target: Vowel harmony' }),
+  ).toBeVisible();
+  await expect(focusedTarget).toContainText(
+    'Learn and practise this important grammar point separately.',
+  );
+  await expect
+    .poll(() => focusedTarget.evaluate((element) => getComputedStyle(element).display))
+    .toBe((page.viewportSize()?.width ?? 0) <= 800 ? 'block' : 'flex');
+  await expect(page.locator('html')).toHaveJSProperty('scrollWidth', page.viewportSize()?.width);
+
+  await page.goto('/study/finnish-foundations-a1/guided-review');
+
+  const reviewTarget = page.getByRole('complementary', { name: 'Test learning focus' });
+  await expect(reviewTarget.getByRole('heading', { level: 2 })).toContainText('Skills reviewed:');
+  await expect(reviewTarget).toContainText('Practise these earlier skills together.');
+  await expect(reviewTarget).not.toContainText('this important grammar point separately');
+});
+
 test('saves a private sticky note without leaving the workbook', async ({ page }) => {
   await page.goto('/topics/finnish-foundations-a1');
 

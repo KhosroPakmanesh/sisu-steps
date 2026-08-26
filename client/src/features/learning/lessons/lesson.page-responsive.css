@@ -1,0 +1,61 @@
+@media (width <= 800px) {
+  .lesson-hero,
+  .reader-heading,
+  .lesson-reader .section-heading,
+  .lesson-objectives {
+    display: block;
+  }
+
+  .lesson-reader .section-heading > p,
+  .lesson-objectives > ul {
+    margin-top: var(--space-3);
+  }
+
+  .lesson-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-list {
+    display: none;
+  }
+
+  .lesson-picker {
+    display: grid;
+    gap: var(--space-2);
+  }
+
+  .lesson-picker select {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reader-heading,
+  .reader-heading:hover,
+  .lesson-objectives,
+  .lesson-objectives:hover,
+  .teaching-section:hover,
+  .lesson-vocabulary:hover,
+  .key-points li:hover,
+  .lesson-vocabulary dl div:hover {
+    transform: none;
+  }
+
+  .worked-examples:hover {
+    transform: rotate(-0.35deg);
+  }
+
+  .mistake-notes:hover {
+    transform: rotate(0.45deg);
+  }
+}
+
+@media (width <= 560px) {
+  .lesson-footer {
+    display: grid;
+  }
+
+  .lesson-footer .button {
+    width: 100%;
+  }
+}

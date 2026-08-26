@@ -235,65 +235,6 @@ main.page-shell .topic-card:hover {
   transform: rotate(0.45deg);
 }
 
-/* Study and results: one loose worksheet, then the marked paper returned. */
-.runner-shell .runner-ruler {
-  margin: 1rem 0 1.8rem;
-}
-
-.runner-shell .runner-progress {
-  margin: 0;
-}
-
-.runner-shell .exercise-card {
-  border: 0;
-  border-radius: 0.2rem 0.4rem 0.25rem 0.3rem;
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0 1.95rem,
-    var(--notebook-rule) 1.95rem 2rem
-  );
-  box-shadow:
-    0.28rem 0.32rem 0 var(--paper-edge),
-    0.5rem 0.7rem 1.2rem var(--notebook-shadow);
-  transform: rotate(-0.2deg);
-}
-
-.runner-shell .exercise-card::after {
-  position: absolute;
-  top: -0.65rem;
-  right: 1.7rem;
-  width: 1rem;
-  height: 3.2rem;
-  border: 0.18rem solid var(--desk-metal);
-  border-bottom: 0;
-  border-radius: 0.7rem 0.7rem 0 0;
-  content: '';
-  filter: drop-shadow(1px 2px 1px var(--notebook-shadow));
-  transform: rotate(8deg);
-}
-
-.runner-shell .choice-list label {
-  border-radius: 0.1rem 0.25rem 0.18rem;
-  box-shadow: 0.16rem 0.2rem 0 var(--paper-edge);
-}
-
-.runner-shell .result-card {
-  border: 0.22rem double var(--red-700);
-  border-radius: 0.15rem;
-  background-image:
-    linear-gradient(
-      to right,
-      transparent 2.5rem,
-      var(--notebook-margin) 2.5rem 2.55rem,
-      transparent 0
-    ),
-    repeating-linear-gradient(to bottom, transparent 0 1.95rem, var(--notebook-rule) 1.95rem 2rem);
-  box-shadow:
-    0.32rem 0.42rem 0 var(--paper-edge),
-    var(--shadow-large);
-  transform: rotate(0.35deg);
-}
-
 @media (width <= 800px) {
   .topic-page .test-card:nth-of-type(even) {
     transform: none;

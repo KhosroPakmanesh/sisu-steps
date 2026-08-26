@@ -3,7 +3,7 @@
 }
 
 .runner-shell {
-  width: min(100% - 2rem, var(--runner-width));
+  width: min(100% - 2rem, var(--page-width));
   margin: 1.25rem auto 2rem;
   padding: 2rem var(--sheet-gutter) 5rem;
 }
@@ -48,24 +48,13 @@
   margin: 0;
 }
 
-.test-focus {
-  padding: 0.75rem;
-  border: 1px solid var(--border-brand);
-  border-left: 0.3rem solid var(--blue-500);
-  background: var(--surface-brand-subtle);
-}
-
 .exercise-card {
   position: relative;
-  padding: clamp(1.5rem, 5vw, 3.5rem);
-  border: 1px solid var(--border-default);
-  border-top: 0.3rem solid var(--blue-500);
-  border-radius: var(--radius-large);
-  background: var(--surface-raised);
-  box-shadow: var(--shadow-large);
+  display: grid;
+  gap: var(--space-5);
+  padding: calc(var(--space-6) + 0.9rem);
 }
 
-.exercise-card::before,
 .result-card::before {
   position: absolute;
   top: -0.58rem;
@@ -100,11 +89,11 @@
 }
 
 .exercise-card h2 {
-  margin: 1.5rem 0 2rem;
-  max-width: 28ch;
+  margin: var(--space-2) 0 var(--space-4);
+  max-width: 42ch;
   font-family: var(--font-display);
-  font-size: clamp(1.65rem, 5vw, 2.55rem);
-  line-height: 1.15;
+  font-size: clamp(1.3rem, 3vw, 1.85rem);
+  line-height: 1.2;
 }
 
 .choice-list {

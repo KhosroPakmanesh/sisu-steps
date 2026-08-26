@@ -1,0 +1,204 @@
+/* Study and results: one loose worksheet, then the marked paper returned. */
+.runner-shell .runner-ruler {
+  margin: 1rem 0 1.8rem;
+}
+
+.runner-shell .runner-progress {
+  margin: 0;
+}
+
+main.runner-shell .test-focus {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-8);
+  margin: var(--space-3) 0 var(--space-1);
+  padding: var(--space-4);
+  border: 0;
+  border-left: 0.45rem solid var(--blue-500);
+  border-radius: 0;
+  background: color-mix(in srgb, var(--surface-subtle) 84%, var(--surface-paper));
+  box-shadow: 0.18rem 0.18rem 0 var(--paper-edge);
+  clip-path: polygon(
+    0 0,
+    calc(100% - 2.2rem) 0,
+    calc(100% - 1.7rem) 0.48rem,
+    100% 0.48rem,
+    100% 100%,
+    0 96%
+  );
+  filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge));
+  transition: transform var(--motion-standard) ease;
+}
+
+main.runner-shell .test-focus:hover {
+  transform: translateY(-0.45rem);
+}
+
+main.runner-shell .test-focus > div,
+main.runner-shell .test-focus > p {
+  position: relative;
+  z-index: 1;
+}
+
+main.runner-shell .test-focus h2 {
+  margin-top: var(--space-1);
+  font-size: var(--text-heading-small);
+}
+
+main.runner-shell .test-focus > p {
+  max-width: 34rem;
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+main.runner-shell .exercise-card {
+  border: 0;
+  border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
+  background-color: var(--surface-warning);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.95rem,
+    var(--notebook-rule) 1.95rem 2rem
+  );
+  color: var(--text-primary);
+  clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
+  box-shadow:
+    inset 0.45rem 0 0 var(--amber-400),
+    inset 0.72rem 0 0 color-mix(in srgb, var(--surface-paper) 65%, transparent);
+  filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
+    drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
+  transform: rotate(-0.35deg);
+  transition:
+    transform var(--motion-standard) ease,
+    box-shadow var(--motion-standard) ease,
+    filter var(--motion-standard) ease;
+}
+
+main.runner-shell .exercise-card:hover {
+  z-index: 2;
+  box-shadow:
+    inset 0.45rem 0 0 var(--amber-400),
+    inset 0.72rem 0 0 color-mix(in srgb, var(--surface-paper) 65%, transparent),
+    0.45rem 0.6rem 0 var(--paper-edge),
+    0.7rem 1rem 1.7rem var(--notebook-shadow);
+  filter: drop-shadow(0.35rem 0.45rem 0 var(--paper-edge));
+  transform: translateY(-0.45rem) rotate(0);
+}
+
+main.runner-shell .exercise-card::before {
+  position: absolute;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  left: 0.5rem;
+  width: 0.28rem;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.32rem,
+    transparent 0.32rem 0.68rem
+  );
+  content: '';
+  opacity: 0.72;
+}
+
+main.runner-shell .exercise-card::after {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.08rem;
+  width: 0.55rem;
+  height: calc(100% - 0.9rem);
+  border: 0;
+  border-radius: 0 0.35rem 0.35rem 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.28rem,
+    var(--notebook-rule) 0.28rem 0.31rem
+  );
+  content: '';
+}
+
+/* Study and practice: perforated answers, sentence strips, vocabulary pockets, and notes. */
+main.runner-shell .exercise-card .choice-list label,
+main.lesson-page .lesson-practice .practice-choices label {
+  border: 1px dashed var(--border-control);
+  border-left: 0.28rem solid var(--notebook-margin);
+  border-radius: 0.05rem;
+  background-color: var(--surface-paper);
+  background-image:
+    radial-gradient(
+      circle at 0.38rem 50%,
+      var(--surface-desk) 0 0.09rem,
+      var(--border-default) 0.1rem 0.13rem,
+      transparent 0.14rem
+    ),
+    linear-gradient(to bottom, transparent 72%, var(--notebook-rule) 73% 77%, transparent 78%);
+  clip-path: polygon(0.18rem 0, 99% 0.08rem, 100% 92%, calc(100% - 0.15rem) 100%, 0 96%);
+  box-shadow: 0.12rem 0.16rem 0 var(--paper-edge);
+}
+
+main.runner-shell .exercise-card .choice-list label:hover,
+main.runner-shell .exercise-card .choice-list label.selected,
+main.lesson-page .lesson-practice .practice-choices label:hover,
+main.lesson-page .lesson-practice .practice-choices label.selected {
+  filter: drop-shadow(0.18rem 0.24rem 0.22rem var(--notebook-shadow));
+  transform: translateY(-0.12rem) rotate(-0.12deg);
+}
+
+main.runner-shell .answer-zone,
+main.lesson-page .practice-answer-zone {
+  border-style: solid;
+  border-radius: 0.04rem;
+  clip-path: polygon(0 0.12rem, 100% 0, calc(100% - 0.2rem) 100%, 0.15rem 96%);
+  box-shadow: 0.15rem 0.2rem 0 var(--paper-edge);
+}
+
+main.runner-shell .token-bank,
+main.lesson-page .practice-token-bank {
+  position: relative;
+  padding-top: 1.35rem;
+  border: 1px dashed var(--border-control);
+  border-radius: 0.06rem;
+  background-image: linear-gradient(155deg, var(--overlay-soft) 0 48%, transparent 49%);
+  clip-path: polygon(0 0.45rem, 50% 0, 100% 0.45rem, 98% 100%, 2% 100%);
+  box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
+}
+
+button kbd {
+  padding: 0.18rem 0.42rem;
+  border: 1px dashed var(--border-control);
+  border-bottom-width: 1px;
+  border-radius: 0.04rem;
+  background: var(--surface-warning);
+  color: var(--text-secondary);
+  box-shadow: none;
+  font-family: var(--font-note);
+  transform: rotate(-1deg);
+}
+
+main.runner-shell .feedback,
+main.lesson-page .lesson-practice .feedback {
+  border-style: dashed;
+  border-radius: 0.05rem;
+  clip-path: polygon(0.2rem 0, 97% 0.12rem, 100% 94%, 98% 100%, 0 97%);
+  filter: drop-shadow(0.18rem 0.24rem 0 var(--paper-edge));
+  transform: rotate(-0.15deg);
+}
+
+main.runner-shell .sentence-lesson,
+main.lesson-page .lesson-practice .sentence-lesson {
+  position: relative;
+  border-radius: 0.06rem;
+  clip-path: polygon(0 0.18rem, 99% 0, 100% 98%, 2% 100%, 0 94%);
+  filter: drop-shadow(0.22rem 0.28rem 0 var(--paper-edge));
+}
+
+@media (width <= 800px) {
+  main.runner-shell .test-focus {
+    display: block;
+  }
+
+  main.runner-shell .test-focus > p {
+    margin-top: var(--space-3);
+  }
+}

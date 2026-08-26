@@ -13,7 +13,7 @@ import { LessonProgressService } from './lesson-progress.service';
   selector: 'app-lesson',
   imports: [LessonPracticeComponent, RouterLink, StickyNoteComponent],
   templateUrl: './lesson.page.html',
-  styleUrl: './lesson.page.css',
+  styleUrls: ['./lesson.page.css', './lesson.page-content.css', './lesson.page-responsive.css'],
 })
 export class LessonPage implements OnInit {
   private readonly route = inject(ActivatedRoute);

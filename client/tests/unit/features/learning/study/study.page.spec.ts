@@ -51,6 +51,16 @@ describe('StudyPage', () => {
     expect(feedback.textContent).toContain('The word talo has back vowels');
   });
 
+  it('presents focused guidance with a same-level section heading', () => {
+    const focus = fixture.nativeElement.querySelector('.test-focus') as HTMLElement;
+
+    expect(focus.querySelector('h2')?.textContent).toContain('Your target: Vowel harmony');
+    expect(focus.querySelector('h3')).toBeNull();
+    expect(focus.textContent).toContain(
+      'Learn and practise this important grammar point separately.',
+    );
+  });
+
   it('reveals the answer with Alt+A', async () => {
     const reveal = vi.spyOn(answers, 'revealAnswer');
     const event = new KeyboardEvent('keydown', { key: 'a', altKey: true, cancelable: true });

@@ -29,6 +29,7 @@
 
 ### Changed
 
+- Refined the study worksheet with a wider ruled exercise sheet, a clipped learning-focus note, compact question hierarchy, and truthful responsive guidance for Focused and Review tests; reorganized the owning stylesheets without changing routes, controls, grading, or learner data.
 - Added a restrained informational hover lift to the **Focused tests** and **Reviews** group-divider sheets, with static reduced-motion behavior.
 - Increased the topic header's vertical separation between the folded **All topics** return link and the level/test eyebrow.
 - Warmed the topic goals sheet without changing its grid-paper construction, added a restrained hover lift, moved the topic note after the complete lessons-and-tests map with normal adjacent spacing, and gave the note matching hover and focus-within motion.
@@ -66,6 +67,7 @@
 
 ### Fixed
 
+- Excluded local Visual Studio cache files from repository-wide Prettier checks so locked generated indexes no longer block client validation.
 - Focused **Learn first** routes now use a centered single-lesson hierarchy without redundant navigation, while cumulative Review routes use a compact accessible selector on narrow screens and a correctly offset sticky lesson navigator on wide screens; lesson headings and section gutters are aligned consistently.
 - The shell's Mistakes navigation now includes the active topic-pack ID instead of pointing to an incomplete route.
 - Added previously referenced stone, blue, and green CSS token aliases so status and secondary styles resolve consistently.

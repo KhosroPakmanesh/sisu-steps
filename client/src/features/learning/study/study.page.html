@@ -81,10 +81,21 @@
       </div>
       @if (activeTest(); as testFocus) {
         <aside class="test-focus" aria-label="Test learning focus">
-          <strong>{{ testFocus.stage === 'review' ? 'Skills reviewed' : 'Your target' }}:</strong>
-          {{ testFocus.targetSkills.join(', ') }}
+          <div>
+            <p class="eyebrow">
+              {{ testFocus.stage === 'review' ? 'Mixed practice' : 'One target at a time' }}
+            </p>
+            <h2>
+              {{ testFocus.stage === 'review' ? 'Skills reviewed' : 'Your target' }}:
+              {{ testFocus.targetSkills.join(', ') }}
+            </h2>
+          </div>
           @if (testFocus.prerequisiteSkills.length > 0) {
-            <span>Uses earlier skills: {{ testFocus.prerequisiteSkills.join(', ') }}</span>
+            <p>Uses earlier skills: {{ testFocus.prerequisiteSkills.join(', ') }}</p>
+          } @else if (testFocus.stage === 'review') {
+            <p>Practise these earlier skills together.</p>
+          } @else {
+            <p>Learn and practise this important grammar point separately.</p>
           }
         </aside>
       }
