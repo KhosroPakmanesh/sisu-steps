@@ -1,7 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-const path = resolve('public/content', process.argv[2] ?? 'finnish-foundations-a1.json');
+const path = resolve('public/content', process.argv[2] ?? 'vowel-harmony-kpt-tplural.json');
 const pack = JSON.parse(readFileSync(path, 'utf8'));
 const allowedTypes = new Set([
   'multiple-choice',
@@ -305,7 +305,7 @@ for (const exercise of exercises) {
       errors.push(`${exercise.id}: parallel exercise must use a different surface answer`);
   }
 }
-if (pack.id === 'finnish-foundations-a1') {
+if (pack.id === 'vowel-harmony-kpt-tplural') {
   const kptLessonIds = [
     'kpt-doubles',
     'kpt-singles',

@@ -1,5 +1,7 @@
 import { expect, type Locator, test } from '@playwright/test';
 
+const TOPIC_SEGMENT = 'vowel-harmony-kpt-tplural';
+
 async function expectClippedPaper(locator: Locator) {
   await expect(locator).toBeVisible();
   expect(await locator.evaluate((element) => getComputedStyle(element).clipPath)).not.toBe('none');
@@ -13,7 +15,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await expect(page.locator('.test-card')).toHaveCount(0);
   await page.getByRole('link', { name: 'Open topic' }).click();
 
-  await expect(page).toHaveURL(/\/topics\/finnish-foundations-a1$/);
+  await expect(page).toHaveURL(new RegExp(`/topics/${TOPIC_SEGMENT}$`));
   await expect(page.locator('.test-card')).toHaveCount(15);
   await expect(page.locator('.test-group-heading h3')).toHaveText(['Focused tests', 'Reviews']);
   await expect(page.locator('.set-badge, .stage-badge')).toHaveCount(0);
@@ -21,7 +23,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await expect(page.locator('body')).not.toContainText('Extended set');
   await expect(
     page.locator('.test-card').first().getByRole('link', { name: 'Learn first' }),
-  ).toHaveAttribute('href', /\/learn\/finnish-foundations-a1\//);
+  ).toHaveAttribute('href', new RegExp(`/learn/${TOPIC_SEGMENT}/`));
   await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toContainText(
     'Topics',
   );
@@ -32,7 +34,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await expect(page.locator('.appearance-toggle-hardware')).toBeVisible();
   await expect(page.locator('.appearance-choice-icon')).toHaveCount(3);
 
-  await page.goto('/learn/finnish-foundations-a1/kpt-nouns');
+  await page.goto(`/learn/${TOPIC_SEGMENT}/kpt-nouns`);
   await expect(page.locator('.lesson-hero h1')).toHaveText('KPT in nouns');
   await expect(page.locator('.lesson-layout')).toHaveClass(/single-lesson/);
   await expect(page.locator('.lesson-list')).toHaveCount(0);
@@ -50,7 +52,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
     ).toBeLessThan(2);
   }
 
-  await page.goto('/learn/finnish-foundations-a1/guided-review');
+  await page.goto(`/learn/${TOPIC_SEGMENT}/guided-review`);
   await expect(page.locator('.lesson-list button')).toHaveCount(13);
   await expect(page.locator('.lesson-hero .eyebrow')).toContainText('Review');
   await expect(page.locator('.lesson-hero h1')).toHaveText('Foundations checkpoint review');
@@ -80,7 +82,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
 });
 
 test('keeps optional lesson practice separate from scored progress', async ({ page }) => {
-  await page.goto('/topics/finnish-foundations-a1');
+  await page.goto(`/topics/${TOPIC_SEGMENT}`);
   await page.locator('.test-card').first().getByRole('link', { name: 'Learn first' }).click();
 
   await expect(page.getByRole('heading', { name: 'Vowel families' })).toBeVisible();
@@ -94,7 +96,7 @@ test('keeps optional lesson practice separate from scored progress', async ({ pa
 });
 
 test('keeps stationery exercise controls native and keyboard usable', async ({ page }) => {
-  await page.goto('/study/finnish-foundations-a1/vowel-families');
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
 
   const firstChoice = page.getByRole('radio', { name: 'back vowels' });
   await firstChoice.check();
@@ -106,14 +108,14 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   await expect(page.locator('.progress-pencil')).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Check answer' })).toBeEnabled();
 
-  await page.goto('/study/finnish-foundations-a1/harmony-in-forms');
+  await page.goto(`/study/${TOPIC_SEGMENT}/harmony-in-forms`);
   const answer = page.getByRole('textbox', { name: 'Your answer' });
   await answer.fill('talossa');
   await expect(answer).toHaveValue('talossa');
   await page.getByRole('button', { name: 'Erase answer' }).click();
   await expect(answer).toHaveValue('');
 
-  await page.goto('/study/finnish-foundations-a1/plural-in-sentences');
+  await page.goto(`/study/${TOPIC_SEGMENT}/plural-in-sentences`);
   await page.getByRole('button', { name: /Show answer/ }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   const availableWords = page.getByLabel('Available words');
@@ -129,7 +131,7 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
 });
 
 test('keeps study targets truthful and readable at every supported width', async ({ page }) => {
-  await page.goto('/study/finnish-foundations-a1/vowel-families');
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
 
   const focusedTarget = page.getByRole('complementary', { name: 'Test learning focus' });
   await expect(
@@ -143,7 +145,7 @@ test('keeps study targets truthful and readable at every supported width', async
     .toBe((page.viewportSize()?.width ?? 0) <= 800 ? 'block' : 'flex');
   await expect(page.locator('html')).toHaveJSProperty('scrollWidth', page.viewportSize()?.width);
 
-  await page.goto('/study/finnish-foundations-a1/guided-review');
+  await page.goto(`/study/${TOPIC_SEGMENT}/guided-review`);
 
   const reviewTarget = page.getByRole('complementary', { name: 'Test learning focus' });
   await expect(reviewTarget.getByRole('heading', { level: 2 })).toContainText('Skills reviewed:');
@@ -152,7 +154,7 @@ test('keeps study targets truthful and readable at every supported width', async
 });
 
 test('saves a private sticky note without leaving the workbook', async ({ page }) => {
-  await page.goto('/topics/finnish-foundations-a1');
+  await page.goto(`/topics/${TOPIC_SEGMENT}`);
 
   const note = page.getByRole('textbox', { name: 'Topic note' });
   await note.fill('Practise front-vowel endings tomorrow.');
@@ -245,7 +247,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     )
     .toBeCloseTo(expectedStatsLift, 2);
 
-  await page.goto('/topics/finnish-foundations-a1');
+  await page.goto(`/topics/${TOPIC_SEGMENT}`);
   const topicPageWidth = await page
     .locator('main.topic-page')
     .evaluate((element) => element.getBoundingClientRect().width);
@@ -367,7 +369,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
       .evaluate((element) => Number.parseFloat(getComputedStyle(element).borderRadius)),
   ).toBeLessThan(4);
 
-  await page.goto('/study/finnish-foundations-a1/vowel-families');
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
   await expectClippedPaper(page.locator('.choice-list label').first());
   await page.getByRole('radio', { name: 'front vowels' }).check();
   await page.getByRole('button', { name: 'Check answer' }).click();
@@ -512,7 +514,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
 });
 
 test('restores an unfinished scored session from browser storage', async ({ page }) => {
-  await page.goto('/topics/finnish-foundations-a1');
+  await page.goto(`/topics/${TOPIC_SEGMENT}`);
   await page.locator('.test-card').first().getByRole('link', { name: 'Start test' }).click();
   await expect(page.getByRole('button', { name: /Show answer/ })).toBeEnabled();
   await page.keyboard.press('Alt+a');

@@ -10,7 +10,7 @@ The existing thirteen-skill sequence, fourteen existing test IDs, 200 scored exe
 
 ## Scope
 
-- **Pack:** `finnish-foundations-a1`
+- **Pack:** `vowel-harmony-kpt-tplural`
 - **Pack version:** `5.0.0`
 - **Topic:** vowel harmony, KPT consonant gradation, and nominative T-plural foundations
 - **Level statement:** Pre-A1–A1.3 written grammar foundations, not general CEFR certification

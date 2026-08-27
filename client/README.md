@@ -49,7 +49,7 @@ Start with `AGENTS.md`, `src/AGENTS.md`, and `specs/README.md`. Client review re
 
 ## Content workflow
 
-Installed packs are registered in `public/content/index.json`. The current pack is served from `public/content/finnish-foundations-a1.json`; its deterministic source is `tools/generate-content.mjs`.
+Installed packs are registered in `public/content/index.json`. The current pack is served from `public/content/vowel-harmony-kpt-tplural.json`; its deterministic source is `tools/generate-content.mjs`.
 
 ```powershell
 npm --prefix client run content:generate

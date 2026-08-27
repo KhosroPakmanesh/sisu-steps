@@ -3,7 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const outputPath = resolve(root, 'public/content/finnish-foundations-a1.json');
+const outputPath = resolve(root, 'public/content/vowel-harmony-kpt-tplural.json');
 
 const make = (id, type, instruction, prompt, acceptedAnswers, explanation, tags, extra = {}) => ({
   id,
@@ -2255,7 +2255,7 @@ const importantSkills = [
 
 const pack = {
   schemaVersion: 1,
-  id: 'finnish-foundations-a1',
+  id: 'vowel-harmony-kpt-tplural',
   version: '5.0.0',
   title: 'Vowel harmony, KPT & T-plural',
   level: 'Pre-A1–A1.3 Finnish grammar foundations',

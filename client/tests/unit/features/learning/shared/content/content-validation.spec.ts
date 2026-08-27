@@ -341,7 +341,10 @@ describe('content catalog validation', () => {
   });
 
   it('accepts safe, unique catalog entries', () => {
-    expect(validateContentCatalog(catalog()).packs).toHaveLength(1);
+    expect(
+      validateContentCatalog(catalog([{ id: 'vowel-harmony-kpt-tplural', file: 'pack.json' }]))
+        .packs,
+    ).toHaveLength(1);
   });
 
   it('rejects duplicate ids and unsafe filenames', () => {
