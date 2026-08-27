@@ -1,88 +1,180 @@
-<main class="page-shell narrow-page">
-  <header class="page-heading">
-    <div>
+<main class="page-shell data-page">
+  <header class="data-hero">
+    <div class="data-hero-copy">
+      <a class="back-link" [routerLink]="paths.home">← Back to topics</a>
       <p class="eyebrow">Local ownership</p>
       <h1>Data & backup</h1>
+      <p>
+        Your progress lives only in this browser. Download a backup before clearing browser data or
+        moving the app.
+      </p>
+      <p class="notebook-note" aria-hidden="true">your work belongs to you</p>
     </div>
-    <a class="back-link" [routerLink]="paths.home">← Back to topics</a>
+
+    <dl class="data-overview assignment-sheet" aria-label="Local data overview">
+      <div class="data-overview-primary">
+        <dt>Your data</dt>
+        <dd>Local only</dd>
+      </div>
+      <div>
+        <dt>Storage</dt>
+        <dd>This browser</dd>
+      </div>
+      <div>
+        <dt>Backup</dt>
+        <dd>JSON file</dd>
+      </div>
+      <div class="data-overview-wide">
+        <dt>Includes</dt>
+        <dd>Progress & notes</dd>
+      </div>
+    </dl>
   </header>
-  <p class="lead">
-    Your progress lives only in this browser. Download a backup before clearing browser data or
-    moving the app.
-  </p>
-  <p class="notebook-note" aria-hidden="true">your work belongs to you</p>
-  @if (message()) {
-    <p class="notice success" role="status">{{ message() }}</p>
-  }
-  @if (error()) {
-    <p class="notice failure" role="alert">{{ error() }}</p>
-  }
-  <section class="settings-card">
-    <div>
-      <p class="card-kicker">Keep a safe copy</p>
-      <h2>Backup and restore</h2>
+
+  <section class="backup-archive topic-card" aria-labelledby="backup-heading">
+    <header class="archive-section-heading">
+      <div>
+        <p class="eyebrow">Keep a safe copy</p>
+        <h2 id="backup-heading">Backup and restore</h2>
+      </div>
       <p>
         Save your attempts, unfinished sessions, mistakes, completed lessons, and private notes in
         one backup file.
       </p>
-    </div>
-    <div class="settings-actions">
-      <button class="button primary" type="button" (click)="exportBackup()">Download backup</button
-      ><label class="button secondary file-button"
-        >Restore backup<input
-          type="file"
-          accept="application/json,.json"
-          (change)="importBackup($event)"
-      /></label>
-    </div>
-  </section>
-  @for (pack of store.packs(); track pack.id) {
-    <section class="settings-card stacked">
-      <div>
-        <p class="card-kicker">{{ pack.level }} · Choose what to clear</p>
-        <h2>{{ pack.title }}</h2>
-        <p>
-          Clearing one test keeps your notes. Clearing this topic also removes its topic and lesson
-          notes without affecting any other topic pack.
-        </p>
-      </div>
-      <div class="clear-list">
-        @for (test of pack.tests; track test.id; let index = $index) {
-          <div>
-            <span>{{ index + 1 }}. {{ test.title }}</span
-            ><button
-              class="button danger compact clear-action"
-              type="button"
-              (click)="clearTest(pack.id, test.id, test.title)"
-            >
-              Clear this test
-            </button>
-          </div>
-        }
-      </div>
-      <div class="settings-actions">
-        <button class="button secondary" type="button" (click)="clearTopic(pack.id, pack.title)">
-          Clear this topic
+    </header>
+
+    <div class="archive-actions">
+      <div class="archive-action-row">
+        <span class="archive-number" aria-hidden="true">01</span>
+        <div>
+          <h3>Download a copy</h3>
+          <p>Keep a portable snapshot before clearing data or changing browsers.</p>
+        </div>
+        <button class="button primary" type="button" (click)="exportBackup()">
+          <span aria-hidden="true">↓</span>
+          Download backup
         </button>
       </div>
-    </section>
-  }
+
+      <div class="archive-action-row">
+        <span class="archive-number" aria-hidden="true">02</span>
+        <div>
+          <h3>Restore a copy</h3>
+          <p>A selected file is checked completely before it can replace your saved work.</p>
+        </div>
+        <label class="button secondary file-button">
+          <span aria-hidden="true">↑</span>
+          Restore backup
+          <input type="file" accept="application/json,.json" (change)="importBackup($event)" />
+        </label>
+      </div>
+
+      @if (store.packs().length > 0) {
+        <div class="archive-action-row clear-all-action-row">
+          <span class="archive-number danger-number" aria-hidden="true">03</span>
+          <div>
+            <h3>Clear all history</h3>
+            <p>
+              Remove progress and private notes from every topic. Bundled lessons and exercises
+              remain available.
+            </p>
+          </div>
+          <button class="button danger" type="button" (click)="clearAll()">
+            Clear all history
+          </button>
+        </div>
+      }
+    </div>
+
+    @if (noticeTarget() === 'backup' || noticeTarget() === 'clear-all') {
+      @if (message()) {
+        <p class="notice success operation-notice" role="status">{{ message() }}</p>
+      }
+      @if (error()) {
+        <p class="notice failure operation-notice" role="alert">{{ error() }}</p>
+      }
+    }
+  </section>
+
   @if (store.packs().length > 0) {
-    <section class="danger-zone">
-      <div>
-        <p class="card-kicker">Destructive action</p>
-        <h2>Clear all history</h2>
-        <p>
-          This removes progress and private notes from every topic. Bundled lessons and exercises
-          are never removed.
-        </p>
-      </div>
-      <div class="settings-actions">
-        <button class="button danger" type="button" (click)="clearAll()">Clear all history</button>
-      </div>
+    <section class="history-section" aria-labelledby="history-heading">
+      <header class="section-heading data-section-heading">
+        <div>
+          <p class="eyebrow">Manage saved progress</p>
+          <h2 id="history-heading">Choose what to clear</h2>
+        </div>
+        <p>Remove one test, one topic, or everything. Lessons and exercises remain available.</p>
+      </header>
+
+      @for (pack of store.packs(); track pack.id) {
+        <article class="topic-archive">
+          <header class="topic-file-label">
+            <div>
+              <p class="eyebrow">{{ pack.level }} · Topic archive</p>
+              <h3>{{ pack.title }}</h3>
+            </div>
+            <p>
+              Clearing one test keeps your notes. Clearing this topic also removes its topic and
+              lesson notes without affecting any other topic pack.
+            </p>
+          </header>
+
+          <div class="clear-ledger-heading" aria-hidden="true">
+            <span></span>
+            <span>Saved test</span>
+            <span>Action</span>
+          </div>
+          <div class="clear-ledger">
+            <ol class="clear-list">
+              @for (test of pack.tests; track test.id; let index = $index) {
+                <li class="clear-row">
+                  <span class="archive-number" aria-hidden="true">{{
+                    (index + 1).toString().padStart(2, '0')
+                  }}</span>
+                  <div class="clear-row-copy">
+                    <h4>{{ test.title }}</h4>
+                    <p>Attempts, saved place, mistakes, corrections, and mastery.</p>
+                  </div>
+                  <button
+                    class="button danger compact clear-action"
+                    type="button"
+                    (click)="clearTest(pack.id, test.id, test.title)"
+                  >
+                    Clear this test
+                  </button>
+                </li>
+              }
+            </ol>
+
+            <footer class="topic-clear-strip">
+              <div>
+                <p class="card-kicker">This topic only</p>
+                <p>Remove all saved progress and private notes for {{ pack.title }}.</p>
+              </div>
+              <button
+                class="button secondary"
+                type="button"
+                (click)="clearTopic(pack.id, pack.title)"
+              >
+                Clear this topic
+              </button>
+            </footer>
+          </div>
+
+          @if (noticeTarget() === pack.id) {
+            @if (message()) {
+              <p class="notice success operation-notice" role="status">{{ message() }}</p>
+            }
+            @if (error()) {
+              <p class="notice failure operation-notice" role="alert">{{ error() }}</p>
+            }
+          }
+        </article>
+      }
     </section>
   }
 </main>
+
 <app-confirmation-sheet
   [request]="pendingClear()?.request ?? null"
   (resolved)="resolveClear($event)"

@@ -1,0 +1,80 @@
+.data-overview {
+  transform: rotate(0.35deg);
+  transition:
+    transform var(--motion-standard) ease,
+    filter var(--motion-standard) ease;
+}
+
+.data-overview:hover {
+  z-index: 2;
+  filter: drop-shadow(0.45rem 0.6rem 0 var(--paper-edge))
+    drop-shadow(0.7rem 1rem 1.7rem var(--notebook-shadow));
+  transform: translateY(-0.45rem) rotate(0);
+}
+
+.topic-file-label {
+  transition:
+    transform var(--motion-standard) ease,
+    filter var(--motion-standard) ease;
+}
+
+.topic-file-label:hover {
+  z-index: 2;
+  filter: drop-shadow(0.38rem 0.48rem 0 var(--paper-edge))
+    drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
+  transform: translateY(-0.45rem) rotate(0);
+}
+
+.archive-number {
+  transform: rotate(-2deg);
+  transition: transform var(--motion-fast) ease;
+}
+
+.clear-ledger-heading {
+  transition: transform var(--motion-standard) ease;
+}
+
+.clear-ledger-heading:hover {
+  transform: translateY(-0.45rem);
+}
+
+.archive-action-row > div,
+.clear-row-copy {
+  transition: transform var(--motion-fast) ease;
+}
+
+.archive-action-row:hover .archive-number,
+.archive-action-row:focus-within .archive-number,
+.clear-row:hover .archive-number,
+.clear-row:focus-within .archive-number {
+  transform: translateY(-0.18rem) rotate(0);
+}
+
+.archive-action-row:hover > div,
+.archive-action-row:focus-within > div,
+.clear-row:hover .clear-row-copy,
+.clear-row:focus-within .clear-row-copy {
+  transform: translateY(-0.12rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .data-page .backup-archive,
+  .data-page .backup-archive:hover,
+  .data-page .backup-archive:focus-within,
+  .data-overview,
+  .data-overview:hover,
+  .topic-file-label,
+  .topic-file-label:hover,
+  .clear-ledger-heading,
+  .clear-ledger-heading:hover,
+  .archive-action-row:hover .archive-number,
+  .archive-action-row:focus-within .archive-number,
+  .clear-row:hover .archive-number,
+  .clear-row:focus-within .archive-number,
+  .archive-action-row:hover > div,
+  .archive-action-row:focus-within > div,
+  .clear-row:hover .clear-row-copy,
+  .clear-row:focus-within .clear-row-copy {
+    transform: none;
+  }
+}

@@ -596,7 +596,125 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   await page.goto('/data');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Data & backup');
+  await expect(page.locator('.data-hero .back-link + .eyebrow')).toBeVisible();
+  await expect(page.locator('.data-overview.assignment-sheet')).toBeVisible();
+  await expect(page.getByRole('region', { name: 'Backup and restore' })).toBeVisible();
   await expect(page.getByRole('button', { name: 'Download backup' })).toBeVisible();
+  await expect(page.getByLabel('Restore backup')).toHaveAttribute(
+    'accept',
+    'application/json,.json',
+  );
+  await expect(page.getByRole('heading', { name: 'Choose what to clear' })).toBeVisible();
+  await expect(page.locator('.topic-file-label').first()).toBeVisible();
+  await expect(page.locator('.clear-ledger').first()).toBeVisible();
+  await expect(page.locator('.backup-archive .clear-all-action-row')).toBeVisible();
+  await expect(page.locator('.clear-all-slip')).toHaveCount(0);
+  await expect(page.locator('.settings-card')).toHaveCount(0);
+  await expect(page.locator('.danger-zone')).toHaveCount(0);
+
+  const viewportWidth = page.viewportSize()?.width ?? 0;
+  if (viewportWidth > 800) {
+    const heroAlignment = await page.locator('.data-hero').evaluate((element) => {
+      const copy = element.querySelector('.data-hero-copy')?.getBoundingClientRect();
+      const overview = element.querySelector('.data-overview')?.getBoundingClientRect();
+      return Math.abs((copy?.top ?? 0) - (overview?.top ?? 0));
+    });
+    expect(heroAlignment).toBeLessThanOrEqual(2);
+  }
+
+  if (viewportWidth > 650) {
+    const archiveGrid = await page
+      .locator('.topic-archive')
+      .first()
+      .evaluate((element) => {
+        const heading = element.querySelector('.clear-ledger-heading');
+        const row = element.querySelector('.clear-row');
+        return {
+          heading: heading ? getComputedStyle(heading).gridTemplateColumns : '',
+          row: row ? getComputedStyle(row).gridTemplateColumns : '',
+        };
+      });
+    expect(archiveGrid.heading).toBe(archiveGrid.row);
+  }
+
+  const firstRow = page.locator('.clear-row').first();
+  const rowBefore = await firstRow.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return {
+      background: style.backgroundColor,
+      shadow: style.boxShadow,
+      copyTransform: getComputedStyle(element.querySelector('.clear-row-copy')!).transform,
+    };
+  });
+  await firstRow.hover();
+  await expect
+    .poll(() =>
+      firstRow.evaluate(
+        (element) => getComputedStyle(element.querySelector('.clear-row-copy')!).transform,
+      ),
+    )
+    .not.toBe(rowBefore.copyTransform);
+  const rowAfter = await firstRow.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return { background: style.backgroundColor, shadow: style.boxShadow };
+  });
+  expect(rowAfter).toEqual({
+    background: rowBefore.background,
+    shadow: rowBefore.shadow,
+  });
+
+  const dataHeaderStyle = await page
+    .locator('.clear-ledger-heading')
+    .first()
+    .evaluate((element) => {
+      const style = getComputedStyle(element);
+      const spine = getComputedStyle(element, '::before');
+      return {
+        background: style.backgroundColor,
+        clipPath: style.clipPath,
+        height: element.getBoundingClientRect().height,
+        paddingTop: style.paddingTop,
+        spineBackground: spine.backgroundColor,
+        spineWidth: spine.width,
+      };
+    });
+  const backupEdge = await page.locator('.backup-archive').evaluate((element) => {
+    const edge = getComputedStyle(element, '::after');
+    return {
+      content: edge.content,
+      position: edge.position,
+      width: edge.width,
+    };
+  });
+  expect(backupEdge.content).not.toBe('none');
+  expect(backupEdge.position).toBe('absolute');
+  expect(Number.parseFloat(backupEdge.width)).toBeGreaterThan(0);
+
+  const pageWidth = (await page.locator('main.data-page').boundingBox())?.width ?? 0;
+  await page.goto('/reports');
+  const reportsWidth = (await page.locator('main.reports-page').boundingBox())?.width ?? 0;
+  expect(Math.abs(pageWidth - reportsWidth)).toBeLessThanOrEqual(1);
+  const reportHeaderStyle = await page
+    .locator('.ledger-column-heading')
+    .first()
+    .evaluate((element) => {
+      const style = getComputedStyle(element);
+      const spine = getComputedStyle(element, '::before');
+      return {
+        background: style.backgroundColor,
+        clipPath: style.clipPath,
+        height: element.getBoundingClientRect().height,
+        paddingTop: style.paddingTop,
+        spineBackground: spine.backgroundColor,
+        spineWidth: spine.width,
+      };
+    });
+  expect(dataHeaderStyle).toEqual(reportHeaderStyle);
+  await page.goto('/data');
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
+    true,
+  );
+
   const clearHistory = page.getByRole('button', { name: 'Clear all history' });
   await clearHistory.click();
 
@@ -660,6 +778,18 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     page.locator('.objective-panel'),
     page.locator('.sticky-note'),
     page.locator('.test-group-heading').first(),
+  ]) {
+    await surface.hover();
+    await expect
+      .poll(() => surface.evaluate((element) => getComputedStyle(element).transform))
+      .toBe('none');
+  }
+
+  await page.goto('/data');
+  for (const surface of [
+    page.locator('.data-overview'),
+    page.locator('.backup-archive'),
+    page.locator('.topic-file-label').first(),
   ]) {
     await surface.hover();
     await expect

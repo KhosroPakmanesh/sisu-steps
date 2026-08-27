@@ -14,25 +14,28 @@ interface PendingClear {
   request: ConfirmationSheetRequest;
   action: () => Promise<void>;
   successMessage: string;
+  noticeTarget: string;
 }
 
 @Component({
   selector: 'app-data-settings',
   imports: [RouterLink, ConfirmationSheetComponent],
   templateUrl: './data-settings.page.html',
-  styleUrl: './data-settings.page.css',
+  styleUrls: ['./data-settings.page.css', './data-settings.page-interactions.css'],
 })
 export class DataSettingsPage {
   protected readonly store = inject(LearningStateStore);
   protected readonly paths = routePaths;
   protected readonly message = signal<string | null>(null);
   protected readonly error = signal<string | null>(null);
+  protected readonly noticeTarget = signal('backup');
   protected readonly pendingClear = signal<PendingClear | null>(null);
   private readonly backups = inject(BackupService);
   private readonly clearing = inject(ClearProgressService);
   private readonly files = inject(TextFileAdapter);
 
   protected exportBackup(): void {
+    this.resetNotices('backup');
     const filename = `finnish-exercise-book-${new Date().toISOString().slice(0, 10)}.json`;
     this.files.downloadJson(filename, this.backups.create());
     this.message.set('Your backup was downloaded.');
@@ -42,7 +45,7 @@ export class DataSettingsPage {
     const input = event.target as HTMLInputElement;
     const file = input.files?.[0];
     if (!file) return;
-    this.resetNotices();
+    this.resetNotices('backup');
     try {
       await this.backups.restore(await this.files.readJson(file));
       this.message.set('Backup restored successfully.');
@@ -63,6 +66,7 @@ export class DataSettingsPage {
       },
       () => this.clearing.clearTest(topicId, testId),
       `${title} history was cleared.`,
+      topicId,
     );
   }
 
@@ -77,6 +81,7 @@ export class DataSettingsPage {
       },
       () => this.clearing.clearTopic(topicId),
       `${title} history was cleared.`,
+      topicId,
     );
   }
 
@@ -91,6 +96,7 @@ export class DataSettingsPage {
       },
       () => this.clearing.clearAll(),
       'All learner history was cleared.',
+      'clear-all',
     );
   }
 
@@ -98,11 +104,15 @@ export class DataSettingsPage {
     const pending = this.pendingClear();
     this.pendingClear.set(null);
     if (!confirmed || !pending) return;
-    await this.runClear(pending.action, pending.successMessage);
+    await this.runClear(pending.action, pending.successMessage, pending.noticeTarget);
   }
 
-  private async runClear(action: () => Promise<void>, successMessage: string): Promise<void> {
-    this.resetNotices();
+  private async runClear(
+    action: () => Promise<void>,
+    successMessage: string,
+    noticeTarget: string,
+  ): Promise<void> {
+    this.resetNotices(noticeTarget);
     try {
       await action();
       this.message.set(successMessage);
@@ -111,7 +121,8 @@ export class DataSettingsPage {
     }
   }
 
-  private resetNotices(): void {
+  private resetNotices(noticeTarget: string): void {
+    this.noticeTarget.set(noticeTarget);
     this.message.set(null);
     this.error.set(null);
   }
@@ -120,7 +131,8 @@ export class DataSettingsPage {
     request: ConfirmationSheetRequest,
     action: () => Promise<void>,
     successMessage: string,
+    noticeTarget: string,
   ): void {
-    this.pendingClear.set({ request, action, successMessage });
+    this.pendingClear.set({ request, action, successMessage, noticeTarget });
   }
 }
