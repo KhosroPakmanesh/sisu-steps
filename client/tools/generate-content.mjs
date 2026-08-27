@@ -269,6 +269,19 @@ const vocabularyForLessons = (lessonIds) => [
   ),
 ];
 
+const vocabularyMeanings = new Map(
+  Object.values(lessonProfiles).flatMap((profile) => profile.introducedVocabulary),
+);
+const meaningOf = (form) => {
+  const meaning = vocabularyMeanings.get(form);
+  if (!meaning) throw new Error(`Missing English meaning for ${form}.`);
+  return meaning;
+};
+const splitKptMeanings = (meaning) => {
+  const [sourceMeaning, targetMeaning] = meaning.split(' → ');
+  return [sourceMeaning, targetMeaning ?? `of the ${sourceMeaning}`];
+};
+
 const testProfiles = {
   'vowel-families': { stage: 'focused', targetSkills: ['Vowel harmony'], prerequisiteSkills: [] },
   'harmony-in-forms': {
@@ -426,7 +439,7 @@ const lesson = (
   practiceExercises,
 ) => ({
   id,
-  version: '5.0.0',
+  version: '5.1.0',
   ...lessonProfiles[id],
   title,
   summary,
@@ -534,65 +547,88 @@ const harmonyForms = [
 const test2 = harmonyForms.map(([base, form, english, explanation], index) => {
   const id = idFor(2, index);
   const focus = { vocabulary: [base] };
+  const baseMeaning = meaningOf(base);
+  const completeExplanation = `${base} means “${baseMeaning}”; ${form} means “${english}”. ${explanation}`;
   if (index % 4 === 0)
     return fill(
       id,
-      `${base} (“${english}”) + -ssa/-ssä → ____`,
+      `${base} (“${baseMeaning}”) + -ssa/-ssä → ____ (“${english}”)`,
       form,
-      explanation,
+      completeExplanation,
       ['vowel-harmony', 'inessive'],
       focus,
     );
   if (index % 4 === 1)
     return choice(
       id,
-      `Choose the correct form of “${base}”.`,
+      `Choose the form meaning “${english}” from ${base} (“${baseMeaning}”).`,
       [form, swapSsa(form), base],
       form,
-      explanation,
+      completeExplanation,
       ['vowel-harmony', 'inessive'],
       focus,
     );
   if (index % 4 === 2)
     return toFinnish(
       id,
-      `${english} — use the supplied base ${base}`,
+      `${english} — use the supplied base ${base} (“${baseMeaning}”)`,
       form,
-      explanation,
+      completeExplanation,
       ['vowel-harmony', 'inessive'],
       focus,
     );
   return fill(
     id,
-    `${base} (“${english}”) → ____ · use -ssa or -ssä`,
+    `${base} (“${baseMeaning}”) → ____ (“${english}”) · use -ssa or -ssä`,
     form,
-    explanation,
+    completeExplanation,
     ['vowel-harmony', 'inessive'],
     focus,
   );
 });
 
 const kptPairs = [
-  ['pankki → pankin', 'kk → k', 'A double k weakens to one k.'],
-  ['kauppa → kaupan', 'pp → p', 'A double p weakens to one p.'],
-  ['matto → maton', 'tt → t', 'A double t weakens to one t.'],
-  ['jalka → jalan', 'k → ∅', 'A single k can disappear in the weak grade.'],
-  ['poika → pojan', 'k → j', 'Between an i and the next vowel, k can change to j.'],
-  ['puku → puvun', 'k → v', 'In this pattern, k changes to v.'],
-  ['leipä → leivän', 'p → v', 'A single p can weaken to v.'],
-  ['pöytä → pöydän', 't → d', 'A single t can weaken to d.'],
-  ['kaupunki → kaupungin', 'nk → ng', 'The cluster nk weakens to ng.'],
-  ['kenkä → kengän', 'nk → ng', 'In spelling, nk weakens to ng.'],
-  ['kampa → kamman', 'mp → mm', 'The cluster mp weakens to mm.'],
-  ['pelto → pellon', 'lt → ll', 'The cluster lt weakens to ll.'],
-  ['hakea → haen', 'k → ∅', 'The k disappears in the minä-form haen.'],
-  ['lukea → luen', 'k → ∅', 'The k disappears in the minä-form luen.'],
-  ['ottaa → otan', 'tt → t', 'The double t weakens to one t in otan.'],
-  ['nukkua → nukun', 'kk → k', 'The double k weakens to one k in nukun.'],
-  ['antaa → annan', 'nt → nn', 'The cluster nt weakens to nn in annan.'],
-  ['lentää → lennän', 'nt → nn', 'The cluster nt weakens to nn in lennän.'],
-  ['kertoa → kerron', 'rt → rr', 'The cluster rt weakens to rr in kerron.'],
-  ['ymmärtää → ymmärrän', 'rt → rr', 'The cluster rt weakens to rr in ymmärrän.'],
+  ['pankki', 'pankin', 'bank', 'of the bank', 'kk → k', 'A double k weakens to one k.'],
+  ['kauppa', 'kaupan', 'shop', 'of the shop', 'pp → p', 'A double p weakens to one p.'],
+  ['matto', 'maton', 'rug', 'of the rug', 'tt → t', 'A double t weakens to one t.'],
+  [
+    'jalka',
+    'jalan',
+    'foot or leg',
+    'of the foot or leg',
+    'k → ∅',
+    'A single k can disappear in the weak grade.',
+  ],
+  [
+    'poika',
+    'pojan',
+    'boy',
+    'of the boy',
+    'k → j',
+    'Between an i and the next vowel, k can change to j.',
+  ],
+  ['puku', 'puvun', 'suit', 'of the suit', 'k → v', 'In this pattern, k changes to v.'],
+  ['leipä', 'leivän', 'bread', 'of the bread', 'p → v', 'A single p can weaken to v.'],
+  ['pöytä', 'pöydän', 'table', 'of the table', 't → d', 'A single t can weaken to d.'],
+  ['kaupunki', 'kaupungin', 'city', 'of the city', 'nk → ng', 'The cluster nk weakens to ng.'],
+  ['kenkä', 'kengän', 'shoe', 'of the shoe', 'nk → ng', 'In spelling, nk weakens to ng.'],
+  ['kampa', 'kamman', 'comb', 'of the comb', 'mp → mm', 'The cluster mp weakens to mm.'],
+  ['pelto', 'pellon', 'field', 'of the field', 'lt → ll', 'The cluster lt weakens to ll.'],
+  ['hakea', 'haen', 'to fetch', 'I fetch', 'k → ∅', 'The k disappears in the minä-form haen.'],
+  ['lukea', 'luen', 'to read', 'I read', 'k → ∅', 'The k disappears in the minä-form luen.'],
+  ['ottaa', 'otan', 'to take', 'I take', 'tt → t', 'The double t weakens to one t in otan.'],
+  ['nukkua', 'nukun', 'to sleep', 'I sleep', 'kk → k', 'The double k weakens to one k in nukun.'],
+  ['antaa', 'annan', 'to give', 'I give', 'nt → nn', 'The cluster nt weakens to nn in annan.'],
+  ['lentää', 'lennän', 'to fly', 'I fly', 'nt → nn', 'The cluster nt weakens to nn in lennän.'],
+  ['kertoa', 'kerron', 'to tell', 'I tell', 'rt → rr', 'The cluster rt weakens to rr in kerron.'],
+  [
+    'ymmärtää',
+    'ymmärrän',
+    'to understand',
+    'I understand',
+    'rt → rr',
+    'The cluster rt weakens to rr in ymmärrän.',
+  ],
 ];
 
 const kptRules = [
@@ -610,27 +646,34 @@ const kptRules = [
   'lt → ll',
   'rt → rr',
 ];
-const test3 = kptPairs.map(([pair, rule, explanation], index) => {
-  const alternatives = kptRules.filter((candidate) => candidate !== rule);
-  return choice(
-    idFor(3, index),
-    `What KPT change appears in ${pair}?`,
-    [
+const test3 = kptPairs.map(
+  ([base, form, sourceMeaning, targetMeaning, rule, explanation], index) => {
+    const alternatives = kptRules.filter((candidate) => candidate !== rule);
+    return choice(
+      idFor(3, index),
+      `What KPT change appears in ${base} (“${sourceMeaning}”) → ${form} (“${targetMeaning}”)?`,
+      [
+        rule,
+        alternatives[(index + 3) % alternatives.length],
+        alternatives[(index + 7) % alternatives.length],
+      ],
       rule,
-      alternatives[(index + 3) % alternatives.length],
-      alternatives[(index + 7) % alternatives.length],
-    ],
-    rule,
-    explanation,
-    ['kpt', 'recognition'],
-    { vocabulary: [pair.split(' → ')[0]] },
-  );
-});
+      explanation,
+      ['kpt', 'recognition'],
+      { vocabulary: [base] },
+    );
+  },
+);
 
 const buildKptBlock = (items, count, targetSkill) =>
   Array.from({ length: count }, (_, index) => {
     const [base, form, meaning, rule] = items[index % items.length];
-    const explanation = `Compare the supplied forms ${base} and ${form}. The consonant change is ${rule}.`;
+    const [sourceMeaning, targetMeaning] = splitKptMeanings(meaning);
+    const isVerb = sourceMeaning.startsWith('to ');
+    const suppliedEnding = isVerb ? 'minä ending -n' : 'genitive ending -n';
+    const suppliedStem = isVerb ? `${base.slice(0, -1)}-` : null;
+    const suppliedFrame = suppliedStem ? `, supplied stem ${suppliedStem} + minä -n` : '';
+    const explanation = `${base} means “${sourceMeaning}”; ${form} means “${targetMeaning}”. ${suppliedStem ? `The stem ${suppliedStem} and minä ending -n are supplied` : 'The genitive ending -n is supplied'}, so they are not new decisions here. Apply only ${rule}: ${base} → ${form}.`;
     const extra = {
       targetSkill,
       vocabulary: [base],
@@ -646,7 +689,7 @@ const buildKptBlock = (items, count, targetSkill) =>
       const alternatives = kptRules.filter((candidate) => candidate !== rule);
       return choice(
         `temporary-${targetSkill}-${index}`,
-        `What change appears in ${base} → ${form}? (${meaning})`,
+        `What change appears in ${base} (“${sourceMeaning}”) → ${form} (“${targetMeaning}”)?`,
         [
           rule,
           alternatives[(index + 2) % alternatives.length],
@@ -660,7 +703,7 @@ const buildKptBlock = (items, count, targetSkill) =>
     }
     return fill(
       `temporary-${targetSkill}-${index}`,
-      `${base} (“${meaning}”) → ____ · apply ${rule}`,
+      `${base} (“${sourceMeaning}”)${suppliedFrame} → ____ (“${targetMeaning}”) · use the supplied ${suppliedEnding}; apply ${rule}`,
       form,
       explanation,
       ['kpt', 'controlled-production'],
@@ -754,12 +797,13 @@ const nounGenitives = [
 ];
 
 const test4 = nounGenitives.map(([base, form, english, rule], index) => {
-  const explanation = `The genitive ends in -n. ${rule}`;
+  const baseMeaning = meaningOf(base);
+  const explanation = `${base} means “${baseMeaning}”; ${form} means “${english}”. The genitive ends in -n. ${rule}`;
   const focus = { vocabulary: [base] };
   if (index % 4 === 0)
     return fill(
       idFor(4, index),
-      `${base} (“${english}”) → ____ (genitive)`,
+      `${base} (“${baseMeaning}”) → ____ (“${english}”) · add genitive -n`,
       form,
       explanation,
       ['kpt', 'noun', 'genitive'],
@@ -768,7 +812,7 @@ const test4 = nounGenitives.map(([base, form, english, rule], index) => {
   if (index % 4 === 1)
     return toFinnish(
       idFor(4, index),
-      `${english} — use the supplied base ${base}`,
+      `${english} — use the supplied base ${base} (“${baseMeaning}”)`,
       form,
       explanation,
       ['kpt', 'noun', 'genitive'],
@@ -777,7 +821,7 @@ const test4 = nounGenitives.map(([base, form, english, rule], index) => {
   if (index % 4 === 2)
     return choice(
       idFor(4, index),
-      `Choose the genitive of “${base}”.`,
+      `Choose the form meaning “${english}” from ${base} (“${baseMeaning}”).`,
       [form, `${base}n`, base],
       form,
       explanation,
@@ -811,12 +855,13 @@ const verbForms = [
 ];
 
 const test5 = verbForms.map(([infinitive, minä, english, rule], index) => {
-  const explanation = `This is the minä-form of ${infinitive}. ${rule}`;
+  const infinitiveMeaning = meaningOf(infinitive);
+  const explanation = `${infinitive} means “${infinitiveMeaning}”; ${minä} means “${english}”. This is the minä-form of ${infinitive}. Add the minä ending -n after forming the stem. ${rule}`;
   const focus = { vocabulary: [infinitive] };
   if (index % 4 === 0)
     return fill(
       idFor(5, index),
-      `${infinitive} (“${english}”) → minä ____`,
+      `${infinitive} (“${infinitiveMeaning}”) → minä ____ (“${english}”) · add minä -n`,
       minä,
       explanation,
       ['kpt', 'verb'],
@@ -825,7 +870,7 @@ const test5 = verbForms.map(([infinitive, minä, english, rule], index) => {
   if (index % 4 === 1)
     return toFinnish(
       idFor(5, index),
-      `${english} — use the supplied dictionary form ${infinitive}`,
+      `${english} — use the supplied dictionary form ${infinitive} (“${infinitiveMeaning}”)`,
       minä,
       explanation,
       ['kpt', 'verb'],
@@ -834,7 +879,7 @@ const test5 = verbForms.map(([infinitive, minä, english, rule], index) => {
   if (index % 4 === 2)
     return choice(
       idFor(5, index),
-      `Choose the minä-form of “${infinitive}”.`,
+      `Choose the form meaning “${english}” from ${infinitive} (“${infinitiveMeaning}”).`,
       [minä, `${infinitive.slice(0, -1)}n`, infinitive],
       minä,
       explanation,
@@ -868,12 +913,13 @@ const regularPlurals = [
 ];
 
 const test6 = regularPlurals.map(([singular, plural, english], index) => {
-  const explanation = `The nominative T-plural is formed here by adding -t: ${singular} → ${plural}.`;
+  const singularMeaning = meaningOf(singular);
+  const explanation = `${singular} means “${singularMeaning}”; ${plural} means “${english}”. The nominative T-plural is formed here by adding -t: ${singular} → ${plural}.`;
   const focus = { vocabulary: [singular] };
   if (index % 4 === 0)
     return fill(
       idFor(6, index),
-      `${singular} (“${english}”) → ____ (plural)`,
+      `${singular} (“${singularMeaning}”) → ____ (“${english}”) · add plural -t`,
       plural,
       explanation,
       ['t-plural', 'regular'],
@@ -882,7 +928,7 @@ const test6 = regularPlurals.map(([singular, plural, english], index) => {
   if (index % 4 === 1)
     return toFinnish(
       idFor(6, index),
-      `${english} — use the supplied base ${singular}`,
+      `${english} — use the supplied base ${singular} (“${singularMeaning}”)`,
       plural,
       explanation,
       ['t-plural', 'regular'],
@@ -891,7 +937,7 @@ const test6 = regularPlurals.map(([singular, plural, english], index) => {
   if (index % 4 === 2)
     return choice(
       idFor(6, index),
-      `Choose the plural of “${singular}”.`,
+      `Choose the form meaning “${english}” from ${singular} (“${singularMeaning}”).`,
       [plural, `${singular}et`, singular],
       plural,
       explanation,
@@ -900,7 +946,7 @@ const test6 = regularPlurals.map(([singular, plural, english], index) => {
     );
   return fill(
     idFor(6, index),
-    `${singular} (“${english}”) → ____ · add plural -t`,
+    `${singular} (“${singularMeaning}”) → ____ (“${english}”) · add plural -t`,
     plural,
     explanation,
     ['t-plural', 'regular'],
@@ -932,12 +978,13 @@ const gradatingPlurals = [
 ];
 
 const test7 = gradatingPlurals.map(([singular, plural, english, rule], index) => {
-  const explanation = `Add plural -t to the weak stem. The KPT change is ${rule}: ${singular} → ${plural}.`;
+  const singularMeaning = meaningOf(singular);
+  const explanation = `${singular} means “${singularMeaning}”; ${plural} means “${english}”. Add plural -t to the weak stem. The KPT change is ${rule}: ${singular} → ${plural}.`;
   const focus = { vocabulary: [singular] };
   if (index % 4 === 0)
     return fill(
       idFor(7, index),
-      `${singular} (“${english}”) → ____ (plural)`,
+      `${singular} (“${singularMeaning}”) → ____ (“${english}”) · add plural -t`,
       plural,
       explanation,
       ['t-plural', 'kpt'],
@@ -946,7 +993,7 @@ const test7 = gradatingPlurals.map(([singular, plural, english, rule], index) =>
   if (index % 4 === 1)
     return toFinnish(
       idFor(7, index),
-      `${english} — use the supplied base ${singular}`,
+      `${english} — use the supplied base ${singular} (“${singularMeaning}”)`,
       plural,
       explanation,
       ['t-plural', 'kpt'],
@@ -955,7 +1002,7 @@ const test7 = gradatingPlurals.map(([singular, plural, english, rule], index) =>
   if (index % 4 === 2)
     return choice(
       idFor(7, index),
-      `Choose the plural of “${singular}”.`,
+      `Choose the form meaning “${english}” from ${singular} (“${singularMeaning}”).`,
       [plural, `${singular}t`, singular],
       plural,
       explanation,
@@ -1011,14 +1058,15 @@ const verbSentenceLesson = (infinitive, stem, form, english, suffix) =>
   );
 
 const test8 = thirdPlural.map(([infinitive, stem, form, english, suffix], index) => {
-  const explanation = `The stem ${stem} is supplied. For he (“they”), vowel harmony selects ${suffix}: ${form}.`;
+  const infinitiveMeaning = meaningOf(infinitive);
+  const explanation = `${infinitive} means “${infinitiveMeaning}”; ${form} means “${english}”. The stem ${stem} is supplied. For he (“they”), vowel harmony selects ${suffix}: ${form}.`;
   const lesson = verbSentenceLesson(infinitive, stem, form, english, suffix);
   const tags = ['vowel-harmony', 'verb', 'plural', 'sentence'];
   const focus = { ...lesson, vocabulary: [infinitive] };
   if (index % 4 === 0)
     return fill(
       idFor(8, index),
-      `${stem} + ${suffix} → ____ (${english})`,
+      `${infinitive} (“${infinitiveMeaning}”): ${stem} + ${suffix} → ____ (“${english}”)`,
       form,
       explanation,
       tags,
@@ -1027,7 +1075,7 @@ const test8 = thirdPlural.map(([infinitive, stem, form, english, suffix], index)
   if (index % 4 === 1)
     return choice(
       idFor(8, index),
-      `Which ending completes ${stem} (“${english.replace('they ', '')}”)?`,
+      `Which ending completes supplied ${stem} from ${infinitive} (“${infinitiveMeaning}”) to mean “${english}”?`,
       ['-vat', '-vät'],
       suffix,
       explanation,
@@ -1037,7 +1085,7 @@ const test8 = thirdPlural.map(([infinitive, stem, form, english, suffix], index)
   if (index % 4 === 2)
     return choice(
       idFor(8, index),
-      `Choose the he-form built from the supplied stem ${stem}.`,
+      `Choose the he-form meaning “${english}” built from ${infinitive} (“${infinitiveMeaning}”) and supplied stem ${stem}.`,
       [form, swapVat(form), infinitive],
       form,
       explanation,
@@ -1046,7 +1094,7 @@ const test8 = thirdPlural.map(([infinitive, stem, form, english, suffix], index)
     );
   return toFinnish(
     idFor(8, index),
-    `${english} — use the supplied stem ${stem}`,
+    `${english} — use the supplied stem ${stem} from ${infinitive} (“${infinitiveMeaning}”)`,
     [`he ${form}`, form],
     explanation,
     tags,
@@ -1333,7 +1381,7 @@ const lessons = [
     [
       fill(
         'ff-a1-l-in-p01',
-        'Practise the inside ending: sauna → ____',
+        'Practise the inside ending: sauna (“sauna”) → ____ (“in the sauna”)',
         'saunassa',
         'sauna has back vowels, so add -ssa directly: saunassa.',
         ['lesson-practice', 'vowel-harmony', 'inessive'],
@@ -1407,7 +1455,7 @@ const lessons = [
     [
       choice(
         'ff-a1-l-kptd-p01',
-        'What changes in pankki → pankin?',
+        'What changes in pankki (“bank”) → pankin (“of the bank”)?',
         ['kk → k', 'k → ∅', 'nk → ng'],
         'kk → k',
         'The double kk becomes one k.',
@@ -1415,7 +1463,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kptd-p02',
-        'What changes in kauppa → kaupan?',
+        'What changes in kauppa (“shop”) → kaupan (“of the shop”)?',
         ['pp → p', 'p → v', 'mp → mm'],
         'pp → p',
         'The double pp becomes one p.',
@@ -1423,16 +1471,16 @@ const lessons = [
       ),
       fill(
         'ff-a1-l-kptd-p03',
-        'Practice only: matto (“rug”) → ____ · apply tt → t',
+        'Practice only: matto (“rug”) → ____ (“of the rug”) · use supplied genitive -n; apply tt → t',
         'maton',
         'First shorten tt to t, giving mato-, and then read the supplied complete pattern maton.',
         ['lesson-practice', 'kpt'],
       ),
       fill(
         'ff-a1-l-kptd-p04',
-        'Practice only: kukka (“flower”) → ____ · apply kk → k',
+        'Practice only: kukka (“flower”) → ____ (“of the flower”) · use supplied genitive -n; apply kk → k',
         'kukan',
-        'Shorten kk to k: kukka → kuka-. The complete form is kukan.',
+        'The supplied target is the genitive meaning “of the flower”, so keep -n fixed. Shorten kk to k: kukka → kuka-, then add -n to make kukan.',
         ['lesson-practice', 'kpt'],
       ),
     ],
@@ -1485,7 +1533,7 @@ const lessons = [
     [
       choice(
         'ff-a1-l-kpts-p01',
-        'What changes in jalka → jalan?',
+        'What changes in jalka (“foot or leg”) → jalan (“of the foot or leg”)?',
         ['k → ∅', 'k → j', 'kk → k'],
         'k → ∅',
         'The single k disappears in the supplied weak form.',
@@ -1493,7 +1541,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kpts-p02',
-        'What changes in leipä → leivän?',
+        'What changes in leipä (“bread”) → leivän (“of the bread”)?',
         ['p → v', 'pp → p', 't → d'],
         'p → v',
         'The single p becomes v.',
@@ -1501,7 +1549,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kpts-p03',
-        'What changes in pöytä → pöydän?',
+        'What changes in pöytä (“table”) → pöydän (“of the table”)?',
         ['t → d', 'tt → t', 'lt → ll'],
         't → d',
         'The single t becomes d.',
@@ -1509,9 +1557,9 @@ const lessons = [
       ),
       fill(
         'ff-a1-l-kpts-p04',
-        'hakea (“to fetch”) → minä ____ · k disappears',
+        'hakea (“to fetch”), supplied stem hake- + minä -n → ____ (“I fetch”) · k disappears',
         'haen',
-        'The k disappears from the supplied pattern: hakea → haen.',
+        'The supplied target means “I fetch”. Use the supplied stem hake- and minä ending -n, let k disappear, and combine the parts: hakea → haen.',
         ['lesson-practice', 'kpt'],
       ),
     ],
@@ -1563,7 +1611,7 @@ const lessons = [
     [
       choice(
         'ff-a1-l-kptk-p01',
-        'What changes in poika → pojan?',
+        'What changes in poika (“boy”) → pojan (“of the boy”)?',
         ['k → j', 'k → v', 'k → ∅'],
         'k → j',
         'In this learned pair, k becomes j.',
@@ -1571,7 +1619,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kptk-p02',
-        'What changes in puku → puvun?',
+        'What changes in puku (“suit”) → puvun (“of the suit”)?',
         ['k → v', 'k → j', 'p → v'],
         'k → v',
         'In this learned pair, k becomes v.',
@@ -1579,14 +1627,14 @@ const lessons = [
       ),
       fill(
         'ff-a1-l-kptk-p03',
-        'Practice only: aika (“time”) → ____ · apply k → j',
+        'Practice only: aika (“time”) → ____ (“of the time”) · use supplied genitive -n; apply k → j',
         'ajan',
         'Use the learned weak partner aja- and the displayed complete form ajan.',
         ['lesson-practice', 'kpt'],
       ),
       fill(
         'ff-a1-l-kptk-p04',
-        'Practice only: luku (“number or chapter”) → ____ · apply k → v',
+        'Practice only: luku (“number or chapter”) → ____ (“of the number or chapter”) · use supplied genitive -n; apply k → v',
         'luvun',
         'Use the learned weak partner luvu- and the displayed complete form luvun.',
         ['lesson-practice', 'kpt'],
@@ -1645,7 +1693,7 @@ const lessons = [
     [
       choice(
         'ff-a1-l-kptc-p01',
-        'What changes in kenkä → kengän?',
+        'What changes in kenkä (“shoe”) → kengän (“of the shoe”)?',
         ['nk → ng', 'nt → nn', 'kk → k'],
         'nk → ng',
         'The whole cluster nk becomes ng.',
@@ -1653,7 +1701,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kptc-p02',
-        'What changes in kampa → kamman?',
+        'What changes in kampa (“comb”) → kamman (“of the comb”)?',
         ['mp → mm', 'pp → p', 'nt → nn'],
         'mp → mm',
         'The whole cluster mp becomes mm.',
@@ -1661,7 +1709,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kptc-p03',
-        'What changes in pelto → pellon?',
+        'What changes in pelto (“field”) → pellon (“of the field”)?',
         ['lt → ll', 'rt → rr', 'tt → t'],
         'lt → ll',
         'The whole cluster lt becomes ll.',
@@ -1669,9 +1717,9 @@ const lessons = [
       ),
       fill(
         'ff-a1-l-kptc-p04',
-        'Practice only: ranta (“beach”) → ____ · apply nt → nn',
+        'Practice only: ranta (“beach”) → ____ (“of the beach”) · use supplied genitive -n; apply nt → nn',
         'rannan',
-        'Change nt to nn in the supplied weak pattern: ranta → rannan.',
+        'The supplied target is the genitive meaning “of the beach”, so keep -n fixed. Change nt to nn and add -n: ranta → rannan.',
         ['lesson-practice', 'kpt'],
       ),
     ],
@@ -1728,7 +1776,7 @@ const lessons = [
     [
       choice(
         'ff-a1-l-kptm-p01',
-        'What changes in pankki → pankin?',
+        'What changes in pankki (“bank”) → pankin (“of the bank”)?',
         ['kk → k', 'k → ∅', 'nk → ng'],
         'kk → k',
         'This is the double-consonant family.',
@@ -1736,7 +1784,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kptm-p02',
-        'What changes in jalka → jalan?',
+        'What changes in jalka (“foot or leg”) → jalan (“of the foot or leg”)?',
         ['k → ∅', 'k → j', 'kk → k'],
         'k → ∅',
         'This is the common single-k disappearance pattern.',
@@ -1744,7 +1792,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kptm-p03',
-        'What changes in poika → pojan?',
+        'What changes in poika (“boy”) → pojan (“of the boy”)?',
         ['k → j', 'k → v', 'p → v'],
         'k → j',
         'This is a separately learned special-k pair.',
@@ -1752,7 +1800,7 @@ const lessons = [
       ),
       choice(
         'ff-a1-l-kptm-p04',
-        'What changes in kenkä → kengän?',
+        'What changes in kenkä (“shoe”) → kengän (“of the shoe”)?',
         ['nk → ng', 'nt → nn', 'mp → mm'],
         'nk → ng',
         'This is the consonant-cluster family.',
@@ -1805,14 +1853,14 @@ const lessons = [
     [
       fill(
         'ff-a1-l-gen-p01',
-        'Practise kk → k, then -n: pankki → ____',
+        'Pankki (“bank”) → ____ (“of the bank”) · use genitive -n; practise kk → k',
         'pankin',
         'Use the known kk → k change, then add -n: pankki → panki- → pankin.',
         ['lesson-practice', 'kpt', 'noun', 'genitive'],
       ),
       fill(
         'ff-a1-l-gen-p02',
-        'Practise pp → p, then -n: kauppa → ____',
+        'Kauppa (“shop”) → ____ (“of the shop”) · use genitive -n; practise pp → p',
         'kaupan',
         'Use the known pp → p change, then add -n: kauppa → kaupa- → kaupan.',
         ['lesson-practice', 'kpt', 'noun', 'genitive'],
@@ -1874,7 +1922,7 @@ const lessons = [
     [
       fill(
         'ff-a1-l-verb-p01',
-        'Practise kk → k: nukkua → minä ____',
+        'Nukkua (“to sleep”) → minä ____ (“I sleep”) · use minä -n; practise kk → k',
         'nukun',
         'Use kk → k to make nuku-, then add -n: nukun.',
         ['lesson-practice', 'kpt', 'verb'],
@@ -1942,7 +1990,7 @@ const lessons = [
     [
       fill(
         'ff-a1-l-tpl-p01',
-        'kissa → ____ (plural)',
+        'Optional practice: kissa (“cat”) → ____ (“cats”) · add plural -t',
         'kissat',
         'The stem stays kissa-. Add plural -t: kissat.',
         ['lesson-practice', 't-plural', 'regular'],
@@ -2009,7 +2057,7 @@ const lessons = [
     [
       fill(
         'ff-a1-l-ktp-p01',
-        'Practise both steps: pankki → ____',
+        'Practise both steps: pankki (“bank”) → ____ (“banks”)',
         'pankit',
         'First use kk → k: panki-. Then add plural -t: pankit.',
         ['lesson-practice', 't-plural', 'kpt'],
@@ -2078,7 +2126,7 @@ const lessons = [
     [
       fill(
         'ff-a1-l-he-p01',
-        'laula- + -vat → ____',
+        'Optional practice with laulaa (“to sing”): laula- + -vat → ____ (“they sing”)',
         'laulavat',
         'The stem laula- is supplied. Attach back-vowel -vat: laulavat.',
         ['lesson-practice', 'verb', 'plural', 'vowel-harmony'],
@@ -2256,7 +2304,7 @@ const importantSkills = [
 const pack = {
   schemaVersion: 1,
   id: 'vowel-harmony-kpt-tplural',
-  version: '5.0.0',
+  version: '5.1.0',
   title: 'Vowel harmony, KPT & T-plural',
   level: 'Pre-A1–A1.3 Finnish grammar foundations',
   summary:

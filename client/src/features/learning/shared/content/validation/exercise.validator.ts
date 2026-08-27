@@ -31,11 +31,25 @@ export function validateExercise(exercise: unknown, seenIds: Set<string>): Exerc
   validateInteractionData(exercise);
   validateDiagnostics(exercise);
   validateSentenceExplanation(exercise);
+  validateTransformationPrompt(exercise);
   if (seenIds.has(exercise['id'])) {
     throw new Error(`Duplicate exercise id: ${exercise['id']}`);
   }
   seenIds.add(exercise['id']);
   return exercise as unknown as Exercise;
+}
+
+function validateTransformationPrompt(exercise: Record<string, unknown>): void {
+  const prompt = exercise['prompt'] as string;
+  const arrowIndex = prompt.indexOf('→');
+  if (arrowIndex === -1) return;
+  const source = prompt.slice(0, arrowIndex);
+  const target = prompt.slice(arrowIndex + 1);
+  if (!/“[^”]+”/.test(source) || !/“[^”]+”/.test(target)) {
+    throw new Error(
+      `Transformation exercise ${exercise['id']} must label both forms with English meanings.`,
+    );
+  }
 }
 
 function validateInteractionData(exercise: Record<string, unknown>): void {

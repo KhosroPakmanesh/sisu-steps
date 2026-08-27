@@ -1,5 +1,23 @@
 # Finnish foundations A1 — pedagogy assessment
 
+## Version 5.1.0 transformation-meaning revision
+
+### Pre-authoring assessment
+
+**Disposition: approved with limitations.**
+
+The learner identified a high-impact clarity gap in prompts such as `silta (“bridge”) → ____ · apply lt → ll`: the expected answer `sillan` also requires genitive `-n` and means “of the bridge”, but neither the target meaning nor the non-target ending was supplied. The same pattern affected noun, verb, inessive, and plural transformations across scored and optional practice material.
+
+The approved revision retains the topic boundary, thirteen-skill sequence, fifteen tests, 200 scored exercises, 44 optional practice exercises, response types, stable lesson/test/exercise IDs, vocabulary, accepted answers, diagnostics, and parallel relationships. It will:
+
+- label the source form with its lexical English meaning and the target form with its inflected English meaning;
+- supply every ending or stem frame that is not the exercise's declared target;
+- strengthen generic and standalone validation so this omission cannot recur;
+- update the repository authoring guide and reusable content-creator skill;
+- increase the pack and lesson versions to 5.1.0 so older attempts are not silently interpreted against materially revised prompts and explanations.
+
+The 200-question total remains justified because the revision removes hidden decisions without adding or removing assessed skills. Written grammar practice remains limited by the absence of listening, speaking, pronunciation, free composition, and communicative assessment.
+
 ## Version 5.0.0 pre-authoring reassessment
 
 **Disposition: approved with limitations.**

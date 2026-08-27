@@ -124,6 +124,14 @@ describe('content-pack validation', () => {
       'Sentence exercise exercise-1 has an incomplete explanation.',
     );
   });
+  it('rejects a form transformation without English meanings on both sides', () => {
+    const pack = validPack();
+    pack.tests[0].exercises[0].prompt = 'silta (“bridge”) → ____';
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Transformation exercise exercise-1 must label both forms with English meanings.',
+    );
+  });
   it('rejects a test that references a missing lesson', () => {
     const pack = validPack();
     pack.tests[0].lessonIds = ['missing-lesson'];

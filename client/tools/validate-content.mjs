@@ -249,6 +249,13 @@ for (const exercise of allExercises) {
   if (!allowedTypes.has(exercise.type)) errors.push(`${exercise.id}: unsupported type`);
   if (!exercise.acceptedAnswers?.length) errors.push(`${exercise.id}: missing accepted answer`);
   if (!exercise.explanation?.trim()) errors.push(`${exercise.id}: missing explanation`);
+  const arrowIndex = exercise.prompt?.indexOf('→') ?? -1;
+  if (arrowIndex >= 0) {
+    const source = exercise.prompt.slice(0, arrowIndex);
+    const target = exercise.prompt.slice(arrowIndex + 1);
+    if (!/“[^”]+”/.test(source) || !/“[^”]+”/.test(target))
+      errors.push(`${exercise.id}: transformed source and target need English meanings`);
+  }
   if (
     exercise.type === 'multiple-choice' &&
     !exercise.options?.includes(exercise.acceptedAnswers[0])
@@ -325,6 +332,30 @@ if (pack.id === 'vowel-harmony-kpt-tplural') {
       errors.push(`${lessonId}: difficult KPT lesson needs four or five practice exercises`);
     if (lesson.introducedVocabulary?.length > 10)
       errors.push(`${lessonId}: KPT vocabulary must not exceed ten new items`);
+  }
+  const kptOnlyProduction = [
+    ...pack.tests
+      .filter((test) =>
+        [
+          'test-kpt-doubles',
+          'test-kpt-singles',
+          'test-kpt-special-k',
+          'test-kpt-clusters',
+        ].includes(test.id),
+      )
+      .flatMap((test) => test.exercises ?? []),
+    ...lessons
+      .filter((lesson) =>
+        ['kpt-doubles', 'kpt-singles', 'kpt-special-k', 'kpt-clusters'].includes(lesson.id),
+      )
+      .flatMap((lesson) => lesson.practiceExercises ?? []),
+  ].filter((exercise) => exercise.type === 'fill-blank');
+  for (const exercise of kptOnlyProduction) {
+    const isVerb = /“to [^”]+”/.test(exercise.prompt);
+    if (isVerb && !/supplied stem .+minä -n/i.test(exercise.prompt))
+      errors.push(`${exercise.id}: KPT-only verb production must supply its stem and minä ending`);
+    if (!isVerb && !/supplied genitive(?: ending)? -n/i.test(exercise.prompt))
+      errors.push(`${exercise.id}: KPT-only noun production must supply the genitive ending`);
   }
   for (const exercise of pack.tests.find((test) => test.id === 'harmony-in-forms')?.exercises ??
     []) {

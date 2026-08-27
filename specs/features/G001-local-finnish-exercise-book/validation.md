@@ -42,6 +42,7 @@
 - **VAL-G001-060** (`REQ-G001-102`–`104`): Note-service and topic/lesson component tests verify one note per scope, the 1,000-character limit, explicit save/removal, local commit behavior, visible status, and preservation of a failed draft.
 - **VAL-G001-061** (`REQ-G001-105`): Backup tests accept valid topic and lesson notes and atomically reject malformed, duplicate, over-limit, unknown-topic, unknown-lesson, and cross-topic lesson references.
 - **VAL-G001-062** (`REQ-G001-106`): Clearing and state-alignment tests verify that test clearing preserves notes, topic clearing removes only owning notes, all-history clearing removes every note, compatible pack updates preserve valid notes, and removed owners are discarded.
+- **VAL-G001-064** (`REQ-G001-107`): Generic and standalone content validation reject a transformation prompt unless English meanings appear on both sides. The current-pack audit also verifies that KPT-only production supplies genitive or `minä` endings explicitly instead of testing an undeclared second decision.
 
 ## Content-quality validation
 
@@ -58,6 +59,7 @@
 - **VAL-G001-043** (`REQ-G001-068`, `069`): Review every parallel relationship to ensure the second item tests the same skill with a different surface answer and comparable difficulty.
 - **VAL-G001-044** (`REQ-G001-079`): Content validation rejects focused lessons with more than ten introduced words and audits reuse of core vocabulary across recognition and production formats.
 - **VAL-G001-057** (`REQ-G001-097`, `098`): Review the current pack's saved pedagogy assessment for scope completeness, first-principles suitability, controlled lexical load, exercise progression, useful redundancy, feedback quality, review validity, and clearly stated limitations.
+- **VAL-G001-065** (`REQ-G001-107`): Review every transformed word or verb form for an accurate source meaning, an accurate target meaning, and explicit disclosure of every non-target ending, stem frame, or agreement choice.
 
 ## Manual validation
 

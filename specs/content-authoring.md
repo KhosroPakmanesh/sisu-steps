@@ -41,6 +41,8 @@ Lessons teach from first principles, declare targets and prerequisites, introduc
 
 Scored exercises use fixed authored order and stable globally unique IDs. They declare required skills, controlled vocabulary, a target skill, misconception category, accepted answers, explanation, and a different mutual parallel exercise. Multiple-choice items explain every option. Sentence items explain the complete meaning, pattern, and construction of every part.
 
+Whenever a prompt transforms one Finnish form into another, label both forms with their English meanings. Put the source meaning beside the source form and the target meaning beside the answer or supplied target form; do not attach a target meaning to the dictionary form. Explicitly supply every ending, stem frame, agreement choice, or other construction step that is not the assessed target. For example, a KPT-only question may ask `silta (“bridge”) → ____ (“of the bridge”)` only when the genitive `-n` is also visibly supplied, while a genitive-focused question may assess that ending directly.
+
 Focused tests and Reviews remain immediately accessible in separate learning-map sections without repeated classification badges on every card. Focused tests reference only their topic-specific preparation lessons; prerequisite skills remain visible but their earlier lessons are not repeated. Lessons are prominent but optional. Reveals are recorded as skipped. Corrected work becomes mastered only through a different eligible parallel exercise in later review.
 
 ## 4. Technical validation

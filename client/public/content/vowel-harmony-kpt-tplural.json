@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "vowel-harmony-kpt-tplural",
-  "version": "5.0.0",
+  "version": "5.1.0",
   "title": "Vowel harmony, KPT & T-plural",
   "level": "Pre-A1–A1.3 Finnish grammar foundations",
   "summary": "A progressive set of short, focused tests for the sound and stem patterns that make Finnish endings feel predictable.",
@@ -43,7 +43,7 @@
   "lessons": [
     {
       "id": "vowel-harmony-basics",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "Vowel harmony"
@@ -262,7 +262,7 @@
     },
     {
       "id": "inside-ending",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "Inessive -ssa/-ssä"
@@ -366,7 +366,7 @@
           "id": "ff-a1-l-in-p01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practise the inside ending: sauna → ____",
+          "prompt": "Practise the inside ending: sauna (“sauna”) → ____ (“in the sauna”)",
           "acceptedAnswers": [
             "saunassa"
           ],
@@ -448,7 +448,7 @@
     },
     {
       "id": "kpt-doubles",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "KPT double consonants"
@@ -565,7 +565,7 @@
           "id": "ff-a1-l-kptd-p01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in pankki → pankin?",
+          "prompt": "What changes in pankki (“bank”) → pankin (“of the bank”)?",
           "acceptedAnswers": [
             "kk → k"
           ],
@@ -598,7 +598,7 @@
           "id": "ff-a1-l-kptd-p02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in kauppa → kaupan?",
+          "prompt": "What changes in kauppa (“shop”) → kaupan (“of the shop”)?",
           "acceptedAnswers": [
             "pp → p"
           ],
@@ -631,7 +631,7 @@
           "id": "ff-a1-l-kptd-p03",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practice only: matto (“rug”) → ____ · apply tt → t",
+          "prompt": "Practice only: matto (“rug”) → ____ (“of the rug”) · use supplied genitive -n; apply tt → t",
           "acceptedAnswers": [
             "maton"
           ],
@@ -654,11 +654,11 @@
           "id": "ff-a1-l-kptd-p04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practice only: kukka (“flower”) → ____ · apply kk → k",
+          "prompt": "Practice only: kukka (“flower”) → ____ (“of the flower”) · use supplied genitive -n; apply kk → k",
           "acceptedAnswers": [
             "kukan"
           ],
-          "explanation": "Shorten kk to k: kukka → kuka-. The complete form is kukan.",
+          "explanation": "The supplied target is the genitive meaning “of the flower”, so keep -n fixed. Shorten kk to k: kukka → kuka-, then add -n to make kukan.",
           "tags": [
             "lesson-practice",
             "kpt"
@@ -677,7 +677,7 @@
     },
     {
       "id": "kpt-singles",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "KPT common single consonants"
@@ -783,7 +783,7 @@
           "id": "ff-a1-l-kpts-p01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in jalka → jalan?",
+          "prompt": "What changes in jalka (“foot or leg”) → jalan (“of the foot or leg”)?",
           "acceptedAnswers": [
             "k → ∅"
           ],
@@ -816,7 +816,7 @@
           "id": "ff-a1-l-kpts-p02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in leipä → leivän?",
+          "prompt": "What changes in leipä (“bread”) → leivän (“of the bread”)?",
           "acceptedAnswers": [
             "p → v"
           ],
@@ -849,7 +849,7 @@
           "id": "ff-a1-l-kpts-p03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in pöytä → pöydän?",
+          "prompt": "What changes in pöytä (“table”) → pöydän (“of the table”)?",
           "acceptedAnswers": [
             "t → d"
           ],
@@ -882,11 +882,11 @@
           "id": "ff-a1-l-kpts-p04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "hakea (“to fetch”) → minä ____ · k disappears",
+          "prompt": "hakea (“to fetch”), supplied stem hake- + minä -n → ____ (“I fetch”) · k disappears",
           "acceptedAnswers": [
             "haen"
           ],
-          "explanation": "The k disappears from the supplied pattern: hakea → haen.",
+          "explanation": "The supplied target means “I fetch”. Use the supplied stem hake- and minä ending -n, let k disappear, and combine the parts: hakea → haen.",
           "tags": [
             "lesson-practice",
             "kpt"
@@ -905,7 +905,7 @@
     },
     {
       "id": "kpt-special-k",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "KPT special k changes"
@@ -996,7 +996,7 @@
           "id": "ff-a1-l-kptk-p01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in poika → pojan?",
+          "prompt": "What changes in poika (“boy”) → pojan (“of the boy”)?",
           "acceptedAnswers": [
             "k → j"
           ],
@@ -1029,7 +1029,7 @@
           "id": "ff-a1-l-kptk-p02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in puku → puvun?",
+          "prompt": "What changes in puku (“suit”) → puvun (“of the suit”)?",
           "acceptedAnswers": [
             "k → v"
           ],
@@ -1062,7 +1062,7 @@
           "id": "ff-a1-l-kptk-p03",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practice only: aika (“time”) → ____ · apply k → j",
+          "prompt": "Practice only: aika (“time”) → ____ (“of the time”) · use supplied genitive -n; apply k → j",
           "acceptedAnswers": [
             "ajan"
           ],
@@ -1085,7 +1085,7 @@
           "id": "ff-a1-l-kptk-p04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practice only: luku (“number or chapter”) → ____ · apply k → v",
+          "prompt": "Practice only: luku (“number or chapter”) → ____ (“of the number or chapter”) · use supplied genitive -n; apply k → v",
           "acceptedAnswers": [
             "luvun"
           ],
@@ -1108,7 +1108,7 @@
     },
     {
       "id": "kpt-clusters",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "KPT consonant clusters"
@@ -1236,7 +1236,7 @@
           "id": "ff-a1-l-kptc-p01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in kenkä → kengän?",
+          "prompt": "What changes in kenkä (“shoe”) → kengän (“of the shoe”)?",
           "acceptedAnswers": [
             "nk → ng"
           ],
@@ -1269,7 +1269,7 @@
           "id": "ff-a1-l-kptc-p02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in kampa → kamman?",
+          "prompt": "What changes in kampa (“comb”) → kamman (“of the comb”)?",
           "acceptedAnswers": [
             "mp → mm"
           ],
@@ -1302,7 +1302,7 @@
           "id": "ff-a1-l-kptc-p03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in pelto → pellon?",
+          "prompt": "What changes in pelto (“field”) → pellon (“of the field”)?",
           "acceptedAnswers": [
             "lt → ll"
           ],
@@ -1335,11 +1335,11 @@
           "id": "ff-a1-l-kptc-p04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practice only: ranta (“beach”) → ____ · apply nt → nn",
+          "prompt": "Practice only: ranta (“beach”) → ____ (“of the beach”) · use supplied genitive -n; apply nt → nn",
           "acceptedAnswers": [
             "rannan"
           ],
-          "explanation": "Change nt to nn in the supplied weak pattern: ranta → rannan.",
+          "explanation": "The supplied target is the genitive meaning “of the beach”, so keep -n fixed. Change nt to nn and add -n: ranta → rannan.",
           "tags": [
             "lesson-practice",
             "kpt"
@@ -1358,7 +1358,7 @@
     },
     {
       "id": "kpt-basics",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "KPT recognition"
@@ -1448,7 +1448,7 @@
           "id": "ff-a1-l-kptm-p01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in pankki → pankin?",
+          "prompt": "What changes in pankki (“bank”) → pankin (“of the bank”)?",
           "acceptedAnswers": [
             "kk → k"
           ],
@@ -1485,7 +1485,7 @@
           "id": "ff-a1-l-kptm-p02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in jalka → jalan?",
+          "prompt": "What changes in jalka (“foot or leg”) → jalan (“of the foot or leg”)?",
           "acceptedAnswers": [
             "k → ∅"
           ],
@@ -1522,7 +1522,7 @@
           "id": "ff-a1-l-kptm-p03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in poika → pojan?",
+          "prompt": "What changes in poika (“boy”) → pojan (“of the boy”)?",
           "acceptedAnswers": [
             "k → j"
           ],
@@ -1559,7 +1559,7 @@
           "id": "ff-a1-l-kptm-p04",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What changes in kenkä → kengän?",
+          "prompt": "What changes in kenkä (“shoe”) → kengän (“of the shoe”)?",
           "acceptedAnswers": [
             "nk → ng"
           ],
@@ -1596,7 +1596,7 @@
     },
     {
       "id": "genitive-nouns",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "Genitive -n"
@@ -1686,7 +1686,7 @@
           "id": "ff-a1-l-gen-p01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practise kk → k, then -n: pankki → ____",
+          "prompt": "Pankki (“bank”) → ____ (“of the bank”) · use genitive -n; practise kk → k",
           "acceptedAnswers": [
             "pankin"
           ],
@@ -1711,7 +1711,7 @@
           "id": "ff-a1-l-gen-p02",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practise pp → p, then -n: kauppa → ____",
+          "prompt": "Kauppa (“shop”) → ____ (“of the shop”) · use genitive -n; practise pp → p",
           "acceptedAnswers": [
             "kaupan"
           ],
@@ -1771,7 +1771,7 @@
     },
     {
       "id": "verb-kpt",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "Minä verb forms with KPT"
@@ -1855,7 +1855,7 @@
           "id": "ff-a1-l-verb-p01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practise kk → k: nukkua → minä ____",
+          "prompt": "Nukkua (“to sleep”) → minä ____ (“I sleep”) · use minä -n; practise kk → k",
           "acceptedAnswers": [
             "nukun"
           ],
@@ -1937,7 +1937,7 @@
     },
     {
       "id": "t-plural-basics",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "Regular T-plural"
@@ -2051,7 +2051,7 @@
           "id": "ff-a1-l-tpl-p01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kissa → ____ (plural)",
+          "prompt": "Optional practice: kissa (“cat”) → ____ (“cats”) · add plural -t",
           "acceptedAnswers": [
             "kissat"
           ],
@@ -2130,7 +2130,7 @@
     },
     {
       "id": "kpt-t-plural",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "T-plural with KPT"
@@ -2234,7 +2234,7 @@
           "id": "ff-a1-l-ktp-p01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "Practise both steps: pankki → ____",
+          "prompt": "Practise both steps: pankki (“bank”) → ____ (“banks”)",
           "acceptedAnswers": [
             "pankit"
           ],
@@ -2319,7 +2319,7 @@
     },
     {
       "id": "he-verbs",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "Third-person plural -vat/-vät"
@@ -2435,7 +2435,7 @@
           "id": "ff-a1-l-he-p01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "laula- + -vat → ____",
+          "prompt": "Optional practice with laulaa (“to sing”): laula- + -vat → ____ (“they sing”)",
           "acceptedAnswers": [
             "laulavat"
           ],
@@ -2519,7 +2519,7 @@
     },
     {
       "id": "plural-sentences",
-      "version": "5.0.0",
+      "version": "5.1.0",
       "stage": "focused",
       "targetSkills": [
         "Plural subject + ovat"
@@ -3161,11 +3161,11 @@
           "id": "ff-a1-t02-e01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "talo (“in the house”) + -ssa/-ssä → ____",
+          "prompt": "talo (“house”) + -ssa/-ssä → ____ (“in the house”)",
           "acceptedAnswers": [
             "talossa"
           ],
-          "explanation": "The back vowels a/o select -ssa.",
+          "explanation": "talo means “house”; talossa means “in the house”. The back vowels a/o select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3185,11 +3185,11 @@
           "id": "ff-a1-t02-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the correct form of “koulu”.",
+          "prompt": "Choose the form meaning “in the school” from koulu (“school”).",
           "acceptedAnswers": [
             "koulussa"
           ],
-          "explanation": "The back vowels o/u select -ssa.",
+          "explanation": "koulu means “school”; koulussa means “in the school”. The back vowels o/u select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3207,9 +3207,9 @@
             "koulu"
           ],
           "optionFeedback": {
-            "koulussa": "Correct. The back vowels o/u select -ssa.",
-            "koulussä": "“koulussä” does not show the required pattern. The back vowels o/u select -ssa.",
-            "koulu": "“koulu” does not show the required pattern. The back vowels o/u select -ssa."
+            "koulussa": "Correct. koulu means “school”; koulussa means “in the school”. The back vowels o/u select -ssa.",
+            "koulussä": "“koulussä” does not show the required pattern. koulu means “school”; koulussa means “in the school”. The back vowels o/u select -ssa.",
+            "koulu": "“koulu” does not show the required pattern. koulu means “school”; koulussa means “in the school”. The back vowels o/u select -ssa."
           },
           "targetSkill": "Inessive -ssa/-ssä",
           "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
@@ -3219,11 +3219,11 @@
           "id": "ff-a1-t02-e03",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "in the car — use the supplied base auto",
+          "prompt": "in the car — use the supplied base auto (“car”)",
           "acceptedAnswers": [
             "autossa"
           ],
-          "explanation": "The back vowels a/u select -ssa.",
+          "explanation": "auto means “car”; autossa means “in the car”. The back vowels a/u select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3243,11 +3243,11 @@
           "id": "ff-a1-t02-e04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kirjasto (“in the library”) → ____ · use -ssa or -ssä",
+          "prompt": "kirjasto (“library”) → ____ (“in the library”) · use -ssa or -ssä",
           "acceptedAnswers": [
             "kirjastossa"
           ],
-          "explanation": "The back vowels a/o select -ssa.",
+          "explanation": "kirjasto means “library”; kirjastossa means “in the library”. The back vowels a/o select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3267,11 +3267,11 @@
           "id": "ff-a1-t02-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "puisto (“in the park”) + -ssa/-ssä → ____",
+          "prompt": "puisto (“park”) + -ssa/-ssä → ____ (“in the park”)",
           "acceptedAnswers": [
             "puistossa"
           ],
-          "explanation": "The back vowels u/o select -ssa.",
+          "explanation": "puisto means “park”; puistossa means “in the park”. The back vowels u/o select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3291,11 +3291,11 @@
           "id": "ff-a1-t02-e06",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the correct form of “kahvila”.",
+          "prompt": "Choose the form meaning “in the café” from kahvila (“café”).",
           "acceptedAnswers": [
             "kahvilassa"
           ],
-          "explanation": "The back vowel a selects -ssa.",
+          "explanation": "kahvila means “café”; kahvilassa means “in the café”. The back vowel a selects -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3313,9 +3313,9 @@
             "kahvila"
           ],
           "optionFeedback": {
-            "kahvilassa": "Correct. The back vowel a selects -ssa.",
-            "kahvilassä": "“kahvilassä” does not show the required pattern. The back vowel a selects -ssa.",
-            "kahvila": "“kahvila” does not show the required pattern. The back vowel a selects -ssa."
+            "kahvilassa": "Correct. kahvila means “café”; kahvilassa means “in the café”. The back vowel a selects -ssa.",
+            "kahvilassä": "“kahvilassä” does not show the required pattern. kahvila means “café”; kahvilassa means “in the café”. The back vowel a selects -ssa.",
+            "kahvila": "“kahvila” does not show the required pattern. kahvila means “café”; kahvilassa means “in the café”. The back vowel a selects -ssa."
           },
           "targetSkill": "Inessive -ssa/-ssä",
           "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
@@ -3325,11 +3325,11 @@
           "id": "ff-a1-t02-e07",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "in the sauna — use the supplied base sauna",
+          "prompt": "in the sauna — use the supplied base sauna (“sauna”)",
           "acceptedAnswers": [
             "saunassa"
           ],
-          "explanation": "The back vowels a/u select -ssa.",
+          "explanation": "sauna means “sauna”; saunassa means “in the sauna”. The back vowels a/u select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3349,11 +3349,11 @@
           "id": "ff-a1-t02-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "toimisto (“in the office”) → ____ · use -ssa or -ssä",
+          "prompt": "toimisto (“office”) → ____ (“in the office”) · use -ssa or -ssä",
           "acceptedAnswers": [
             "toimistossa"
           ],
-          "explanation": "The back vowel o selects -ssa.",
+          "explanation": "toimisto means “office”; toimistossa means “in the office”. The back vowel o selects -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3373,11 +3373,11 @@
           "id": "ff-a1-t02-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "myymälä (“in the shop”) + -ssa/-ssä → ____",
+          "prompt": "myymälä (“shop”) + -ssa/-ssä → ____ (“in the shop”)",
           "acceptedAnswers": [
             "myymälässä"
           ],
-          "explanation": "The front vowels y/ä select -ssä.",
+          "explanation": "myymälä means “shop”; myymälässä means “in the shop”. The front vowels y/ä select -ssä.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3397,11 +3397,11 @@
           "id": "ff-a1-t02-e10",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the correct form of “elämä”.",
+          "prompt": "Choose the form meaning “in life” from elämä (“life”).",
           "acceptedAnswers": [
             "elämässä"
           ],
-          "explanation": "The front vowel ä selects -ssä.",
+          "explanation": "elämä means “life”; elämässä means “in life”. The front vowel ä selects -ssä.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3419,9 +3419,9 @@
             "elämä"
           ],
           "optionFeedback": {
-            "elämässä": "Correct. The front vowel ä selects -ssä.",
-            "elämässa": "“elämässa” does not show the required pattern. The front vowel ä selects -ssä.",
-            "elämä": "“elämä” does not show the required pattern. The front vowel ä selects -ssä."
+            "elämässä": "Correct. elämä means “life”; elämässä means “in life”. The front vowel ä selects -ssä.",
+            "elämässa": "“elämässa” does not show the required pattern. elämä means “life”; elämässä means “in life”. The front vowel ä selects -ssä.",
+            "elämä": "“elämä” does not show the required pattern. elämä means “life”; elämässä means “in life”. The front vowel ä selects -ssä."
           },
           "targetSkill": "Inessive -ssa/-ssä",
           "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
@@ -3431,11 +3431,11 @@
           "id": "ff-a1-t02-e11",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "in the house — use the supplied base talo",
+          "prompt": "in the house — use the supplied base talo (“house”)",
           "acceptedAnswers": [
             "talossa"
           ],
-          "explanation": "The back vowels a/o select -ssa.",
+          "explanation": "talo means “house”; talossa means “in the house”. The back vowels a/o select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3455,11 +3455,11 @@
           "id": "ff-a1-t02-e12",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "koulu (“in the school”) → ____ · use -ssa or -ssä",
+          "prompt": "koulu (“school”) → ____ (“in the school”) · use -ssa or -ssä",
           "acceptedAnswers": [
             "koulussa"
           ],
-          "explanation": "The back vowels o/u select -ssa.",
+          "explanation": "koulu means “school”; koulussa means “in the school”. The back vowels o/u select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3479,11 +3479,11 @@
           "id": "ff-a1-t02-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "auto (“in the car”) + -ssa/-ssä → ____",
+          "prompt": "auto (“car”) + -ssa/-ssä → ____ (“in the car”)",
           "acceptedAnswers": [
             "autossa"
           ],
-          "explanation": "The back vowels a/u select -ssa.",
+          "explanation": "auto means “car”; autossa means “in the car”. The back vowels a/u select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3503,11 +3503,11 @@
           "id": "ff-a1-t02-e14",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the correct form of “sauna”.",
+          "prompt": "Choose the form meaning “in the sauna” from sauna (“sauna”).",
           "acceptedAnswers": [
             "saunassa"
           ],
-          "explanation": "The back vowels a/u select -ssa.",
+          "explanation": "sauna means “sauna”; saunassa means “in the sauna”. The back vowels a/u select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3525,9 +3525,9 @@
             "sauna"
           ],
           "optionFeedback": {
-            "saunassa": "Correct. The back vowels a/u select -ssa.",
-            "saunassä": "“saunassä” does not show the required pattern. The back vowels a/u select -ssa.",
-            "sauna": "“sauna” does not show the required pattern. The back vowels a/u select -ssa."
+            "saunassa": "Correct. sauna means “sauna”; saunassa means “in the sauna”. The back vowels a/u select -ssa.",
+            "saunassä": "“saunassä” does not show the required pattern. sauna means “sauna”; saunassa means “in the sauna”. The back vowels a/u select -ssa.",
+            "sauna": "“sauna” does not show the required pattern. sauna means “sauna”; saunassa means “in the sauna”. The back vowels a/u select -ssa."
           },
           "targetSkill": "Inessive -ssa/-ssä",
           "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
@@ -3537,11 +3537,11 @@
           "id": "ff-a1-t02-e15",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "in the shop — use the supplied base myymälä",
+          "prompt": "in the shop — use the supplied base myymälä (“shop”)",
           "acceptedAnswers": [
             "myymälässä"
           ],
-          "explanation": "The front vowels y/ä select -ssä.",
+          "explanation": "myymälä means “shop”; myymälässä means “in the shop”. The front vowels y/ä select -ssä.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -3576,11 +3576,11 @@
           "id": "ff-a1-t03-e01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in pankki → pankin? (bank)",
+          "prompt": "What change appears in pankki (“bank”) → pankin (“of the bank”)?",
           "acceptedAnswers": [
             "kk → k"
           ],
-          "explanation": "Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
+          "explanation": "pankki means “bank”; pankin means “of the bank”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: pankki → pankin.",
           "tags": [
             "kpt",
             "recognition"
@@ -3597,9 +3597,9 @@
             "t → d"
           ],
           "optionFeedback": {
-            "kk → k": "Correct. Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
-            "k → ∅": "“k → ∅” does not show the required pattern. Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
-            "t → d": "“t → d” does not show the required pattern. Compare the supplied forms pankki and pankin. The consonant change is kk → k."
+            "kk → k": "Correct. pankki means “bank”; pankin means “of the bank”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: pankki → pankin.",
+            "k → ∅": "“k → ∅” does not show the required pattern. pankki means “bank”; pankin means “of the bank”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: pankki → pankin.",
+            "t → d": "“t → d” does not show the required pattern. pankki means “bank”; pankin means “of the bank”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: pankki → pankin."
           },
           "targetSkill": "KPT double consonants",
           "answerDiagnostics": [
@@ -3618,11 +3618,11 @@
           "id": "ff-a1-t03-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in kauppa → kaupan? (shop)",
+          "prompt": "What change appears in kauppa (“shop”) → kaupan (“of the shop”)?",
           "acceptedAnswers": [
             "pp → p"
           ],
-          "explanation": "Compare the supplied forms kauppa and kaupan. The consonant change is pp → p.",
+          "explanation": "kauppa means “shop”; kaupan means “of the shop”. The genitive ending -n is supplied, so they are not new decisions here. Apply only pp → p: kauppa → kaupan.",
           "tags": [
             "kpt",
             "recognition"
@@ -3639,9 +3639,9 @@
             "nk → ng"
           ],
           "optionFeedback": {
-            "pp → p": "Correct. Compare the supplied forms kauppa and kaupan. The consonant change is pp → p.",
-            "k → j": "“k → j” does not show the required pattern. Compare the supplied forms kauppa and kaupan. The consonant change is pp → p.",
-            "nk → ng": "“nk → ng” does not show the required pattern. Compare the supplied forms kauppa and kaupan. The consonant change is pp → p."
+            "pp → p": "Correct. kauppa means “shop”; kaupan means “of the shop”. The genitive ending -n is supplied, so they are not new decisions here. Apply only pp → p: kauppa → kaupan.",
+            "k → j": "“k → j” does not show the required pattern. kauppa means “shop”; kaupan means “of the shop”. The genitive ending -n is supplied, so they are not new decisions here. Apply only pp → p: kauppa → kaupan.",
+            "nk → ng": "“nk → ng” does not show the required pattern. kauppa means “shop”; kaupan means “of the shop”. The genitive ending -n is supplied, so they are not new decisions here. Apply only pp → p: kauppa → kaupan."
           },
           "targetSkill": "KPT double consonants",
           "answerDiagnostics": [
@@ -3660,11 +3660,11 @@
           "id": "ff-a1-t03-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in matto → maton? (rug)",
+          "prompt": "What change appears in matto (“rug”) → maton (“of the rug”)?",
           "acceptedAnswers": [
             "tt → t"
           ],
-          "explanation": "Compare the supplied forms matto and maton. The consonant change is tt → t.",
+          "explanation": "matto means “rug”; maton means “of the rug”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: matto → maton.",
           "tags": [
             "kpt",
             "recognition"
@@ -3681,9 +3681,9 @@
             "mp → mm"
           ],
           "optionFeedback": {
-            "tt → t": "Correct. Compare the supplied forms matto and maton. The consonant change is tt → t.",
-            "k → v": "“k → v” does not show the required pattern. Compare the supplied forms matto and maton. The consonant change is tt → t.",
-            "mp → mm": "“mp → mm” does not show the required pattern. Compare the supplied forms matto and maton. The consonant change is tt → t."
+            "tt → t": "Correct. matto means “rug”; maton means “of the rug”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: matto → maton.",
+            "k → v": "“k → v” does not show the required pattern. matto means “rug”; maton means “of the rug”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: matto → maton.",
+            "mp → mm": "“mp → mm” does not show the required pattern. matto means “rug”; maton means “of the rug”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: matto → maton."
           },
           "targetSkill": "KPT double consonants",
           "answerDiagnostics": [
@@ -3702,11 +3702,11 @@
           "id": "ff-a1-t03-e04",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in kukka → kukan? (flower)",
+          "prompt": "What change appears in kukka (“flower”) → kukan (“of the flower”)?",
           "acceptedAnswers": [
             "kk → k"
           ],
-          "explanation": "Compare the supplied forms kukka and kukan. The consonant change is kk → k.",
+          "explanation": "kukka means “flower”; kukan means “of the flower”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: kukka → kukan.",
           "tags": [
             "kpt",
             "recognition"
@@ -3723,9 +3723,9 @@
             "nt → nn"
           ],
           "optionFeedback": {
-            "kk → k": "Correct. Compare the supplied forms kukka and kukan. The consonant change is kk → k.",
-            "p → v": "“p → v” does not show the required pattern. Compare the supplied forms kukka and kukan. The consonant change is kk → k.",
-            "nt → nn": "“nt → nn” does not show the required pattern. Compare the supplied forms kukka and kukan. The consonant change is kk → k."
+            "kk → k": "Correct. kukka means “flower”; kukan means “of the flower”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: kukka → kukan.",
+            "p → v": "“p → v” does not show the required pattern. kukka means “flower”; kukan means “of the flower”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: kukka → kukan.",
+            "nt → nn": "“nt → nn” does not show the required pattern. kukka means “flower”; kukan means “of the flower”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: kukka → kukan."
           },
           "targetSkill": "KPT double consonants",
           "answerDiagnostics": [
@@ -3744,11 +3744,11 @@
           "id": "ff-a1-t03-e05",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in hattu → hatun? (hat)",
+          "prompt": "What change appears in hattu (“hat”) → hatun (“of the hat”)?",
           "acceptedAnswers": [
             "tt → t"
           ],
-          "explanation": "Compare the supplied forms hattu and hatun. The consonant change is tt → t.",
+          "explanation": "hattu means “hat”; hatun means “of the hat”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: hattu → hatun.",
           "tags": [
             "kpt",
             "recognition"
@@ -3765,9 +3765,9 @@
             "lt → ll"
           ],
           "optionFeedback": {
-            "tt → t": "Correct. Compare the supplied forms hattu and hatun. The consonant change is tt → t.",
-            "t → d": "“t → d” does not show the required pattern. Compare the supplied forms hattu and hatun. The consonant change is tt → t.",
-            "lt → ll": "“lt → ll” does not show the required pattern. Compare the supplied forms hattu and hatun. The consonant change is tt → t."
+            "tt → t": "Correct. hattu means “hat”; hatun means “of the hat”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: hattu → hatun.",
+            "t → d": "“t → d” does not show the required pattern. hattu means “hat”; hatun means “of the hat”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: hattu → hatun.",
+            "lt → ll": "“lt → ll” does not show the required pattern. hattu means “hat”; hatun means “of the hat”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: hattu → hatun."
           },
           "targetSkill": "KPT double consonants",
           "answerDiagnostics": [
@@ -3786,11 +3786,11 @@
           "id": "ff-a1-t03-e06",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "lippu (“ticket”) → ____ · apply pp → p",
+          "prompt": "lippu (“ticket”) → ____ (“of the ticket”) · use the supplied genitive ending -n; apply pp → p",
           "acceptedAnswers": [
             "lipun"
           ],
-          "explanation": "Compare the supplied forms lippu and lipun. The consonant change is pp → p.",
+          "explanation": "lippu means “ticket”; lipun means “of the ticket”. The genitive ending -n is supplied, so they are not new decisions here. Apply only pp → p: lippu → lipun.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -3818,11 +3818,11 @@
           "id": "ff-a1-t03-e07",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "nukkua (“to sleep → I sleep”) → ____ · apply kk → k",
+          "prompt": "nukkua (“to sleep”), supplied stem nukku- + minä -n → ____ (“I sleep”) · use the supplied minä ending -n; apply kk → k",
           "acceptedAnswers": [
             "nukun"
           ],
-          "explanation": "Compare the supplied forms nukkua and nukun. The consonant change is kk → k.",
+          "explanation": "nukkua means “to sleep”; nukun means “I sleep”. The stem nukku- and minä ending -n are supplied, so they are not new decisions here. Apply only kk → k: nukkua → nukun.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -3850,11 +3850,11 @@
           "id": "ff-a1-t03-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "ottaa (“to take → I take”) → ____ · apply tt → t",
+          "prompt": "ottaa (“to take”), supplied stem otta- + minä -n → ____ (“I take”) · use the supplied minä ending -n; apply tt → t",
           "acceptedAnswers": [
             "otan"
           ],
-          "explanation": "Compare the supplied forms ottaa and otan. The consonant change is tt → t.",
+          "explanation": "ottaa means “to take”; otan means “I take”. The stem otta- and minä ending -n are supplied, so they are not new decisions here. Apply only tt → t: ottaa → otan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -3882,11 +3882,11 @@
           "id": "ff-a1-t03-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pankki (“bank”) → ____ · apply kk → k",
+          "prompt": "pankki (“bank”) → ____ (“of the bank”) · use the supplied genitive ending -n; apply kk → k",
           "acceptedAnswers": [
             "pankin"
           ],
-          "explanation": "Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
+          "explanation": "pankki means “bank”; pankin means “of the bank”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: pankki → pankin.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -3914,11 +3914,11 @@
           "id": "ff-a1-t03-e10",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kauppa (“shop”) → ____ · apply pp → p",
+          "prompt": "kauppa (“shop”) → ____ (“of the shop”) · use the supplied genitive ending -n; apply pp → p",
           "acceptedAnswers": [
             "kaupan"
           ],
-          "explanation": "Compare the supplied forms kauppa and kaupan. The consonant change is pp → p.",
+          "explanation": "kauppa means “shop”; kaupan means “of the shop”. The genitive ending -n is supplied, so they are not new decisions here. Apply only pp → p: kauppa → kaupan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -3946,11 +3946,11 @@
           "id": "ff-a1-t03-e11",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "matto (“rug”) → ____ · apply tt → t",
+          "prompt": "matto (“rug”) → ____ (“of the rug”) · use the supplied genitive ending -n; apply tt → t",
           "acceptedAnswers": [
             "maton"
           ],
-          "explanation": "Compare the supplied forms matto and maton. The consonant change is tt → t.",
+          "explanation": "matto means “rug”; maton means “of the rug”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: matto → maton.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -3978,11 +3978,11 @@
           "id": "ff-a1-t03-e12",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kukka (“flower”) → ____ · apply kk → k",
+          "prompt": "kukka (“flower”) → ____ (“of the flower”) · use the supplied genitive ending -n; apply kk → k",
           "acceptedAnswers": [
             "kukan"
           ],
-          "explanation": "Compare the supplied forms kukka and kukan. The consonant change is kk → k.",
+          "explanation": "kukka means “flower”; kukan means “of the flower”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: kukka → kukan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4025,11 +4025,11 @@
           "id": "ff-a1-t04-e01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in jalka → jalan? (foot or leg)",
+          "prompt": "What change appears in jalka (“foot or leg”) → jalan (“of the foot or leg”)?",
           "acceptedAnswers": [
             "k → ∅"
           ],
-          "explanation": "Compare the supplied forms jalka and jalan. The consonant change is k → ∅.",
+          "explanation": "jalka means “foot or leg”; jalan means “of the foot or leg”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → ∅: jalka → jalan.",
           "tags": [
             "kpt",
             "recognition"
@@ -4046,9 +4046,9 @@
             "t → d"
           ],
           "optionFeedback": {
-            "k → ∅": "Correct. Compare the supplied forms jalka and jalan. The consonant change is k → ∅.",
-            "tt → t": "“tt → t” does not show the required pattern. Compare the supplied forms jalka and jalan. The consonant change is k → ∅.",
-            "t → d": "“t → d” does not show the required pattern. Compare the supplied forms jalka and jalan. The consonant change is k → ∅."
+            "k → ∅": "Correct. jalka means “foot or leg”; jalan means “of the foot or leg”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → ∅: jalka → jalan.",
+            "tt → t": "“tt → t” does not show the required pattern. jalka means “foot or leg”; jalan means “of the foot or leg”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → ∅: jalka → jalan.",
+            "t → d": "“t → d” does not show the required pattern. jalka means “foot or leg”; jalan means “of the foot or leg”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → ∅: jalka → jalan."
           },
           "targetSkill": "KPT common single consonants",
           "answerDiagnostics": [
@@ -4067,11 +4067,11 @@
           "id": "ff-a1-t04-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in leipä → leivän? (bread)",
+          "prompt": "What change appears in leipä (“bread”) → leivän (“of the bread”)?",
           "acceptedAnswers": [
             "p → v"
           ],
-          "explanation": "Compare the supplied forms leipä and leivän. The consonant change is p → v.",
+          "explanation": "leipä means “bread”; leivän means “of the bread”. The genitive ending -n is supplied, so they are not new decisions here. Apply only p → v: leipä → leivän.",
           "tags": [
             "kpt",
             "recognition"
@@ -4088,9 +4088,9 @@
             "nk → ng"
           ],
           "optionFeedback": {
-            "p → v": "Correct. Compare the supplied forms leipä and leivän. The consonant change is p → v.",
-            "k → ∅": "“k → ∅” does not show the required pattern. Compare the supplied forms leipä and leivän. The consonant change is p → v.",
-            "nk → ng": "“nk → ng” does not show the required pattern. Compare the supplied forms leipä and leivän. The consonant change is p → v."
+            "p → v": "Correct. leipä means “bread”; leivän means “of the bread”. The genitive ending -n is supplied, so they are not new decisions here. Apply only p → v: leipä → leivän.",
+            "k → ∅": "“k → ∅” does not show the required pattern. leipä means “bread”; leivän means “of the bread”. The genitive ending -n is supplied, so they are not new decisions here. Apply only p → v: leipä → leivän.",
+            "nk → ng": "“nk → ng” does not show the required pattern. leipä means “bread”; leivän means “of the bread”. The genitive ending -n is supplied, so they are not new decisions here. Apply only p → v: leipä → leivän."
           },
           "targetSkill": "KPT common single consonants",
           "answerDiagnostics": [
@@ -4109,11 +4109,11 @@
           "id": "ff-a1-t04-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in pöytä → pöydän? (table)",
+          "prompt": "What change appears in pöytä (“table”) → pöydän (“of the table”)?",
           "acceptedAnswers": [
             "t → d"
           ],
-          "explanation": "Compare the supplied forms pöytä and pöydän. The consonant change is t → d.",
+          "explanation": "pöytä means “table”; pöydän means “of the table”. The genitive ending -n is supplied, so they are not new decisions here. Apply only t → d: pöytä → pöydän.",
           "tags": [
             "kpt",
             "recognition"
@@ -4130,9 +4130,9 @@
             "mp → mm"
           ],
           "optionFeedback": {
-            "t → d": "Correct. Compare the supplied forms pöytä and pöydän. The consonant change is t → d.",
-            "k → j": "“k → j” does not show the required pattern. Compare the supplied forms pöytä and pöydän. The consonant change is t → d.",
-            "mp → mm": "“mp → mm” does not show the required pattern. Compare the supplied forms pöytä and pöydän. The consonant change is t → d."
+            "t → d": "Correct. pöytä means “table”; pöydän means “of the table”. The genitive ending -n is supplied, so they are not new decisions here. Apply only t → d: pöytä → pöydän.",
+            "k → j": "“k → j” does not show the required pattern. pöytä means “table”; pöydän means “of the table”. The genitive ending -n is supplied, so they are not new decisions here. Apply only t → d: pöytä → pöydän.",
+            "mp → mm": "“mp → mm” does not show the required pattern. pöytä means “table”; pöydän means “of the table”. The genitive ending -n is supplied, so they are not new decisions here. Apply only t → d: pöytä → pöydän."
           },
           "targetSkill": "KPT common single consonants",
           "answerDiagnostics": [
@@ -4151,11 +4151,11 @@
           "id": "ff-a1-t04-e04",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in hakea → haen? (to fetch → I fetch)",
+          "prompt": "What change appears in hakea (“to fetch”) → haen (“I fetch”)?",
           "acceptedAnswers": [
             "k → ∅"
           ],
-          "explanation": "Compare the supplied forms hakea and haen. The consonant change is k → ∅.",
+          "explanation": "hakea means “to fetch”; haen means “I fetch”. The stem hake- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: hakea → haen.",
           "tags": [
             "kpt",
             "recognition"
@@ -4172,9 +4172,9 @@
             "nt → nn"
           ],
           "optionFeedback": {
-            "k → ∅": "Correct. Compare the supplied forms hakea and haen. The consonant change is k → ∅.",
-            "p → v": "“p → v” does not show the required pattern. Compare the supplied forms hakea and haen. The consonant change is k → ∅.",
-            "nt → nn": "“nt → nn” does not show the required pattern. Compare the supplied forms hakea and haen. The consonant change is k → ∅."
+            "k → ∅": "Correct. hakea means “to fetch”; haen means “I fetch”. The stem hake- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: hakea → haen.",
+            "p → v": "“p → v” does not show the required pattern. hakea means “to fetch”; haen means “I fetch”. The stem hake- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: hakea → haen.",
+            "nt → nn": "“nt → nn” does not show the required pattern. hakea means “to fetch”; haen means “I fetch”. The stem hake- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: hakea → haen."
           },
           "targetSkill": "KPT common single consonants",
           "answerDiagnostics": [
@@ -4193,11 +4193,11 @@
           "id": "ff-a1-t04-e05",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in lukea → luen? (to read → I read)",
+          "prompt": "What change appears in lukea (“to read”) → luen (“I read”)?",
           "acceptedAnswers": [
             "k → ∅"
           ],
-          "explanation": "Compare the supplied forms lukea and luen. The consonant change is k → ∅.",
+          "explanation": "lukea means “to read”; luen means “I read”. The stem luke- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: lukea → luen.",
           "tags": [
             "kpt",
             "recognition"
@@ -4214,9 +4214,9 @@
             "lt → ll"
           ],
           "optionFeedback": {
-            "k → ∅": "Correct. Compare the supplied forms lukea and luen. The consonant change is k → ∅.",
-            "t → d": "“t → d” does not show the required pattern. Compare the supplied forms lukea and luen. The consonant change is k → ∅.",
-            "lt → ll": "“lt → ll” does not show the required pattern. Compare the supplied forms lukea and luen. The consonant change is k → ∅."
+            "k → ∅": "Correct. lukea means “to read”; luen means “I read”. The stem luke- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: lukea → luen.",
+            "t → d": "“t → d” does not show the required pattern. lukea means “to read”; luen means “I read”. The stem luke- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: lukea → luen.",
+            "lt → ll": "“lt → ll” does not show the required pattern. lukea means “to read”; luen means “I read”. The stem luke- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: lukea → luen."
           },
           "targetSkill": "KPT common single consonants",
           "answerDiagnostics": [
@@ -4235,11 +4235,11 @@
           "id": "ff-a1-t04-e06",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "jalka (“foot or leg”) → ____ · apply k → ∅",
+          "prompt": "jalka (“foot or leg”) → ____ (“of the foot or leg”) · use the supplied genitive ending -n; apply k → ∅",
           "acceptedAnswers": [
             "jalan"
           ],
-          "explanation": "Compare the supplied forms jalka and jalan. The consonant change is k → ∅.",
+          "explanation": "jalka means “foot or leg”; jalan means “of the foot or leg”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → ∅: jalka → jalan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4267,11 +4267,11 @@
           "id": "ff-a1-t04-e07",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "leipä (“bread”) → ____ · apply p → v",
+          "prompt": "leipä (“bread”) → ____ (“of the bread”) · use the supplied genitive ending -n; apply p → v",
           "acceptedAnswers": [
             "leivän"
           ],
-          "explanation": "Compare the supplied forms leipä and leivän. The consonant change is p → v.",
+          "explanation": "leipä means “bread”; leivän means “of the bread”. The genitive ending -n is supplied, so they are not new decisions here. Apply only p → v: leipä → leivän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4299,11 +4299,11 @@
           "id": "ff-a1-t04-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pöytä (“table”) → ____ · apply t → d",
+          "prompt": "pöytä (“table”) → ____ (“of the table”) · use the supplied genitive ending -n; apply t → d",
           "acceptedAnswers": [
             "pöydän"
           ],
-          "explanation": "Compare the supplied forms pöytä and pöydän. The consonant change is t → d.",
+          "explanation": "pöytä means “table”; pöydän means “of the table”. The genitive ending -n is supplied, so they are not new decisions here. Apply only t → d: pöytä → pöydän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4331,11 +4331,11 @@
           "id": "ff-a1-t04-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "hakea (“to fetch → I fetch”) → ____ · apply k → ∅",
+          "prompt": "hakea (“to fetch”), supplied stem hake- + minä -n → ____ (“I fetch”) · use the supplied minä ending -n; apply k → ∅",
           "acceptedAnswers": [
             "haen"
           ],
-          "explanation": "Compare the supplied forms hakea and haen. The consonant change is k → ∅.",
+          "explanation": "hakea means “to fetch”; haen means “I fetch”. The stem hake- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: hakea → haen.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4363,11 +4363,11 @@
           "id": "ff-a1-t04-e10",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "lukea (“to read → I read”) → ____ · apply k → ∅",
+          "prompt": "lukea (“to read”), supplied stem luke- + minä -n → ____ (“I read”) · use the supplied minä ending -n; apply k → ∅",
           "acceptedAnswers": [
             "luen"
           ],
-          "explanation": "Compare the supplied forms lukea and luen. The consonant change is k → ∅.",
+          "explanation": "lukea means “to read”; luen means “I read”. The stem luke- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: lukea → luen.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4395,11 +4395,11 @@
           "id": "ff-a1-t04-e11",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "jalka (“foot or leg”) → ____ · apply k → ∅",
+          "prompt": "jalka (“foot or leg”) → ____ (“of the foot or leg”) · use the supplied genitive ending -n; apply k → ∅",
           "acceptedAnswers": [
             "jalan"
           ],
-          "explanation": "Compare the supplied forms jalka and jalan. The consonant change is k → ∅.",
+          "explanation": "jalka means “foot or leg”; jalan means “of the foot or leg”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → ∅: jalka → jalan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4427,11 +4427,11 @@
           "id": "ff-a1-t04-e12",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "leipä (“bread”) → ____ · apply p → v",
+          "prompt": "leipä (“bread”) → ____ (“of the bread”) · use the supplied genitive ending -n; apply p → v",
           "acceptedAnswers": [
             "leivän"
           ],
-          "explanation": "Compare the supplied forms leipä and leivän. The consonant change is p → v.",
+          "explanation": "leipä means “bread”; leivän means “of the bread”. The genitive ending -n is supplied, so they are not new decisions here. Apply only p → v: leipä → leivän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4474,11 +4474,11 @@
           "id": "ff-a1-t05-e01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in kaupunki → kaupungin? (city)",
+          "prompt": "What change appears in kaupunki (“city”) → kaupungin (“of the city”)?",
           "acceptedAnswers": [
             "nk → ng"
           ],
-          "explanation": "Compare the supplied forms kaupunki and kaupungin. The consonant change is nk → ng.",
+          "explanation": "kaupunki means “city”; kaupungin means “of the city”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kaupunki → kaupungin.",
           "tags": [
             "kpt",
             "recognition"
@@ -4495,9 +4495,9 @@
             "p → v"
           ],
           "optionFeedback": {
-            "nk → ng": "Correct. Compare the supplied forms kaupunki and kaupungin. The consonant change is nk → ng.",
-            "tt → t": "“tt → t” does not show the required pattern. Compare the supplied forms kaupunki and kaupungin. The consonant change is nk → ng.",
-            "p → v": "“p → v” does not show the required pattern. Compare the supplied forms kaupunki and kaupungin. The consonant change is nk → ng."
+            "nk → ng": "Correct. kaupunki means “city”; kaupungin means “of the city”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kaupunki → kaupungin.",
+            "tt → t": "“tt → t” does not show the required pattern. kaupunki means “city”; kaupungin means “of the city”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kaupunki → kaupungin.",
+            "p → v": "“p → v” does not show the required pattern. kaupunki means “city”; kaupungin means “of the city”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kaupunki → kaupungin."
           },
           "targetSkill": "KPT consonant clusters",
           "answerDiagnostics": [
@@ -4516,11 +4516,11 @@
           "id": "ff-a1-t05-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in kenkä → kengän? (shoe)",
+          "prompt": "What change appears in kenkä (“shoe”) → kengän (“of the shoe”)?",
           "acceptedAnswers": [
             "nk → ng"
           ],
-          "explanation": "Compare the supplied forms kenkä and kengän. The consonant change is nk → ng.",
+          "explanation": "kenkä means “shoe”; kengän means “of the shoe”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kenkä → kengän.",
           "tags": [
             "kpt",
             "recognition"
@@ -4537,9 +4537,9 @@
             "t → d"
           ],
           "optionFeedback": {
-            "nk → ng": "Correct. Compare the supplied forms kenkä and kengän. The consonant change is nk → ng.",
-            "k → ∅": "“k → ∅” does not show the required pattern. Compare the supplied forms kenkä and kengän. The consonant change is nk → ng.",
-            "t → d": "“t → d” does not show the required pattern. Compare the supplied forms kenkä and kengän. The consonant change is nk → ng."
+            "nk → ng": "Correct. kenkä means “shoe”; kengän means “of the shoe”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kenkä → kengän.",
+            "k → ∅": "“k → ∅” does not show the required pattern. kenkä means “shoe”; kengän means “of the shoe”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kenkä → kengän.",
+            "t → d": "“t → d” does not show the required pattern. kenkä means “shoe”; kengän means “of the shoe”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kenkä → kengän."
           },
           "targetSkill": "KPT consonant clusters",
           "answerDiagnostics": [
@@ -4558,11 +4558,11 @@
           "id": "ff-a1-t05-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in kampa → kamman? (comb)",
+          "prompt": "What change appears in kampa (“comb”) → kamman (“of the comb”)?",
           "acceptedAnswers": [
             "mp → mm"
           ],
-          "explanation": "Compare the supplied forms kampa and kamman. The consonant change is mp → mm.",
+          "explanation": "kampa means “comb”; kamman means “of the comb”. The genitive ending -n is supplied, so they are not new decisions here. Apply only mp → mm: kampa → kamman.",
           "tags": [
             "kpt",
             "recognition"
@@ -4579,9 +4579,9 @@
             "nk → ng"
           ],
           "optionFeedback": {
-            "mp → mm": "Correct. Compare the supplied forms kampa and kamman. The consonant change is mp → mm.",
-            "k → j": "“k → j” does not show the required pattern. Compare the supplied forms kampa and kamman. The consonant change is mp → mm.",
-            "nk → ng": "“nk → ng” does not show the required pattern. Compare the supplied forms kampa and kamman. The consonant change is mp → mm."
+            "mp → mm": "Correct. kampa means “comb”; kamman means “of the comb”. The genitive ending -n is supplied, so they are not new decisions here. Apply only mp → mm: kampa → kamman.",
+            "k → j": "“k → j” does not show the required pattern. kampa means “comb”; kamman means “of the comb”. The genitive ending -n is supplied, so they are not new decisions here. Apply only mp → mm: kampa → kamman.",
+            "nk → ng": "“nk → ng” does not show the required pattern. kampa means “comb”; kamman means “of the comb”. The genitive ending -n is supplied, so they are not new decisions here. Apply only mp → mm: kampa → kamman."
           },
           "targetSkill": "KPT consonant clusters",
           "answerDiagnostics": [
@@ -4600,11 +4600,11 @@
           "id": "ff-a1-t05-e04",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in pelto → pellon? (field)",
+          "prompt": "What change appears in pelto (“field”) → pellon (“of the field”)?",
           "acceptedAnswers": [
             "lt → ll"
           ],
-          "explanation": "Compare the supplied forms pelto and pellon. The consonant change is lt → ll.",
+          "explanation": "pelto means “field”; pellon means “of the field”. The genitive ending -n is supplied, so they are not new decisions here. Apply only lt → ll: pelto → pellon.",
           "tags": [
             "kpt",
             "recognition"
@@ -4621,9 +4621,9 @@
             "mp → mm"
           ],
           "optionFeedback": {
-            "lt → ll": "Correct. Compare the supplied forms pelto and pellon. The consonant change is lt → ll.",
-            "k → v": "“k → v” does not show the required pattern. Compare the supplied forms pelto and pellon. The consonant change is lt → ll.",
-            "mp → mm": "“mp → mm” does not show the required pattern. Compare the supplied forms pelto and pellon. The consonant change is lt → ll."
+            "lt → ll": "Correct. pelto means “field”; pellon means “of the field”. The genitive ending -n is supplied, so they are not new decisions here. Apply only lt → ll: pelto → pellon.",
+            "k → v": "“k → v” does not show the required pattern. pelto means “field”; pellon means “of the field”. The genitive ending -n is supplied, so they are not new decisions here. Apply only lt → ll: pelto → pellon.",
+            "mp → mm": "“mp → mm” does not show the required pattern. pelto means “field”; pellon means “of the field”. The genitive ending -n is supplied, so they are not new decisions here. Apply only lt → ll: pelto → pellon."
           },
           "targetSkill": "KPT consonant clusters",
           "answerDiagnostics": [
@@ -4642,11 +4642,11 @@
           "id": "ff-a1-t05-e05",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in antaa → annan? (to give → I give)",
+          "prompt": "What change appears in antaa (“to give”) → annan (“I give”)?",
           "acceptedAnswers": [
             "nt → nn"
           ],
-          "explanation": "Compare the supplied forms antaa and annan. The consonant change is nt → nn.",
+          "explanation": "antaa means “to give”; annan means “I give”. The stem anta- and minä ending -n are supplied, so they are not new decisions here. Apply only nt → nn: antaa → annan.",
           "tags": [
             "kpt",
             "recognition"
@@ -4663,9 +4663,9 @@
             "lt → ll"
           ],
           "optionFeedback": {
-            "nt → nn": "Correct. Compare the supplied forms antaa and annan. The consonant change is nt → nn.",
-            "p → v": "“p → v” does not show the required pattern. Compare the supplied forms antaa and annan. The consonant change is nt → nn.",
-            "lt → ll": "“lt → ll” does not show the required pattern. Compare the supplied forms antaa and annan. The consonant change is nt → nn."
+            "nt → nn": "Correct. antaa means “to give”; annan means “I give”. The stem anta- and minä ending -n are supplied, so they are not new decisions here. Apply only nt → nn: antaa → annan.",
+            "p → v": "“p → v” does not show the required pattern. antaa means “to give”; annan means “I give”. The stem anta- and minä ending -n are supplied, so they are not new decisions here. Apply only nt → nn: antaa → annan.",
+            "lt → ll": "“lt → ll” does not show the required pattern. antaa means “to give”; annan means “I give”. The stem anta- and minä ending -n are supplied, so they are not new decisions here. Apply only nt → nn: antaa → annan."
           },
           "targetSkill": "KPT consonant clusters",
           "answerDiagnostics": [
@@ -4684,11 +4684,11 @@
           "id": "ff-a1-t05-e06",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "lentää (“to fly → I fly”) → ____ · apply nt → nn",
+          "prompt": "lentää (“to fly”), supplied stem lentä- + minä -n → ____ (“I fly”) · use the supplied minä ending -n; apply nt → nn",
           "acceptedAnswers": [
             "lennän"
           ],
-          "explanation": "Compare the supplied forms lentää and lennän. The consonant change is nt → nn.",
+          "explanation": "lentää means “to fly”; lennän means “I fly”. The stem lentä- and minä ending -n are supplied, so they are not new decisions here. Apply only nt → nn: lentää → lennän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4716,11 +4716,11 @@
           "id": "ff-a1-t05-e07",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kertoa (“to tell → I tell”) → ____ · apply rt → rr",
+          "prompt": "kertoa (“to tell”), supplied stem kerto- + minä -n → ____ (“I tell”) · use the supplied minä ending -n; apply rt → rr",
           "acceptedAnswers": [
             "kerron"
           ],
-          "explanation": "Compare the supplied forms kertoa and kerron. The consonant change is rt → rr.",
+          "explanation": "kertoa means “to tell”; kerron means “I tell”. The stem kerto- and minä ending -n are supplied, so they are not new decisions here. Apply only rt → rr: kertoa → kerron.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4748,11 +4748,11 @@
           "id": "ff-a1-t05-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "ymmärtää (“to understand → I understand”) → ____ · apply rt → rr",
+          "prompt": "ymmärtää (“to understand”), supplied stem ymmärtä- + minä -n → ____ (“I understand”) · use the supplied minä ending -n; apply rt → rr",
           "acceptedAnswers": [
             "ymmärrän"
           ],
-          "explanation": "Compare the supplied forms ymmärtää and ymmärrän. The consonant change is rt → rr.",
+          "explanation": "ymmärtää means “to understand”; ymmärrän means “I understand”. The stem ymmärtä- and minä ending -n are supplied, so they are not new decisions here. Apply only rt → rr: ymmärtää → ymmärrän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4780,11 +4780,11 @@
           "id": "ff-a1-t05-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "ranta (“beach”) → ____ · apply nt → nn",
+          "prompt": "ranta (“beach”) → ____ (“of the beach”) · use the supplied genitive ending -n; apply nt → nn",
           "acceptedAnswers": [
             "rannan"
           ],
-          "explanation": "Compare the supplied forms ranta and rannan. The consonant change is nt → nn.",
+          "explanation": "ranta means “beach”; rannan means “of the beach”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nt → nn: ranta → rannan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4812,11 +4812,11 @@
           "id": "ff-a1-t05-e10",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "silta (“bridge”) → ____ · apply lt → ll",
+          "prompt": "silta (“bridge”) → ____ (“of the bridge”) · use the supplied genitive ending -n; apply lt → ll",
           "acceptedAnswers": [
             "sillan"
           ],
-          "explanation": "Compare the supplied forms silta and sillan. The consonant change is lt → ll.",
+          "explanation": "silta means “bridge”; sillan means “of the bridge”. The genitive ending -n is supplied, so they are not new decisions here. Apply only lt → ll: silta → sillan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4844,11 +4844,11 @@
           "id": "ff-a1-t05-e11",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kaupunki (“city”) → ____ · apply nk → ng",
+          "prompt": "kaupunki (“city”) → ____ (“of the city”) · use the supplied genitive ending -n; apply nk → ng",
           "acceptedAnswers": [
             "kaupungin"
           ],
-          "explanation": "Compare the supplied forms kaupunki and kaupungin. The consonant change is nk → ng.",
+          "explanation": "kaupunki means “city”; kaupungin means “of the city”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kaupunki → kaupungin.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4876,11 +4876,11 @@
           "id": "ff-a1-t05-e12",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kenkä (“shoe”) → ____ · apply nk → ng",
+          "prompt": "kenkä (“shoe”) → ____ (“of the shoe”) · use the supplied genitive ending -n; apply nk → ng",
           "acceptedAnswers": [
             "kengän"
           ],
-          "explanation": "Compare the supplied forms kenkä and kengän. The consonant change is nk → ng.",
+          "explanation": "kenkä means “shoe”; kengän means “of the shoe”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kenkä → kengän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -4923,11 +4923,11 @@
           "id": "ff-a1-t15-e01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in poika → pojan? (boy)",
+          "prompt": "What change appears in poika (“boy”) → pojan (“of the boy”)?",
           "acceptedAnswers": [
             "k → j"
           ],
-          "explanation": "Compare the supplied forms poika and pojan. The consonant change is k → j.",
+          "explanation": "poika means “boy”; pojan means “of the boy”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: poika → pojan.",
           "tags": [
             "kpt",
             "recognition"
@@ -4944,9 +4944,9 @@
             "t → d"
           ],
           "optionFeedback": {
-            "k → j": "Correct. Compare the supplied forms poika and pojan. The consonant change is k → j.",
-            "tt → t": "“tt → t” does not show the required pattern. Compare the supplied forms poika and pojan. The consonant change is k → j.",
-            "t → d": "“t → d” does not show the required pattern. Compare the supplied forms poika and pojan. The consonant change is k → j."
+            "k → j": "Correct. poika means “boy”; pojan means “of the boy”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: poika → pojan.",
+            "tt → t": "“tt → t” does not show the required pattern. poika means “boy”; pojan means “of the boy”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: poika → pojan.",
+            "t → d": "“t → d” does not show the required pattern. poika means “boy”; pojan means “of the boy”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: poika → pojan."
           },
           "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
@@ -4965,11 +4965,11 @@
           "id": "ff-a1-t15-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in puku → puvun? (suit)",
+          "prompt": "What change appears in puku (“suit”) → puvun (“of the suit”)?",
           "acceptedAnswers": [
             "k → v"
           ],
-          "explanation": "Compare the supplied forms puku and puvun. The consonant change is k → v.",
+          "explanation": "puku means “suit”; puvun means “of the suit”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: puku → puvun.",
           "tags": [
             "kpt",
             "recognition"
@@ -4986,9 +4986,9 @@
             "nk → ng"
           ],
           "optionFeedback": {
-            "k → v": "Correct. Compare the supplied forms puku and puvun. The consonant change is k → v.",
-            "k → ∅": "“k → ∅” does not show the required pattern. Compare the supplied forms puku and puvun. The consonant change is k → v.",
-            "nk → ng": "“nk → ng” does not show the required pattern. Compare the supplied forms puku and puvun. The consonant change is k → v."
+            "k → v": "Correct. puku means “suit”; puvun means “of the suit”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: puku → puvun.",
+            "k → ∅": "“k → ∅” does not show the required pattern. puku means “suit”; puvun means “of the suit”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: puku → puvun.",
+            "nk → ng": "“nk → ng” does not show the required pattern. puku means “suit”; puvun means “of the suit”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: puku → puvun."
           },
           "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
@@ -5007,11 +5007,11 @@
           "id": "ff-a1-t15-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in aika → ajan? (time)",
+          "prompt": "What change appears in aika (“time”) → ajan (“of the time”)?",
           "acceptedAnswers": [
             "k → j"
           ],
-          "explanation": "Compare the supplied forms aika and ajan. The consonant change is k → j.",
+          "explanation": "aika means “time”; ajan means “of the time”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: aika → ajan.",
           "tags": [
             "kpt",
             "recognition"
@@ -5028,9 +5028,9 @@
             "mp → mm"
           ],
           "optionFeedback": {
-            "k → j": "Correct. Compare the supplied forms aika and ajan. The consonant change is k → j.",
-            "k → v": "“k → v” does not show the required pattern. Compare the supplied forms aika and ajan. The consonant change is k → j.",
-            "mp → mm": "“mp → mm” does not show the required pattern. Compare the supplied forms aika and ajan. The consonant change is k → j."
+            "k → j": "Correct. aika means “time”; ajan means “of the time”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: aika → ajan.",
+            "k → v": "“k → v” does not show the required pattern. aika means “time”; ajan means “of the time”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: aika → ajan.",
+            "mp → mm": "“mp → mm” does not show the required pattern. aika means “time”; ajan means “of the time”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: aika → ajan."
           },
           "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
@@ -5049,11 +5049,11 @@
           "id": "ff-a1-t15-e04",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What change appears in luku → luvun? (number or chapter)",
+          "prompt": "What change appears in luku (“number or chapter”) → luvun (“of the number or chapter”)?",
           "acceptedAnswers": [
             "k → v"
           ],
-          "explanation": "Compare the supplied forms luku and luvun. The consonant change is k → v.",
+          "explanation": "luku means “number or chapter”; luvun means “of the number or chapter”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: luku → luvun.",
           "tags": [
             "kpt",
             "recognition"
@@ -5070,9 +5070,9 @@
             "nt → nn"
           ],
           "optionFeedback": {
-            "k → v": "Correct. Compare the supplied forms luku and luvun. The consonant change is k → v.",
-            "p → v": "“p → v” does not show the required pattern. Compare the supplied forms luku and luvun. The consonant change is k → v.",
-            "nt → nn": "“nt → nn” does not show the required pattern. Compare the supplied forms luku and luvun. The consonant change is k → v."
+            "k → v": "Correct. luku means “number or chapter”; luvun means “of the number or chapter”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: luku → luvun.",
+            "p → v": "“p → v” does not show the required pattern. luku means “number or chapter”; luvun means “of the number or chapter”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: luku → luvun.",
+            "nt → nn": "“nt → nn” does not show the required pattern. luku means “number or chapter”; luvun means “of the number or chapter”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: luku → luvun."
           },
           "targetSkill": "KPT special k changes",
           "answerDiagnostics": [
@@ -5091,11 +5091,11 @@
           "id": "ff-a1-t15-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "poika (“boy”) → ____ · apply k → j",
+          "prompt": "poika (“boy”) → ____ (“of the boy”) · use the supplied genitive ending -n; apply k → j",
           "acceptedAnswers": [
             "pojan"
           ],
-          "explanation": "Compare the supplied forms poika and pojan. The consonant change is k → j.",
+          "explanation": "poika means “boy”; pojan means “of the boy”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: poika → pojan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -5123,11 +5123,11 @@
           "id": "ff-a1-t15-e06",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "puku (“suit”) → ____ · apply k → v",
+          "prompt": "puku (“suit”) → ____ (“of the suit”) · use the supplied genitive ending -n; apply k → v",
           "acceptedAnswers": [
             "puvun"
           ],
-          "explanation": "Compare the supplied forms puku and puvun. The consonant change is k → v.",
+          "explanation": "puku means “suit”; puvun means “of the suit”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: puku → puvun.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -5155,11 +5155,11 @@
           "id": "ff-a1-t15-e07",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "aika (“time”) → ____ · apply k → j",
+          "prompt": "aika (“time”) → ____ (“of the time”) · use the supplied genitive ending -n; apply k → j",
           "acceptedAnswers": [
             "ajan"
           ],
-          "explanation": "Compare the supplied forms aika and ajan. The consonant change is k → j.",
+          "explanation": "aika means “time”; ajan means “of the time”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → j: aika → ajan.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -5187,11 +5187,11 @@
           "id": "ff-a1-t15-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "luku (“number or chapter”) → ____ · apply k → v",
+          "prompt": "luku (“number or chapter”) → ____ (“of the number or chapter”) · use the supplied genitive ending -n; apply k → v",
           "acceptedAnswers": [
             "luvun"
           ],
-          "explanation": "Compare the supplied forms luku and luvun. The consonant change is k → v.",
+          "explanation": "luku means “number or chapter”; luvun means “of the number or chapter”. The genitive ending -n is supplied, so they are not new decisions here. Apply only k → v: luku → luvun.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -5239,7 +5239,7 @@
           "id": "ff-a1-t06-e01",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in pankki → pankin?",
+          "prompt": "What KPT change appears in pankki (“bank”) → pankin (“of the bank”)?",
           "acceptedAnswers": [
             "kk → k"
           ],
@@ -5276,7 +5276,7 @@
           "id": "ff-a1-t06-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in jalka → jalan?",
+          "prompt": "What KPT change appears in jalka (“foot or leg”) → jalan (“of the foot or leg”)?",
           "acceptedAnswers": [
             "k → ∅"
           ],
@@ -5313,7 +5313,7 @@
           "id": "ff-a1-t06-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in poika → pojan?",
+          "prompt": "What KPT change appears in poika (“boy”) → pojan (“of the boy”)?",
           "acceptedAnswers": [
             "k → j"
           ],
@@ -5350,7 +5350,7 @@
           "id": "ff-a1-t06-e04",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in puku → puvun?",
+          "prompt": "What KPT change appears in puku (“suit”) → puvun (“of the suit”)?",
           "acceptedAnswers": [
             "k → v"
           ],
@@ -5387,7 +5387,7 @@
           "id": "ff-a1-t06-e05",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in leipä → leivän?",
+          "prompt": "What KPT change appears in leipä (“bread”) → leivän (“of the bread”)?",
           "acceptedAnswers": [
             "p → v"
           ],
@@ -5424,7 +5424,7 @@
           "id": "ff-a1-t06-e06",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in kaupunki → kaupungin?",
+          "prompt": "What KPT change appears in kaupunki (“city”) → kaupungin (“of the city”)?",
           "acceptedAnswers": [
             "nk → ng"
           ],
@@ -5461,7 +5461,7 @@
           "id": "ff-a1-t06-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in kampa → kamman?",
+          "prompt": "What KPT change appears in kampa (“comb”) → kamman (“of the comb”)?",
           "acceptedAnswers": [
             "mp → mm"
           ],
@@ -5498,7 +5498,7 @@
           "id": "ff-a1-t06-e08",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "What KPT change appears in pelto → pellon?",
+          "prompt": "What KPT change appears in pelto (“field”) → pellon (“of the field”)?",
           "acceptedAnswers": [
             "lt → ll"
           ],
@@ -5552,11 +5552,11 @@
           "id": "ff-a1-t07-e01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pankki (“the bank's / of the bank”) → ____ (genitive)",
+          "prompt": "pankki (“bank”) → ____ (“the bank's / of the bank”) · add genitive -n",
           "acceptedAnswers": [
             "pankin"
           ],
-          "explanation": "The genitive ends in -n. kk weakens to k.",
+          "explanation": "pankki means “bank”; pankin means “the bank's / of the bank”. The genitive ends in -n. kk weakens to k.",
           "tags": [
             "kpt",
             "noun",
@@ -5577,11 +5577,11 @@
           "id": "ff-a1-t07-e02",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "the shop's / of the shop — use the supplied base kauppa",
+          "prompt": "the shop's / of the shop — use the supplied base kauppa (“shop”)",
           "acceptedAnswers": [
             "kaupan"
           ],
-          "explanation": "The genitive ends in -n. pp weakens to p.",
+          "explanation": "kauppa means “shop”; kaupan means “the shop's / of the shop”. The genitive ends in -n. pp weakens to p.",
           "tags": [
             "kpt",
             "noun",
@@ -5602,11 +5602,11 @@
           "id": "ff-a1-t07-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the genitive of “matto”.",
+          "prompt": "Choose the form meaning “the rug's / of the rug” from matto (“rug”).",
           "acceptedAnswers": [
             "maton"
           ],
-          "explanation": "The genitive ends in -n. tt weakens to t.",
+          "explanation": "matto means “rug”; maton means “the rug's / of the rug”. The genitive ends in -n. tt weakens to t.",
           "tags": [
             "kpt",
             "noun",
@@ -5625,9 +5625,9 @@
             "matto"
           ],
           "optionFeedback": {
-            "maton": "Correct. The genitive ends in -n. tt weakens to t.",
-            "matton": "“matton” does not show the required pattern. The genitive ends in -n. tt weakens to t.",
-            "matto": "“matto” does not show the required pattern. The genitive ends in -n. tt weakens to t."
+            "maton": "Correct. matto means “rug”; maton means “the rug's / of the rug”. The genitive ends in -n. tt weakens to t.",
+            "matton": "“matton” does not show the required pattern. matto means “rug”; maton means “the rug's / of the rug”. The genitive ends in -n. tt weakens to t.",
+            "matto": "“matto” does not show the required pattern. matto means “rug”; maton means “the rug's / of the rug”. The genitive ends in -n. tt weakens to t."
           },
           "targetSkill": "Genitive -n",
           "misconceptionCategory": "Genitive -n: form not yet correct",
@@ -5641,7 +5641,7 @@
           "acceptedAnswers": [
             "the foot's / of the foot"
           ],
-          "explanation": "The genitive ends in -n. k disappears.",
+          "explanation": "jalka means “foot or leg”; jalan means “the foot's / of the foot”. The genitive ends in -n. k disappears.",
           "tags": [
             "kpt",
             "noun",
@@ -5662,11 +5662,11 @@
           "id": "ff-a1-t07-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "poika (“the boy's / of the boy”) → ____ (genitive)",
+          "prompt": "poika (“boy”) → ____ (“the boy's / of the boy”) · add genitive -n",
           "acceptedAnswers": [
             "pojan"
           ],
-          "explanation": "The genitive ends in -n. k changes to j.",
+          "explanation": "poika means “boy”; pojan means “the boy's / of the boy”. The genitive ends in -n. k changes to j.",
           "tags": [
             "kpt",
             "noun",
@@ -5687,11 +5687,11 @@
           "id": "ff-a1-t07-e06",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "the suit's / of the suit — use the supplied base puku",
+          "prompt": "the suit's / of the suit — use the supplied base puku (“suit”)",
           "acceptedAnswers": [
             "puvun"
           ],
-          "explanation": "The genitive ends in -n. k changes to v.",
+          "explanation": "puku means “suit”; puvun means “the suit's / of the suit”. The genitive ends in -n. k changes to v.",
           "tags": [
             "kpt",
             "noun",
@@ -5712,11 +5712,11 @@
           "id": "ff-a1-t07-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the genitive of “leipä”.",
+          "prompt": "Choose the form meaning “the bread's / of the bread” from leipä (“bread”).",
           "acceptedAnswers": [
             "leivän"
           ],
-          "explanation": "The genitive ends in -n. p changes to v.",
+          "explanation": "leipä means “bread”; leivän means “the bread's / of the bread”. The genitive ends in -n. p changes to v.",
           "tags": [
             "kpt",
             "noun",
@@ -5735,9 +5735,9 @@
             "leipä"
           ],
           "optionFeedback": {
-            "leivän": "Correct. The genitive ends in -n. p changes to v.",
-            "leipän": "“leipän” does not show the required pattern. The genitive ends in -n. p changes to v.",
-            "leipä": "“leipä” does not show the required pattern. The genitive ends in -n. p changes to v."
+            "leivän": "Correct. leipä means “bread”; leivän means “the bread's / of the bread”. The genitive ends in -n. p changes to v.",
+            "leipän": "“leipän” does not show the required pattern. leipä means “bread”; leivän means “the bread's / of the bread”. The genitive ends in -n. p changes to v.",
+            "leipä": "“leipä” does not show the required pattern. leipä means “bread”; leivän means “the bread's / of the bread”. The genitive ends in -n. p changes to v."
           },
           "targetSkill": "Genitive -n",
           "misconceptionCategory": "Genitive -n: form not yet correct",
@@ -5751,7 +5751,7 @@
           "acceptedAnswers": [
             "the table's / of the table"
           ],
-          "explanation": "The genitive ends in -n. t changes to d.",
+          "explanation": "pöytä means “table”; pöydän means “the table's / of the table”. The genitive ends in -n. t changes to d.",
           "tags": [
             "kpt",
             "noun",
@@ -5772,11 +5772,11 @@
           "id": "ff-a1-t07-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kaupunki (“the city's / of the city”) → ____ (genitive)",
+          "prompt": "kaupunki (“city”) → ____ (“the city's / of the city”) · add genitive -n",
           "acceptedAnswers": [
             "kaupungin"
           ],
-          "explanation": "The genitive ends in -n. nk weakens to ng.",
+          "explanation": "kaupunki means “city”; kaupungin means “the city's / of the city”. The genitive ends in -n. nk weakens to ng.",
           "tags": [
             "kpt",
             "noun",
@@ -5797,11 +5797,11 @@
           "id": "ff-a1-t07-e10",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "the shoe's / of the shoe — use the supplied base kenkä",
+          "prompt": "the shoe's / of the shoe — use the supplied base kenkä (“shoe”)",
           "acceptedAnswers": [
             "kengän"
           ],
-          "explanation": "The genitive ends in -n. nk weakens to ng.",
+          "explanation": "kenkä means “shoe”; kengän means “the shoe's / of the shoe”. The genitive ends in -n. nk weakens to ng.",
           "tags": [
             "kpt",
             "noun",
@@ -5822,11 +5822,11 @@
           "id": "ff-a1-t07-e11",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the genitive of “ranta”.",
+          "prompt": "Choose the form meaning “the beach's / of the beach” from ranta (“beach”).",
           "acceptedAnswers": [
             "rannan"
           ],
-          "explanation": "The genitive ends in -n. nt weakens to nn.",
+          "explanation": "ranta means “beach”; rannan means “the beach's / of the beach”. The genitive ends in -n. nt weakens to nn.",
           "tags": [
             "kpt",
             "noun",
@@ -5845,9 +5845,9 @@
             "ranta"
           ],
           "optionFeedback": {
-            "rannan": "Correct. The genitive ends in -n. nt weakens to nn.",
-            "rantan": "“rantan” does not show the required pattern. The genitive ends in -n. nt weakens to nn.",
-            "ranta": "“ranta” does not show the required pattern. The genitive ends in -n. nt weakens to nn."
+            "rannan": "Correct. ranta means “beach”; rannan means “the beach's / of the beach”. The genitive ends in -n. nt weakens to nn.",
+            "rantan": "“rantan” does not show the required pattern. ranta means “beach”; rannan means “the beach's / of the beach”. The genitive ends in -n. nt weakens to nn.",
+            "ranta": "“ranta” does not show the required pattern. ranta means “beach”; rannan means “the beach's / of the beach”. The genitive ends in -n. nt weakens to nn."
           },
           "targetSkill": "Genitive -n",
           "misconceptionCategory": "Genitive -n: form not yet correct",
@@ -5861,7 +5861,7 @@
           "acceptedAnswers": [
             "the bank's / of the bank"
           ],
-          "explanation": "The genitive ends in -n. kk weakens to k.",
+          "explanation": "pankki means “bank”; pankin means “the bank's / of the bank”. The genitive ends in -n. kk weakens to k.",
           "tags": [
             "kpt",
             "noun",
@@ -5882,11 +5882,11 @@
           "id": "ff-a1-t07-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kauppa (“the shop's / of the shop”) → ____ (genitive)",
+          "prompt": "kauppa (“shop”) → ____ (“the shop's / of the shop”) · add genitive -n",
           "acceptedAnswers": [
             "kaupan"
           ],
-          "explanation": "The genitive ends in -n. pp weakens to p.",
+          "explanation": "kauppa means “shop”; kaupan means “the shop's / of the shop”. The genitive ends in -n. pp weakens to p.",
           "tags": [
             "kpt",
             "noun",
@@ -5907,11 +5907,11 @@
           "id": "ff-a1-t07-e14",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "the girl's / of the girl — use the supplied base tyttö",
+          "prompt": "the girl's / of the girl — use the supplied base tyttö (“girl”)",
           "acceptedAnswers": [
             "tytön"
           ],
-          "explanation": "The genitive ends in -n. tt weakens to t.",
+          "explanation": "tyttö means “girl”; tytön means “the girl's / of the girl”. The genitive ends in -n. tt weakens to t.",
           "tags": [
             "kpt",
             "noun",
@@ -5932,11 +5932,11 @@
           "id": "ff-a1-t07-e15",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the genitive of “katto”.",
+          "prompt": "Choose the form meaning “the roof's / of the roof” from katto (“roof”).",
           "acceptedAnswers": [
             "katon"
           ],
-          "explanation": "The genitive ends in -n. tt weakens to t.",
+          "explanation": "katto means “roof”; katon means “the roof's / of the roof”. The genitive ends in -n. tt weakens to t.",
           "tags": [
             "kpt",
             "noun",
@@ -5955,9 +5955,9 @@
             "katto"
           ],
           "optionFeedback": {
-            "katon": "Correct. The genitive ends in -n. tt weakens to t.",
-            "katton": "“katton” does not show the required pattern. The genitive ends in -n. tt weakens to t.",
-            "katto": "“katto” does not show the required pattern. The genitive ends in -n. tt weakens to t."
+            "katon": "Correct. katto means “roof”; katon means “the roof's / of the roof”. The genitive ends in -n. tt weakens to t.",
+            "katton": "“katton” does not show the required pattern. katto means “roof”; katon means “the roof's / of the roof”. The genitive ends in -n. tt weakens to t.",
+            "katto": "“katto” does not show the required pattern. katto means “roof”; katon means “the roof's / of the roof”. The genitive ends in -n. tt weakens to t."
           },
           "targetSkill": "Genitive -n",
           "misconceptionCategory": "Genitive -n: form not yet correct",
@@ -5984,11 +5984,11 @@
           "id": "ff-a1-t08-e01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "nukkua (“I sleep”) → minä ____",
+          "prompt": "nukkua (“to sleep”) → minä ____ (“I sleep”) · add minä -n",
           "acceptedAnswers": [
             "nukun"
           ],
-          "explanation": "This is the minä-form of nukkua. kk weakens to k.",
+          "explanation": "nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
           "tags": [
             "kpt",
             "verb"
@@ -6008,11 +6008,11 @@
           "id": "ff-a1-t08-e02",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "I take — use the supplied dictionary form ottaa",
+          "prompt": "I take — use the supplied dictionary form ottaa (“to take”)",
           "acceptedAnswers": [
             "otan"
           ],
-          "explanation": "This is the minä-form of ottaa. tt weakens to t.",
+          "explanation": "ottaa means “to take”; otan means “I take”. This is the minä-form of ottaa. Add the minä ending -n after forming the stem. tt weakens to t.",
           "tags": [
             "kpt",
             "verb"
@@ -6032,11 +6032,11 @@
           "id": "ff-a1-t08-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the minä-form of “auttaa”.",
+          "prompt": "Choose the form meaning “I help” from auttaa (“to help”).",
           "acceptedAnswers": [
             "autan"
           ],
-          "explanation": "This is the minä-form of auttaa. tt weakens to t.",
+          "explanation": "auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
           "tags": [
             "kpt",
             "verb"
@@ -6054,9 +6054,9 @@
             "auttaa"
           ],
           "optionFeedback": {
-            "autan": "Correct. This is the minä-form of auttaa. tt weakens to t.",
-            "auttan": "“auttan” does not show the required pattern. This is the minä-form of auttaa. tt weakens to t.",
-            "auttaa": "“auttaa” does not show the required pattern. This is the minä-form of auttaa. tt weakens to t."
+            "autan": "Correct. auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
+            "auttan": "“auttan” does not show the required pattern. auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
+            "auttaa": "“auttaa” does not show the required pattern. auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t."
           },
           "targetSkill": "Minä verb forms with KPT",
           "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
@@ -6070,7 +6070,7 @@
           "acceptedAnswers": [
             "I read"
           ],
-          "explanation": "This is the minä-form of lukea. k disappears.",
+          "explanation": "lukea means “to read”; luen means “I read”. This is the minä-form of lukea. Add the minä ending -n after forming the stem. k disappears.",
           "tags": [
             "kpt",
             "verb"
@@ -6090,11 +6090,11 @@
           "id": "ff-a1-t08-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pukea (“I get dressed”) → minä ____",
+          "prompt": "pukea (“to get dressed”) → minä ____ (“I get dressed”) · add minä -n",
           "acceptedAnswers": [
             "puen"
           ],
-          "explanation": "This is the minä-form of pukea. k disappears.",
+          "explanation": "pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
           "tags": [
             "kpt",
             "verb"
@@ -6114,11 +6114,11 @@
           "id": "ff-a1-t08-e06",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "I fetch — use the supplied dictionary form hakea",
+          "prompt": "I fetch — use the supplied dictionary form hakea (“to fetch”)",
           "acceptedAnswers": [
             "haen"
           ],
-          "explanation": "This is the minä-form of hakea. k disappears.",
+          "explanation": "hakea means “to fetch”; haen means “I fetch”. This is the minä-form of hakea. Add the minä ending -n after forming the stem. k disappears.",
           "tags": [
             "kpt",
             "verb"
@@ -6138,11 +6138,11 @@
           "id": "ff-a1-t08-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the minä-form of “antaa”.",
+          "prompt": "Choose the form meaning “I give” from antaa (“to give”).",
           "acceptedAnswers": [
             "annan"
           ],
-          "explanation": "This is the minä-form of antaa. nt weakens to nn.",
+          "explanation": "antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
           "tags": [
             "kpt",
             "verb"
@@ -6160,9 +6160,9 @@
             "antaa"
           ],
           "optionFeedback": {
-            "annan": "Correct. This is the minä-form of antaa. nt weakens to nn.",
-            "antan": "“antan” does not show the required pattern. This is the minä-form of antaa. nt weakens to nn.",
-            "antaa": "“antaa” does not show the required pattern. This is the minä-form of antaa. nt weakens to nn."
+            "annan": "Correct. antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
+            "antan": "“antan” does not show the required pattern. antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
+            "antaa": "“antaa” does not show the required pattern. antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn."
           },
           "targetSkill": "Minä verb forms with KPT",
           "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
@@ -6176,7 +6176,7 @@
           "acceptedAnswers": [
             "I fly"
           ],
-          "explanation": "This is the minä-form of lentää. nt weakens to nn.",
+          "explanation": "lentää means “to fly”; lennän means “I fly”. This is the minä-form of lentää. Add the minä ending -n after forming the stem. nt weakens to nn.",
           "tags": [
             "kpt",
             "verb"
@@ -6196,11 +6196,11 @@
           "id": "ff-a1-t08-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kertoa (“I tell”) → minä ____",
+          "prompt": "kertoa (“to tell”) → minä ____ (“I tell”) · add minä -n",
           "acceptedAnswers": [
             "kerron"
           ],
-          "explanation": "This is the minä-form of kertoa. rt weakens to rr.",
+          "explanation": "kertoa means “to tell”; kerron means “I tell”. This is the minä-form of kertoa. Add the minä ending -n after forming the stem. rt weakens to rr.",
           "tags": [
             "kpt",
             "verb"
@@ -6220,11 +6220,11 @@
           "id": "ff-a1-t08-e10",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "I understand — use the supplied dictionary form ymmärtää",
+          "prompt": "I understand — use the supplied dictionary form ymmärtää (“to understand”)",
           "acceptedAnswers": [
             "ymmärrän"
           ],
-          "explanation": "This is the minä-form of ymmärtää. rt weakens to rr.",
+          "explanation": "ymmärtää means “to understand”; ymmärrän means “I understand”. This is the minä-form of ymmärtää. Add the minä ending -n after forming the stem. rt weakens to rr.",
           "tags": [
             "kpt",
             "verb"
@@ -6244,11 +6244,11 @@
           "id": "ff-a1-t08-e11",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the minä-form of “nukkua”.",
+          "prompt": "Choose the form meaning “I sleep” from nukkua (“to sleep”).",
           "acceptedAnswers": [
             "nukun"
           ],
-          "explanation": "This is the minä-form of nukkua. kk weakens to k.",
+          "explanation": "nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
           "tags": [
             "kpt",
             "verb"
@@ -6266,9 +6266,9 @@
             "nukkua"
           ],
           "optionFeedback": {
-            "nukun": "Correct. This is the minä-form of nukkua. kk weakens to k.",
-            "nukkun": "“nukkun” does not show the required pattern. This is the minä-form of nukkua. kk weakens to k.",
-            "nukkua": "“nukkua” does not show the required pattern. This is the minä-form of nukkua. kk weakens to k."
+            "nukun": "Correct. nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
+            "nukkun": "“nukkun” does not show the required pattern. nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
+            "nukkua": "“nukkua” does not show the required pattern. nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k."
           },
           "targetSkill": "Minä verb forms with KPT",
           "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
@@ -6282,7 +6282,7 @@
           "acceptedAnswers": [
             "I take"
           ],
-          "explanation": "This is the minä-form of ottaa. tt weakens to t.",
+          "explanation": "ottaa means “to take”; otan means “I take”. This is the minä-form of ottaa. Add the minä ending -n after forming the stem. tt weakens to t.",
           "tags": [
             "kpt",
             "verb"
@@ -6302,11 +6302,11 @@
           "id": "ff-a1-t08-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "auttaa (“I help”) → minä ____",
+          "prompt": "auttaa (“to help”) → minä ____ (“I help”) · add minä -n",
           "acceptedAnswers": [
             "autan"
           ],
-          "explanation": "This is the minä-form of auttaa. tt weakens to t.",
+          "explanation": "auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
           "tags": [
             "kpt",
             "verb"
@@ -6326,11 +6326,11 @@
           "id": "ff-a1-t08-e14",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "I read — use the supplied dictionary form lukea",
+          "prompt": "I read — use the supplied dictionary form lukea (“to read”)",
           "acceptedAnswers": [
             "luen"
           ],
-          "explanation": "This is the minä-form of lukea. k disappears.",
+          "explanation": "lukea means “to read”; luen means “I read”. This is the minä-form of lukea. Add the minä ending -n after forming the stem. k disappears.",
           "tags": [
             "kpt",
             "verb"
@@ -6350,11 +6350,11 @@
           "id": "ff-a1-t08-e15",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the minä-form of “pukea”.",
+          "prompt": "Choose the form meaning “I get dressed” from pukea (“to get dressed”).",
           "acceptedAnswers": [
             "puen"
           ],
-          "explanation": "This is the minä-form of pukea. k disappears.",
+          "explanation": "pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
           "tags": [
             "kpt",
             "verb"
@@ -6372,9 +6372,9 @@
             "pukea"
           ],
           "optionFeedback": {
-            "puen": "Correct. This is the minä-form of pukea. k disappears.",
-            "puken": "“puken” does not show the required pattern. This is the minä-form of pukea. k disappears.",
-            "pukea": "“pukea” does not show the required pattern. This is the minä-form of pukea. k disappears."
+            "puen": "Correct. pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
+            "puken": "“puken” does not show the required pattern. pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
+            "pukea": "“pukea” does not show the required pattern. pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears."
           },
           "targetSkill": "Minä verb forms with KPT",
           "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
@@ -6399,11 +6399,11 @@
           "id": "ff-a1-t09-e01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kirja (“books”) → ____ (plural)",
+          "prompt": "kirja (“book”) → ____ (“books”) · add plural -t",
           "acceptedAnswers": [
             "kirjat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kirja → kirjat.",
+          "explanation": "kirja means “book”; kirjat means “books”. The nominative T-plural is formed here by adding -t: kirja → kirjat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6422,11 +6422,11 @@
           "id": "ff-a1-t09-e02",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "dogs — use the supplied base koira",
+          "prompt": "dogs — use the supplied base koira (“dog”)",
           "acceptedAnswers": [
             "koirat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: koira → koirat.",
+          "explanation": "koira means “dog”; koirat means “dogs”. The nominative T-plural is formed here by adding -t: koira → koirat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6445,11 +6445,11 @@
           "id": "ff-a1-t09-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “kynä”.",
+          "prompt": "Choose the form meaning “pens” from kynä (“pen”).",
           "acceptedAnswers": [
             "kynät"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kynä → kynät.",
+          "explanation": "kynä means “pen”; kynät means “pens”. The nominative T-plural is formed here by adding -t: kynä → kynät.",
           "tags": [
             "t-plural",
             "regular"
@@ -6466,9 +6466,9 @@
             "kynä"
           ],
           "optionFeedback": {
-            "kynät": "Correct. The nominative T-plural is formed here by adding -t: kynä → kynät.",
-            "kynäet": "“kynäet” does not show the required pattern. The nominative T-plural is formed here by adding -t: kynä → kynät.",
-            "kynä": "“kynä” does not show the required pattern. The nominative T-plural is formed here by adding -t: kynä → kynät."
+            "kynät": "Correct. kynä means “pen”; kynät means “pens”. The nominative T-plural is formed here by adding -t: kynä → kynät.",
+            "kynäet": "“kynäet” does not show the required pattern. kynä means “pen”; kynät means “pens”. The nominative T-plural is formed here by adding -t: kynä → kynät.",
+            "kynä": "“kynä” does not show the required pattern. kynä means “pen”; kynät means “pens”. The nominative T-plural is formed here by adding -t: kynä → kynät."
           },
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
@@ -6478,11 +6478,11 @@
           "id": "ff-a1-t09-e04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "omena (“apples”) → ____ · add plural -t",
+          "prompt": "omena (“apple”) → ____ (“apples”) · add plural -t",
           "acceptedAnswers": [
             "omenat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: omena → omenat.",
+          "explanation": "omena means “apple”; omenat means “apples”. The nominative T-plural is formed here by adding -t: omena → omenat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6501,11 +6501,11 @@
           "id": "ff-a1-t09-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "sana (“words”) → ____ (plural)",
+          "prompt": "sana (“word”) → ____ (“words”) · add plural -t",
           "acceptedAnswers": [
             "sanat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: sana → sanat.",
+          "explanation": "sana means “word”; sanat means “words”. The nominative T-plural is formed here by adding -t: sana → sanat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6524,11 +6524,11 @@
           "id": "ff-a1-t09-e06",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "pictures — use the supplied base kuva",
+          "prompt": "pictures — use the supplied base kuva (“picture”)",
           "acceptedAnswers": [
             "kuvat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kuva → kuvat.",
+          "explanation": "kuva means “picture”; kuvat means “pictures”. The nominative T-plural is formed here by adding -t: kuva → kuvat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6547,11 +6547,11 @@
           "id": "ff-a1-t09-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “tuoli”.",
+          "prompt": "Choose the form meaning “chairs” from tuoli (“chair”).",
           "acceptedAnswers": [
             "tuolit"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
+          "explanation": "tuoli means “chair”; tuolit means “chairs”. The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
           "tags": [
             "t-plural",
             "regular"
@@ -6568,9 +6568,9 @@
             "tuoli"
           ],
           "optionFeedback": {
-            "tuolit": "Correct. The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
-            "tuoliet": "“tuoliet” does not show the required pattern. The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
-            "tuoli": "“tuoli” does not show the required pattern. The nominative T-plural is formed here by adding -t: tuoli → tuolit."
+            "tuolit": "Correct. tuoli means “chair”; tuolit means “chairs”. The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
+            "tuoliet": "“tuoliet” does not show the required pattern. tuoli means “chair”; tuolit means “chairs”. The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
+            "tuoli": "“tuoli” does not show the required pattern. tuoli means “chair”; tuolit means “chairs”. The nominative T-plural is formed here by adding -t: tuoli → tuolit."
           },
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
@@ -6580,11 +6580,11 @@
           "id": "ff-a1-t09-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kissa (“cats”) → ____ · add plural -t",
+          "prompt": "kissa (“cat”) → ____ (“cats”) · add plural -t",
           "acceptedAnswers": [
             "kissat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kissa → kissat.",
+          "explanation": "kissa means “cat”; kissat means “cats”. The nominative T-plural is formed here by adding -t: kissa → kissat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6603,11 +6603,11 @@
           "id": "ff-a1-t09-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pallo (“balls”) → ____ (plural)",
+          "prompt": "pallo (“ball”) → ____ (“balls”) · add plural -t",
           "acceptedAnswers": [
             "pallot"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: pallo → pallot.",
+          "explanation": "pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot.",
           "tags": [
             "t-plural",
             "regular"
@@ -6626,11 +6626,11 @@
           "id": "ff-a1-t09-e10",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "friends — use the supplied base ystävä",
+          "prompt": "friends — use the supplied base ystävä (“friend”)",
           "acceptedAnswers": [
             "ystävät"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: ystävä → ystävät.",
+          "explanation": "ystävä means “friend”; ystävät means “friends”. The nominative T-plural is formed here by adding -t: ystävä → ystävät.",
           "tags": [
             "t-plural",
             "regular"
@@ -6649,11 +6649,11 @@
           "id": "ff-a1-t09-e11",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “kirja”.",
+          "prompt": "Choose the form meaning “books” from kirja (“book”).",
           "acceptedAnswers": [
             "kirjat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kirja → kirjat.",
+          "explanation": "kirja means “book”; kirjat means “books”. The nominative T-plural is formed here by adding -t: kirja → kirjat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6670,9 +6670,9 @@
             "kirja"
           ],
           "optionFeedback": {
-            "kirjat": "Correct. The nominative T-plural is formed here by adding -t: kirja → kirjat.",
-            "kirjaet": "“kirjaet” does not show the required pattern. The nominative T-plural is formed here by adding -t: kirja → kirjat.",
-            "kirja": "“kirja” does not show the required pattern. The nominative T-plural is formed here by adding -t: kirja → kirjat."
+            "kirjat": "Correct. kirja means “book”; kirjat means “books”. The nominative T-plural is formed here by adding -t: kirja → kirjat.",
+            "kirjaet": "“kirjaet” does not show the required pattern. kirja means “book”; kirjat means “books”. The nominative T-plural is formed here by adding -t: kirja → kirjat.",
+            "kirja": "“kirja” does not show the required pattern. kirja means “book”; kirjat means “books”. The nominative T-plural is formed here by adding -t: kirja → kirjat."
           },
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
@@ -6682,11 +6682,11 @@
           "id": "ff-a1-t09-e12",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "koira (“dogs”) → ____ · add plural -t",
+          "prompt": "koira (“dog”) → ____ (“dogs”) · add plural -t",
           "acceptedAnswers": [
             "koirat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: koira → koirat.",
+          "explanation": "koira means “dog”; koirat means “dogs”. The nominative T-plural is formed here by adding -t: koira → koirat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6705,11 +6705,11 @@
           "id": "ff-a1-t09-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kynä (“pens”) → ____ (plural)",
+          "prompt": "kynä (“pen”) → ____ (“pens”) · add plural -t",
           "acceptedAnswers": [
             "kynät"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kynä → kynät.",
+          "explanation": "kynä means “pen”; kynät means “pens”. The nominative T-plural is formed here by adding -t: kynä → kynät.",
           "tags": [
             "t-plural",
             "regular"
@@ -6728,11 +6728,11 @@
           "id": "ff-a1-t09-e14",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "apples — use the supplied base omena",
+          "prompt": "apples — use the supplied base omena (“apple”)",
           "acceptedAnswers": [
             "omenat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: omena → omenat.",
+          "explanation": "omena means “apple”; omenat means “apples”. The nominative T-plural is formed here by adding -t: omena → omenat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6751,11 +6751,11 @@
           "id": "ff-a1-t09-e15",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “sana”.",
+          "prompt": "Choose the form meaning “words” from sana (“word”).",
           "acceptedAnswers": [
             "sanat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: sana → sanat.",
+          "explanation": "sana means “word”; sanat means “words”. The nominative T-plural is formed here by adding -t: sana → sanat.",
           "tags": [
             "t-plural",
             "regular"
@@ -6772,9 +6772,9 @@
             "sana"
           ],
           "optionFeedback": {
-            "sanat": "Correct. The nominative T-plural is formed here by adding -t: sana → sanat.",
-            "sanaet": "“sanaet” does not show the required pattern. The nominative T-plural is formed here by adding -t: sana → sanat.",
-            "sana": "“sana” does not show the required pattern. The nominative T-plural is formed here by adding -t: sana → sanat."
+            "sanat": "Correct. sana means “word”; sanat means “words”. The nominative T-plural is formed here by adding -t: sana → sanat.",
+            "sanaet": "“sanaet” does not show the required pattern. sana means “word”; sanat means “words”. The nominative T-plural is formed here by adding -t: sana → sanat.",
+            "sana": "“sana” does not show the required pattern. sana means “word”; sanat means “words”. The nominative T-plural is formed here by adding -t: sana → sanat."
           },
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
@@ -6802,11 +6802,11 @@
           "id": "ff-a1-t10-e01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pankki (“banks”) → ____ (plural)",
+          "prompt": "pankki (“bank”) → ____ (“banks”) · add plural -t",
           "acceptedAnswers": [
             "pankit"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is kk → k: pankki → pankit.",
+          "explanation": "pankki means “bank”; pankit means “banks”. Add plural -t to the weak stem. The KPT change is kk → k: pankki → pankit.",
           "tags": [
             "t-plural",
             "kpt"
@@ -6827,11 +6827,11 @@
           "id": "ff-a1-t10-e02",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "shops — use the supplied base kauppa",
+          "prompt": "shops — use the supplied base kauppa (“shop”)",
           "acceptedAnswers": [
             "kaupat"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is pp → p: kauppa → kaupat.",
+          "explanation": "kauppa means “shop”; kaupat means “shops”. Add plural -t to the weak stem. The KPT change is pp → p: kauppa → kaupat.",
           "tags": [
             "t-plural",
             "kpt"
@@ -6852,11 +6852,11 @@
           "id": "ff-a1-t10-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “matto”.",
+          "prompt": "Choose the form meaning “rugs” from matto (“rug”).",
           "acceptedAnswers": [
             "matot"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is tt → t: matto → matot.",
+          "explanation": "matto means “rug”; matot means “rugs”. Add plural -t to the weak stem. The KPT change is tt → t: matto → matot.",
           "tags": [
             "t-plural",
             "kpt"
@@ -6875,9 +6875,9 @@
             "matto"
           ],
           "optionFeedback": {
-            "matot": "Correct. Add plural -t to the weak stem. The KPT change is tt → t: matto → matot.",
-            "mattot": "“mattot” does not show the required pattern. Add plural -t to the weak stem. The KPT change is tt → t: matto → matot.",
-            "matto": "“matto” does not show the required pattern. Add plural -t to the weak stem. The KPT change is tt → t: matto → matot."
+            "matot": "Correct. matto means “rug”; matot means “rugs”. Add plural -t to the weak stem. The KPT change is tt → t: matto → matot.",
+            "mattot": "“mattot” does not show the required pattern. matto means “rug”; matot means “rugs”. Add plural -t to the weak stem. The KPT change is tt → t: matto → matot.",
+            "matto": "“matto” does not show the required pattern. matto means “rug”; matot means “rugs”. Add plural -t to the weak stem. The KPT change is tt → t: matto → matot."
           },
           "targetSkill": "T-plural with KPT",
           "misconceptionCategory": "T-plural with KPT: form not yet correct",
@@ -6891,7 +6891,7 @@
           "acceptedAnswers": [
             "flowers"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is kk → k: kukka → kukat.",
+          "explanation": "kukka means “flower”; kukat means “flowers”. Add plural -t to the weak stem. The KPT change is kk → k: kukka → kukat.",
           "tags": [
             "t-plural",
             "kpt"
@@ -6912,11 +6912,11 @@
           "id": "ff-a1-t10-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "hattu (“hats”) → ____ (plural)",
+          "prompt": "hattu (“hat”) → ____ (“hats”) · add plural -t",
           "acceptedAnswers": [
             "hatut"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is tt → t: hattu → hatut.",
+          "explanation": "hattu means “hat”; hatut means “hats”. Add plural -t to the weak stem. The KPT change is tt → t: hattu → hatut.",
           "tags": [
             "t-plural",
             "kpt"
@@ -6937,11 +6937,11 @@
           "id": "ff-a1-t10-e06",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "tickets — use the supplied base lippu",
+          "prompt": "tickets — use the supplied base lippu (“ticket”)",
           "acceptedAnswers": [
             "liput"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is pp → p: lippu → liput.",
+          "explanation": "lippu means “ticket”; liput means “tickets”. Add plural -t to the weak stem. The KPT change is pp → p: lippu → liput.",
           "tags": [
             "t-plural",
             "kpt"
@@ -6962,11 +6962,11 @@
           "id": "ff-a1-t10-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “takki”.",
+          "prompt": "Choose the form meaning “coats” from takki (“coat”).",
           "acceptedAnswers": [
             "takit"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is kk → k: takki → takit.",
+          "explanation": "takki means “coat”; takit means “coats”. Add plural -t to the weak stem. The KPT change is kk → k: takki → takit.",
           "tags": [
             "t-plural",
             "kpt"
@@ -6985,9 +6985,9 @@
             "takki"
           ],
           "optionFeedback": {
-            "takit": "Correct. Add plural -t to the weak stem. The KPT change is kk → k: takki → takit.",
-            "takkit": "“takkit” does not show the required pattern. Add plural -t to the weak stem. The KPT change is kk → k: takki → takit.",
-            "takki": "“takki” does not show the required pattern. Add plural -t to the weak stem. The KPT change is kk → k: takki → takit."
+            "takit": "Correct. takki means “coat”; takit means “coats”. Add plural -t to the weak stem. The KPT change is kk → k: takki → takit.",
+            "takkit": "“takkit” does not show the required pattern. takki means “coat”; takit means “coats”. Add plural -t to the weak stem. The KPT change is kk → k: takki → takit.",
+            "takki": "“takki” does not show the required pattern. takki means “coat”; takit means “coats”. Add plural -t to the weak stem. The KPT change is kk → k: takki → takit."
           },
           "targetSkill": "T-plural with KPT",
           "misconceptionCategory": "T-plural with KPT: form not yet correct",
@@ -7001,7 +7001,7 @@
           "acceptedAnswers": [
             "roofs"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is tt → t: katto → katot.",
+          "explanation": "katto means “roof”; katot means “roofs”. Add plural -t to the weak stem. The KPT change is tt → t: katto → katot.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7022,11 +7022,11 @@
           "id": "ff-a1-t10-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "tyttö (“girls”) → ____ (plural)",
+          "prompt": "tyttö (“girl”) → ____ (“girls”) · add plural -t",
           "acceptedAnswers": [
             "tytöt"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is tt → t: tyttö → tytöt.",
+          "explanation": "tyttö means “girl”; tytöt means “girls”. Add plural -t to the weak stem. The KPT change is tt → t: tyttö → tytöt.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7047,11 +7047,11 @@
           "id": "ff-a1-t10-e10",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "soups — use the supplied base keitto",
+          "prompt": "soups — use the supplied base keitto (“soup”)",
           "acceptedAnswers": [
             "keitot"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is tt → t: keitto → keitot.",
+          "explanation": "keitto means “soup”; keitot means “soups”. Add plural -t to the weak stem. The KPT change is tt → t: keitto → keitot.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7072,11 +7072,11 @@
           "id": "ff-a1-t10-e11",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “kenkä”.",
+          "prompt": "Choose the form meaning “shoes” from kenkä (“shoe”).",
           "acceptedAnswers": [
             "kengät"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät.",
+          "explanation": "kenkä means “shoe”; kengät means “shoes”. Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7095,9 +7095,9 @@
             "kenkä"
           ],
           "optionFeedback": {
-            "kengät": "Correct. Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät.",
-            "kenkät": "“kenkät” does not show the required pattern. Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät.",
-            "kenkä": "“kenkä” does not show the required pattern. Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät."
+            "kengät": "Correct. kenkä means “shoe”; kengät means “shoes”. Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät.",
+            "kenkät": "“kenkät” does not show the required pattern. kenkä means “shoe”; kengät means “shoes”. Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät.",
+            "kenkä": "“kenkä” does not show the required pattern. kenkä means “shoe”; kengät means “shoes”. Add plural -t to the weak stem. The KPT change is nk → ng: kenkä → kengät."
           },
           "targetSkill": "T-plural with KPT",
           "misconceptionCategory": "T-plural with KPT: form not yet correct",
@@ -7111,7 +7111,7 @@
           "acceptedAnswers": [
             "cities"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is nk → ng: kaupunki → kaupungit.",
+          "explanation": "kaupunki means “city”; kaupungit means “cities”. Add plural -t to the weak stem. The KPT change is nk → ng: kaupunki → kaupungit.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7132,11 +7132,11 @@
           "id": "ff-a1-t10-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pöytä (“tables”) → ____ (plural)",
+          "prompt": "pöytä (“table”) → ____ (“tables”) · add plural -t",
           "acceptedAnswers": [
             "pöydät"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is t → d: pöytä → pöydät.",
+          "explanation": "pöytä means “table”; pöydät means “tables”. Add plural -t to the weak stem. The KPT change is t → d: pöytä → pöydät.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7157,11 +7157,11 @@
           "id": "ff-a1-t10-e14",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "breads / loaves — use the supplied base leipä",
+          "prompt": "breads / loaves — use the supplied base leipä (“bread”)",
           "acceptedAnswers": [
             "leivät"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is p → v: leipä → leivät.",
+          "explanation": "leipä means “bread”; leivät means “breads / loaves”. Add plural -t to the weak stem. The KPT change is p → v: leipä → leivät.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7182,11 +7182,11 @@
           "id": "ff-a1-t10-e15",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “silta”.",
+          "prompt": "Choose the form meaning “bridges” from silta (“bridge”).",
           "acceptedAnswers": [
             "sillat"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat.",
+          "explanation": "silta means “bridge”; sillat means “bridges”. Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat.",
           "tags": [
             "t-plural",
             "kpt"
@@ -7205,9 +7205,9 @@
             "silta"
           ],
           "optionFeedback": {
-            "sillat": "Correct. Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat.",
-            "siltat": "“siltat” does not show the required pattern. Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat.",
-            "silta": "“silta” does not show the required pattern. Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat."
+            "sillat": "Correct. silta means “bridge”; sillat means “bridges”. Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat.",
+            "siltat": "“siltat” does not show the required pattern. silta means “bridge”; sillat means “bridges”. Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat.",
+            "silta": "“silta” does not show the required pattern. silta means “bridge”; sillat means “bridges”. Add plural -t to the weak stem. The KPT change is lt → ll: silta → sillat."
           },
           "targetSkill": "T-plural with KPT",
           "misconceptionCategory": "T-plural with KPT: form not yet correct",
@@ -7234,11 +7234,11 @@
           "id": "ff-a1-t11-e01",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "puhu- + -vat → ____ (they speak)",
+          "prompt": "puhua (“to speak”): puhu- + -vat → ____ (“they speak”)",
           "acceptedAnswers": [
             "puhuvat"
           ],
-          "explanation": "The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
+          "explanation": "puhua means “to speak”; puhuvat means “they speak”. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7280,11 +7280,11 @@
           "id": "ff-a1-t11-e02",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Which ending completes asu- (“live”)?",
+          "prompt": "Which ending completes supplied asu- from asua (“to live”) to mean “they live”?",
           "acceptedAnswers": [
             "-vat"
           ],
-          "explanation": "The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat.",
+          "explanation": "asua means “to live”; asuvat means “they live”. The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7303,8 +7303,8 @@
             "-vät"
           ],
           "optionFeedback": {
-            "-vat": "Correct. The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat.",
-            "-vät": "“-vät” does not show the required pattern. The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat."
+            "-vat": "Correct. asua means “to live”; asuvat means “they live”. The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat.",
+            "-vät": "“-vät” does not show the required pattern. asua means “to live”; asuvat means “they live”. The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat."
           },
           "sentenceExplanation": {
             "translation": "They live.",
@@ -7334,11 +7334,11 @@
           "id": "ff-a1-t11-e03",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the he-form built from the supplied stem laula-.",
+          "prompt": "Choose the he-form meaning “they sing” built from laulaa (“to sing”) and supplied stem laula-.",
           "acceptedAnswers": [
             "laulavat"
           ],
-          "explanation": "The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
+          "explanation": "laulaa means “to sing”; laulavat means “they sing”. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7358,9 +7358,9 @@
             "laulaa"
           ],
           "optionFeedback": {
-            "laulavat": "Correct. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
-            "laulavät": "“laulavät” does not show the required pattern. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
-            "laulaa": "“laulaa” does not show the required pattern. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat."
+            "laulavat": "Correct. laulaa means “to sing”; laulavat means “they sing”. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
+            "laulavät": "“laulavät” does not show the required pattern. laulaa means “to sing”; laulavat means “they sing”. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
+            "laulaa": "“laulaa” does not show the required pattern. laulaa means “to sing”; laulavat means “they sing”. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat."
           },
           "sentenceExplanation": {
             "translation": "They sing.",
@@ -7390,12 +7390,12 @@
           "id": "ff-a1-t11-e04",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "they buy — use the supplied stem osta-",
+          "prompt": "they buy — use the supplied stem osta- from ostaa (“to buy”)",
           "acceptedAnswers": [
             "he ostavat",
             "ostavat"
           ],
-          "explanation": "The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat.",
+          "explanation": "ostaa means “to buy”; ostavat means “they buy”. The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7437,11 +7437,11 @@
           "id": "ff-a1-t11-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kysy- + -vät → ____ (they ask)",
+          "prompt": "kysyä (“to ask”): kysy- + -vät → ____ (“they ask”)",
           "acceptedAnswers": [
             "kysyvät"
           ],
-          "explanation": "The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
+          "explanation": "kysyä means “to ask”; kysyvät means “they ask”. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7483,11 +7483,11 @@
           "id": "ff-a1-t11-e06",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Which ending completes lähte- (“leave”)?",
+          "prompt": "Which ending completes supplied lähte- from lähteä (“to leave”) to mean “they leave”?",
           "acceptedAnswers": [
             "-vät"
           ],
-          "explanation": "The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
+          "explanation": "lähteä means “to leave”; lähtevät means “they leave”. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7506,8 +7506,8 @@
             "-vät"
           ],
           "optionFeedback": {
-            "-vat": "“-vat” does not show the required pattern. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
-            "-vät": "Correct. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät."
+            "-vat": "“-vat” does not show the required pattern. lähteä means “to leave”; lähtevät means “they leave”. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
+            "-vät": "Correct. lähteä means “to leave”; lähtevät means “they leave”. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät."
           },
           "sentenceExplanation": {
             "translation": "They leave.",
@@ -7537,11 +7537,11 @@
           "id": "ff-a1-t11-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the he-form built from the supplied stem istu-.",
+          "prompt": "Choose the he-form meaning “they sit” built from istua (“to sit”) and supplied stem istu-.",
           "acceptedAnswers": [
             "istuvat"
           ],
-          "explanation": "The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
+          "explanation": "istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7561,9 +7561,9 @@
             "istua"
           ],
           "optionFeedback": {
-            "istuvat": "Correct. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
-            "istuvät": "“istuvät” does not show the required pattern. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
-            "istua": "“istua” does not show the required pattern. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat."
+            "istuvat": "Correct. istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
+            "istuvät": "“istuvät” does not show the required pattern. istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
+            "istua": "“istua” does not show the required pattern. istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat."
           },
           "sentenceExplanation": {
             "translation": "They sit.",
@@ -7593,12 +7593,12 @@
           "id": "ff-a1-t11-e08",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "they say — use the supplied stem sano-",
+          "prompt": "they say — use the supplied stem sano- from sanoa (“to say”)",
           "acceptedAnswers": [
             "he sanovat",
             "sanovat"
           ],
-          "explanation": "The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
+          "explanation": "sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7640,11 +7640,11 @@
           "id": "ff-a1-t11-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "katso- + -vat → ____ (they look / watch)",
+          "prompt": "katsoa (“to look or watch”): katso- + -vat → ____ (“they look / watch”)",
           "acceptedAnswers": [
             "katsovat"
           ],
-          "explanation": "The stem katso- is supplied. For he (“they”), vowel harmony selects -vat: katsovat.",
+          "explanation": "katsoa means “to look or watch”; katsovat means “they look / watch”. The stem katso- is supplied. For he (“they”), vowel harmony selects -vat: katsovat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7686,11 +7686,11 @@
           "id": "ff-a1-t11-e10",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Which ending completes seiso- (“stand”)?",
+          "prompt": "Which ending completes supplied seiso- from seisoa (“to stand”) to mean “they stand”?",
           "acceptedAnswers": [
             "-vat"
           ],
-          "explanation": "The stem seiso- is supplied. For he (“they”), vowel harmony selects -vat: seisovat.",
+          "explanation": "seisoa means “to stand”; seisovat means “they stand”. The stem seiso- is supplied. For he (“they”), vowel harmony selects -vat: seisovat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7709,8 +7709,8 @@
             "-vät"
           ],
           "optionFeedback": {
-            "-vat": "Correct. The stem seiso- is supplied. For he (“they”), vowel harmony selects -vat: seisovat.",
-            "-vät": "“-vät” does not show the required pattern. The stem seiso- is supplied. For he (“they”), vowel harmony selects -vat: seisovat."
+            "-vat": "Correct. seisoa means “to stand”; seisovat means “they stand”. The stem seiso- is supplied. For he (“they”), vowel harmony selects -vat: seisovat.",
+            "-vät": "“-vät” does not show the required pattern. seisoa means “to stand”; seisovat means “they stand”. The stem seiso- is supplied. For he (“they”), vowel harmony selects -vat: seisovat."
           },
           "sentenceExplanation": {
             "translation": "They stand.",
@@ -7740,11 +7740,11 @@
           "id": "ff-a1-t11-e11",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the he-form built from the supplied stem puhu-.",
+          "prompt": "Choose the he-form meaning “they speak” built from puhua (“to speak”) and supplied stem puhu-.",
           "acceptedAnswers": [
             "puhuvat"
           ],
-          "explanation": "The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
+          "explanation": "puhua means “to speak”; puhuvat means “they speak”. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7764,9 +7764,9 @@
             "puhua"
           ],
           "optionFeedback": {
-            "puhuvat": "Correct. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
-            "puhuvät": "“puhuvät” does not show the required pattern. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
-            "puhua": "“puhua” does not show the required pattern. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat."
+            "puhuvat": "Correct. puhua means “to speak”; puhuvat means “they speak”. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
+            "puhuvät": "“puhuvät” does not show the required pattern. puhua means “to speak”; puhuvat means “they speak”. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat.",
+            "puhua": "“puhua” does not show the required pattern. puhua means “to speak”; puhuvat means “they speak”. The stem puhu- is supplied. For he (“they”), vowel harmony selects -vat: puhuvat."
           },
           "sentenceExplanation": {
             "translation": "They speak.",
@@ -7796,12 +7796,12 @@
           "id": "ff-a1-t11-e12",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "they live — use the supplied stem asu-",
+          "prompt": "they live — use the supplied stem asu- from asua (“to live”)",
           "acceptedAnswers": [
             "he asuvat",
             "asuvat"
           ],
-          "explanation": "The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat.",
+          "explanation": "asua means “to live”; asuvat means “they live”. The stem asu- is supplied. For he (“they”), vowel harmony selects -vat: asuvat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7843,11 +7843,11 @@
           "id": "ff-a1-t11-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "laula- + -vat → ____ (they sing)",
+          "prompt": "laulaa (“to sing”): laula- + -vat → ____ (“they sing”)",
           "acceptedAnswers": [
             "laulavat"
           ],
-          "explanation": "The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
+          "explanation": "laulaa means “to sing”; laulavat means “they sing”. The stem laula- is supplied. For he (“they”), vowel harmony selects -vat: laulavat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7889,11 +7889,11 @@
           "id": "ff-a1-t11-e14",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Which ending completes osta- (“buy”)?",
+          "prompt": "Which ending completes supplied osta- from ostaa (“to buy”) to mean “they buy”?",
           "acceptedAnswers": [
             "-vat"
           ],
-          "explanation": "The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat.",
+          "explanation": "ostaa means “to buy”; ostavat means “they buy”. The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7912,8 +7912,8 @@
             "-vät"
           ],
           "optionFeedback": {
-            "-vat": "Correct. The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat.",
-            "-vät": "“-vät” does not show the required pattern. The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat."
+            "-vat": "Correct. ostaa means “to buy”; ostavat means “they buy”. The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat.",
+            "-vät": "“-vät” does not show the required pattern. ostaa means “to buy”; ostavat means “they buy”. The stem osta- is supplied. For he (“they”), vowel harmony selects -vat: ostavat."
           },
           "sentenceExplanation": {
             "translation": "They buy.",
@@ -7943,11 +7943,11 @@
           "id": "ff-a1-t11-e15",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the he-form built from the supplied stem kysy-.",
+          "prompt": "Choose the he-form meaning “they ask” built from kysyä (“to ask”) and supplied stem kysy-.",
           "acceptedAnswers": [
             "kysyvät"
           ],
-          "explanation": "The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
+          "explanation": "kysyä means “to ask”; kysyvät means “they ask”. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -7967,9 +7967,9 @@
             "kysyä"
           ],
           "optionFeedback": {
-            "kysyvät": "Correct. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
-            "kysyvat": "“kysyvat” does not show the required pattern. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
-            "kysyä": "“kysyä” does not show the required pattern. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät."
+            "kysyvät": "Correct. kysyä means “to ask”; kysyvät means “they ask”. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
+            "kysyvat": "“kysyvat” does not show the required pattern. kysyä means “to ask”; kysyvät means “they ask”. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät.",
+            "kysyä": "“kysyä” does not show the required pattern. kysyä means “to ask”; kysyvät means “they ask”. The stem kysy- is supplied. For he (“they”), vowel harmony selects -vät: kysyvät."
           },
           "sentenceExplanation": {
             "translation": "They ask.",
@@ -8968,11 +8968,11 @@
           "id": "ff-a1-t13-e03",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "puisto (“in the park”) → ____ · use -ssa or -ssä",
+          "prompt": "puisto (“park”) → ____ (“in the park”) · use -ssa or -ssä",
           "acceptedAnswers": [
             "puistossa"
           ],
-          "explanation": "The back vowels u/o select -ssa.",
+          "explanation": "puisto means “park”; puistossa means “in the park”. The back vowels u/o select -ssa.",
           "tags": [
             "vowel-harmony",
             "inessive"
@@ -9002,11 +9002,11 @@
           "id": "ff-a1-t13-e04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "hattu (“hat”) → ____ · apply tt → t",
+          "prompt": "hattu (“hat”) → ____ (“of the hat”) · use the supplied genitive ending -n; apply tt → t",
           "acceptedAnswers": [
             "hatun"
           ],
-          "explanation": "Compare the supplied forms hattu and hatun. The consonant change is tt → t.",
+          "explanation": "hattu means “hat”; hatun means “of the hat”. The genitive ending -n is supplied, so they are not new decisions here. Apply only tt → t: hattu → hatun.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9045,11 +9045,11 @@
           "id": "ff-a1-t13-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "lippu (“ticket”) → ____ · apply pp → p",
+          "prompt": "lippu (“ticket”) → ____ (“of the ticket”) · use the supplied genitive ending -n; apply pp → p",
           "acceptedAnswers": [
             "lipun"
           ],
-          "explanation": "Compare the supplied forms lippu and lipun. The consonant change is pp → p.",
+          "explanation": "lippu means “ticket”; lipun means “of the ticket”. The genitive ending -n is supplied, so they are not new decisions here. Apply only pp → p: lippu → lipun.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9088,11 +9088,11 @@
           "id": "ff-a1-t13-e06",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pöytä (“table”) → ____ · apply t → d",
+          "prompt": "pöytä (“table”) → ____ (“of the table”) · use the supplied genitive ending -n; apply t → d",
           "acceptedAnswers": [
             "pöydän"
           ],
-          "explanation": "Compare the supplied forms pöytä and pöydän. The consonant change is t → d.",
+          "explanation": "pöytä means “table”; pöydän means “of the table”. The genitive ending -n is supplied, so they are not new decisions here. Apply only t → d: pöytä → pöydän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9131,11 +9131,11 @@
           "id": "ff-a1-t13-e07",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "hakea (“to fetch → I fetch”) → ____ · apply k → ∅",
+          "prompt": "hakea (“to fetch”), supplied stem hake- + minä -n → ____ (“I fetch”) · use the supplied minä ending -n; apply k → ∅",
           "acceptedAnswers": [
             "haen"
           ],
-          "explanation": "Compare the supplied forms hakea and haen. The consonant change is k → ∅.",
+          "explanation": "hakea means “to fetch”; haen means “I fetch”. The stem hake- and minä ending -n are supplied, so they are not new decisions here. Apply only k → ∅: hakea → haen.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9174,11 +9174,11 @@
           "id": "ff-a1-t13-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kampa (“comb”) → ____ · apply mp → mm",
+          "prompt": "kampa (“comb”) → ____ (“of the comb”) · use the supplied genitive ending -n; apply mp → mm",
           "acceptedAnswers": [
             "kamman"
           ],
-          "explanation": "Compare the supplied forms kampa and kamman. The consonant change is mp → mm.",
+          "explanation": "kampa means “comb”; kamman means “of the comb”. The genitive ending -n is supplied, so they are not new decisions here. Apply only mp → mm: kampa → kamman.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9217,11 +9217,11 @@
           "id": "ff-a1-t13-e09",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pelto (“field”) → ____ · apply lt → ll",
+          "prompt": "pelto (“field”) → ____ (“of the field”) · use the supplied genitive ending -n; apply lt → ll",
           "acceptedAnswers": [
             "pellon"
           ],
-          "explanation": "Compare the supplied forms pelto and pellon. The consonant change is lt → ll.",
+          "explanation": "pelto means “field”; pellon means “of the field”. The genitive ending -n is supplied, so they are not new decisions here. Apply only lt → ll: pelto → pellon.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9260,11 +9260,11 @@
           "id": "ff-a1-t13-e10",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pankki (“bank”) → ____ · apply kk → k",
+          "prompt": "pankki (“bank”) → ____ (“of the bank”) · use the supplied genitive ending -n; apply kk → k",
           "acceptedAnswers": [
             "pankin"
           ],
-          "explanation": "Compare the supplied forms pankki and pankin. The consonant change is kk → k.",
+          "explanation": "pankki means “bank”; pankin means “of the bank”. The genitive ending -n is supplied, so they are not new decisions here. Apply only kk → k: pankki → pankin.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9303,11 +9303,11 @@
           "id": "ff-a1-t13-e11",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "leipä (“bread”) → ____ · apply p → v",
+          "prompt": "leipä (“bread”) → ____ (“of the bread”) · use the supplied genitive ending -n; apply p → v",
           "acceptedAnswers": [
             "leivän"
           ],
-          "explanation": "Compare the supplied forms leipä and leivän. The consonant change is p → v.",
+          "explanation": "leipä means “bread”; leivän means “of the bread”. The genitive ending -n is supplied, so they are not new decisions here. Apply only p → v: leipä → leivän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9346,11 +9346,11 @@
           "id": "ff-a1-t13-e12",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kenkä (“shoe”) → ____ · apply nk → ng",
+          "prompt": "kenkä (“shoe”) → ____ (“of the shoe”) · use the supplied genitive ending -n; apply nk → ng",
           "acceptedAnswers": [
             "kengän"
           ],
-          "explanation": "Compare the supplied forms kenkä and kengän. The consonant change is nk → ng.",
+          "explanation": "kenkä means “shoe”; kengän means “of the shoe”. The genitive ending -n is supplied, so they are not new decisions here. Apply only nk → ng: kenkä → kengän.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9389,11 +9389,11 @@
           "id": "ff-a1-t13-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pelto (“field”) → ____ · apply lt → ll",
+          "prompt": "pelto (“field”) → ____ (“of the field”) · use the supplied genitive ending -n; apply lt → ll",
           "acceptedAnswers": [
             "pellon"
           ],
-          "explanation": "Compare the supplied forms pelto and pellon. The consonant change is lt → ll.",
+          "explanation": "pelto means “field”; pellon means “of the field”. The genitive ending -n is supplied, so they are not new decisions here. Apply only lt → ll: pelto → pellon.",
           "tags": [
             "kpt",
             "controlled-production"
@@ -9436,7 +9436,7 @@
           "acceptedAnswers": [
             "the hat's / of the hat"
           ],
-          "explanation": "The genitive ends in -n. tt weakens to t.",
+          "explanation": "hattu means “hat”; hatun means “the hat's / of the hat”. The genitive ends in -n. tt weakens to t.",
           "tags": [
             "kpt",
             "noun",
@@ -9467,11 +9467,11 @@
           "id": "ff-a1-t13-e15",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "lippu (“the ticket's / of the ticket”) → ____ (genitive)",
+          "prompt": "lippu (“ticket”) → ____ (“the ticket's / of the ticket”) · add genitive -n",
           "acceptedAnswers": [
             "lipun"
           ],
-          "explanation": "The genitive ends in -n. pp weakens to p.",
+          "explanation": "lippu means “ticket”; lipun means “the ticket's / of the ticket”. The genitive ends in -n. pp weakens to p.",
           "tags": [
             "kpt",
             "noun",
@@ -9502,11 +9502,11 @@
           "id": "ff-a1-t13-e16",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "the flower's / of the flower — use the supplied base kukka",
+          "prompt": "the flower's / of the flower — use the supplied base kukka (“flower”)",
           "acceptedAnswers": [
             "kukan"
           ],
-          "explanation": "The genitive ends in -n. kk weakens to k.",
+          "explanation": "kukka means “flower”; kukan means “the flower's / of the flower”. The genitive ends in -n. kk weakens to k.",
           "tags": [
             "kpt",
             "noun",
@@ -9579,7 +9579,7 @@
           "acceptedAnswers": [
             "I fetch"
           ],
-          "explanation": "This is the minä-form of hakea. k disappears.",
+          "explanation": "hakea means “to fetch”; haen means “I fetch”. This is the minä-form of hakea. Add the minä ending -n after forming the stem. k disappears.",
           "tags": [
             "kpt",
             "verb"
@@ -9609,11 +9609,11 @@
           "id": "ff-a1-t14-e02",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "antaa (“I give”) → minä ____",
+          "prompt": "antaa (“to give”) → minä ____ (“I give”) · add minä -n",
           "acceptedAnswers": [
             "annan"
           ],
-          "explanation": "This is the minä-form of antaa. nt weakens to nn.",
+          "explanation": "antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
           "tags": [
             "kpt",
             "verb"
@@ -9643,11 +9643,11 @@
           "id": "ff-a1-t14-e03",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "I fly — use the supplied dictionary form lentää",
+          "prompt": "I fly — use the supplied dictionary form lentää (“to fly”)",
           "acceptedAnswers": [
             "lennän"
           ],
-          "explanation": "This is the minä-form of lentää. nt weakens to nn.",
+          "explanation": "lentää means “to fly”; lennän means “I fly”. This is the minä-form of lentää. Add the minä ending -n after forming the stem. nt weakens to nn.",
           "tags": [
             "kpt",
             "verb"
@@ -9677,11 +9677,11 @@
           "id": "ff-a1-t14-e04",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "kuva (“pictures”) → ____ · add plural -t",
+          "prompt": "kuva (“picture”) → ____ (“pictures”) · add plural -t",
           "acceptedAnswers": [
             "kuvat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kuva → kuvat.",
+          "explanation": "kuva means “picture”; kuvat means “pictures”. The nominative T-plural is formed here by adding -t: kuva → kuvat.",
           "tags": [
             "t-plural",
             "regular"
@@ -9711,11 +9711,11 @@
           "id": "ff-a1-t14-e05",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "tuoli (“chairs”) → ____ (plural)",
+          "prompt": "tuoli (“chair”) → ____ (“chairs”) · add plural -t",
           "acceptedAnswers": [
             "tuolit"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
+          "explanation": "tuoli means “chair”; tuolit means “chairs”. The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
           "tags": [
             "t-plural",
             "regular"
@@ -9745,11 +9745,11 @@
           "id": "ff-a1-t14-e06",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "cats — use the supplied base kissa",
+          "prompt": "cats — use the supplied base kissa (“cat”)",
           "acceptedAnswers": [
             "kissat"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: kissa → kissat.",
+          "explanation": "kissa means “cat”; kissat means “cats”. The nominative T-plural is formed here by adding -t: kissa → kissat.",
           "tags": [
             "t-plural",
             "regular"
@@ -9779,11 +9779,11 @@
           "id": "ff-a1-t14-e07",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Choose the plural of “pallo”.",
+          "prompt": "Choose the form meaning “balls” from pallo (“ball”).",
           "acceptedAnswers": [
             "pallot"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: pallo → pallot.",
+          "explanation": "pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot.",
           "tags": [
             "t-plural",
             "regular"
@@ -9811,9 +9811,9 @@
             "pallo"
           ],
           "optionFeedback": {
-            "pallot": "Correct. The nominative T-plural is formed here by adding -t: pallo → pallot.",
-            "palloet": "“palloet” does not show the required pattern. The nominative T-plural is formed here by adding -t: pallo → pallot.",
-            "pallo": "“pallo” does not show the required pattern. The nominative T-plural is formed here by adding -t: pallo → pallot."
+            "pallot": "Correct. pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot.",
+            "palloet": "“palloet” does not show the required pattern. pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot.",
+            "pallo": "“pallo” does not show the required pattern. pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot."
           },
           "targetSkill": "Regular T-plural",
           "misconceptionCategory": "Regular T-plural: form not yet correct",
@@ -9823,11 +9823,11 @@
           "id": "ff-a1-t14-e08",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "ystävä (“friends”) → ____ · add plural -t",
+          "prompt": "ystävä (“friend”) → ____ (“friends”) · add plural -t",
           "acceptedAnswers": [
             "ystävät"
           ],
-          "explanation": "The nominative T-plural is formed here by adding -t: ystävä → ystävät.",
+          "explanation": "ystävä means “friend”; ystävät means “friends”. The nominative T-plural is formed here by adding -t: ystävä → ystävät.",
           "tags": [
             "t-plural",
             "regular"
@@ -9861,7 +9861,7 @@
           "acceptedAnswers": [
             "beaches"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is nt → nn: ranta → rannat.",
+          "explanation": "ranta means “beach”; rannat means “beaches”. Add plural -t to the weak stem. The KPT change is nt → nn: ranta → rannat.",
           "tags": [
             "t-plural",
             "kpt"
@@ -9891,11 +9891,11 @@
           "id": "ff-a1-t14-e10",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "pelto (“fields”) → ____ (plural)",
+          "prompt": "pelto (“field”) → ____ (“fields”) · add plural -t",
           "acceptedAnswers": [
             "pellot"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is lt → ll: pelto → pellot.",
+          "explanation": "pelto means “field”; pellot means “fields”. Add plural -t to the weak stem. The KPT change is lt → ll: pelto → pellot.",
           "tags": [
             "t-plural",
             "kpt"
@@ -9925,11 +9925,11 @@
           "id": "ff-a1-t14-e11",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "combs — use the supplied base kampa",
+          "prompt": "combs — use the supplied base kampa (“comb”)",
           "acceptedAnswers": [
             "kammat"
           ],
-          "explanation": "Add plural -t to the weak stem. The KPT change is mp → mm: kampa → kammat.",
+          "explanation": "kampa means “comb”; kammat means “combs”. Add plural -t to the weak stem. The KPT change is mp → mm: kampa → kammat.",
           "tags": [
             "t-plural",
             "kpt"
@@ -9959,12 +9959,12 @@
           "id": "ff-a1-t14-e12",
           "type": "translation-fi",
           "instruction": "Translate into Finnish.",
-          "prompt": "they leave — use the supplied stem lähte-",
+          "prompt": "they leave — use the supplied stem lähte- from lähteä (“to leave”)",
           "acceptedAnswers": [
             "he lähtevät",
             "lähtevät"
           ],
-          "explanation": "The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
+          "explanation": "lähteä means “to leave”; lähtevät means “they leave”. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -10016,11 +10016,11 @@
           "id": "ff-a1-t14-e13",
           "type": "fill-blank",
           "instruction": "Complete the Finnish form.",
-          "prompt": "istu- + -vat → ____ (they sit)",
+          "prompt": "istua (“to sit”): istu- + -vat → ____ (“they sit”)",
           "acceptedAnswers": [
             "istuvat"
           ],
-          "explanation": "The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
+          "explanation": "istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -10072,11 +10072,11 @@
           "id": "ff-a1-t14-e14",
           "type": "multiple-choice",
           "instruction": "Choose the best answer.",
-          "prompt": "Which ending completes sano- (“say”)?",
+          "prompt": "Which ending completes supplied sano- from sanoa (“to say”) to mean “they say”?",
           "acceptedAnswers": [
             "-vat"
           ],
-          "explanation": "The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
+          "explanation": "sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
           "tags": [
             "vowel-harmony",
             "verb",
@@ -10105,8 +10105,8 @@
             "-vät"
           ],
           "optionFeedback": {
-            "-vat": "Correct. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
-            "-vät": "“-vät” does not show the required pattern. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat."
+            "-vat": "Correct. sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
+            "-vät": "“-vät” does not show the required pattern. sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat."
           },
           "sentenceExplanation": {
             "translation": "They say.",
