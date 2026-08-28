@@ -1,0 +1,149 @@
+{
+  "id": "kpt-singles",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["KPT common single consonants"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    {
+      "finnish": "jalka",
+      "english": "foot or leg"
+    },
+    {
+      "finnish": "leipä",
+      "english": "bread"
+    },
+    {
+      "finnish": "pöytä",
+      "english": "table"
+    },
+    {
+      "finnish": "hakea",
+      "english": "to fetch"
+    },
+    {
+      "finnish": "lukea",
+      "english": "to read"
+    }
+  ],
+  "practiceVocabulary": ["jalka", "leipä", "pöytä", "hakea"],
+  "title": "KPT step 2: common single consonants",
+  "summary": "Learn three common weak changes without mixing in double consonants or clusters.",
+  "objectives": ["Recognise when k disappears.", "Recognise p → v.", "Recognise t → d."],
+  "sections": [
+    {
+      "title": "Three changes only",
+      "paragraphs": [
+        "A single consonant can change rather than merely shorten. In this block, k disappears, p becomes v, or t becomes d.",
+        "Both complete forms are supplied during recognition."
+      ],
+      "keyPoints": ["k → ∅", "p → v", "t → d"]
+    },
+    {
+      "title": "Compare the same position",
+      "paragraphs": [
+        "Find the consonant in the first form and compare the same part of the second form.",
+        "The symbol ∅ means that no letter remains in that position."
+      ],
+      "keyPoints": ["jalka → jalan", "leipä → leivän", "pöytä → pöydän"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "jalka → jalan",
+      "english": "foot or leg → of the foot or leg",
+      "steps": [
+        "Compare jalka and jalan.",
+        "The k is absent in the weak form: k → ∅.",
+        "The other letters remain visible around that position."
+      ]
+    },
+    {
+      "finnish": "leipä → leivän",
+      "english": "bread → of the bread",
+      "steps": [
+        "Compare leipä and leivän.",
+        "The p becomes v: p → v.",
+        "The final -n belongs to the complete noun form."
+      ]
+    },
+    {
+      "finnish": "pöytä → pöydän",
+      "english": "table → of the table",
+      "steps": [
+        "Compare pöytä and pöydän.",
+        "The t becomes d: t → d.",
+        "Keep the Finnish vowels ö and ä unchanged."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not remove every k in Finnish.",
+    "Do not change p to b; the taught change is p → v.",
+    "Do not replace Finnish d with English-style spelling."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-kpts-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in jalka (“foot or leg”) → jalan (“of the foot or leg”)?",
+      "acceptedAnswers": ["k → ∅"],
+      "explanation": "The single k disappears in the supplied weak form.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["jalka", "leipä", "pöytä", "hakea"],
+      "options": ["k → ∅", "k → j", "kk → k"],
+      "optionFeedback": {
+        "k → ∅": "Correct. The single k disappears in the supplied weak form.",
+        "k → j": "“k → j” does not show the required pattern. The single k disappears in the supplied weak form.",
+        "kk → k": "“kk → k” does not show the required pattern. The single k disappears in the supplied weak form."
+      }
+    },
+    {
+      "id": "ff-a1-l-kpts-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in leipä (“bread”) → leivän (“of the bread”)?",
+      "acceptedAnswers": ["p → v"],
+      "explanation": "The single p becomes v.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["jalka", "leipä", "pöytä", "hakea"],
+      "options": ["p → v", "pp → p", "t → d"],
+      "optionFeedback": {
+        "p → v": "Correct. The single p becomes v.",
+        "pp → p": "“pp → p” does not show the required pattern. The single p becomes v.",
+        "t → d": "“t → d” does not show the required pattern. The single p becomes v."
+      }
+    },
+    {
+      "id": "ff-a1-l-kpts-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in pöytä (“table”) → pöydän (“of the table”)?",
+      "acceptedAnswers": ["t → d"],
+      "explanation": "The single t becomes d.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["jalka", "leipä", "pöytä", "hakea"],
+      "options": ["t → d", "tt → t", "lt → ll"],
+      "optionFeedback": {
+        "t → d": "Correct. The single t becomes d.",
+        "tt → t": "“tt → t” does not show the required pattern. The single t becomes d.",
+        "lt → ll": "“lt → ll” does not show the required pattern. The single t becomes d."
+      }
+    },
+    {
+      "id": "ff-a1-l-kpts-p04",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "hakea (“to fetch”), supplied stem hake- + minä -n → ____ (“I fetch”) · k disappears",
+      "acceptedAnswers": ["haen"],
+      "explanation": "The supplied target means “I fetch”. Use the supplied stem hake- and minä ending -n, let k disappear, and combine the parts: hakea → haen.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["jalka", "leipä", "pöytä", "hakea"]
+    }
+  ]
+}

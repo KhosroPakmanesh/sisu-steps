@@ -1,5 +1,7 @@
 import { ContentCatalog } from '../content.models';
-import { hasText, isRecord } from './validation-primitives';
+import { isRecord } from './validation-primitives';
+
+const SAFE_ID = /^[a-z0-9][a-z0-9-]*$/;
 
 export function validateContentCatalog(value: unknown): ContentCatalog {
   if (
@@ -10,22 +12,12 @@ export function validateContentCatalog(value: unknown): ContentCatalog {
   ) {
     throw new Error('The content catalog is missing or has an unsupported schema.');
   }
-  const seenIds = new Set<string>();
-  const seenFiles = new Set<string>();
-  for (const entry of value['packs']) {
-    if (
-      !isRecord(entry) ||
-      !hasText(entry['id']) ||
-      !/^[a-z0-9][a-z0-9-]*$/.test(entry['id']) ||
-      !hasText(entry['file']) ||
-      !/^[a-z0-9][a-z0-9-]*\.json$/.test(entry['file']) ||
-      seenIds.has(entry['id']) ||
-      seenFiles.has(entry['file'])
-    ) {
-      throw new Error('The content catalog contains an invalid or duplicate pack entry.');
-    }
-    seenIds.add(entry['id']);
-    seenFiles.add(entry['file']);
+  const packIds = value['packs'];
+  if (
+    packIds.some((packId) => typeof packId !== 'string' || !SAFE_ID.test(packId)) ||
+    new Set(packIds).size !== packIds.length
+  ) {
+    throw new Error('The content catalog contains an invalid or duplicate pack ID.');
   }
   return value as unknown as ContentCatalog;
 }

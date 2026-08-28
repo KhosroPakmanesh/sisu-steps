@@ -1,5 +1,37 @@
 # Finnish foundations A1 — pedagogy assessment
 
+## Lesson 5.2.0 strong-and-weak-grade introduction
+
+### Pre-authoring assessment
+
+**Disposition: approved with limitations.**
+
+The learner identified a first-principles gap in the first KPT lesson. It named the strong and weak grades and described the visible `kk → k`, `pp → p`, and `tt → t` changes, but it did not explain why one word can appear with two grades, what the labels mean, or why the course begins with double consonants. Later material then reused the terms as if that conceptual model had already been established.
+
+The approved revision remains within the existing Pre-A1–A1.3 KPT double-consonant target. Before presenting the three patterns, it will explain that:
+
+- one Finnish word can use closely related strong-grade and weak-grade stems;
+- adding an ending can select a different grade while the word retains its basic lexical meaning;
+- “strong” and “weak” name consonant patterns rather than correctness, emphasis, or quality;
+- double consonants are taught first because the two-letter-to-one-letter contrast is easy to see;
+- the double-to-single pattern is one KPT family and must not be generalized as the definition of all consonant gradation.
+
+The first worked example will connect the rationale to `pankki → pankin` while keeping the genitive `-n` visibly separate from the KPT change. No exercise, answer, vocabulary item, skill, test, ID, or progression changes. Only the revised `kpt-doubles` lesson advances to version 5.2.0; the pack remains at 5.1.0 because scored-attempt interpretation is unchanged and existing learner progress should not be cleared.
+
+The continuing limitations are unchanged: the pack teaches controlled written recognition and production rather than the complete historical or phonological account of Finnish consonant gradation, dialect variation, listening, speaking, pronunciation, or communicative competence.
+
+### Final pedagogy assessment
+
+**Disposition: approved with limitations.**
+
+The rendered 5.2.0 lesson now introduces strong and weak grade before using those terms as assumed knowledge. The opening establishes one word with two related stem grades, states that the labels describe consonant patterns rather than correctness or emphasis, and explains the sequencing rationale for starting with the most visible double-consonant family. The following section explicitly limits `kk → k`, `pp → p`, and `tt → t` to the family being taught rather than presenting double-to-single shortening as a universal definition of KPT.
+
+The revised `pankki → pankin` walkthrough preserves one-decision focus: it identifies the shared word meaning, connects the ending to selection of the weak grade in this example, and separates genitive `-n` from the consonant change. The remaining examples, common-mistake guidance, and four optional practice exercises remain aligned with that explanation. No answer model, distractor, diagnostic, parallel pair, vocabulary declaration, Focused/Review boundary, or scored progression changed.
+
+Technical validation regenerated the cataloged pack deterministically, retained 15 tests, 200 scored exercises, 13 lessons, 44 optional practice exercises, and 36 sentence exercises, and confirmed that only `kpt-doubles` advanced to lesson version 5.2.0 while the pack and other lessons remained at 5.1.0. The complete client quality gate passed formatting, linting, architecture, production and test typechecks, catalog validation, production build, and all 91 unit tests in 13 files.
+
+The revision is approved for the stated beginner written-grammar purpose. It deliberately gives a practical first mental model rather than a complete linguistic history or exhaustive prediction system; native-speaker or Finnish-teaching-professional review remains recommended for future expansion.
+
 ## Version 5.1.0 transformation-meaning revision
 
 ### Pre-authoring assessment
@@ -17,6 +49,14 @@ The approved revision retains the topic boundary, thirteen-skill sequence, fifte
 - increase the pack and lesson versions to 5.1.0 so older attempts are not silently interpreted against materially revised prompts and explanations.
 
 The 200-question total remains justified because the revision removes hidden decisions without adding or removing assessed skills. Written grammar practice remains limited by the absence of listening, speaking, pronunciation, free composition, and communicative assessment.
+
+### Final pedagogy assessment
+
+**Disposition: approved with limitations.**
+
+The generated 5.1.0 material labels both sides of form transformations with distinct English meanings and visibly supplies non-target genitive, `minä`, plural, inessive, stem-frame, and agreement information where required. The audit found no changed answer, vocabulary, skill, diagnostic, or parallel relationship and no hidden second decision in KPT-only production. Generic and standalone validators reject transformation prompts without meanings on both sides, while the topic-specific audit checks supplied noun and verb endings in KPT-only production.
+
+The aggregate client quality gate passed content validation, formatting, linting, typechecks, the production build, and all 91 unit tests in 13 files. The pack contains 15 tests, 200 scored exercises, 13 lessons, 44 optional practice exercises, and 36 sentence exercises. The revision is approved for controlled beginner written practice with the continuing limitations that authored translations cannot exhaust every contextual nuance and the pack does not assess listening, speaking, pronunciation, free composition, or communicative ability.
 
 ## Version 5.0.0 pre-authoring reassessment
 
@@ -36,6 +76,7 @@ The existing thirteen-skill sequence, fourteen existing test IDs, 200 scored exe
 
 ## Sources used by the pack
 
+- Kielitoimiston ohjepankki: Consonant gradation in inflection
 - Uusi kielemme: Vowel Harmony
 - Uusi kielemme: The T-Plural
 - Uusi kielemme: Beginner Finnish Topics A1

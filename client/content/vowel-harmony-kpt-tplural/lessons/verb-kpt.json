@@ -1,0 +1,105 @@
+{
+  "id": "verb-kpt",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["Minä verb forms with KPT"],
+  "prerequisiteSkills": ["KPT recognition"],
+  "introducedVocabulary": [
+    {
+      "finnish": "auttaa",
+      "english": "to help"
+    },
+    {
+      "finnish": "pukea",
+      "english": "to get dressed"
+    }
+  ],
+  "practiceVocabulary": ["nukkua", "lentää", "ottaa"],
+  "title": "Known KPT changes in “I” verb forms",
+  "summary": "Apply the same strong-to-weak KPT changes to a small set of familiar minä forms.",
+  "objectives": [
+    "Understand that minä means “I”.",
+    "Recognise the minä ending -n.",
+    "Apply one previously learned strong-to-weak KPT change."
+  ],
+  "sections": [
+    {
+      "title": "From dictionary form to minä form",
+      "paragraphs": [
+        "A verb expresses an action or state. The dictionary form is the form listed in a dictionary, such as nukkua, meaning “to sleep”.",
+        "The minä form says that I perform the action. It ends in -n in these exercises, and the familiar KPT consonant becomes weak before that ending."
+      ],
+      "keyPoints": ["minä = I", "nukkua → nukun = I sleep"]
+    },
+    {
+      "title": "One direction only in this lesson",
+      "paragraphs": [
+        "This lesson uses only strong-to-weak changes already shown in the KPT recognition lesson: a double consonant shortens, k can disappear, or a familiar cluster weakens.",
+        "Other verb types and strong-grade building are deliberately left for a later topic. They are not hidden in this test."
+      ],
+      "keyPoints": ["nukkua → nukun: kk → k", "lentää → lennän: nt → nn"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "nukkua → minä nukun",
+      "english": "I sleep",
+      "steps": [
+        "Use the familiar weak change kk → k.",
+        "The weak part is nuku-.",
+        "Add the minä ending -n: nukun."
+      ]
+    },
+    {
+      "finnish": "lentää → minä lennän",
+      "english": "I fly",
+      "steps": ["Use the personal stem lennä-.", "The cluster nt weakens to nn.", "Add -n: lennän."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not simply attach -n to the complete dictionary form.",
+    "Use only the strong-to-weak pattern shown for the supplied verb.",
+    "A long vowel or doubled consonant is meaningful; copy it accurately."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-verb-p01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Nukkua (“to sleep”) → minä ____ (“I sleep”) · use minä -n; practise kk → k",
+      "acceptedAnswers": ["nukun"],
+      "explanation": "Use kk → k to make nuku-, then add -n: nukun.",
+      "tags": ["lesson-practice", "kpt", "verb"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["nukkua", "lentää", "ottaa"]
+    },
+    {
+      "id": "ff-a1-l-verb-p02",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Practice translation: I fly",
+      "acceptedAnswers": ["lennän"],
+      "explanation": "lentää uses the personal stem lennä- with nt → nn, then the minä ending -n: lennän.",
+      "tags": ["lesson-practice", "kpt", "verb"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["nukkua", "lentää", "ottaa"]
+    },
+    {
+      "id": "ff-a1-l-verb-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the minä-form of “ottaa”.",
+      "acceptedAnswers": ["otan"],
+      "explanation": "The double tt weakens to t in ota-. Add -n: otan.",
+      "tags": ["lesson-practice", "kpt", "verb"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["nukkua", "lentää", "ottaa"],
+      "options": ["otan", "ottan", "ottaan"],
+      "optionFeedback": {
+        "otan": "Correct. The double tt weakens to t in ota-. Add -n: otan.",
+        "ottan": "“ottan” does not show the required pattern. The double tt weakens to t in ota-. Add -n: otan.",
+        "ottaan": "“ottaan” does not show the required pattern. The double tt weakens to t in ota-. Add -n: otan."
+      }
+    }
+  ]
+}

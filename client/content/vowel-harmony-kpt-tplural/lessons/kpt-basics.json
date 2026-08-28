@@ -1,0 +1,168 @@
+{
+  "id": "kpt-basics",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["KPT recognition"],
+  "prerequisiteSkills": [
+    "KPT double consonants",
+    "KPT common single consonants",
+    "KPT special k changes",
+    "KPT consonant clusters"
+  ],
+  "introducedVocabulary": [],
+  "practiceVocabulary": ["pankki", "jalka", "poika", "kenkä"],
+  "title": "KPT step 5: distinguish the families",
+  "summary": "Combine only the four KPT families that were taught in separate blocks.",
+  "objectives": [
+    "Choose which known family a supplied pair uses.",
+    "Keep KPT separate from the ending.",
+    "Prepare to use known weak stems in later noun, verb, and plural lessons."
+  ],
+  "sections": [
+    {
+      "title": "Ask one comparison question",
+      "paragraphs": [
+        "Which consonant letters differ between the supplied first and second forms? Answering that question identifies the KPT family.",
+        "You are not expected to predict an unfamiliar word."
+      ],
+      "keyPoints": [
+        "double → one consonant",
+        "single consonant changes",
+        "special k pair",
+        "cluster changes"
+      ]
+    },
+    {
+      "title": "The next lessons add endings",
+      "paragraphs": [
+        "This mixed block still focuses on seeing the consonant change.",
+        "Later lessons will explicitly separate two construction steps: make the known weak stem, then add an ending."
+      ],
+      "keyPoints": ["pankki → panki- + n", "pelto → pello- + t"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "pankki → pankin",
+      "english": "bank → of the bank",
+      "steps": [
+        "Identify the double-consonant family.",
+        "Apply kk → k.",
+        "Ignore final -n when naming the KPT change."
+      ]
+    },
+    {
+      "finnish": "poika → pojan",
+      "english": "boy → of the boy",
+      "steps": [
+        "Recognise this as a learned special-k pair.",
+        "The change is k → j.",
+        "Do not generalise it to every word with k."
+      ]
+    },
+    {
+      "finnish": "kenkä → kengän",
+      "english": "shoe → of the shoe",
+      "steps": ["Identify the cluster nk.", "The change is nk → ng.", "The final -n is separate."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not choose a rule from the English meaning.",
+    "Do not treat an ending as part of KPT.",
+    "Return to the smaller lesson if one family is still unclear."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-kptm-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in pankki (“bank”) → pankin (“of the bank”)?",
+      "acceptedAnswers": ["kk → k"],
+      "explanation": "This is the double-consonant family.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": [
+        "KPT recognition",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
+      "vocabulary": ["pankki", "jalka", "poika", "kenkä"],
+      "options": ["kk → k", "k → ∅", "nk → ng"],
+      "optionFeedback": {
+        "kk → k": "Correct. This is the double-consonant family.",
+        "k → ∅": "“k → ∅” does not show the required pattern. This is the double-consonant family.",
+        "nk → ng": "“nk → ng” does not show the required pattern. This is the double-consonant family."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptm-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in jalka (“foot or leg”) → jalan (“of the foot or leg”)?",
+      "acceptedAnswers": ["k → ∅"],
+      "explanation": "This is the common single-k disappearance pattern.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": [
+        "KPT recognition",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
+      "vocabulary": ["pankki", "jalka", "poika", "kenkä"],
+      "options": ["k → ∅", "k → j", "kk → k"],
+      "optionFeedback": {
+        "k → ∅": "Correct. This is the common single-k disappearance pattern.",
+        "k → j": "“k → j” does not show the required pattern. This is the common single-k disappearance pattern.",
+        "kk → k": "“kk → k” does not show the required pattern. This is the common single-k disappearance pattern."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptm-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in poika (“boy”) → pojan (“of the boy”)?",
+      "acceptedAnswers": ["k → j"],
+      "explanation": "This is a separately learned special-k pair.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": [
+        "KPT recognition",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
+      "vocabulary": ["pankki", "jalka", "poika", "kenkä"],
+      "options": ["k → j", "k → v", "p → v"],
+      "optionFeedback": {
+        "k → j": "Correct. This is a separately learned special-k pair.",
+        "k → v": "“k → v” does not show the required pattern. This is a separately learned special-k pair.",
+        "p → v": "“p → v” does not show the required pattern. This is a separately learned special-k pair."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptm-p04",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in kenkä (“shoe”) → kengän (“of the shoe”)?",
+      "acceptedAnswers": ["nk → ng"],
+      "explanation": "This is the consonant-cluster family.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": [
+        "KPT recognition",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
+      "vocabulary": ["pankki", "jalka", "poika", "kenkä"],
+      "options": ["nk → ng", "nt → nn", "mp → mm"],
+      "optionFeedback": {
+        "nk → ng": "Correct. This is the consonant-cluster family.",
+        "nt → nn": "“nt → nn” does not show the required pattern. This is the consonant-cluster family.",
+        "mp → mm": "“mp → mm” does not show the required pattern. This is the consonant-cluster family."
+      }
+    }
+  ]
+}

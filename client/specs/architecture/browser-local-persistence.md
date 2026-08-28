@@ -33,7 +33,7 @@ Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exerc
 
 ## Content and learner data
 
-- `client/public/content/index.json` and its listed packs are immutable bundled input for a deployed version.
+- `client/content/` is immutable bundled input for a deployed version; Angular copies the same files to `/content/`, and the browser assembles manifests and fragments only in memory.
 - Learner state stores only progress and stable references, never executable content.
 - Content version alignment clears only incompatible progress for the changed or removed pack.
 - Invalid backup data must be rejected before replacing existing state.

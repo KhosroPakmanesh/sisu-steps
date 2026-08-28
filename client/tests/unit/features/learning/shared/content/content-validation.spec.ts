@@ -1,10 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import {
   ContentCatalog,
+  ContentPackManifest,
   Exercise,
   TopicPack,
 } from '@/features/learning/shared/content/content.models';
 import { validateContentCatalog } from '@/features/learning/shared/content/validation/content-catalog.validator';
+import { validateContentManifest } from '@/features/learning/shared/content/validation/content-manifest.validator';
 import { validatePackCollection } from '@/features/learning/shared/content/validation/pack-collection.validator';
 import { validateTopicPack } from '@/features/learning/shared/content/validation/topic-pack.validator';
 
@@ -343,27 +345,22 @@ describe('content-pack validation', () => {
 });
 
 describe('content catalog validation', () => {
-  const catalog = (packs = [{ id: 'pack', file: 'pack.json' }]): ContentCatalog => ({
+  const catalog = (packs = ['pack']): ContentCatalog => ({
     schemaVersion: 1,
     packs,
   });
 
-  it('accepts safe, unique catalog entries', () => {
-    expect(
-      validateContentCatalog(catalog([{ id: 'vowel-harmony-kpt-tplural', file: 'pack.json' }]))
-        .packs,
-    ).toHaveLength(1);
+  it('accepts safe, unique catalog pack IDs', () => {
+    expect(validateContentCatalog(catalog(['vowel-harmony-kpt-tplural'])).packs).toHaveLength(1);
   });
 
-  it('rejects duplicate ids and unsafe filenames', () => {
-    expect(() =>
-      validateContentCatalog(
-        catalog([
-          { id: 'pack', file: 'pack.json' },
-          { id: 'pack', file: '../other.json' },
-        ]),
-      ),
-    ).toThrowError('The content catalog contains an invalid or duplicate pack entry.');
+  it('rejects duplicate and unsafe pack IDs', () => {
+    expect(() => validateContentCatalog(catalog(['pack', '../other']))).toThrowError(
+      'The content catalog contains an invalid or duplicate pack ID.',
+    );
+    expect(() => validateContentCatalog(catalog(['pack', 'pack']))).toThrowError(
+      'The content catalog contains an invalid or duplicate pack ID.',
+    );
   });
 
   it('rejects ids duplicated across different content kinds or packs', () => {
@@ -383,13 +380,46 @@ describe('content catalog validation', () => {
     }));
 
     expect(() =>
-      validatePackCollection(
-        catalog([
-          { id: 'pack', file: 'pack.json' },
-          { id: 'second-pack', file: 'second-pack.json' },
-        ]),
-        [first, second],
-      ),
+      validatePackCollection(catalog(['pack', 'second-pack']), [first, second]),
     ).toThrowError('Content id lesson-1 is duplicated across installed topic packs.');
+  });
+});
+
+describe('content manifest validation', () => {
+  const manifest = (): ContentPackManifest => {
+    const pack = validPack();
+    return {
+      schemaVersion: pack.schemaVersion,
+      id: pack.id,
+      version: pack.version,
+      title: pack.title,
+      level: pack.level,
+      summary: pack.summary,
+      objectives: pack.objectives,
+      importantSkills: pack.importantSkills,
+      sources: pack.sources,
+      lessonIds: pack.lessons.map((lesson) => lesson.id),
+      testIds: pack.tests.map((test) => test.id),
+    };
+  };
+
+  it('accepts a matching manifest with safe ordered references', () => {
+    expect(validateContentManifest(manifest(), 'pack').lessonIds).toEqual(['lesson-1']);
+  });
+
+  it('rejects mismatched identities and unsafe or duplicate references', () => {
+    expect(() => validateContentManifest(manifest(), 'other-pack')).toThrowError(
+      'Topic pack other-pack has a mismatched or unsupported manifest.',
+    );
+    const unsafe = manifest();
+    unsafe.lessonIds = ['../lesson'];
+    expect(() => validateContentManifest(unsafe, 'pack')).toThrowError(
+      'Topic pack pack has an incomplete manifest.',
+    );
+    const duplicated = manifest();
+    duplicated.testIds = ['test', 'test'];
+    expect(() => validateContentManifest(duplicated, 'pack')).toThrowError(
+      'Topic pack pack has an incomplete manifest.',
+    );
   });
 });

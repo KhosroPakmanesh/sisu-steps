@@ -1,0 +1,140 @@
+{
+  "id": "he-verbs",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["Third-person plural -vat/-vät"],
+  "prerequisiteSkills": ["Vowel harmony"],
+  "introducedVocabulary": [
+    {
+      "finnish": "puhua",
+      "english": "to speak"
+    },
+    {
+      "finnish": "asua",
+      "english": "to live"
+    },
+    {
+      "finnish": "laulaa",
+      "english": "to sing"
+    },
+    {
+      "finnish": "ostaa",
+      "english": "to buy"
+    },
+    {
+      "finnish": "kysyä",
+      "english": "to ask"
+    },
+    {
+      "finnish": "lähteä",
+      "english": "to leave"
+    },
+    {
+      "finnish": "istua",
+      "english": "to sit"
+    },
+    {
+      "finnish": "sanoa",
+      "english": "to say"
+    },
+    {
+      "finnish": "katsoa",
+      "english": "to look or watch"
+    },
+    {
+      "finnish": "seisoa",
+      "english": "to stand"
+    }
+  ],
+  "practiceVocabulary": ["laulaa", "kysyä", "asua"],
+  "title": "Saying what “they” do",
+  "summary": "Add -vat or -vät to a supplied verb stem; stem building is not tested here.",
+  "objectives": [
+    "Understand that he means “they”.",
+    "Recognise the supplied verb stem.",
+    "Choose and attach -vat or -vät with vowel harmony."
+  ],
+  "sections": [
+    {
+      "title": "Subject and verb agreement",
+      "paragraphs": [
+        "The subject tells who performs an action. The Finnish pronoun he means “they” when speaking about people.",
+        "The verb must agree with that plural subject. In the present tense, the he form commonly ends in -vat or -vät."
+      ],
+      "keyPoints": ["he laulavat = they sing", "he kysyvät = they ask"]
+    },
+    {
+      "title": "Choose the ending",
+      "paragraphs": [
+        "A verb stem is the part before the personal ending. Every question supplies that stem. Your only new task is to use vowel harmony and attach -vat or -vät.",
+        "Use -vat for a back-vowel stem and -vät for a front- or neutral-vowel stem. You never have to discover an irregular stem in this lesson."
+      ],
+      "keyPoints": ["laula- + vat → laulavat", "kysy- + vät → kysyvät"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "he laulavat",
+      "english": "they sing",
+      "steps": [
+        "The lesson supplies the stem laula-.",
+        "The back vowels a and u select -vat.",
+        "laula- + vat = laulavat."
+      ]
+    },
+    {
+      "finnish": "he kysyvät",
+      "english": "they ask",
+      "steps": [
+        "The lesson supplies the stem kysy-.",
+        "The front vowel y selects -vät.",
+        "kysy- + vät = kysyvät."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use the minä ending -n with he.",
+    "Do not choose -vat/-vät from the English translation.",
+    "The pronoun he and the verb are separate words, but the ending joins directly to the verb stem."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-he-p01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Optional practice with laulaa (“to sing”): laula- + -vat → ____ (“they sing”)",
+      "acceptedAnswers": ["laulavat"],
+      "explanation": "The stem laula- is supplied. Attach back-vowel -vat: laulavat.",
+      "tags": ["lesson-practice", "verb", "plural", "vowel-harmony"],
+      "requiredSkills": ["Third-person plural -vat/-vät", "Vowel harmony"],
+      "vocabulary": ["laulaa", "kysyä", "asua"]
+    },
+    {
+      "id": "ff-a1-l-he-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which ending completes kysy- (“ask”)?",
+      "acceptedAnswers": ["-vät"],
+      "explanation": "The supplied stem kysy- contains y, so choose -vät.",
+      "tags": ["lesson-practice", "verb", "plural", "vowel-harmony"],
+      "requiredSkills": ["Third-person plural -vat/-vät", "Vowel harmony"],
+      "vocabulary": ["laulaa", "kysyä", "asua"],
+      "options": ["-vat", "-vät"],
+      "optionFeedback": {
+        "-vat": "“-vat” does not show the required pattern. The supplied stem kysy- contains y, so choose -vät.",
+        "-vät": "Correct. The supplied stem kysy- contains y, so choose -vät."
+      }
+    },
+    {
+      "id": "ff-a1-l-he-p03",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Practice sentence: they live (stem: asu-)",
+      "acceptedAnswers": ["he asuvat", "asuvat"],
+      "explanation": "The stem asu- is supplied. Back vowels select -vat: he asuvat.",
+      "tags": ["lesson-practice", "verb", "plural", "vowel-harmony"],
+      "requiredSkills": ["Third-person plural -vat/-vät", "Vowel harmony"],
+      "vocabulary": ["laulaa", "kysyä", "asua"]
+    }
+  ]
+}

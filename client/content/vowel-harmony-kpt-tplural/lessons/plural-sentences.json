@@ -1,0 +1,204 @@
+{
+  "id": "plural-sentences",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["Plural subject + ovat"],
+  "prerequisiteSkills": ["Regular T-plural"],
+  "introducedVocabulary": [
+    {
+      "finnish": "olla",
+      "english": "to be"
+    },
+    {
+      "finnish": "ovat",
+      "english": "are, for a plural subject"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home"
+    },
+    {
+      "finnish": "ulkona",
+      "english": "outside"
+    },
+    {
+      "finnish": "auki",
+      "english": "open"
+    }
+  ],
+  "practiceVocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+  "title": "Building short plural sentences",
+  "summary": "Combine a T-plural subject with ovat and a word that tells its place or state.",
+  "objectives": [
+    "Recognise the subject of a sentence.",
+    "Use ovat with a plural subject.",
+    "Read the sentence in three understandable parts."
+  ],
+  "sections": [
+    {
+      "title": "The three-part pattern",
+      "paragraphs": [
+        "A sentence communicates a complete idea. In these beginner sentences, the first part names more than one person or thing, the second part is ovat (“are”), and the final part gives a place or state.",
+        "Finnish normally does not use a separate word for English “the”, so kissat can mean “cats” or “the cats” depending on context."
+      ],
+      "keyPoints": ["Plural subject + ovat + place/state", "Kissat ovat kotona."]
+    },
+    {
+      "title": "Agreement keeps the sentence connected",
+      "paragraphs": [
+        "Agreement means that related parts use matching forms. A plural subject uses ovat. A singular subject would use on, meaning “is”.",
+        "The place or state word does not become plural just because the subject is plural."
+      ],
+      "keyPoints": [
+        "Kissa on kotona. = The cat is at home.",
+        "Kissat ovat kotona. = The cats are at home."
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Kissat ovat kotona.",
+      "english": "The cats are at home.",
+      "steps": [
+        "kissa becomes the plural subject kissat by adding -t.",
+        "A plural subject uses ovat.",
+        "kotona is a fixed form meaning “at home”."
+      ]
+    },
+    {
+      "finnish": "Pallot ovat täällä.",
+      "english": "The balls are here.",
+      "steps": [
+        "pallo becomes pallot.",
+        "ovat means “are” for more than one.",
+        "täällä means “here” and does not change."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use on (“is”) with a plural subject in this pattern.",
+    "Do not add a plural ending to the place word merely because the subject is plural.",
+    "Begin a written sentence with a capital letter and finish it with punctuation."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-sent-p01",
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build the Finnish sentence.",
+      "acceptedAnswers": ["Kissat ovat kotona."],
+      "explanation": "Kissat is the plural subject, ovat means “are”, and kotona means “at home”.",
+      "tags": ["lesson-practice", "t-plural", "sentence"],
+      "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
+      "vocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+      "tokens": ["kotona.", "ovat", "Kissat"],
+      "sentenceExplanation": {
+        "translation": "The cats are at home.",
+        "pattern": "Plural subject (more than one person or thing) + ovat (“are”) + place or state",
+        "parts": [
+          {
+            "finnish": "Kissat",
+            "meaning": "the cats",
+            "role": "Subject — the people or things that the sentence is about.",
+            "baseForm": "kissa",
+            "formation": "Start with kissa and add plural -t: kissat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the plural subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "olla means “to be”. A subject meaning more than one uses ovat, meaning “are”."
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "Place or state — tells where the subject is or what it is like.",
+            "baseForm": "kotona",
+            "formation": "kotona is a fixed form meaning “at home”."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ff-a1-l-sent-p02",
+      "type": "translation-en",
+      "instruction": "Translate into English.",
+      "prompt": "Pallot ovat täällä.",
+      "acceptedAnswers": ["The balls are here."],
+      "explanation": "Pallot means “the balls”, ovat means “are”, and täällä means “here”.",
+      "tags": ["lesson-practice", "t-plural", "sentence"],
+      "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
+      "vocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+      "sentenceExplanation": {
+        "translation": "The balls are here.",
+        "pattern": "Plural subject (more than one person or thing) + ovat (“are”) + place or state",
+        "parts": [
+          {
+            "finnish": "Pallot",
+            "meaning": "the balls",
+            "role": "Subject — the people or things that the sentence is about.",
+            "baseForm": "pallo",
+            "formation": "Start with pallo and add plural -t: pallot."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the plural subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "olla means “to be”. A subject meaning more than one uses ovat, meaning “are”."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place or state — tells where the subject is or what it is like.",
+            "baseForm": "täällä",
+            "formation": "täällä is a fixed place word meaning “here”."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ff-a1-l-sent-p03",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Autot ____ ulkona. (“are”)",
+      "acceptedAnswers": ["ovat"],
+      "explanation": "Autot is already plural. A plural subject uses ovat; ulkona is supplied as the fixed word “outside”.",
+      "tags": ["lesson-practice", "t-plural", "sentence"],
+      "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
+      "vocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+      "sentenceExplanation": {
+        "translation": "The cars are outside.",
+        "pattern": "Plural subject (more than one person or thing) + ovat (“are”) + place or state",
+        "parts": [
+          {
+            "finnish": "Autot",
+            "meaning": "the cars",
+            "role": "Subject — the people or things that the sentence is about.",
+            "baseForm": "auto",
+            "formation": "Start with auto and add plural -t: autot."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the plural subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "olla means “to be”. A subject meaning more than one uses ovat, meaning “are”."
+          },
+          {
+            "finnish": "ulkona",
+            "meaning": "outside",
+            "role": "Place or state — tells where the subject is or what it is like.",
+            "baseForm": "ulkona",
+            "formation": "ulkona is supplied as a complete fixed word meaning “outside”."
+          }
+        ]
+      }
+    }
+  ]
+}

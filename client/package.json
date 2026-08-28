@@ -18,7 +18,6 @@
     "test": "ng test --no-watch --no-progress",
     "test:watch": "ng test",
     "test:e2e": "playwright test",
-    "content:generate": "node tools/generate-all-content.mjs",
     "content:validate": "node tools/validate-all-content.mjs",
     "check": "npm run lint && npm run lint:css && npm run lint:modules && npm run lint:dead-code && npm run lint:architecture && npm run format:check && npm run typecheck && npm run test:typecheck && npm run content:validate && npm run build && npm run test"
   },

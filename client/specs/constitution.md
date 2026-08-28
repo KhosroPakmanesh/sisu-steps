@@ -28,3 +28,4 @@ This contract governs the Angular browser client. Root product requirements rema
 - `architecture/browser-local-persistence.md`
 - `design-system/`
 - `features/G002-technical-guidance-alignment/`
+- `features/G006-pack-owned-content-sources/`

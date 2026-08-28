@@ -8,7 +8,7 @@
 - Keep route pages thin, complete operations in purpose-named services, pure decisions in policies/validators, derived read models in queries, and browser I/O behind adapters or repositories.
 - Keep production TypeScript modules at or below 300 lines, functions/components at or below 150 lines, and CSS modules at or below 400 lines unless a cohesive declarative/generated exception is documented beside the enforcement override.
 - Follow root `specs/content-authoring.md` for every new or materially revised Finnish topic pack, including the recorded pedagogy assessments under root `specs/content-assessments/`.
-- Register topic packs in `public/content/index.json`, keep lesson/test/practice/scored IDs globally unique, and run the aggregate generator and catalog validator.
+- Register topic-pack folders in `content/index.json`, keep each pack's lessons and learning tests under its same-named folder, deploy `content/` directly without a generated copy, keep lesson/test/practice/scored IDs globally unique, and run the aggregate direct-source validator.
 - Keep unit tests under the mirrored `tests/unit` tree with explicit Vitest imports. Use Playwright for critical browser workflows.
 - Use canonical tokens and documented client design-system patterns before introducing reusable raw CSS values. Preserve semantic HTML, keyboard access, visible focus, reduced motion, practical touch targets, and non-color status cues.
 - From the repository root, run `npm --prefix client run check` before handing off client code or configuration changes. Run `npm --prefix client run test:e2e` when routes, persistence, downloads, responsive behavior, keyboard behavior, or primary workflows change.

@@ -1,0 +1,115 @@
+{
+  "id": "genitive-nouns",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["Genitive -n"],
+  "prerequisiteSkills": ["KPT recognition"],
+  "introducedVocabulary": [
+    {
+      "finnish": "tyttö",
+      "english": "girl"
+    },
+    {
+      "finnish": "takki",
+      "english": "coat"
+    },
+    {
+      "finnish": "katto",
+      "english": "roof"
+    },
+    {
+      "finnish": "ranta",
+      "english": "beach"
+    }
+  ],
+  "practiceVocabulary": ["pankki", "kauppa", "matto"],
+  "title": "Building noun forms with -n",
+  "summary": "Form the Finnish genitive, which often expresses “of” or possession.",
+  "objectives": [
+    "Understand the basic meaning of the genitive.",
+    "Add the ending -n.",
+    "Apply a known weak-grade KPT change before -n."
+  ],
+  "sections": [
+    {
+      "title": "Meaning and ending",
+      "paragraphs": [
+        "A noun names a person, place, thing, or idea. The genitive is a noun form that often corresponds to English “of” or apostrophe-s.",
+        "The basic genitive ending is -n. Many simple words add it to a stem that uses the weak KPT grade."
+      ],
+      "keyPoints": ["talo → talon: of the house", "The written ending is -n"]
+    },
+    {
+      "title": "Construction order",
+      "paragraphs": [
+        "Start with the dictionary form. Make the required KPT change to get the weak stem. Add -n to that stem.",
+        "Not every noun changes. If there is no KPT pattern, the stem may remain stable."
+      ],
+      "keyPoints": ["pankki → panki- → pankin", "matto → mato- → maton"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "pankki → pankin",
+      "english": "of the bank",
+      "steps": [
+        "Use the previously learned change kk → k: pankki → panki-.",
+        "Add the new target ending -n: pankin."
+      ]
+    },
+    {
+      "finnish": "kauppa → kaupan",
+      "english": "of the shop",
+      "steps": [
+        "Use the previously learned change pp → p: kauppa → kaupa-.",
+        "Add the new target ending -n: kaupan."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not add -n before making the stem change.",
+    "The genitive does not always mean literal ownership; it can also connect two nouns.",
+    "Keep Finnish ä and ö exactly as written."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-gen-p01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Pankki (“bank”) → ____ (“of the bank”) · use genitive -n; practise kk → k",
+      "acceptedAnswers": ["pankin"],
+      "explanation": "Use the known kk → k change, then add -n: pankki → panki- → pankin.",
+      "tags": ["lesson-practice", "kpt", "noun", "genitive"],
+      "requiredSkills": ["Genitive -n", "KPT recognition"],
+      "vocabulary": ["pankki", "kauppa", "matto"]
+    },
+    {
+      "id": "ff-a1-l-gen-p02",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Kauppa (“shop”) → ____ (“of the shop”) · use genitive -n; practise pp → p",
+      "acceptedAnswers": ["kaupan"],
+      "explanation": "Use the known pp → p change, then add -n: kauppa → kaupa- → kaupan.",
+      "tags": ["lesson-practice", "kpt", "noun", "genitive"],
+      "requiredSkills": ["Genitive -n", "KPT recognition"],
+      "vocabulary": ["pankki", "kauppa", "matto"]
+    },
+    {
+      "id": "ff-a1-l-gen-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which option means “of the rug”?",
+      "acceptedAnswers": ["maton"],
+      "explanation": "Use the known tt → t change, then add -n: matto → mato- → maton.",
+      "tags": ["lesson-practice", "kpt", "noun", "genitive"],
+      "requiredSkills": ["Genitive -n", "KPT recognition"],
+      "vocabulary": ["pankki", "kauppa", "matto"],
+      "options": ["maton", "matton", "matto"],
+      "optionFeedback": {
+        "maton": "Correct. Use the known tt → t change, then add -n: matto → mato- → maton.",
+        "matton": "“matton” does not show the required pattern. Use the known tt → t change, then add -n: matto → mato- → maton.",
+        "matto": "“matto” does not show the required pattern. Use the known tt → t change, then add -n: matto → mato- → maton."
+      }
+    }
+  ]
+}

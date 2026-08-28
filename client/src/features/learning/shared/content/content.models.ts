@@ -92,14 +92,23 @@ export interface ContentSource {
   url: string;
 }
 
-export interface ContentCatalogEntry {
-  id: string;
-  file: string;
-}
-
 export interface ContentCatalog {
   schemaVersion: 1;
-  packs: ContentCatalogEntry[];
+  packs: string[];
+}
+
+export interface ContentPackManifest {
+  schemaVersion: 1;
+  id: string;
+  version: string;
+  title: string;
+  level: string;
+  summary: string;
+  objectives: string[];
+  importantSkills: string[];
+  sources: ContentSource[];
+  lessonIds: string[];
+  testIds: string[];
 }
 
 export interface TopicPack {

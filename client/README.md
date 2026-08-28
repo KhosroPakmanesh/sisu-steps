@@ -49,14 +49,15 @@ Start with `AGENTS.md`, `src/AGENTS.md`, and `specs/README.md`. Client review re
 
 ## Content workflow
 
-Installed packs are registered in `public/content/index.json`. The current pack is served from `public/content/vowel-harmony-kpt-tplural.json`; its deterministic source is `tools/generate-content.mjs`.
+Authored packs are registered in `content/index.json`. Each pack owns a same-named folder containing `pack.json`, one JSON file per reusable lesson under `lessons/`, and one JSON file per authored learning test under `tests/`.
+
+`content/` is the only persisted content tree. Angular copies it unchanged to the deployed `/content/` path. At startup, the generic content service loads the catalog, each pack manifest, and its referenced lesson and test files; validates their identities and schemas; and assembles the existing runtime pack model in browser memory. Presentation components receive only that generic assembled model.
 
 ```powershell
-npm --prefix client run content:generate
 npm --prefix client run content:validate
 ```
 
-Product-level content policy and pedagogy records remain under root `specs/`. The client owns the current generator, validator, catalog, and bundled JSON implementation.
+Product-level content policy and pedagogy records remain under root `specs/`. The client owns pack sources, generic direct-source validation, runtime content assembly, and static deployment configuration.
 
 ## Storage notes
 

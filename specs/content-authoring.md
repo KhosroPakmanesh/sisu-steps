@@ -39,6 +39,8 @@ Record a disposition of **approved**, **approved with limitations**, or **revisi
 
 Lessons teach from first principles, declare targets and prerequisites, introduce at most ten scored words when focused, contain worked examples and common mistakes, and provide two to five optional unscored practice items.
 
+Keep each pack's authored implementation under `client/content/<pack-id>/`: pack metadata and ordered references in `pack.json`, one pure-JSON lesson per stable ID under `lessons/`, and one pure-JSON learning test per stable ID under `tests/`. Store every pedagogical value and semantic relationship explicitly there. `client/content/` is the sole source and is deployed unchanged; do not author content in JavaScript or create a generated content copy.
+
 Scored exercises use fixed authored order and stable globally unique IDs. They declare required skills, controlled vocabulary, a target skill, misconception category, accepted answers, explanation, and a different mutual parallel exercise. Multiple-choice items explain every option. Sentence items explain the complete meaning, pattern, and construction of every part.
 
 Whenever a prompt transforms one Finnish form into another, label both forms with their English meanings. Put the source meaning beside the source form and the target meaning beside the answer or supplied target form; do not attach a target meaning to the dictionary form. Explicitly supply every ending, stem frame, agreement choice, or other construction step that is not the assessed target. For example, a KPT-only question may ask `silta (“bridge”) → ____ (“of the bridge”)` only when the genitive `-n` is also visibly supplied, while a genitive-focused question may assess that ending directly.
@@ -47,7 +49,7 @@ Focused tests and Reviews remain immediately accessible in separate learning-map
 
 ## 4. Technical validation
 
-Regenerate every registered pack, validate the complete catalog, run automated tests, format changed files, and build the production app. A pack is not complete when universal schema checks, topic-specific guards, cross-pack ID checks, or the production build fail.
+Assemble and validate every registered pack directly from its pack-owned JSON files, run automated tests, format changed files, and build the production app. A pack is not complete when source-structure checks, universal schema checks, pack-grouped topic-specific guards, cross-pack ID checks, direct deployment checks, or the production build fail.
 
 ## 5. Final Finnish-teaching pedagogy assessment
 

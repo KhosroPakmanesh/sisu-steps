@@ -1,0 +1,134 @@
+{
+  "id": "kpt-special-k",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["KPT special k changes"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    {
+      "finnish": "poika",
+      "english": "boy"
+    },
+    {
+      "finnish": "puku",
+      "english": "suit"
+    },
+    {
+      "finnish": "aika",
+      "english": "time"
+    },
+    {
+      "finnish": "luku",
+      "english": "number or chapter"
+    }
+  ],
+  "practiceVocabulary": ["poika", "puku", "aika", "luku"],
+  "title": "KPT step 3: two special k changes",
+  "summary": "Treat k → j and k → v as small, separately memorised word families.",
+  "objectives": [
+    "Recognise k → j in supplied word pairs.",
+    "Recognise k → v in supplied word pairs.",
+    "Avoid guessing these changes for unfamiliar words."
+  ],
+  "sections": [
+    {
+      "title": "Learn the pair with the word",
+      "paragraphs": [
+        "Some k changes are less predictable for a beginner. Learn each supplied dictionary form together with its weak partner.",
+        "This block contains only k → j and k → v."
+      ],
+      "keyPoints": ["poika → pojan: k → j", "puku → puvun: k → v"]
+    },
+    {
+      "title": "Recognition before free production",
+      "paragraphs": [
+        "Read both forms aloud or silently and point to the changed position.",
+        "The later mixed block will ask you to distinguish these from the earlier KPT families."
+      ],
+      "keyPoints": ["aika → ajan: k → j", "luku → luvun: k → v"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "poika → pojan",
+      "english": "boy → of the boy",
+      "steps": [
+        "The supplied forms show k becoming j.",
+        "Keep oi in poika and oj in pojan as one learned pair.",
+        "The final -n is separate from KPT."
+      ]
+    },
+    {
+      "finnish": "puku → puvun",
+      "english": "suit → of the suit",
+      "steps": [
+        "The supplied forms show k becoming v.",
+        "Learn puku together with puvun.",
+        "Do not apply this change to every word containing k."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not assume every k becomes j.",
+    "Do not assume every k becomes v.",
+    "Use only the supplied and practised word families at this level."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-kptk-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in poika (“boy”) → pojan (“of the boy”)?",
+      "acceptedAnswers": ["k → j"],
+      "explanation": "In this learned pair, k becomes j.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika", "puku", "aika", "luku"],
+      "options": ["k → j", "k → v", "k → ∅"],
+      "optionFeedback": {
+        "k → j": "Correct. In this learned pair, k becomes j.",
+        "k → v": "“k → v” does not show the required pattern. In this learned pair, k becomes j.",
+        "k → ∅": "“k → ∅” does not show the required pattern. In this learned pair, k becomes j."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptk-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in puku (“suit”) → puvun (“of the suit”)?",
+      "acceptedAnswers": ["k → v"],
+      "explanation": "In this learned pair, k becomes v.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika", "puku", "aika", "luku"],
+      "options": ["k → v", "k → j", "p → v"],
+      "optionFeedback": {
+        "k → v": "Correct. In this learned pair, k becomes v.",
+        "k → j": "“k → j” does not show the required pattern. In this learned pair, k becomes v.",
+        "p → v": "“p → v” does not show the required pattern. In this learned pair, k becomes v."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptk-p03",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Practice only: aika (“time”) → ____ (“of the time”) · use supplied genitive -n; apply k → j",
+      "acceptedAnswers": ["ajan"],
+      "explanation": "Use the learned weak partner aja- and the displayed complete form ajan.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika", "puku", "aika", "luku"]
+    },
+    {
+      "id": "ff-a1-l-kptk-p04",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Practice only: luku (“number or chapter”) → ____ (“of the number or chapter”) · use supplied genitive -n; apply k → v",
+      "acceptedAnswers": ["luvun"],
+      "explanation": "Use the learned weak partner luvu- and the displayed complete form luvun.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika", "puku", "aika", "luku"]
+    }
+  ]
+}

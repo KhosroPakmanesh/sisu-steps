@@ -1,0 +1,129 @@
+{
+  "id": "inside-ending",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["Inessive -ssa/-ssä"],
+  "prerequisiteSkills": ["Vowel harmony"],
+  "introducedVocabulary": [
+    {
+      "finnish": "kirjasto",
+      "english": "library"
+    },
+    {
+      "finnish": "puisto",
+      "english": "park"
+    },
+    {
+      "finnish": "kahvila",
+      "english": "café"
+    },
+    {
+      "finnish": "sauna",
+      "english": "sauna"
+    },
+    {
+      "finnish": "toimisto",
+      "english": "office"
+    },
+    {
+      "finnish": "myymälä",
+      "english": "shop"
+    },
+    {
+      "finnish": "elämä",
+      "english": "life"
+    }
+  ],
+  "practiceVocabulary": ["sauna", "toimisto", "myymälä"],
+  "title": "Saying “in” with -ssa and -ssä",
+  "summary": "Build a common Finnish place form after choosing the vowel-harmony version of the ending.",
+  "objectives": [
+    "Understand what -ssa/-ssä means.",
+    "Attach the ending to a stable word.",
+    "Keep your attention on the ending rather than an unrelated stem rule."
+  ],
+  "sections": [
+    {
+      "title": "The meaning of the ending",
+      "paragraphs": [
+        "Finnish often expresses an English preposition by adding an ending to a word. The ending -ssa or -ssä usually means “in”.",
+        "The two endings have the same meaning. Vowel harmony chooses their spelling: back-vowel words use -ssa and front- or neutral-only words use -ssä."
+      ],
+      "keyPoints": ["-ssa and -ssä both mean “in”", "Only the vowel-harmony spelling changes"]
+    },
+    {
+      "title": "Build the form one step at a time",
+      "paragraphs": [
+        "Start with the basic dictionary form. Decide whether the word needs the a-ending or ä-ending. Then attach the ending without a space.",
+        "Every word in this focused lesson has a stable stem. No consonant or final-vowel change is hidden inside the answer."
+      ],
+      "keyPoints": ["sauna + -ssa → saunassa", "myymälä + -ssä → myymälässä"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "sauna → saunassa",
+      "english": "in the sauna",
+      "steps": [
+        "sauna contains the back vowels a and u.",
+        "Choose -ssa.",
+        "Attach it directly: sauna + ssa = saunassa."
+      ]
+    },
+    {
+      "finnish": "myymälä → myymälässä",
+      "english": "in the store",
+      "steps": [
+        "myymälä contains the front vowels y and ä.",
+        "Choose -ssä.",
+        "Attach it directly: myymälä + ssä = myymälässä."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not write the ending as a separate word.",
+    "Do not translate every English “in” mechanically; this lesson covers the regular physical-place meaning.",
+    "Do not invent a stem change: every word in this lesson keeps the supplied stem."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-in-p01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Practise the inside ending: sauna (“sauna”) → ____ (“in the sauna”)",
+      "acceptedAnswers": ["saunassa"],
+      "explanation": "sauna has back vowels, so add -ssa directly: saunassa.",
+      "tags": ["lesson-practice", "vowel-harmony", "inessive"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["sauna", "toimisto", "myymälä"]
+    },
+    {
+      "id": "ff-a1-l-in-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which option means “in the office”?",
+      "acceptedAnswers": ["toimistossa"],
+      "explanation": "toimisto contains the back vowel o, so “in the office” is toimistossa.",
+      "tags": ["lesson-practice", "vowel-harmony", "inessive"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["sauna", "toimisto", "myymälä"],
+      "options": ["toimistossa", "toimistössä", "toimisto"],
+      "optionFeedback": {
+        "toimistossa": "Correct. toimisto contains the back vowel o, so “in the office” is toimistossa.",
+        "toimistössä": "“toimistössä” does not show the required pattern. toimisto contains the back vowel o, so “in the office” is toimistossa.",
+        "toimisto": "“toimisto” does not show the required pattern. toimisto contains the back vowel o, so “in the office” is toimistossa."
+      }
+    },
+    {
+      "id": "ff-a1-l-in-p03",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "in the store",
+      "acceptedAnswers": ["myymälässä"],
+      "explanation": "myymälä contains y and ä, so the front-vowel ending is -ssä: myymälässä.",
+      "tags": ["lesson-practice", "vowel-harmony", "inessive"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["sauna", "toimisto", "myymälä"]
+    }
+  ]
+}

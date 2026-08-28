@@ -1,0 +1,127 @@
+{
+  "id": "kpt-t-plural",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["T-plural with KPT"],
+  "prerequisiteSkills": ["KPT recognition", "Regular T-plural"],
+  "introducedVocabulary": [
+    {
+      "finnish": "keitto",
+      "english": "soup"
+    },
+    {
+      "finnish": "silta",
+      "english": "bridge"
+    },
+    {
+      "finnish": "kampa",
+      "english": "comb"
+    },
+    {
+      "finnish": "takki",
+      "english": "coat"
+    },
+    {
+      "finnish": "katto",
+      "english": "roof"
+    },
+    {
+      "finnish": "tyttö",
+      "english": "girl"
+    },
+    {
+      "finnish": "ranta",
+      "english": "beach"
+    }
+  ],
+  "practiceVocabulary": ["pankki", "kauppa", "pelto"],
+  "title": "T-plurals that use KPT",
+  "summary": "Change the consonant stem first and add plural -t second.",
+  "objectives": [
+    "Identify the KPT change in a plural.",
+    "Build the weak noun stem.",
+    "Add -t only after the stem is ready."
+  ],
+  "sections": [
+    {
+      "title": "Two construction steps",
+      "paragraphs": [
+        "Many nouns use the weak KPT grade before nominative plural -t. First build the weak stem; then add the plural ending.",
+        "Keeping the steps separate makes the form easier to understand: noun → weak stem → plural."
+      ],
+      "keyPoints": ["pankki → panki- → pankit", "pelto → pello- → pellot"]
+    },
+    {
+      "title": "The same familiar KPT pairs",
+      "paragraphs": [
+        "The changes are the same ones introduced earlier: double consonants can shorten, a single p can become v, and clusters can change.",
+        "The final -t is the plural ending. A t created inside the stem is not the plural ending."
+      ],
+      "keyPoints": ["kk → k", "p → v", "lt → ll"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "pankki → pankit",
+      "english": "bank → banks",
+      "steps": [
+        "Use the known change kk → k: pankki → panki-.",
+        "Add the known plural ending -t: pankit."
+      ]
+    },
+    {
+      "finnish": "kauppa → kaupat",
+      "english": "shop → shops",
+      "steps": [
+        "Use the known change pp → p: kauppa → kaupa-.",
+        "Add the known plural ending -t: kaupat."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not attach -t to the unchanged dictionary form when KPT is required.",
+    "Do not count the final plural -t as part of the KPT change.",
+    "Use the learned stem for that word; spelling cannot always be guessed from English."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-ktp-p01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Practise both steps: pankki (“bank”) → ____ (“banks”)",
+      "acceptedAnswers": ["pankit"],
+      "explanation": "First use kk → k: panki-. Then add plural -t: pankit.",
+      "tags": ["lesson-practice", "t-plural", "kpt"],
+      "requiredSkills": ["T-plural with KPT", "KPT recognition", "Regular T-plural"],
+      "vocabulary": ["pankki", "kauppa", "pelto"]
+    },
+    {
+      "id": "ff-a1-l-ktp-p02",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Practice translation: shops",
+      "acceptedAnswers": ["kaupat"],
+      "explanation": "kauppa uses pp → p in the weak stem kaupa-. Add -t: kaupat.",
+      "tags": ["lesson-practice", "t-plural", "kpt"],
+      "requiredSkills": ["T-plural with KPT", "KPT recognition", "Regular T-plural"],
+      "vocabulary": ["pankki", "kauppa", "pelto"]
+    },
+    {
+      "id": "ff-a1-l-ktp-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the plural of “pelto”.",
+      "acceptedAnswers": ["pellot"],
+      "explanation": "First change lt → ll to make pello-. Then add plural -t: pellot.",
+      "tags": ["lesson-practice", "t-plural", "kpt"],
+      "requiredSkills": ["T-plural with KPT", "KPT recognition", "Regular T-plural"],
+      "vocabulary": ["pankki", "kauppa", "pelto"],
+      "options": ["pellot", "peltot", "pelto"],
+      "optionFeedback": {
+        "pellot": "Correct. First change lt → ll to make pello-. Then add plural -t: pellot.",
+        "peltot": "“peltot” does not show the required pattern. First change lt → ll to make pello-. Then add plural -t: pellot.",
+        "pelto": "“pelto” does not show the required pattern. First change lt → ll to make pello-. Then add plural -t: pellot."
+      }
+    }
+  ]
+}

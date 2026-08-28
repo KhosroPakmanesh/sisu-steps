@@ -1,0 +1,173 @@
+{
+  "id": "kpt-clusters",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["KPT consonant clusters"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    {
+      "finnish": "kaupunki",
+      "english": "city"
+    },
+    {
+      "finnish": "kenkä",
+      "english": "shoe"
+    },
+    {
+      "finnish": "kampa",
+      "english": "comb"
+    },
+    {
+      "finnish": "pelto",
+      "english": "field"
+    },
+    {
+      "finnish": "antaa",
+      "english": "to give"
+    },
+    {
+      "finnish": "lentää",
+      "english": "to fly"
+    },
+    {
+      "finnish": "kertoa",
+      "english": "to tell"
+    },
+    {
+      "finnish": "ymmärtää",
+      "english": "to understand"
+    },
+    {
+      "finnish": "ranta",
+      "english": "beach"
+    },
+    {
+      "finnish": "silta",
+      "english": "bridge"
+    }
+  ],
+  "practiceVocabulary": ["kenkä", "kampa", "pelto", "ranta"],
+  "title": "KPT step 4: consonant clusters",
+  "summary": "Learn changes where two neighbouring consonants act as one pattern.",
+  "objectives": [
+    "Understand the word consonant cluster.",
+    "Recognise five common cluster changes.",
+    "Compare complete forms without adding a new ending decision."
+  ],
+  "sections": [
+    {
+      "title": "A cluster is a pair",
+      "paragraphs": [
+        "A consonant cluster is two neighbouring consonants. Compare the whole pair instead of changing one isolated letter.",
+        "The five patterns in this block are shown explicitly."
+      ],
+      "keyPoints": ["nk → ng", "mp → mm", "nt → nn", "lt → ll", "rt → rr"]
+    },
+    {
+      "title": "Look at the middle",
+      "paragraphs": [
+        "The ending may come after the changed cluster, but the ending is not the target here.",
+        "Read the complete supplied forms and name only the cluster change."
+      ],
+      "keyPoints": ["kenkä → kengän", "kampa → kamman", "pelto → pellon"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "kenkä → kengän",
+      "english": "shoe → of the shoe",
+      "steps": [
+        "The cluster is nk.",
+        "In the weak form it is ng.",
+        "Therefore the visible KPT change is nk → ng."
+      ]
+    },
+    {
+      "finnish": "pelto → pellon",
+      "english": "field → of the field",
+      "steps": [
+        "The cluster is lt.",
+        "In the weak form it is ll.",
+        "Therefore the visible KPT change is lt → ll."
+      ]
+    },
+    {
+      "finnish": "ranta → rannan",
+      "english": "beach → of the beach",
+      "steps": [
+        "The cluster is nt.",
+        "In the weak form it is nn.",
+        "Therefore the visible KPT change is nt → nn."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not call the final -n part of the cluster.",
+    "Compare both consonants together.",
+    "Do not mix cluster patterns until each pair is familiar."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-kptc-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in kenkä (“shoe”) → kengän (“of the shoe”)?",
+      "acceptedAnswers": ["nk → ng"],
+      "explanation": "The whole cluster nk becomes ng.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kenkä", "kampa", "pelto", "ranta"],
+      "options": ["nk → ng", "nt → nn", "kk → k"],
+      "optionFeedback": {
+        "nk → ng": "Correct. The whole cluster nk becomes ng.",
+        "nt → nn": "“nt → nn” does not show the required pattern. The whole cluster nk becomes ng.",
+        "kk → k": "“kk → k” does not show the required pattern. The whole cluster nk becomes ng."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptc-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in kampa (“comb”) → kamman (“of the comb”)?",
+      "acceptedAnswers": ["mp → mm"],
+      "explanation": "The whole cluster mp becomes mm.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kenkä", "kampa", "pelto", "ranta"],
+      "options": ["mp → mm", "pp → p", "nt → nn"],
+      "optionFeedback": {
+        "mp → mm": "Correct. The whole cluster mp becomes mm.",
+        "pp → p": "“pp → p” does not show the required pattern. The whole cluster mp becomes mm.",
+        "nt → nn": "“nt → nn” does not show the required pattern. The whole cluster mp becomes mm."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptc-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "What changes in pelto (“field”) → pellon (“of the field”)?",
+      "acceptedAnswers": ["lt → ll"],
+      "explanation": "The whole cluster lt becomes ll.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kenkä", "kampa", "pelto", "ranta"],
+      "options": ["lt → ll", "rt → rr", "tt → t"],
+      "optionFeedback": {
+        "lt → ll": "Correct. The whole cluster lt becomes ll.",
+        "rt → rr": "“rt → rr” does not show the required pattern. The whole cluster lt becomes ll.",
+        "tt → t": "“tt → t” does not show the required pattern. The whole cluster lt becomes ll."
+      }
+    },
+    {
+      "id": "ff-a1-l-kptc-p04",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Practice only: ranta (“beach”) → ____ (“of the beach”) · use supplied genitive -n; apply nt → nn",
+      "acceptedAnswers": ["rannan"],
+      "explanation": "The supplied target is the genitive meaning “of the beach”, so keep -n fixed. Change nt to nn and add -n: ranta → rannan.",
+      "tags": ["lesson-practice", "kpt"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kenkä", "kampa", "pelto", "ranta"]
+    }
+  ]
+}

@@ -6,9 +6,9 @@ export function validatePackCollection(catalog: ContentCatalog, packs: TopicPack
   }
   const globalIds = new Set<string>();
   for (const [index, pack] of packs.entries()) {
-    if (catalog.packs[index].id !== pack.id) {
+    if (catalog.packs[index] !== pack.id) {
       throw new Error(
-        `Catalog pack ${catalog.packs[index].id} does not match loaded pack ${pack.id}.`,
+        `Catalog pack ${catalog.packs[index]} does not match loaded pack ${pack.id}.`,
       );
     }
     const contentIds = [

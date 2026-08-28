@@ -4,6 +4,7 @@
 
 ### Added
 
+- Pure-JSON, pack-owned content under `client/content/<pack-id>/`, with ID-named lesson and learning-test files, direct unchanged static deployment, generic in-memory browser assembly, direct-source validation, pack-grouped topic checks, and the G006 behavior-preserving migration specification.
 - Adapted repository, source, architecture, persistence, design-system, accessibility, commit, and feature-spec guidance from the read-only UI prototype.
 - Angular-aware ESLint/template accessibility checks, Stylelint, Prettier, module-size, source-reachability, architecture, separate production/test typechecks, and an aggregate quality gate.
 - Playwright coverage for catalog navigation, optional lesson practice, IndexedDB session recovery, responsive reports, and deliberate data controls at 320, 768, and 1440 pixel widths.
@@ -28,6 +29,8 @@
 
 ### Changed
 
+- Expanded the first KPT lesson’s initial explanation of strong and weak grade: learners now see why one word can use two stem grades, what the labels mean, why double consonants are taught first, and why the double-to-single pattern must not be generalized to every KPT family. Only that lesson advances to version 5.2.0, preserving existing scored progress under pack version 5.1.0.
+- Clarified every Finnish form-transformation prompt with distinct source and target meanings and explicitly supplied non-target endings or stem frames; pack and lesson version 5.1.0 protects earlier progress from being interpreted against the revised prompts.
 - Renamed the bundled grammar topic-pack ID and JSON file from `finnish-foundations-a1` to `vowel-harmony-kpt-tplural`; topic-aware routes and per-pack progress ownership now use the normalized ID.
 - Redesigned Data & backup as a full-width workbook archive aligned with Topics, Topic, Lesson, and Reports: the return link now leads the page hierarchy, the local-data summary uses an attached assignment sheet, Backup and restore uses the shared bound topic-cover construction with a complete folded right edge, and Clear all history is now its third action rather than a separate container. Saved-test clearing now uses a Reports-style clipped divider and vertically aligned ledger rows while preserving every backup, restore, confirmation, and clearing consequence.
 - Redesigned Reports as a full-width workbook ledger aligned with the Topic and Lesson page hierarchy: return navigation now precedes the page eyebrow, totals use the shared attached progress slip, the topic title sits on an interactive graph-paper sheet, the test ledger uses a vertically aligned clipped header, row text and number stamps respond without a colored row highlight, and the mistake-practice slip lifts on hover or keyboard focus. The studied-only filter and Learning by skill ledger were removed at the learner's request.
@@ -69,6 +72,7 @@
 
 ### Fixed
 
+- Removed redundant pack-specific KPT validation branches, added direct regression coverage for the dynamically loaded validator, replaced committed invalid-content fixture trees and marker files with automatically cleaned temporary unit-test trees, and corrected superseded public-content references in client validation guidance.
 - Excluded local Visual Studio cache files from repository-wide Prettier checks so locked generated indexes no longer block client validation.
 - Focused **Learn first** routes now use a centered single-lesson hierarchy without redundant navigation, while cumulative Review routes use a compact accessible selector on narrow screens and a correctly offset sticky lesson navigator on wide screens; lesson headings and section gutters are aligned consistently.
 - The shell's Mistakes navigation now includes the active topic-pack ID instead of pointing to an incomplete route.

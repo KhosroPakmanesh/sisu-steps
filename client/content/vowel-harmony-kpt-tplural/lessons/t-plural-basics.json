@@ -1,0 +1,137 @@
+{
+  "id": "t-plural-basics",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["Regular T-plural"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    {
+      "finnish": "kirja",
+      "english": "book"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple"
+    },
+    {
+      "finnish": "sana",
+      "english": "word"
+    },
+    {
+      "finnish": "kuva",
+      "english": "picture"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat"
+    },
+    {
+      "finnish": "pallo",
+      "english": "ball"
+    },
+    {
+      "finnish": "ystävä",
+      "english": "friend"
+    }
+  ],
+  "practiceVocabulary": ["kissa", "pallo", "ystävä"],
+  "title": "More than one: the T-plural",
+  "summary": "Use the nominative plural ending -t for people and things that are the subject of a basic sentence.",
+  "objectives": [
+    "Understand singular and plural.",
+    "Recognise the nominative subject form.",
+    "Add -t to a stable noun stem."
+  ],
+  "sections": [
+    {
+      "title": "Singular, plural, and nominative",
+      "paragraphs": [
+        "Singular means one: yksi kissa, one cat. Plural means more than one: kissat, cats.",
+        "Nominative is the basic subject form. A subject is the person or thing that the sentence is about. The Finnish nominative plural usually ends in -t."
+      ],
+      "keyPoints": ["kissa = one cat", "kissat = cats", "Plural subject ending: -t"]
+    },
+    {
+      "title": "The regular construction",
+      "paragraphs": [
+        "For a stable word, start with the singular and attach -t directly. The -t itself does not have a vowel, so vowel harmony does not choose between two versions.",
+        "Some nouns need KPT before -t. The next lesson separates that stem change from the plural ending."
+      ],
+      "keyPoints": ["pallo + t → pallot", "ystävä + t → ystävät"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "kissa → kissat",
+      "english": "cat → cats",
+      "steps": ["The singular stem kissa- stays unchanged.", "Add plural -t: kissat."]
+    },
+    {
+      "finnish": "ystävä → ystävät",
+      "english": "friend → friends",
+      "steps": [
+        "The singular stem ystävä- stays unchanged.",
+        "Add plural -t: ystävät.",
+        "Keep ä; the plural ending is only t."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not add English -s to a Finnish word.",
+    "Do not change a final a to ä; preserve the vowels of the noun.",
+    "The T-plural is one plural form; later Finnish cases use other plural construction patterns."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-tpl-p01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Optional practice: kissa (“cat”) → ____ (“cats”) · add plural -t",
+      "acceptedAnswers": ["kissat"],
+      "explanation": "The stem stays kissa-. Add plural -t: kissat.",
+      "tags": ["lesson-practice", "t-plural", "regular"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["kissa", "pallo", "ystävä"]
+    },
+    {
+      "id": "ff-a1-l-tpl-p02",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "balls",
+      "acceptedAnswers": ["pallot"],
+      "explanation": "The singular pallo has a stable stem. Add -t: pallot.",
+      "tags": ["lesson-practice", "t-plural", "regular"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["kissa", "pallo", "ystävä"]
+    },
+    {
+      "id": "ff-a1-l-tpl-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the plural of “ystävä”.",
+      "acceptedAnswers": ["ystävät"],
+      "explanation": "Add plural -t directly to ystävä: ystävät.",
+      "tags": ["lesson-practice", "t-plural", "regular"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["kissa", "pallo", "ystävä"],
+      "options": ["ystävät", "ystäväät", "ystävä"],
+      "optionFeedback": {
+        "ystävät": "Correct. Add plural -t directly to ystävä: ystävät.",
+        "ystäväät": "“ystäväät” does not show the required pattern. Add plural -t directly to ystävä: ystävät.",
+        "ystävä": "“ystävä” does not show the required pattern. Add plural -t directly to ystävä: ystävät."
+      }
+    }
+  ]
+}

@@ -5,5 +5,6 @@
 - `G003-scalable-topic-navigation` separates the compact topic catalog from each pack's complete learning map while preserving direct lesson and study access.
 - `G004-nordic-notebook-experience` defines the immersive, eye-comfortable Nordic notebook presentation, automatic appearance behavior, and novice-friendly interaction hierarchy across the client.
 - `G005-interactive-nordic-workbook-world` extends that stable baseline into a fully custom-looking physical workbook world with accessible object controls, route scenes, motion, and system sheets while preserving learner behavior.
+- `../../client/specs/features/G006-pack-owned-content-sources` makes pure-JSON, same-named pack folders the sole source and deployed asset tree, with generic validation and in-memory runtime assembly separated from Angular presentation.
 
 G001 remains the primary product contract. Client technical specifications may reorganize implementation and improve validation but may not change root product behavior unless an explicitly approved root feature spec, such as G003, says so.

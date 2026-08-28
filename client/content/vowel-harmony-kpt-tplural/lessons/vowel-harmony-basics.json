@@ -1,0 +1,157 @@
+{
+  "id": "vowel-harmony-basics",
+  "version": "5.1.0",
+  "stage": "focused",
+  "targetSkills": ["Vowel harmony"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    {
+      "finnish": "talo",
+      "english": "house"
+    },
+    {
+      "finnish": "koulu",
+      "english": "school"
+    },
+    {
+      "finnish": "auto",
+      "english": "car"
+    },
+    {
+      "finnish": "päivä",
+      "english": "day"
+    },
+    {
+      "finnish": "pöytä",
+      "english": "table"
+    },
+    {
+      "finnish": "kylä",
+      "english": "village"
+    },
+    {
+      "finnish": "metsä",
+      "english": "forest"
+    },
+    {
+      "finnish": "nimi",
+      "english": "name"
+    },
+    {
+      "finnish": "tie",
+      "english": "road"
+    },
+    {
+      "finnish": "sininen",
+      "english": "blue"
+    }
+  ],
+  "practiceVocabulary": ["talo", "päivä", "tie"],
+  "title": "Vowel harmony from the beginning",
+  "summary": "Learn why many Finnish endings have two forms and how to choose between a and ä.",
+  "objectives": [
+    "Recognise the back vowels a, o, and u.",
+    "Recognise the front vowels ä, ö, and y.",
+    "Handle words that contain only the neutral vowels e and i."
+  ],
+  "sections": [
+    {
+      "title": "What vowel harmony means",
+      "paragraphs": [
+        "A vowel is a speech sound written with a letter such as a, e, i, o, u, y, ä, or ö. Finnish endings often come in two matching versions. One version contains a and the other contains ä.",
+        "The vowels a, o, and u form the back-vowel family. The vowels ä, ö, and y form the front-vowel family. The vowels e and i are neutral: they can live beside either family."
+      ],
+      "keyPoints": ["Back vowels: a, o, u", "Front vowels: ä, ö, y", "Neutral vowels: e, i"]
+    },
+    {
+      "title": "How to choose an ending",
+      "paragraphs": [
+        "Look through the Finnish word for a, o, or u. If one of them appears, choose the ending with a, such as -ssa or -vat.",
+        "If the word has ä, ö, or y and no back vowel, choose the ending with ä, such as -ssä or -vät. A word containing only e and i normally also chooses the ä version."
+      ],
+      "keyPoints": ["talo → -ssa", "pöytä → -ssä", "nimi → -ssä"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "talo + -ssa → talossa",
+      "english": "in the house",
+      "steps": ["talo contains a and o.", "Both are back vowels.", "Choose the a-ending -ssa."]
+    },
+    {
+      "finnish": "kylä + -ssä → kylässä",
+      "english": "in the village",
+      "steps": [
+        "kylä contains y and ä.",
+        "They are front vowels.",
+        "Choose the ä-ending -ssä. The stem stays unchanged."
+      ]
+    },
+    {
+      "finnish": "tie + -ssä → tiessä",
+      "english": "on the road",
+      "steps": [
+        "tie contains only i and e.",
+        "i and e are neutral.",
+        "A neutral-only Finnish word normally chooses the front-vowel ending -ssä."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not choose an ending from the final vowel alone; inspect the whole Finnish word.",
+    "The letters a and ä are different Finnish vowels, not decorative versions of one letter.",
+    "Loanwords can behave differently, but the regular beginner rule covers the words in this pack."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ff-a1-l-vh-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Look at “talo”. Which family contains its non-neutral vowels?",
+      "acceptedAnswers": ["back vowels"],
+      "explanation": "talo contains a and o. Both belong to the back-vowel family.",
+      "tags": ["lesson-practice", "vowel-harmony"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["talo", "päivä", "tie"],
+      "options": ["back vowels", "front vowels", "only neutral vowels"],
+      "optionFeedback": {
+        "back vowels": "Correct. talo contains a and o. Both belong to the back-vowel family.",
+        "front vowels": "“front vowels” does not show the required pattern. talo contains a and o. Both belong to the back-vowel family.",
+        "only neutral vowels": "“only neutral vowels” does not show the required pattern. talo contains a and o. Both belong to the back-vowel family."
+      }
+    },
+    {
+      "id": "ff-a1-l-vh-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which ending fits “päivä”?",
+      "acceptedAnswers": ["-ssä"],
+      "explanation": "päivä contains ä and no back vowel, so it takes the front-vowel ending -ssä.",
+      "tags": ["lesson-practice", "vowel-harmony"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["talo", "päivä", "tie"],
+      "options": ["-ssa", "-ssä"],
+      "optionFeedback": {
+        "-ssa": "“-ssa” does not show the required pattern. päivä contains ä and no back vowel, so it takes the front-vowel ending -ssä.",
+        "-ssä": "Correct. päivä contains ä and no back vowel, so it takes the front-vowel ending -ssä."
+      }
+    },
+    {
+      "id": "ff-a1-l-vh-p03",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "The vowels in “tie” belong to which group?",
+      "acceptedAnswers": ["only neutral vowels"],
+      "explanation": "tie contains only i and e. Both are neutral vowels.",
+      "tags": ["lesson-practice", "vowel-harmony"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["talo", "päivä", "tie"],
+      "options": ["back vowels", "front vowels", "only neutral vowels"],
+      "optionFeedback": {
+        "back vowels": "“back vowels” does not show the required pattern. tie contains only i and e. Both are neutral vowels.",
+        "front vowels": "“front vowels” does not show the required pattern. tie contains only i and e. Both are neutral vowels.",
+        "only neutral vowels": "Correct. tie contains only i and e. Both are neutral vowels."
+      }
+    }
+  ]
+}

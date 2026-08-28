@@ -1,8 +1,10 @@
-import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { existsSync, readFileSync } from 'node:fs';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
-const path = resolve('public/content', process.argv[2] ?? 'vowel-harmony-kpt-tplural.json');
-const pack = JSON.parse(readFileSync(path, 'utf8'));
+const input = process.argv[2];
+if (input !== '--stdin') throw new Error('Provide an assembled content pack through --stdin.');
+const pack = JSON.parse(readFileSync(0, 'utf8'));
 const allowedTypes = new Set([
   'multiple-choice',
   'fill-blank',
@@ -312,68 +314,17 @@ for (const exercise of exercises) {
       errors.push(`${exercise.id}: parallel exercise must use a different surface answer`);
   }
 }
-if (pack.id === 'vowel-harmony-kpt-tplural') {
-  const kptLessonIds = [
-    'kpt-doubles',
-    'kpt-singles',
-    'kpt-special-k',
-    'kpt-clusters',
-    'kpt-basics',
-  ];
-  for (const lessonId of kptLessonIds) {
-    const lesson = lessons.find((candidate) => candidate.id === lessonId);
-    if (!lesson) {
-      errors.push(`${lessonId}: required KPT learning block is missing`);
-      continue;
-    }
-    if (lesson.examples?.length < 2)
-      errors.push(`${lessonId}: needs at least two worked contrasts`);
-    if (lesson.practiceExercises?.length < 4 || lesson.practiceExercises?.length > 5)
-      errors.push(`${lessonId}: difficult KPT lesson needs four or five practice exercises`);
-    if (lesson.introducedVocabulary?.length > 10)
-      errors.push(`${lessonId}: KPT vocabulary must not exceed ten new items`);
-  }
-  const kptOnlyProduction = [
-    ...pack.tests
-      .filter((test) =>
-        [
-          'test-kpt-doubles',
-          'test-kpt-singles',
-          'test-kpt-special-k',
-          'test-kpt-clusters',
-        ].includes(test.id),
-      )
-      .flatMap((test) => test.exercises ?? []),
-    ...lessons
-      .filter((lesson) =>
-        ['kpt-doubles', 'kpt-singles', 'kpt-special-k', 'kpt-clusters'].includes(lesson.id),
-      )
-      .flatMap((lesson) => lesson.practiceExercises ?? []),
-  ].filter((exercise) => exercise.type === 'fill-blank');
-  for (const exercise of kptOnlyProduction) {
-    const isVerb = /“to [^”]+”/.test(exercise.prompt);
-    if (isVerb && !/supplied stem .+minä -n/i.test(exercise.prompt))
-      errors.push(`${exercise.id}: KPT-only verb production must supply its stem and minä ending`);
-    if (!isVerb && !/supplied genitive(?: ending)? -n/i.test(exercise.prompt))
-      errors.push(`${exercise.id}: KPT-only noun production must supply the genitive ending`);
-  }
-  for (const exercise of pack.tests.find((test) => test.id === 'harmony-in-forms')?.exercises ??
-    []) {
-    if (/weakens|lengthens|stem change|changes to/i.test(exercise.explanation))
-      errors.push(`${exercise.id}: focused inessive item contains a hidden stem transformation`);
-  }
-  for (const exercise of pack.tests.find((test) => test.id === 'plural-verb-harmony')?.exercises ??
-    []) {
-    if (!/supplied/i.test(exercise.explanation))
-      errors.push(`${exercise.id}: -vat/-vät item must state that its stem is supplied`);
-  }
-  for (const exercise of pack.tests.find((test) => test.id === 'plural-in-sentences')?.exercises ??
-    []) {
-    const parts = exercise.sentenceExplanation?.parts ?? [];
-    if (!parts[0]?.formation?.includes('stem stays unchanged'))
-      errors.push(`${exercise.id}: plural-sentence subject must use a stable stem`);
-    if (!parts[2]?.formation?.includes('supplied as a complete fixed word'))
-      errors.push(`${exercise.id}: plural-sentence context must be supplied as a fixed word`);
+if (typeof pack.id !== 'string' || !/^[a-z0-9][a-z0-9-]*$/u.test(pack.id)) {
+  errors.push('pack id must be a safe folder identifier');
+} else {
+  const specificValidatorPath = resolve(
+    dirname(fileURLToPath(import.meta.url)),
+    'content-validation',
+    `${pack.id}.mjs`,
+  );
+  if (existsSync(specificValidatorPath)) {
+    const module = await import(pathToFileURL(specificValidatorPath).href);
+    errors.push(...module.validatePack(pack));
   }
 }
 if (errors.length) {

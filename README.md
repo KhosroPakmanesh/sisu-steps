@@ -52,7 +52,7 @@ Git metadata, repository-wide ignore rules, shared editor configuration, the cha
 
 ## Content ownership
 
-Product-level content policy and pedagogy records live under root `specs/`. The current generator, validator, catalog, and bundled JSON files are client-owned and documented in the client README.
+Product-level content policy and pedagogy records live under root `specs/`. Pure-JSON pack folders, generic direct-source validation, browser-side runtime assembly, and unchanged static deployment are client-owned and documented in the client README.
 
 ## Product contract
 
