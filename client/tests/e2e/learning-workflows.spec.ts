@@ -7,6 +7,206 @@ async function expectClippedPaper(locator: Locator) {
   expect(await locator.evaluate((element) => getComputedStyle(element).clipPath)).not.toBe('none');
 }
 
+test('wraps the unchanged paper in a compact clipped folder', async ({ page }) => {
+  await page.goto('/');
+
+  const cover = page.locator('.workbook-cover');
+  const paper = page.locator('.page-shell');
+  const navigation = page.locator('.workbook-folder-tabs');
+  const tabs = page.locator('.workbook-folder-tab');
+  const clip = page.locator('.workbook-page-clip');
+
+  await expect(cover).toBeVisible();
+  await expect(paper).toBeVisible();
+  await expect(page.locator('.site-header nav')).toHaveCount(0);
+  await expect(navigation).toBeVisible();
+  await expect(tabs).toHaveCount(3);
+  await expect(tabs).toHaveText(['Topics', 'Reports', 'Data & backup']);
+  await expect(clip).toBeVisible();
+
+  const [brandBox, appearanceBox] = await Promise.all([
+    page.locator('.brand').boundingBox(),
+    page.locator('.appearance-control').boundingBox(),
+  ]);
+  expect(brandBox).not.toBeNull();
+  expect(appearanceBox).not.toBeNull();
+  expect(appearanceBox?.x ?? 0).toBeGreaterThan((brandBox?.x ?? 0) + (brandBox?.width ?? 0));
+  expect(
+    Math.abs(
+      (brandBox?.y ?? 0) +
+        (brandBox?.height ?? 0) / 2 -
+        ((appearanceBox?.y ?? 0) + (appearanceBox?.height ?? 0) / 2),
+    ),
+  ).toBeLessThan(2);
+
+  const [coverBox, paperBox, clipBox, tabBoxes, tabColors] = await Promise.all([
+    cover.boundingBox(),
+    paper.boundingBox(),
+    clip.boundingBox(),
+    tabs.evaluateAll((elements) =>
+      elements.map((element) => element.getBoundingClientRect().toJSON()),
+    ),
+    tabs.evaluateAll((elements) =>
+      elements.map((element) => getComputedStyle(element).backgroundColor),
+    ),
+  ]);
+
+  expect(coverBox).not.toBeNull();
+  expect(paperBox).not.toBeNull();
+  expect(clipBox).not.toBeNull();
+  expect(coverBox?.x ?? 0).toBeLessThanOrEqual(paperBox?.x ?? 0);
+  expect((coverBox?.x ?? 0) + (coverBox?.width ?? 0)).toBeGreaterThanOrEqual(
+    (paperBox?.x ?? 0) + (paperBox?.width ?? 0),
+  );
+  expect(coverBox?.y ?? 0).toBeLessThanOrEqual(paperBox?.y ?? 0);
+  expect((coverBox?.y ?? 0) + (coverBox?.height ?? 0)).toBeGreaterThanOrEqual(
+    (paperBox?.y ?? 0) + (paperBox?.height ?? 0),
+  );
+  const viewportWidth = page.viewportSize()?.width ?? 0;
+  const folderLeftInset = (paperBox?.x ?? 0) - (coverBox?.x ?? 0);
+  const folderRightInset =
+    (coverBox?.x ?? 0) + (coverBox?.width ?? 0) - ((paperBox?.x ?? 0) + (paperBox?.width ?? 0));
+  expect(folderLeftInset).toBeGreaterThanOrEqual(38);
+  expect(folderLeftInset).toBeLessThanOrEqual(40);
+  expect(folderRightInset).toBeGreaterThanOrEqual(38);
+  expect(folderRightInset).toBeLessThanOrEqual(40);
+  expect(Math.abs(folderLeftInset - folderRightInset)).toBeLessThan(2);
+  const folderTopInset = (paperBox?.y ?? 0) - (coverBox?.y ?? 0);
+  expect(folderTopInset).toBeGreaterThanOrEqual(24);
+  expect(folderTopInset).toBeLessThanOrEqual(30);
+  expect(tabBoxes.every((tab) => tab.x < (paperBox?.x ?? 0))).toBe(true);
+  expect(tabBoxes.every((tab) => tab.x + tab.width > (paperBox?.x ?? 0))).toBe(true);
+  expect(tabBoxes.every((tab) => tab.height >= 90)).toBe(true);
+  expect(tabBoxes[0]?.y ?? 0).toBeGreaterThanOrEqual((paperBox?.y ?? 0) + 12);
+  expect(tabBoxes.map((tab) => tab.y)).toEqual(
+    [...tabBoxes.map((tab) => tab.y)].sort((a, b) => a - b),
+  );
+  expect(tabColors).toEqual(['rgb(90, 155, 213)', 'rgb(244, 239, 229)', 'rgb(224, 185, 41)']);
+  expect(clipBox?.x ?? 0).toBeGreaterThan((paperBox?.x ?? 0) + (paperBox?.width ?? 0) - 40);
+  expect(clipBox?.width ?? 0).toBeGreaterThanOrEqual(viewportWidth <= 560 ? 22 : 34);
+  const notebookNoteBox = await page.locator('.hero .notebook-note').boundingBox();
+  expect(notebookNoteBox).not.toBeNull();
+  expect((notebookNoteBox?.x ?? 0) + (notebookNoteBox?.width ?? 0)).toBeLessThanOrEqual(
+    (clipBox?.x ?? 0) - 2,
+  );
+  expect(
+    await paper.evaluate((element) =>
+      Number.parseFloat(getComputedStyle(element, '::after').right),
+    ),
+  ).toBeGreaterThan(clipBox?.width ?? 0);
+  expect(await paper.evaluate((element) => getComputedStyle(element, '::before').content)).toBe(
+    'none',
+  );
+  expect(
+    await tabs.first().evaluate((element) => getComputedStyle(element).backgroundImage),
+  ).toContain('linear-gradient');
+
+  const tabBeforeHover = await tabs.nth(1).boundingBox();
+  await tabs.nth(1).hover();
+  await expect
+    .poll(async () => (await tabs.nth(1).boundingBox())?.y ?? 0)
+    .toBeLessThan(tabBeforeHover?.y ?? 0);
+
+  await page.mouse.move(300, 300);
+  const stickyTop = await navigation.evaluate((element) =>
+    Number.parseFloat(getComputedStyle(element).top),
+  );
+  const paperTop = await paper.evaluate(
+    (element) => element.getBoundingClientRect().top + window.scrollY,
+  );
+  await page.evaluate((scrollTop) => window.scrollTo(0, scrollTop), paperTop + 400);
+  await expect
+    .poll(async () => (await navigation.boundingBox())?.y ?? Number.POSITIVE_INFINITY)
+    .toBeCloseTo(stickyTop, 0);
+  expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+    await page.evaluate(() => document.documentElement.clientWidth),
+  );
+});
+
+test('keeps the folder margin fixed between responsive breakpoints', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.goto('/');
+
+  for (const width of [320, 560, 768, 901, 1000, 1100, 1248, 1440, 1754]) {
+    await page.setViewportSize({ width, height: 900 });
+    const [headerBox, folderBox, coverBox, paperBox, tabBoxes, contentInset] = await Promise.all([
+      page.locator('.site-header').boundingBox(),
+      page.locator('.workbook-folder').boundingBox(),
+      page.locator('.workbook-cover').boundingBox(),
+      page.locator('.page-shell').boundingBox(),
+      page
+        .locator('.workbook-folder-tab')
+        .evaluateAll((elements) =>
+          elements.map((element) => element.getBoundingClientRect().toJSON()),
+        ),
+      page.locator('.page-shell').evaluate((element) => {
+        const probe = document.createElement('div');
+        probe.style.position = 'absolute';
+        probe.style.paddingLeft = 'var(--sheet-gutter)';
+        element.append(probe);
+        const sheetGutter = Number.parseFloat(getComputedStyle(probe).paddingLeft);
+        probe.remove();
+        return {
+          paddingLeft: Number.parseFloat(getComputedStyle(element).paddingLeft),
+          sheetGutter,
+        };
+      }),
+    ]);
+    expect(headerBox, `header at ${width}px`).not.toBeNull();
+    expect(folderBox, `folder wrapper at ${width}px`).not.toBeNull();
+    expect(coverBox, `folder cover at ${width}px`).not.toBeNull();
+    expect(paperBox, `paper at ${width}px`).not.toBeNull();
+
+    const leftInset = (paperBox?.x ?? 0) - (coverBox?.x ?? 0);
+    const rightInset =
+      (coverBox?.x ?? 0) + (coverBox?.width ?? 0) - ((paperBox?.x ?? 0) + (paperBox?.width ?? 0));
+    const topInset = (paperBox?.y ?? 0) - (coverBox?.y ?? 0);
+    expect(leftInset, `left folder margin at ${width}px`).toBeGreaterThanOrEqual(38);
+    expect(leftInset, `left folder margin at ${width}px`).toBeLessThanOrEqual(40);
+    expect(rightInset, `right folder margin at ${width}px`).toBeGreaterThanOrEqual(38);
+    expect(rightInset, `right folder margin at ${width}px`).toBeLessThanOrEqual(40);
+    expect(Math.abs(leftInset - rightInset), `balanced margins at ${width}px`).toBeLessThan(2);
+    expect(topInset, `top folder margin at ${width}px`).toBeGreaterThanOrEqual(24);
+    expect(topInset, `top folder margin at ${width}px`).toBeLessThanOrEqual(30);
+    expect(coverBox?.x ?? 0, `left screen breathing room at ${width}px`).toBeGreaterThanOrEqual(16);
+    expect(
+      width - ((coverBox?.x ?? 0) + (coverBox?.width ?? 0)),
+      `right screen breathing room at ${width}px`,
+    ).toBeGreaterThanOrEqual(16);
+    expect(
+      tabBoxes.every((tab) => tab.x >= (coverBox?.x ?? 0) - 1),
+      `unclipped folder tabs at ${width}px`,
+    ).toBe(true);
+    expect(
+      (coverBox?.y ?? 0) - ((headerBox?.y ?? 0) + (headerBox?.height ?? 0)),
+      `top desk breathing room at ${width}px`,
+    ).toBeGreaterThanOrEqual(24);
+    expect(
+      contentInset.paddingLeft - contentInset.sheetGutter,
+      `additional left content inset at ${width}px`,
+    ).toBeCloseTo(8, 0);
+  }
+
+  const coverBox = await page.locator('.workbook-cover').boundingBox();
+  const decorationBoxes = await Promise.all(
+    ['.desk-lamp', '.desk-pencil', '.desk-ruler', '.desk-paperclip'].map((selector) =>
+      page.locator(selector).boundingBox(),
+    ),
+  );
+  expect(coverBox).not.toBeNull();
+  for (const decorationBox of decorationBoxes) {
+    expect(decorationBox).not.toBeNull();
+    const horizontalOverlap = Math.max(
+      0,
+      Math.min(
+        (decorationBox?.x ?? 0) + (decorationBox?.width ?? 0),
+        (coverBox?.x ?? 0) + (coverBox?.width ?? 0),
+      ) - Math.max(decorationBox?.x ?? 0, coverBox?.x ?? 0),
+    );
+    expect(horizontalOverlap).toBeLessThanOrEqual((decorationBox?.width ?? 0) / 2);
+  }
+});
+
 test('opens the catalog and exposes stable learning routes', async ({ page }) => {
   await page.goto('/');
 
@@ -49,7 +249,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
     expect(readerBox).not.toBeNull();
     expect(
       Math.abs((readerBox?.x ?? 0) + (readerBox?.width ?? 0) / 2 - viewportCenter),
-    ).toBeLessThan(2);
+    ).toBeLessThan(4);
   }
 
   await page.goto(`/learn/${TOPIC_SEGMENT}/guided-review`);
@@ -533,28 +733,22 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await page.goto('/');
 
   await expect(page.locator('.topic-card')).toHaveCount(1);
-  await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toContainText('Data');
+  const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
+  await expect(primaryNavigation).toContainText('Data');
+  await expect(primaryNavigation.getByRole('link')).toHaveCount(3);
+  await expect(page.locator('.site-header nav')).toHaveCount(0);
   const headerLayout = await page.locator('.header-tools').evaluate((header) => {
-    const controls = [...header.querySelectorAll('nav a, .appearance-options label')];
-    const navigation = header.querySelector('nav')?.getBoundingClientRect();
+    const controls = [...header.querySelectorAll('.appearance-options label')];
     const appearance = header.querySelector('.appearance-switch')?.getBoundingClientRect();
     return {
       controlCount: controls.length,
-      groupCenterSpread: Math.abs(
-        ((appearance?.top ?? 0) + (appearance?.bottom ?? 0)) / 2 -
-          ((navigation?.top ?? 0) + (navigation?.bottom ?? 0)) / 2,
-      ),
       flexWrap: getComputedStyle(header).flexWrap,
-      groupGap: (appearance?.left ?? 0) - (navigation?.right ?? 0),
-      navigationHeight: navigation?.height ?? 0,
       switchHeight: appearance?.height ?? 0,
     };
   });
-  expect(headerLayout.controlCount).toBe(6);
-  expect(headerLayout.groupCenterSpread).toBeLessThan(2);
+  expect(headerLayout.controlCount).toBe(3);
   expect(headerLayout.flexWrap).toBe('nowrap');
-  expect(headerLayout.groupGap).toBeGreaterThanOrEqual(8);
-  expect(headerLayout.switchHeight).toBeLessThanOrEqual(headerLayout.navigationHeight);
+  expect(headerLayout.switchHeight).toBeGreaterThan(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );

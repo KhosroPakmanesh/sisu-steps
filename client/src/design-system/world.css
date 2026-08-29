@@ -29,6 +29,8 @@ body::before {
 }
 
 .desk-stage {
+  --desk-object-outset: max(1rem, calc(50vw - 52rem));
+
   position: fixed;
   z-index: 0;
   inset: 0;
@@ -52,7 +54,7 @@ body::before {
 .desk-lamp {
   position: absolute;
   top: 8.5rem;
-  left: max(0.8rem, calc(50vw - 46rem));
+  left: var(--desk-object-outset);
   width: 8.2rem;
   height: 5.2rem;
   border-radius: 7rem 7rem 1rem 1rem;
@@ -90,7 +92,7 @@ body::before {
 
 .desk-ruler {
   position: absolute;
-  right: max(1rem, calc(50vw - 47rem));
+  right: var(--desk-object-outset);
   bottom: 4rem;
   width: 16rem;
   height: 2.4rem;
@@ -106,7 +108,7 @@ body::before {
 .desk-pencil {
   position: absolute;
   bottom: 7.5rem;
-  left: max(0.6rem, calc(50vw - 44rem));
+  left: var(--desk-object-outset);
   width: 14rem;
   height: 0.72rem;
   border-radius: 0.1rem 0 0 0.1rem;
@@ -131,7 +133,7 @@ body::before {
 .desk-paperclip {
   position: absolute;
   top: 16rem;
-  right: max(0.75rem, calc(50vw - 44rem));
+  right: var(--desk-object-outset);
   width: 1.8rem;
   height: 5rem;
   border: 0.22rem solid var(--desk-metal);
@@ -145,20 +147,6 @@ body::before {
   z-index: 1;
   perspective: 1000px;
   transform-origin: left center;
-}
-
-.page-shell::before,
-.runner-shell::before {
-  position: absolute;
-  z-index: 3;
-  right: 0;
-  bottom: 0;
-  width: 2rem;
-  height: 2rem;
-  background: linear-gradient(135deg, transparent 48%, var(--paper-edge) 50%);
-  box-shadow: -0.18rem -0.18rem 0.2rem var(--notebook-shadow);
-  content: '';
-  pointer-events: none;
 }
 
 ::view-transition-old(root) {

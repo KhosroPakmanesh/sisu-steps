@@ -78,83 +78,14 @@
   font-size: 0.68rem;
 }
 
-.header-tools,
-nav {
-  display: flex;
-  align-items: center;
-}
-
 .header-tools {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
   min-width: 0;
+  margin-left: auto;
   gap: var(--space-4);
   flex-wrap: nowrap;
-}
-
-nav {
-  flex: 0 0 auto;
-  gap: 0.3rem;
-}
-
-nav a {
-  --tab-accent: var(--blue-300);
-
-  position: relative;
-  display: flex;
-  align-items: center;
-  min-height: var(--control-height-compact);
-  padding: 0.52rem 0.78rem 0.58rem;
-  border: 1px solid var(--overlay-line);
-  border-top: 0.24rem solid var(--tab-accent);
-  border-radius: 0.3rem 0.3rem 0 0;
-  background: color-mix(in srgb, var(--surface-header) 78%, var(--tab-accent));
-  color: var(--text-on-ink-muted);
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: var(--weight-bold);
-  white-space: nowrap;
-  box-shadow: 0 2px 0 var(--notebook-shadow);
-  transition:
-    transform var(--motion-fast) ease,
-    background var(--motion-fast) ease;
-}
-
-nav a:nth-child(2) {
-  --tab-accent: var(--green-500);
-}
-
-nav a:nth-child(3) {
-  --tab-accent: var(--amber-400);
-}
-
-nav a::before {
-  width: 0.34rem;
-  height: 0.34rem;
-  margin-right: var(--space-2);
-  border: 1px solid var(--overlay-line);
-  border-radius: 50%;
-  background: var(--surface-header);
-  content: '';
-}
-
-nav a:hover {
-  border-color: var(--overlay-line);
-  color: var(--text-on-ink);
-  transform: translateY(-0.1rem);
-}
-
-nav a.active {
-  border-color: var(--border-default);
-  border-top-color: var(--tab-accent);
-  background: var(--surface-paper);
-  color: var(--text-brand);
-  box-shadow:
-    inset 0 -0.18rem 0 var(--tab-accent),
-    0 2px 0 var(--notebook-shadow);
-}
-
-nav a.active::before {
-  border-color: var(--border-default);
-  background: var(--surface-desk);
 }
 
 .site-footer {
@@ -185,19 +116,11 @@ nav a.active::before {
 
 @media (width <= 900px) {
   .site-header {
-    display: grid;
-    grid-template-columns: 1fr;
     gap: var(--space-3);
   }
 
   .header-tools {
-    justify-content: flex-start;
-    width: 100%;
-    max-width: 100%;
-    padding-block-end: 0.25rem;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    scrollbar-width: thin;
+    justify-content: flex-end;
   }
 }
 
@@ -211,23 +134,7 @@ nav a.active::before {
     display: none;
   }
 
-  .header-tools {
-    display: flex;
-  }
-
-  nav a {
-    flex: 0 0 auto;
-    justify-content: center;
-    padding: 0.55rem 0.5rem;
-  }
-
   .site-footer {
     display: grid;
-  }
-}
-
-@media (width <= 390px) {
-  nav a {
-    font-size: 0.75rem;
   }
 }

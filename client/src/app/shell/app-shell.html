@@ -11,16 +11,6 @@
     <span><strong>Sisu Steps</strong><small>Finnish exercise book</small></span>
   </a>
   <div class="header-tools">
-    <nav aria-label="Primary navigation">
-      <a
-        [routerLink]="paths.home"
-        [routerLinkActiveOptions]="{ exact: true }"
-        routerLinkActive="active"
-        >Topics</a
-      >
-      <a [routerLink]="paths.reports" routerLinkActive="active">Reports</a>
-      <a [routerLink]="paths.data" routerLinkActive="active">Data & backup</a>
-    </nav>
     <fieldset class="appearance-control">
       <legend class="visually-hidden">Appearance</legend>
       <div
@@ -83,7 +73,37 @@
     </fieldset>
   </div>
 </header>
-<router-outlet />
+<div class="workbook-folder">
+  <div class="workbook-cover" aria-hidden="true"></div>
+  <nav class="workbook-folder-tabs" aria-label="Primary navigation">
+    <a
+      class="workbook-folder-tab tab-blue"
+      [routerLink]="paths.home"
+      [routerLinkActiveOptions]="{ exact: true }"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      ><span>Topics</span></a
+    >
+    <a
+      class="workbook-folder-tab tab-white"
+      [routerLink]="paths.reports"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      ><span>Reports</span></a
+    >
+    <a
+      class="workbook-folder-tab tab-yellow"
+      [routerLink]="paths.data"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      ><span>Data &amp; backup</span></a
+    >
+  </nav>
+  <router-outlet />
+  <div class="workbook-page-hardware" aria-hidden="true">
+    <span class="workbook-page-clip"></span>
+  </div>
+</div>
 <footer class="site-footer">
   <p><strong>Sisu Steps</strong> · Your progress stays safely in this browser.</p>
   <p>Quiet study · one step at a time</p>

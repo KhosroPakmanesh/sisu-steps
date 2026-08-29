@@ -6,7 +6,7 @@ The canonical implementation is `client/src/design-system/tokens.css`.
 
 - Ink and surfaces: primary, secondary, muted, desk, canvas, paper, raised, ink-dark, and header surfaces and borders.
 - Brand and state: focus, success, warning, danger, skipped/review, disabled, and selected treatments.
-- Notebook atmosphere: ruling, margin, grid, overlay, paper shadow, sheet gutter, paper edge, desk wood, groove, glow, metal, and graphite values.
+- Notebook atmosphere: ruling, margin, grid, overlay, paper shadow, sheet gutter, paper edge, desk wood, groove, glow, metal, graphite, compact folder-cover, translucent page-clip, and divider-tab values.
 - Typography: readable body/display stacks plus a decorative note stack, reusable sizes, line heights, and weights.
 - Spacing: a consistent step scale for gaps and padding.
 - Radius and shadow: restrained control, pressed-label, card, panel, and pill geometry.

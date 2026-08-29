@@ -50,8 +50,8 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Appearance choice
 
-- Offer **Day**, **Automatic**, and **Night**, in that left-to-right order, as a native labelled radio group presented through accessible sun, half-day/half-night, and moon icons around one compact side-view mechanical toggle. Show the metal mounting base and tilt the lever left for Day, keep it upright for Automatic, and tilt it right for Night. Do not enclose the switch in a colored panel or border, and keep it no taller than the navigation pack. Day maps to the existing explicit Light value and Night maps to the existing explicit Dark value.
-- Retain **Appearance** as the radio group's accessible name, but do not show a redundant group heading. Keep the switch and unnumbered primary tabs in one continuous header row while using a clear gap to distinguish the navigation pack from the appearance switch.
+- Offer **Day**, **Automatic**, and **Night**, in that left-to-right order, as a native labelled radio group presented through accessible sun, half-day/half-night, and moon icons around one compact side-view mechanical toggle. Show the metal mounting base and tilt the lever left for Day, keep it upright for Automatic, and tilt it right for Night. Do not enclose the switch in a colored panel or border. Day maps to the existing explicit Light value and Night maps to the existing explicit Dark value.
+- Retain **Appearance** as the radio group's accessible name, but do not show a redundant group heading. Keep the Appearance switch right-aligned opposite the brand in the same header row from 320 pixels upward, while primary navigation belongs to the left edge of the workbook folder.
 - Let Automatic follow `prefers-color-scheme`, including changes made while the app is open.
 - Store only explicit Light or Dark overrides; removing an override returns to Automatic.
 - Treat missing, invalid, or unavailable browser storage as Automatic and never block learning because an appearance preference cannot be read or saved.
@@ -59,7 +59,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Stationery controls
 
-- Present primary navigation as unnumbered subject-divider tabs without changing link order, wording, destinations, or active-page semantics.
+- Present primary navigation as three elongated, unnumbered, visibly labelled blue/white/yellow subject-divider links on the folder's left edge without changing link order, wording, destinations, or active-page semantics. Tuck each tab's right edge beneath the paper, use a darker shade rather than a selected border for the active route, start the stack with visible breathing room below the paper top, give hover and keyboard focus a restrained physical lift, and keep the stack sticky after the paper top scrolls away while constraining it to the folder.
 - Present every action as the same recognisable cut-paper piece. Primary, secondary, compact, text, review, file, dialog, disabled, and destructive variants keep one silhouette and physical behavior; vary only paper tint, ink, edge accent, internal marks, and explicit wording.
 - Present answer radios as pencil-marked circles, text answers as ruled fields, and word-order buttons as movable vocabulary cards while preserving native form behavior.
 - Put answer radios on perforated ruled slips, place selected word cards on a sentence-building strip, keep available word cards in a labelled paper pocket, and present keyboard shortcuts as margin annotations rather than computer keycaps.

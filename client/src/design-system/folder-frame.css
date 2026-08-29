@@ -1,0 +1,283 @@
+.workbook-folder {
+  --folder-tab-stack-height: 19.11rem;
+  --folder-clip-content-clearance: calc(2.16rem + var(--space-4));
+
+  position: relative;
+  isolation: isolate;
+  display: flow-root;
+  margin: var(--space-6) var(--space-4) 0;
+  padding-top: 0.75rem;
+  overflow: clip;
+}
+
+.workbook-cover,
+.workbook-page-hardware {
+  position: absolute;
+  left: 50%;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.workbook-cover {
+  z-index: 0;
+  top: 0.25rem;
+  bottom: 0.5rem;
+  width: min(calc(100% - 0.25rem), calc(var(--page-width) + 5rem));
+  border: 1px solid var(--folder-cover-deep);
+  border-radius: 0.8rem 0.65rem 0.72rem 0.55rem;
+  background-color: var(--folder-cover);
+  background-image:
+    linear-gradient(135deg, var(--folder-cover-highlight), transparent 32%),
+    repeating-linear-gradient(
+      88deg,
+      transparent 0 3.8rem,
+      color-mix(in srgb, var(--folder-cover-deep) 28%, transparent) 3.85rem 3.9rem
+    ),
+    radial-gradient(circle at 18% 22%, var(--folder-cover-highlight) 0 0.04rem, transparent 0.05rem);
+  background-size:
+    auto,
+    auto,
+    0.75rem 0.85rem;
+  box-shadow:
+    inset 0 0 0 0.28rem color-mix(in srgb, var(--folder-cover-highlight) 46%, transparent),
+    inset 0 0 0 0.42rem color-mix(in srgb, var(--folder-cover-deep) 72%, transparent),
+    inset 0.7rem 0 0.9rem rgb(0 0 0 / 11%),
+    0.35rem 0.5rem 0 var(--folder-cover-deep),
+    0.75rem 1rem 1.7rem var(--notebook-shadow);
+}
+
+.workbook-cover::before {
+  position: absolute;
+  inset: 0.72rem;
+  border: 1px solid color-mix(in srgb, var(--folder-cover-highlight) 76%, transparent);
+  border-radius: 0.45rem;
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--folder-cover-deep) 72%, transparent);
+  content: '';
+}
+
+.workbook-cover::after {
+  position: absolute;
+  top: 1rem;
+  right: 0.58rem;
+  bottom: 1rem;
+  width: 0.32rem;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--folder-cover-highlight) 62%, transparent);
+  box-shadow: -0.22rem 0 0 color-mix(in srgb, var(--folder-cover-deep) 58%, transparent);
+  content: '';
+}
+
+.workbook-folder-tabs {
+  position: sticky;
+  z-index: 1;
+  top: calc(var(--header-height) + var(--space-3));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.18rem;
+  width: min(calc(100% - 0.25rem), calc(var(--page-width) + 5rem));
+  height: var(--folder-tab-stack-height);
+  margin: 3rem auto calc(0rem - var(--folder-tab-stack-height) - 3rem);
+}
+
+.workbook-folder-tab {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.65rem;
+  height: 6.25rem;
+  margin-left: 0;
+  border: 1px solid color-mix(in srgb, var(--folder-cover-deep) 78%, transparent);
+  border-radius: 0.42rem 0 0 0.42rem;
+  color: var(--folder-cover-deep);
+  text-decoration: none;
+  font-size: 0.68rem;
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.035em;
+  line-height: 1;
+  box-shadow:
+    inset 0.12rem 0.12rem 0 var(--folder-cover-highlight),
+    0 0.22rem 0.32rem var(--notebook-shadow);
+  transition:
+    transform var(--motion-fast) ease,
+    filter var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.workbook-folder-tab span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+.workbook-folder-tab:hover,
+.workbook-folder-tab:focus-visible {
+  z-index: 1;
+  filter: brightness(1.05);
+  box-shadow:
+    inset 0.12rem 0.12rem 0 var(--folder-cover-highlight),
+    -0.18rem 0.38rem 0.48rem var(--notebook-shadow);
+  transform: translateY(-0.18rem) scale(1.035);
+}
+
+.workbook-folder-tab:focus-visible {
+  outline: 0.18rem solid var(--focus-ring);
+  outline-offset: 0.12rem;
+}
+
+.workbook-folder-tab.active {
+  background-image: linear-gradient(var(--folder-active-shade), var(--folder-active-shade));
+  box-shadow:
+    inset 0.12rem 0.12rem 0 var(--folder-cover-highlight),
+    0 0.28rem 0.38rem var(--notebook-shadow);
+  transform: translateX(0.3rem);
+}
+
+.workbook-folder-tab.active:hover,
+.workbook-folder-tab.active:focus-visible {
+  transform: translateX(0.3rem) translateY(-0.18rem) scale(1.035);
+}
+
+.workbook-folder-tab.tab-blue {
+  background-color: var(--folder-tab-blue);
+}
+
+.workbook-folder-tab.tab-white {
+  background-color: var(--folder-tab-white);
+}
+
+.workbook-folder-tab.tab-yellow {
+  background-color: var(--folder-tab-yellow);
+}
+
+.workbook-folder > router-outlet + * {
+  display: contents;
+}
+
+.workbook-folder > router-outlet + * > .page-shell,
+.workbook-folder > router-outlet + * > .runner-shell {
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - 5rem), var(--page-width));
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: calc(var(--sheet-gutter) + var(--space-2));
+  padding-right: max(var(--sheet-gutter), var(--folder-clip-content-clearance));
+}
+
+.workbook-folder > router-outlet + * > .page-shell::after,
+.workbook-folder > router-outlet + * > .runner-shell::after {
+  right: var(--folder-clip-content-clearance);
+}
+
+.workbook-page-hardware {
+  z-index: 3;
+  top: 2.35rem;
+  bottom: 2.35rem;
+  width: min(calc(100% - 5rem), var(--page-width));
+}
+
+.workbook-page-clip {
+  position: absolute;
+  top: 0;
+  right: -0.18rem;
+  bottom: 0;
+  width: 2.16rem;
+  border: 1px solid rgb(89 105 119 / 48%);
+  border-radius: 0.4rem 0.7rem 0.7rem 0.4rem;
+  background:
+    linear-gradient(90deg, rgb(255 255 255 / 36%), transparent 34% 66%, rgb(62 78 94 / 26%)),
+    var(--folder-plastic);
+  box-shadow:
+    inset 0.2rem 0 0.28rem rgb(255 255 255 / 56%),
+    inset -0.16rem 0 0.24rem rgb(53 68 82 / 24%),
+    0.18rem 0.22rem 0.34rem var(--notebook-shadow);
+  backdrop-filter: blur(1px);
+}
+
+.workbook-page-clip::before {
+  position: absolute;
+  top: 18%;
+  right: 0.08rem;
+  width: 1.44rem;
+  height: 48%;
+  border: 1px solid rgb(89 105 119 / 38%);
+  border-radius: 0.45rem;
+  background: color-mix(in srgb, var(--folder-plastic) 90%, transparent);
+  box-shadow:
+    inset 0.16rem 0 0.22rem rgb(255 255 255 / 52%),
+    -0.16rem 0.16rem 0.24rem rgb(53 68 82 / 20%);
+  content: '';
+}
+
+.workbook-page-clip::after {
+  position: absolute;
+  top: 0.4rem;
+  bottom: 0.4rem;
+  left: 0.16rem;
+  width: 2px;
+  background: rgb(255 255 255 / 74%);
+  content: '';
+}
+
+@media (width <= 900px) {
+  .workbook-folder-tabs {
+    top: calc(7.25rem + var(--space-3));
+  }
+
+  .workbook-folder-tab {
+    width: 2.65rem;
+    font-size: 0.64rem;
+  }
+}
+
+@media (width <= 620px) {
+  .workbook-folder {
+    --folder-tab-stack-height: 17.61rem;
+  }
+
+  .workbook-folder-tabs {
+    top: var(--space-3);
+  }
+
+  .workbook-folder-tab {
+    height: 5.75rem;
+    font-size: 0.62rem;
+  }
+}
+
+@media (width <= 560px) {
+  .workbook-folder {
+    --folder-clip-content-clearance: calc(1.44rem + var(--space-3));
+
+    padding-top: var(--space-6);
+  }
+
+  .workbook-folder-tabs {
+    margin-top: 1.5rem;
+    margin-bottom: calc(0rem - var(--folder-tab-stack-height) - 1.5rem);
+  }
+
+  .workbook-page-clip {
+    right: -0.1rem;
+    width: 1.44rem;
+  }
+
+  .workbook-page-clip::before {
+    right: 0.03rem;
+    width: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .workbook-folder-tab {
+    transition: none;
+  }
+
+  .workbook-folder-tab:hover,
+  .workbook-folder-tab:focus-visible,
+  .workbook-folder-tab.active {
+    transform: none;
+  }
+}

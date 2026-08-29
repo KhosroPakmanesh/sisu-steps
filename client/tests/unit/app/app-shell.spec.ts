@@ -44,6 +44,24 @@ describe('AppShell', () => {
     expect(element.querySelector('.appearance-toggle-hardware')).not.toBeNull();
     expect(element.querySelectorAll('.appearance-choice-icon')).toHaveLength(3);
     expect(element.querySelector('.appearance-switch')?.classList).toContain('automatic-selected');
+    const folder = element.querySelector('.workbook-folder');
+    const tabs = [...element.querySelectorAll('.workbook-folder-tab')];
+    expect(folder).not.toBeNull();
+    expect(folder?.querySelector('.workbook-cover')).not.toBeNull();
+    expect(folder?.querySelector('router-outlet')).not.toBeNull();
+    expect(element.querySelector('.site-header nav')).toBeNull();
+    expect(folder?.querySelector('nav[aria-label="Primary navigation"]')).not.toBeNull();
+    expect(tabs.map((tab) => tab.classList.item(1))).toEqual([
+      'tab-blue',
+      'tab-white',
+      'tab-yellow',
+    ]);
+    expect(tabs.map((tab) => tab.textContent?.trim())).toEqual([
+      'Topics',
+      'Reports',
+      'Data & backup',
+    ]);
+    expect(folder?.querySelector('.workbook-page-clip')).not.toBeNull();
     expect(element.querySelector('footer')?.textContent).toContain('stays safely in this browser');
   });
 
