@@ -77,62 +77,35 @@
             </header>
 
             <div class="topic-progress">
-              <div>
-                <span>Tests tried</span>
-                <strong>{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong>
+              <div class="topic-progress-item">
+                <div>
+                  <span>Tests tried</span>
+                  <strong>{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong>
+                </div>
+                <div class="progress-ruler">
+                  <progress
+                    class="notebook-progress"
+                    [attr.aria-label]="summary.pack.title + ' tests tried'"
+                    [max]="summary.pack.tests.length"
+                    [value]="summary.attemptedTests"
+                  ></progress>
+                </div>
               </div>
-              <div class="progress-ruler">
-                <progress
-                  class="notebook-progress"
-                  [attr.aria-label]="summary.pack.title + ' tests tried'"
-                  [max]="summary.pack.tests.length"
-                  [value]="summary.attemptedTests"
-                ></progress>
-              </div>
-              <div>
-                <span>Lessons read</span>
-                <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
-              </div>
-              <div class="progress-ruler">
-                <progress
-                  class="notebook-progress"
-                  [attr.aria-label]="summary.pack.title + ' lessons read'"
-                  [max]="summary.totalLessons"
-                  [value]="summary.completedLessons"
-                ></progress>
+              <div class="topic-progress-item">
+                <div>
+                  <span>Lessons read</span>
+                  <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
+                </div>
+                <div class="progress-ruler">
+                  <progress
+                    class="notebook-progress"
+                    [attr.aria-label]="summary.pack.title + ' lessons read'"
+                    [max]="summary.totalLessons"
+                    [value]="summary.completedLessons"
+                  ></progress>
+                </div>
               </div>
             </div>
-
-            <dl class="topic-meta">
-              <div>
-                <dt>Attempts</dt>
-                <dd>{{ summary.attempts }}</dd>
-              </div>
-              <div>
-                <dt>Average</dt>
-                <dd>{{ summary.average === null ? '—' : summary.average + '%' }}</dd>
-              </div>
-              <div>
-                <dt>Mistakes</dt>
-                <dd>{{ summary.mistakes }}</dd>
-              </div>
-              <div>
-                <dt>Reviews due</dt>
-                <dd>{{ summary.reviewsDue }}</dd>
-              </div>
-            </dl>
-
-            <section
-              class="topic-objectives"
-              [attr.aria-label]="summary.pack.title + ' objectives'"
-            >
-              <h4>What you will learn</h4>
-              <ul>
-                @for (objective of summary.pack.objectives; track objective) {
-                  <li>{{ objective }}</li>
-                }
-              </ul>
-            </section>
 
             <div class="topic-card-actions">
               @if (summary.reviewsDue > 0 || summary.reviewInProgress) {

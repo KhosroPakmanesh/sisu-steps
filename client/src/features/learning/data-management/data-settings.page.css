@@ -127,6 +127,10 @@
   border-bottom: 1px solid var(--notebook-rule);
 }
 
+.archive-action-row > .button {
+  justify-self: end;
+}
+
 .archive-action-row h3,
 .clear-row h4 {
   margin: 0 0 var(--space-1);
@@ -307,7 +311,6 @@
   .archive-action-row > .button,
   .clear-row > .button {
     grid-column: 1 / -1;
-    width: 100%;
   }
 
   .clear-ledger-heading {
@@ -319,7 +322,7 @@
   }
 
   .topic-clear-strip .button {
-    width: 100%;
+    justify-self: end;
   }
 }
 

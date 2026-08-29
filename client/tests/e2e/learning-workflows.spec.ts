@@ -7,6 +7,46 @@ async function expectClippedPaper(locator: Locator) {
   expect(await locator.evaluate((element) => getComputedStyle(element).clipPath)).not.toBe('none');
 }
 
+async function expectLabelSizedAction(locator: Locator) {
+  await expect(locator).toBeVisible();
+  const sizes = await locator.evaluate((element) => {
+    const action = element as HTMLElement;
+    return {
+      actualWidth: action.offsetWidth,
+      height: action.offsetHeight,
+      viewportWidth: window.innerWidth,
+    };
+  });
+  expect(sizes.actualWidth).toBeLessThan(Math.min(300, sizes.viewportWidth * 0.8));
+  expect(sizes.height).toBeGreaterThanOrEqual(40);
+}
+
+async function expectActionGroupPlacement(group: Locator, placement: 'center' | 'end') {
+  await expect(group).toBeVisible();
+  const geometry = await group.evaluate((element) => {
+    const groupRect = element.getBoundingClientRect();
+    const actionRects = [...element.querySelectorAll<HTMLElement>('.button')]
+      .filter((action) => action.getClientRects().length > 0)
+      .map((action) => action.getBoundingClientRect());
+    return {
+      groupLeft: groupRect.left,
+      groupRight: groupRect.right,
+      actionsLeft: Math.min(...actionRects.map((rect) => rect.left)),
+      actionsRight: Math.max(...actionRects.map((rect) => rect.right)),
+    };
+  });
+  if (placement === 'center') {
+    expect(
+      Math.abs(
+        (geometry.actionsLeft + geometry.actionsRight) / 2 -
+          (geometry.groupLeft + geometry.groupRight) / 2,
+      ),
+    ).toBeLessThan(8);
+  } else {
+    expect(Math.abs(geometry.actionsRight - geometry.groupRight)).toBeLessThan(8);
+  }
+}
+
 test('wraps the unchanged paper in a compact clipped folder', async ({ page }) => {
   await page.goto('/');
 
@@ -278,6 +318,115 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
       listTop: document.querySelector('.lesson-list')?.getBoundingClientRect().top ?? 0,
     }));
     expect(positions.listTop).toBeGreaterThanOrEqual(positions.headerBottom);
+  }
+});
+
+test('uses a responsive three, two, and one-column topic-card grid', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.goto('/');
+
+  for (const [width, expectedColumns] of [
+    [1440, 3],
+    [768, 2],
+    [560, 1],
+    [320, 1],
+  ] as const) {
+    await page.setViewportSize({ width, height: 900 });
+    const columnCount = await page.locator('.topic-grid').evaluate(
+      (element) =>
+        getComputedStyle(element)
+          .gridTemplateColumns.split(' ')
+          .filter((column) => column.length > 0).length,
+    );
+    expect(columnCount, `topic-card columns at ${width}px`).toBe(expectedColumns);
+    const firstCard = page.locator('.topic-card').first();
+    await expect(firstCard).toBeVisible();
+    await expect(firstCard.locator('.topic-progress-item')).toHaveCount(2);
+    await expect(firstCard.locator('.topic-meta, .topic-objectives')).toHaveCount(0);
+    if (width === 1440) {
+      expect((await firstCard.boundingBox())?.height ?? Number.POSITIVE_INFINITY).toBeLessThan(400);
+      const cardSurface = await firstCard.evaluate((element) => {
+        const styles = getComputedStyle(element);
+        return {
+          backgroundImage: styles.backgroundImage,
+          borderTopWidth: Number.parseFloat(styles.borderTopWidth),
+        };
+      });
+      expect(cardSurface.backgroundImage).toBe('none');
+      expect(cardSurface.borderTopWidth).toBeGreaterThan(0);
+      await firstCard.hover();
+      await expect
+        .poll(() =>
+          firstCard.evaluate(
+            (element) => (getComputedStyle(element).boxShadow.match(/inset/g) ?? []).length,
+          ),
+        )
+        .toBe(1);
+    }
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      width,
+    );
+  }
+});
+
+test('sizes cut-paper actions to their labels across app routes', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+
+  for (const width of [1440, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+
+    await page.goto('/');
+    await expectLabelSizedAction(page.getByRole('link', { name: 'Open topic' }));
+
+    await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
+    await expectLabelSizedAction(page.getByRole('link', { name: 'Start test now' }));
+
+    await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+    await expectLabelSizedAction(page.getByRole('button', { name: 'Check answer' }));
+    await expectLabelSizedAction(page.getByRole('button', { name: /Show answer/ }));
+
+    await page.goto('/data');
+    await expectLabelSizedAction(page.getByRole('button', { name: 'Download backup' }));
+    await expectLabelSizedAction(page.locator('.file-button'));
+    const clearAll = page.getByRole('button', { name: 'Clear all history' });
+    await expectLabelSizedAction(clearAll);
+    await clearAll.click();
+    await expectLabelSizedAction(page.getByRole('button', { name: 'Keep my history' }));
+    await page.getByRole('button', { name: 'Keep my history' }).click();
+
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      width,
+    );
+  }
+});
+
+test('places compact action groups according to their page role', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+
+  for (const width of [1440, 320]) {
+    await page.setViewportSize({ width, height: 900 });
+
+    await page.goto('/');
+    await expectActionGroupPlacement(page.locator('.topic-card-actions').first(), 'center');
+
+    await page.goto(`/topics/${TOPIC_SEGMENT}`);
+    await expectActionGroupPlacement(page.locator('.test-actions').first(), 'end');
+
+    await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
+    await expectActionGroupPlacement(page.locator('.lesson-actions'), 'end');
+
+    await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+    await expectActionGroupPlacement(page.locator('.answer-actions'), 'end');
+
+    await page.goto('/data');
+    await expectActionGroupPlacement(page.locator('.archive-action-row').first(), 'end');
+    await page.getByRole('button', { name: 'Clear all history' }).click();
+    await expectActionGroupPlacement(page.locator('.confirmation-actions'), 'end');
+    await page.getByRole('button', { name: 'Keep my history' }).click();
+
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      width,
+    );
   }
 });
 

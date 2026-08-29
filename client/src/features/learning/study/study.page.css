@@ -182,8 +182,9 @@
 }
 
 .answer-actions {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: var(--space-3);
   margin-top: var(--space-6);
 }
@@ -203,7 +204,8 @@
 }
 
 .continue-button {
-  width: 100%;
+  display: flex;
+  margin-left: auto;
   margin-top: 1.5rem;
 }
 
@@ -285,10 +287,6 @@
 @media (width <= 560px) {
   .runner-shell {
     width: calc(100% - 0.75rem);
-  }
-
-  .answer-actions {
-    grid-template-columns: 1fr;
   }
 
   .runner-header {

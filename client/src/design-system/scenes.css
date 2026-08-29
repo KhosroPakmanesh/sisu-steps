@@ -85,7 +85,6 @@ main.page-shell .topic-card:nth-child(even) {
 main.page-shell .topic-card:hover {
   z-index: 2;
   box-shadow:
-    inset 0.45rem 0 0 var(--amber-400),
     inset 0.72rem 0 0 color-mix(in srgb, var(--surface-paper) 65%, transparent),
     0.45rem 0.6rem 0 var(--paper-edge),
     0.7rem 1rem 1.7rem var(--notebook-shadow);
@@ -94,15 +93,9 @@ main.page-shell .topic-card:hover {
 
 .topic-card header,
 .topic-card .topic-progress,
-.topic-card .topic-meta,
-.topic-card .topic-objectives,
 .topic-card .topic-card-actions {
   position: relative;
   z-index: 1;
-}
-
-.topic-card .topic-meta {
-  background: color-mix(in srgb, var(--surface-paper) 54%, transparent);
 }
 
 /* Topic: a fold-out map with an unbroken path through every available card. */
