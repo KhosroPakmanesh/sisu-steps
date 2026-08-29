@@ -951,6 +951,48 @@ test('remembers an appearance override and can return to automatic', async ({ pa
   await expect(switchBody).toHaveClass(/automatic-selected/);
 });
 
+test('turns the interactive desk lamp off in Day and makes it radiate in Night', async ({
+  page,
+}, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.emulateMedia({ colorScheme: 'dark' });
+  await page.goto('/');
+
+  const lamp = page.getByRole('button', { name: 'Toggle desk lamp between Day and Night' });
+  const light = page.locator('.desk-light');
+  const bulb = page.locator('.desk-lamp span');
+  await expect(lamp).toBeVisible();
+  await expect
+    .poll(() => light.evaluate((element) => Number.parseFloat(getComputedStyle(element).opacity)))
+    .toBeGreaterThanOrEqual(0.6);
+  expect(await bulb.evaluate((element) => getComputedStyle(element).boxShadow)).not.toBe('none');
+
+  const lampBox = await lamp.boundingBox();
+  expect(lampBox).not.toBeNull();
+  const armPoint = {
+    x: (lampBox?.x ?? 0) + (lampBox?.width ?? 0) * 0.78,
+    y: (lampBox?.y ?? 0) - 24,
+  };
+  await page.mouse.move(armPoint.x, armPoint.y);
+  await expect.poll(() => lamp.evaluate((element) => element.matches(':hover'))).toBe(true);
+  await page.mouse.click(armPoint.x, armPoint.y);
+  await expect(page.locator('html')).toHaveAttribute('data-appearance', 'light');
+  await expect
+    .poll(() => light.evaluate((element) => Number.parseFloat(getComputedStyle(element).opacity)))
+    .toBe(0);
+  await expect
+    .poll(() => bulb.evaluate((element) => getComputedStyle(element).boxShadow))
+    .toBe('none');
+
+  await expect(lamp).toBeFocused();
+  await page.keyboard.press('Space');
+  await expect(page.locator('html')).toHaveAttribute('data-appearance', 'dark');
+  await expect
+    .poll(() => light.evaluate((element) => Number.parseFloat(getComputedStyle(element).opacity)))
+    .toBeGreaterThanOrEqual(0.6);
+  expect(await bulb.evaluate((element) => getComputedStyle(element).boxShadow)).not.toBe('none');
+});
+
 test('keeps the workbook world immediate when reduced motion is requested', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await page.goto('/');

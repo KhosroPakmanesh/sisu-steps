@@ -27,4 +27,12 @@ export class AppShell {
     this.appearancePreferences.apply(preference);
     this.appearancePreferences.save(preference);
   }
+
+  protected toggleDeskLamp(): void {
+    const automaticDark =
+      this.appearance === 'automatic' &&
+      (globalThis.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false);
+    const lampIsOn = this.appearance === 'dark' || automaticDark;
+    this.changeAppearance(lampIsOn ? 'light' : 'dark');
+  }
 }

@@ -44,6 +44,9 @@ describe('AppShell', () => {
     expect(element.querySelector('.appearance-toggle-hardware')).not.toBeNull();
     expect(element.querySelectorAll('.appearance-choice-icon')).toHaveLength(3);
     expect(element.querySelector('.appearance-switch')?.classList).toContain('automatic-selected');
+    expect(
+      element.querySelector('button[aria-label="Toggle desk lamp between Day and Night"]'),
+    ).not.toBeNull();
     const folder = element.querySelector('.workbook-folder');
     const tabs = [...element.querySelectorAll('.workbook-folder-tab')];
     expect(folder).not.toBeNull();
