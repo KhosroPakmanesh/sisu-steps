@@ -352,8 +352,13 @@ test('uses a responsive three, two, and one-column topic-card grid', async ({ pa
           borderTopWidth: Number.parseFloat(styles.borderTopWidth),
         };
       });
-      expect(cardSurface.backgroundImage).toBe('none');
+      expect(cardSurface.backgroundImage).toContain('repeating-linear-gradient');
       expect(cardSurface.borderTopWidth).toBeGreaterThan(0);
+      expect(
+        await firstCard.evaluate(
+          (element) => (getComputedStyle(element).boxShadow.match(/inset/g) ?? []).length,
+        ),
+      ).toBe(0);
       await firstCard.hover();
       await expect
         .poll(() =>
@@ -361,12 +366,34 @@ test('uses a responsive three, two, and one-column topic-card grid', async ({ pa
             (element) => (getComputedStyle(element).boxShadow.match(/inset/g) ?? []).length,
           ),
         )
-        .toBe(1);
+        .toBe(0);
     }
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
       width,
     );
   }
+});
+
+test('matches the topic-card background to the worked-examples surface', async ({
+  page,
+}, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.goto('/');
+  const topicBackground = await page
+    .locator('.topic-card')
+    .first()
+    .evaluate((element) => {
+      const styles = getComputedStyle(element);
+      return { color: styles.backgroundColor, image: styles.backgroundImage };
+    });
+
+  await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
+  const examplesBackground = await page.locator('.worked-examples').evaluate((element) => {
+    const styles = getComputedStyle(element);
+    return { color: styles.backgroundColor, image: styles.backgroundImage };
+  });
+
+  expect(topicBackground).toEqual(examplesBackground);
 });
 
 test('sizes cut-paper actions to their labels across app routes', async ({ page }, testInfo) => {
@@ -1140,6 +1167,55 @@ test('turns the interactive desk lamp off in Day and makes it radiate in Night',
     .poll(() => light.evaluate((element) => Number.parseFloat(getComputedStyle(element).opacity)))
     .toBeGreaterThanOrEqual(0.6);
   expect(await bulb.evaluate((element) => getComputedStyle(element).boxShadow)).not.toBe('none');
+});
+
+test('layers the faded desk lamp behind the workbook folder at compact widths', async ({
+  page,
+}, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.goto('/');
+
+  await page.setViewportSize({ width: 1754, height: 900 });
+  expect(
+    await page.locator('.desk-lamp').evaluate((element) => getComputedStyle(element).zIndex),
+  ).toBe('4');
+
+  for (const width of [1600, 1440, 1248, 1100, 900, 768, 621]) {
+    await page.setViewportSize({ width, height: 900 });
+    const layers = await page.evaluate(() => {
+      const folder = document.querySelector<HTMLElement>('.workbook-folder')!;
+      const lamp = document.querySelector<HTMLElement>('.desk-lamp')!;
+      const folderRect = folder.getBoundingClientRect();
+      const lampRect = lamp.getBoundingClientRect();
+      const overlapLeft = Math.max(folderRect.left, lampRect.left);
+      const overlapRight = Math.min(folderRect.right, lampRect.right);
+      const overlapTop = Math.max(folderRect.top, lampRect.top);
+      const overlapBottom = Math.min(folderRect.bottom, lampRect.bottom);
+      const overlaps = overlapRight > overlapLeft && overlapBottom > overlapTop;
+      const overlapTarget = overlaps
+        ? document.elementFromPoint(
+            overlapLeft + (overlapRight - overlapLeft) / 2,
+            overlapTop + (overlapBottom - overlapTop) / 2,
+          )
+        : null;
+
+      return {
+        lampOwnsOverlap: overlapTarget === lamp || lamp.contains(overlapTarget),
+        lampOpacity: Number.parseFloat(getComputedStyle(lamp).opacity),
+        lampZIndex: getComputedStyle(lamp).zIndex,
+        overlaps,
+      };
+    });
+
+    expect(layers.lampOpacity, `lamp opacity at ${width}px`).toBeLessThanOrEqual(0.22);
+    expect(layers.lampZIndex, `lamp layer at ${width}px`).toBe('0');
+    if (width <= 1440) {
+      expect(layers.overlaps, `lamp/folder overlap at ${width}px`).toBe(true);
+      expect(layers.lampOwnsOverlap, `top element at lamp/folder overlap at ${width}px`).toBe(
+        false,
+      );
+    }
+  }
 });
 
 test('keeps the workbook world immediate when reduced motion is requested', async ({ page }) => {

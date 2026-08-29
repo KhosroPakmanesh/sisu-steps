@@ -146,9 +146,13 @@
   border: 1px solid var(--border-default);
   border-top: 0.28rem solid var(--blue-500);
   border-radius: var(--radius-large);
-  background: var(--surface-raised);
+  background-color: var(--surface-warning);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.95rem,
+    var(--notebook-rule) 1.95rem 2rem
+  );
   box-shadow:
-    inset 0 0 0 0.22rem color-mix(in srgb, var(--surface-paper) 58%, transparent),
     0.18rem 0.18rem 0 var(--surface-subtle),
     var(--shadow-small);
 }
