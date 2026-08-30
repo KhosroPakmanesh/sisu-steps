@@ -3,7 +3,7 @@
   min-height: var(--control-height-compact);
   padding: 0.65rem 1rem 0.55rem 1.6rem;
   border: 1px solid var(--border-control);
-  border-left: 0.35rem solid var(--red-700);
+  border-left: 0.35rem solid transparent;
   background: var(--surface-warning);
   box-shadow: 0.16rem 0.18rem 0 var(--notebook-shadow);
   clip-path: polygon(0.55rem 0, 100% 0, calc(100% - 0.3rem) 100%, 0 92%);
@@ -101,7 +101,7 @@ input.notebook-input.has-writing {
 
 .notebook-select {
   border-block: 0.12rem solid var(--border-control);
-  border-right: 0.3rem solid var(--amber-400);
+  border-right: 0.3rem solid transparent;
   border-left-width: 0.45rem;
   border-radius: 0 0.35rem 0.35rem 0;
   background-color: var(--surface-paper);
@@ -205,12 +205,12 @@ input.notebook-input.has-writing {
 }
 
 .eraser-tool {
-  border-left: 0.38rem solid var(--red-700);
+  border-left: 0.38rem solid transparent;
   background: linear-gradient(110deg, var(--surface-danger) 0 48%, var(--surface-paper) 49%);
 }
 
 .correction-tape-tool {
-  border-left: 0.38rem solid var(--blue-500);
+  border-left: 0.38rem solid transparent;
   background: linear-gradient(
     to bottom,
     var(--surface-paper) 0 64%,

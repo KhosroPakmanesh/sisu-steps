@@ -47,7 +47,7 @@
   inset-block: 0;
   left: 0;
   width: 0.45rem;
-  background: var(--blue-500);
+  background: transparent;
   content: '';
 }
 
@@ -75,7 +75,7 @@
   position: relative;
   overflow: hidden;
   border: 1px dashed var(--border-control);
-  border-left: 0.32rem solid var(--blue-500);
+  border-left: 0.32rem solid transparent;
   background-color: var(--surface-warning);
   background-image: repeating-linear-gradient(
     to bottom,

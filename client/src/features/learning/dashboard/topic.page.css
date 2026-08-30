@@ -44,7 +44,7 @@
   grid-template-columns: 1fr 1fr;
   padding: var(--space-5);
   border-radius: var(--radius-large);
-  border-left: 0.35rem solid var(--red-700);
+  border-left: 0.35rem solid transparent;
   background: var(--surface-ink);
   color: var(--text-on-ink);
   box-shadow: var(--shadow-large);
@@ -169,7 +169,7 @@
   gap: var(--space-5);
   padding: var(--space-5);
   border: 1px solid var(--border-default);
-  border-left: 0.28rem solid var(--blue-500);
+  border-left: 0.28rem solid transparent;
   border-radius: var(--radius-medium);
   background: var(--surface-warning);
   box-shadow: 0.16rem 0.16rem 0 var(--surface-subtle);
@@ -177,7 +177,7 @@
 
 .test-card.review-test {
   border-color: var(--border-brand);
-  border-left-color: var(--amber-400);
+  border-left-color: transparent;
   background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-warning));
 }
 

@@ -12,9 +12,7 @@ main.lesson-page .worked-examples {
     var(--notebook-rule) 1.95rem 2rem
   );
   clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
-  box-shadow:
-    inset 0.45rem 0 0 var(--amber-400),
-    inset 0.72rem 0 0 color-mix(in srgb, var(--surface-paper) 65%, transparent);
+  box-shadow: none;
   filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
     drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
   transform: rotate(-0.35deg);
@@ -56,7 +54,7 @@ main.lesson-page .example-grid article {
   position: relative;
   padding-left: calc(var(--space-4) + 0.65rem);
   border: 1px dashed var(--border-brand);
-  border-left: 0.28rem solid var(--amber-400);
+  border-left: 0.28rem solid transparent;
   border-radius: 0.08rem;
   background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-warning));
   background-image: repeating-linear-gradient(
@@ -87,7 +85,7 @@ main.lesson-page .example-grid article::before {
 
 main.lesson-page .lesson-vocabulary dl div {
   border-radius: 0.05rem;
-  border-left: 0.28rem solid var(--amber-400);
+  border-left: 0.28rem solid transparent;
   background-image: linear-gradient(
     to bottom,
     transparent 74%,

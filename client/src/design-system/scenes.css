@@ -179,13 +179,13 @@ main.page-shell .topic-card:hover {
   z-index: 1;
   padding: var(--space-4);
   border: 0;
-  border-left: 0.45rem solid var(--blue-500);
+  border-left: 0.45rem solid transparent;
   background: var(--surface-subtle);
   box-shadow: 0.18rem 0.18rem 0 var(--paper-edge);
 }
 
 .topic-page .review-heading {
-  border-left-color: var(--amber-400);
+  border-left-color: transparent;
 }
 
 /* Lessons: a true two-page spread with reference material on the facing page. */

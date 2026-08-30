@@ -90,7 +90,7 @@
   grid-template-columns: auto 1fr;
   padding: var(--space-3);
   border: 1px solid var(--border-default);
-  border-left: 0.22rem solid var(--notebook-margin);
+  border-left: 0.22rem solid transparent;
   border-radius: var(--radius-control);
   background:
     linear-gradient(to bottom, transparent calc(100% - 1px), var(--notebook-rule) 0),
@@ -101,7 +101,7 @@
 
 .practice-choices label.selected {
   border-color: var(--border-brand-strong);
-  border-left-color: var(--red-700);
+  border-left-color: transparent;
   background: var(--surface-brand-subtle);
 }
 
@@ -125,7 +125,7 @@
 .practice-answer-zone {
   border-style: dashed;
   border-color: var(--border-focus);
-  border-left: 0.25rem solid var(--red-700);
+  border-left: 0.25rem solid transparent;
   background:
     repeating-linear-gradient(
       to bottom,

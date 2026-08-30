@@ -116,7 +116,7 @@
   padding: 3rem;
   text-align: center;
   border: 1px solid var(--border-default);
-  border-left: 0.3rem solid var(--blue-500);
+  border-left: 0.3rem solid transparent;
   border-radius: var(--radius-medium);
   background: var(--surface-raised);
   box-shadow:
@@ -130,7 +130,7 @@
 
 .error-card {
   border-color: var(--red-200);
-  border-left-color: var(--red-700);
+  border-left-color: transparent;
 }
 
 @media (width <= 560px) {
