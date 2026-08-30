@@ -48,7 +48,7 @@
 - **REQ-G001-032:** Sentence feedback shall identify each Finnish part, its English meaning, its grammatical job in that sentence, and how the displayed form is built from its base form.
 - **REQ-G001-033:** A formation explanation shall name every relevant ending, vowel-harmony choice, KPT change, agreement change, or fixed uninflected form needed to derive the displayed answer.
 - **REQ-G001-034:** Sentence feedback shall define grammatical terms in plain English and shall not depend on prerequisite knowledge that is not explained in the same feedback.
-- **REQ-G001-035:** Before submitting an answer, the learner shall be able to reveal the answer with a visible **Show answer** control or the `Alt+A` keyboard shortcut without first entering or choosing a response.
+- **REQ-G001-035:** Before submitting an answer, the learner shall be able to reveal the answer with a visible, native keyboard-operable **Show answer** button without first entering or choosing a response. Scored study and optional lesson practice shall not expose a shortcut badge, shortcut metadata, or an `Alt+A` answer-reveal binding.
 - **REQ-G001-036:** Revealing an answer shall lock the exercise and display the same correct answer and explanation that follow a submitted response.
 - **REQ-G001-037:** A revealed answer shall be stored and reported as skipped, shall count as zero correct when calculating the percentage over all exercises, and shall not be included in the incorrect count.
 - **REQ-G001-038:** Skipping an exercise shall neither create a new unresolved mistake nor resolve an existing unresolved mistake.
@@ -134,7 +134,7 @@
 - Given an invalid backup, when import is attempted, then existing records remain unchanged and the learner sees an error.
 - Given confirmed topic-history clearing, when clearing completes, then that topic's learner records are removed while its bundled tests remain available.
 - Given a sentence exercise, when feedback appears, then the learner can see the full translation, the sentence pattern, and a part-by-part explanation covering meaning, role, base form, and formation without needing prior grammar knowledge.
-- Given an unanswered exercise, when the learner activates **Show answer** or presses `Alt+A`, then the correct answer and explanation appear and the exercise is recorded as skipped.
+- Given an unanswered exercise, when the learner activates **Show answer**, then the correct answer and explanation appear and the exercise is recorded as skipped; pressing `Alt+A` shall not reveal the answer or change learner progress.
 - Given an ordinary exercise that is skipped, when learner progress is saved, then the exercise is not added to mistake practice.
 - Given an unresolved mistake that is skipped during mistake practice, when learner progress is saved, then the mistake remains unresolved.
 - Given a completed session containing skipped exercises, when results appear, then correct, incorrect, and skipped counts are shown separately and the percentage uses the full exercise count.

@@ -9,6 +9,7 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Give every form control a visible label or accessible name.
 - Preserve keyboard operation, logical focus order, and visible focus indicators.
 - Deliberately place focus after routed context changes, operation errors, and any custom confirmation close when practical.
+- After in-app route navigation, focus the newly activated main landmark without stealing focus on the initial page load.
 - Keep text and controls readable from 320 pixels through desktop widths.
 - Provide practical pointer and touch target sizes.
 - Respect `prefers-reduced-motion`.
@@ -19,6 +20,8 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Keep required text in readable print typography; decorative handwriting must be brief, optional, and hidden from assistive technology.
 - Preserve text contrast, visible focus, state meaning, and control boundaries in warm Light, low-glare Dark, and Automatic appearances.
 - Ensure every stationery-inspired control remains understandable from its visible label, native role, and state without requiring recognition of the represented object.
+- Render focus indicators inside clipped stationery controls so their silhouettes cannot hide the indicator.
+- Keep **Show answer** as a native keyboard-operable button without an `Alt+A` binding, shortcut metadata, or a visible shortcut annotation.
 - Permit fully custom control appearance only while the underlying link, button, input, textarea, radio, checkbox, select, file input, progress, or dialog semantics and keyboard behavior remain native.
 - Keep correction/eraser actions, sticky-note fields, and the report filter visible, labelled, focusable, and understandable without recognizing their stationery metaphors; do not put them behind collapse/expand controls.
 - For destructive confirmation, focus the safe Cancel action when the modal sheet opens, cancel on Escape, return focus to the initiating control, and execute only through explicit confirmation.
@@ -27,7 +30,8 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 ## Validation
 
 - Run TypeScript and Angular template lint, Stylelint, type, unit, build, and browser checks after UI changes.
-- Manually verify keyboard navigation, focus visibility, `Alt+A`, file restore, and destructive confirmation for affected workflows.
+- Manually verify keyboard navigation, focus visibility, button-operated answer reveal, file restore, and destructive confirmation for affected workflows.
 - Check 320, 768, and 1440 pixel widths for overlap, clipping, hidden actions, and horizontal scrolling.
+- Check the scroll width and required-child bounds of clipped paper surfaces; document-level overflow alone cannot reveal content hidden by `overflow: clip`.
 - Verify status meaning remains understandable without color and with reduced motion enabled.
 - Verify the icon-led Day/Automatic/Night Appearance toggle exposes all three text names to assistive technology, works by keyboard, keeps focus visible despite its unframed presentation, and confirms its decorative lever follows the native radio state while Automatic responds to device color-scheme changes and explicit Day and Night choices remain stable.

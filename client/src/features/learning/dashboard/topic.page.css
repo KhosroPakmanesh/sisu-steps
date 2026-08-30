@@ -10,6 +10,10 @@
   padding: 3rem 0 var(--space-8);
 }
 
+.topic-hero > * {
+  min-width: 0;
+}
+
 .topic-hero h1 {
   max-width: 16ch;
   margin: var(--space-2) 0;
@@ -250,6 +254,12 @@
 }
 
 @media (width <= 560px) {
+  .topic-hero h1 {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
   .test-card {
     grid-template-columns: auto 1fr;
   }
@@ -271,6 +281,31 @@
   .score-badge {
     display: inline-block;
     margin-top: var(--space-2);
+  }
+}
+
+@media (width <= 420px) {
+  .topic-overview {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .test-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+    padding: var(--space-4);
+  }
+
+  .test-number {
+    width: fit-content;
+    padding-right: 0;
+    padding-bottom: var(--space-2);
+    border-right: 0;
+    border-bottom: 1px solid var(--notebook-margin);
+  }
+
+  .test-actions {
+    grid-column: 1;
+    min-width: 0;
   }
 }
 

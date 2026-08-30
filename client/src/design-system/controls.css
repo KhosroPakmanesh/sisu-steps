@@ -78,6 +78,15 @@
   pointer-events: none;
 }
 
+.button:focus-visible {
+  outline: 0;
+}
+
+.button:focus-visible::before {
+  inset: 0.16rem 0.2rem;
+  border: 0.2rem solid var(--focus-ring);
+}
+
 .button:hover:not(:disabled) {
   filter: drop-shadow(0.2rem 0.28rem 0 var(--paper-edge))
     drop-shadow(0.34rem 0.48rem 0.4rem var(--notebook-shadow));

@@ -26,7 +26,7 @@
 ## Manual checks
 
 - **VAL-G002-017:** Review dashboard, lesson preparation, optional practice, test/review/mistake runner, results, reports, and data settings at 320, 768, and 1440 pixels. Covers REQ-G002-023 and REQ-G002-024.
-- **VAL-G002-018:** Navigate the primary workflows with a keyboard, including `Alt+A`, visible focus, lesson navigation, answer controls, restore input, and destructive confirmations. Covers REQ-G002-024 and REQ-G002-025.
+- **VAL-G002-018:** Navigate the primary workflows with a keyboard, including visible focus, lesson navigation, native answer buttons, restore input, and destructive confirmations. Verify that `Alt+A` does not reveal answers. Covers REQ-G002-024 and REQ-G002-025.
 - **VAL-G002-019:** Export, invalid-import, clear-test, clear-topic, and clear-all boundaries shall remain explicit and shall preserve or safely reject learner data as specified. Covers REQ-G002-018, REQ-G002-019, and REQ-G002-025.
 - **VAL-G002-020:** Review the final baseline comparison for hidden product, persistence, content, route, accessibility, and external-boundary changes. Covers REQ-G002-018 through REQ-G002-025 and REQ-G002-034.
 

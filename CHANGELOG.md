@@ -14,7 +14,7 @@
 - Native IndexedDB progress, unfinished-session recovery, mistake practice, per-test reports, backup/restore, and scoped history clearing.
 - Pre-A1–A1.3 grammar-foundation pack with 200 exercises covering vowel harmony, KPT consonant gradation, and the T-plural.
 - Automated checks for grading, content validation, learner sessions, reporting, and backup validation.
-- A **Show answer** control and `Alt+A` shortcut with separately stored and reported skipped exercises that do not create or resolve mistakes.
+- A **Show answer** control with separately stored and reported skipped exercises that do not create or resolve mistakes.
 - Optional **Learn first** preparation for all fifteen tests with reusable beginner lessons, worked examples, common mistakes, separate unscored practice, and local completion tracking.
 - Visible **Focused** and **Review** stages with declared target skills, prerequisites, and lesson vocabulary.
 - Automated content checks for one-target focused material, skill dependencies, introduced vocabulary, supplied verb stems, stable inessive stems, and fixed plural-sentence context.
@@ -72,12 +72,14 @@
 
 ### Removed
 
+- The visible `Alt+A` badge and keyboard shortcut from scored study and optional lesson practice. Answer reveal remains available through the native **Show answer** button.
 - The experimental pencil-case toolbar and its `ä`/`ö` quick-insert buttons from scored answers and optional lesson practice.
 - The redundant Core/Extended test-set field, validation rules, labels, and badges. Tests are now grouped only as **Focused tests** and mixed **Reviews**.
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 
 ### Fixed
 
+- Prevented clipped and colliding content at the 320-pixel minimum width by stacking compact topic, report, and data summaries, simplifying narrow topic and archive rows, reducing study-sheet padding, and constraining grid children; added strongly visible internal focus rings for clipped cut-paper actions, consistent textarea focus, and deliberate focus on newly routed main content.
 - Removed redundant pack-specific KPT validation branches, added direct regression coverage for the dynamically loaded validator, replaced committed invalid-content fixture trees and marker files with automatically cleaned temporary unit-test trees, and corrected superseded public-content references in client validation guidance.
 - Excluded local Visual Studio cache files from repository-wide Prettier checks so locked generated indexes no longer block client validation.
 - Focused **Learn first** routes now use a centered single-lesson hierarchy without redundant navigation, while cumulative Review routes use a compact accessible selector on narrow screens and a correctly offset sticky lesson navigator on wide screens; lesson headings and section gutters are aligned consistently.

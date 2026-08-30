@@ -12,7 +12,7 @@
 - **VAL-G001-008**: Run a successful production build with strict TypeScript checks.
 - **VAL-G001-018** (`REQ-G001-031`–`034`): Validate that every sentence-tagged exercise contains a translation, sentence pattern, and at least two complete part explanations with Finnish form, meaning, role, and formation.
 - **VAL-G001-021** (`REQ-G001-037`–`039`): Service tests verify that a reveal is persisted as skipped, receives no score credit, is excluded from incorrect counts, and neither creates nor resolves an unresolved mistake.
-- **VAL-G001-022** (`REQ-G001-035`, `036`): Runner tests verify that the visible control and `Alt+A` reveal the correct answer and explanation without a submitted response.
+- **VAL-G001-022** (`REQ-G001-035`, `036`): Runner and lesson-practice tests verify that the visible button reveals the correct answer and explanation without a submitted response, no shortcut badge or metadata is rendered, and `Alt+A` is not intercepted and does not reveal an answer or change progress.
 - **VAL-G001-024** (`REQ-G001-042`–`045`, `050`, `055`): Content validation verifies stable unique lesson and practice IDs, complete teaching sections, two-to-five practice counts, valid ordered test references, focused tests referencing only target-matching lessons, full authored-test coverage, and no reuse of scored exercise IDs.
 - **VAL-G001-025** (`REQ-G001-046`): Lesson-page tests verify practice grading and reveal feedback without changing learner attempts, sessions, reports, or mistakes.
 - **VAL-G001-026** (`REQ-G001-047`–`051`): Service and backup tests verify versioned lesson completion, cross-test reuse, backup/restore, and test/topic/all clearing semantics.
@@ -69,7 +69,7 @@
 - **VAL-G001-016** (`REQ-G001-029`): Inspect dashboard, runner, results, reports, and settings at 320, 768, and 1440 pixel widths.
 - **VAL-G001-017** (`REQ-G001-027`): Disable network access after loading the static app and verify study, persistence, and reporting remain functional.
 - **VAL-G001-020** (`REQ-G001-031`–`034`): Submit sentence answers on a narrow and wide viewport and verify the structured breakdown is readable, ordered, and announced after immediate feedback.
-- **VAL-G001-023** (`REQ-G001-035`–`039`): Use the reveal control and shortcut in ordinary and mistake-practice sessions; verify focus behavior, separate result counts, and persistence after reloading.
+- **VAL-G001-023** (`REQ-G001-035`–`039`): Activate the reveal button by pointer and native keyboard activation in ordinary and mistake-practice sessions; verify focus behavior, separate result counts, and persistence after reloading. Verify that `Alt+A` has no answer-reveal behavior.
 - **VAL-G001-029** (`REQ-G001-040`–`052`): Read, practise, skip practice, finish, reread, and start the associated test using keyboard-only navigation at 320, 768, and 1440 pixel widths.
 - **VAL-G001-059** (`REQ-G001-101`): At 320, 768, and 1440 pixels, inspect one focused preparation route and one cumulative review route for consistent section gutters, immediate access to the active lesson, visible selected-lesson state, and absence of overlap with the sticky application header.
 - **VAL-G001-063** (`REQ-G001-102`–`106`): Save, edit, remove, export, restore, and clear topic and lesson notes using pointer and keyboard at 320 and 1440 pixels; verify plain-text rendering, readable status, retained drafts on failure, and the documented clearing consequences.
@@ -152,3 +152,10 @@
 - Unit coverage verifies save, removal, failure retention, backup/restore, test-clear preservation, topic-scoped clearing, all-history clearing, and note preservation across compatible installed owners; all 85 unit tests passed.
 - Playwright verified topic-note persistence after navigation and native field/button operation in all three configured browser projects; all 33 runs passed across 320-, 768-, and 1440-pixel viewports.
 - Data & backup text now states that backups include private notes, one-test clearing keeps them, topic clearing removes the owning notes, and all-history clearing removes every note.
+
+## Execution evidence — 2026-08-30 answer-reveal shortcut removal
+
+- Updated `REQ-G001-035` at the learner's request: removed the visible shortcut badge, both global `Alt+A` listeners, their accessibility metadata, and unused badge styling. The native **Show answer** buttons and existing reveal/scoring semantics remain intact.
+- All 107 unit tests passed, including no-interception/no-reveal checks for `Alt+A`, absent shortcut text/metadata, and button-operated answer reveal. Production/test TypeScript checks, direct-source content validation, and the production build passed (79.01 kB estimated initial transfer).
+- The full Playwright matrix passed 50 cases with 18 expected project-specific skips; one existing wide hover-motion case timed out and then passed when rerun alone. All shortcut-removal, native keyboard activation, optional-practice, and persisted-reveal checks passed on the first run.
+- ESLint/template accessibility, Stylelint, module-size, source-reachability, and architecture checks passed. The aggregate check still stops at the existing 21-file repository-wide Prettier baseline; no additional formatting failure remains.

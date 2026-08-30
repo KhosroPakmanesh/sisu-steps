@@ -106,7 +106,7 @@
       ><span>Data &amp; backup</span></a
     >
   </nav>
-  <router-outlet />
+  <router-outlet (activate)="focusRoutedContent()" />
   <div class="workbook-page-hardware" aria-hidden="true">
     <span class="workbook-page-clip"></span>
   </div>

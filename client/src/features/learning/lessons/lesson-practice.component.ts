@@ -1,4 +1,4 @@
-import { Component, computed, HostListener, Input, OnChanges, signal } from '@angular/core';
+import { Component, computed, Input, OnChanges, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Exercise, Lesson } from '../shared/content/content.models';
 import { gradeAnswer } from '../shared/progress/grading.policy';
@@ -96,22 +96,6 @@ export class LessonPracticeComponent implements OnChanges {
     this.response.set('');
     this.selectedTokenIndexes.set([]);
     this.feedback.set({ submittedAnswer: '', correct: false, skipped: true });
-  }
-
-  @HostListener('window:keydown', ['$event'])
-  protected useShowAnswerShortcut(event: KeyboardEvent): void {
-    if (
-      !event.altKey ||
-      event.ctrlKey ||
-      event.metaKey ||
-      event.shiftKey ||
-      event.key.toLowerCase() !== 'a' ||
-      !this.canRevealAnswer()
-    ) {
-      return;
-    }
-    event.preventDefault();
-    this.showAnswer();
   }
 
   protected continue(): void {

@@ -21,6 +21,30 @@ async function expectLabelSizedAction(locator: Locator) {
   expect(sizes.height).toBeGreaterThanOrEqual(40);
 }
 
+async function expectNoInternalHorizontalOverflow(locator: Locator) {
+  await expect(locator).toBeVisible();
+  const widths = await locator.evaluate((element) => ({
+    client: element.clientWidth,
+    scroll: element.scrollWidth,
+  }));
+  expect(widths.scroll).toBeLessThanOrEqual(widths.client + 1);
+}
+
+async function expectHorizontallyInside(surface: Locator, content: Locator) {
+  const [surfaceBox, contentBox] = await Promise.all([
+    surface.boundingBox(),
+    content.boundingBox(),
+  ]);
+  expect(surfaceBox).not.toBeNull();
+  expect(contentBox).not.toBeNull();
+  expect(contentBox?.x ?? Number.NEGATIVE_INFINITY).toBeGreaterThanOrEqual(
+    (surfaceBox?.x ?? 0) - 2,
+  );
+  expect((contentBox?.x ?? 0) + (contentBox?.width ?? 0)).toBeLessThanOrEqual(
+    (surfaceBox?.x ?? 0) + (surfaceBox?.width ?? 0) + 2,
+  );
+}
+
 async function expectActionGroupPlacement(group: Locator, placement: 'center' | 'end') {
   await expect(group).toBeVisible();
   const geometry = await group.evaluate((element) => {
@@ -321,6 +345,19 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   }
 });
 
+test('places focus on routed content after in-app navigation', async ({ page }) => {
+  await page.goto('/');
+
+  const initialMain = page.locator('main');
+  await expect(initialMain).not.toBeFocused();
+  await page.getByRole('link', { name: 'Open topic' }).click();
+
+  const routedMain = page.locator('main');
+  await expect(routedMain).toBeFocused();
+  await expect(routedMain).toHaveAttribute('tabindex', '-1');
+  await expect(routedMain.getByRole('heading', { level: 1 })).toBeVisible();
+});
+
 test('uses a responsive three, two, and one-column topic-card grid', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
   await page.goto('/');
@@ -427,6 +464,60 @@ test('sizes cut-paper actions to their labels across app routes', async ({ page 
   }
 });
 
+test('keeps focus visible on clipped actions and note fields', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.setViewportSize({ width: 320, height: 900 });
+
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+  const showAnswer = page.getByRole('button', { name: 'Show answer' });
+  await showAnswer.focus();
+  const actionFocus = await showAnswer.evaluate((element) => {
+    const colorProbe = document.createElement('span');
+    colorProbe.style.color = 'var(--focus-ring)';
+    document.body.append(colorProbe);
+    const focusRing = getComputedStyle(colorProbe).color;
+    colorProbe.remove();
+    const indicator = getComputedStyle(element, '::before');
+    return {
+      color: indicator.borderTopColor,
+      focusRing,
+      style: indicator.borderTopStyle,
+      width: Number.parseFloat(indicator.borderTopWidth),
+    };
+  });
+  expect(actionFocus.style).toBe('solid');
+  expect(actionFocus.width).toBeGreaterThanOrEqual(3);
+  expect(actionFocus.color).toBe(actionFocus.focusRing);
+
+  await expect(showAnswer).not.toHaveAttribute('aria-keyshortcuts');
+  await expect(page.locator('.answer-actions')).not.toContainText('Alt+A');
+  await page.keyboard.press('Alt+a');
+  await expect(page.locator('.exercise-card .feedback')).toHaveCount(0);
+  await showAnswer.press('Enter');
+  await expect(page.locator('.exercise-card .feedback')).toContainText('Answer revealed');
+
+  await page.goto(`/topics/${TOPIC_SEGMENT}`);
+  const note = page.getByRole('textbox', { name: 'Topic note' });
+  await note.focus();
+  const fieldFocus = await note.evaluate((element) => {
+    const colorProbe = document.createElement('span');
+    colorProbe.style.color = 'var(--focus-ring)';
+    document.body.append(colorProbe);
+    const focusRing = getComputedStyle(colorProbe).color;
+    colorProbe.remove();
+    const styles = getComputedStyle(element);
+    return {
+      color: styles.outlineColor,
+      focusRing,
+      style: styles.outlineStyle,
+      width: Number.parseFloat(styles.outlineWidth),
+    };
+  });
+  expect(fieldFocus.style).toBe('solid');
+  expect(fieldFocus.width).toBeGreaterThanOrEqual(3);
+  expect(fieldFocus.color).toBe(fieldFocus.focusRing);
+});
+
 test('places compact action groups according to their page role', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
 
@@ -463,7 +554,12 @@ test('keeps optional lesson practice separate from scored progress', async ({ pa
 
   await expect(page.getByRole('heading', { name: 'Vowel families' })).toBeVisible();
   await page.getByRole('button', { name: 'Start optional practice' }).click();
-  await page.getByRole('button', { name: /Show answer/ }).click();
+  await expect(page.locator('.practice-actions')).not.toContainText('Alt+A');
+  const showAnswer = page.getByRole('button', { name: 'Show answer' });
+  await expect(showAnswer).not.toHaveAttribute('aria-keyshortcuts');
+  await page.keyboard.press('Alt+a');
+  await expect(page.locator('.lesson-practice .feedback')).toHaveCount(0);
+  await showAnswer.click();
 
   await expect(page.locator('.lesson-practice .feedback')).toContainText('Answer revealed');
   await expect(page.locator('.lesson-practice .feedback')).toContainText(
@@ -894,6 +990,8 @@ test('restores an unfinished scored session from browser storage', async ({ page
   await page.locator('.test-card').first().getByRole('link', { name: 'Start test' }).click();
   await expect(page.getByRole('button', { name: /Show answer/ })).toBeEnabled();
   await page.keyboard.press('Alt+a');
+  await expect(page.locator('.exercise-card .feedback')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Show answer' }).click();
   await expect(page.locator('.exercise-card .feedback')).toContainText('Answer revealed');
 
   await page.reload();
@@ -937,6 +1035,73 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );
+});
+
+test('keeps required content inside clipped surfaces at 320 pixels', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.setViewportSize({ width: 320, height: 900 });
+
+  await page.goto(`/topics/${TOPIC_SEGMENT}`);
+  const topicPaper = page.locator('main.topic-page');
+  await expectNoInternalHorizontalOverflow(topicPaper);
+  await expectHorizontallyInside(topicPaper, page.locator('.topic-hero h1'));
+  expect(
+    await page
+      .locator('.topic-overview')
+      .evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ')),
+  ).toHaveLength(1);
+  const firstTest = page.locator('.test-card').first();
+  await expectNoInternalHorizontalOverflow(firstTest);
+  for (const content of [
+    firstTest.locator('.test-number'),
+    firstTest.locator('.test-body'),
+    firstTest.locator('.test-actions'),
+  ]) {
+    await expectHorizontallyInside(firstTest, content);
+  }
+
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+  const exercise = page.locator('.exercise-card');
+  await expectNoInternalHorizontalOverflow(exercise);
+  for (const content of [
+    exercise.getByRole('heading', { level: 2 }),
+    exercise.locator('.choice-list label').first(),
+    exercise.locator('.answer-actions'),
+    exercise.locator('.reveal-note'),
+  ]) {
+    await expectHorizontallyInside(exercise, content);
+  }
+
+  await page.goto('/reports');
+  const overview = page.locator('.report-overview');
+  await expectNoInternalHorizontalOverflow(overview);
+  expect(
+    await overview.evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ')),
+  ).toHaveLength(1);
+  for (const summary of await overview.locator(':scope > div').all()) {
+    await expectHorizontallyInside(overview, summary);
+  }
+
+  await page.goto('/data');
+  await expect(page.getByRole('link', { name: 'Back to topics' })).toBeVisible();
+  const dataOverview = page.locator('.data-overview');
+  expect(
+    await dataOverview.evaluate((element) =>
+      getComputedStyle(element).gridTemplateColumns.split(' '),
+    ),
+  ).toHaveLength(1);
+  await expectNoInternalHorizontalOverflow(dataOverview);
+  const archive = page.locator('.backup-archive');
+  await expectNoInternalHorizontalOverflow(archive);
+  const firstArchiveRow = archive.locator('.archive-action-row').first();
+  await expectNoInternalHorizontalOverflow(firstArchiveRow);
+  for (const content of [
+    firstArchiveRow.locator('.archive-number'),
+    firstArchiveRow.locator('div'),
+    firstArchiveRow.locator('.button'),
+  ]) {
+    await expectHorizontallyInside(firstArchiveRow, content);
+  }
 });
 
 test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => {

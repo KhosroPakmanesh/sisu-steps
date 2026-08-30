@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import {
   AppearancePreference,
@@ -14,6 +14,8 @@ import { routePaths } from '@/shared/navigation/route-paths';
 })
 export class AppShell {
   private readonly appearancePreferences = inject(AppearancePreferenceAdapter);
+  private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
+  private hasActivatedRoute = false;
   protected readonly paths = routePaths;
   protected appearance: AppearancePreference = 'automatic';
 
@@ -34,5 +36,20 @@ export class AppShell {
       (globalThis.matchMedia?.('(prefers-color-scheme: dark)').matches ?? false);
     const lampIsOn = this.appearance === 'dark' || automaticDark;
     this.changeAppearance(lampIsOn ? 'light' : 'dark');
+  }
+
+  protected focusRoutedContent(): void {
+    if (!this.hasActivatedRoute) {
+      this.hasActivatedRoute = true;
+      return;
+    }
+
+    globalThis.requestAnimationFrame(() => {
+      const routeMain = this.host.nativeElement.querySelector<HTMLElement>('.workbook-folder main');
+      if (!routeMain) return;
+
+      routeMain.tabIndex = -1;
+      routeMain.focus();
+    });
   }
 }

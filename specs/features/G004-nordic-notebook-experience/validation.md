@@ -5,7 +5,7 @@
 - **VAL-G004-001** (`REQ-G004-007`–`010`): Appearance preference tests verify Automatic, Light, and Dark selection, device-preference changes, remembered overrides, invalid saved data, and unavailable storage.
 - **VAL-G004-002** (`REQ-G004-001`–`006`): Existing component and browser tests remain green after the shared visual and plain-language hierarchy changes.
 - **VAL-G004-003** (`REQ-G004-011`, `012`): Lint, template accessibility lint, Stylelint, production/test typechecks, build, unit tests, and Playwright complete without regression.
-- **VAL-G004-004** (`REQ-G004-011`, `012`): Browser checks cover labelled Appearance operation, keyboard reachability, and absence of horizontal page overflow at configured mobile, tablet, and wide viewports.
+- **VAL-G004-004** (`REQ-G004-011`, `012`): Browser checks cover labelled Appearance operation, keyboard reachability, deliberate routed-main focus, visible token-based focus on native fields and clipped actions, and absence of document-level or clipped-surface horizontal overflow at configured mobile, tablet, and wide viewports.
 - **VAL-G004-005** (`REQ-G004-013`–`019`): Shell tests verify the three native labelled Appearance radio choices, remembered selection, and semantic primary navigation after the stationery-control restyle.
 - **VAL-G004-006** (`REQ-G004-015`–`019`): Browser workflows exercise action buttons and links, native choice and text controls, word tokens, progress, reports, file restore, and destructive-action entry points across the responsive matrix.
 

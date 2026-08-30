@@ -10,6 +10,10 @@
   padding: 3rem 0 var(--space-8);
 }
 
+.data-hero > * {
+  min-width: 0;
+}
+
 .data-hero h1 {
   margin: var(--space-2) 0;
 }
@@ -328,8 +332,13 @@
 
 @media (width <= 420px) {
   .data-overview {
+    grid-template-columns: minmax(0, 1fr);
     padding-right: var(--space-3);
     padding-left: var(--space-5);
+  }
+
+  .data-overview .data-overview-primary {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .data-overview div {
@@ -338,7 +347,18 @@
 
   .archive-action-row,
   .clear-row {
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3);
+  }
+
+  .archive-number {
+    width: 2.35rem;
+    height: 2.35rem;
+  }
+
+  .archive-action-row > .button,
+  .clear-row > .button {
+    grid-column: 1;
   }
 
   .clear-row {

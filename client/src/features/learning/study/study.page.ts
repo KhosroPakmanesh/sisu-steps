@@ -1,4 +1,4 @@
-import { Component, computed, HostListener, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { CompletedAttempt } from '@/shared/domain/learner-state.models';
@@ -154,22 +154,6 @@ export class StudyPage implements OnInit {
       'The answer could not be revealed.',
     );
     if (revealed) this.resetResponse();
-  }
-
-  @HostListener('window:keydown', ['$event'])
-  protected useShowAnswerShortcut(event: KeyboardEvent): void {
-    if (
-      !event.altKey ||
-      event.ctrlKey ||
-      event.metaKey ||
-      event.shiftKey ||
-      event.key.toLowerCase() !== 'a' ||
-      !this.canRevealAnswer()
-    ) {
-      return;
-    }
-    event.preventDefault();
-    void this.showAnswer();
   }
 
   protected async continue(): Promise<void> {

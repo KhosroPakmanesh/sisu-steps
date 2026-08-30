@@ -12,7 +12,7 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Declared important-skill coverage that prevents a focused grammar point from being omitted
 - Multiple choice, fill-in-the-blank, bidirectional translation, and word-order exercises
 - Immediate answer grading, correction, and English explanation
-- Answer reveal with a visible control and `Alt+A`, recorded separately from incorrect answers
+- Answer reveal through a visible native button without a shortcut binding or badge, recorded separately from incorrect answers
 - First-principles sentence feedback with full translation, sentence pattern, and part-by-part formation notes
 - Optional **Learn first** preparation for every focused test, limited to lessons for that test's target skill; review tests may reuse earlier lessons
 - Worked examples, common-mistake guidance, and separate unscored practice in each lesson

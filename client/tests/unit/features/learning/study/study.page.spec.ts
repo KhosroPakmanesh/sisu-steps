@@ -40,6 +40,10 @@ describe('StudyPage', () => {
     const reveal = vi.spyOn(answers, 'revealAnswer');
     const button = fixture.nativeElement.querySelector('.reveal-button') as HTMLButtonElement;
     expect(button.textContent).toContain('Show answer');
+    expect(button.hasAttribute('aria-keyshortcuts')).toBe(false);
+    expect(fixture.nativeElement.querySelector('.answer-actions')?.textContent).not.toContain(
+      'Alt+A',
+    );
     button.click();
     await fixture.whenStable();
     fixture.detectChanges();
@@ -61,18 +65,17 @@ describe('StudyPage', () => {
     );
   });
 
-  it('reveals the answer with Alt+A', async () => {
+  it('does not reveal the answer or intercept Alt+A', async () => {
     const reveal = vi.spyOn(answers, 'revealAnswer');
     const event = new KeyboardEvent('keydown', { key: 'a', altKey: true, cancelable: true });
     window.dispatchEvent(event);
     await fixture.whenStable();
     fixture.detectChanges();
 
-    expect(event.defaultPrevented).toBe(true);
-    expect(reveal).toHaveBeenCalledOnce();
-    expect(fixture.nativeElement.querySelector('.feedback')?.textContent).toContain(
-      'Answer revealed',
-    );
+    expect(event.defaultPrevented).toBe(false);
+    expect(reveal).not.toHaveBeenCalled();
+    expect(fixture.nativeElement.querySelector('.feedback')).toBeNull();
+    expect(storeSnapshot()).toEqual({ attempts: 0, answers: 0 });
   });
 
   it('shows a diagnostic explanation for an incorrect answer', async () => {

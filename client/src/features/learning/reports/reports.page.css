@@ -10,6 +10,10 @@
   padding: 3rem 0 var(--space-8);
 }
 
+.reports-hero > * {
+  min-width: 0;
+}
+
 .reports-hero h1 {
   margin: var(--space-2) 0 0;
 }
@@ -167,8 +171,13 @@
 
 @media (width <= 420px) {
   .report-overview {
+    grid-template-columns: 1fr;
     padding-right: var(--space-3);
     padding-left: var(--space-5);
+  }
+
+  .report-overview .report-overview-primary {
+    grid-template-columns: 1fr;
   }
 
   .report-overview div {

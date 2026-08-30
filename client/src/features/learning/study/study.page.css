@@ -55,6 +55,10 @@
   padding: calc(var(--space-6) + 0.9rem);
 }
 
+.exercise-card > * {
+  min-width: 0;
+}
+
 .result-card::before {
   position: absolute;
   top: -0.58rem;
@@ -117,6 +121,11 @@
   box-shadow: 0 2px 0 var(--notebook-shadow);
   cursor: pointer;
   transition: 0.15s ease;
+}
+
+.choice-list label span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .choice-list label:hover,
@@ -191,6 +200,7 @@
 
 .reveal-button {
   display: inline-flex;
+  flex-wrap: wrap;
   gap: 0.6rem;
   align-items: center;
   justify-content: center;
@@ -300,5 +310,20 @@
     grid-column: 1 / -1;
     grid-row: 2;
     text-align: left;
+  }
+
+  .exercise-card {
+    gap: var(--space-4);
+    padding: var(--space-4);
+  }
+
+  .exercise-context {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .choice-list label {
+    gap: var(--space-2);
+    padding: var(--space-3);
   }
 }

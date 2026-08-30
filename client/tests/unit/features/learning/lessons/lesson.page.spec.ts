@@ -76,11 +76,21 @@ describe('LessonPage', () => {
     expect(completeLesson).not.toHaveBeenCalled();
   });
 
-  it('reveals an optional practice answer without saving progress', () => {
+  it('reveals optional practice only through its button, without saving progress', async () => {
     const element = fixture.nativeElement as HTMLElement;
     (element.querySelector('.lesson-practice > .button') as HTMLButtonElement).click();
     fixture.detectChanges();
-    (element.querySelector('.practice-actions .secondary') as HTMLButtonElement).click();
+    const button = element.querySelector('.practice-actions .secondary') as HTMLButtonElement;
+    expect(button.hasAttribute('aria-keyshortcuts')).toBe(false);
+    expect(element.querySelector('.practice-actions')?.textContent).not.toContain('Alt+A');
+    const event = new KeyboardEvent('keydown', { key: 'a', altKey: true, cancelable: true });
+    window.dispatchEvent(event);
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    expect(event.defaultPrevented).toBe(false);
+    expect(element.querySelector('.feedback')).toBeNull();
+    button.click();
     fixture.detectChanges();
 
     expect(element.querySelector('.feedback')?.textContent).toContain('Answer revealed');

@@ -26,7 +26,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Answer reveal and feedback
 
-- Keep **Show answer** visible before submission and pair it with `Alt+A`.
+- Keep **Show answer** visible before submission as a native button, without an `Alt+A` binding, shortcut metadata, or a visible shortcut badge.
 - Explain that reveal records a skip, grants no score credit, and does not create or resolve a mistake.
 - Use text plus an icon/symbol for correct, incorrect, and skipped states.
 - Show the correct answer and first-principles explanation before continuing.
@@ -62,7 +62,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - Present primary navigation as three elongated, unnumbered, visibly labelled blue/white/yellow subject-divider links on the folder's left edge without changing link order, wording, destinations, or active-page semantics. Tuck each tab's right edge beneath the paper, use a darker shade rather than a selected border for the active route, start the stack with visible breathing room below the paper top, give hover and keyboard focus a restrained physical lift, and keep the stack sticky after the paper top scrolls away while constraining it to the folder.
 - Present every action as the same recognisable cut-paper piece. Primary, secondary, compact, text, review, file, dialog, disabled, and destructive variants keep one silhouette and physical behavior; vary only paper tint, ink, edge accent, internal marks, and explicit wording.
 - Present answer radios as pencil-marked circles, text answers as ruled fields, and word-order buttons as movable vocabulary cards while preserving native form behavior.
-- Put answer radios on perforated ruled slips, place selected word cards on a sentence-building strip, keep available word cards in a labelled paper pocket, and present keyboard shortcuts as margin annotations rather than computer keycaps.
+- Put answer radios on perforated ruled slips, place selected word cards on a sentence-building strip, and keep available word cards in a labelled paper pocket. Operate answer reveal through its visible button without a separate shortcut badge or margin annotation.
 - Present progress as printed ruler scales without a pencil marker and state changes as readable teacher stamps, always paired with visible text, symbols, or numbers.
 - Present reports as ledgers and data actions as cut-paper archive labels without hiding values, local-storage scope, restore behavior, or clearing consequences.
 - Use folded-corner back links on every secondary route. A back link does not become a generic action slip merely because it appears in a page heading.
