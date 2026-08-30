@@ -29,6 +29,7 @@
 
 ### Changed
 
+- Matched only the landing page's outer content spacing to Reports: 3rem above the hero and the existing responsive `--space-8` below the topic catalog. Other pages and shared paper styles are unchanged.
 - Matched the Reports **Results by test** heading to the topic catalog section heading with shared serif typography, responsive sizing, and line height while preserving its semantic heading level and report behavior.
 - Faded and layered the desk lamp behind the complete workbook folder throughout its 1600-pixel-and-below collision range so it no longer covers the folder tabs or paper while its exposed portion remains interactive.
 - Matched the compact landing topic cover's background color and horizontal notebook ruling to the Worked examples surface and removed its left inset layer from both resting and hovered states without changing the cover's layout or content.
