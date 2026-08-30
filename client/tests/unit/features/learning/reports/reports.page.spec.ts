@@ -41,9 +41,9 @@ describe('ReportsPage', () => {
       'Finnish foundations',
     );
     expect(element.querySelector('.report-topic-sheet')).not.toBeNull();
-    expect(element.querySelector('.report-table .report-section-heading h3')?.textContent).toBe(
-      'Results by test',
-    );
+    expect(
+      element.querySelector('.report-table .report-section-heading h3')?.textContent?.trim(),
+    ).toBe('Results by test');
     expect(element.querySelectorAll('.ledger-column-heading')).toHaveLength(1);
     expect(element.querySelectorAll('.semantic-ledger-head')).toHaveLength(1);
     expect(element.querySelectorAll('.ledger-sheet table')).toHaveLength(1);

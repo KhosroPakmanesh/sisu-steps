@@ -19,6 +19,7 @@ Create or extract a reusable component only when real screens share the behavior
 ## Rules
 
 - Use semantic HTML and native controls first.
+- Use `.section-title` on a semantic heading when it should share the standard `h2` display-serif typography, responsive size, and line height without changing its document heading level. Reports uses this for **Results by test** to match the catalog section heading.
 - Keep component inputs and outputs small, explicit, and behavior-focused.
 - Support loading, empty, validation, error, success, disabled, skipped, and confirmation states when applicable.
 - Make destructive actions visually distinct and consequence-specific.

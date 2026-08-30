@@ -29,6 +29,7 @@
 
 ### Changed
 
+- Matched the Reports **Results by test** heading to the topic catalog section heading with shared serif typography, responsive sizing, and line height while preserving its semantic heading level and report behavior.
 - Faded and layered the desk lamp behind the complete workbook folder throughout its 1600-pixel-and-below collision range so it no longer covers the folder tabs or paper while its exposed portion remains interactive.
 - Matched the compact landing topic cover's background color and horizontal notebook ruling to the Worked examples surface and removed its left inset layer from both resting and hovered states without changing the cover's layout or content.
 - Sized cut-paper action buttons and action links to their text and padding across the app instead of stretching them across cards, worksheets, dialog sheets, or compact layouts; centered card and result decision groups, right-aligned forward/exercise/note/data/dialog groups, retained start-aligned navigation and recovery actions, preserved touch height and narrow-screen wrapping, and kept the mobile Continue control inside its clipped exercise-sheet hit area.
