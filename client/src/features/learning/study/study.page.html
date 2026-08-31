@@ -37,6 +37,13 @@
         <a class="button text-button" [routerLink]="paths.reports">Open reports</a>
       </div>
     </section>
+  } @else if (emptySession(); as empty) {
+    <section class="state-card empty-card" aria-live="polite">
+      <p class="eyebrow">Study session</p>
+      <h1>{{ empty.title }}</h1>
+      <p>{{ empty.message }}</p>
+      <a class="button primary" [routerLink]="paths.home">Back to topics</a>
+    </section>
   } @else if (pageError()) {
     <section class="state-card error-card" role="alert">
       <p class="eyebrow">Study session</p>
@@ -124,7 +131,7 @@
           </fieldset>
           <div class="answer-tool-row" role="toolbar" aria-label="Choice correction tools">
             <button
-              class="answer-tool eraser-tool"
+              class="button secondary compact answer-tool eraser-tool"
               type="button"
               [disabled]="!response() || !!feedback()"
               (click)="eraseResponse()"
@@ -163,7 +170,7 @@
           </div>
           <div class="answer-tool-row" role="toolbar" aria-label="Sentence correction tools">
             <button
-              class="answer-tool correction-tape-tool"
+              class="button secondary compact answer-tool correction-tape-tool"
               type="button"
               [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
               (click)="undoLastWord()"
@@ -171,7 +178,7 @@
               Undo last word
             </button>
             <button
-              class="answer-tool eraser-tool"
+              class="button secondary compact answer-tool eraser-tool"
               type="button"
               [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
               (click)="clearWordOrder()"
@@ -196,7 +203,7 @@
           </label>
           <div class="answer-tool-row" role="toolbar" aria-label="Answer correction tools">
             <button
-              class="answer-tool eraser-tool"
+              class="button secondary compact answer-tool eraser-tool"
               type="button"
               [disabled]="!response() || !!feedback()"
               (click)="eraseResponse()"

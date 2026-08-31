@@ -26,6 +26,7 @@ export class StudyPage implements OnInit {
   protected readonly response = signal('');
   protected readonly selectedTokenIndexes = signal<number[]>([]);
   protected readonly pageError = signal<string | null>(null);
+  protected readonly emptySession = signal<{ title: string; message: string } | null>(null);
   protected readonly completedAttempt = signal<CompletedAttempt | null>(null);
   protected readonly busy = signal(false);
 
@@ -75,10 +76,16 @@ export class StudyPage implements OnInit {
                 this.route.snapshot.paramMap.get('testId') ?? '',
               );
       if (!session) {
-        this.pageError.set(
+        this.emptySession.set(
           mode === 'review'
-            ? 'No review is due yet. Continue with any lesson or test.'
-            : 'You have no unresolved mistakes to practise.',
+            ? {
+                title: 'No review is due yet',
+                message: 'Continue with any lesson or test while your next review becomes due.',
+              }
+            : {
+                title: 'No mistakes to practise',
+                message: 'You have no unresolved mistakes. Continue with any lesson or test.',
+              },
         );
         return;
       }

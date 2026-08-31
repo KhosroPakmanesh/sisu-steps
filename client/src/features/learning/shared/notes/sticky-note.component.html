@@ -35,7 +35,7 @@
       Reset draft
     </button>
     <button
-      class="button compact"
+      class="button primary compact"
       [class.danger]="willRemove()"
       type="button"
       [disabled]="!hasChanges() || busy() || draft().length > maxLength"

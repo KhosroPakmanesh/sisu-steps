@@ -34,7 +34,7 @@
   --red-800: #803c36;
   --text-primary: var(--ink-900);
   --text-secondary: var(--stone-600);
-  --text-muted: var(--stone-500);
+  --text-muted: color-mix(in srgb, var(--text-secondary) 60%, var(--stone-500));
   --text-brand: var(--blue-700);
   --text-success: var(--green-900);
   --text-warning: var(--amber-900);
@@ -56,6 +56,8 @@
   --border-control: var(--stone-300);
   --border-brand: var(--blue-200);
   --border-brand-strong: var(--blue-500);
+  --border-danger: var(--red-700);
+  --border-warning: var(--amber-400);
   --border-focus: var(--blue-400);
   --focus-ring: #b37e20;
   --notebook-rule: rgb(69 119 145 / 13%);
@@ -64,11 +66,15 @@
   --notebook-shadow: rgb(48 44 36 / 18%);
   --overlay-soft: rgb(255 250 240 / 88%);
   --overlay-line: rgb(255 250 240 / 16%);
-  --text-caption: 0.72rem;
+  --text-caption: 0.75rem;
   --text-small: 0.84rem;
+  --text-detail: 0.88rem;
   --text-body: 1rem;
+  --text-title-compact: 1.15rem;
+  --text-summary: 1.35rem;
   --text-heading-small: 1.4rem;
   --line-body: 1.65;
+  --line-control: 1.15;
   --weight-regular: 400;
   --weight-bold: 700;
   --weight-heavy: 800;
@@ -110,9 +116,10 @@
   --paper-depth: 0.55rem;
   --folder-cover: #243654;
   --folder-cover-deep: #17253f;
+  --folder-tab-ink: color-mix(in srgb, var(--folder-cover-deep) 35%, black);
   --folder-cover-highlight: rgb(255 255 255 / 9%);
   --folder-plastic: rgb(245 249 251 / 72%);
-  --folder-active-shade: rgb(23 37 63 / 24%);
+  --folder-active-shade: rgb(23 37 63 / 16%);
   --folder-tab-blue: #5a9bd5;
   --folder-tab-white: #f4efe5;
   --folder-tab-yellow: #e0b929;

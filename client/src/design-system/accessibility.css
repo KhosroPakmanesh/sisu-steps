@@ -1,0 +1,109 @@
+/* Keep focus inside paper silhouettes instead of drawing it into a clipped edge. */
+.workbook-folder-tab {
+  --focus-ring: var(--folder-tab-ink);
+}
+
+.back-link:focus-visible,
+.subject-tab:focus-visible,
+.notebook-select:focus-visible,
+.word-token:focus-visible,
+.workbook-folder-tab:focus-visible,
+.choice-list label:has(input:focus-visible),
+.practice-choices label:has(input:focus-visible) {
+  outline: 0.2rem solid var(--focus-ring);
+  outline-offset: -0.4rem;
+  animation: none;
+}
+
+.choice-list input:focus-visible,
+.practice-choices input:focus-visible {
+  outline: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  /* The shared static view overrides route-specific hover/selected transforms.
+     Decorative positioning and the appearance lever keep their meaningful geometry. */
+  :is(
+    .button,
+    .back-link,
+    .subject-tab,
+    .workbook-folder-tab,
+    .continue-card,
+    .topic-card,
+    .catalog-stats,
+    .topic-overview,
+    .objective-panel,
+    .test-group-heading,
+    .test-card,
+    .sticky-note,
+    .reader-heading,
+    .lesson-objectives,
+    .teaching-section,
+    .worked-examples,
+    .mistake-notes,
+    .lesson-vocabulary,
+    .lesson-vocabulary dl div,
+    .key-points li,
+    .lesson-practice,
+    .practice-complete,
+    .test-focus,
+    .exercise-card,
+    .choice-list label,
+    .practice-choices label,
+    .choice-list input,
+    .practice-choices input,
+    .word-token,
+    .feedback,
+    .teacher-stamp,
+    .result-card,
+    .result-ring,
+    .preparation-complete,
+    .report-overview,
+    .data-overview,
+    .report-topic-heading,
+    .topic-file-label,
+    .backup-archive,
+    .ledger-column-heading,
+    .mistake-cta,
+    .state-card,
+    .example-grid article
+  ) {
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media (forced-colors: active) {
+  :root,
+  .workbook-folder-tab {
+    --focus-ring: Highlight;
+  }
+
+  .button,
+  .back-link,
+  .subject-tab,
+  .notebook-select,
+  .word-token {
+    border: 1px solid ButtonText;
+    background: Canvas;
+    color: ButtonText;
+    box-shadow: none;
+    filter: none;
+  }
+
+  .button:disabled,
+  .word-token:disabled {
+    color: GrayText;
+    opacity: 1;
+  }
+
+  .choice-list input[type='radio'],
+  .practice-choices input[type='radio'],
+  input[type='checkbox'] {
+    border: 0;
+    background: none;
+    box-shadow: none;
+    appearance: auto;
+  }
+}

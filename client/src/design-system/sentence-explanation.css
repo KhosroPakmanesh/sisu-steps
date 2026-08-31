@@ -20,7 +20,7 @@
 .lesson-heading h3 {
   margin-top: var(--space-1);
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: var(--text-summary);
 }
 
 .lesson-heading > p {
@@ -32,7 +32,7 @@
 .lesson-heading > p span,
 .sentence-pattern span {
   color: var(--text-secondary);
-  font-size: 0.68rem;
+  font-size: var(--text-caption);
   font-weight: var(--weight-bold);
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -82,7 +82,7 @@
 
 .part-word span {
   color: var(--text-brand);
-  font-size: 0.65rem;
+  font-size: var(--text-caption);
   font-weight: var(--weight-heavy);
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -111,14 +111,14 @@
 }
 
 .sentence-parts dt {
-  font-size: 0.72rem;
+  font-size: var(--text-caption);
   font-weight: var(--weight-bold);
 }
 
 .sentence-parts dd {
   margin: 0;
   color: var(--text-primary);
-  font-size: 0.84rem;
+  font-size: var(--text-small);
   line-height: 1.5;
 }
 
@@ -127,7 +127,15 @@
   .sentence-parts li,
   .sentence-parts dl div {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .lesson-heading,
+  .sentence-pattern,
+  .sentence-parts li {
+    padding: var(--space-3);
   }
 
   .lesson-heading > p {

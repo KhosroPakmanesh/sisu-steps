@@ -187,52 +187,14 @@ input.notebook-input.has-writing {
   margin-top: var(--space-3);
 }
 
-.answer-tool {
-  min-height: var(--control-height-compact);
-  padding: 0.48rem 0.7rem;
-  border: 1px solid var(--border-control);
-  border-radius: 0.12rem;
-  background: var(--surface-raised);
-  color: var(--text-primary);
-  font: inherit;
-  font-size: var(--text-small);
-  font-weight: var(--weight-bold);
-  cursor: pointer;
-  box-shadow: 0 0.14rem 0 var(--notebook-shadow);
-  transition:
-    transform var(--motion-fast) ease,
-    box-shadow var(--motion-fast) ease;
+.button.eraser-tool {
+  --action-paper: color-mix(in srgb, var(--surface-danger) 35%, var(--surface-raised));
+  --action-edge: var(--border-control);
 }
 
-.eraser-tool {
-  border-left: 0.38rem solid transparent;
-  background: linear-gradient(110deg, var(--surface-danger) 0 48%, var(--surface-paper) 49%);
-}
-
-.correction-tape-tool {
-  border-left: 0.38rem solid transparent;
-  background: linear-gradient(
-    to bottom,
-    var(--surface-paper) 0 64%,
-    var(--notebook-rule) 65% 72%,
-    var(--surface-paper) 73%
-  );
-}
-
-.answer-tool:hover:not(:disabled) {
-  box-shadow: 0 0.28rem 0 var(--notebook-shadow);
-  transform: translateY(-0.12rem);
-}
-
-.answer-tool:active:not(:disabled) {
-  box-shadow: none;
-  transform: translateY(0.08rem);
-}
-
-.answer-tool:disabled {
-  cursor: default;
-  filter: grayscale(0.35);
-  opacity: 0.52;
+.button.correction-tape-tool {
+  --action-paper: var(--surface-paper);
+  --action-edge: var(--notebook-margin);
 }
 
 .feedback {

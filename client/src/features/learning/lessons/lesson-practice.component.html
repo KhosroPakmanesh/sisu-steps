@@ -50,7 +50,7 @@
         </fieldset>
         <div class="answer-tool-row" role="toolbar" aria-label="Choice correction tools">
           <button
-            class="answer-tool eraser-tool"
+            class="button secondary compact answer-tool eraser-tool"
             type="button"
             [disabled]="!response() || !!feedback()"
             (click)="eraseResponse()"
@@ -89,7 +89,7 @@
         </div>
         <div class="answer-tool-row" role="toolbar" aria-label="Sentence correction tools">
           <button
-            class="answer-tool correction-tape-tool"
+            class="button secondary compact answer-tool correction-tape-tool"
             type="button"
             [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
             (click)="undoLastWord()"
@@ -97,7 +97,7 @@
             Undo last word
           </button>
           <button
-            class="answer-tool eraser-tool"
+            class="button secondary compact answer-tool eraser-tool"
             type="button"
             [disabled]="selectedTokenIndexes().length === 0 || !!feedback()"
             (click)="clearWordOrder()"
@@ -121,7 +121,7 @@
         </label>
         <div class="answer-tool-row" role="toolbar" aria-label="Answer correction tools">
           <button
-            class="answer-tool eraser-tool"
+            class="button secondary compact answer-tool eraser-tool"
             type="button"
             [disabled]="!response() || !!feedback()"
             (click)="eraseResponse()"

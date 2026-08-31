@@ -90,9 +90,9 @@
   margin-left: 0;
   border: 1px solid color-mix(in srgb, var(--folder-cover-deep) 78%, transparent);
   border-radius: 0.42rem 0 0 0.42rem;
-  color: var(--folder-cover-deep);
+  color: var(--folder-tab-ink);
   text-decoration: none;
-  font-size: 0.68rem;
+  font-size: var(--text-caption);
   font-weight: var(--weight-heavy);
   letter-spacing: 0.035em;
   line-height: 1;
@@ -228,7 +228,7 @@
 
   .workbook-folder-tab {
     width: 2.65rem;
-    font-size: 0.64rem;
+    font-size: var(--text-caption);
   }
 }
 
@@ -243,7 +243,7 @@
 
   .workbook-folder-tab {
     height: 5.75rem;
-    font-size: 0.62rem;
+    font-size: var(--text-caption);
   }
 }
 

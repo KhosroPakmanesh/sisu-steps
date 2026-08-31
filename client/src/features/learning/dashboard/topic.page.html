@@ -155,7 +155,7 @@
                   lessonStatus.completed === lessonStatus.total ? 'Review lessons' : 'Learn first'
                 }}
               </a>
-              <a class="button compact" [routerLink]="paths.study(activePack.id, test.id)">
+              <a class="button primary compact" [routerLink]="paths.study(activePack.id, test.id)">
                 {{ session ? 'Resume' : report.attempts ? 'Try again' : 'Start test' }}
               </a>
             </div>

@@ -58,7 +58,7 @@
   background: var(--surface-paper);
   color: var(--text-brand);
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: var(--text-summary);
   box-shadow: 2px 2px 0 var(--red-700);
   transform: rotate(-1deg);
 }
@@ -75,7 +75,7 @@
 
 .brand small {
   color: var(--text-on-ink-muted);
-  font-size: 0.68rem;
+  font-size: var(--text-caption);
 }
 
 .header-tools {

@@ -72,37 +72,10 @@
   font-size: var(--text-heading-small);
 }
 
-.practice-choices {
-  display: grid;
-  gap: var(--space-2);
-  padding: 0;
-  border: 0;
-}
-
-.practice-choices label,
 .practice-text-answer,
 .practice-word-builder {
   display: grid;
   gap: var(--space-2);
-}
-
-.practice-choices label {
-  grid-template-columns: auto 1fr;
-  padding: var(--space-3);
-  border: 1px solid var(--border-default);
-  border-left: 0.22rem solid transparent;
-  border-radius: var(--radius-control);
-  background:
-    linear-gradient(to bottom, transparent calc(100% - 1px), var(--notebook-rule) 0),
-    var(--surface-raised);
-  cursor: pointer;
-  box-shadow: 0 2px 0 var(--notebook-shadow);
-}
-
-.practice-choices label.selected {
-  border-color: var(--border-brand-strong);
-  border-left-color: transparent;
-  background: var(--surface-brand-subtle);
 }
 
 .practice-text-answer {
@@ -170,10 +143,17 @@
 }
 
 @media (width <= 560px) {
+  .lesson-practice,
+  .practice-card {
+    min-width: 0;
+    padding: var(--space-3);
+    overflow-wrap: anywhere;
+  }
+
   .practice-heading,
   .practice-actions {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .practice-actions .button {

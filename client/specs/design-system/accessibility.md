@@ -24,7 +24,7 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Render focus indicators inside clipped stationery controls so their silhouettes cannot hide the indicator.
 - Keep **Show answer** as a native keyboard-operable button without an `Alt+A` binding, shortcut metadata, or a visible shortcut annotation.
 - Permit fully custom control appearance only while the underlying link, button, input, textarea, radio, checkbox, select, file input, progress, or dialog semantics and keyboard behavior remain native.
-- Keep correction/eraser actions, sticky-note fields, and the report filter visible, labelled, focusable, and understandable without recognizing their stationery metaphors; do not put them behind collapse/expand controls.
+- Keep correction/eraser actions and sticky-note fields visible, labelled, focusable, and understandable without recognizing their stationery metaphors; do not put them behind collapse/expand controls. The report filter is withdrawn.
 - For destructive confirmation, focus the safe Cancel action when the modal sheet opens, cancel on Escape, return focus to the initiating control, and execute only through explicit confirmation.
 - Keep route content available immediately during page-turn effects, and reduce all desk, page, tab, paper, stamp, pencil, light, and token movement to a static state under `prefers-reduced-motion`.
 
@@ -34,5 +34,7 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Manually verify keyboard navigation, focus visibility, button-operated answer reveal, file restore, and destructive confirmation for affected workflows.
 - Check 320, 768, and 1440 pixel widths for overlap, clipping, hidden actions, and horizontal scrolling.
 - Check the scroll width and required-child bounds of clipped paper surfaces; document-level overflow alone cannot reveal content hidden by `overflow: clip`.
+- Inspect visible focus pixels on back links, lesson tabs/selects, file labels and correction actions; a focused DOM element or computed outward outline does not prove the indicator survives clipping.
+- Check native 200%/400% browser zoom, text enlargement, text-spacing overrides, forced colors and screen-reader behavior. Record unavailable checks explicitly; root-font or viewport simulations are not native browser zoom.
 - Verify status meaning remains understandable without color and with reduced motion enabled.
 - Verify the icon-led Day/Automatic/Night Appearance toggle exposes all three text names to assistive technology, works by keyboard, keeps focus visible despite its unframed presentation, and confirms its decorative lever follows the native radio state while Automatic responds to device color-scheme changes and explicit Day and Night choices remain stable.

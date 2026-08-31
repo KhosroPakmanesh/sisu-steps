@@ -15,7 +15,7 @@
 }
 
 .reports-hero h1 {
-  margin: var(--space-2) 0 0;
+  margin: var(--space-2) 0;
 }
 
 .reports-hero .back-link + .eyebrow {
@@ -74,7 +74,7 @@
   margin: 0;
   color: var(--text-secondary);
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: var(--text-summary);
 }
 
 .report-overview-primary dd {
@@ -154,7 +154,7 @@
 
 .mistake-cta h3 {
   margin-top: var(--space-1);
-  font-size: 1.35rem;
+  font-size: var(--text-summary);
 }
 
 @media (width <= 800px) {

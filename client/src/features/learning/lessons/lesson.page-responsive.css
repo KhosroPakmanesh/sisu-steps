@@ -12,7 +12,7 @@
   }
 
   .lesson-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .lesson-list {
@@ -51,6 +51,30 @@
 }
 
 @media (width <= 560px) {
+  .reader-heading,
+  .lesson-objectives,
+  .teaching-section,
+  .lesson-vocabulary,
+  .mistake-notes,
+  .preparation-complete {
+    padding: var(--space-3);
+  }
+
+  .lesson-reader {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .example-grid article {
+    padding: var(--space-3);
+  }
+
+  .example-grid ol,
+  .lesson-objectives ul,
+  .mistake-notes ul {
+    padding-left: var(--space-4);
+  }
+
   .lesson-footer {
     display: grid;
   }

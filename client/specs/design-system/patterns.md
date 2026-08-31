@@ -69,13 +69,13 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - Use the physical metaphor only as a visual aid. Do not require object recognition to discover, understand, or operate a control.
 - Use correction/eraser controls only for the current unsubmitted choice, typed answer, or word-order draft. Stored learner history continues to use explicit consequence-specific clearing controls.
 - Present topic and lesson notes as always-visible sticky notes with a native textarea, character count, explicit save/removal wording, and visible status; never render saved text as HTML.
-- Present the native **Show studied tests only** report checkbox on a paper-clipped filter label. Filtering changes visible ledger rows only.
+- Reports show every test row; the **Show studied tests only** filter is withdrawn.
 - Do not introduce an accordion, disclosure, collapsible stationery tool, expandable tray, or other collapse/expand interaction.
 
 ## Interactive workbook world
 
 - Place route content on the same desk-and-workbook stage, but give each route a distinct physical scene that reinforces its purpose.
-- Use exercise-book covers for topics, an unbroken connected path for the topic map, a facing-page reference layout for lessons, a loose worksheet for study, a returned marked paper for results, a ledger for reports, and labelled folders for data.
+- Use exercise-book covers for topics, an unbroken connected path for the topic map, the current available-width teaching sequence for lessons, a loose worksheet for study, a returned marked paper for results, a ledger for reports, and labelled folders for data. Do not introduce a new maximum lesson reading width.
 - Use immediate page-turn, tab-slide, lift, settle, stamp, pencil-circle, answer-line, and light motion only as confirmation of a state change; never wait for animation before navigation, content, or input becomes available.
-- At 800 pixels and below, collapse facing pages into semantic reading order. At 560 pixels and below, remove desk props and present the page as a pocket notebook.
+- At 800 pixels and below, replace a multi-lesson sidebar with its native lesson selector; teaching sections remain in semantic reading order at every width. At 560 pixels and below, remove desk props and present the page as a pocket notebook.
 - Treat the visual craft as atmosphere, not gamification: do not add locks, points, lives, currency, rewards, streak pressure, or leaderboards.

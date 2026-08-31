@@ -1,7 +1,7 @@
 .button {
   --action-paper: var(--surface-raised);
   --action-ink: var(--text-primary);
-  --action-edge: var(--blue-500);
+  --action-edge: var(--border-brand-strong);
   --action-angle: -0.16deg;
 
   position: relative;
@@ -38,9 +38,10 @@
     0.08rem 42%
   );
   font: inherit;
-  font-size: 0.84rem;
+  font-size: var(--text-small);
   font-weight: var(--weight-bold);
-  line-height: 1.15;
+  line-height: var(--line-control);
+  overflow-wrap: anywhere;
   text-align: center;
   text-decoration: none;
   cursor: pointer;
@@ -76,11 +77,13 @@
   pointer-events: none;
 }
 
-.button:focus-visible {
+.button:focus-visible,
+.button:has(input:focus-visible) {
   outline: 0;
 }
 
-.button:focus-visible::before {
+.button:focus-visible::before,
+.button:has(input:focus-visible)::before {
   inset: 0.16rem 0.2rem;
   border: 0.2rem solid var(--focus-ring);
 }
@@ -103,31 +106,28 @@
   transform: none;
 }
 
-.button.primary:disabled,
-.button.compact:not(.secondary):disabled {
+.button.primary:disabled {
   --action-paper: var(--surface-subtle);
   --action-ink: var(--text-secondary);
   --action-edge: var(--border-control);
 }
 
-.button.primary,
-.button.compact:not(.secondary) {
+.button.primary {
   --action-paper: color-mix(in srgb, var(--surface-brand-subtle) 78%, var(--surface-raised));
   --action-ink: var(--text-brand);
-  --action-edge: var(--blue-700);
+  --action-edge: var(--text-brand);
 
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--action-edge) 52%, transparent);
 }
 
-.button.primary:hover:not(:disabled),
-.button.compact:not(.secondary):hover:not(:disabled) {
+.button.primary:hover:not(:disabled) {
   --action-paper: color-mix(in srgb, var(--surface-brand-subtle) 88%, var(--surface-raised));
 }
 
 .button.secondary {
   --action-paper: var(--surface-raised);
   --action-ink: var(--text-primary);
-  --action-edge: var(--blue-500);
+  --action-edge: var(--border-brand-strong);
 }
 
 .button.compact {
@@ -147,7 +147,7 @@
 .button.danger {
   --action-paper: var(--surface-danger);
   --action-ink: var(--text-danger);
-  --action-edge: var(--red-700);
+  --action-edge: var(--border-danger);
 
   box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--action-edge) 58%, transparent);
 }
@@ -155,19 +155,21 @@
 .button.review-action {
   --action-paper: var(--surface-warning);
   --action-ink: var(--text-warning);
-  --action-edge: var(--amber-400);
+  --action-edge: var(--border-warning);
   --action-angle: 0.14deg;
 }
 
 .back-link {
   display: inline-flex;
   width: fit-content;
+  max-width: 100%;
+  overflow-wrap: anywhere;
   padding-bottom: 0.15rem;
   border-bottom: 1px solid var(--notebook-margin);
   color: var(--text-secondary);
   text-decoration: none;
   text-underline-offset: 0.2rem;
-  font-size: 0.88rem;
+  font-size: var(--text-detail);
   font-weight: var(--weight-bold);
 }
 

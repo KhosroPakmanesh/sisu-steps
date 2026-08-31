@@ -31,7 +31,7 @@
 .back-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: var(--text-detail);
   font-weight: var(--weight-bold);
 }
 
@@ -41,7 +41,8 @@
 
 .topic-overview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
   padding: var(--space-5);
   border-radius: var(--radius-large);
   border-left: 0.35rem solid transparent;
@@ -52,6 +53,7 @@
 
 .topic-overview div {
   display: grid;
+  min-width: 0;
   gap: var(--space-1);
   padding: var(--space-3);
 }
@@ -66,7 +68,7 @@
   margin: 0;
   color: var(--text-secondary);
   font-family: var(--font-display);
-  font-size: 1.35rem;
+  font-size: var(--text-summary);
 }
 
 .topic-actions {
@@ -205,7 +207,7 @@
 
 .test-card h3 {
   margin: var(--space-1) 0 0.35rem;
-  font-size: 1.15rem;
+  font-size: var(--text-title-compact);
 }
 
 .test-card p {

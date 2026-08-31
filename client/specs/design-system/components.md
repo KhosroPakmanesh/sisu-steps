@@ -13,8 +13,8 @@ Create or extract a reusable component only when real screens share the behavior
 - Teacher correction-slip answer feedback, answer reveal, returned-paper session result, and fold-out sentence-construction diagram.
 - Binder-index lesson navigation, clipped focus contract, margin key-point labels, example flashcards, vocabulary index cards, detachable optional-practice sheet, and completion stamp.
 - Consequence-specific modal confirmation sheet for clear-test, clear-topic, and clear-all actions.
-- Attached topic/lesson sticky note with a native textarea, explicit save/removal status, and paper-lift hover/focus response; the topic note follows the complete learning map. Also included are a paper-clipped native report filter checkbox, ruler-only progress, and readable teacher-stamp feedback.
-- Catalog exercise-book covers, connected fold-out topic map, two-page lesson spread, loose study and returned-result sheets, Finnish school ledger, and archive-drawer data scene.
+- Attached topic/lesson sticky note with a native textarea, explicit save/removal status, and paper-lift hover/focus response; the topic note follows the complete learning map. Also included are ruler-only progress and readable teacher-stamp feedback. The report filter is withdrawn; every test row remains visible.
+- Catalog exercise-book covers, connected fold-out topic map, available-width lesson sequence, loose study and returned-result sheets, Finnish school ledger, and archive-drawer data scene.
 
 ## Rules
 
@@ -23,6 +23,8 @@ Create or extract a reusable component only when real screens share the behavior
 - Keep component inputs and outputs small, explicit, and behavior-focused.
 - Support loading, empty, validation, error, success, disabled, skipped, and confirmation states when applicable.
 - Make destructive actions visually distinct and consequence-specific.
+- Practice and scored Study reuse the same answer-slip geometry: 1rem padding and a 0.5rem radio/text gap, reduced to 0.75rem padding at 560 pixels and below. Their learning and scoring semantics remain separate.
+- Correction actions reuse the compact shared cut-paper button; eraser/tape accents change material marks rather than the silhouette, focus or press behavior.
 - Give icon-only controls an accessible name and mark decorative symbols `aria-hidden`.
 - Preserve entered values when validation or persistence fails.
 - Put guidance beside the control it describes and operation-level failures in an alert or live region.
@@ -30,6 +32,6 @@ Create or extract a reusable component only when real screens share the behavior
 - Keep notebook ornament in CSS or `aria-hidden` elements so it cannot add noise to the accessibility tree.
 - Controls may look wholly custom and object-like, but their DOM semantics remain familiar: visual tabs stay links, desk lights and answer circles stay radios, answer lines stay inputs, selectors stay selects, and vocabulary cutouts stay buttons.
 - Every action button and action-link uses the same torn silhouette, inset cut line, folded corner, paper depth, and lift/press behavior. Size these actions to their label and padding rather than stretching them across the containing surface; cap them at the available width so long labels can still wrap without overflow, and preserve the shared practical touch height. Keep back-navigation and recovery actions at the reading start. Center topic-cover, continue-assignment, and result decision groups. Align forward lesson actions, test-card actions, exercise submission/reveal/continuation groups, note actions, archive/clear actions, and confirmation actions to the reading end. Keep related actions together with a consistent gap and wrapping; do not distribute them with `space-between` merely to consume available space. Use paper tint, ink, edge accent, and explicit wording—not a different construction—to communicate hierarchy and state.
-- A correction, filter, or note control remains visible and directly operable; do not hide it in a disclosure or replace its native semantics with a stationery object.
+- A correction or note control remains visible and directly operable; do not hide it in a disclosure or replace its native semantics with a stationery object.
 - Repeated information surfaces use a small material vocabulary: bound covers for topics, punched index cards for mapped tests, flashcards and margin labels inside lessons, perforated slips for answer choices, ledger rows and stamps for reports, and file dividers for data. Do not use a generic rounded-card fallback.
 - Prefer a native `<dialog>` for the confirmation sheet; focus Cancel on open, cancel on Escape, return focus on close, and emit the destructive decision only from the labelled confirm action.
