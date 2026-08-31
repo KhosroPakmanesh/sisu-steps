@@ -81,6 +81,7 @@
 
 ### Fixed
 
+- Page navigation now opens the destination at the top, including browser Back and Forward, while preserving accessible routed-content focus and leaving page spacing unchanged.
 - Prevented clipped and colliding content at the 320-pixel minimum width by stacking compact topic, report, and data summaries, simplifying narrow topic and archive rows, reducing study-sheet padding, and constraining grid children; added strongly visible internal focus rings for clipped cut-paper actions, consistent textarea focus, and deliberate focus on newly routed main content.
 - Removed redundant pack-specific KPT validation branches, added direct regression coverage for the dynamically loaded validator, replaced committed invalid-content fixture trees and marker files with automatically cleaned temporary unit-test trees, and corrected superseded public-content references in client validation guidance.
 - Excluded local Visual Studio cache files from repository-wide Prettier checks so locked generated indexes no longer block client validation.

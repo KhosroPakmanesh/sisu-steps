@@ -8,6 +8,7 @@
 - **VAL-G004-004** (`REQ-G004-011`, `012`): Browser checks cover labelled Appearance operation, keyboard reachability, deliberate routed-main focus, visible token-based focus on native fields and clipped actions, and absence of document-level or clipped-surface horizontal overflow at configured mobile, tablet, and wide viewports.
 - **VAL-G004-005** (`REQ-G004-013`–`019`): Shell tests verify the three native labelled Appearance radio choices, remembered selection, and semantic primary navigation after the stationery-control restyle.
 - **VAL-G004-006** (`REQ-G004-015`–`019`): Browser workflows exercise action buttons and links, native choice and text controls, word tokens, progress, reports, file restore, and destructive-action entry points across the responsive matrix.
+- **VAL-G004-007** (`REQ-G004-020`): Browser checks navigate from scrolled catalog, report, and data pages, open a topic through a content link, and traverse Back/Forward history at mobile, tablet, and desktop sizes. Destinations start at scroll position zero, routed main focus is preserved, and initial load does not steal focus.
 
 ## Manual checks
 
@@ -54,3 +55,11 @@
 - Playwright: all 24 runs passed across 320-pixel mobile, 768-pixel tablet, and 1440-pixel wide Chromium projects. New coverage operates native answer radios, a labelled text field, vocabulary-card buttons, semantic progress, and all three Appearance radio choices. A final six-run targeted pass also confirmed Space-key operation of Light and Automatic choices in every viewport project.
 - Visual inspection: Light and Dark catalog shells, Appearance swatches, topic map, cumulative lesson tabs, multiple-choice study, typed-answer study, word-order study, reports, and data settings were inspected at representative 1440- and 320-pixel widths. Primary actions and required labels remained more prominent than the stationery effects.
 - Behavior review: no route, content, grading, session, attempt, mistake, report-value, backup, restore, IndexedDB, or confirmation contract changed. Destructive actions retain their consequence-specific native confirmation flow.
+
+## Navigation scroll reset verification — 2026-08-31
+
+- `VAL-G004-007` regression coverage failed before the fix: Reports retained a 445-pixel scroll position instead of opening at zero.
+- After the fix, all six navigation cases passed at 320, 768, and 1440 pixels with normal and reduced motion. Checks cover primary navigation, a catalog content link, browser Back/Forward, routed-main focus, initial-load focus preservation, and the destination heading being in the viewport.
+- The complete browser run passed 57 applicable cases with 18 expected project-specific skips. The Windows wrapper lingered during managed-server shutdown and was interrupted after all cases completed; its server processes were confirmed stopped.
+- ESLint, Stylelint, module-size, reachability, architecture, production/test typechecks, bundled-content validation, production build, and all 107 unit tests passed. Changed-file formatting and `git diff --check` passed.
+- The aggregate `check` command stopped at 19 pre-existing formatting warnings in untouched files. Remaining checks were run separately; unrelated formatting and page spacing were left unchanged.

@@ -20,6 +20,7 @@
 
 - **REQ-G004-011:** All appearances shall preserve semantic landmarks, native controls, visible focus, practical touch targets, reduced-motion behavior, non-color status meaning, and WCAG 2.2 AA text contrast.
 - **REQ-G004-012:** Every primary workflow shall remain usable without overlap, clipped controls, hidden labels, or horizontal page scrolling from 320 pixels upward.
+- **REQ-G004-020:** Successful page navigation, including browser Back and Forward, shall open the destination at the top of the document. In-app navigation shall retain deliberate focus on the destination main landmark without allowing focus to displace the scroll reset; initial page load shall not steal keyboard focus.
 
 ## Stationery control requirements
 

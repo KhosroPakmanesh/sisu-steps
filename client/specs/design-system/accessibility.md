@@ -10,6 +10,7 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Preserve keyboard operation, logical focus order, and visible focus indicators.
 - Deliberately place focus after routed context changes, operation errors, and any custom confirmation close when practical.
 - After in-app route navigation, focus the newly activated main landmark without stealing focus on the initial page load.
+- Open each destination at the top of the document, including browser Back and Forward navigation. Focus the routed main landmark without scrolling so focus cannot override the router's scroll reset.
 - Keep text and controls readable from 320 pixels through desktop widths.
 - Provide practical pointer and touch target sizes.
 - Respect `prefers-reduced-motion`.

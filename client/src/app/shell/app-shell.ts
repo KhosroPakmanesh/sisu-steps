@@ -49,7 +49,7 @@ export class AppShell {
       if (!routeMain) return;
 
       routeMain.tabIndex = -1;
-      routeMain.focus();
+      routeMain.focus({ preventScroll: true });
     });
   }
 }
