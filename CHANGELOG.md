@@ -81,6 +81,8 @@
 
 ### Fixed
 
+- Allow enlarged-text layouts to reflow the header and reduce notebook decoration spacing while preserving the default layout and requested text size.
+
 - Repaired UI consistency across narrow layouts (including feedback, sentence explanations, results, and empty states), clipped keyboard focus, destructive and correction actions, instructional typography, essential-label sizes, answer-choice spacing, and reduced motion; strengthened muted text on tinted paper and focus contrast on colored folder tabs; preserved the notebook shell, available lesson reading width, learning behavior, and local data.
 
 - Page navigation now opens the destination at the top, including browser Back and Forward, while preserving accessible routed-content focus and leaving page spacing unchanged.

@@ -223,13 +223,13 @@ main.page-shell .topic-card:hover {
   transform: rotate(0.45deg);
 }
 
-@media (width <= 800px) {
+@container workbook (width <= 50rem) {
   .topic-page .test-card:nth-of-type(even) {
     transform: none;
   }
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   .page-shell,
   .runner-shell {
     border-radius: 0.55rem 0.35rem 0.5rem 0.25rem;

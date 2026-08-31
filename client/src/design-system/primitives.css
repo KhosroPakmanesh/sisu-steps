@@ -130,7 +130,7 @@
   border-left-color: transparent;
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   .state-card {
     grid-template-columns: minmax(0, 1fr);
     width: 100%;

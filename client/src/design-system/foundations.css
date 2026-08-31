@@ -122,7 +122,7 @@ textarea {
   }
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   h1 {
     font-size: clamp(1.75rem, 9vw, 2.2rem);
     overflow-wrap: anywhere;

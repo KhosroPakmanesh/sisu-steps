@@ -24,6 +24,7 @@ Create or extract a reusable component only when real screens share the behavior
 - Support loading, empty, validation, error, success, disabled, skipped, and confirmation states when applicable.
 - Make destructive actions visually distinct and consequence-specific.
 - Practice and scored Study reuse the same answer-slip geometry: 1rem padding and a 0.5rem radio/text gap, reduced to 0.75rem padding at 560 pixels and below. Their learning and scoring semantics remain separate.
+- Content breakpoints are expressed relative to the root text size, with the pixel values above describing the default scale. Below 20rem of shell width, both answer-slip families place the radio above the text when necessary to preserve readable enlarged labels; this does not alter selection or scoring.
 - Correction actions reuse the compact shared cut-paper button; eraser/tape accents change material marks rather than the silhouette, focus or press behavior.
 - Give icon-only controls an accessible name and mark decorative symbols `aria-hidden`.
 - Preserve entered values when validation or persistence fails.

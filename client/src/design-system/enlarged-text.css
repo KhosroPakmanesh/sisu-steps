@@ -1,0 +1,136 @@
+/* Below the ordinary 320px/16px reading space, decoration yields to larger text.
+   The root-relative container query also follows a changed browser text size. */
+@container workbook (width < 20rem) {
+  .workbook-folder {
+    --sheet-gutter: var(--space-reflow-inline);
+    --folder-clip-content-clearance: 18px;
+    --folder-tab-stack-height: 21.36rem;
+    --folder-cover-space: 80px;
+
+    margin-inline: 8px;
+    padding-top: 24px;
+    min-height: calc(var(--folder-tab-stack-height) + 5rem);
+  }
+
+  .workbook-cover,
+  .workbook-folder-tabs {
+    width: calc(100% - 4px);
+  }
+
+  .workbook-folder-tab {
+    width: 42.4px;
+    height: 7rem;
+    flex-shrink: 0;
+  }
+
+  .workbook-folder-tab span {
+    white-space: nowrap;
+  }
+
+  .workbook-folder > router-outlet + * > .page-shell,
+  .workbook-folder > router-outlet + * > .runner-shell {
+    width: calc(100% - var(--folder-cover-space));
+    padding-left: 20px;
+    padding-right: var(--folder-clip-content-clearance);
+    overflow-wrap: anywhere;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--notebook-line-height) - 1px),
+      var(--notebook-rule) var(--notebook-line-height)
+    );
+    background-size: 100% var(--notebook-line-height);
+  }
+
+  .workbook-page-hardware {
+    width: calc(100% - var(--folder-cover-space));
+  }
+
+  .workbook-page-clip {
+    right: -1px;
+    width: 10px;
+  }
+
+  .workbook-page-clip::before {
+    right: 1px;
+    width: 4px;
+  }
+
+  .workbook-folder > router-outlet + * > main::after {
+    content: none;
+  }
+
+  .workbook-folder
+    main:is(.page-shell, .runner-shell)
+    :is(
+      .continue-card,
+      .topic-card,
+      .reader-heading,
+      .exercise-card,
+      .lesson-practice,
+      .practice-card,
+      .backup-archive,
+      .topic-file-label
+    ) {
+    padding-inline: var(--space-reflow-inline);
+  }
+
+  .workbook-folder main .runner-header {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workbook-folder main .runner-heading,
+  .workbook-folder main .question-count {
+    grid-column: 1;
+    min-width: 0;
+  }
+
+  .workbook-folder .button {
+    padding-inline: var(--space-reflow-inline);
+  }
+
+  .workbook-folder .reader-heading::after {
+    max-width: 60%;
+  }
+
+  .workbook-folder main .exercise-card::before,
+  .workbook-folder main .exercise-card::after {
+    display: none;
+  }
+
+  .workbook-folder main :is(.choice-list, .practice-choices) label {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workbook-folder main .report-name {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .workbook-folder main .ledger-sheet :is(th, td) {
+    padding-inline: var(--space-reflow-inline);
+  }
+
+  .workbook-folder main .ledger-sheet {
+    border-left-width: 4px;
+  }
+
+  .workbook-folder main .ledger-sheet table {
+    width: calc(100% - 8px);
+    margin-left: 8px;
+  }
+
+  .workbook-folder
+    main:is(.page-shell, .runner-shell)
+    :is(.exercise-card, .sentence-lesson, .ledger-sheet) {
+    clip-path: polygon(
+      0 4px,
+      16px 0,
+      100% 4px,
+      100% calc(100% - 8px),
+      calc(100% - 4px) 100%,
+      0 calc(100% - 4px)
+    );
+  }
+}

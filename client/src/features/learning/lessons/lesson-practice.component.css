@@ -142,7 +142,7 @@
   margin: var(--space-1) 0 var(--space-3);
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   .lesson-practice,
   .practice-card {
     min-width: 0;

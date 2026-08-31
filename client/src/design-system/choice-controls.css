@@ -30,7 +30,7 @@
   cursor: default;
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   .choice-list label,
   .practice-choices label {
     padding: var(--space-3);

@@ -1,6 +1,7 @@
 :host {
   display: block;
   min-height: 100dvh;
+  container: workbook / inline-size;
 }
 
 .site-header {
@@ -8,6 +9,7 @@
   top: 0;
   z-index: 20;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 2rem;
@@ -42,6 +44,7 @@
 .brand {
   display: flex;
   flex: 0 0 auto;
+  max-width: 100%;
   align-items: center;
   gap: 0.75rem;
   color: var(--text-on-ink);
@@ -50,6 +53,7 @@
 
 .brand-mark {
   display: grid;
+  flex-shrink: 0;
   place-items: center;
   width: 2.55rem;
   height: 2.55rem;
@@ -65,6 +69,8 @@
 
 .brand > span:last-child {
   display: grid;
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .brand strong {
@@ -96,6 +102,7 @@
   border-top: 1px solid var(--border-default);
   color: var(--text-muted);
   font-size: 0.76rem;
+  overflow-wrap: anywhere;
 }
 
 .site-footer p {
@@ -114,7 +121,7 @@
   transform: rotate(0.3deg);
 }
 
-@media (width <= 900px) {
+@container workbook (width <= 56.25rem) {
   .site-header {
     gap: var(--space-3);
   }
@@ -124,7 +131,7 @@
   }
 }
 
-@media (width <= 620px) {
+@container workbook (width <= 38.75rem) {
   .site-header {
     position: relative;
     padding: 0.75rem;
@@ -136,5 +143,17 @@
 
   .site-footer {
     display: grid;
+  }
+}
+
+@container workbook (width < 20rem) {
+  .site-header {
+    position: relative;
+    padding: var(--space-reflow-inline);
+  }
+
+  .site-footer {
+    grid-template-columns: minmax(0, 1fr);
+    padding-inline: var(--space-reflow-inline);
   }
 }

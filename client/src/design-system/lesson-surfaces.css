@@ -103,7 +103,7 @@ main.lesson-page .lesson-practice .practice-card {
   filter: drop-shadow(0.2rem 0.25rem 0 var(--paper-edge));
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   main.lesson-page .worked-examples,
   main.lesson-page .example-grid article {
     padding: var(--space-3);

@@ -283,7 +283,7 @@
   color: var(--text-brand);
 }
 
-@media (width <= 800px) {
+@container workbook (width <= 50rem) {
   .data-hero {
     grid-template-columns: 1fr;
   }
@@ -301,7 +301,7 @@
   }
 }
 
-@media (width <= 650px) {
+@container workbook (width <= 40.625rem) {
   .backup-archive,
   .topic-file-label {
     padding: var(--space-5);
@@ -330,7 +330,7 @@
   }
 }
 
-@media (width <= 420px) {
+@container workbook (width <= 26.25rem) {
   .data-overview {
     grid-template-columns: minmax(0, 1fr);
     padding-right: var(--space-3);

@@ -221,7 +221,7 @@
   content: '';
 }
 
-@media (width <= 900px) {
+@container workbook (width <= 56.25rem) {
   .workbook-folder-tabs {
     top: calc(7.25rem + var(--space-3));
   }
@@ -232,7 +232,7 @@
   }
 }
 
-@media (width <= 620px) {
+@container workbook (width <= 38.75rem) {
   .workbook-folder {
     --folder-tab-stack-height: 17.61rem;
   }
@@ -247,7 +247,7 @@
   }
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   .workbook-folder {
     --folder-clip-content-clearance: calc(1.44rem + var(--space-3));
 

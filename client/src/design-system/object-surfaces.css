@@ -283,7 +283,7 @@ main.lesson-page .key-points li {
   box-shadow: 0.1rem 0.12rem 0 var(--paper-edge);
 }
 
-@media (width <= 560px) {
+@container workbook (width <= 35rem) {
   main.page-shell .topic-card,
   main.topic-page .test-card {
     padding-left: var(--space-5);

@@ -198,6 +198,11 @@
   content: '·';
 }
 
+.report-state-summary span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
 .report-state-summary .has-value {
   color: var(--text-primary);
   font-weight: var(--weight-bold);
@@ -210,7 +215,7 @@
   font-size: var(--text-caption);
 }
 
-@media (width <= 800px) {
+@container workbook (width <= 50rem) {
   .report-section-heading {
     display: block;
   }
@@ -221,7 +226,7 @@
   }
 }
 
-@media (width <= 650px) {
+@container workbook (width <= 40.625rem) {
   .report-topic-heading h2 {
     font-size: 1.75rem;
     overflow-wrap: anywhere;
@@ -270,7 +275,7 @@
   }
 }
 
-@media (width <= 420px) {
+@container workbook (width <= 26.25rem) {
   .report-name {
     align-items: start;
   }

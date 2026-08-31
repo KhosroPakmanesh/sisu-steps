@@ -157,19 +157,19 @@
   font-size: var(--text-summary);
 }
 
-@media (width <= 800px) {
+@container workbook (width <= 50rem) {
   .reports-hero {
     grid-template-columns: 1fr;
   }
 }
 
-@media (width <= 650px) {
+@container workbook (width <= 40.625rem) {
   .mistake-cta {
     display: grid;
   }
 }
 
-@media (width <= 420px) {
+@container workbook (width <= 26.25rem) {
   .report-overview {
     grid-template-columns: 1fr;
     padding-right: var(--space-3);

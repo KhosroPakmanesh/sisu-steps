@@ -186,7 +186,7 @@ main.lesson-page .lesson-practice .sentence-lesson {
   filter: drop-shadow(0.22rem 0.28rem 0 var(--paper-edge));
 }
 
-@media (width <= 800px) {
+@container workbook (width <= 50rem) {
   main.runner-shell .test-focus {
     display: block;
   }

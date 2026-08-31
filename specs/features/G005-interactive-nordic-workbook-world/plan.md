@@ -6,7 +6,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 
 ## Requirement slice
 
-- `REQ-G005-001`–`REQ-G005-020`, `REQ-G005-022`, `REQ-G005-023`, and `REQ-G005-025`–`REQ-G005-031`; `REQ-G005-021` and `REQ-G005-024` are withdrawn.
+- `REQ-G005-001`–`REQ-G005-020`, `REQ-G005-022`, `REQ-G005-023`, and `REQ-G005-025`–`REQ-G005-032`; `REQ-G005-021` and `REQ-G005-024` are withdrawn.
 - Extends the stable G004 notebook baseline and explicitly permits custom-looking controls while preserving G001 learning, content, routing, grading, and persistence behavior.
 
 ## Included
@@ -59,3 +59,9 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 - Consolidate equivalent text, spacing and state roles through shared tokens. Preserve intentional material differences and existing font families.
 - Make reduced-motion interactions static and distinguish empty mistake/review sessions from real errors. Do not change routes, content, scoring, storage, or clearing behavior.
 - Add targeted regression coverage, repeat Day/Night route and state checks, run the full client gates, and record native zoom, text spacing, forced-colors, assistive-technology and browser coverage accurately.
+
+## Approved enlarged-text follow-up
+
+- The learner approved adapting the previously preserved shell after the consistency fixes were committed in `b7bd9cc`. Implement `REQ-G005-032` and the corresponding exceptions in `REQ-G005-002`–`003`.
+- Permit header wrapping and reduce decorative spacing only when available room relative to the requested text size is insufficient. Preserve the ordinary 320/768/1440-pixel layouts, reading width policy, color palette, content, routes and learner state.
+- Cover 150%/200% root text enlargement, default geometry restoration, keyboard operation and internal content bounds. Keep native browser zoom and manual screen-reader/touch verification separate.
