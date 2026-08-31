@@ -53,7 +53,8 @@ main.runner-shell .test-focus > p {
   color: var(--text-secondary);
 }
 
-main.runner-shell .exercise-card {
+main.runner-shell .exercise-card,
+main.runner-shell .result-card {
   border: 0;
   border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
   background-color: var(--surface-warning);
@@ -74,7 +75,9 @@ main.runner-shell .exercise-card {
     filter var(--motion-standard) ease;
 }
 
-main.runner-shell .exercise-card:hover {
+main.runner-shell .exercise-card:hover,
+main.runner-shell .result-card:hover,
+main.runner-shell .result-card:focus-within {
   z-index: 2;
   box-shadow:
     0.45rem 0.6rem 0 var(--paper-edge),
@@ -83,7 +86,8 @@ main.runner-shell .exercise-card:hover {
   transform: translateY(-0.45rem) rotate(0);
 }
 
-main.runner-shell .exercise-card::before {
+main.runner-shell .exercise-card::before,
+main.runner-shell .result-card::before {
   position: absolute;
   top: 0.65rem;
   bottom: 0.65rem;
@@ -96,9 +100,11 @@ main.runner-shell .exercise-card::before {
   );
   content: '';
   opacity: 0.72;
+  pointer-events: none;
 }
 
-main.runner-shell .exercise-card::after {
+main.runner-shell .exercise-card::after,
+main.runner-shell .result-card::after {
   position: absolute;
   top: 0.45rem;
   right: 0.08rem;
@@ -112,6 +118,7 @@ main.runner-shell .exercise-card::after {
     var(--notebook-rule) 0.28rem 0.31rem
   );
   content: '';
+  pointer-events: none;
 }
 
 /* Study and practice: perforated answers, sentence strips, vocabulary pockets, and notes. */
@@ -193,5 +200,12 @@ main.lesson-page .lesson-practice .sentence-lesson {
 
   main.runner-shell .test-focus > p {
     margin-top: var(--space-3);
+  }
+}
+
+@container workbook (width <= 35rem) {
+  main.runner-shell .result-card::before,
+  main.runner-shell .result-card::after {
+    display: none;
   }
 }

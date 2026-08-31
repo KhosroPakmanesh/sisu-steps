@@ -29,6 +29,7 @@
 
 ### Changed
 
+- Restyled completed study and review results to match the compact topic covers with warm ruled paper, cut edges, perforation and layered-page details, a smaller score mark, readable body-font titles, and a whole-sheet lift on hover or keyboard focus while preserving result counts, actions, reduced motion, and narrow-screen reflow. The **Open reports** action now uses the standard secondary button style shared by **View topic**.
 - Matched only the landing page's outer content spacing to Reports: 3rem above the hero and the existing responsive `--space-8` below the topic catalog. Other pages and shared paper styles are unchanged.
 - Matched the Reports **Results by test** heading to the topic catalog section heading with shared serif typography, responsive sizing, and line height while preserving its semantic heading level and report behavior.
 - Faded and layered the desk lamp behind the complete workbook folder throughout its 1600-pixel-and-below collision range so it no longer covers the folder tabs or paper while its exposed portion remains interactive.
