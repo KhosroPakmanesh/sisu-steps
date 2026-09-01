@@ -29,6 +29,7 @@
 
 ### Changed
 
+- Pinned the GitHub Pages deployment workflow to the repository-declared npm 11.6.2 release so dependency installation validates the committed lockfile consistently as runner defaults change.
 - Added restrained hover and keyboard-focus feedback to the home brand's paper mark, the sticky-note editor label and ruled field, and the clear-topic consequence copy while keeping the wordmark, editable field and inactive row space stable and honoring reduced motion.
 
 - Differentiated hover and keyboard-focus motion by workbook object: folder tabs and informational strips slide, taped and pinned sheets pivot, bound covers preserve their resting orientation, nested lesson surfaces use complementary travel, inputs remain under the pointer, and disabled choices stay still. Added corresponding reactions for Appearance icons, selectors, progress rulers, sentence explanations, feedback, ledgers, archive materials and private notes while retaining static reduced-motion behavior.

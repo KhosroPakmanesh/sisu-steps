@@ -31,6 +31,9 @@ jobs:
           cache: npm
           cache-dependency-path: client/package-lock.json
 
+      - name: Setup npm
+        run: npm install --global npm@11.6.2
+
       - name: Install dependencies
         working-directory: ./client
         run: npm ci
