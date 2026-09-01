@@ -17,7 +17,11 @@
 }
 
 .key-points li:hover {
-  transform: translateY(-0.25rem);
+  transform: translateY(-0.2rem) rotate(-0.3deg);
+}
+
+.key-points li:nth-child(even):hover {
+  transform: translateY(-0.2rem) rotate(0.3deg);
 }
 
 .example-grid {
@@ -89,7 +93,11 @@
 }
 
 .lesson-vocabulary dl div:hover {
-  transform: translateY(-0.25rem);
+  transform: translateY(-0.22rem) rotate(-0.25deg);
+}
+
+.lesson-vocabulary dl div:nth-child(even):hover {
+  transform: translateY(-0.22rem) rotate(0.25deg);
 }
 
 .lesson-vocabulary dt {
@@ -110,9 +118,9 @@
 }
 
 .worked-examples:hover {
-  transform: translateY(-0.45rem) rotate(-0.35deg);
+  transform: translateY(-0.12rem) rotate(-0.25deg);
 }
 
 .mistake-notes:hover {
-  transform: translateY(-0.45rem) rotate(0.45deg);
+  transform: translateY(-0.18rem) rotate(0.8deg);
 }

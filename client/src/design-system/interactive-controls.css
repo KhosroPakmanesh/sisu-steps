@@ -32,8 +32,8 @@
     box-shadow var(--motion-fast) ease;
 }
 
-.choice-list label:hover,
-.practice-choices label:hover {
+.choice-list label:hover:not(:has(input:disabled)),
+.practice-choices label:hover:not(:has(input:disabled)) {
   transform: translateY(-0.12rem) rotate(-0.15deg);
 }
 
@@ -85,6 +85,16 @@ input.notebook-input {
     repeating-linear-gradient(to bottom, transparent 0 1.7rem, var(--notebook-rule) 1.7rem 1.76rem);
   caret-color: var(--graphite);
   box-shadow: 0 0.32rem 0 -0.25rem var(--notebook-shadow);
+  transition:
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+input.notebook-input:hover:not(:disabled) {
+  border-bottom-color: var(--border-brand-strong);
+  background-color: color-mix(in srgb, var(--surface-raised) 62%, transparent);
+  box-shadow: 0 0.38rem 0 -0.22rem var(--blue-500);
 }
 
 input.notebook-input:focus-visible {
@@ -109,6 +119,17 @@ input.notebook-input.has-writing {
     0.25rem 0.25rem 0 var(--surface-subtle),
     0.45rem 0.45rem 0 var(--paper-edge),
     var(--shadow-control);
+  transition:
+    transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.notebook-select:hover:not(:disabled) {
+  box-shadow:
+    0.32rem 0.25rem 0 var(--surface-subtle),
+    0.52rem 0.45rem 0 var(--paper-edge),
+    var(--shadow-control);
+  transform: translateX(0.12rem);
 }
 
 .word-token {
@@ -153,6 +174,16 @@ input.notebook-input.has-writing {
     inset 0 0.18rem 0 color-mix(in srgb, var(--surface-paper) 36%, transparent),
     0 0.2rem 0.32rem var(--notebook-shadow);
   clip-path: polygon(0.12rem 0, 100% 0.08rem, calc(100% - 0.12rem) 100%, 0 94%);
+  transition:
+    transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.progress-ruler:hover {
+  box-shadow:
+    inset 0 0.18rem 0 color-mix(in srgb, var(--surface-paper) 42%, transparent),
+    0.08rem 0.22rem 0.36rem var(--notebook-shadow);
+  transform: translateX(0.08rem);
 }
 
 .progress-ruler::before {

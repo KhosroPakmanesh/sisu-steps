@@ -2,6 +2,14 @@
   transition: transform var(--motion-fast) ease;
 }
 
+.ledger-sheet tbody .report-row {
+  transition: background-color var(--motion-fast) ease;
+}
+
+.ledger-sheet tbody .report-row:hover {
+  background: color-mix(in srgb, var(--surface-brand-subtle) 42%, transparent);
+}
+
 .ledger-sheet tbody .report-row td > strong {
   display: inline-block;
 }
@@ -15,7 +23,7 @@
 }
 
 .ledger-sheet tbody .report-row:hover td > strong {
-  transform: translateY(-0.12rem);
+  transform: translateY(-1px);
 }
 
 @media (prefers-reduced-motion: reduce) {

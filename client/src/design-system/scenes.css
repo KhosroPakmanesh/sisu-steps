@@ -25,13 +25,23 @@
     filter var(--motion-standard) ease;
 }
 
+.continue-card {
+  transform-origin: 80% 0;
+}
+
 main.page-shell .continue-card:hover,
-main.page-shell .continue-card:focus-within,
-main.topic-page .topic-overview:hover {
+main.page-shell .continue-card:focus-within {
   z-index: 2;
   filter: drop-shadow(0.45rem 0.6rem 0 var(--paper-edge))
     drop-shadow(0.7rem 1rem 1.7rem var(--notebook-shadow));
-  transform: translateY(-0.45rem) rotate(0);
+  transform: translateY(-0.3rem) rotate(0.16deg);
+}
+
+main.topic-page .topic-overview:hover {
+  z-index: 2;
+  filter: drop-shadow(0.35rem 0.48rem 0 var(--paper-edge))
+    drop-shadow(0.55rem 0.8rem 1rem var(--notebook-shadow));
+  transform: translateX(0.12rem) rotate(0);
 }
 
 .catalog-stats {
@@ -51,7 +61,7 @@ main.page-shell .catalog-stats:hover {
   z-index: 2;
   filter: drop-shadow(0.35rem 0.48rem 0 var(--paper-edge))
     drop-shadow(0.55rem 0.8rem 1rem var(--notebook-shadow));
-  transform: translateY(-0.35rem) rotate(0);
+  transform: translateX(0.12rem) rotate(0);
 }
 
 main.page-shell .topic-card {
@@ -66,6 +76,7 @@ main.page-shell .topic-card {
     0.24rem 0.32rem 0 var(--paper-edge),
     0.48rem 0.6rem 1rem var(--notebook-shadow);
   transform: rotate(-0.35deg);
+  transform-origin: left center;
   transition:
     transform var(--motion-standard) ease,
     box-shadow var(--motion-standard) ease;
@@ -83,7 +94,11 @@ main.page-shell .topic-card:hover {
   box-shadow:
     0.45rem 0.6rem 0 var(--paper-edge),
     0.7rem 1rem 1.7rem var(--notebook-shadow);
-  transform: translateY(-0.45rem) rotate(0);
+  transform: translateY(-0.35rem) rotate(-0.14deg);
+}
+
+main.page-shell .topic-card:nth-child(even):hover {
+  transform: translateY(-0.35rem) rotate(0.16deg);
 }
 
 .topic-card header,
@@ -100,11 +115,12 @@ main.page-shell .topic-card:hover {
     0.3rem 0.32rem 0 var(--surface-subtle),
     var(--shadow-small);
   transform: rotate(-0.2deg);
+  transform-origin: 15% 0;
   transition: transform var(--motion-standard) ease;
 }
 
 .topic-page .objective-panel:hover {
-  transform: translateY(-0.45rem) rotate(0);
+  transform: translateY(-0.3rem) rotate(0.08deg);
 }
 
 .topic-page .objective-panel::after {
@@ -139,6 +155,8 @@ main.page-shell .topic-card:hover {
 }
 
 .topic-page .test-card {
+  --test-card-rest-x: 0rem;
+
   position: relative;
   border-radius: 0.15rem 0.45rem 0.3rem 0.35rem;
   box-shadow:
@@ -150,7 +168,9 @@ main.page-shell .topic-card:hover {
 }
 
 .topic-page .test-card:nth-of-type(even) {
-  transform: translateX(1.1rem) rotate(0.15deg);
+  --test-card-rest-x: 1.1rem;
+
+  transform: translateX(var(--test-card-rest-x)) rotate(0.15deg);
 }
 
 .topic-page .test-card:hover {
@@ -158,7 +178,8 @@ main.page-shell .topic-card:hover {
   box-shadow:
     0.32rem 0.42rem 0 var(--paper-edge),
     0.5rem 0.7rem 1.1rem var(--notebook-shadow);
-  transform: translateY(-0.18rem) translateX(0.25rem) rotate(-0.2deg);
+  transform: translateY(-0.18rem) translateX(calc(var(--test-card-rest-x) + 0.25rem))
+    rotate(-0.2deg);
 }
 
 .topic-page .test-number {
@@ -225,7 +246,9 @@ main.page-shell .topic-card:hover {
 
 @container workbook (width <= 50rem) {
   .topic-page .test-card:nth-of-type(even) {
-    transform: none;
+    --test-card-rest-x: 0rem;
+
+    transform: translateX(var(--test-card-rest-x));
   }
 }
 

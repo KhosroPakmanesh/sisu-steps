@@ -103,6 +103,24 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }) =
     ),
   ).toBeLessThan(2);
 
+  const brand = page.locator('.brand');
+  const brandMark = brand.locator('.brand-mark');
+  const brandMarkRestingTransform = await brandMark.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  await brand.hover();
+  await expect
+    .poll(() => brandMark.evaluate((element) => getComputedStyle(element).transform))
+    .not.toBe(brandMarkRestingTransform);
+  await page.mouse.move(0, 300);
+  await expect
+    .poll(() => brandMark.evaluate((element) => getComputedStyle(element).transform))
+    .toBe(brandMarkRestingTransform);
+  await brand.focus();
+  await expect
+    .poll(() => brandMark.evaluate((element) => getComputedStyle(element).transform))
+    .not.toBe(brandMarkRestingTransform);
+
   const [coverBox, paperBox, clipBox, tabBoxes, tabColors] = await Promise.all([
     cover.boundingBox(),
     paper.boundingBox(),
@@ -168,8 +186,8 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }) =
   const tabBeforeHover = await tabs.nth(1).boundingBox();
   await tabs.nth(1).hover();
   await expect
-    .poll(async () => (await tabs.nth(1).boundingBox())?.y ?? 0)
-    .toBeLessThan(tabBeforeHover?.y ?? 0);
+    .poll(async () => (await tabs.nth(1).boundingBox())?.x ?? 0)
+    .toBeGreaterThan(tabBeforeHover?.x ?? 0);
 
   await page.mouse.move(300, 300);
   const stickyTop = await navigation.evaluate((element) =>
@@ -579,6 +597,15 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   await expect(page.locator('.progress-ruler')).toBeVisible();
   await expect(page.locator('.progress-pencil')).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Check answer' })).toBeEnabled();
+  await page.getByRole('button', { name: 'Check answer' }).click();
+  const disabledChoice = page.locator('.choice-list label').nth(1);
+  const disabledRestingTransform = await disabledChoice.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  await disabledChoice.hover();
+  await expect
+    .poll(() => disabledChoice.evaluate((element) => getComputedStyle(element).transform))
+    .toBe(disabledRestingTransform);
 
   await page.goto(`/study/${TOPIC_SEGMENT}/harmony-in-forms`);
   const answer = page.getByRole('textbox', { name: 'Your answer' });
@@ -672,9 +699,14 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   const restingTransform = await continueCard.evaluate(
     (element) => getComputedStyle(element).transform,
   );
-  const expectedLift = await page.evaluate(
-    () => Number.parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.45,
+  const rootFontSize = await page.evaluate(() =>
+    Number.parseFloat(getComputedStyle(document.documentElement).fontSize),
   );
+  const expectedLift = rootFontSize * -0.45;
+  const expectedTapedLift = rootFontSize * -0.3;
+  const expectedCoverLift = rootFontSize * -0.35;
+  const expectedNoteLift = rootFontSize * -0.22;
+  const expectedInformationShift = rootFontSize * 0.12;
   await continueCard.hover();
   await expect
     .poll(() =>
@@ -682,7 +714,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
         (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
       ),
     )
-    .toBeCloseTo(expectedLift, 2);
+    .toBeCloseTo(expectedTapedLift, 2);
 
   await page.mouse.move(0, 0);
   await expect
@@ -695,7 +727,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
         (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
       ),
     )
-    .toBeCloseTo(expectedLift, 2);
+    .toBeCloseTo(expectedTapedLift, 2);
 
   await topicCard.hover();
   await expect
@@ -704,20 +736,17 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
         (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
       ),
     )
-    .toBeCloseTo(expectedLift, 2);
+    .toBeCloseTo(expectedCoverLift, 2);
 
   const catalogStats = page.locator('.catalog-stats');
-  const expectedStatsLift = await page.evaluate(
-    () => Number.parseFloat(getComputedStyle(document.documentElement).fontSize) * -0.35,
-  );
   await catalogStats.hover();
   await expect
     .poll(() =>
       catalogStats.evaluate(
-        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m41,
       ),
     )
-    .toBeCloseTo(expectedStatsLift, 2);
+    .toBeCloseTo(expectedInformationShift, 2);
 
   await page.goto(`/topics/${TOPIC_SEGMENT}`);
   const topicPageWidth = await page
@@ -777,10 +806,10 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   await expect
     .poll(() =>
       topicOverview.evaluate(
-        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m41,
       ),
     )
-    .toBeCloseTo(expectedLift, 2);
+    .toBeCloseTo(expectedInformationShift, 2);
   await page.mouse.move(0, 0);
   await expect
     .poll(() => topicOverview.evaluate((element) => getComputedStyle(element).transform))
@@ -808,19 +837,30 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
         (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
       ),
     )
-    .toBeCloseTo(expectedLift, 2);
+    .toBeCloseTo(expectedTapedLift, 2);
 
   const topicNote = page.locator('.sticky-note');
   await expect(page.locator('.learning-map + app-sticky-note .sticky-note')).toBeVisible();
   await expect(page.locator('.learning-map')).toHaveCSS('padding-bottom', '0px');
-  await topicNote.hover();
+  const noteEditorLabel = topicNote.locator('label > span');
+  const noteEditorRestingTransform = await noteEditorLabel.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  await topicNote.locator('textarea').hover();
   await expect
     .poll(() =>
       topicNote.evaluate(
         (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
       ),
     )
-    .toBeCloseTo(expectedLift, 2);
+    .toBeCloseTo(expectedNoteLift, 2);
+  await expect
+    .poll(() => noteEditorLabel.evaluate((element) => getComputedStyle(element).transform))
+    .not.toBe(noteEditorRestingTransform);
+  await topicNote.locator('textarea').focus();
+  await expect
+    .poll(() => noteEditorLabel.evaluate((element) => getComputedStyle(element).transform))
+    .not.toBe(noteEditorRestingTransform);
   const groupHeadings = page.locator('.test-group-heading');
   await expect(groupHeadings).toHaveCount(2);
   for (const heading of await groupHeadings.all()) {
@@ -1200,6 +1240,20 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     shadow: rowBefore.shadow,
   });
 
+  const topicClearStrip = page.locator('.topic-clear-strip').first();
+  const topicClearCopy = topicClearStrip.locator(':scope > div');
+  const topicClearRestingTransform = await topicClearCopy.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  await topicClearStrip.getByRole('button', { name: 'Clear this topic' }).hover();
+  await expect
+    .poll(() => topicClearCopy.evaluate((element) => getComputedStyle(element).transform))
+    .not.toBe(topicClearRestingTransform);
+  await topicClearStrip.getByRole('button', { name: 'Clear this topic' }).focus();
+  await expect
+    .poll(() => topicClearCopy.evaluate((element) => getComputedStyle(element).transform))
+    .not.toBe(topicClearRestingTransform);
+
   const dataHeaderStyle = await page
     .locator('.clear-ledger-heading')
     .first()
@@ -1393,6 +1447,15 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     return style.animationDuration.endsWith('ms') ? duration : duration * 1000;
   });
   expect(animationDurationMs).toBeLessThanOrEqual(1);
+  const brand = page.locator('.brand');
+  const brandMark = brand.locator('.brand-mark');
+  const brandMarkRestingTransform = await brandMark.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  await brand.hover();
+  await expect
+    .poll(() => brandMark.evaluate((element) => getComputedStyle(element).transform))
+    .toBe(brandMarkRestingTransform);
   await page.locator('.catalog-stats').hover();
   await expect
     .poll(() =>
@@ -1412,6 +1475,11 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
       .poll(() => surface.evaluate((element) => getComputedStyle(element).transform))
       .toBe('none');
   }
+  const noteEditorLabel = page.locator('.sticky-note label > span');
+  await page.locator('.sticky-note textarea').hover();
+  await expect
+    .poll(() => noteEditorLabel.evaluate((element) => getComputedStyle(element).transform))
+    .toBe('none');
 
   await page.goto('/data');
   for (const surface of [
@@ -1424,4 +1492,10 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
       .poll(() => surface.evaluate((element) => getComputedStyle(element).transform))
       .toBe('none');
   }
+  const topicClearStrip = page.locator('.topic-clear-strip').first();
+  const topicClearCopy = topicClearStrip.locator(':scope > div');
+  await topicClearStrip.getByRole('button', { name: 'Clear this topic' }).hover();
+  await expect
+    .poll(() => topicClearCopy.evaluate((element) => getComputedStyle(element).transform))
+    .toBe('none');
 });

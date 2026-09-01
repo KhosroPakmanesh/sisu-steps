@@ -65,6 +65,20 @@
   font-size: var(--text-summary);
   box-shadow: 2px 2px 0 var(--red-700);
   transform: rotate(-1deg);
+  transition:
+    transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.brand:hover .brand-mark,
+.brand:focus-visible .brand-mark {
+  box-shadow: 3px 4px 0 var(--red-700);
+  transform: translateY(-0.12rem) rotate(-0.2deg);
+}
+
+.brand:active .brand-mark {
+  box-shadow: 1px 1px 0 var(--red-700);
+  transform: translateY(0.04rem) rotate(-1deg);
 }
 
 .brand > span:last-child {
@@ -155,5 +169,17 @@
   .site-footer {
     grid-template-columns: minmax(0, 1fr);
     padding-inline: var(--space-reflow-inline);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-mark {
+    transition: none;
+  }
+
+  .brand:hover .brand-mark,
+  .brand:focus-visible .brand-mark,
+  .brand:active .brand-mark {
+    transform: rotate(-1deg);
   }
 }

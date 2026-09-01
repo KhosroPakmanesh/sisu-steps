@@ -65,6 +65,15 @@ main.lesson-page .example-grid article {
   clip-path: polygon(0.3rem 0, 98% 0.12rem, 100% 94%, 98% 100%, 0 98%);
   filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge))
     drop-shadow(0.28rem 0.4rem 0.45rem var(--notebook-shadow));
+  transition:
+    transform var(--motion-standard) ease,
+    filter var(--motion-standard) ease;
+}
+
+main.lesson-page .example-grid article:hover {
+  filter: drop-shadow(0.22rem 0.3rem 0 var(--paper-edge))
+    drop-shadow(0.38rem 0.52rem 0.55rem var(--notebook-shadow));
+  transform: translateY(-0.25rem) rotate(0.12deg);
 }
 
 main.lesson-page .example-grid article::before {

@@ -139,9 +139,12 @@
   transition: transform var(--motion-standard) ease;
 }
 
-.teaching-section:hover,
+.teaching-section:hover {
+  transform: translateY(-0.2rem);
+}
+
 .lesson-vocabulary:hover {
-  transform: translateY(-0.45rem);
+  transform: translateY(-0.12rem);
 }
 
 .reader-heading {
@@ -163,11 +166,12 @@
     0.3rem 0.32rem 0 var(--surface-subtle),
     var(--shadow-small);
   transform: rotate(-0.2deg);
+  transform-origin: 15% 0;
   transition: transform var(--motion-standard) ease;
 }
 
 .reader-heading:hover {
-  transform: translateY(-0.45rem) rotate(0);
+  transform: translateY(-0.28rem) rotate(0.05deg);
 }
 
 .reader-heading::after {
@@ -221,7 +225,7 @@
 }
 
 .lesson-objectives:hover {
-  transform: translateY(-0.45rem);
+  transform: translateX(0.12rem);
 }
 
 .lesson-objectives > ul {

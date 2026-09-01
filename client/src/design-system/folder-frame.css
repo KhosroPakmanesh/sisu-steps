@@ -118,7 +118,7 @@
   box-shadow:
     inset 0.12rem 0.12rem 0 var(--folder-cover-highlight),
     -0.18rem 0.38rem 0.48rem var(--notebook-shadow);
-  transform: translateY(-0.18rem) scale(1.035);
+  transform: translateX(0.15rem) scale(1.025);
 }
 
 .workbook-folder-tab:focus-visible {
@@ -136,7 +136,7 @@
 
 .workbook-folder-tab.active:hover,
 .workbook-folder-tab.active:focus-visible {
-  transform: translateX(0.3rem) translateY(-0.18rem) scale(1.035);
+  transform: translateX(0.42rem) scale(1.025);
 }
 
 .workbook-folder-tab.tab-blue {

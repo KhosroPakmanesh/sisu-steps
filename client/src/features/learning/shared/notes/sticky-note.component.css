@@ -19,17 +19,24 @@
     0.28rem 0.34rem 0 var(--paper-edge),
     0.5rem 0.7rem 1rem var(--notebook-shadow);
   transform: rotate(-0.25deg);
+  transform-origin: 50% 0;
   transition:
     transform var(--motion-standard) ease,
     box-shadow var(--motion-standard) ease;
 }
 
-.sticky-note:hover,
-.sticky-note:focus-within {
+.sticky-note:hover {
   box-shadow:
     0.42rem 0.52rem 0 var(--paper-edge),
     0.72rem 0.95rem 1.5rem var(--notebook-shadow);
-  transform: translateY(-0.45rem) rotate(0);
+  transform: translateY(-0.22rem) rotate(0.3deg);
+}
+
+.sticky-note:focus-within {
+  box-shadow:
+    0.36rem 0.46rem 0 var(--paper-edge),
+    0.62rem 0.82rem 1.3rem var(--notebook-shadow);
+  transform: translateY(-0.16rem) rotate(0);
 }
 
 .sticky-note::before {
@@ -78,6 +85,19 @@ label {
   font-weight: var(--weight-bold);
 }
 
+label > span {
+  width: fit-content;
+  transition:
+    color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+label:hover > span,
+label:focus-within > span {
+  color: var(--text-brand);
+  transform: translateX(0.12rem);
+}
+
 textarea {
   width: 100%;
   min-height: 8.5rem;
@@ -100,6 +120,19 @@ textarea {
   line-height: 1.65rem;
   caret-color: var(--graphite);
   box-shadow: inset 0 0.18rem 0.35rem var(--notebook-shadow);
+  transition:
+    background-color var(--motion-fast) ease,
+    border-color var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+textarea:hover,
+textarea:focus-visible {
+  border-bottom-color: var(--border-brand-strong);
+  background-color: color-mix(in srgb, var(--surface-paper) 92%, transparent);
+  box-shadow:
+    inset 0 0.18rem 0.35rem var(--notebook-shadow),
+    0 0.22rem 0 -0.12rem var(--blue-500);
 }
 
 .note-help,
@@ -143,6 +176,16 @@ footer {
   .sticky-note,
   .sticky-note:hover,
   .sticky-note:focus-within {
+    transform: none;
+  }
+
+  label > span,
+  textarea {
+    transition: none;
+  }
+
+  label:hover > span,
+  label:focus-within > span {
     transform: none;
   }
 }

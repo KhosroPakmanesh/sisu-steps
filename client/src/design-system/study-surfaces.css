@@ -33,7 +33,7 @@ main.runner-shell .test-focus {
 }
 
 main.runner-shell .test-focus:hover {
-  transform: translateY(-0.45rem);
+  transform: translateX(0.18rem);
 }
 
 main.runner-shell .test-focus > div,
@@ -75,7 +75,15 @@ main.runner-shell .result-card {
     filter var(--motion-standard) ease;
 }
 
-main.runner-shell .exercise-card:hover,
+main.runner-shell .exercise-card:hover {
+  z-index: 2;
+  box-shadow:
+    0.36rem 0.48rem 0 var(--paper-edge),
+    0.58rem 0.8rem 1.35rem var(--notebook-shadow);
+  filter: drop-shadow(0.32rem 0.42rem 0 var(--paper-edge));
+  transform: translateY(-0.3rem) rotate(-0.08deg);
+}
+
 main.runner-shell .result-card:hover,
 main.runner-shell .result-card:focus-within {
   z-index: 2;
@@ -140,9 +148,9 @@ main.lesson-page .lesson-practice .practice-choices label {
   box-shadow: 0.12rem 0.16rem 0 var(--paper-edge);
 }
 
-main.runner-shell .exercise-card .choice-list label:hover,
+main.runner-shell .exercise-card .choice-list label:hover:not(:has(input:disabled)),
 main.runner-shell .exercise-card .choice-list label.selected,
-main.lesson-page .lesson-practice .practice-choices label:hover,
+main.lesson-page .lesson-practice .practice-choices label:hover:not(:has(input:disabled)),
 main.lesson-page .lesson-practice .practice-choices label.selected {
   border-color: var(--border-brand-strong);
   border-left-color: transparent;
@@ -183,6 +191,15 @@ main.lesson-page .lesson-practice .feedback {
   );
   filter: drop-shadow(0.18rem 0.24rem 0 var(--paper-edge));
   transform: rotate(-0.15deg);
+  transition:
+    transform var(--motion-fast) ease,
+    filter var(--motion-fast) ease;
+}
+
+main.runner-shell .feedback:hover,
+main.lesson-page .lesson-practice .feedback:hover {
+  filter: drop-shadow(0.24rem 0.3rem 0 var(--paper-edge));
+  transform: translateX(0.08rem) rotate(0.05deg);
 }
 
 main.runner-shell .sentence-lesson,

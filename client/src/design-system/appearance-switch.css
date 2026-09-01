@@ -124,6 +124,17 @@
   transform: translateY(-0.04rem) scale(1.14);
 }
 
+.appearance-options label:hover .appearance-choice-icon,
+.appearance-options label:has(input:focus-visible) .appearance-choice-icon {
+  color: var(--text-on-ink);
+  transform: translateY(-0.12rem) scale(1.08);
+}
+
+.appearance-options label.selected:hover .appearance-choice-icon,
+.appearance-options label.selected:has(input:focus-visible) .appearance-choice-icon {
+  transform: translateY(-0.08rem) scale(1.16);
+}
+
 .appearance-options input {
   position: absolute;
   width: 1px;
