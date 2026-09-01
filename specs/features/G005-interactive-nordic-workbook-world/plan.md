@@ -6,7 +6,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 
 ## Requirement slice
 
-- `REQ-G005-001`–`REQ-G005-020`, `REQ-G005-022`, `REQ-G005-023`, and `REQ-G005-025`–`REQ-G005-033`; `REQ-G005-021` and `REQ-G005-024` are withdrawn.
+- `REQ-G005-001`–`REQ-G005-020`, `REQ-G005-022`, `REQ-G005-023`, and `REQ-G005-025`–`REQ-G005-034`; `REQ-G005-021` and `REQ-G005-024` are withdrawn.
 - Extends the stable G004 notebook baseline and explicitly permits custom-looking controls while preserving G001 learning, content, routing, grading, and persistence behavior.
 
 ## Included
@@ -43,6 +43,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 8. Update design guidance, validation evidence, and the changelog.
 9. Add stamped answer/completion feedback, safe response-edit actions, local topic/lesson sticky notes, and stronger existing tab/card/input reactions without adding collapse behavior.
 10. Differentiate hover and focus movement by physical object: slide tabs and informational strips, pivot attached paper, preserve bound-cover offsets, keep nested reading surfaces calm, and suppress travel for disabled and reduced-motion states.
+11. Derive local browser and saved-site icons from the visible paper **S** brand mark with scalable and compatibility formats.
 
 ## Risks
 

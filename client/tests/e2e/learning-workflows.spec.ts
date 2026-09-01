@@ -74,6 +74,20 @@ async function expectActionGroupPlacement(group: Locator, placement: 'center' | 
 test('wraps the unchanged paper in a compact clipped folder', async ({ page }) => {
   await page.goto('/');
 
+  await expect(page.locator('link[rel="icon"][type="image/svg+xml"]')).toHaveAttribute(
+    'href',
+    'favicon.svg',
+  );
+  await expect(page.locator('link[rel="icon"]:not([type])')).toHaveAttribute('href', 'favicon.ico');
+  await expect(page.locator('link[rel="apple-touch-icon"]')).toHaveAttribute(
+    'href',
+    'apple-touch-icon.png',
+  );
+  for (const asset of ['favicon.svg', 'favicon.ico', 'apple-touch-icon.png']) {
+    const response = await page.request.get(new URL(asset, page.url()).toString());
+    expect(response.ok(), `${asset} is served`).toBe(true);
+  }
+
   const cover = page.locator('.workbook-cover');
   const paper = page.locator('.page-shell');
   const navigation = page.locator('.workbook-folder-tabs');
