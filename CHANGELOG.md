@@ -4,6 +4,9 @@
 
 ### Added
 
+- A custom website icon derived from the in-app warm-paper **S** brand mark, supplied as a scalable SVG favicon, multi-size ICO fallback, and Apple touch icon with local-only browser metadata.
+
+- A welcoming, plain-language free and noncommercial license, contribution guide, and one-time contributor agreement supporting issues, pull requests, and trusted direct collaborators while preserving contributor copyright and keeping the official project free.
 - Pure-JSON, pack-owned content under `client/content/<pack-id>/`, with ID-named lesson and learning-test files, direct unchanged static deployment, generic in-memory browser assembly, direct-source validation, pack-grouped topic checks, and the G006 behavior-preserving migration specification.
 - Adapted repository, source, architecture, persistence, design-system, accessibility, commit, and feature-spec guidance from the read-only UI prototype.
 - Angular-aware ESLint/template accessibility checks, Stylelint, Prettier, module-size, source-reachability, architecture, separate production/test typechecks, and an aggregate quality gate.
@@ -29,6 +32,7 @@
 
 ### Changed
 
+- Reframed the root README around the project's personal Finnish-learning motivation, production site, need for extensive practice, invitation to contributors, AI-assisted content limitation, and an approachable illustrated guide to its content separation, learner-oriented vertical slices, state flow, browser boundaries, UI tokens and characteristics, and automated architecture checks.
 - Pinned the GitHub Pages deployment workflow to the repository-declared npm 11.6.2 release so dependency installation validates the committed lockfile consistently as runner defaults change.
 - Added restrained hover and keyboard-focus feedback to the home brand's paper mark, the sticky-note editor label and ruled field, and the clear-topic consequence copy while keeping the wordmark, editable field and inactive row space stable and honoring reduced motion.
 
