@@ -250,7 +250,7 @@ for (const theme of ['Day', 'Night']) {
 
     test('draws visible focus pixels inside clipped controls', async ({ page }) => {
       await page.emulateMedia({ reducedMotion: 'reduce' });
-      await open(page, `/learn/${TOPIC}/guided-review`);
+      await open(page, `/learn/${TOPIC}/foundations-review`);
       await expectVisibleInsetFocus(page, page.locator('.back-link'));
       const lessonControl =
         (page.viewportSize()?.width ?? 0) <= 800

@@ -71,9 +71,9 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 3. Build the dashboard, test runner, and immediate feedback flow.
 4. Add IndexedDB-backed attempt and session persistence.
 5. Add mistake practice, reporting, export/import, and clearing.
-6. Author the 200-exercise Pre-A1–A1.3 grammar-foundation pack as fifteen progressive tests.
+6. Author the then-current 5.0.0 Pre-A1–A1.3 grammar-foundation pack as fifteen progressive tests and 200 exercises.
 7. Validate grading, storage, recovery, accessibility, tests, and production build.
-8. Add reusable first-principles lessons and optional unscored preparation for all fifteen tests.
+8. Add reusable first-principles lessons and optional unscored preparation for all tests in that historical fifteen-test version.
 9. Refactor the pack around one-new-decision focused learning, declared prerequisites, declared vocabulary, and automatic focus validation.
 10. Reorganize the 200 exercises into fourteen shorter groups and split KPT into smaller authored learning blocks.
 11. Add per-option feedback, typed-error classification, parallel review exercises, optional due reviews, and delayed mastery.
@@ -102,3 +102,11 @@ Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar
 - Exercise and lesson IDs must remain globally unique because mistakes, corrections, mastery, and lesson completion refer to them outside a single active topic.
 - Multi-pack backup migration must preserve compatible existing progress while rejecting unknown or internally inconsistent references.
 - Learner-authored notes must survive compatible pack updates without retaining references to removed topics or lessons, and destructive clearing text must state when notes are affected.
+
+## 2026-08-31 single-review consolidation
+
+Implement `REQ-G001-108`–`110`: keep thirteen Focused tests and one cumulative **Foundations review** with 33 questions. Replace the duplicated checkpoint task and two surplus regular-plural tasks with two special-k and two stable-stem inessive tasks, yielding two or three primary-target questions for every important skill. Mix their order, correct overbroad skill declarations, and audit prompt hints, English alternatives, diagnostics and parallel-pair demand.
+
+Keep all thirteen lessons, their versions, optional practice, and Focused teaching content unchanged. Retain existing exercise IDs where the assessed task is retained; assign new IDs to replacement tasks and update only necessary mutual-pair links. Remove the retired JSON source and update the manifest, content tests and browser routes. No new UI, backend, schema, migration, lesson, grammar target, or randomized session is introduced.
+
+Advance only this pack to 6.0.0. The learner approved its normal progress reset; do not implement a progress-preserving migration. Record pre-authoring and rendered final pedagogy assessments, run direct-source validation and the complete client quality gate, and verify the review's preparation, complete session, save/resume and version reset in browser coverage.

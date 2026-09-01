@@ -98,7 +98,7 @@ for (const appearance of ['Day', 'Night']) {
           '/',
           `/topics/${TOPIC}`,
           LESSON,
-          `/learn/${TOPIC}/guided-review`,
+          `/learn/${TOPIC}/foundations-review`,
           STUDY,
           '/reports',
           '/data',
@@ -110,7 +110,7 @@ for (const appearance of ['Day', 'Night']) {
           await resizeText(page, pixels);
           await expectReadablePage(page);
           const picker = page.locator('.lesson-picker select');
-          if (route.endsWith('/guided-review') && (await picker.isVisible())) {
+          if (route.endsWith('/foundations-review') && (await picker.isVisible())) {
             await picker.focus();
             await page.keyboard.press('Home');
             await page.keyboard.press('ArrowDown');

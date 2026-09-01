@@ -280,7 +280,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.getByRole('link', { name: 'Open topic' }).click();
 
   await expect(page).toHaveURL(new RegExp(`/topics/${TOPIC_SEGMENT}$`));
-  await expect(page.locator('.test-card')).toHaveCount(15);
+  await expect(page.locator('.test-card')).toHaveCount(14);
   await expect(page.locator('.test-group-heading h3')).toHaveText(['Focused tests', 'Reviews']);
   await expect(page.locator('.set-badge, .stage-badge')).toHaveCount(0);
   await expect(page.locator('body')).not.toContainText('Core set');
@@ -316,10 +316,10 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
     ).toBeLessThan(4);
   }
 
-  await page.goto(`/learn/${TOPIC_SEGMENT}/guided-review`);
+  await page.goto(`/learn/${TOPIC_SEGMENT}/foundations-review`);
   await expect(page.locator('.lesson-list button')).toHaveCount(13);
   await expect(page.locator('.lesson-hero .eyebrow')).toContainText('Review');
-  await expect(page.locator('.lesson-hero h1')).toHaveText('Foundations checkpoint review');
+  await expect(page.locator('.lesson-hero h1')).toHaveText('Foundations review');
 
   if ((page.viewportSize()?.width ?? 0) <= 800) {
     await expect(page.locator('.lesson-list')).toBeHidden();
@@ -617,7 +617,7 @@ test('keeps study targets truthful and readable at every supported width', async
     .toBe((page.viewportSize()?.width ?? 0) <= 800 ? 'block' : 'flex');
   await expect(page.locator('html')).toHaveJSProperty('scrollWidth', page.viewportSize()?.width);
 
-  await page.goto(`/study/${TOPIC_SEGMENT}/guided-review`);
+  await page.goto(`/study/${TOPIC_SEGMENT}/foundations-review`);
 
   const reviewTarget = page.getByRole('complementary', { name: 'Test learning focus' });
   await expect(reviewTarget.getByRole('heading', { level: 2 })).toContainText('Skills reviewed:');

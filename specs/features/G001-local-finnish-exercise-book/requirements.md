@@ -179,3 +179,11 @@
 - Given saved notes, when one test is cleared, then all notes remain; when one topic is cleared, then only notes belonging to that topic are removed; when all learner history is cleared, then no notes remain.
 - Given a compatible topic-pack update, when a noted topic or lesson still exists, then its note remains available; when its owner is removed from the installed catalog, then the orphaned note is discarded.
 - Given an exercise that transforms one Finnish form into another, when the question is displayed, then the learner sees the English meaning of both forms and every non-target ending or stem frame needed to produce the answer.
+
+## Single foundations review
+
+- **REQ-G001-108:** The vowel-harmony/KPT/T-plural pack shall retain its thirteen Focused tests followed by exactly one ordinary Review named **Foundations review**, with stable test ID `foundations-review`. It shall contain 33 scored exercises covering all thirteen declared important skills with two or three primary-target exercises per skill. The retired `guided-review` test shall not remain in the catalog or its learning-map actions.
+- **REQ-G001-109:** The cumulative review shall interleave previously taught skills in a fixed authored order, declare only the skills actually needed by each exercise, avoid duplicate question-and-answer tasks, and retain same-skill mutual mastery pairs with different surface answers and comparable response demands. Its optional preparation shall reference the thirteen existing lessons once each without copying or changing their teaching content.
+- **REQ-G001-110:** Installing pack version `6.0.0` shall use the existing per-pack version reset under `REQ-G001-061` and `REQ-G001-078`, without migrating the former review attempts or sessions. The learner explicitly approved losing this pack's progress on 2026-08-31. Other packs remain untouched and still-owned notes retain the existing policy under `REQ-G001-106`.
+
+Acceptance: the topic shows fourteen tests, with one 33-question review; its single preparation route exposes thirteen lessons; the complete pack retains 200 scored exercises and 44 unscored practice items; every review skill was taught and assessed earlier; save/resume, scoring, reports and delayed mastery continue through the existing workflows.

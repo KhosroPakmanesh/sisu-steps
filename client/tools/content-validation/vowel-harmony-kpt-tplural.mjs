@@ -51,5 +51,61 @@ export function validatePack(pack) {
     if (!parts[2]?.formation?.includes('supplied as a complete fixed word'))
       errors.push(`${exercise.id}: plural-sentence context must be supplied as a fixed word`);
   }
+  return [...errors, ...validateFoundationsReview(pack)];
+}
+
+function validateFoundationsReview(pack) {
+  const errors = [];
+  const reviews = pack.tests.filter((test) => test.stage === 'review');
+  const review = reviews.find((test) => test.id === 'foundations-review');
+  if (reviews.length !== 1 || !review || pack.tests.at(-1) !== review)
+    errors.push('foundations-review: must be the single review after all focused tests');
+  if (pack.tests.filter((test) => test.stage === 'focused').length !== 13)
+    errors.push('foundations-review: retain all thirteen focused tests');
+  if (!review) return errors;
+  if (review.exercises.length !== 33) errors.push('foundations-review: needs exactly 33 questions');
+  const skills = new Set(pack.importantSkills);
+  if (
+    review.targetSkills.length !== skills.size ||
+    new Set(review.targetSkills).size !== skills.size ||
+    review.targetSkills.some((s) => !skills.has(s))
+  )
+    errors.push('foundations-review: must declare all thirteen foundation skills once');
+  const lessonIds = new Set(pack.lessons.map((lesson) => lesson.id));
+  if (
+    review.lessonIds.length !== lessonIds.size ||
+    new Set(review.lessonIds).size !== lessonIds.size ||
+    review.lessonIds.some((id) => !lessonIds.has(id))
+  )
+    errors.push('foundations-review: preparation must reference every lesson exactly once');
+  for (const skill of skills) {
+    const count = review.exercises.filter((exercise) => exercise.targetSkill === skill).length;
+    if (count < 2 || count > 3)
+      errors.push(`foundations-review: ${skill} needs two or three primary-skill questions`);
+  }
+  const formats = new Set(review.exercises.map((exercise) => exercise.type));
+  if (formats.size !== 5) errors.push('foundations-review: retain all five response formats');
+  const tasks = new Set();
+  for (const [index, exercise] of review.exercises.entries()) {
+    const task = JSON.stringify([
+      exercise.prompt.split('·')[0].trim().toLowerCase(),
+      [...exercise.acceptedAnswers].map((answer) => answer.toLowerCase()).sort(),
+    ]);
+    if (tasks.has(task)) errors.push(`${exercise.id}: duplicate review question and answer`);
+    tasks.add(task);
+    if (exercise.targetSkill === review.exercises[index - 1]?.targetSkill)
+      errors.push(`${exercise.id}: interleave primary skills instead of adjacent topic blocks`);
+    if (exercise.requiredSkills.length >= skills.size)
+      errors.push(`${exercise.id}: list the skills used by this question, not the whole pack`);
+    if (exercise.type === 'fill-blank' && exercise.targetSkill.startsWith('KPT ')) {
+      const supplied = /supplied genitive ending -n|supplied stem .+minä -n/;
+      if (!supplied.test(exercise.prompt))
+        errors.push(
+          `${exercise.id}: KPT-only review production must supply the ending and any verb stem`,
+        );
+      if (/; apply/.test(exercise.prompt))
+        errors.push(`${exercise.id}: retrieve the KPT change without giving it away in the prompt`);
+    }
+  }
   return errors;
 }

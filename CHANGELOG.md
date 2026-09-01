@@ -29,6 +29,7 @@
 
 ### Changed
 
+- Consolidated the two foundations reviews into one 33-question cumulative **Foundations review**, with balanced coverage of all thirteen taught skills, corrected duplicate tasks and skill declarations, and one optional preparation page. Pack version 6.0.0 uses the learner-approved normal reset of this pack's progress; lessons, focused teaching and unrelated packs remain unchanged.
 - Restyled completed study and review results to match the compact topic covers with warm ruled paper, cut edges, perforation and layered-page details, a smaller score mark, readable body-font titles, and a whole-sheet lift on hover or keyboard focus while preserving result counts, actions, reduced motion, and narrow-screen reflow. The **Open reports** action now uses the standard secondary button style shared by **View topic**.
 - Matched only the landing page's outer content spacing to Reports: 3rem above the hero and the existing responsive `--space-8` below the topic catalog. Other pages and shared paper styles are unchanged.
 - Matched the Reports **Results by test** heading to the topic catalog section heading with shared serif typography, responsive sizing, and line height while preserving its semantic heading level and report behavior.

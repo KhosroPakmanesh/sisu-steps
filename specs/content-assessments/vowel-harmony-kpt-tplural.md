@@ -1,5 +1,48 @@
 # Finnish foundations A1 — pedagogy assessment
 
+## Version 6.0.0 single cumulative review
+
+### Pre-authoring assessment — 2026-08-31
+
+**Disposition: approved with limitations.** This is an AI-led content assessment, not a claim of independent professional review.
+
+The learner approved replacing the two similar-looking review entries with one cumulative Foundations review and explicitly accepted the normal pack-progress reset. The topic and Pre-A1–A1.3 written-grammar boundary stay unchanged. The existing thirteen Focused tests and thirteen reusable lessons remain the teaching sequence; only review content, its source registration and necessary pair references change.
+
+The proposed size is **33 review questions and 200 scored questions overall**, with **13 Focused tests, 1 Review, 13 lessons and 44 optional practice exercises**. Six recognition/KPT-family targets receive two primary-target items each; seven inflection/sentence targets receive three each. This supplies contrasting answers and response demands across every declared skill without expanding vocabulary or adding filler. The review is longer than an individual Focused test and retains existing save/resume; no completion gate is introduced.
+
+Findings resolved in the authoring blueprint:
+
+- Both former reviews advertise the same broad skill list but neither actually covers it; the merged review will cover all thirteen primary targets and declare each question's real target and supporting skills.
+- The checkpoint repeats the same pelto-to-pellon task. Replace that redundant recognition pair with two previously taught special-k tasks, one learned j-family word and one v-family word. Do not imply that every k follows either pattern.
+- Five regular-plural questions overrepresent one skill while inessive has only one. Replace one internally paired regular-plural pair with back/front-vowel stable-stem inessive production, keeping existing cross-test pairs intact.
+- Recognition tasks must ask for recognition rather than supplying the consonant change and then asking for a whole form. Production may withhold the assessed answer but must supply non-target endings, stem frames, meanings and fixed sentence context.
+- Audit English translations for natural alternatives, spread same-skill items through the session, and compare mutual mastery partners for similar response demand; preserve Focused content and adjust only pair links if needed.
+
+No high-impact scope or prerequisite issue remains unresolved before authoring. All new scored words must already occur in the referenced lessons. No new grammar, free composition, listening, pronunciation or overall CEFR claim is introduced.
+
+Sources checked on 2026-08-31:
+
+- [Kotus: Taivutuksen merkitseminen](https://kotus.fi/sana/taivutuksen-merkitseminen/) — dictionary inflection and consonant-gradation conventions.
+- [Uusi kielemme: Consonant gradation overview](https://uusikielemme.fi/finnish-grammar/consonant-gradation/consonant-gradation-astevaihtelu-kpt-vaihtelu) — previously taught strong/weak families and inflected contexts.
+- [Uusi kielemme: K disappearance and poika/aika spelling](https://uusikielemme.fi/finnish-grammar/morphology/ruoka-ruoat-consonant-gradation-where-k-disappears-kpt) — the learned poika/pojan pair; explain its full spelling rather than a universal letter replacement.
+- [Uusi kielemme: Vowel harmony](https://uusikielemme.fi/finnish-grammar/vowel-harmony-vokaaliharmonia-finnish-grammar) and [T-plural](https://uusikielemme.fi/finnish-grammar/finnish-cases/grammatical-cases/the-t-plural-t-monikko-plural-nominative) — existing suffix and plural scope.
+
+### Final pedagogy assessment
+
+**Disposition: approved with limitations.** This is an AI-led content assessment, not a claim of independent Finnish-teaching-professional review.
+
+The final pack contains **13 Focused tests, 1 Review, 13 lessons, 33 review questions, 200 scored questions overall and 44 optional practice exercises**. The Focused sequence still introduces every declared skill before Review. The single Review references all thirteen lessons once, interleaves its primary targets, gives six recognition/KPT-family targets two questions each, and gives seven inflection/sentence targets three each. No consecutive questions share a primary target.
+
+The actual prompts, answers, distractors, diagnostics, explanations and sentence breakdowns were reviewed against the existing lessons and recorded sources. Vowel-harmony choices preserve `a/o/u` versus `ä/ö/y` and neutral-vowel behavior. The KPT items use the taught weak forms and keep non-target endings visible. The two new special-k questions correctly treat `puku–puvun` and `poika–pojan` as learned word pairs; the `poika` explanation states both the disappearing `k` and `i → j` spelling rather than suggesting the incorrect mechanical form `poijan`. Inessive, genitive, T-plural, third-person plural and plural-subject forms remain within the taught beginner boundary.
+
+Natural-answer review added contextual English alternatives for `haen` and `hatun`, permits the optional explicit pronoun in `he lähtevät`, and keeps Finnish production unambiguous by supplying each base word, meaning, stem or non-target ending that the learner should not have to infer. Every typed review question has at least one targeted misconception diagnostic. Every multiple-choice option has option-specific feedback. All six sentence-tagged questions retain a complete translation, pattern and part-by-part account of meaning, role, base form and formation.
+
+Repetition is purposeful rather than padding. Familiar forms reappear without the Focused test's family label or revealed consonant change, so the mixed context asks for retrieval instead of introducing new vocabulary. The 33-item order separates all internal mastery partners by seven or thirteen questions. All 33 review exercises have a mutual same-skill partner with a different first answer. The KPT T-plural cross-test pair was revised during this gate from an easier English translation to a whole-form multiple-choice task, making `ranta → rannat` comparable to its `silta → sillat` partner.
+
+Direct-source validation reports one Review, 33 review questions, all thirteen primary skills at two or three questions, all five interaction types, 200 scored questions, thirteen lessons, and 44 practice exercises. Pack-specific negative tests reject a second or missing Review, lost or uneven skill coverage, duplicate Review tasks, duplicated lesson preparation, copied whole-pack skill declarations, and KPT prompts that hide a supporting ending or reveal the assessed consonant change. Browser coverage completed every question, inspected each rendered prompt and feedback explanation, resumed after question 6, reported 33/33 and persisted the result, and verified the approved 5.1.0-to-6.0.0 pack reset while retaining an owned private note.
+
+The pack is approved for deterministic Pre-A1–A1.3 written grammar practice. It does not assess listening, speaking, pronunciation, dialect variation, free composition, interaction or general communicative ability. Familiar vocabulary and controlled prompts limit lexical transfer, and the mastery-pair comparison remains an authored pedagogical judgment rather than empirical difficulty calibration. Independent review by a qualified Finnish teacher or native speaker remains recommended before expanding the scope or making broader proficiency claims.
+
 ## Lesson 5.2.0 strong-and-weak-grade introduction
 
 ### Pre-authoring assessment

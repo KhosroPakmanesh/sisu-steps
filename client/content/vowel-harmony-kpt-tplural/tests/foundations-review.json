@@ -1,7 +1,7 @@
 {
   "id": "foundations-review",
   "title": "Foundations review",
-  "focus": "Bring vowel harmony, KPT, and T-plural together.",
+  "focus": "Revisit all 13 foundation skills in one mixed, 33-question review. Preparation is optional; save and resume whenever you need a break.",
   "lessonIds": [
     "vowel-harmony-basics",
     "inside-ending",
@@ -23,6 +23,7 @@
     "Inessive -ssa/-ssä",
     "KPT double consonants",
     "KPT common single consonants",
+    "KPT special k changes",
     "KPT consonant clusters",
     "KPT recognition",
     "Genitive -n",
@@ -35,307 +36,87 @@
   "prerequisiteSkills": [],
   "exercises": [
     {
-      "id": "ff-a1-t14-e01",
-      "type": "translation-en",
-      "instruction": "Translate into English.",
-      "prompt": "haen",
-      "acceptedAnswers": ["I fetch"],
-      "explanation": "hakea means “to fetch”; haen means “I fetch”. This is the minä-form of hakea. Add the minä ending -n after forming the stem. k disappears.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["hakea"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e15"
+      "id": "ff-a1-t13-e01",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which vowel group describes talo (“house”)?",
+      "acceptedAnswers": ["back vowels"],
+      "explanation": "The vowels a and o in talo are back vowels. The back-vowel group is a, o, u.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["talo"],
+      "options": ["front vowels", "only neutral vowels", "back vowels"],
+      "optionFeedback": {
+        "front vowels": "Front vowels are ä, ö, y. The a and o in talo belong to the back-vowel group.",
+        "only neutral vowels": "Only e and i are neutral. Talo contains a and o, which are back vowels.",
+        "back vowels": "Correct. Both a and o are back vowels."
+      },
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "ff-a1-t01-e09"
     },
     {
-      "id": "ff-a1-t14-e02",
+      "id": "ff-a1-t13-e04",
       "type": "fill-blank",
       "instruction": "Complete the Finnish form.",
-      "prompt": "antaa (“to give”) → minä ____ (“I give”) · add minä -n",
-      "acceptedAnswers": ["annan"],
-      "explanation": "antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
+      "prompt": "hattu (“hat”) → ____ (“of the hat”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["hatun"],
+      "explanation": "The ending -n is supplied. Recall the weak stem: tt becomes t, giving hatu-. Add -n: hatun (“of the hat”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["hattu"],
+      "targetSkill": "KPT double consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["hattun"],
+          "category": "KPT double consonants: strong grade retained",
+          "explanation": "The ending is correct, but tt must become t: hatu- + n = hatun."
+        }
       ],
-      "vocabulary": ["antaa"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e03"
-    },
-    {
-      "id": "ff-a1-t14-e03",
-      "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "I fly — use the supplied dictionary form lentää (“to fly”)",
-      "acceptedAnswers": ["lennän"],
-      "explanation": "lentää means “to fly”; lennän means “I fly”. This is the minä-form of lentää. Add the minä ending -n after forming the stem. nt weakens to nn.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["lentää"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e02"
-    },
-    {
-      "id": "ff-a1-t14-e04",
-      "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "kuva (“picture”) → ____ (“pictures”) · add plural -t",
-      "acceptedAnswers": ["kuvat"],
-      "explanation": "kuva means “picture”; kuvat means “pictures”. The nominative T-plural is formed here by adding -t: kuva → kuvat.",
-      "tags": ["t-plural", "regular"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["kuva"],
-      "targetSkill": "Regular T-plural",
-      "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "ff-a1-t09-e15"
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e05"
     },
     {
       "id": "ff-a1-t14-e05",
       "type": "fill-blank",
       "instruction": "Complete the Finnish form.",
-      "prompt": "tuoli (“chair”) → ____ (“chairs”) · add plural -t",
+      "prompt": "tuoli (“chair”) → ____ (“chairs”)",
       "acceptedAnswers": ["tuolit"],
       "explanation": "tuoli means “chair”; tuolit means “chairs”. The nominative T-plural is formed here by adding -t: tuoli → tuolit.",
       "tags": ["t-plural", "regular"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
+      "requiredSkills": ["Regular T-plural"],
       "vocabulary": ["tuoli"],
       "targetSkill": "Regular T-plural",
       "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e06"
+      "parallelExerciseId": "ff-a1-t14-e06",
+      "answerDiagnostics": [
+        {
+          "answers": ["tuolet"],
+          "category": "Regular T-plural: unnecessary stem change",
+          "explanation": "In this taught T-plural, keep tuoli unchanged and add -t: tuolit."
+        }
+      ]
     },
     {
-      "id": "ff-a1-t14-e06",
-      "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "cats — use the supplied base kissa (“cat”)",
-      "acceptedAnswers": ["kissat"],
-      "explanation": "kissa means “cat”; kissat means “cats”. The nominative T-plural is formed here by adding -t: kissa → kissat.",
-      "tags": ["t-plural", "regular"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["kissa"],
-      "targetSkill": "Regular T-plural",
-      "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e05"
-    },
-    {
-      "id": "ff-a1-t14-e07",
-      "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "Choose the form meaning “balls” from pallo (“ball”).",
-      "acceptedAnswers": ["pallot"],
-      "explanation": "pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot.",
-      "tags": ["t-plural", "regular"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["pallo"],
-      "options": ["pallot", "palloet", "pallo"],
-      "optionFeedback": {
-        "pallot": "Correct. pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot.",
-        "palloet": "“palloet” does not show the required pattern. pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot.",
-        "pallo": "“pallo” does not show the required pattern. pallo means “ball”; pallot means “balls”. The nominative T-plural is formed here by adding -t: pallo → pallot."
-      },
-      "targetSkill": "Regular T-plural",
-      "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e08"
-    },
-    {
-      "id": "ff-a1-t14-e08",
+      "id": "ff-a1-t13-e06",
       "type": "fill-blank",
       "instruction": "Complete the Finnish form.",
-      "prompt": "ystävä (“friend”) → ____ (“friends”) · add plural -t",
-      "acceptedAnswers": ["ystävät"],
-      "explanation": "ystävä means “friend”; ystävät means “friends”. The nominative T-plural is formed here by adding -t: ystävä → ystävät.",
-      "tags": ["t-plural", "regular"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
+      "prompt": "pöytä (“table”) → ____ (“of the table”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["pöydän"],
+      "explanation": "The ending -n is supplied. The single t changes to d: pöydä- + n = pöydän (“of the table”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["pöytä"],
+      "targetSkill": "KPT common single consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["pöytän"],
+          "category": "KPT common single consonants: strong grade retained",
+          "explanation": "The ending is correct. Change t to d in the weak stem: pöydän."
+        }
       ],
-      "vocabulary": ["ystävä"],
-      "targetSkill": "Regular T-plural",
-      "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e07"
-    },
-    {
-      "id": "ff-a1-t14-e09",
-      "type": "translation-en",
-      "instruction": "Translate into English.",
-      "prompt": "rannat",
-      "acceptedAnswers": ["beaches"],
-      "explanation": "ranta means “beach”; rannat means “beaches”. Add plural -t to the weak stem. The KPT change is nt → nn: ranta → rannat.",
-      "tags": ["t-plural", "kpt"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["ranta"],
-      "targetSkill": "T-plural with KPT",
-      "misconceptionCategory": "T-plural with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t10-e15"
-    },
-    {
-      "id": "ff-a1-t14-e10",
-      "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "pelto (“field”) → ____ (“fields”) · add plural -t",
-      "acceptedAnswers": ["pellot"],
-      "explanation": "pelto means “field”; pellot means “fields”. Add plural -t to the weak stem. The KPT change is lt → ll: pelto → pellot.",
-      "tags": ["t-plural", "kpt"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["pelto"],
-      "targetSkill": "T-plural with KPT",
-      "misconceptionCategory": "T-plural with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e11"
-    },
-    {
-      "id": "ff-a1-t14-e11",
-      "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "combs — use the supplied base kampa (“comb”)",
-      "acceptedAnswers": ["kammat"],
-      "explanation": "kampa means “comb”; kammat means “combs”. Add plural -t to the weak stem. The KPT change is mp → mm: kampa → kammat.",
-      "tags": ["t-plural", "kpt"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
-      "vocabulary": ["kampa"],
-      "targetSkill": "T-plural with KPT",
-      "misconceptionCategory": "T-plural with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e10"
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e07"
     },
     {
       "id": "ff-a1-t14-e12",
@@ -345,20 +126,7 @@
       "acceptedAnswers": ["he lähtevät", "lähtevät"],
       "explanation": "lähteä means “to leave”; lähtevät means “they leave”. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
       "tags": ["vowel-harmony", "verb", "plural", "sentence"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
+      "requiredSkills": ["Third-person plural -vat/-vät", "Vowel harmony"],
       "vocabulary": ["lähteä"],
       "sentenceExplanation": {
         "translation": "They leave.",
@@ -382,129 +150,175 @@
       },
       "targetSkill": "Third-person plural -vat/-vät",
       "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
-      "parallelExerciseId": "ff-a1-t11-e15"
+      "parallelExerciseId": "ff-a1-t11-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["lähtevat", "he lähtevat"],
+          "category": "Vowel harmony: front-vowel ending needed",
+          "explanation": "The supplied stem lähte- has ä and neutral e, with no back vowel. Use -vät: lähtevät."
+        }
+      ]
     },
     {
-      "id": "ff-a1-t14-e13",
+      "id": "ff-a1-review-special-k-e01",
       "type": "fill-blank",
       "instruction": "Complete the Finnish form.",
-      "prompt": "istua (“to sit”): istu- + -vat → ____ (“they sit”)",
-      "acceptedAnswers": ["istuvat"],
-      "explanation": "istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
-      "tags": ["vowel-harmony", "verb", "plural", "sentence"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
+      "prompt": "puku (“suit”) → ____ (“of the suit”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["puvun"],
+      "explanation": "Recall the taught pair puku–puvun. Here k changes to v, giving puvu-. Add the supplied -n: puvun (“of the suit”). This is a learned special-k pattern, not a rule for every k.",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["puku"],
+      "targetSkill": "KPT special k changes",
+      "answerDiagnostics": [
+        {
+          "answers": ["pukun", "puun"],
+          "category": "KPT special k changes: special weak stem missed",
+          "explanation": "For this taught word, use puvu-. Do not keep k or simply remove it: puvu- + n = puvun."
+        }
       ],
-      "vocabulary": ["istua"],
-      "sentenceExplanation": {
-        "translation": "They sit.",
-        "pattern": "Subject (who does it) + verb (what they do)",
-        "parts": [
-          {
-            "finnish": "he",
-            "meaning": "they",
-            "role": "Subject — the people doing the action.",
-            "baseForm": "he",
-            "formation": "he is already the basic pronoun meaning “they”, so it does not need an ending here."
-          },
-          {
-            "finnish": "istuvat",
-            "meaning": "sit",
-            "role": "Verb — the action performed by the plural subject.",
-            "baseForm": "istua",
-            "formation": "The exercise supplies the stem istu-, so no stem-building rule is being tested. Add -vat; this ending shows that the subject is he (“they”). Vowel harmony chooses -vat because the supplied stem contains a back vowel: a, o, or u."
-          }
-        ]
-      },
-      "targetSkill": "Third-person plural -vat/-vät",
-      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e14"
+      "misconceptionCategory": "KPT special k changes: weak stem not yet correct",
+      "parallelExerciseId": "ff-a1-review-special-k-e02"
     },
     {
-      "id": "ff-a1-t14-e14",
-      "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "Which ending completes supplied sano- from sanoa (“to say”) to mean “they say”?",
-      "acceptedAnswers": ["-vat"],
-      "explanation": "sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
-      "tags": ["vowel-harmony", "verb", "plural", "sentence"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
+      "id": "ff-a1-t13-e03",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "puisto (“park”) → ____ (“in the park”)",
+      "acceptedAnswers": ["puistossa"],
+      "explanation": "puisto means “park”; puistossa means “in the park”. The back vowels u/o select -ssa.",
+      "tags": ["vowel-harmony", "inessive"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["puisto"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "ff-a1-t02-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["puistossä"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The u and o in puisto require -ssa. Keep the stem unchanged: puisto + ssa = puistossa."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t13-e08",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "kampa (“comb”) → ____ (“of the comb”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["kamman"],
+      "explanation": "The ending -n is supplied. The cluster mp becomes mm: kamma- + n = kamman (“of the comb”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kampa"],
+      "targetSkill": "KPT consonant clusters",
+      "answerDiagnostics": [
+        {
+          "answers": ["kampan"],
+          "category": "KPT consonant clusters: strong grade retained",
+          "explanation": "The weak stem has mm, not mp: kamma- + n = kamman."
+        }
       ],
-      "vocabulary": ["sanoa"],
-      "options": ["-vat", "-vät"],
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e09"
+    },
+    {
+      "id": "ff-a1-t14-e02",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "antaa (“to give”), supplied stem anta- → minä ____ (“I give”)",
+      "acceptedAnswers": ["annan"],
+      "explanation": "The stem anta- is supplied. For minä (“I”), nt becomes nn and the ending is -n: anna- + n = annan (“I give”).",
+      "tags": ["kpt", "verb"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT consonant clusters"],
+      "vocabulary": ["antaa"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e03",
+      "answerDiagnostics": [
+        {
+          "answers": ["antan"],
+          "category": "Minä verb forms with KPT: strong grade retained",
+          "explanation": "The minä ending -n is right. Change nt to nn in the supplied stem: annan."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t13-e10",
+      "type": "multiple-choice",
+      "instruction": "Identify the consonant change in the supplied forms.",
+      "prompt": "pankki (“bank”) → pankin (“of the bank”): which consonant change is shown?",
+      "acceptedAnswers": ["kk → k"],
+      "explanation": "Compare pankki with pankin. The double kk becomes a single k; the separate -n ending marks the genitive.",
+      "tags": ["kpt", "recognition"],
+      "requiredSkills": ["KPT recognition"],
+      "vocabulary": ["pankki"],
+      "targetSkill": "KPT recognition",
+      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e11",
+      "options": ["k → ∅", "kk → k", "nk → ng"],
       "optionFeedback": {
-        "-vat": "Correct. sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
-        "-vät": "“-vät” does not show the required pattern. sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat."
-      },
-      "sentenceExplanation": {
-        "translation": "They say.",
-        "pattern": "Subject (who does it) + verb (what they do)",
-        "parts": [
-          {
-            "finnish": "he",
-            "meaning": "they",
-            "role": "Subject — the people doing the action.",
-            "baseForm": "he",
-            "formation": "he is already the basic pronoun meaning “they”, so it does not need an ending here."
-          },
-          {
-            "finnish": "sanovat",
-            "meaning": "say",
-            "role": "Verb — the action performed by the plural subject.",
-            "baseForm": "sanoa",
-            "formation": "The exercise supplies the stem sano-, so no stem-building rule is being tested. Add -vat; this ending shows that the subject is he (“they”). Vowel harmony chooses -vat because the supplied stem contains a back vowel: a, o, or u."
-          }
-        ]
-      },
-      "targetSkill": "Third-person plural -vat/-vät",
-      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e13"
+        "k → ∅": "One k remains in pankin. Here double kk becomes single k; a single k is not disappearing.",
+        "kk → k": "Correct. Pankki has kk and pankin has k.",
+        "nk → ng": "Pankin still has nk, not ng. The change is kk to k."
+      }
+    },
+    {
+      "id": "ff-a1-t13-e15",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "matto (“carpet”) → ____ (“of the carpet”)",
+      "acceptedAnswers": ["maton"],
+      "explanation": "Use the genitive ending -n and the weak stem mato-: tt becomes t, then mato- + n = maton (“of the carpet”).",
+      "tags": ["kpt", "noun", "genitive"],
+      "requiredSkills": ["Genitive -n", "KPT double consonants"],
+      "vocabulary": ["matto"],
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e16",
+      "answerDiagnostics": [
+        {
+          "answers": ["matton"],
+          "category": "Genitive -n: strong grade retained",
+          "explanation": "The genitive ending -n is right. Weaken tt to t before adding it: maton."
+        },
+        {
+          "answers": ["matot"],
+          "category": "Genitive -n: plural ending used",
+          "explanation": "Matot means “carpets”. “Of the carpet” needs genitive -n: maton."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e10",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "pelto (“field”) → ____ (“fields”)",
+      "acceptedAnswers": ["pellot"],
+      "explanation": "pelto means “field”; pellot means “fields”. Add plural -t to the weak stem. The KPT change is lt → ll: pelto → pellot.",
+      "tags": ["t-plural", "kpt"],
+      "requiredSkills": ["T-plural with KPT", "KPT consonant clusters"],
+      "vocabulary": ["pelto"],
+      "targetSkill": "T-plural with KPT",
+      "misconceptionCategory": "T-plural with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e11",
+      "answerDiagnostics": [
+        {
+          "answers": ["peltot"],
+          "category": "T-plural with KPT: strong grade retained",
+          "explanation": "Before plural -t, change lt to ll: pello- + t = pellot."
+        }
+      ]
     },
     {
       "id": "ff-a1-t14-e15",
-      "type": "translation-en",
-      "instruction": "Translate into English.",
-      "prompt": "Kuvat ovat kotona.",
-      "acceptedAnswers": ["The pictures are at home."],
+      "type": "fill-blank",
+      "instruction": "Complete the plural subject.",
+      "prompt": "____ ovat kotona. (“The pictures are at home.”) · use kuva (“picture”); kotona is supplied as “at home”",
+      "acceptedAnswers": ["Kuvat"],
       "explanation": "The subject is plural: kuva → Kuvat. A plural subject uses ovat, meaning “are”.",
       "tags": ["t-plural", "sentence"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
+      "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
       "vocabulary": ["kuva", "olla", "ovat", "kotona"],
       "sentenceExplanation": {
         "translation": "The pictures are at home.",
@@ -535,30 +349,294 @@
       },
       "targetSkill": "Plural subject + ovat",
       "misconceptionCategory": "Plural subject + ovat: form not yet correct",
-      "parallelExerciseId": "ff-a1-t12-e15"
+      "parallelExerciseId": "ff-a1-t12-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["kuva"],
+          "category": "Plural subject + ovat: singular subject used",
+          "explanation": "The meaning “pictures” and the plural verb ovat need a plural subject. Add -t: Kuvat ovat kotona."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t13-e02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which vowel group describes pöytä (“table”)?",
+      "acceptedAnswers": ["front vowels"],
+      "explanation": "All three vowels in pöytä, ö, y and ä, belong to the front-vowel group.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["pöytä"],
+      "options": ["back vowels", "front vowels", "only neutral vowels"],
+      "optionFeedback": {
+        "back vowels": "Back vowels are a, o, u. The dots distinguish ä and ö from a and o; pöytä has front vowels.",
+        "front vowels": "Correct. Ö, y and ä are all front vowels.",
+        "only neutral vowels": "Only e and i are neutral. Pöytä contains ö, y and ä, which are front vowels."
+      },
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "ff-a1-t01-e10"
+    },
+    {
+      "id": "ff-a1-t13-e05",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "lippu (“ticket”) → ____ (“of the ticket”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["lipun"],
+      "explanation": "The ending -n is supplied. The double pp becomes p in the weak stem lipu-. Add -n: lipun (“of the ticket”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["lippu"],
+      "targetSkill": "KPT double consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["lippun"],
+          "category": "KPT double consonants: strong grade retained",
+          "explanation": "Keep the supplied -n, but weaken pp to p: lipu- + n = lipun."
+        }
+      ],
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e04"
+    },
+    {
+      "id": "ff-a1-t14-e06",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "cats — use the supplied base kissa (“cat”)",
+      "acceptedAnswers": ["kissat"],
+      "explanation": "kissa means “cat”; kissat means “cats”. The nominative T-plural is formed here by adding -t: kissa → kissat.",
+      "tags": ["t-plural", "regular"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["kissa"],
+      "targetSkill": "Regular T-plural",
+      "misconceptionCategory": "Regular T-plural: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e05",
+      "answerDiagnostics": [
+        {
+          "answers": ["kissa", "kissan"],
+          "category": "Regular T-plural: plural ending missed",
+          "explanation": "Use plural -t: kissa + t = kissat. Kissa is singular and kissan is genitive."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t13-e07",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "hakea (“to fetch”), supplied stem hake- + minä -n → ____ (“I fetch”)",
+      "acceptedAnswers": ["haen"],
+      "explanation": "The stem hake- and minä ending -n are supplied. In the weak stem, k disappears: hae- + n = haen (“I fetch”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["hakea"],
+      "targetSkill": "KPT common single consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["haken"],
+          "category": "KPT common single consonants: strong grade retained",
+          "explanation": "The single k disappears before the supplied ending: hae- + n = haen."
+        }
+      ],
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e06"
+    },
+    {
+      "id": "ff-a1-t14-e13",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "istua (“to sit”), supplied stem istu- → he ____ (“they sit”)",
+      "acceptedAnswers": ["istuvat"],
+      "explanation": "istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
+      "tags": ["vowel-harmony", "verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät", "Vowel harmony"],
+      "vocabulary": ["istua"],
+      "sentenceExplanation": {
+        "translation": "They sit.",
+        "pattern": "Subject (who does it) + verb (what they do)",
+        "parts": [
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "Subject — the people doing the action.",
+            "baseForm": "he",
+            "formation": "he is already the basic pronoun meaning “they”, so it does not need an ending here."
+          },
+          {
+            "finnish": "istuvat",
+            "meaning": "sit",
+            "role": "Verb — the action performed by the plural subject.",
+            "baseForm": "istua",
+            "formation": "The exercise supplies the stem istu-, so no stem-building rule is being tested. Add -vat; this ending shows that the subject is he (“they”). Vowel harmony chooses -vat because the supplied stem contains a back vowel: a, o, or u."
+          }
+        ]
+      },
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e14",
+      "answerDiagnostics": [
+        {
+          "answers": ["istuvät"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The u in the supplied stem istu- selects -vat. Neutral i does not override it: istuvat."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-review-special-k-e02",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "poika (“boy”) → ____ (“of the boy”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["pojan"],
+      "explanation": "Recall the taught pair poika–pojan and the weak stem poja-. In this word, k disappears and i changes to j. Add the supplied -n: pojan (“of the boy”). Learn the whole pair; simply replacing k with j would give the wrong stem.",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika"],
+      "targetSkill": "KPT special k changes",
+      "answerDiagnostics": [
+        {
+          "answers": ["poikan", "poian", "poijan"],
+          "category": "KPT special k changes: special weak stem missed",
+          "explanation": "The taught weak stem is poja-, with oj rather than oi. Add the supplied -n to get pojan."
+        }
+      ],
+      "misconceptionCategory": "KPT special k changes: weak stem not yet correct",
+      "parallelExerciseId": "ff-a1-review-special-k-e01"
+    },
+    {
+      "id": "ff-a1-review-inessive-e01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "kirjasto (“library”) → ____ (“in the library”)",
+      "acceptedAnswers": ["kirjastossa"],
+      "explanation": "Keep the stem kirjasto unchanged. Its a and o select the back-vowel ending -ssa: kirjastossa (“in the library”). The neutral i does not change that choice.",
+      "tags": ["inessive", "vowel-harmony"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["kirjasto"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: ending not yet correct",
+      "parallelExerciseId": "ff-a1-review-inessive-e02",
+      "answerDiagnostics": [
+        {
+          "answers": ["kirjastossä"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The a and o determine harmony even though i is neutral. Use -ssa: kirjastossa."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t13-e09",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "pelto (“field”) → ____ (“of the field”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["pellon"],
+      "explanation": "The ending -n is supplied. The cluster lt becomes ll: pello- + n = pellon (“of the field”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["pelto"],
+      "targetSkill": "KPT consonant clusters",
+      "answerDiagnostics": [
+        {
+          "answers": ["pelton"],
+          "category": "KPT consonant clusters: strong grade retained",
+          "explanation": "The weak stem has ll, not lt: pello- + n = pellon."
+        }
+      ],
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e08"
+    },
+    {
+      "id": "ff-a1-t14-e03",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish verb; the pronoun minä is optional.",
+      "prompt": "I fly — use lentää (“to fly”) and the supplied stem lentä-",
+      "acceptedAnswers": ["lennän", "minä lennän"],
+      "explanation": "The stem lentä- is supplied. For minä (“I”), nt becomes nn and the ending is -n: lennä- + n = lennän (“I fly”).",
+      "tags": ["kpt", "verb"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT consonant clusters"],
+      "vocabulary": ["lentää"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e02",
+      "answerDiagnostics": [
+        {
+          "answers": ["lentän", "minä lentän"],
+          "category": "Minä verb forms with KPT: strong grade retained",
+          "explanation": "Change nt to nn before adding the minä ending -n: lennän."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t13-e11",
+      "type": "multiple-choice",
+      "instruction": "Identify the consonant change in the supplied forms.",
+      "prompt": "leipä (“bread”) → leivän (“of the bread”): which consonant change is shown?",
+      "acceptedAnswers": ["p → v"],
+      "explanation": "Compare leipä with leivän. The single p becomes v; the separate -n ending marks the genitive.",
+      "tags": ["kpt", "recognition"],
+      "requiredSkills": ["KPT recognition"],
+      "vocabulary": ["leipä"],
+      "targetSkill": "KPT recognition",
+      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e10",
+      "options": ["p → v", "pp → p", "t → d"],
+      "optionFeedback": {
+        "p → v": "Correct. The p in leipä corresponds to v in leivän.",
+        "pp → p": "Leipä has one p, not pp. Here the single p becomes v.",
+        "t → d": "There is no t or d in this pair. Compare the p in leipä with v in leivän."
+      }
+    },
+    {
+      "id": "ff-a1-t13-e16",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "of the flower — use the supplied base kukka (“flower”)",
+      "acceptedAnswers": ["kukan"],
+      "explanation": "kukka means “flower”; kukan means “the flower's / of the flower”. The genitive ends in -n. kk weakens to k.",
+      "tags": ["kpt", "noun", "genitive"],
+      "requiredSkills": ["Genitive -n", "KPT double consonants"],
+      "vocabulary": ["kukka"],
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["kukkan"],
+          "category": "Genitive -n: strong grade retained",
+          "explanation": "Use the weak stem kuka- and the genitive ending -n: kukan."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e11",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "combs — use the supplied base kampa (“comb”)",
+      "acceptedAnswers": ["kammat"],
+      "explanation": "kampa means “comb”; kammat means “combs”. Add plural -t to the weak stem. The KPT change is mp → mm: kampa → kammat.",
+      "tags": ["t-plural", "kpt"],
+      "requiredSkills": ["T-plural with KPT", "KPT consonant clusters"],
+      "vocabulary": ["kampa"],
+      "targetSkill": "T-plural with KPT",
+      "misconceptionCategory": "T-plural with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e10",
+      "answerDiagnostics": [
+        {
+          "answers": ["kampat"],
+          "category": "T-plural with KPT: strong grade retained",
+          "explanation": "Before plural -t, change mp to mm: kamma- + t = kammat."
+        }
+      ]
     },
     {
       "id": "ff-a1-t14-e16",
-      "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "____ ovat ulkona. (tuoli)",
-      "acceptedAnswers": ["Tuolit"],
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The chairs are outside.” Tuolit means “the chairs”; ulkona is supplied as “outside”.",
+      "acceptedAnswers": ["Tuolit ovat ulkona."],
       "explanation": "The subject is plural: tuoli → Tuolit. A plural subject uses ovat, meaning “are”.",
       "tags": ["t-plural", "sentence"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
+      "requiredSkills": ["Plural subject + ovat"],
       "vocabulary": ["tuoli", "olla", "ovat", "ulkona"],
       "sentenceExplanation": {
         "translation": "The chairs are outside.",
@@ -589,30 +667,170 @@
       },
       "targetSkill": "Plural subject + ovat",
       "misconceptionCategory": "Plural subject + ovat: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e17"
+      "parallelExerciseId": "ff-a1-t14-e17",
+      "tokens": ["ulkona.", "Tuolit", "ovat"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Tuolit ulkona ovat."],
+          "category": "Plural subject + ovat: sentence order",
+          "explanation": "Use the requested subject–verb–place order: Tuolit + ovat + ulkona."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-review-inessive-e02",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "myymälä (“shop”) → ____ (“in the shop”)",
+      "acceptedAnswers": ["myymälässä"],
+      "explanation": "Keep the stem myymälä unchanged. Its y and ä select the front-vowel ending -ssä: myymälässä (“in the shop”).",
+      "tags": ["inessive", "vowel-harmony"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["myymälä"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: ending not yet correct",
+      "parallelExerciseId": "ff-a1-review-inessive-e01",
+      "answerDiagnostics": [
+        {
+          "answers": ["myymälässa"],
+          "category": "Vowel harmony: front-vowel ending needed",
+          "explanation": "Myymälä has front vowels y and ä. Use -ssä, preserving the dots: myymälässä."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e01",
+      "type": "translation-en",
+      "instruction": "Translate into English.",
+      "prompt": "haen — from hakea (“to fetch”)",
+      "acceptedAnswers": ["I fetch", "I am fetching"],
+      "explanation": "hakea means “to fetch”; haen means “I fetch”. This is the minä-form of hakea. Add the minä ending -n after forming the stem. k disappears.",
+      "tags": ["kpt", "verb"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["hakea"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["to fetch"],
+          "category": "Minä verb forms with KPT: person ending missed",
+          "explanation": "The dictionary form hakea means “to fetch”. Haen has the minä ending -n and means “I fetch”."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e04",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "kuva (“picture”) → ____ (“pictures”)",
+      "acceptedAnswers": ["kuvat"],
+      "explanation": "kuva means “picture”; kuvat means “pictures”. The nominative T-plural is formed here by adding -t: kuva → kuvat.",
+      "tags": ["t-plural", "regular"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["kuva"],
+      "targetSkill": "Regular T-plural",
+      "misconceptionCategory": "Regular T-plural: form not yet correct",
+      "parallelExerciseId": "ff-a1-t09-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["kuvaet"],
+          "category": "Regular T-plural: unnecessary stem change",
+          "explanation": "Keep kuva unchanged and add -t directly: kuvat. Do not insert e."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t13-e14",
+      "type": "translation-en",
+      "instruction": "Translate into English.",
+      "prompt": "hatun — from hattu (“hat”)",
+      "acceptedAnswers": ["of the hat", "the hat's", "of a hat", "a hat's"],
+      "explanation": "Hatun is the genitive of hattu (“hat”). It means “of the hat” or “the hat's”: tt becomes t and the ending is -n. Finnish has no word corresponding to the English article here.",
+      "tags": ["kpt", "noun", "genitive"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["hattu"],
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "ff-a1-t07-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["hats", "the hats"],
+          "category": "Genitive -n: confused with plural",
+          "explanation": "The ending is -n, which marks genitive here, not plural -t. Hatun means “of the hat”."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e14",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "sanoa (“to say”), supplied stem sano- → he ____ (“they say”)",
+      "acceptedAnswers": ["sanovat"],
+      "explanation": "sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
+      "tags": ["vowel-harmony", "verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät", "Vowel harmony"],
+      "vocabulary": ["sanoa"],
+      "sentenceExplanation": {
+        "translation": "They say.",
+        "pattern": "Subject (who does it) + verb (what they do)",
+        "parts": [
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "Subject — the people doing the action.",
+            "baseForm": "he",
+            "formation": "he is already the basic pronoun meaning “they”, so it does not need an ending here."
+          },
+          {
+            "finnish": "sanovat",
+            "meaning": "say",
+            "role": "Verb — the action performed by the plural subject.",
+            "baseForm": "sanoa",
+            "formation": "The exercise supplies the stem sano-, so no stem-building rule is being tested. Add -vat; this ending shows that the subject is he (“they”). Vowel harmony chooses -vat because the supplied stem contains a back vowel: a, o, or u."
+          }
+        ]
+      },
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e13",
+      "answerDiagnostics": [
+        {
+          "answers": ["sanovät"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The a and o in supplied sano- select -vat: sanovat."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e09",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the form meaning “beaches” from ranta (“beach”).",
+      "acceptedAnswers": ["rannat"],
+      "explanation": "ranta means “beach”; rannat means “beaches”. Add plural -t to the weak stem. The KPT change is nt → nn: ranta → rannat.",
+      "tags": ["t-plural", "kpt"],
+      "requiredSkills": ["T-plural with KPT", "KPT consonant clusters"],
+      "vocabulary": ["ranta"],
+      "options": ["rannat", "rantat", "ranta"],
+      "optionFeedback": {
+        "rannat": "Correct. ranta means “beach”; rannat means “beaches”. Add plural -t to the weak stem. The KPT change is nt → nn: ranta → rannat.",
+        "rantat": "The plural ending -t is present, but the strong cluster nt must weaken to nn: ranta → rannat.",
+        "ranta": "Ranta is the singular form “beach”. The plural needs both the weak stem ranna- and plural -t: rannat."
+      },
+      "targetSkill": "T-plural with KPT",
+      "misconceptionCategory": "T-plural with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t10-e15"
     },
     {
       "id": "ff-a1-t14-e17",
       "type": "word-order",
-      "instruction": "Put the words in the correct order.",
-      "prompt": "Build the Finnish sentence.",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The cats are here.” Kissat means “the cats”; täällä is supplied as “here”.",
       "acceptedAnswers": ["Kissat ovat täällä."],
       "explanation": "The subject is plural: kissa → Kissat. A plural subject uses ovat, meaning “are”.",
       "tags": ["t-plural", "sentence"],
-      "requiredSkills": [
-        "Vowel harmony",
-        "Inessive -ssa/-ssä",
-        "KPT double consonants",
-        "KPT common single consonants",
-        "KPT consonant clusters",
-        "KPT recognition",
-        "Genitive -n",
-        "Minä verb forms with KPT",
-        "Regular T-plural",
-        "T-plural with KPT",
-        "Third-person plural -vat/-vät",
-        "Plural subject + ovat"
-      ],
+      "requiredSkills": ["Plural subject + ovat"],
       "vocabulary": ["kissa", "olla", "ovat", "täällä"],
       "tokens": ["ovat", "täällä.", "Kissat"],
       "sentenceExplanation": {
@@ -644,7 +862,14 @@
       },
       "targetSkill": "Plural subject + ovat",
       "misconceptionCategory": "Plural subject + ovat: form not yet correct",
-      "parallelExerciseId": "ff-a1-t14-e16"
+      "parallelExerciseId": "ff-a1-t14-e16",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kissat täällä ovat."],
+          "category": "Plural subject + ovat: sentence order",
+          "explanation": "Use the requested subject–verb–place order: Kissat + ovat + täällä."
+        }
+      ]
     }
   ]
 }

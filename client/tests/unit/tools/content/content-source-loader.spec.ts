@@ -171,8 +171,8 @@ describe('pack-owned content source loader', () => {
     const pack = source.packs[0];
 
     expect(pack['id']).toBe('vowel-harmony-kpt-tplural');
-    expect(pack['version']).toBe('5.1.0');
+    expect(pack['version']).toBe('6.0.0');
     expect((pack['lessons'] as unknown[]).length).toBe(13);
-    expect((pack['tests'] as unknown[]).length).toBe(15);
+    expect((pack['tests'] as unknown[]).length).toBe(14);
   });
 });
