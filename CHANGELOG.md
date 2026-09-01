@@ -32,6 +32,7 @@
 
 ### Changed
 
+- Clarified KPT lesson and test explanations so supplied endings and stems are described as already shown, with learner attention directed plainly to the consonant change being practised.
 - Reframed the root README around the project's personal Finnish-learning motivation, production site, need for extensive practice, invitation to contributors, AI-assisted content limitation, and an approachable illustrated guide to its content separation, learner-oriented vertical slices, state flow, browser boundaries, UI tokens and characteristics, and automated architecture checks.
 - Pinned the GitHub Pages deployment workflow to the repository-declared npm 11.6.2 release so dependency installation validates the committed lockfile consistently as runner defaults change.
 - Added restrained hover and keyboard-focus feedback to the home brand's paper mark, the sticky-note editor label and ruled field, and the clear-topic consequence copy while keeping the wordmark, editable field and inactive row space stable and honoring reduced motion.
