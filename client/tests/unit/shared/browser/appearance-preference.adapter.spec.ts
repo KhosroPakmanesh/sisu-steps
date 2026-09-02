@@ -9,14 +9,14 @@ describe('AppearancePreferenceAdapter', () => {
 
   afterEach(() => {
     vi.restoreAllMocks();
-    localStorage.removeItem(appearancePreferenceStorageKey);
+    window.localStorage.removeItem(appearancePreferenceStorageKey);
     document.documentElement.removeAttribute('data-appearance');
   });
 
   it('uses automatic when there is no valid saved preference', () => {
     expect(adapter.read()).toBe('automatic');
 
-    localStorage.setItem(appearancePreferenceStorageKey, 'sepia');
+    window.localStorage.setItem(appearancePreferenceStorageKey, 'sepia');
 
     expect(adapter.read()).toBe('automatic');
   });
@@ -34,14 +34,14 @@ describe('AppearancePreferenceAdapter', () => {
     expect(adapter.read()).toBe('light');
 
     adapter.save('automatic');
-    expect(localStorage.getItem(appearancePreferenceStorageKey)).toBeNull();
+    expect(window.localStorage.getItem(appearancePreferenceStorageKey)).toBeNull();
   });
 
   it('falls back safely when browser storage is unavailable', () => {
-    vi.spyOn(Storage.prototype, 'getItem').mockImplementation(() => {
+    vi.spyOn(window.localStorage, 'getItem').mockImplementation(() => {
       throw new DOMException('Storage unavailable');
     });
-    vi.spyOn(Storage.prototype, 'setItem').mockImplementation(() => {
+    vi.spyOn(window.localStorage, 'setItem').mockImplementation(() => {
       throw new DOMException('Storage unavailable');
     });
 

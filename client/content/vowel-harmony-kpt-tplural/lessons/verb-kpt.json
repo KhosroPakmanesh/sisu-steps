@@ -1,104 +1,281 @@
 {
   "id": "verb-kpt",
-  "version": "5.1.0",
+  "version": "6.1.0",
   "stage": "focused",
   "targetSkills": ["Minä verb forms with KPT"],
   "prerequisiteSkills": ["KPT recognition"],
   "introducedVocabulary": [
-    {
-      "finnish": "auttaa",
-      "english": "to help"
-    },
-    {
-      "finnish": "pukea",
-      "english": "to get dressed"
-    }
+    { "finnish": "odottaa", "english": "to wait" },
+    { "finnish": "saapua", "english": "to arrive" },
+    { "finnish": "oppia", "english": "to learn" },
+    { "finnish": "piirtää", "english": "to draw" },
+    { "finnish": "nyt", "english": "now" },
+    { "finnish": "tänään", "english": "today" },
+    { "finnish": "täällä", "english": "here" },
+    { "finnish": "hyvin", "english": "well" },
+    { "finnish": "pian", "english": "soon" },
+    { "finnish": "nopeasti", "english": "quickly" }
   ],
-  "practiceVocabulary": ["nukkua", "lentää", "ottaa"],
-  "title": "Known KPT changes in “I” verb forms",
-  "summary": "Apply the same strong-to-weak KPT changes to a small set of familiar minä forms.",
+  "title": "Known KPT changes in complete “I” sentences",
+  "summary": "Apply familiar strong-to-weak KPT changes in short, complete A1 sentences with minä and a supplied context word.",
   "objectives": [
-    "Understand that minä means “I”.",
-    "Recognise the minä ending -n.",
-    "Apply one previously learned strong-to-weak KPT change."
+    "Understand that minä means “I” and names the person doing the action.",
+    "Recognise the minä ending -n in a complete sentence.",
+    "Apply one previously learned strong-to-weak KPT change while every other sentence part is supplied."
   ],
   "sections": [
     {
-      "title": "From dictionary form to minä form",
+      "title": "From a dictionary form to a complete sentence",
       "paragraphs": [
         "A verb expresses an action or state. The dictionary form is the form listed in a dictionary, such as nukkua, meaning “to sleep”.",
-        "The minä form says that I perform the action. It ends in -n in these exercises, and the familiar KPT consonant becomes weak before that ending."
+        "The minä form says that I perform the action. It ends in -n in these exercises, and the familiar KPT consonant becomes weak before that ending.",
+        "A short sentence can add one fixed context word after the verb. For example, hyvin means “well”. In Minä nukun hyvin, only nukun is formed; minä and hyvin are supplied unchanged."
       ],
-      "keyPoints": ["minä = I", "nukkua → nukun = I sleep"]
+      "keyPoints": ["Minä + verb + fixed context word", "Minä nukun hyvin. = I sleep well."]
     },
     {
-      "title": "One direction only in this lesson",
+      "title": "One grammar decision at a time",
       "paragraphs": [
-        "This lesson uses only strong-to-weak changes already shown in the KPT recognition lesson: a double consonant shortens, k can disappear, or a familiar cluster weakens.",
-        "Other verb types and strong-grade building are deliberately left for a later topic. They are not hidden in this test."
+        "This lesson uses only strong-to-weak changes already shown in the KPT recognition lesson: a double consonant shortens, k can disappear, p can become v, or a familiar cluster can weaken.",
+        "The time, place, or manner word is always shown with its English meaning. Copy it unchanged and focus only on the KPT verb form.",
+        "Verbs that need an object are left out here so the sentences do not require a new object-ending rule. Other verb types and strong-grade building are also left for later topics."
       ],
-      "keyPoints": ["nukkua → nukun: kk → k", "lentää → lennän: nt → nn"]
+      "keyPoints": ["nukkua → nukun: kk → k", "lentää → lennän: nt → nn", "saapua → saavun: p → v"]
     }
   ],
   "examples": [
     {
-      "finnish": "nukkua → minä nukun",
-      "english": "I sleep",
+      "finnish": "Minä nukun hyvin.",
+      "english": "I sleep well.",
       "steps": [
-        "Use the familiar weak change kk → k.",
-        "The weak part is nuku-.",
-        "Add the minä ending -n: nukun."
+        "Start with nukkua, meaning “to sleep”.",
+        "Use the familiar weak change kk → k to make nuku-.",
+        "Add the minä ending -n: nukun.",
+        "Place the supplied word hyvin (“well”) after the verb."
       ]
     },
     {
-      "finnish": "lentää → minä lennän",
-      "english": "I fly",
-      "steps": ["Use the personal stem lennä-.", "The cluster nt weakens to nn.", "Add -n: lennän."]
+      "finnish": "Minä lennän tänään.",
+      "english": "I am flying today.",
+      "steps": [
+        "Start with lentää, meaning “to fly”, and the supplied stem lentä-.",
+        "The cluster nt weakens to nn: lennä-.",
+        "Add the minä ending -n: lennän.",
+        "Place the supplied word tänään (“today”) after the verb."
+      ]
+    },
+    {
+      "finnish": "Minä saavun pian.",
+      "english": "I am arriving soon.",
+      "steps": [
+        "Start with saapua, meaning “to arrive”.",
+        "The consonant p weakens to v: saavu-.",
+        "Add the minä ending -n: saavun.",
+        "Place the supplied word pian (“soon”) after the verb."
+      ]
     }
   ],
   "commonMistakes": [
     "Do not simply attach -n to the complete dictionary form.",
-    "Use only the strong-to-weak pattern shown for the supplied verb.",
+    "Change only the target verb; copy minä and the translated context word unchanged.",
+    "Do not add an object or another ending that the prompt does not ask for.",
     "A long vowel or doubled consonant is meaningful; copy it accurately."
   ],
   "practiceExercises": [
     {
       "id": "ff-a1-l-verb-p01",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "Nukkua (“to sleep”) → minä ____ (“I sleep”) · use minä -n; practise kk → k",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I am sleeping now.” Minä ____ nyt. Use nukkua (“to sleep”); minä (“I”) and nyt (“now”) are supplied.",
       "acceptedAnswers": ["nukun"],
-      "explanation": "Use kk → k to make nuku-, then add -n: nukun.",
-      "tags": ["lesson-practice", "kpt", "verb"],
+      "explanation": "The complete sentence Minä nukun nyt means “I am sleeping now”. In nukkua, kk weakens to k. Form nuku-, then add the minä ending -n: nukun.",
+      "tags": ["lesson-practice", "kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["nukkua", "lentää", "ottaa"]
+      "vocabulary": ["nukkua", "nyt"],
+      "sentenceExplanation": {
+        "translation": "I am sleeping now.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is sleeping.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "nukun",
+            "meaning": "am sleeping",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "nukkua",
+            "formation": "Start with nukkua (“to sleep”). Change kk to k to make nuku-, then add the minä ending -n: nukun."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word meaning “now”. No ending rule is being tested."
+          }
+        ]
+      }
     },
     {
       "id": "ff-a1-l-verb-p02",
       "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "Practice translation: I fly",
-      "acceptedAnswers": ["lennän"],
-      "explanation": "lentää uses the personal stem lennä- with nt → nn, then the minä ending -n: lennän.",
-      "tags": ["lesson-practice", "kpt", "verb"],
+      "instruction": "Write the complete Finnish sentence.",
+      "prompt": "I am drawing here. Use piirtää (“to draw”) with the supplied words minä (“I”) and täällä (“here”).",
+      "acceptedAnswers": ["Minä piirrän täällä"],
+      "explanation": "Minä piirrän täällä means “I am drawing here”. The dictionary form is piirtää. Its stem is piirtä-. Change rt to rr to make piirrä-, then add the minä ending -n: piirrän. Minä and täällä stay unchanged.",
+      "tags": ["lesson-practice", "kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["nukkua", "lentää", "ottaa"]
+      "vocabulary": ["piirtää", "täällä"],
+      "sentenceExplanation": {
+        "translation": "I am drawing here.",
+        "pattern": "Subject (who) + verb (action or state) + place word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is drawing.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "piirrän",
+            "meaning": "am drawing",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "piirtää",
+            "formation": "Start with piirtää (“to draw”) and its stem piirtä-. Change rt to rr to make piirrä-, then add the minä ending -n: piirrän."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place word — tells where the action happens.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word meaning “here”. No place-ending rule is being tested."
+          }
+        ]
+      }
     },
     {
       "id": "ff-a1-l-verb-p03",
       "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "Choose the minä-form of “ottaa”.",
-      "acceptedAnswers": ["otan"],
-      "explanation": "The double tt weakens to t in ota-. Add -n: otan.",
-      "tags": ["lesson-practice", "kpt", "verb"],
+      "instruction": "Choose the complete Finnish sentence.",
+      "prompt": "Choose “I am arriving today.” Use saapua (“to arrive”); tänään means “today”.",
+      "acceptedAnswers": ["Minä saavun tänään."],
+      "explanation": "Minä saavun tänään means “I am arriving today”. In saapua, p weakens to v. Form saavu-, then add the minä ending -n: saavun.",
+      "tags": ["lesson-practice", "kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["nukkua", "lentää", "ottaa"],
-      "options": ["otan", "ottan", "ottaan"],
+      "vocabulary": ["saapua", "tänään"],
+      "options": ["Minä saavun tänään.", "Minä saapun tänään.", "Minä saapua tänään."],
       "optionFeedback": {
-        "otan": "Correct. The double tt weakens to t in ota-. Add -n: otan.",
-        "ottan": "“ottan” does not show the required pattern. The double tt weakens to t in ota-. Add -n: otan.",
-        "ottaan": "“ottaan” does not show the required pattern. The double tt weakens to t in ota-. Add -n: otan."
+        "Minä saavun tänään.": "Correct. In saapua, p weakens to v. Form saavu-, then add the minä ending -n: saavun.",
+        "Minä saapun tänään.": "“Saapun” keeps the strong p. In the minä form, p weakens to v: saavu- + n = saavun.",
+        "Minä saapua tänään.": "Saapua is the dictionary form “to arrive”. The sentence needs the minä form saavu- + n = saavun."
+      },
+      "sentenceExplanation": {
+        "translation": "I am arriving today.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is arriving.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "saavun",
+            "meaning": "am arriving",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "saapua",
+            "formation": "Start with saapua (“to arrive”). Change p to v to make saavu-, then add the minä ending -n: saavun."
+          },
+          {
+            "finnish": "tänään",
+            "meaning": "today",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "tänään",
+            "formation": "tänään is supplied as a complete fixed word meaning “today”. No ending rule is being tested."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ff-a1-l-verb-p04",
+      "type": "translation-en",
+      "instruction": "Translate the complete sentence into English.",
+      "prompt": "Minä ymmärrän hyvin.",
+      "acceptedAnswers": ["I understand well"],
+      "explanation": "Minä ymmärrän hyvin means “I understand well”. The dictionary form is ymmärtää. Its stem is ymmärtä-. Change rt to rr to make ymmärrä-, then add the minä ending -n: ymmärrän.",
+      "tags": ["lesson-practice", "kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["ymmärtää", "hyvin"],
+      "sentenceExplanation": {
+        "translation": "I understand well.",
+        "pattern": "Subject (who) + verb (action or state) + manner word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who understands.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "ymmärrän",
+            "meaning": "understand",
+            "role": "Verb — tells my state of understanding.",
+            "baseForm": "ymmärtää",
+            "formation": "Start with ymmärtää (“to understand”) and its stem ymmärtä-. Change rt to rr to make ymmärrä-, then add the minä ending -n: ymmärrän."
+          },
+          {
+            "finnish": "hyvin",
+            "meaning": "well",
+            "role": "Manner word — tells how well I understand.",
+            "baseForm": "hyvin",
+            "formation": "hyvin is supplied as a complete fixed word meaning “well”. No ending rule is being tested."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ff-a1-l-verb-p05",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I learn quickly.” Minä ____ nopeasti. Use oppia (“to learn”); minä (“I”) and nopeasti (“quickly”) are supplied.",
+      "acceptedAnswers": ["opin"],
+      "explanation": "The complete sentence Minä opin nopeasti means “I learn quickly”. In oppia, pp weakens to p. Form opi-, then add the minä ending -n: opin.",
+      "tags": ["lesson-practice", "kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["oppia", "nopeasti"],
+      "sentenceExplanation": {
+        "translation": "I learn quickly.",
+        "pattern": "Subject (who) + verb (action or state) + manner word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is learning.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "opin",
+            "meaning": "learn",
+            "role": "Verb — tells what I do.",
+            "baseForm": "oppia",
+            "formation": "Start with oppia (“to learn”). Change pp to p to make opi-, then add the minä ending -n: opin."
+          },
+          {
+            "finnish": "nopeasti",
+            "meaning": "quickly",
+            "role": "Manner word — tells how I learn.",
+            "baseForm": "nopeasti",
+            "formation": "nopeasti is supplied as a complete fixed word meaning “quickly”. No ending rule is being tested."
+          }
+        ]
       }
     }
   ]

@@ -126,6 +126,79 @@ describe('content-pack validation', () => {
       'Sentence exercise exercise-1 has an incomplete explanation.',
     );
   });
+  it('requires complete English meanings before Finnish sentence construction', () => {
+    const pack = validPack();
+    const exercise = pack.tests[0].exercises[0];
+    exercise.tags = ['sentence'];
+    exercise.prompt = 'Kissat ____ kotona.';
+    exercise.sentenceExplanation = {
+      translation: 'The cats are at home.',
+      pattern: 'Subject + verb + place word',
+      parts: [
+        {
+          finnish: 'Kissat',
+          meaning: 'the cats',
+          role: 'plural subject',
+          baseForm: 'kissa',
+          formation: 'Add the plural ending -t.',
+        },
+        {
+          finnish: 'ovat',
+          meaning: 'are',
+          role: 'plural verb',
+          baseForm: 'olla',
+          formation: 'Use ovat with a plural subject.',
+        },
+        {
+          finnish: 'kotona',
+          meaning: 'at home',
+          role: 'place word',
+          baseForm: 'kotona',
+          formation: 'This fixed word is supplied.',
+        },
+      ],
+    };
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Sentence construction exercise exercise-1 must show its complete English meaning before submission.',
+    );
+  });
+  it('does not reveal the assessed meaning in Finnish-to-English translation prompts', () => {
+    const pack = validPack();
+    const exercise = pack.tests[0].exercises[0];
+    exercise.type = 'translation-en';
+    exercise.tags = ['sentence'];
+    exercise.prompt = 'Kissat ovat kotona.';
+    exercise.sentenceExplanation = {
+      translation: 'The cats are at home.',
+      pattern: 'Subject + verb + place word',
+      parts: [
+        {
+          finnish: 'Kissat',
+          meaning: 'the cats',
+          role: 'plural subject',
+          baseForm: 'kissa',
+          formation: 'Add the plural ending -t.',
+        },
+        {
+          finnish: 'ovat',
+          meaning: 'are',
+          role: 'plural verb',
+          baseForm: 'olla',
+          formation: 'Use ovat with a plural subject.',
+        },
+        {
+          finnish: 'kotona',
+          meaning: 'at home',
+          role: 'place word',
+          baseForm: 'kotona',
+          formation: 'This fixed word is supplied.',
+        },
+      ],
+    };
+
+    expect(validateTopicPack(pack).id).toBe('pack');
+  });
   it('rejects a form transformation without English meanings on both sides', () => {
     const pack = validPack();
     pack.tests[0].exercises[0].prompt = 'silta (“bridge”) → ____';

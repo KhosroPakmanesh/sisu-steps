@@ -166,6 +166,11 @@
 - **VAL-G001-067** (`REQ-G001-108`–`110`): Browser coverage verifies one review card and preparation page, thirteen optional lessons, a 33-question fixed session, save/reload/resume and completion/reporting. Existing version-alignment coverage plus a real-content reset case verifies that 5.1.0 progress is cleared once on loading 6.0.0 while unrelated packs and still-owned notes follow their existing policy.
 - **VAL-G001-068** (`REQ-G001-109`): Inspect every rendered review prompt and feedback, sample all response controls and sentence explanations, compare parallel pairs for task demand, and record the final pedagogy disposition. Check Day/Night and narrow/wide layouts without claiming native screen-reader or general CEFR validation.
 
+## Complete sentence-meaning prompt validation
+
+- **VAL-G001-069** (`REQ-G001-111`): Runtime and standalone content validators inspect every sentence-tagged construction or completion exercise and reject it when the normalized prompt omits the complete `sentenceExplanation.translation`. Negative unit coverage proves the rejection, while Finnish-to-English translation exercises remain exempt.
+- **VAL-G001-070** (`REQ-G001-111`): Audit all 62 sentence-tagged exercises in the installed pack, confirm that every non-translation English meaning is visible before response, and verify that the 21 corrected prompts retain their existing IDs, response types, answers, scoring metadata, order and mastery pairs.
+
 ### Execution evidence — 2026-09-01
 
 - Pack version 6.0.0 contains thirteen Focused tests followed by one 33-question **Foundations review**, with 200 scored questions overall, thirteen referenced lessons, 44 optional practice exercises and all five response types. The retired `guided-review` source and route references are absent.
@@ -173,3 +178,11 @@
 - Pack-specific validation and seven negative/positive unit cases passed. The full client quality gate passed 115 unit tests in 17 files, direct-source validation, linting, formatting, architecture checks, production and test typechecks, and the production build.
 - Dedicated Playwright coverage passed all nine Day/Night cases across 320-, 768- and 1440-pixel projects. It completed and rendered all 33 prompts and feedback explanations, verified optional thirteen-lesson preparation, save/reload/resume, 33/33 results, report persistence, and a seeded version 5.1.0-to-6.0.0 pack reset that preserved the still-owned topic note.
 - The recorded final pedagogy gate is **approved with limitations**. It resolved an uneven KPT T-plural mastery pair and found no unresolved high-impact content issue. The remaining limits are written-only controlled practice, authored rather than empirical difficulty calibration, and no independent professional Finnish-teacher review.
+
+### Execution evidence — 2026-09-02 complete sentence meanings
+
+- The audited inventory contains 62 sentence-tagged exercises: 53 Finnish-construction or completion tasks and 9 Finnish-to-English translations. All 53 construction prompts contain their complete normalized `sentenceExplanation.translation`; the 9 translation prompts intentionally remain exempt.
+- Twenty-one prompts were corrected across `plural-sentences`, `plural-in-sentences`, `verb-kpt`, `kpt-verbs` and `foundations-review`. Their Finnish, accepted answers, interaction types, skills, vocabulary, diagnostics, order and parallel links remain unchanged. The pending pack stays at 6.1.0 and `plural-sentences` advances to lesson version 6.1.0.
+- The aggregate client gate passed ESLint, Stylelint, module-size, reachability, architecture, repository formatting, production and test typechecks, direct-source validation, the production build and all 121 unit tests. New negative and exemption cases cover the prompt rule.
+- The targeted Foundations review Playwright matrix passed all 9 Day/Night cases across mobile, tablet and wide Chromium, including all 33 review prompts and the 6.0.0-to-6.1.0 progress reset.
+- The final pedagogy disposition remains **approved with limitations** for controlled written practice. No unresolved high-impact content issue remains; listening, speaking, pronunciation, interaction, free composition, empirical difficulty calibration and independent professional Finnish-teacher review remain outside this change.

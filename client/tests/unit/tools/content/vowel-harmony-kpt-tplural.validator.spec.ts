@@ -30,6 +30,69 @@ describe('vowel-harmony-kpt-tplural content validation', () => {
     );
   });
 
+  it('rejects incomplete KPT verb contexts and object-dependent verb tasks', () => {
+    const pack = structuredClone(installedPack);
+    const lesson = pack.lessons.find((candidate) => candidate.id === 'verb-kpt');
+    const test = pack.tests.find((candidate) => candidate.id === 'kpt-verbs');
+    if (!lesson || !test) throw new Error('The installed fixture is missing KPT verb content.');
+    lesson.practiceExercises = lesson.practiceExercises.slice(0, 4);
+    test.exercises[0].tags = test.exercises[0].tags.filter((tag) => tag !== 'sentence');
+    test.exercises[0].sentenceExplanation = undefined;
+    test.exercises[1].vocabulary = ['pukea'];
+
+    expect(validatePack(pack)).toEqual(
+      expect.arrayContaining([
+        'verb-kpt: complete-sentence lesson needs exactly five practice exercises',
+        `${test.exercises[0].id}: KPT verb work must use a complete sentence`,
+        `${test.exercises[0].id}: KPT verb sentence must explain exactly three supplied parts`,
+        `${test.exercises[1].id}: object-dependent verb pukea does not fit this focused set`,
+      ]),
+    );
+  });
+
+  it('rejects KPT verb mastery pairs with different response formats', () => {
+    const pack = structuredClone(installedPack);
+    const test = pack.tests.find((candidate) => candidate.id === 'kpt-verbs');
+    if (!test) throw new Error('The installed fixture is missing the KPT verb test.');
+    const fillBlank = test.exercises.find((exercise) => exercise.id === 'ff-a1-t08-e01')!;
+    const translation = test.exercises.find((exercise) => exercise.id === 'ff-a1-t08-e02')!;
+    fillBlank.parallelExerciseId = translation.id;
+    translation.parallelExerciseId = fillBlank.id;
+
+    expect(validatePack(pack)).toEqual(
+      expect.arrayContaining([
+        `${fillBlank.id}: KPT verb mastery partner ${translation.id} must use a comparable response format`,
+        `${translation.id}: KPT verb mastery partner ${fillBlank.id} must use a comparable response format`,
+      ]),
+    );
+  });
+
+  it('rejects feedback that refers to a stem absent from the prompt', () => {
+    const pack = structuredClone(installedPack);
+    const test = pack.tests.find((candidate) => candidate.id === 'kpt-verbs');
+    if (!test) throw new Error('The installed fixture is missing the KPT verb test.');
+    const exercise = test.exercises.find((candidate) => candidate.id === 'ff-a1-t08-e04')!;
+    exercise.explanation = 'Use the supplied stem luke-.';
+
+    expect(validatePack(pack)).toContain(
+      `${exercise.id}: feedback says a stem was supplied when the prompt does not show it`,
+    );
+  });
+
+  it('requires natural present, progressive and future translations for arriving today', () => {
+    const pack = structuredClone(installedPack);
+    const test = pack.tests.find((candidate) => candidate.id === 'kpt-verbs');
+    if (!test) throw new Error('The installed fixture is missing the KPT verb test.');
+    const exercise = test.exercises.find((candidate) => candidate.id === 'ff-a1-t08-e12')!;
+    exercise.acceptedAnswers = exercise.acceptedAnswers.filter(
+      (answer) => answer !== 'I will arrive today',
+    );
+
+    expect(validatePack(pack)).toContain(
+      'ff-a1-t08-e12: accept common present, progressive and future English translations',
+    );
+  });
+
   it('rejects restoring a second review or dropping the single review', () => {
     const pack = structuredClone(installedPack);
     const review = pack.tests.at(-1)!;

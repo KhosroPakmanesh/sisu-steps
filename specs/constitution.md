@@ -33,7 +33,7 @@ Create a calm, local-first interactive exercise book that helps one English-spea
 - Each exercise has a stable ID, prompt, answer definition, explanation, and tags.
 - Reusable lessons have stable IDs and versions and teach from first principles. Focused tests reference only lessons for their own target skill; review tests may reuse earlier lessons without duplicating their content.
 - Lesson practice is authored separately from scored test exercises and never changes attempts, reports, or mistake status.
-- Each sentence exercise explains the complete meaning, sentence pattern, and every displayed part, including its English meaning, grammatical job, base form, endings, and relevant sound or stem changes.
+- Each sentence exercise explains the complete meaning, sentence pattern, and every displayed part, including its English meaning, grammatical job, base form, endings, and relevant sound or stem changes. A prompt that asks the learner to construct or complete a Finnish sentence displays the complete intended English meaning before submission; Finnish-to-English translation is exempt because supplying that meaning is the assessed task.
 - Explanations introduce grammar terms in plain English before using them and do not rely on unstated prerequisite knowledge.
 - Every lesson and test is labelled as focused or review. Focused material has one target skill, declares any previously taught prerequisites, and does not repeat prerequisite lessons on its preparation page. Reviews are the only material that may combine multiple previously introduced skills.
 - Scored vocabulary is introduced in the current or a referenced prerequisite lesson. Any unfamiliar contextual word is translated where it appears and is never an unannounced grading requirement.

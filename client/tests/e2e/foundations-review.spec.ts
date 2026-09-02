@@ -84,7 +84,7 @@ for (const appearance of ['Day', 'Night']) {
   });
 }
 
-test('resets version 5.1 progress, including the retired review, on the version 6 update', async ({
+test('resets version 6.0 progress when the KPT verb sentences update to version 6.1', async ({
   page,
 }) => {
   await page.goto(`/topics/${topic}`);
@@ -92,8 +92,8 @@ test('resets version 5.1 progress, including the retired review, on the version 
   const when = '2026-08-30T12:00:00.000Z';
   const old: LearnerState = {
     schemaVersion: 1,
-    contentPackVersions: { [topic]: '5.1.0' },
-    attempts: ['guided-review', 'foundations-review', 'vowel-families'].map((testId) => ({
+    contentPackVersions: { [topic]: '6.0.0' },
+    attempts: ['kpt-verbs', 'foundations-review', 'vowel-families'].map((testId) => ({
       id: `old-attempt-${testId}`,
       mode: 'test',
       topicId: topic,
@@ -106,7 +106,7 @@ test('resets version 5.1 progress, including the retired review, on the version 
       total: 0,
       percentage: 0,
     })),
-    sessions: ['guided-review', 'foundations-review'].map((testId) => ({
+    sessions: ['kpt-verbs', 'foundations-review'].map((testId) => ({
       id: `old-session-${testId}`,
       mode: 'test',
       topicId: topic,
@@ -115,27 +115,27 @@ test('resets version 5.1 progress, including the retired review, on the version 
       startedAt: when,
       updatedAt: when,
       answers: [],
-      exerciseIds: ['ff-a1-t13-e12', 'ff-a1-t13-e04'],
+      exerciseIds: ['ff-a1-t08-e15', 'ff-a1-t14-e02'],
       currentIndex: 0,
     })),
-    unresolvedMistakeIds: ['ff-a1-t13-e12', 'ff-a1-t13-e04'],
+    unresolvedMistakeIds: ['ff-a1-t08-e15', 'ff-a1-t14-e02'],
     lessonCompletions: [
       { lessonId: 'vowel-harmony-basics', lessonVersion: '5.1.0', completedAt: when },
     ],
     correctionRecords: [
       {
-        exerciseId: 'ff-a1-t13-e12',
-        parallelExerciseId: 'ff-a1-t13-e13',
-        targetSkill: 'KPT recognition',
+        exerciseId: 'ff-a1-t08-e15',
+        parallelExerciseId: 'ff-a1-t14-e01',
+        targetSkill: 'Minä verb forms with KPT',
         correctedAt: when,
         nextReviewAt: when,
         reviewStage: 1,
         reviewAttempts: 1,
       },
       {
-        exerciseId: 'ff-a1-t13-e04',
-        parallelExerciseId: 'ff-a1-t13-e05',
-        targetSkill: 'KPT double consonants',
+        exerciseId: 'ff-a1-t14-e02',
+        parallelExerciseId: 'ff-a1-t14-e03',
+        targetSkill: 'Minä verb forms with KPT',
         correctedAt: when,
         nextReviewAt: when,
         reviewStage: 1,
@@ -150,7 +150,7 @@ test('resets version 5.1 progress, including the retired review, on the version 
   await expect(page.locator('.topic-overview')).toContainText('0/13');
   expect(await learnerState(page)).toEqual({
     schemaVersion: 1,
-    contentPackVersions: { [topic]: '6.0.0' },
+    contentPackVersions: { [topic]: '6.1.0' },
     attempts: [],
     sessions: [],
     unresolvedMistakeIds: [],

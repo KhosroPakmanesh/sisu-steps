@@ -134,6 +134,7 @@
 - Given an invalid backup, when import is attempted, then existing records remain unchanged and the learner sees an error.
 - Given confirmed topic-history clearing, when clearing completes, then that topic's learner records are removed while its bundled tests remain available.
 - Given a sentence exercise, when feedback appears, then the learner can see the full translation, the sentence pattern, and a part-by-part explanation covering meaning, role, base form, and formation without needing prior grammar knowledge.
+- Given a Finnish sentence construction or completion exercise, when the prompt appears, then the complete intended English meaning is visible before the learner responds; Finnish-to-English translation exercises continue to assess that meaning instead of revealing it.
 - Given an unanswered exercise, when the learner activates **Show answer**, then the correct answer and explanation appear and the exercise is recorded as skipped; pressing `Alt+A` shall not reveal the answer or change learner progress.
 - Given an ordinary exercise that is skipped, when learner progress is saved, then the exercise is not added to mistake practice.
 - Given an unresolved mistake that is skipped during mistake practice, when learner progress is saved, then the mistake remains unresolved.
@@ -187,3 +188,9 @@
 - **REQ-G001-110:** Installing pack version `6.0.0` shall use the existing per-pack version reset under `REQ-G001-061` and `REQ-G001-078`, without migrating the former review attempts or sessions. The learner explicitly approved losing this pack's progress on 2026-08-31. Other packs remain untouched and still-owned notes retain the existing policy under `REQ-G001-106`.
 
 Acceptance: the topic shows fourteen tests, with one 33-question review; its single preparation route exposes thirteen lessons; the complete pack retains 200 scored exercises and 44 unscored practice items; every review skill was taught and assessed earlier; save/resume, scoring, reports and delayed mastery continue through the existing workflows.
+
+## Complete sentence-construction prompts
+
+- **REQ-G001-111:** Every exercise that asks the learner to construct or complete a Finnish sentence shall display the complete intended English meaning in its prompt before submission. Finnish-to-English translation exercises are exempt because producing that English meaning is the assessed task.
+
+Acceptance: given a Finnish sentence construction or completion exercise, when the prompt appears, then its complete intended English meaning is visible before the learner responds; given a Finnish-to-English translation exercise, the learner is still asked to supply that meaning.

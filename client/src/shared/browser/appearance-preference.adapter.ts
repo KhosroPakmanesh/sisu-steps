@@ -12,7 +12,9 @@ export function isAppearancePreference(value: string): value is AppearancePrefer
 export class AppearancePreferenceAdapter {
   read(): AppearancePreference {
     try {
-      const saved = globalThis.localStorage?.getItem(appearancePreferenceStorageKey);
+      const saved = globalThis.document?.defaultView?.localStorage.getItem(
+        appearancePreferenceStorageKey,
+      );
       return saved && isAppearancePreference(saved) ? saved : 'automatic';
     } catch {
       return 'automatic';
@@ -36,9 +38,12 @@ export class AppearancePreferenceAdapter {
   save(preference: AppearancePreference): void {
     try {
       if (preference === 'automatic') {
-        globalThis.localStorage?.removeItem(appearancePreferenceStorageKey);
+        globalThis.document?.defaultView?.localStorage.removeItem(appearancePreferenceStorageKey);
       } else {
-        globalThis.localStorage?.setItem(appearancePreferenceStorageKey, preference);
+        globalThis.document?.defaultView?.localStorage.setItem(
+          appearancePreferenceStorageKey,
+          preference,
+        );
       }
     } catch {
       // Appearance remains usable for this visit when browser storage is unavailable.

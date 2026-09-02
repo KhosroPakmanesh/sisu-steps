@@ -3,6 +3,16 @@ const KPT_LESSON_IDS = [...KPT_PRODUCTION_LESSON_IDS, 'kpt-basics'];
 const KPT_PRODUCTION_TEST_IDS = new Set(
   KPT_PRODUCTION_LESSON_IDS.map((lessonId) => `test-${lessonId}`),
 );
+const VERB_KPT_SKILL = 'Minä verb forms with KPT';
+const RETIRED_OBJECT_DEPENDENT_VERBS = new Set(['ottaa', 'hakea', 'antaa', 'kertoa', 'pukea']);
+const VERB_KPT_REVIEW_BRIDGE = new Set(['ff-a1-t14-e02', 'ff-a1-t14-e03']);
+const ARRIVAL_TRANSLATIONS = [
+  'I am arriving today',
+  "I'm arriving today",
+  'I arrive today',
+  'I will arrive today',
+  "I'll arrive today",
+];
 
 export function validatePack(pack) {
   const errors = [];
@@ -51,7 +61,76 @@ export function validatePack(pack) {
     if (!parts[2]?.formation?.includes('supplied as a complete fixed word'))
       errors.push(`${exercise.id}: plural-sentence context must be supplied as a fixed word`);
   }
-  return [...errors, ...validateFoundationsReview(pack)];
+  return [...errors, ...validateVerbKptSentences(pack), ...validateFoundationsReview(pack)];
+}
+
+function validateVerbKptSentences(pack) {
+  const errors = [];
+  const lesson = pack.lessons.find((candidate) => candidate.id === 'verb-kpt');
+  const focusedTest = pack.tests.find((candidate) => candidate.id === 'kpt-verbs');
+  const reviewExercises = pack.tests
+    .filter((test) => test.stage === 'review')
+    .flatMap((test) => test.exercises)
+    .filter((exercise) => exercise.targetSkill === VERB_KPT_SKILL);
+  if (!lesson) errors.push('verb-kpt: required KPT verb lesson is missing');
+  else if (lesson.practiceExercises.length !== 5)
+    errors.push('verb-kpt: complete-sentence lesson needs exactly five practice exercises');
+  if (!focusedTest) errors.push('kpt-verbs: required KPT verb test is missing');
+  const exercises = [
+    ...(lesson?.practiceExercises ?? []),
+    ...(focusedTest?.exercises ?? []),
+    ...reviewExercises,
+  ];
+  for (const exercise of exercises) {
+    if (!exercise.tags?.includes('sentence'))
+      errors.push(`${exercise.id}: KPT verb work must use a complete sentence`);
+    const parts = exercise.sentenceExplanation?.parts;
+    if (!Array.isArray(parts) || parts.length !== 3)
+      errors.push(`${exercise.id}: KPT verb sentence must explain exactly three supplied parts`);
+    else {
+      if (parts[0].finnish !== 'Minä')
+        errors.push(`${exercise.id}: KPT verb sentence must begin with supplied Minä`);
+      if (!parts[2].formation.includes('supplied as a complete fixed word'))
+        errors.push(`${exercise.id}: KPT verb context must be supplied as a complete fixed word`);
+    }
+    for (const word of exercise.vocabulary ?? [])
+      if (RETIRED_OBJECT_DEPENDENT_VERBS.has(word))
+        errors.push(`${exercise.id}: object-dependent verb ${word} does not fit this focused set`);
+    const feedbackText = [
+      exercise.explanation,
+      ...(exercise.sentenceExplanation?.parts ?? []).map((part) => part.formation),
+      ...Object.values(exercise.optionFeedback ?? {}),
+      ...(exercise.answerDiagnostics ?? []).map((diagnostic) => diagnostic.explanation),
+    ].join(' ');
+    if (/supplied stem/i.test(feedbackText) && !/supplied stem/i.test(exercise.prompt ?? ''))
+      errors.push(
+        `${exercise.id}: feedback says a stem was supplied when the prompt does not show it`,
+      );
+  }
+  const scoredExercises = [...(focusedTest?.exercises ?? []), ...reviewExercises];
+  const scoredById = new Map(scoredExercises.map((exercise) => [exercise.id, exercise]));
+  for (const exercise of scoredExercises) {
+    const partner = scoredById.get(exercise.parallelExerciseId);
+    if (!partner) {
+      errors.push(`${exercise.id}: KPT verb mastery partner is missing from the scored verb set`);
+      continue;
+    }
+    const isReviewBridge =
+      VERB_KPT_REVIEW_BRIDGE.has(exercise.id) && VERB_KPT_REVIEW_BRIDGE.has(partner.id);
+    if (exercise.type !== partner.type && !isReviewBridge)
+      errors.push(
+        `${exercise.id}: KPT verb mastery partner ${partner.id} must use a comparable response format`,
+      );
+  }
+  const arrivalExercise = scoredById.get('ff-a1-t08-e12');
+  if (
+    !arrivalExercise ||
+    ARRIVAL_TRANSLATIONS.some((answer) => !arrivalExercise.acceptedAnswers.includes(answer))
+  )
+    errors.push(
+      'ff-a1-t08-e12: accept common present, progressive and future English translations',
+    );
+  return errors;
 }
 
 function validateFoundationsReview(pack) {

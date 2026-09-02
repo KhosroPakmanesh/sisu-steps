@@ -6,7 +6,7 @@ import { appearancePreferenceStorageKey } from '@/shared/browser/appearance-pref
 
 describe('AppShell', () => {
   afterEach(() => {
-    localStorage.removeItem(appearancePreferenceStorageKey);
+    window.localStorage.removeItem(appearancePreferenceStorageKey);
     document.documentElement.removeAttribute('data-appearance');
   });
 
@@ -84,7 +84,7 @@ describe('AppShell', () => {
     fixture.detectChanges();
 
     expect(document.documentElement.dataset['appearance']).toBe('dark');
-    expect(localStorage.getItem(appearancePreferenceStorageKey)).toBe('dark');
+    expect(window.localStorage.getItem(appearancePreferenceStorageKey)).toBe('dark');
     expect(nightChoice.checked).toBe(true);
     expect(fixture.nativeElement.querySelector('.appearance-switch')?.classList).toContain(
       'night-selected',

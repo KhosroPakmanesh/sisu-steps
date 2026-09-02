@@ -1,5 +1,68 @@
 # Finnish foundations A1 — pedagogy assessment
 
+## Version 6.1.0 complete sentence prompts
+
+### Pre-authoring assessment — 2026-09-01
+
+**Disposition: approved with limitations.** This is an AI-led content assessment, not a claim of independent professional review.
+
+The learner identified that the KPT-verb material used fragments such as `minä nukun` and isolated forms such as `otan`, which were too short to demonstrate natural verb use. The approved revision keeps the target at Pre-A1–A1.3 written grammar and changes the `verb-kpt` lesson, its fifteen-question Focused test, and its three questions in the cumulative Review to short, complete sentences of the pattern `Minä + KPT verb + fixed context word`.
+
+The blueprint retains **13 Focused tests, 1 Review, 13 lessons, 33 review questions and 200 scored questions overall**. The KPT-verb lesson increases from three to five optional practice questions, bringing the pack to **46 optional practice questions**. Stable lesson, test, practice and scored-exercise IDs remain unchanged. Because prompts, accepted answers and mastery surfaces change materially, the pack and `verb-kpt` lesson advance to **6.1.0** and use the existing pack-scoped progress reset.
+
+Findings and resolutions:
+
+- Complete sentences must not introduce object-case grammar. Remove the object-dependent tasks built around `ottaa`, `hakea`, `antaa`, `kertoa` and `pukea`; reuse familiar intransitive or absolute verb uses with fixed time, place or manner words.
+- The old gloss `pukea = to get dressed` is inaccurate. `pukea` means “to dress” or “to put clothes on”, while reflexive `pukeutua` means “to dress oneself”. Remove it rather than adding a new reflexive verb and KPT pattern.
+- Keep one assessed decision. Every production prompt supplies `minä`, the strong stem, the `-n` person ending and a translated context word; only the weak KPT verb form must be produced.
+- Every sentence item must explain the complete translation, subject–verb–context pattern and all three parts, including the verb’s base form and KPT formation and the fixed status of the context word.
+- Keep lexical load within ten introduced entries: four new A1 verbs (`odottaa`, `saapua`, `oppia`, `piirtää`) and six reusable fixed context words (`nyt`, `tänään`, `täällä`, `hyvin`, `pian`, `nopeasti`). Reuse previously taught `nukkua`, `lentää`, `ymmärtää` and `lukea`.
+
+No unresolved high-impact scope, prerequisite, vocabulary or sequencing finding remains. The revision remains controlled written grammar practice: it does not assess free composition, object government, listening, speaking, pronunciation, dialect variation, interaction or general CEFR proficiency.
+
+Sources checked on 2026-09-01:
+
+- [Uusi kielemme: Verbtype 1 conjugation](https://uusikielemme.fi/finnish-grammar/verbs/verbtypes/verbtype-1-conjugation-all-tenses-and-moods) — present-tense minä formation and the relevant KPT forms.
+- [Uusi kielemme: First 100 Finnish verbs](https://uusikielemme.fi/finnish-vocabulary/vocabulary-lists/your-first-100-finnish-verbs-finnish-for-beginners) — beginner suitability and first-person forms including `odotan`, `ymmärrän`, `opin` and `nukun`.
+- [Uusi kielemme: Expressing the future in Finnish](https://uusikielemme.fi/finnish-grammar/verbs/verb-tenses-and-moods/the-future-tense-in-finnish-expressing-intent) — use of the Finnish present tense for future events when a time expression makes the timing clear.
+- [Uusi kielemme: Reflexive verbs](https://uusikielemme.fi/finnish-grammar/verbs/types-of-verbs/reflexive-verbs-utu-yty-peseytya-ilmoittautua) — the distinction between `pukea` and reflexive `pukeutua`.
+
+### Supplemental pre-authoring assessment — 2026-09-02
+
+**Disposition: approved with limitations.** This is an AI-led content assessment, not a claim of independent professional review.
+
+A complete inventory of the pack's **62 sentence-tagged scored and lesson-practice exercises** found 21 Finnish-construction prompts that reveal their complete English meaning only after the learner answers. Fourteen are in the `plural-sentences` lesson and its Focused test; seven are KPT-verb fill-in tasks in the lesson, Focused test and cumulative Review. The plural prompts sometimes show only Finnish tokens, a base word or the gloss “are”. The KPT prompts translate each separate component but still require the learner to infer the intended complete English sentence and, in some cases, its simple-versus-progressive interpretation.
+
+The approved correction will place the already-authored `sentenceExplanation.translation` meaning directly in each affected prompt. It will not change Finnish, accepted answers, exercise types, vocabulary, skills, diagnostics, ordering, mastery pairs or question counts. Finnish-to-English exercises remain unchanged because discovering the English meaning is their assessed task; Finnish-construction prompts that already state a complete target meaning also remain unchanged. The pack stays within the existing Pre-A1–A1.3 written-grammar boundary and introduces no new lexical or grammatical decision.
+
+Because these learner-facing prompts are being corrected before the pending 6.1.0 revision is released, the pack remains at **6.1.0**. The materially changed `plural-sentences` lesson advances from 5.1.0 to **6.1.0** alongside the already revised `verb-kpt` lesson. The normal pack-scoped 6.0.0-to-6.1.0 reset already recorded for this pending release covers changed scored prompts; stable exercise IDs continue to identify the same grammatical tasks.
+
+No high-impact scope, prerequisite, vocabulary, answer-model or sequencing issue remains before authoring. Continuing limitations are unchanged: these prompts support controlled written construction and comprehension but do not assess listening, speaking, pronunciation, dialect, interaction or free composition.
+
+### Final pedagogy assessment
+
+**Disposition: approved with limitations.** This is an AI-led content assessment, not a claim of independent Finnish-teaching-professional review.
+
+The rendered content now uses short, complete A1 sentences in all **15 KPT-verb Focused questions, 3 KPT-verb Review questions and 5 optional lesson-practice questions**. Every sentence follows the controlled pattern `Minä + KPT verb + fixed context word`. The learner sees a complete English meaning and, after answering, a three-part explanation of the subject, verb and time/place/manner word. The verb note names its dictionary form, stem, KPT change and `-n` ending; it calls a stem “supplied” only when the prompt actually displays that stem. The context note states that the translated word is supplied unchanged.
+
+The supplemental prompt audit examined all **62 sentence-tagged exercises**: 53 ask the learner to construct or complete Finnish, and 9 assess Finnish-to-English translation. Every one of the 53 Finnish-construction prompts now displays its complete intended English meaning before response. This corrects the 21 omissions in plural-sentence and KPT-verb material without changing Finnish, accepted answers, exercise types, vocabulary, skills, diagnostics, authored order or mastery pairs. The nine Finnish-to-English prompts intentionally remain Finnish-only because supplying the English meaning is their assessed task. The `plural-sentences` lesson advances to **6.1.0** within the already pending 6.1.0 pack reset.
+
+The sentence inventory was reviewed item by item. `Minä nukun hyvin`, `Minä lennän tänään`, `Minä odotan täällä`, `Minä luen nyt`, `Minä saavun pian`, `Minä ymmärrän nyt`, `Minä opin nopeasti` and `Minä piirrän hyvin` are grammatical, short and suitable for the controlled beginner purpose. Present-tense English translations use natural simple, progressive or contextual future wording. For example, `Minä saavun tänään` accepts “I am arriving today”, “I arrive today” and “I will arrive today”, including common contractions; `Minä nukun täällä` accepts both “I sleep here” and “I am sleeping here”.
+
+No sentence requires an object or object-case choice. The former `ottaa`, `hakea`, `antaa`, `kertoa` and `pukea` tasks are absent from the KPT-verb set, and the inaccurate `pukea = to get dressed` gloss is removed. The replacement vocabulary stays at the focused ceiling of ten introduced entries and reuses four verbs taught by prerequisite KPT lessons. Multiple-choice distractors isolate a retained strong grade or unchanged dictionary form. Scored Finnish production supplies the strong stem, `minä`, `-n` and translated context, leaving only the weak KPT verb form as the assessed decision; optional lesson practice may instead teach how to identify the stem from the displayed dictionary form.
+
+The pack retains **13 Focused tests, 1 Review, 13 lessons, 33 review questions and 200 scored questions overall**. It now contains **46 optional practice questions and 54 scored sentence exercises**. All stable IDs and authored order remain intact, while mutual mastery links are remapped so each KPT-verb pair has the same response format, apart from the deliberate two-item controlled-production bridge in the Review. Accepted-answer surfaces change under pack and lesson version **6.1.0**. Pack-specific validation now rejects incomplete KPT-verb contexts, a practice count other than five, regression to the removed object-dependent verbs, mismatched mastery response formats, feedback that falsely claims a stem was supplied and loss of the natural arrival translations. Universal runtime and standalone validation additionally reject a sentence-construction prompt that omits its complete authored English meaning while preserving the Finnish-to-English exemption.
+
+Technical evidence:
+
+- `npm run content:validate` passed direct-source assembly, global IDs, universal rules and pack-specific pedagogy checks with the counts above.
+- The focused pack-specific content-validator suite passed **11/11 tests**, including negative regression cases for mastery response formats, misleading stem feedback and natural arrival translations.
+- The complete client gate passed ESLint, Stylelint, module size, source reachability, architecture, repository formatting, production and test typechecks, content validation and the production build.
+- The repository's standard unit command exited successfully with **121/121 tests**, including negative coverage for an omitted construction meaning and positive coverage for the Finnish-to-English exemption. Vitest receives isolated in-memory browser storage, so Node 26 needs no `NODE_OPTIONS` workaround.
+- The targeted Playwright command exited successfully with **9/9 cases** across mobile, tablet and wide Chromium in Day and Night, including all 33 review questions and the 6.0.0-to-6.1.0 pack reset. The production build is served and closed within Playwright's lifecycle, avoiding the former Windows development-server shutdown hang.
+
+No high-impact content issue remains unresolved. The pack is approved for deterministic Pre-A1–A1.3 written grammar practice with the continuing limitations that it does not assess free composition, object government, listening, speaking, pronunciation, dialect variation, interaction or general communicative ability. Difficulty and naturalness remain authored judgments rather than empirical calibration, and independent review by a qualified Finnish teacher or native speaker remains recommended.
+
 ## Version 6.0.0 single cumulative review
 
 ### Pre-authoring assessment — 2026-08-31

@@ -17,6 +17,7 @@
     "test:typecheck": "tsc -p tsconfig.spec.json --noEmit --pretty false",
     "test": "ng test --no-watch --no-progress",
     "test:watch": "ng test",
+    "pretest:e2e": "npm run build",
     "test:e2e": "playwright test",
     "content:validate": "node tools/validate-all-content.mjs",
     "check": "npm run lint && npm run lint:css && npm run lint:modules && npm run lint:dead-code && npm run lint:architecture && npm run format:check && npm run typecheck && npm run test:typecheck && npm run content:validate && npm run build && npm run test"

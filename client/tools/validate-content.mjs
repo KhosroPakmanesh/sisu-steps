@@ -30,6 +30,13 @@ const scoredFingerprints = new Set(exercises.map(exerciseFingerprint));
 const errors = [];
 const hasTextArray = (value) =>
   Array.isArray(value) && value.every((item) => typeof item === 'string' && item.trim());
+const promptContainsMeaning = (prompt, meaning) => {
+  const normalizedMeaning = meaning
+    .trim()
+    .replace(/[.!?]+$/u, '')
+    .toLocaleLowerCase('en');
+  return prompt.toLocaleLowerCase('en').includes(normalizedMeaning);
+};
 const checkFocus = (item, label) => {
   if (!allowedStages.has(item.stage)) errors.push(`${label}: invalid learning stage`);
   if (!hasTextArray(item.targetSkills) || item.targetSkills.length === 0)
@@ -289,6 +296,12 @@ for (const exercise of allExercises) {
     const lesson = exercise.sentenceExplanation;
     if (!lesson?.translation?.trim())
       errors.push(`${exercise.id}: missing complete sentence translation`);
+    if (
+      exercise.type !== 'translation-en' &&
+      lesson?.translation?.trim() &&
+      !promptContainsMeaning(exercise.prompt, lesson.translation)
+    )
+      errors.push(`${exercise.id}: sentence construction prompt omits complete English meaning`);
     if (!lesson?.pattern?.trim()) errors.push(`${exercise.id}: missing sentence pattern`);
     if (!Array.isArray(lesson?.parts) || lesson.parts.length < 2)
       errors.push(`${exercise.id}: needs at least two explained sentence parts`);

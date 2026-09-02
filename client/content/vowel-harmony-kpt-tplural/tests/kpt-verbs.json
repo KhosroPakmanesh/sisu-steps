@@ -1,7 +1,7 @@
 {
   "id": "kpt-verbs",
   "title": "KPT in verbs",
-  "focus": "Use familiar strong-to-weak KPT changes in common minä forms; no strengthening patterns are included.",
+  "focus": "Use familiar strong-to-weak KPT changes in short, complete A1 minä sentences; every non-target sentence part is supplied.",
   "lessonIds": ["verb-kpt"],
   "stage": "focused",
   "targetSkills": ["Minä verb forms with KPT"],
@@ -10,236 +10,647 @@
     {
       "id": "ff-a1-t08-e01",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "nukkua (“to sleep”) → minä ____ (“I sleep”) · add minä -n",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I sleep well.” Minä ____ hyvin. Use nukkua (“to sleep”), supplied stem nukku-, and the minä ending -n; hyvin means “well”.",
       "acceptedAnswers": ["nukun"],
-      "explanation": "nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
-      "tags": ["kpt", "verb"],
+      "explanation": "Minä nukun hyvin means “I sleep well”. Change kk to k in the supplied stem nukku- to make nuku-, then add the minä ending -n: nukun. Minä and hyvin stay unchanged.",
+      "tags": ["kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["nukkua"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e02"
-    },
-    {
-      "id": "ff-a1-t08-e02",
-      "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "I take — use the supplied dictionary form ottaa (“to take”)",
-      "acceptedAnswers": ["otan"],
-      "explanation": "ottaa means “to take”; otan means “I take”. This is the minä-form of ottaa. Add the minä ending -n after forming the stem. tt weakens to t.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["ottaa"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e01"
-    },
-    {
-      "id": "ff-a1-t08-e03",
-      "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "Choose the form meaning “I help” from auttaa (“to help”).",
-      "acceptedAnswers": ["autan"],
-      "explanation": "auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["auttaa"],
-      "options": ["autan", "auttan", "auttaa"],
-      "optionFeedback": {
-        "autan": "Correct. auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
-        "auttan": "“auttan” does not show the required pattern. auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
-        "auttaa": "“auttaa” does not show the required pattern. auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t."
+      "vocabulary": ["nukkua", "hyvin"],
+      "sentenceExplanation": {
+        "translation": "I sleep well.",
+        "pattern": "Subject (who) + verb (action or state) + manner word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who sleeps.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "nukun",
+            "meaning": "sleep",
+            "role": "Verb — tells what I do.",
+            "baseForm": "nukkua",
+            "formation": "Use the supplied stem nukku-. Change kk to k to make nuku-, then add the minä ending -n: nukun."
+          },
+          {
+            "finnish": "hyvin",
+            "meaning": "well",
+            "role": "Manner word — tells how I sleep.",
+            "baseForm": "hyvin",
+            "formation": "hyvin is supplied as a complete fixed word meaning “well”. No ending rule is being tested."
+          }
+        ]
       },
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e04"
-    },
-    {
-      "id": "ff-a1-t08-e04",
-      "type": "translation-en",
-      "instruction": "Translate into English.",
-      "prompt": "luen",
-      "acceptedAnswers": ["I read"],
-      "explanation": "lukea means “to read”; luen means “I read”. This is the minä-form of lukea. Add the minä ending -n after forming the stem. k disappears.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["lukea"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e03"
-    },
-    {
-      "id": "ff-a1-t08-e05",
-      "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "pukea (“to get dressed”) → minä ____ (“I get dressed”) · add minä -n",
-      "acceptedAnswers": ["puen"],
-      "explanation": "pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["pukea"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e06"
-    },
-    {
-      "id": "ff-a1-t08-e06",
-      "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "I fetch — use the supplied dictionary form hakea (“to fetch”)",
-      "acceptedAnswers": ["haen"],
-      "explanation": "hakea means “to fetch”; haen means “I fetch”. This is the minä-form of hakea. Add the minä ending -n after forming the stem. k disappears.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["hakea"],
       "targetSkill": "Minä verb forms with KPT",
       "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
       "parallelExerciseId": "ff-a1-t08-e05"
     },
     {
-      "id": "ff-a1-t08-e07",
-      "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "Choose the form meaning “I give” from antaa (“to give”).",
-      "acceptedAnswers": ["annan"],
-      "explanation": "antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
-      "tags": ["kpt", "verb"],
+      "id": "ff-a1-t08-e02",
+      "type": "translation-fi",
+      "instruction": "Write the complete Finnish sentence.",
+      "prompt": "I am flying today. Use lentää (“to fly”), supplied stem lentä-, the minä ending -n, and the supplied words minä (“I”) and tänään (“today”).",
+      "acceptedAnswers": ["Minä lennän tänään"],
+      "explanation": "Minä lennän tänään means “I am flying today”. Change nt to nn in the supplied stem lentä- to make lennä-, then add the minä ending -n: lennän. Minä and tänään stay unchanged.",
+      "tags": ["kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["antaa"],
-      "options": ["annan", "antan", "antaa"],
+      "vocabulary": ["lentää", "tänään"],
+      "sentenceExplanation": {
+        "translation": "I am flying today.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is flying.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "lennän",
+            "meaning": "am flying",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "lentää",
+            "formation": "Use the supplied stem lentä-. Change nt to nn to make lennä-, then add the minä ending -n: lennän."
+          },
+          {
+            "finnish": "tänään",
+            "meaning": "today",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "tänään",
+            "formation": "tänään is supplied as a complete fixed word meaning “today”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e06"
+    },
+    {
+      "id": "ff-a1-t08-e03",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete Finnish sentence.",
+      "prompt": "Choose “I am waiting here.” Use odottaa (“to wait”), supplied stem odotta-, and täällä (“here”).",
+      "acceptedAnswers": ["Minä odotan täällä."],
+      "explanation": "Minä odotan täällä means “I am waiting here”. Change tt to t in the supplied stem odotta- to make odota-, then add the minä ending -n: odotan.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["odottaa", "täällä"],
+      "options": ["Minä odotan täällä.", "Minä odottan täällä.", "Minä odottaa täällä."],
       "optionFeedback": {
-        "annan": "Correct. antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
-        "antan": "“antan” does not show the required pattern. antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn.",
-        "antaa": "“antaa” does not show the required pattern. antaa means “to give”; annan means “I give”. This is the minä-form of antaa. Add the minä ending -n after forming the stem. nt weakens to nn."
+        "Minä odotan täällä.": "Correct. Change tt to t in odotta- to make odota-, then add -n: odotan.",
+        "Minä odottan täällä.": "“Odottan” keeps the strong tt. Change tt to t before the minä ending: odota- + n = odotan.",
+        "Minä odottaa täällä.": "Odottaa is the dictionary form “to wait”. The sentence needs the minä form odota- + n = odotan."
+      },
+      "sentenceExplanation": {
+        "translation": "I am waiting here.",
+        "pattern": "Subject (who) + verb (action or state) + place word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is waiting.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "odotan",
+            "meaning": "am waiting",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "odottaa",
+            "formation": "Use the supplied stem odotta-. Change tt to t to make odota-, then add the minä ending -n: odotan."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place word — tells where the action happens.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word meaning “here”. No place-ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e07"
+    },
+    {
+      "id": "ff-a1-t08-e04",
+      "type": "translation-en",
+      "instruction": "Translate the complete sentence into English.",
+      "prompt": "Minä luen nyt.",
+      "acceptedAnswers": ["I am reading now"],
+      "explanation": "Minä luen nyt means “I am reading now”. The dictionary form is lukea. Its stem is luke-. The k disappears to make lue-, then the minä ending -n makes luen.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["lukea", "nyt"],
+      "sentenceExplanation": {
+        "translation": "I am reading now.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is reading.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "luen",
+            "meaning": "am reading",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "lukea",
+            "formation": "Start with the stem luke-. The k disappears to make lue-, then add the minä ending -n: luen."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word meaning “now”. No ending rule is being tested."
+          }
+        ]
       },
       "targetSkill": "Minä verb forms with KPT",
       "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
       "parallelExerciseId": "ff-a1-t08-e08"
     },
     {
-      "id": "ff-a1-t08-e08",
-      "type": "translation-en",
-      "instruction": "Translate into English.",
-      "prompt": "lennän",
-      "acceptedAnswers": ["I fly"],
-      "explanation": "lentää means “to fly”; lennän means “I fly”. This is the minä-form of lentää. Add the minä ending -n after forming the stem. nt weakens to nn.",
-      "tags": ["kpt", "verb"],
+      "id": "ff-a1-t08-e05",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I am arriving soon.” Minä ____ pian. Use saapua (“to arrive”), supplied stem saapu-, and the minä ending -n; pian means “soon”.",
+      "acceptedAnswers": ["saavun"],
+      "explanation": "Minä saavun pian means “I am arriving soon”. Change p to v in the supplied stem saapu- to make saavu-, then add the minä ending -n: saavun.",
+      "tags": ["kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["lentää"],
+      "vocabulary": ["saapua", "pian"],
+      "sentenceExplanation": {
+        "translation": "I am arriving soon.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is arriving.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "saavun",
+            "meaning": "am arriving",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "saapua",
+            "formation": "Use the supplied stem saapu-. Change p to v to make saavu-, then add the minä ending -n: saavun."
+          },
+          {
+            "finnish": "pian",
+            "meaning": "soon",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "pian",
+            "formation": "pian is supplied as a complete fixed word meaning “soon”. No ending rule is being tested."
+          }
+        ]
+      },
       "targetSkill": "Minä verb forms with KPT",
       "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e07"
+      "parallelExerciseId": "ff-a1-t08-e01"
+    },
+    {
+      "id": "ff-a1-t08-e06",
+      "type": "translation-fi",
+      "instruction": "Write the complete Finnish sentence.",
+      "prompt": "I understand now. Use ymmärtää (“to understand”), supplied stem ymmärtä-, the minä ending -n, and the supplied words minä (“I”) and nyt (“now”).",
+      "acceptedAnswers": ["Minä ymmärrän nyt"],
+      "explanation": "Minä ymmärrän nyt means “I understand now”. Change rt to rr in the supplied stem ymmärtä- to make ymmärrä-, then add the minä ending -n: ymmärrän.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["ymmärtää", "nyt"],
+      "sentenceExplanation": {
+        "translation": "I understand now.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who understands.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "ymmärrän",
+            "meaning": "understand",
+            "role": "Verb — tells my state of understanding.",
+            "baseForm": "ymmärtää",
+            "formation": "Use the supplied stem ymmärtä-. Change rt to rr to make ymmärrä-, then add the minä ending -n: ymmärrän."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Time word — tells when the state is true.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word meaning “now”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e02"
+    },
+    {
+      "id": "ff-a1-t08-e07",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete Finnish sentence.",
+      "prompt": "Choose “I learn quickly.” Use oppia (“to learn”), supplied stem oppi-, and nopeasti (“quickly”).",
+      "acceptedAnswers": ["Minä opin nopeasti."],
+      "explanation": "Minä opin nopeasti means “I learn quickly”. Change pp to p in the supplied stem oppi- to make opi-, then add the minä ending -n: opin.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["oppia", "nopeasti"],
+      "options": ["Minä opin nopeasti.", "Minä oppin nopeasti.", "Minä oppia nopeasti."],
+      "optionFeedback": {
+        "Minä opin nopeasti.": "Correct. Change pp to p in oppi- to make opi-, then add -n: opin.",
+        "Minä oppin nopeasti.": "“Oppin” keeps the strong pp. Change pp to p before the minä ending: opi- + n = opin.",
+        "Minä oppia nopeasti.": "Oppia is the dictionary form “to learn”. The sentence needs the minä form opi- + n = opin."
+      },
+      "sentenceExplanation": {
+        "translation": "I learn quickly.",
+        "pattern": "Subject (who) + verb (action or state) + manner word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is learning.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "opin",
+            "meaning": "learn",
+            "role": "Verb — tells what I do.",
+            "baseForm": "oppia",
+            "formation": "Use the supplied stem oppi-. Change pp to p to make opi-, then add the minä ending -n: opin."
+          },
+          {
+            "finnish": "nopeasti",
+            "meaning": "quickly",
+            "role": "Manner word — tells how I learn.",
+            "baseForm": "nopeasti",
+            "formation": "nopeasti is supplied as a complete fixed word meaning “quickly”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e03"
+    },
+    {
+      "id": "ff-a1-t08-e08",
+      "type": "translation-en",
+      "instruction": "Translate the complete sentence into English.",
+      "prompt": "Minä piirrän hyvin.",
+      "acceptedAnswers": ["I draw well"],
+      "explanation": "Minä piirrän hyvin means “I draw well”. The dictionary form is piirtää. Its stem is piirtä-. Change rt to rr to make piirrä-, then add the minä ending -n: piirrän.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["piirtää", "hyvin"],
+      "sentenceExplanation": {
+        "translation": "I draw well.",
+        "pattern": "Subject (who) + verb (action or state) + manner word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who draws.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "piirrän",
+            "meaning": "draw",
+            "role": "Verb — tells what I do.",
+            "baseForm": "piirtää",
+            "formation": "Start with the stem piirtä-. Change rt to rr to make piirrä-, then add the minä ending -n: piirrän."
+          },
+          {
+            "finnish": "hyvin",
+            "meaning": "well",
+            "role": "Manner word — tells how I draw.",
+            "baseForm": "hyvin",
+            "formation": "hyvin is supplied as a complete fixed word meaning “well”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e04"
     },
     {
       "id": "ff-a1-t08-e09",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "kertoa (“to tell”) → minä ____ (“I tell”) · add minä -n",
-      "acceptedAnswers": ["kerron"],
-      "explanation": "kertoa means “to tell”; kerron means “I tell”. This is the minä-form of kertoa. Add the minä ending -n after forming the stem. rt weakens to rr.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["kertoa"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e10"
-    },
-    {
-      "id": "ff-a1-t08-e10",
-      "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "I understand — use the supplied dictionary form ymmärtää (“to understand”)",
-      "acceptedAnswers": ["ymmärrän"],
-      "explanation": "ymmärtää means “to understand”; ymmärrän means “I understand”. This is the minä-form of ymmärtää. Add the minä ending -n after forming the stem. rt weakens to rr.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["ymmärtää"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e09"
-    },
-    {
-      "id": "ff-a1-t08-e11",
-      "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "Choose the form meaning “I sleep” from nukkua (“to sleep”).",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I am sleeping now.” Minä ____ nyt. Use nukkua (“to sleep”), supplied stem nukku-, and the minä ending -n; nyt means “now”.",
       "acceptedAnswers": ["nukun"],
-      "explanation": "nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
-      "tags": ["kpt", "verb"],
+      "explanation": "Minä nukun nyt means “I am sleeping now”. Change kk to k in the supplied stem nukku- to make nuku-, then add the minä ending -n: nukun.",
+      "tags": ["kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["nukkua"],
-      "options": ["nukun", "nukkun", "nukkua"],
-      "optionFeedback": {
-        "nukun": "Correct. nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
-        "nukkun": "“nukkun” does not show the required pattern. nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k.",
-        "nukkua": "“nukkua” does not show the required pattern. nukkua means “to sleep”; nukun means “I sleep”. This is the minä-form of nukkua. Add the minä ending -n after forming the stem. kk weakens to k."
+      "vocabulary": ["nukkua", "nyt"],
+      "sentenceExplanation": {
+        "translation": "I am sleeping now.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is sleeping.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "nukun",
+            "meaning": "am sleeping",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "nukkua",
+            "formation": "Use the supplied stem nukku-. Change kk to k to make nuku-, then add the minä ending -n: nukun."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word meaning “now”. No ending rule is being tested."
+          }
+        ]
       },
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e12"
-    },
-    {
-      "id": "ff-a1-t08-e12",
-      "type": "translation-en",
-      "instruction": "Translate into English.",
-      "prompt": "otan",
-      "acceptedAnswers": ["I take"],
-      "explanation": "ottaa means “to take”; otan means “I take”. This is the minä-form of ottaa. Add the minä ending -n after forming the stem. tt weakens to t.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["ottaa"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e11"
-    },
-    {
-      "id": "ff-a1-t08-e13",
-      "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "auttaa (“to help”) → minä ____ (“I help”) · add minä -n",
-      "acceptedAnswers": ["autan"],
-      "explanation": "auttaa means “to help”; autan means “I help”. This is the minä-form of auttaa. Add the minä ending -n after forming the stem. tt weakens to t.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["auttaa"],
-      "targetSkill": "Minä verb forms with KPT",
-      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
-      "parallelExerciseId": "ff-a1-t08-e14"
-    },
-    {
-      "id": "ff-a1-t08-e14",
-      "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "I read — use the supplied dictionary form lukea (“to read”)",
-      "acceptedAnswers": ["luen"],
-      "explanation": "lukea means “to read”; luen means “I read”. This is the minä-form of lukea. Add the minä ending -n after forming the stem. k disappears.",
-      "tags": ["kpt", "verb"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["lukea"],
       "targetSkill": "Minä verb forms with KPT",
       "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
       "parallelExerciseId": "ff-a1-t08-e13"
     },
     {
-      "id": "ff-a1-t08-e15",
-      "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "Choose the form meaning “I get dressed” from pukea (“to get dressed”).",
-      "acceptedAnswers": ["puen"],
-      "explanation": "pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
-      "tags": ["kpt", "verb"],
+      "id": "ff-a1-t08-e10",
+      "type": "translation-fi",
+      "instruction": "Write the complete Finnish sentence.",
+      "prompt": "I am waiting now. Use odottaa (“to wait”), supplied stem odotta-, the minä ending -n, and the supplied words minä (“I”) and nyt (“now”).",
+      "acceptedAnswers": ["Minä odotan nyt"],
+      "explanation": "Minä odotan nyt means “I am waiting now”. Change tt to t in the supplied stem odotta- to make odota-, then add the minä ending -n: odotan.",
+      "tags": ["kpt", "verb", "sentence"],
       "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
-      "vocabulary": ["pukea"],
-      "options": ["puen", "puken", "pukea"],
+      "vocabulary": ["odottaa", "nyt"],
+      "sentenceExplanation": {
+        "translation": "I am waiting now.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is waiting.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "odotan",
+            "meaning": "am waiting",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "odottaa",
+            "formation": "Use the supplied stem odotta-. Change tt to t to make odota-, then add the minä ending -n: odotan."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word meaning “now”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e14"
+    },
+    {
+      "id": "ff-a1-t08-e11",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete Finnish sentence.",
+      "prompt": "Choose “I am flying now.” Use lentää (“to fly”), supplied stem lentä-, and nyt (“now”).",
+      "acceptedAnswers": ["Minä lennän nyt."],
+      "explanation": "Minä lennän nyt means “I am flying now”. Change nt to nn in the supplied stem lentä- to make lennä-, then add the minä ending -n: lennän.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["lentää", "nyt"],
+      "options": ["Minä lennän nyt.", "Minä lentän nyt.", "Minä lentää nyt."],
       "optionFeedback": {
-        "puen": "Correct. pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
-        "puken": "“puken” does not show the required pattern. pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears.",
-        "pukea": "“pukea” does not show the required pattern. pukea means “to get dressed”; puen means “I get dressed”. This is the minä-form of pukea. Add the minä ending -n after forming the stem. k disappears."
+        "Minä lennän nyt.": "Correct. Change nt to nn in lentä- to make lennä-, then add -n: lennän.",
+        "Minä lentän nyt.": "“Lentän” keeps the strong nt. Change nt to nn before the minä ending: lennä- + n = lennän.",
+        "Minä lentää nyt.": "Lentää is the dictionary form “to fly”. The sentence needs the minä form lennä- + n = lennän."
+      },
+      "sentenceExplanation": {
+        "translation": "I am flying now.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is flying.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "lennän",
+            "meaning": "am flying",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "lentää",
+            "formation": "Use the supplied stem lentä-. Change nt to nn to make lennä-, then add the minä ending -n: lennän."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word meaning “now”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e15"
+    },
+    {
+      "id": "ff-a1-t08-e12",
+      "type": "translation-en",
+      "instruction": "Translate the complete sentence into English.",
+      "prompt": "Minä saavun tänään.",
+      "acceptedAnswers": [
+        "I am arriving today",
+        "I'm arriving today",
+        "I arrive today",
+        "I will arrive today",
+        "I'll arrive today"
+      ],
+      "explanation": "Minä saavun tänään can mean “I am arriving today”, “I arrive today” or “I will arrive today”. Finnish normally uses the present tense for a future event when a time word such as tänään makes the timing clear. The dictionary form is saapua. Its stem is saapu-. Change p to v to make saavu-, then add the minä ending -n: saavun.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["saapua", "tänään"],
+      "sentenceExplanation": {
+        "translation": "I am arriving today / I will arrive today.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is arriving.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "saavun",
+            "meaning": "am arriving",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "saapua",
+            "formation": "Start with the stem saapu-. Change p to v to make saavu-, then add the minä ending -n: saavun."
+          },
+          {
+            "finnish": "tänään",
+            "meaning": "today",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "tänään",
+            "formation": "tänään is supplied as a complete fixed word meaning “today”. No ending rule is being tested."
+          }
+        ]
       },
       "targetSkill": "Minä verb forms with KPT",
       "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
       "parallelExerciseId": "ff-a1-t14-e01"
+    },
+    {
+      "id": "ff-a1-t08-e13",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I am reading now.” Minä ____ nyt. Use lukea (“to read”), supplied stem luke-, and the minä ending -n; nyt means “now”.",
+      "acceptedAnswers": ["luen"],
+      "explanation": "Minä luen nyt means “I am reading now”. The k disappears from the supplied stem luke- to make lue-, then add the minä ending -n: luen.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["lukea", "nyt"],
+      "sentenceExplanation": {
+        "translation": "I am reading now.",
+        "pattern": "Subject (who) + verb (action or state) + time word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is reading.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "luen",
+            "meaning": "am reading",
+            "role": "Verb — tells what I am doing.",
+            "baseForm": "lukea",
+            "formation": "Use the supplied stem luke-. The k disappears to make lue-, then add the minä ending -n: luen."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Time word — tells when the action happens.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word meaning “now”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e09"
+    },
+    {
+      "id": "ff-a1-t08-e14",
+      "type": "translation-fi",
+      "instruction": "Write the complete Finnish sentence.",
+      "prompt": "I learn quickly. Use oppia (“to learn”), supplied stem oppi-, the minä ending -n, and the supplied words minä (“I”) and nopeasti (“quickly”).",
+      "acceptedAnswers": ["Minä opin nopeasti"],
+      "explanation": "Minä opin nopeasti means “I learn quickly”. Change pp to p in the supplied stem oppi- to make opi-, then add the minä ending -n: opin.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["oppia", "nopeasti"],
+      "sentenceExplanation": {
+        "translation": "I learn quickly.",
+        "pattern": "Subject (who) + verb (action or state) + manner word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who is learning.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "opin",
+            "meaning": "learn",
+            "role": "Verb — tells what I do.",
+            "baseForm": "oppia",
+            "formation": "Use the supplied stem oppi-. Change pp to p to make opi-, then add the minä ending -n: opin."
+          },
+          {
+            "finnish": "nopeasti",
+            "meaning": "quickly",
+            "role": "Manner word — tells how I learn.",
+            "baseForm": "nopeasti",
+            "formation": "nopeasti is supplied as a complete fixed word meaning “quickly”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e10"
+    },
+    {
+      "id": "ff-a1-t08-e15",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete Finnish sentence.",
+      "prompt": "Choose “I understand well.” Use ymmärtää (“to understand”), supplied stem ymmärtä-, and hyvin (“well”).",
+      "acceptedAnswers": ["Minä ymmärrän hyvin."],
+      "explanation": "Minä ymmärrän hyvin means “I understand well”. Change rt to rr in the supplied stem ymmärtä- to make ymmärrä-, then add the minä ending -n: ymmärrän.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "vocabulary": ["ymmärtää", "hyvin"],
+      "options": ["Minä ymmärrän hyvin.", "Minä ymmärtän hyvin.", "Minä ymmärtää hyvin."],
+      "optionFeedback": {
+        "Minä ymmärrän hyvin.": "Correct. Change rt to rr in ymmärtä- to make ymmärrä-, then add -n: ymmärrän.",
+        "Minä ymmärtän hyvin.": "“Ymmärtän” keeps the strong rt. Change rt to rr before the minä ending: ymmärrä- + n = ymmärrän.",
+        "Minä ymmärtää hyvin.": "Ymmärtää is the dictionary form “to understand”. The sentence needs the minä form ymmärrä- + n = ymmärrän."
+      },
+      "sentenceExplanation": {
+        "translation": "I understand well.",
+        "pattern": "Subject (who) + verb (action or state) + manner word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who understands.",
+            "baseForm": "minä",
+            "formation": "minä is the basic pronoun meaning “I”; it is supplied unchanged."
+          },
+          {
+            "finnish": "ymmärrän",
+            "meaning": "understand",
+            "role": "Verb — tells my state of understanding.",
+            "baseForm": "ymmärtää",
+            "formation": "Use the supplied stem ymmärtä-. Change rt to rr to make ymmärrä-, then add the minä ending -n: ymmärrän."
+          },
+          {
+            "finnish": "hyvin",
+            "meaning": "well",
+            "role": "Manner word — tells how well I understand.",
+            "baseForm": "hyvin",
+            "formation": "hyvin is supplied as a complete fixed word meaning “well”. No ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "parallelExerciseId": "ff-a1-t08-e11"
     }
   ]
 }

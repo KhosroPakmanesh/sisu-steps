@@ -112,4 +112,20 @@ function validateSentenceExplanation(exercise: Record<string, unknown>): void {
   ) {
     throw new Error(`Sentence exercise ${exercise['id']} has an incomplete explanation.`);
   }
+  if (
+    exercise['type'] !== 'translation-en' &&
+    !promptContainsMeaning(exercise['prompt'] as string, sentence['translation'] as string)
+  ) {
+    throw new Error(
+      `Sentence construction exercise ${exercise['id']} must show its complete English meaning before submission.`,
+    );
+  }
+}
+
+function promptContainsMeaning(prompt: string, meaning: string): boolean {
+  const normalizedMeaning = meaning
+    .trim()
+    .replace(/[.!?]+$/u, '')
+    .toLocaleLowerCase('en');
+  return prompt.toLocaleLowerCase('en').includes(normalizedMeaning);
 }
