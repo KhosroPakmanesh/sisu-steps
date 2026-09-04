@@ -279,7 +279,7 @@ for (const theme of ['Day', 'Night']) {
       expect(owners.reviewDirectColour).toEqual([]);
       expect(owners.featureBackLinkText).toEqual([]);
       expect(owners.spinnerBody).toEqual(['.spinner']);
-      expect(owners.sequenceMarkerVisual).toEqual(['.sequence-marker']);
+      expect(owners.sequenceMarkerVisual).toEqual(['.sequence-marker', '.sequence-marker.compact']);
       expect(owners.featureSharedColour).toEqual([]);
       expect(new Set(neutralCardColours).size).toBe(1);
       expect(new Set(mistakeNoteColours).size).toBe(1);
@@ -459,6 +459,136 @@ for (const theme of ['Day', 'Night']) {
       for (const marker of await archiveMarkers.all()) {
         expect(await marker.evaluate(markerRecipe)).toEqual(expected);
       }
+    });
+
+    test('reuses the Topic card material without resizing lesson navigation', async ({ page }) => {
+      await open(page, REVIEW_LESSON);
+      if ((page.viewportSize()?.width ?? 0) < 1000) {
+        await expect(page.locator('.lesson-list')).toBeHidden();
+        await expect(page.locator('.lesson-picker')).toBeVisible();
+        return;
+      }
+
+      const lessonCards = page.locator('.lesson-list .subject-tab');
+      await expect(lessonCards).toHaveCount(13);
+      const geometry = await lessonCards.evaluateAll((elements) =>
+        elements.map((element) => {
+          const bounds = element.getBoundingClientRect();
+          const style = getComputedStyle(element);
+          return {
+            width: bounds.width,
+            height: bounds.height,
+            padding: style.padding,
+            columnGap: style.columnGap,
+          };
+        }),
+      );
+      const expectedHeights = [
+        90.734375, 90.734375, 90.734375, 90.734375, 90.734375, 90.734375, 90.734375, 90.734375,
+        90.734375, 90.734375, 69.734375, 69.734375, 90.734375,
+      ];
+      for (const [index, card] of geometry.entries()) {
+        expect(card.width).toBeCloseTo(285.03125, 1);
+        expect(card.height).toBeCloseTo(expectedHeights[index], 1);
+        expect(card.padding).toBe('13.6px');
+        expect(card.columnGap).toBe('11.2px');
+      }
+
+      const materialRecipe = (element: Element) => {
+        const style = getComputedStyle(element);
+        const holes = getComputedStyle(element, '::before');
+        return {
+          position: style.position,
+          borderTop: style.borderTop,
+          borderLeft: style.borderLeft,
+          radius: style.borderRadius,
+          background: style.backgroundColor,
+          ruling: style.backgroundImage,
+          clipPath: style.clipPath,
+          boxShadow: style.boxShadow,
+          filter: style.filter,
+          holes: {
+            content: holes.content,
+            top: holes.top,
+            bottom: holes.bottom,
+            left: holes.left,
+            width: holes.width,
+            background: holes.backgroundImage,
+            size: holes.backgroundSize,
+          },
+        };
+      };
+      const inactiveMaterial = await lessonCards.nth(1).evaluate(materialRecipe);
+      const selectedMaterial = await lessonCards.first().evaluate(materialRecipe);
+      await expect(lessonCards.first()).toHaveAttribute('aria-current', 'step');
+      expect({
+        ...selectedMaterial,
+        borderTop: inactiveMaterial.borderTop,
+        background: inactiveMaterial.background,
+        filter: inactiveMaterial.filter,
+      }).toEqual(inactiveMaterial);
+      expect(selectedMaterial.background).not.toBe(inactiveMaterial.background);
+      expect(selectedMaterial.filter).not.toBe(inactiveMaterial.filter);
+
+      const selectedX = await lessonCards
+        .first()
+        .evaluate((element) => element.getBoundingClientRect().x);
+      const inactiveX = await lessonCards
+        .nth(1)
+        .evaluate((element) => element.getBoundingClientRect().x);
+      expect(selectedX).toBeGreaterThan(inactiveX);
+
+      const compactMarker = lessonCards.first().locator('.sequence-marker.compact');
+      const markerMaterial = await compactMarker.evaluate((element) => {
+        const style = getComputedStyle(element);
+        return {
+          width: style.width,
+          height: style.height,
+          border: style.borderTop,
+          radius: style.borderRadius,
+          background: style.backgroundColor,
+          color: style.color,
+          font: style.fontFamily,
+          fontSize: style.fontSize,
+          fontWeight: style.fontWeight,
+        };
+      });
+      expect(markerMaterial.width).toBe('27.1875px');
+      expect(markerMaterial.height).toBe('27.1875px');
+
+      await open(page, TOPIC_PAGE);
+      const topicMaterial = await page
+        .locator('.test-card:not(.review-test)')
+        .first()
+        .evaluate(materialRecipe);
+      expect(inactiveMaterial).toEqual(topicMaterial);
+      const reviewMaterial = await page.locator('.test-card.review-test').evaluate(materialRecipe);
+      expect(selectedMaterial.background).toBe(reviewMaterial.background);
+      expect(selectedMaterial.borderTop).toBe(reviewMaterial.borderTop);
+      const topicMarkerMaterial = await page
+        .locator('.test-number.sequence-marker')
+        .first()
+        .evaluate((element) => {
+          const style = getComputedStyle(element);
+          return {
+            border: style.borderTop,
+            radius: style.borderRadius,
+            background: style.backgroundColor,
+            color: style.color,
+            font: style.fontFamily,
+            fontSize: style.fontSize,
+            fontWeight: style.fontWeight,
+          };
+        });
+      expect({
+        border: markerMaterial.border,
+        radius: markerMaterial.radius,
+        background: markerMaterial.background,
+        color: markerMaterial.color,
+        font: markerMaterial.font,
+        fontSize: markerMaterial.fontSize,
+        fontWeight: markerMaterial.fontWeight,
+      }).toEqual(topicMarkerMaterial);
     });
 
     test('shares instructional typography and responsive answer slips', async ({ page }) => {

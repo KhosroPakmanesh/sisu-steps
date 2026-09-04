@@ -149,11 +149,12 @@ main.topic-page .test-group-heading {
   filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge));
 }
 
-main.topic-page .test-card {
-  padding-left: calc(var(--space-5) + 0.65rem);
+main.topic-page .test-card,
+main.lesson-page .lesson-list .subject-tab {
+  position: relative;
   border: 1px dashed var(--border-control);
   border-left: 0.28rem solid transparent;
-  border-radius: 0.08rem;
+  border-radius: 0.15rem 0.45rem 0.3rem 0.35rem;
   background-color: var(--surface-stationery);
   background-image: repeating-linear-gradient(
     to bottom,
@@ -166,7 +167,12 @@ main.topic-page .test-card {
     drop-shadow(0.28rem 0.4rem 0.45rem var(--notebook-shadow));
 }
 
-main.topic-page .test-card::before {
+main.topic-page .test-card {
+  padding-left: calc(var(--space-5) + 0.65rem);
+}
+
+main.topic-page .test-card::before,
+main.lesson-page .lesson-list .subject-tab::before {
   position: absolute;
   top: 0.45rem;
   bottom: 0.45rem;
@@ -180,6 +186,7 @@ main.topic-page .test-card::before {
     )
     center top / 0.46rem 1.55rem repeat-y;
   content: '';
+  pointer-events: none;
 }
 
 /* Lessons: binder tabs, clipped reference slips, flashcards, and vocabulary cards. */
@@ -200,19 +207,10 @@ main.lesson-page .lesson-objectives {
   filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge));
 }
 
-main.lesson-page .lesson-list .subject-tab {
-  border-radius: 0.08rem;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 76%,
-    var(--notebook-rule) 77% 80%,
-    transparent 81%
-  );
-  clip-path: polygon(0 0.12rem, calc(100% - 0.7rem) 0, 100% 0.72rem, 100% 100%, 0.4rem 98%, 0 80%);
-  filter: drop-shadow(0.15rem 0.2rem 0 var(--paper-edge));
-}
-
 main.lesson-page .lesson-list .subject-tab.active {
+  border-color: var(--border-brand);
+  border-left-color: transparent;
+  background-color: var(--surface-review);
   filter: drop-shadow(0.25rem 0.3rem 0 var(--paper-edge))
     drop-shadow(0.3rem 0.4rem 0.35rem var(--notebook-shadow));
 }

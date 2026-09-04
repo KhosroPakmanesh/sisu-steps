@@ -52,7 +52,7 @@
                 [attr.aria-current]="index === lessonIndex() ? 'step' : null"
                 (click)="openLesson(index)"
               >
-                <span>{{ index + 1 }}</span>
+                <span class="sequence-marker compact">{{ index + 1 }}</span>
                 <span>
                   <strong>{{ lesson.title }}</strong>
                   <small>{{

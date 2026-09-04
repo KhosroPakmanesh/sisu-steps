@@ -32,6 +32,8 @@
 
 ### Changed
 
+- Restyled the wide multi-lesson navigator as compact versions of the Topic route's warm ruled, punched test cards, with the selected lesson using the same tinted paper as the cumulative Review card, while preserving every navigation card's established dimensions, spacing, selected movement, completion status, and responsive selector fallback.
+
 - Unified ordered test and archive row numbers under the Reports-style circular double-ring paper marker across Topic, Reports, and Data & backup; destructive rows retain danger styling on their action and consequence copy rather than colouring the neutral ordinal.
 - Consolidated the client color system around derived notebook inks, overlays, shared dark surfaces, role-specific progress/material aliases, and compact mechanical-switch/page-clip palettes; unified neutral assignment, topic-cover, lesson, common-mistake advisory, and ledger paper under one stationery role; reserved stronger amber warning surfaces for active warning, incorrect-answer, and review meaning; and strengthened blue-versus-green state separation while preserving Day/Night contrast, stationery geometry, and non-color status meaning.
 - Updated the reusable Finnish grammar content-creator workflow to audit complete content classes, preview representative wording corrections, prefer short complete sentences for verb usage, expose full English meanings before Finnish sentence construction, preserve Finnish-to-English assessment, reject internal authoring jargon in learner-facing prose, verify that “supplied” information is visible, and follow the current pack-owned direct-JSON repository structure.
