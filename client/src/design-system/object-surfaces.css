@@ -281,6 +281,42 @@ main.lesson-page .key-points li {
   box-shadow: 0.1rem 0.12rem 0 var(--paper-edge);
 }
 
+/* Reports and Data share one punched ledger sheet; their rows remain workflow-owned. */
+.ledger-sheet {
+  position: relative;
+  overflow: hidden;
+  border: 1px dashed var(--border-control);
+  border-left: 0.32rem solid transparent;
+  background-color: var(--surface-stationery);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.9rem,
+    var(--notebook-rule) 1.9rem 1.95rem
+  );
+  box-shadow: none;
+  clip-path: polygon(0.2rem 0, 99.5% 0.12rem, 100% 98%, 98.5% 100%, 0 99%);
+  filter: drop-shadow(0.24rem 0.3rem 0 var(--paper-edge))
+    drop-shadow(0.38rem 0.5rem 0.55rem var(--notebook-shadow));
+}
+
+.ledger-sheet::before {
+  position: absolute;
+  z-index: 1;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  left: 0.18rem;
+  width: 0.46rem;
+  background: radial-gradient(
+      circle,
+      var(--surface-paper) 0 0.1rem,
+      var(--border-control) 0.11rem 0.14rem,
+      transparent 0.15rem
+    )
+    center top / 0.46rem 1.55rem repeat-y;
+  content: '';
+  pointer-events: none;
+}
+
 @container workbook (width <= 35rem) {
   main.page-shell .topic-card,
   main.topic-page .test-card {

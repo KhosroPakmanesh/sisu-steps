@@ -32,6 +32,8 @@
 
 ### Changed
 
+- Unified the Reports results table and Data saved-test clearing list under one shared punched, ruled ledger-sheet material while preserving their existing dimensions, table/list layouts, row interactions, copy, destructive controls, confirmations, and clearing behavior.
+
 - Restyled the wide multi-lesson navigator as compact versions of the Topic route's warm ruled, punched test cards, with the selected lesson using the same tinted paper as the cumulative Review card, while preserving every navigation card's established dimensions, spacing, selected movement, completion status, and responsive selector fallback.
 
 - Unified ordered test and archive row numbers under the Reports-style circular double-ring paper marker across Topic, Reports, and Data & backup; destructive rows retain danger styling on their action and consequence copy rather than colouring the neutral ordinal.

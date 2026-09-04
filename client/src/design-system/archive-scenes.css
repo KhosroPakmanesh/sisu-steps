@@ -23,21 +23,6 @@
   transform: rotate(-2deg);
 }
 
-.clear-ledger {
-  overflow: hidden;
-  border: 1px dashed var(--border-control);
-  border-left: 0.32rem solid transparent;
-  background-color: var(--surface-stationery);
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0 1.9rem,
-    var(--notebook-rule) 1.9rem 1.95rem
-  );
-  clip-path: polygon(0.2rem 0, 99.5% 0.12rem, 100% 98%, 98.5% 100%, 0 99%);
-  filter: drop-shadow(0.24rem 0.3rem 0 var(--paper-edge))
-    drop-shadow(0.38rem 0.5rem 0.55rem var(--notebook-shadow));
-}
-
 .topic-clear-strip {
   background: color-mix(in srgb, var(--surface-paper) 64%, transparent);
 }

@@ -285,6 +285,87 @@ for (const theme of ['Day', 'Night']) {
       expect(new Set(mistakeNoteColours).size).toBe(1);
     });
 
+    test('uses one punched ledger material across Reports and Data', async ({ page }) => {
+      const materialRecipe = (element: Element) => {
+        const surface = getComputedStyle(element);
+        const punchedMargin = getComputedStyle(element, '::before');
+        return {
+          surface: {
+            position: surface.position,
+            overflow: surface.overflow,
+            borderTop: surface.borderTop,
+            borderLeft: surface.borderLeft,
+            backgroundColor: surface.backgroundColor,
+            backgroundImage: surface.backgroundImage,
+            boxShadow: surface.boxShadow,
+            clipPath: surface.clipPath,
+            filter: surface.filter,
+          },
+          punchedMargin: {
+            content: punchedMargin.content,
+            zIndex: punchedMargin.zIndex,
+            top: punchedMargin.top,
+            bottom: punchedMargin.bottom,
+            left: punchedMargin.left,
+            width: punchedMargin.width,
+            backgroundImage: punchedMargin.backgroundImage,
+            backgroundSize: punchedMargin.backgroundSize,
+            pointerEvents: punchedMargin.pointerEvents,
+          },
+        };
+      };
+
+      await open(page, '/reports');
+      const reportsLedger = page.locator('.report-ledger.ledger-sheet');
+      const expected = await reportsLedger.evaluate(materialRecipe);
+      expect(expected.punchedMargin.content).not.toBe('none');
+      expect(expected.punchedMargin.backgroundImage).toContain('radial-gradient');
+
+      await open(page, '/data');
+      const dataLedger = page.locator('.clear-ledger.ledger-sheet').first();
+      await expect(dataLedger).toBeVisible();
+      expect(await dataLedger.evaluate(materialRecipe)).toEqual(expected);
+      await expectNoInternalOverflow(dataLedger);
+      await expect(dataLedger.locator('.clear-row')).toHaveCount(14);
+      await expect(dataLedger.getByRole('button', { name: 'Clear this test' })).toHaveCount(14);
+
+      const featureMaterialOwners = await page.evaluate(() => {
+        const rules: CSSStyleRule[] = [];
+        const collect = (ruleList: CSSRuleList) => {
+          for (const rule of ruleList) {
+            if (rule instanceof CSSStyleRule) rules.push(rule);
+            else if ('cssRules' in rule) collect((rule as CSSGroupingRule).cssRules);
+          }
+        };
+        for (const sheet of document.styleSheets) collect(sheet.cssRules);
+
+        const sharedSurfaceTarget = /\.(?:ledger-sheet|clear-ledger)(?:\[[^\]]+\])?(?:::[\w-]+)?$/;
+        const materialProperties = [
+          'position',
+          'overflow',
+          'border',
+          'border-left',
+          'background',
+          'background-color',
+          'background-image',
+          'box-shadow',
+          'clip-path',
+          'filter',
+        ];
+        return rules
+          .filter(
+            (rule) =>
+              rule.selectorText.includes('[_ngcontent') &&
+              rule.selectorText
+                .split(',')
+                .some((selector) => sharedSurfaceTarget.test(selector.trim())) &&
+              materialProperties.some((property) => rule.style.getPropertyValue(property)),
+          )
+          .map((rule) => rule.selectorText);
+      });
+      expect(featureMaterialOwners).toEqual([]);
+    });
+
     test('keeps repeated semantic colour roles consistent on every feature page', async ({
       page,
     }) => {
