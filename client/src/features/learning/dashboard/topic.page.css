@@ -166,14 +166,8 @@
 }
 
 .test-number {
-  display: flex;
-  align-self: stretch;
-  align-items: center;
-  padding-right: var(--space-4);
-  border-right: 1px solid var(--notebook-margin);
-  font-family: var(--font-display);
-  font-size: 1.3rem;
-  color: var(--text-brand);
+  z-index: 1;
+  align-self: center;
 }
 
 .test-body {
@@ -277,14 +271,6 @@
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3);
     padding: var(--space-4);
-  }
-
-  .test-number {
-    width: fit-content;
-    padding-right: 0;
-    padding-bottom: var(--space-2);
-    border-right: 0;
-    border-bottom: 1px solid var(--notebook-margin);
   }
 
   .test-actions {

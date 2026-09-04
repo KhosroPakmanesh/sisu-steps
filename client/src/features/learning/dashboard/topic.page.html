@@ -111,7 +111,9 @@
           @let session = testSession(activePack.id, test.id);
           @let lessonStatus = lessonProgress(activePack.id, test.id);
           <article class="test-card" [class.review-test]="test.stage === 'review'">
-            <div class="test-number">{{ (index + 1).toString().padStart(2, '0') }}</div>
+            <div class="test-number sequence-marker">
+              {{ (index + 1).toString().padStart(2, '0') }}
+            </div>
             <div class="test-body">
               <div class="test-title-row">
                 <div>

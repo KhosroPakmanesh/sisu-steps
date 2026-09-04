@@ -182,19 +182,6 @@ main.page-shell .topic-card:nth-child(even):hover {
     rotate(-0.2deg);
 }
 
-.topic-page .test-number {
-  z-index: 1;
-  align-self: center;
-  justify-content: center;
-  width: 3.2rem;
-  height: 3.2rem;
-  padding: 0;
-  border: 0.18rem double var(--border-brand-emphasis);
-  border-radius: 50%;
-  background: var(--surface-paper);
-  transform: rotate(-4deg);
-}
-
 .topic-page .test-group-heading {
   position: relative;
   z-index: 1;
@@ -268,10 +255,5 @@ main.page-shell .topic-card:nth-child(even):hover {
 
   .topic-page .test-list::before {
     display: none;
-  }
-
-  .topic-page .test-number {
-    width: 2.5rem;
-    height: 2.5rem;
   }
 }

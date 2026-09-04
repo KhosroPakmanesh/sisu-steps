@@ -153,24 +153,6 @@
   border-top: 1px dashed var(--border-danger-subtle);
 }
 
-.danger-number {
-  border-color: var(--border-danger);
-  background: var(--surface-danger);
-  color: var(--text-danger);
-}
-
-.archive-number {
-  display: grid;
-  place-items: center;
-  width: 2.65rem;
-  height: 2.65rem;
-  border: 2px solid var(--border-brand-strong);
-  border-radius: 50%;
-  background: var(--surface-stationery);
-  color: var(--text-brand);
-  font-family: var(--font-display);
-}
-
 .archive-action-row > div,
 .clear-row-copy {
   min-width: 0;
@@ -348,11 +330,6 @@
   .clear-row {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3);
-  }
-
-  .archive-number {
-    width: 2.35rem;
-    height: 2.35rem;
   }
 
   .archive-action-row > .button,

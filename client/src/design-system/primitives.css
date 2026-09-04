@@ -104,6 +104,23 @@
   transform: rotate(-1.5deg);
 }
 
+.sequence-marker {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0;
+  border: 0.16rem double var(--border-brand-emphasis);
+  border-radius: 50%;
+  background: var(--surface-paper);
+  color: var(--text-brand);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: var(--weight-regular);
+  transform: rotate(-4deg);
+}
+
 .state-card {
   display: grid;
   justify-items: center;

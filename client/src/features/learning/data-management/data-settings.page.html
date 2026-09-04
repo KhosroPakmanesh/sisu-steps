@@ -45,7 +45,7 @@
 
     <div class="archive-actions">
       <div class="archive-action-row">
-        <span class="archive-number" aria-hidden="true">01</span>
+        <span class="archive-number sequence-marker" aria-hidden="true">01</span>
         <div>
           <h3>Download a copy</h3>
           <p>Keep a portable snapshot before clearing data or changing browsers.</p>
@@ -57,7 +57,7 @@
       </div>
 
       <div class="archive-action-row">
-        <span class="archive-number" aria-hidden="true">02</span>
+        <span class="archive-number sequence-marker" aria-hidden="true">02</span>
         <div>
           <h3>Restore a copy</h3>
           <p>A selected file is checked completely before it can replace your saved work.</p>
@@ -71,7 +71,7 @@
 
       @if (store.packs().length > 0) {
         <div class="archive-action-row clear-all-action-row">
-          <span class="archive-number danger-number" aria-hidden="true">03</span>
+          <span class="archive-number sequence-marker" aria-hidden="true">03</span>
           <div>
             <h3>Clear all history</h3>
             <p>
@@ -128,7 +128,7 @@
             <ol class="clear-list">
               @for (test of pack.tests; track test.id; let index = $index) {
                 <li class="clear-row">
-                  <span class="archive-number" aria-hidden="true">{{
+                  <span class="archive-number sequence-marker" aria-hidden="true">{{
                     (index + 1).toString().padStart(2, '0')
                   }}</span>
                   <div class="clear-row-copy">

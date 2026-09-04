@@ -233,6 +233,29 @@ for (const theme of ['Day', 'Night']) {
           spinnerBody: selectorsWith('.spinner', ['background']).filter(
             (selector) => !selector.includes('::'),
           ),
+          sequenceMarkerVisual: rules
+            .filter(
+              (rule) =>
+                ['.sequence-marker', '.test-number', '.archive-number', '.report-name > span'].some(
+                  (selector) => rule.selectorText.includes(selector),
+                ) &&
+                [
+                  'width',
+                  'height',
+                  'border',
+                  'border-width',
+                  'border-style',
+                  'border-color',
+                  'border-radius',
+                  'background',
+                  'background-color',
+                  'color',
+                  'font-family',
+                  'font-size',
+                  'font-weight',
+                ].some((property) => rule.style.getPropertyValue(property)),
+            )
+            .map((rule) => rule.selectorText),
           featureSharedColour: rules
             .filter(
               (rule) =>
@@ -256,6 +279,7 @@ for (const theme of ['Day', 'Night']) {
       expect(owners.reviewDirectColour).toEqual([]);
       expect(owners.featureBackLinkText).toEqual([]);
       expect(owners.spinnerBody).toEqual(['.spinner']);
+      expect(owners.sequenceMarkerVisual).toEqual(['.sequence-marker']);
       expect(owners.featureSharedColour).toEqual([]);
       expect(new Set(neutralCardColours).size).toBe(1);
       expect(new Set(mistakeNoteColours).size).toBe(1);
@@ -306,10 +330,7 @@ for (const theme of ['Day', 'Night']) {
         ],
         [STUDY, '.exercise-card'],
         ['/reports', '.report-overview, .report-topic-sheet, .ledger-sheet'],
-        [
-          '/data',
-          '.data-overview, .backup-archive, .topic-file-label, .clear-ledger, .archive-number:not(.danger-number)',
-        ],
+        ['/data', '.data-overview, .backup-archive, .topic-file-label, .clear-ledger'],
       ];
 
       for (const [route, stationerySelector] of routes) {
@@ -396,6 +417,47 @@ for (const theme of ['Day', 'Night']) {
       )) {
         expect(role, `${name} should be rendered`).not.toEqual([]);
         expect(new Set(role).size, `${name} should have one computed colour recipe`).toBe(1);
+      }
+    });
+
+    test('uses one visual recipe for sequence markers across feature pages', async ({ page }) => {
+      const markerRecipe = (element: Element) => {
+        const style = getComputedStyle(element);
+        return {
+          width: style.width,
+          height: style.height,
+          borderWidth: style.borderTopWidth,
+          borderStyle: style.borderTopStyle,
+          borderColor: style.borderTopColor,
+          radius: style.borderRadius,
+          background: style.backgroundColor,
+          color: style.color,
+          font: style.fontFamily,
+          fontSize: style.fontSize,
+          fontWeight: style.fontWeight,
+          transform: style.transform,
+        };
+      };
+
+      await open(page, TOPIC_PAGE);
+      const expected = await page
+        .locator('.test-number.sequence-marker')
+        .first()
+        .evaluate(markerRecipe);
+
+      await open(page, '/reports');
+      expect(
+        await page.locator('.report-name > .sequence-marker').first().evaluate(markerRecipe),
+      ).toEqual(expected);
+
+      await open(page, '/data');
+      const archiveMarkers = page.locator('.archive-number.sequence-marker');
+      await expect(
+        page.locator('.archive-actions > .archive-action-row > .archive-number.sequence-marker'),
+      ).toHaveCount(3);
+      expect(await archiveMarkers.count()).toBeGreaterThanOrEqual(3);
+      for (const marker of await archiveMarkers.all()) {
+        expect(await marker.evaluate(markerRecipe)).toEqual(expected);
       }
     });
 
