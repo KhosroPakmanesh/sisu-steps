@@ -28,13 +28,6 @@
   margin: var(--space-4) 0 0 auto;
 }
 
-.back-link {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: var(--text-detail);
-  font-weight: var(--weight-bold);
-}
-
 .topic-hero .back-link + .eyebrow {
   margin-top: var(--space-5);
 }
@@ -44,11 +37,6 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
   padding: var(--space-5);
-  border-radius: var(--radius-large);
-  border-left: 0.35rem solid transparent;
-  background: var(--surface-ink);
-  color: var(--text-on-ink);
-  box-shadow: var(--shadow-large);
 }
 
 .topic-overview div {
@@ -79,12 +67,6 @@
   padding-bottom: var(--space-6);
 }
 
-.review-action {
-  border-color: var(--amber-900);
-  background: var(--surface-warning);
-  color: var(--text-warning);
-}
-
 .objective-panel {
   margin: var(--space-5) 0;
   padding: var(--space-8);
@@ -92,7 +74,7 @@
   border: 1px solid var(--border-brand);
   background:
     linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px), var(--surface-warning);
+    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px), var(--surface-stationery);
   background-size: 1.5rem 1.5rem;
 }
 
@@ -173,7 +155,7 @@
   border: 1px solid var(--border-default);
   border-left: 0.28rem solid transparent;
   border-radius: var(--radius-medium);
-  background: var(--surface-warning);
+  background: var(--surface-stationery);
   box-shadow: 0.16rem 0.16rem 0 var(--surface-subtle);
 }
 

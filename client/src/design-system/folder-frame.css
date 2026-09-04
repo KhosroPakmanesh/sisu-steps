@@ -179,6 +179,9 @@
 }
 
 .workbook-page-clip {
+  --clip-highlight: rgb(255 255 255 / 54%);
+  --clip-depth-shadow: rgb(53 68 82 / 22%);
+
   position: absolute;
   top: 0;
   right: -0.18rem;
@@ -190,8 +193,8 @@
     linear-gradient(90deg, rgb(255 255 255 / 36%), transparent 34% 66%, rgb(62 78 94 / 26%)),
     var(--folder-plastic);
   box-shadow:
-    inset 0.2rem 0 0.28rem rgb(255 255 255 / 56%),
-    inset -0.16rem 0 0.24rem rgb(53 68 82 / 24%),
+    inset 0.2rem 0 0.28rem var(--clip-highlight),
+    inset -0.16rem 0 0.24rem var(--clip-depth-shadow),
     0.18rem 0.22rem 0.34rem var(--notebook-shadow);
   backdrop-filter: blur(1px);
 }
@@ -206,8 +209,8 @@
   border-radius: 0.45rem;
   background: color-mix(in srgb, var(--folder-plastic) 90%, transparent);
   box-shadow:
-    inset 0.16rem 0 0.22rem rgb(255 255 255 / 52%),
-    -0.16rem 0.16rem 0.24rem rgb(53 68 82 / 20%);
+    inset 0.16rem 0 0.22rem var(--clip-highlight),
+    -0.16rem 0.16rem 0.24rem var(--clip-depth-shadow);
   content: '';
 }
 

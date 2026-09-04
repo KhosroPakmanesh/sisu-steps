@@ -10,7 +10,6 @@
 .key-points li {
   padding: 0.45rem 0.65rem;
   border-radius: var(--radius-control);
-  background: var(--surface-subtle);
   font-size: var(--text-small);
   font-weight: var(--weight-bold);
   transition: transform var(--motion-standard) ease;
@@ -33,7 +32,7 @@
   padding: var(--space-4);
   border: 1px dashed var(--border-brand);
   border-radius: 0.08rem;
-  background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-warning));
+  background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-stationery));
 }
 
 .example-grid article > p {
@@ -68,7 +67,7 @@
   padding: var(--space-6);
   border: 1px dashed var(--border-control);
   border-radius: var(--radius-medium);
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   box-shadow: 0.18rem 0.22rem 0 var(--paper-edge);
   transition: transform var(--motion-standard) ease;
 }
@@ -111,9 +110,9 @@
 
 .mistake-notes {
   margin: var(--space-3) 0;
-  border: 1px dashed color-mix(in srgb, var(--amber-900) 35%, transparent);
+  border: 1px dashed color-mix(in srgb, var(--border-warning-strong) 35%, transparent);
   border-radius: var(--radius-medium);
-  background: var(--surface-warning);
+  background: var(--surface-stationery);
   transition: transform var(--motion-standard) ease;
 }
 

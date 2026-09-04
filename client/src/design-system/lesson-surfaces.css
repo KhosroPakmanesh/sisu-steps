@@ -5,7 +5,7 @@ main.lesson-page .worked-examples {
   padding-left: calc(var(--space-6) + 0.9rem);
   border: 0;
   border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.95rem,
@@ -56,7 +56,11 @@ main.lesson-page .example-grid article {
   border: 1px dashed var(--border-brand);
   border-left: 0.28rem solid transparent;
   border-radius: 0.08rem;
-  background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-warning));
+  background-color: color-mix(
+    in srgb,
+    var(--surface-brand-subtle) 48%,
+    var(--surface-stationery)
+  );
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.9rem,

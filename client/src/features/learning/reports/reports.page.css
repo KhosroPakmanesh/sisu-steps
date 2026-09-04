@@ -94,7 +94,7 @@
   position: relative;
   margin: var(--space-5) 0 var(--space-8);
   border: 1px dashed var(--border-brand);
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image:
     linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
     linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px);
@@ -113,7 +113,7 @@
   left: 15%;
   width: 4.5rem;
   height: 1rem;
-  background: color-mix(in srgb, var(--amber-300) 52%, transparent);
+  background: var(--paper-tape);
   clip-path: polygon(3% 8%, 100% 0, 97% 100%, 0 93%);
   content: '';
   transform: rotate(-2deg);
@@ -135,7 +135,7 @@
   padding: var(--space-6);
   border: 1px dashed var(--border-control);
   border-left: 0.35rem solid transparent;
-  background: var(--surface-warning);
+  background: var(--surface-stationery);
   box-shadow: none;
   clip-path: polygon(0.18rem 0, 98% 0.12rem, 100% 93%, 97% 100%, 0 97%);
   filter: drop-shadow(0.2rem 0.25rem 0 var(--paper-edge));

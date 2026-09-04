@@ -4,7 +4,7 @@
   padding: 0.65rem 1rem 0.55rem 1.6rem;
   border: 1px solid var(--border-control);
   border-left: 0.35rem solid transparent;
-  background: var(--surface-warning);
+  background: var(--surface-stationery);
   box-shadow: 0.16rem 0.18rem 0 var(--notebook-shadow);
   clip-path: polygon(0.55rem 0, 100% 0, calc(100% - 0.3rem) 100%, 0 92%);
   transition:
@@ -94,12 +94,12 @@ input.notebook-input {
 input.notebook-input:hover:not(:disabled) {
   border-bottom-color: var(--border-brand-strong);
   background-color: color-mix(in srgb, var(--surface-raised) 62%, transparent);
-  box-shadow: 0 0.38rem 0 -0.22rem var(--blue-500);
+  box-shadow: 0 0.38rem 0 -0.22rem var(--border-brand-strong);
 }
 
 input.notebook-input:focus-visible {
   background-color: var(--surface-raised);
-  box-shadow: 0 0.42rem 0 -0.2rem var(--blue-500);
+  box-shadow: 0 0.42rem 0 -0.2rem var(--border-brand-strong);
 }
 
 input.notebook-input.has-writing {
@@ -161,15 +161,15 @@ input.notebook-input.has-writing {
 .progress-ruler {
   position: relative;
   padding: 0.78rem 0.32rem 0.28rem;
-  border: 1px solid color-mix(in srgb, var(--amber-900) 48%, transparent);
+  border: 1px solid color-mix(in srgb, var(--material-amber-ink) 48%, transparent);
   border-radius: 0.14rem;
   background:
     repeating-linear-gradient(
       90deg,
       transparent 0 0.46rem,
-      color-mix(in srgb, var(--amber-900) 54%, transparent) 0.47rem 0.5rem
+      color-mix(in srgb, var(--material-amber-ink) 54%, transparent) 0.47rem 0.5rem
     ),
-    color-mix(in srgb, var(--amber-300) 68%, var(--surface-paper));
+    color-mix(in srgb, var(--material-amber) 68%, var(--surface-paper));
   box-shadow:
     inset 0 0.18rem 0 color-mix(in srgb, var(--surface-paper) 36%, transparent),
     0 0.2rem 0.32rem var(--notebook-shadow);
@@ -194,7 +194,7 @@ input.notebook-input.has-writing {
   height: 0.42rem;
   background: repeating-linear-gradient(
     90deg,
-    color-mix(in srgb, var(--amber-900) 68%, transparent) 0 0.04rem,
+    color-mix(in srgb, var(--material-amber-ink) 68%, transparent) 0 0.04rem,
     transparent 0.04rem 2.5rem
   );
   content: '';
@@ -207,7 +207,7 @@ input.notebook-input.has-writing {
   display: block;
   height: 0.72rem;
   margin: 0;
-  border-color: color-mix(in srgb, var(--amber-900) 42%, var(--border-control));
+  border-color: color-mix(in srgb, var(--material-amber-ink) 42%, var(--border-control));
 }
 
 .answer-tool-row {

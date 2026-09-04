@@ -4,9 +4,10 @@ The canonical implementation is `client/src/design-system/tokens.css`.
 
 ## Token groups
 
-- Ink and surfaces: primary, secondary, muted, desk, canvas, paper, raised, ink-dark, and header surfaces and borders.
+- Ink and surfaces: primary, secondary, muted, desk, paper, raised, and header surfaces and borders.
 - Brand and state: focus, success, warning, danger, skipped/review, disabled, and selected treatments.
 - Notebook atmosphere: ruling, margin, grid, overlay, paper shadow, sheet gutter, paper edge, desk wood, groove, glow, metal, graphite, compact folder-cover, translucent page-clip, and divider-tab values.
+- Material roles: red-pencil decoration, amber stationery, shared paper tape, mechanical-switch metal, and page-clip highlights remain separate from danger, warning, and interaction roles even when they resolve to the same primitive hue.
 - Typography: readable body/display stacks plus a decorative note stack, reusable sizes, line heights, and weights.
 - Instructional prose and worked-example explanations share `--text-body` (1rem) and `--line-body` (1.65). Essential captions, metadata and folder labels use at least `--text-caption` (0.75rem); decorative hidden stamps are exempt.
 - Shared detail text, compact titles, summary values and actions use named size/line-height roles rather than repeated literals. These roles preserve the existing hierarchy and font families.
@@ -19,6 +20,13 @@ The canonical implementation is `client/src/design-system/tokens.css`.
 
 - Use a token before repeating a raw color, spacing, radius, shadow, text size, control height, or component geometry.
 - Add a token only when at least two current or near-term uses share the same semantic value.
+- Keep primitive hue tokens separate from semantic roles. Components consume text, surface, border, progress, state, or material aliases when a future contrast or material adjustment must not affect an unrelated role.
+- Use `--surface-stationery` for neutral warm-paper objects such as assignments, topic covers, lesson/reference sheets, common-mistake advisories, and ledgers. Common-mistake reference sheets retain an amber edge and explicit caution wording without becoming active warning surfaces. Reserve `--surface-warning` for active warning, incorrect-answer, and review meaning; visual paper texture does not make a neutral object a warning.
+- Keep shared component colour recipes in their design-system owner. Feature styles may place or size those components, but they must not restyle the same progress, action, navigation, loading, or state role through a more specific page selector.
+- Derive translucent notebook rule, grid, red margin, overlay, and shared tape values from their solid ink, surface, or material source instead of repeating RGB channels. Preserve separate opacity roles when they communicate a real difference in page depth.
+- Let fixed warm-white tab and on-ink text roles share one primitive without coupling paper, raised-paper, or warning surfaces to foreground text.
+- Keep informational blue, success green, warning amber, and danger red surfaces visibly distinct in both appearances. Similar low-chroma status surfaces are a reason to strengthen hue separation, not to collapse state roles.
+- Limit detailed CSS-only hardware to a small owner-local material scale. The Appearance switch uses edge, shadow, middle, light, and highlight metal roles; the page clip may share highlights and depth shadows while retaining visibly different outer and inner edges.
 - Raw values are acceptable for one-off local geometry or calculated positions.
 - Do not use viewport-scaled body text; display headings may use bounded `clamp()` values.
 - Use the named `workbook` inline-size container for content reflow. Its root-relative boundaries preserve the default 16px-scale layouts: 26.25rem/420px for dense ledgers and summaries, 30rem/480px for confirmation sheets, 35rem/560px for pocket-notebook controls and content, 38.75rem/620px for the compact header/folder, 40.625rem/650px for catalog and ledger layouts, 50rem/800px for lesson navigation and page layouts, and 56.25rem/900px for wider grids/header arrangements. Unlike fixed-pixel viewport queries, these boundaries also respond to enlarged root text. Decorative outer desk props retain 1100px/1600px viewport queries.

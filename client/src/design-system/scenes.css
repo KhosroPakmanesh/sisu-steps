@@ -129,7 +129,7 @@ main.page-shell .topic-card:nth-child(even):hover {
   left: 15%;
   width: 5rem;
   height: 1rem;
-  background: color-mix(in srgb, var(--amber-300) 48%, transparent);
+  background: var(--paper-tape);
   clip-path: polygon(2% 8%, 100% 0, 97% 96%, 0 100%);
   content: '';
   transform: rotate(-2deg);
@@ -189,7 +189,7 @@ main.page-shell .topic-card:nth-child(even):hover {
   width: 3.2rem;
   height: 3.2rem;
   padding: 0;
-  border: 0.18rem double var(--blue-600);
+  border: 0.18rem double var(--border-brand-emphasis);
   border-radius: 50%;
   background: var(--surface-paper);
   transform: rotate(-4deg);

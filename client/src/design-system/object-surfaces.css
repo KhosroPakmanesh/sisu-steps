@@ -7,7 +7,7 @@ main.page-shell .assignment-sheet {
   border: 1px dashed var(--border-control);
   border-left: 0.35rem solid transparent;
   border-radius: 0.08rem;
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.65rem,
@@ -26,7 +26,7 @@ main.page-shell .assignment-sheet::before {
   right: 1.4rem;
   width: 4.4rem;
   height: 1.1rem;
-  background: color-mix(in srgb, var(--amber-300) 52%, transparent);
+  background: var(--paper-tape);
   clip-path: polygon(3% 8%, 100% 0, 97% 100%, 0 93%);
   content: '';
   transform: rotate(2deg);
@@ -54,7 +54,7 @@ main.page-shell .catalog-stats {
   border: 1px dashed var(--border-control);
   border-block-width: 0.18rem;
   border-radius: 0;
-  background-color: color-mix(in srgb, var(--surface-warning) 58%, var(--surface-paper));
+  background-color: color-mix(in srgb, var(--surface-stationery) 58%, var(--surface-paper));
   background-image:
     repeating-linear-gradient(90deg, transparent 0 0.9rem, var(--notebook-rule) 0.9rem 0.94rem),
     linear-gradient(to bottom, transparent 72%, var(--notebook-rule) 73% 77%, transparent 78%);
@@ -77,7 +77,7 @@ main.page-shell .catalog-stats div + div {
 main.page-shell .topic-card {
   padding-left: calc(var(--space-6) + 0.9rem);
   border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.95rem,
@@ -154,7 +154,7 @@ main.topic-page .test-card {
   border: 1px dashed var(--border-control);
   border-left: 0.28rem solid transparent;
   border-radius: 0.08rem;
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.9rem,
@@ -221,7 +221,7 @@ main.lesson-page .lesson-picker {
   position: relative;
   padding: var(--space-3);
   border-left: 0.35rem solid transparent;
-  background: var(--surface-warning);
+  background: var(--surface-stationery);
   clip-path: polygon(0 0.2rem, 96% 0, 100% 88%, 98% 100%, 0 96%);
   filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge));
 }
@@ -278,7 +278,7 @@ main.lesson-page .key-points li {
   padding-left: 1.25rem;
   border-left: 0.22rem solid transparent;
   border-radius: 0.05rem;
-  background: var(--surface-warning);
+  background: var(--surface-stationery);
   clip-path: polygon(0.12rem 0, 100% 0.08rem, calc(100% - 0.12rem) 100%, 0 94%);
   box-shadow: 0.1rem 0.12rem 0 var(--paper-edge);
 }

@@ -143,18 +143,18 @@
 
 .archive-action-row p,
 .clear-row p,
-.topic-clear-strip p {
+.topic-clear-strip p:not(.card-kicker) {
   color: var(--text-secondary);
   font-size: var(--text-small);
 }
 
 .clear-all-action-row {
   margin-top: var(--space-2);
-  border-top: 1px dashed var(--red-200);
+  border-top: 1px dashed var(--border-danger-subtle);
 }
 
 .danger-number {
-  border-color: var(--red-700);
+  border-color: var(--border-danger);
   background: var(--surface-danger);
   color: var(--text-danger);
 }
@@ -166,7 +166,7 @@
   height: 2.65rem;
   border: 2px solid var(--border-brand-strong);
   border-radius: 50%;
-  background: var(--surface-warning);
+  background: var(--surface-stationery);
   color: var(--text-brand);
   font-family: var(--font-display);
 }
@@ -280,7 +280,6 @@
 
 .topic-clear-strip .card-kicker {
   margin-bottom: var(--space-1);
-  color: var(--text-brand);
 }
 
 @container workbook (width <= 50rem) {

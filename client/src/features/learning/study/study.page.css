@@ -23,13 +23,6 @@
   font-size: var(--text-title-compact);
 }
 
-.back-link {
-  color: var(--text-secondary);
-  text-decoration: none;
-  font-size: var(--text-detail);
-  font-weight: var(--weight-bold);
-}
-
 .question-count {
   justify-self: end;
   padding: 0.28rem 0.48rem;
@@ -69,7 +62,7 @@
 
 .type-label {
   padding: 0.3rem 0.55rem;
-  border: 2px double var(--blue-600);
+  border: 2px double var(--border-brand-emphasis);
   border-radius: 0.18rem;
   background: var(--surface-brand-subtle);
   color: var(--text-brand);
@@ -184,16 +177,16 @@
   max-width: 100%;
   aspect-ratio: 1;
   margin: 0 auto var(--space-4);
-  border: 0.52rem double var(--amber-300);
+  border: 0.52rem double var(--material-amber);
   border-radius: 50%;
   box-shadow:
     inset 0 0 0 0.18rem var(--surface-raised),
-    0 0 0 0.1rem var(--amber-300);
+    0 0 0 0.1rem var(--material-amber);
   transform: rotate(-2deg);
 }
 
 .result-ring.excellent {
-  border-color: var(--green-500);
+  border-color: var(--accent-success);
 }
 
 .result-ring strong {

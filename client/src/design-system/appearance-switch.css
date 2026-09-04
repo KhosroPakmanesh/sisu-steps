@@ -8,6 +8,14 @@
 
 .appearance-switch {
   --appearance-lever-angle: 0deg;
+  --metal-edge: #555956;
+  --metal-shadow: #626663;
+  --metal-mid: #8d918e;
+  --metal-light: #d1d0c9;
+  --metal-highlight: #f8f7f1;
+  --metal-groove: rgb(20 20 19 / 28%);
+  --metal-glint: rgb(255 255 255 / 38%);
+  --metal-cast-shadow: rgb(18 18 17 / 36%);
 
   position: relative;
   isolation: isolate;
@@ -29,14 +37,20 @@
   left: 50%;
   width: 1.38rem;
   height: 0.48rem;
-  border: 1px solid #555956;
+  border: 1px solid var(--metal-edge);
   border-radius: 0.12rem 0.12rem 0.04rem 0.04rem;
   background:
-    linear-gradient(180deg, #f2f0e8, #8d918e 44%, #d1d0c9 58%, #555956),
-    repeating-linear-gradient(90deg, transparent 0 0.12rem, rgb(20 20 19 / 28%) 0.13rem);
+    linear-gradient(
+      180deg,
+      var(--metal-highlight),
+      var(--metal-mid) 44%,
+      var(--metal-light) 58%,
+      var(--metal-edge)
+    ),
+    repeating-linear-gradient(90deg, transparent 0 0.12rem, var(--metal-groove) 0.13rem);
   box-shadow:
-    inset 0 0.06rem 0 rgb(255 255 255 / 42%),
-    0 0.1rem 0.1rem rgb(18 18 17 / 34%);
+    inset 0 0.06rem 0 var(--metal-glint),
+    0 0.1rem 0.1rem var(--metal-cast-shadow);
   pointer-events: none;
   transform: translateX(-50%);
 }
@@ -48,12 +62,12 @@
   left: 50%;
   width: 0.7rem;
   height: 0.7rem;
-  border: 1px solid #555956;
+  border: 1px solid var(--metal-edge);
   border-radius: 50%;
   background:
-    radial-gradient(circle at 35% 30%, #f8f7f1 0 8%, transparent 9%),
-    linear-gradient(145deg, #e8e6df, #777b78 48%, #c4c4bd);
-  box-shadow: 0 0 0 0.08rem #a5a7a2;
+    radial-gradient(circle at 35% 30%, var(--metal-highlight) 0 8%, transparent 9%),
+    linear-gradient(145deg, var(--metal-light), var(--metal-shadow) 48%, var(--metal-mid));
+  box-shadow: 0 0 0 0.08rem var(--metal-mid);
   content: '';
   transform: translateX(-50%);
 }
@@ -65,12 +79,18 @@
   left: 50%;
   width: 0.25rem;
   height: 0.76rem;
-  border: 1px solid #4d504e;
+  border: 1px solid var(--metal-edge);
   border-radius: 0.16rem 0.16rem 0.1rem 0.1rem;
-  background: linear-gradient(90deg, #626663, #f8f6ee 38%, #9b9e9a 68%, #4d504e);
+  background: linear-gradient(
+    90deg,
+    var(--metal-shadow),
+    var(--metal-highlight) 38%,
+    var(--metal-mid) 68%,
+    var(--metal-edge)
+  );
   box-shadow:
-    inset 0.04rem 0 0 rgb(255 255 255 / 34%),
-    0.06rem 0.08rem 0.08rem rgb(18 18 17 / 38%);
+    inset 0.04rem 0 0 var(--metal-glint),
+    0.06rem 0.08rem 0.08rem var(--metal-cast-shadow);
   content: '';
   transform: translateX(-50%) rotate(var(--appearance-lever-angle));
   transform-origin: 50% calc(100% - 0.08rem);

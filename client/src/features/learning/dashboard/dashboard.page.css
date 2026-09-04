@@ -32,28 +32,7 @@
 .continue-card {
   position: relative;
   padding: var(--space-6);
-  border: 1px solid var(--blue-300);
-  border-left: 0.35rem solid transparent;
   border-radius: var(--radius-large);
-  background: var(--surface-ink);
-  color: var(--text-on-ink);
-  box-shadow: var(--shadow-large);
-}
-
-.continue-card::before {
-  position: absolute;
-  top: -0.55rem;
-  right: 1.4rem;
-  width: 4.4rem;
-  height: 1.1rem;
-  background: color-mix(in srgb, var(--amber-300) 52%, transparent);
-  clip-path: polygon(3% 8%, 100% 0, 97% 100%, 0 93%);
-  content: '';
-  transform: rotate(2deg);
-}
-
-.continue-card .card-kicker {
-  color: var(--blue-200);
 }
 
 .continue-card h2 {
@@ -63,11 +42,9 @@
 
 .continue-card > p:not(.card-kicker) {
   margin-top: var(--space-2);
-  color: var(--text-on-ink-muted);
 }
 
 .continue-card .continue-topic {
-  color: var(--blue-200);
   font-size: var(--text-small);
   font-weight: var(--weight-bold);
 }
@@ -147,7 +124,7 @@
   border: 1px solid var(--border-default);
   border-top: 0.28rem solid transparent;
   border-radius: var(--radius-large);
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.95rem,
@@ -223,12 +200,6 @@
   gap: var(--space-2);
   width: 100%;
   margin-top: auto;
-}
-
-.review-action {
-  border-color: var(--amber-900);
-  background: var(--surface-warning);
-  color: var(--text-warning);
 }
 
 @container workbook (width <= 50rem) {

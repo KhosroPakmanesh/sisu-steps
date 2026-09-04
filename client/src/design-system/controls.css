@@ -136,7 +136,7 @@
 }
 
 .button.text-button {
-  --action-paper: color-mix(in srgb, var(--surface-warning) 48%, var(--surface-paper));
+  --action-paper: color-mix(in srgb, var(--surface-stationery) 48%, var(--surface-paper));
   --action-ink: var(--text-brand);
   --action-edge: var(--notebook-margin);
 
@@ -174,8 +174,6 @@
 }
 
 .subject-tab {
-  --lesson-tab: var(--blue-400);
-
   position: relative;
   border: 1px solid var(--border-default);
   border-left: 0.32rem solid transparent;
@@ -187,14 +185,6 @@
   transition:
     transform var(--motion-fast) ease,
     box-shadow var(--motion-fast) ease;
-}
-
-.subject-tab:nth-child(3n + 2) {
-  --lesson-tab: var(--green-500);
-}
-
-.subject-tab:nth-child(3n) {
-  --lesson-tab: var(--amber-400);
 }
 
 .subject-tab:hover {
@@ -270,7 +260,7 @@ input.notebook-input {
   min-height: var(--control-height);
   padding: 0.9rem 1rem 0.72rem 1.2rem;
   border: 1px solid var(--border-control);
-  border-bottom: 2px solid var(--blue-500);
+  border-bottom: 2px solid var(--border-brand-strong);
   border-radius: 0.2rem;
   background-color: var(--surface-raised);
   background-image:
@@ -317,7 +307,7 @@ input.notebook-input {
 .word-token.selected-token {
   border-style: solid;
   border-color: var(--border-brand-strong);
-  background: var(--surface-warning);
+  background: var(--surface-brand-subtle);
 }
 
 .word-token:disabled {
@@ -347,11 +337,11 @@ input.notebook-input {
 }
 
 .notebook-progress::-webkit-progress-value {
-  background: color-mix(in srgb, var(--blue-600) 82%, transparent);
+  background: color-mix(in srgb, var(--progress-brand) 82%, transparent);
 }
 
 .notebook-progress::-moz-progress-bar {
-  background: color-mix(in srgb, var(--blue-600) 82%, transparent);
+  background: color-mix(in srgb, var(--progress-brand) 82%, transparent);
 }
 
 .score-badge,

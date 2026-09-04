@@ -6,8 +6,8 @@ const STUDY = `/study/${TOPIC}/vowel-families`;
 
 async function resizeText(page: Page, pixels: number) {
   // Apply the root size before initial layout, as with a browser font preference.
-  await page.unroute('**/styles.css');
-  await page.route('**/styles.css', async (route) => {
+  await page.unroute('**/styles*.css');
+  await page.route('**/styles*.css', async (route) => {
     const response = await route.fetch();
     await route.fulfill({
       response,

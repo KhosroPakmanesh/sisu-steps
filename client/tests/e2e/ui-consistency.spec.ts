@@ -1,7 +1,9 @@
 import { expect, type Locator, type Page, test } from '@playwright/test';
 
 const TOPIC = 'vowel-harmony-kpt-tplural';
+const TOPIC_PAGE = `/topics/${TOPIC}`;
 const LESSON = `/learn/${TOPIC}/vowel-families`;
+const REVIEW_LESSON = `/learn/${TOPIC}/foundations-review`;
 const STUDY = `/study/${TOPIC}/vowel-families`;
 
 async function open(page: Page, path: string) {
@@ -44,7 +46,14 @@ async function expectEssentialTextMinimum(page: Page) {
 async function choiceGeometry(choice: Locator) {
   return choice.evaluate((element) => {
     const style = getComputedStyle(element);
-    return { padding: style.padding, gap: style.columnGap, font: style.fontSize };
+    return {
+      padding: style.padding,
+      gap: style.columnGap,
+      font: style.fontSize,
+      color: style.color,
+      background: style.backgroundColor,
+      border: style.borderColor,
+    };
   });
 }
 
@@ -103,6 +112,293 @@ for (const theme of ['Day', 'Night']) {
       await expect(appearance).toBeChecked();
     });
 
+    test('keeps semantic state surfaces distinct with readable role-specific ink', async ({
+      page,
+    }) => {
+      const palette = await page.evaluate(() => {
+        const probe = document.createElement('span');
+        document.body.append(probe);
+        const resolve = (token: string) => {
+          probe.style.color = `var(${token})`;
+          return getComputedStyle(probe).color;
+        };
+        const channels = (color: string) => {
+          const values = color
+            .match(/[\d.]+/g)!
+            .slice(0, 3)
+            .map(Number);
+          return color.startsWith('color(srgb') ? values.map((value) => value * 255) : values;
+        };
+        const luminance = (color: string) =>
+          channels(color)
+            .map((value) => {
+              const channel = value / 255;
+              return channel <= 0.04045 ? channel / 12.92 : ((channel + 0.055) / 1.055) ** 2.4;
+            })
+            .reduce((sum, value, index) => sum + value * [0.2126, 0.7152, 0.0722][index], 0);
+        const contrast = (foreground: string, background: string) => {
+          const values = [luminance(foreground), luminance(background)].sort((a, b) => b - a);
+          return (values[0] + 0.05) / (values[1] + 0.05);
+        };
+        const roles = [
+          ['--text-brand', '--surface-brand-subtle'],
+          ['--text-success', '--surface-success'],
+          ['--text-warning', '--surface-warning'],
+          ['--text-danger', '--surface-danger'],
+          ['--text-on-ink', '--surface-header'],
+        ].map(([ink, surface]) => ({ ink: resolve(ink), surface: resolve(surface) }));
+        const stationerySurface = resolve('--surface-stationery');
+        const warningSurface = resolve('--surface-warning');
+        probe.remove();
+        return {
+          contrasts: roles.map(({ ink, surface }) => contrast(ink, surface)),
+          stateSurfaces: roles.slice(0, 4).map(({ surface }) => surface),
+          stationerySurface,
+          warningSurface,
+        };
+      });
+
+      expect(new Set(palette.stateSurfaces).size).toBe(4);
+      expect(palette.warningSurface).not.toBe(palette.stationerySurface);
+      expect(Math.min(...palette.contrasts)).toBeGreaterThanOrEqual(4.5);
+    });
+
+    test('keeps shared component colours under one semantic owner', async ({ page }) => {
+      const neutralCardColours = await Promise.all(
+        ['.continue-card', '.topic-card'].map((selector) =>
+          page
+            .locator(selector)
+            .first()
+            .evaluate((element) => getComputedStyle(element).backgroundColor),
+        ),
+      );
+
+      const mistakeNoteColours: string[] = [];
+      for (const route of [LESSON, REVIEW_LESSON]) {
+        await open(page, route);
+        mistakeNoteColours.push(
+          await page
+            .locator('.mistake-notes')
+            .evaluate((element) => getComputedStyle(element).backgroundColor),
+        );
+      }
+
+      for (const route of [TOPIC_PAGE, LESSON, STUDY, '/reports', '/data']) {
+        await open(page, route);
+      }
+
+      const owners = await page.evaluate(() => {
+        const rules: CSSStyleRule[] = [];
+        const collect = (ruleList: CSSRuleList) => {
+          for (const rule of ruleList) {
+            if (rule instanceof CSSStyleRule) rules.push(rule);
+            else if ('cssRules' in rule) collect((rule as CSSGroupingRule).cssRules);
+          }
+        };
+        for (const sheet of document.styleSheets) collect(sheet.cssRules);
+
+        const selectorsWith = (selectorPart: string, properties: string[]) =>
+          rules
+            .filter(
+              (rule) =>
+                rule.selectorText.includes(selectorPart) &&
+                properties.some((property) => rule.style.getPropertyValue(property)),
+            )
+            .map((rule) => rule.selectorText);
+        const sharedFeatureSelectors = [
+          '.button',
+          '.feedback',
+          '.back-link',
+          '.notebook-progress',
+          '.spinner',
+          '.word-token',
+          '.notebook-input',
+          '.notebook-select',
+          '.subject-tab',
+          '.choice-list',
+          '.practice-choices',
+        ];
+
+        return {
+          progress: selectorsWith('notebook-progress::', ['background']),
+          reviewDirectColour: selectorsWith('review-action', [
+            'background',
+            'background-color',
+            'border-color',
+            'color',
+          ]),
+          featureBackLinkText: selectorsWith('back-link', ['color']).filter((selector) =>
+            selector.includes('[_ngcontent'),
+          ),
+          spinnerBody: selectorsWith('.spinner', ['background']).filter(
+            (selector) => !selector.includes('::'),
+          ),
+          featureSharedColour: rules
+            .filter(
+              (rule) =>
+                rule.selectorText.includes('[_ngcontent') &&
+                sharedFeatureSelectors.some((selector) => rule.selectorText.includes(selector)) &&
+                [
+                  '--action-paper',
+                  '--action-ink',
+                  '--action-edge',
+                  'background',
+                  'background-color',
+                  'border-color',
+                  'color',
+                ].some((property) => rule.style.getPropertyValue(property)),
+            )
+            .map((rule) => rule.selectorText),
+        };
+      });
+
+      expect(owners.progress).toEqual(['.notebook-progress::-webkit-progress-value']);
+      expect(owners.reviewDirectColour).toEqual([]);
+      expect(owners.featureBackLinkText).toEqual([]);
+      expect(owners.spinnerBody).toEqual(['.spinner']);
+      expect(owners.featureSharedColour).toEqual([]);
+      expect(new Set(neutralCardColours).size).toBe(1);
+      expect(new Set(mistakeNoteColours).size).toBe(1);
+    });
+
+    test('keeps repeated semantic colour roles consistent on every feature page', async ({
+      page,
+    }) => {
+      const samples = {
+        stationery: [] as { route: string; element: string; value: string }[],
+        primaryAction: [] as string[],
+        secondaryAction: [] as string[],
+        reviewAction: [] as string[],
+        dangerAction: [] as string[],
+        backLink: [] as string[],
+        sectionLabel: [] as { route: string; element: string; value: string }[],
+      };
+      const collect = async (selector: string, kind: 'action' | 'background' | 'text') =>
+        page.locator(selector).evaluateAll(
+          (elements, signatureKind) =>
+            elements
+              .filter((element) => element.getClientRects().length > 0)
+              .map((element) => {
+                const style = getComputedStyle(element);
+                if (signatureKind === 'background') return style.backgroundColor;
+                if (signatureKind === 'text') return style.color;
+                return [
+                  style.color,
+                  style.backgroundColor,
+                  style.borderTopColor,
+                  style.borderRightColor,
+                  style.borderBottomColor,
+                  style.borderLeftColor,
+                ].join('|');
+              }),
+          kind,
+        );
+      const routes: [string, string][] = [
+        ['/', '.continue-card, .topic-card'],
+        [TOPIC_PAGE, '.topic-overview, .objective-panel, .test-card:not(.review-test)'],
+        [
+          LESSON,
+          '.reader-heading, .teaching-section, .worked-examples, .lesson-vocabulary, .mistake-notes, .lesson-practice, .key-points li',
+        ],
+        [
+          REVIEW_LESSON,
+          '.reader-heading, .teaching-section, .worked-examples, .lesson-vocabulary, .mistake-notes, .lesson-practice, .key-points li',
+        ],
+        [STUDY, '.exercise-card'],
+        ['/reports', '.report-overview, .report-topic-sheet, .ledger-sheet'],
+        [
+          '/data',
+          '.data-overview, .backup-archive, .topic-file-label, .clear-ledger, .archive-number:not(.danger-number)',
+        ],
+      ];
+
+      for (const [route, stationerySelector] of routes) {
+        await open(page, route);
+        samples.stationery.push(
+          ...(await page.locator(stationerySelector).evaluateAll(
+            (elements, currentRoute) =>
+              elements
+                .filter((element) => element.getClientRects().length > 0)
+                .map((element) => ({
+                  route: currentRoute,
+                  element: `${element.tagName.toLowerCase()}.${element.className}`,
+                  value: getComputedStyle(element).backgroundColor,
+                })),
+            route,
+          )),
+        );
+        samples.primaryAction.push(...(await collect('.button.primary:not(:disabled)', 'action')));
+        samples.secondaryAction.push(
+          ...(await collect('.button.secondary:not(:disabled)', 'action')),
+        );
+        samples.reviewAction.push(
+          ...(await collect('.button.review-action:not(:disabled)', 'action')),
+        );
+        samples.dangerAction.push(...(await collect('.button.danger:not(:disabled)', 'action')));
+        samples.backLink.push(...(await collect('.back-link', 'text')));
+        samples.sectionLabel.push(
+          ...(await page.locator('.eyebrow, .card-kicker').evaluateAll(
+            (elements, currentRoute) =>
+              elements
+                .filter((element) => element.getClientRects().length > 0)
+                .map((element) => ({
+                  route: currentRoute,
+                  element: `${element.tagName.toLowerCase()}.${element.className}`,
+                  value: getComputedStyle(element).color,
+                })),
+            route,
+          )),
+        );
+      }
+
+      const stationeryToken = await page.evaluate(() => {
+        const probe = document.createElement('span');
+        probe.style.backgroundColor = 'var(--surface-stationery)';
+        document.body.append(probe);
+        const value = getComputedStyle(probe).backgroundColor;
+        probe.remove();
+        return value;
+      });
+      const sectionLabelToken = await page.evaluate(() => {
+        const probe = document.createElement('span');
+        probe.style.color = 'var(--text-brand)';
+        document.body.append(probe);
+        const value = getComputedStyle(probe).color;
+        probe.remove();
+        return value;
+      });
+      if (samples.reviewAction.length === 0) {
+        samples.reviewAction.push(
+          await page.evaluate(() => {
+            const probe = document.createElement('button');
+            probe.className = 'button review-action';
+            document.body.append(probe);
+            const style = getComputedStyle(probe);
+            const value = [
+              style.color,
+              style.backgroundColor,
+              style.borderTopColor,
+              style.borderRightColor,
+              style.borderBottomColor,
+              style.borderLeftColor,
+            ].join('|');
+            probe.remove();
+            return value;
+          }),
+        );
+      }
+      expect(samples.stationery.length).toBeGreaterThan(20);
+      expect(samples.stationery.filter(({ value }) => value !== stationeryToken)).toEqual([]);
+      expect(samples.sectionLabel.length).toBeGreaterThan(20);
+      expect(samples.sectionLabel.filter(({ value }) => value !== sectionLabelToken)).toEqual([]);
+      for (const [name, role] of Object.entries(samples).filter(
+        ([name]) => !['stationery', 'sectionLabel'].includes(name),
+      )) {
+        expect(role, `${name} should be rendered`).not.toEqual([]);
+        expect(new Set(role).size, `${name} should have one computed colour recipe`).toBe(1);
+      }
+    });
+
     test('shares instructional typography and responsive answer slips', async ({ page }) => {
       await expectEssentialTextMinimum(page);
       await open(page, LESSON);
@@ -132,13 +428,18 @@ for (const theme of ['Day', 'Night']) {
       }
       await expectEssentialTextMinimum(page);
       await page.getByRole('button', { name: 'Start optional practice', exact: true }).click();
-      const practice = await choiceGeometry(page.locator('.practice-choices label').first());
+      const practiceChoice = page.locator('.practice-choices label').first();
+      const practice = await choiceGeometry(practiceChoice);
+      await practiceChoice.click();
+      const selectedPractice = await choiceGeometry(practiceChoice);
       await open(page, STUDY);
-      const scored = await choiceGeometry(page.locator('.choice-list label').first());
+      const scoredChoice = page.locator('.choice-list label').first();
+      const scored = await choiceGeometry(scoredChoice);
       expect(scored).toEqual(practice);
       expect(scored.padding).toBe((page.viewportSize()?.width ?? 0) <= 560 ? '12px' : '16px');
       expect(scored.gap).toBe('8px');
-      await page.getByRole('radio', { name: 'back vowels', exact: true }).check();
+      await scoredChoice.click();
+      expect(await choiceGeometry(scoredChoice)).toEqual(selectedPractice);
       await expect(page.getByRole('radio', { name: 'back vowels', exact: true })).toBeChecked();
       await expectEssentialTextMinimum(page);
     });

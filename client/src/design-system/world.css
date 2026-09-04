@@ -130,7 +130,7 @@ body::before {
 }
 
 :root[data-appearance='dark'] .desk-lamp span {
-  background: color-mix(in srgb, var(--amber-300) 72%, white);
+  background: color-mix(in srgb, var(--material-amber) 72%, white);
   box-shadow:
     0 0 2.5rem 1rem rgb(255 230 164 / 82%),
     0 1.5rem 8rem 4rem rgb(255 211 112 / 50%);
@@ -143,7 +143,7 @@ body::before {
   }
 
   :root:not([data-appearance]) .desk-lamp span {
-    background: color-mix(in srgb, var(--amber-300) 72%, white);
+    background: color-mix(in srgb, var(--material-amber) 72%, white);
     box-shadow:
       0 0 2.5rem 1rem rgb(255 230 164 / 82%),
       0 1.5rem 8rem 4rem rgb(255 211 112 / 50%);
@@ -156,11 +156,15 @@ body::before {
   bottom: 4rem;
   width: 16rem;
   height: 2.4rem;
-  border: 1px solid color-mix(in srgb, var(--amber-900) 45%, transparent);
+  border: 1px solid color-mix(in srgb, var(--material-amber-ink) 45%, transparent);
   border-radius: 0.22rem;
   background:
-    repeating-linear-gradient(90deg, transparent 0 0.48rem, var(--amber-900) 0.5rem 0.53rem),
-    color-mix(in srgb, var(--amber-300) 68%, transparent);
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 0.48rem,
+      var(--material-amber-ink) 0.5rem 0.53rem
+    ),
+    color-mix(in srgb, var(--material-amber) 68%, transparent);
   box-shadow: 0 0.4rem 0.7rem var(--notebook-shadow);
   transform: rotate(-7deg);
 }
@@ -174,9 +178,9 @@ body::before {
   border-radius: 0.1rem 0 0 0.1rem;
   background: linear-gradient(
     to bottom,
-    var(--red-700) 0 22%,
-    var(--amber-300) 23% 78%,
-    var(--red-700) 79%
+    var(--red-pencil) 0 22%,
+    var(--material-amber) 23% 78%,
+    var(--red-pencil) 79%
   );
   box-shadow: 0 0.3rem 0.45rem var(--notebook-shadow);
   transform: rotate(18deg);
@@ -241,7 +245,7 @@ body::before {
   height: 0.6rem;
   border: 0;
   border-radius: 0.1rem;
-  background: linear-gradient(90deg, var(--amber-300), var(--red-700));
+  background: linear-gradient(90deg, var(--material-amber), var(--red-pencil));
   box-shadow: 0 0.2rem 0 var(--notebook-shadow);
   animation: pencil-sketch 1.2s ease-in-out infinite alternate;
 }

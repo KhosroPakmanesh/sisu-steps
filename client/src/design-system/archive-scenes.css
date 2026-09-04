@@ -1,7 +1,7 @@
 /* Data management uses a small set of labelled archive materials. */
 .topic-file-label {
   border: 1px dashed var(--border-brand);
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image:
     linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
     linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px);
@@ -17,7 +17,7 @@
   left: 15%;
   width: 4.5rem;
   height: 1rem;
-  background: color-mix(in srgb, var(--amber-300) 52%, transparent);
+  background: var(--paper-tape);
   clip-path: polygon(3% 8%, 100% 0, 97% 100%, 0 93%);
   content: '';
   transform: rotate(-2deg);
@@ -27,7 +27,7 @@
   overflow: hidden;
   border: 1px dashed var(--border-control);
   border-left: 0.32rem solid transparent;
-  background-color: var(--surface-warning);
+  background-color: var(--surface-stationery);
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 0 1.9rem,
