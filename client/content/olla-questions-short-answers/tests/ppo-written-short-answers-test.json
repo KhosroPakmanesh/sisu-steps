@@ -1,0 +1,911 @@
+{
+  "id": "ppo-written-short-answers-test",
+  "title": "Short answers with olla",
+  "focus": "Answer positive and negative olla questions with the correct viewpoint and polarity.",
+  "lessonIds": ["ppo-written-short-answers"],
+  "stage": "focused",
+  "targetSkills": ["Short answers with olla"],
+  "prerequisiteSkills": ["Plural negative olla questions"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "The question is “Oletko sinä myöhässä?” (“Are you late?”). One person answers about themself. Give the reply “Yes, I am.”",
+      "acceptedAnswers": ["Kyllä, olen."],
+      "explanation": "Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+      "options": ["Kyllä, olen.", "En ole.", "Kyllä, olet."],
+      "optionFeedback": {
+        "Kyllä, olen.": "Correct. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+        "En ole.": "“En ole.” does not fit this subject or construction. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+        "Kyllä, olet.": "“Kyllä, olet.” does not fit this subject or construction. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described."
+      },
+      "tags": ["sentence", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["myöhässä"],
+      "sentenceExplanation": {
+        "translation": "Yes, I am.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "minä takes olen"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e01",
+      "parallelExerciseId": "ppo-t15-e13"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Keep the person agreement exact. The question is “Etkö sinä ole turvassa?” (“Are you not safe?”). One person answers about themself. Give the reply “Yes, I am.”",
+      "acceptedAnswers": ["Kyllä, olen."],
+      "explanation": "Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+      "tags": ["sentence", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["turvassa"],
+      "sentenceExplanation": {
+        "translation": "Yes, I am.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "minä takes olen"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, oon."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olen.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e02",
+      "parallelExerciseId": "ppo-t15-e14"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Read the whole meaning before answering. The question is “Onko hän paikalla?” (“Is he or she present?”). The reply is about that person. Give the reply “Yes, he or she is.”",
+      "acceptedAnswers": ["Kyllä, on."],
+      "explanation": "Kyllä confirms the positive fact, and on agrees with the person who answers or is described.",
+      "tags": ["sentence", "person-han", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "Yes, he or she is.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "hän takes on"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e03",
+      "parallelExerciseId": "ppo-t15-e15"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "The question is “Eikö hän ole valmis?” (“Is he or she not ready?”). The reply is about that person. Give the reply “Yes, he or she is.”",
+      "acceptedAnswers": ["Kyllä, on."],
+      "explanation": "Kyllä confirms the positive fact, and on agrees with the person who answers or is described.",
+      "tokens": ["on.", "Kyllä,"],
+      "tags": ["sentence", "person-han", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["valmis"],
+      "sentenceExplanation": {
+        "translation": "Yes, he or she is.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "hän takes on"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e04",
+      "parallelExerciseId": "ppo-t15-e16"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "Notice who the sentence is about. The question is “Ovatko he myöhässä tänään?” (“Are they late today?”). The reply is about that group. Give the reply “Yes, they are.”",
+      "acceptedAnswers": ["Kyllä, ovat."],
+      "explanation": "Kyllä confirms the positive fact, and ovat agrees with the person who answers or is described.",
+      "options": ["Kyllä, ovat.", "Eivät ole.", "En ole."],
+      "optionFeedback": {
+        "Kyllä, ovat.": "Correct. Kyllä confirms the positive fact, and ovat agrees with the person who answers or is described.",
+        "Eivät ole.": "“Eivät ole.” does not fit this subject or construction. Kyllä confirms the positive fact, and ovat agrees with the person who answers or is described.",
+        "En ole.": "“En ole.” does not fit this subject or construction. Kyllä confirms the positive fact, and ovat agrees with the person who answers or is described."
+      },
+      "tags": ["sentence", "person-he", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["myöhässä tänään"],
+      "sentenceExplanation": {
+        "translation": "Yes, they are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "he takes ovat"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e05",
+      "parallelExerciseId": "ppo-t15-e17"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Build the form from the subject. The question is “Eivätkö he ole paikalla huomenna?” (“Are they not present tomorrow?”). The reply is about that group. Give the reply “Yes, they are.”",
+      "acceptedAnswers": ["Kyllä, ovat."],
+      "explanation": "Kyllä confirms the positive fact, and ovat agrees with the person who answers or is described.",
+      "tags": ["sentence", "person-he", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["paikalla huomenna"],
+      "sentenceExplanation": {
+        "translation": "Yes, they are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "he takes ovat"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e06",
+      "parallelExerciseId": "ppo-t15-e18"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "The question is “Oletteko te ajoissa huomenna?” (“Are you on time tomorrow?”). The addressed group answers about itself. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "Kyllä confirms the positive fact, and olemme agrees with the person who answers or is described.",
+      "tags": ["sentence", "te-plural", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["ajoissa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "me takes olemme"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, ollaan."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olemme.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e07",
+      "parallelExerciseId": "ppo-t15-e19"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "Keep the person agreement exact. The question is “Ettekö te ole täällä?” (“Are you not here?”). The addressed group answers about itself. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "Kyllä confirms the positive fact, and olemme agrees with the person who answers or is described.",
+      "tokens": ["olemme.", "Kyllä,"],
+      "tags": ["sentence", "te-plural", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "me takes olemme"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, ollaan."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olemme.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e08",
+      "parallelExerciseId": "ppo-t15-e20"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "Read the whole meaning before answering. The question is “Oletteko te siellä?” (“Are you there?”). One person addressed politely answers about themself. Give the reply “Yes, I am.”",
+      "acceptedAnswers": ["Kyllä, olen."],
+      "explanation": "Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+      "options": ["Kyllä, olen.", "En ole.", "Kyllä, olet."],
+      "optionFeedback": {
+        "Kyllä, olen.": "Correct. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+        "En ole.": "“En ole.” does not fit this subject or construction. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+        "Kyllä, olet.": "“Kyllä, olet.” does not fit this subject or construction. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described."
+      },
+      "tags": ["sentence", "te-polite", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "Yes, I am.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "minä takes olen"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e09",
+      "parallelExerciseId": "ppo-t15-e21"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "The question is “Ettekö te ole kotona?” (“Are you not at home?”). One person addressed politely answers about themself. Give the reply “Yes, I am.”",
+      "acceptedAnswers": ["Kyllä, olen."],
+      "explanation": "Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+      "tags": ["sentence", "te-polite", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "Yes, I am.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "minä takes olen"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, oon."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olen.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e10",
+      "parallelExerciseId": "ppo-t15-e22"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Notice who the sentence is about. The question is “Olemmeko me koulussa?” (“Are we at school?”). The speaker asks about their own group. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "Kyllä confirms the positive fact, and olemme agrees with the person who answers or is described.",
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "me takes olemme"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, ollaan."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olemme.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e11",
+      "parallelExerciseId": "ppo-t15-e23"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "Build the form from the subject. The question is “Emmekö me ole työssä?” (“Are we not at work?”). The speaker asks about their own group. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "Kyllä confirms the positive fact, and olemme agrees with the person who answers or is described.",
+      "tokens": ["olemme.", "Kyllä,"],
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "me takes olemme"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, ollaan."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olemme.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e12",
+      "parallelExerciseId": "ppo-t15-e24"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "Build the form from the subject. The question is “Emmekö me ole työssä?” (“Are we not at work?”). The speaker asks about their own group. Give the reply “No, we are not.”",
+      "acceptedAnswers": ["Emme ole."],
+      "explanation": "Emme carries the person agreement, and ole follows it.",
+      "tokens": ["ole.", "Emme"],
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "No, we are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Emme",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e24",
+      "parallelExerciseId": "ppo-t15-e12"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Notice who the sentence is about. The question is “Olemmeko me koulussa?” (“Are we at school?”). The speaker asks about their own group. Give the reply “No, we are not.”",
+      "acceptedAnswers": ["Emme ole."],
+      "explanation": "Emme carries the person agreement, and ole follows it.",
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "No, we are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Emme",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e23",
+      "parallelExerciseId": "ppo-t15-e11"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "The question is “Ettekö te ole kotona?” (“Are you not at home?”). One person addressed politely answers about themself. Give the reply “No, I am not.”",
+      "acceptedAnswers": ["En ole."],
+      "explanation": "En carries the person agreement, and ole follows it.",
+      "tags": ["sentence", "te-polite", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "No, I am not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "En",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e22",
+      "parallelExerciseId": "ppo-t15-e10"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "Read the whole meaning before answering. The question is “Oletteko te siellä?” (“Are you there?”). One person addressed politely answers about themself. Give the reply “No, I am not.”",
+      "acceptedAnswers": ["En ole."],
+      "explanation": "En carries the person agreement, and ole follows it.",
+      "options": ["En ole.", "Kyllä, olen.", "Kyllä, olet."],
+      "optionFeedback": {
+        "En ole.": "Correct. En carries the person agreement, and ole follows it.",
+        "Kyllä, olen.": "“Kyllä, olen.” does not fit this subject or construction. En carries the person agreement, and ole follows it.",
+        "Kyllä, olet.": "“Kyllä, olet.” does not fit this subject or construction. En carries the person agreement, and ole follows it."
+      },
+      "tags": ["sentence", "te-polite", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "No, I am not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "En",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e21",
+      "parallelExerciseId": "ppo-t15-e09"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "Keep the person agreement exact. The question is “Ettekö te ole täällä?” (“Are you not here?”). The addressed group answers about itself. Give the reply “No, we are not.”",
+      "acceptedAnswers": ["Emme ole."],
+      "explanation": "Emme carries the person agreement, and ole follows it.",
+      "tokens": ["ole.", "Emme"],
+      "tags": ["sentence", "te-plural", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "No, we are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Emme",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e20",
+      "parallelExerciseId": "ppo-t15-e08"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "The question is “Oletteko te ajoissa huomenna?” (“Are you on time tomorrow?”). The addressed group answers about itself. Give the reply “No, we are not.”",
+      "acceptedAnswers": ["Emme ole."],
+      "explanation": "Emme carries the person agreement, and ole follows it.",
+      "tags": ["sentence", "te-plural", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["ajoissa huomenna"],
+      "sentenceExplanation": {
+        "translation": "No, we are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Emme",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e19",
+      "parallelExerciseId": "ppo-t15-e07"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Build the form from the subject. The question is “Eivätkö he ole paikalla huomenna?” (“Are they not present tomorrow?”). The reply is about that group. Give the reply “No, they are not.”",
+      "acceptedAnswers": ["Eivät ole."],
+      "explanation": "Eivät carries the person agreement, and ole follows it.",
+      "tags": ["sentence", "person-he", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["paikalla huomenna"],
+      "sentenceExplanation": {
+        "translation": "No, they are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Eivät",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e18",
+      "parallelExerciseId": "ppo-t15-e06"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "Notice who the sentence is about. The question is “Ovatko he myöhässä tänään?” (“Are they late today?”). The reply is about that group. Give the reply “No, they are not.”",
+      "acceptedAnswers": ["Eivät ole."],
+      "explanation": "Eivät carries the person agreement, and ole follows it.",
+      "options": ["Eivät ole.", "Kyllä, ovat.", "En ole."],
+      "optionFeedback": {
+        "Eivät ole.": "Correct. Eivät carries the person agreement, and ole follows it.",
+        "Kyllä, ovat.": "“Kyllä, ovat.” does not fit this subject or construction. Eivät carries the person agreement, and ole follows it.",
+        "En ole.": "“En ole.” does not fit this subject or construction. Eivät carries the person agreement, and ole follows it."
+      },
+      "tags": ["sentence", "person-he", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["myöhässä tänään"],
+      "sentenceExplanation": {
+        "translation": "No, they are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Eivät",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e17",
+      "parallelExerciseId": "ppo-t15-e05"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "The question is “Eikö hän ole valmis?” (“Is he or she not ready?”). The reply is about that person. Give the reply “No, he or she is not.”",
+      "acceptedAnswers": ["Ei ole."],
+      "explanation": "Ei carries the person agreement, and ole follows it.",
+      "tokens": ["ole.", "Ei"],
+      "tags": ["sentence", "person-han", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["valmis"],
+      "sentenceExplanation": {
+        "translation": "No, he or she is not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Ei",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e16",
+      "parallelExerciseId": "ppo-t15-e04"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Read the whole meaning before answering. The question is “Onko hän paikalla?” (“Is he or she present?”). The reply is about that person. Give the reply “No, he or she is not.”",
+      "acceptedAnswers": ["Ei ole."],
+      "explanation": "Ei carries the person agreement, and ole follows it.",
+      "tags": ["sentence", "person-han", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "No, he or she is not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Ei",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e15",
+      "parallelExerciseId": "ppo-t15-e03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Keep the person agreement exact. The question is “Etkö sinä ole turvassa?” (“Are you not safe?”). One person answers about themself. Give the reply “No, I am not.”",
+      "acceptedAnswers": ["En ole."],
+      "explanation": "En carries the person agreement, and ole follows it.",
+      "tags": ["sentence", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["turvassa"],
+      "sentenceExplanation": {
+        "translation": "No, I am not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "En",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e14",
+      "parallelExerciseId": "ppo-t15-e02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "The question is “Oletko sinä myöhässä?” (“Are you late?”). One person answers about themself. Give the reply “No, I am not.”",
+      "acceptedAnswers": ["En ole."],
+      "explanation": "En carries the person agreement, and ole follows it.",
+      "options": ["En ole.", "Kyllä, olen.", "Kyllä, olet."],
+      "optionFeedback": {
+        "En ole.": "Correct. En carries the person agreement, and ole follows it.",
+        "Kyllä, olen.": "“Kyllä, olen.” does not fit this subject or construction. En carries the person agreement, and ole follows it.",
+        "Kyllä, olet.": "“Kyllä, olet.” does not fit this subject or construction. En carries the person agreement, and ole follows it."
+      },
+      "tags": ["sentence", "person-mina", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["myöhässä"],
+      "sentenceExplanation": {
+        "translation": "No, I am not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "En",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t15-e13",
+      "parallelExerciseId": "ppo-t15-e01"
+    }
+  ]
+}

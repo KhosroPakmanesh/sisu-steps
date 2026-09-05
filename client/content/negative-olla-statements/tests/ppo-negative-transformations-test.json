@@ -1,0 +1,1217 @@
+{
+  "id": "ppo-negative-transformations-test",
+  "title": "Change affirmative olla into negative",
+  "focus": "Keep the subject and context while changing only the polarity pattern.",
+  "lessonIds": ["ppo-negative-transformations"],
+  "stage": "focused",
+  "targetSkills": ["Affirmative-to-negative olla transformation"],
+  "prerequisiteSkills": ["Plural negative olla"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Change Minä olen paikalla. “I am present.” → ____ “I am not present.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Minä en ole paikalla."],
+      "explanation": "Minä changes from olen to en ole. The negative verb carries the person ending.",
+      "options": ["Minä en ole paikalla.", "Sinä et ole paikalla.", "Minä ei olen paikalla."],
+      "optionFeedback": {
+        "Minä en ole paikalla.": "Correct. Minä changes from olen to en ole. The negative verb carries the person ending.",
+        "Sinä et ole paikalla.": "“Sinä et ole paikalla.” does not fit this subject or construction. Minä changes from olen to en ole. The negative verb carries the person ending.",
+        "Minä ei olen paikalla.": "“Minä ei olen paikalla.” does not fit this subject or construction. Minä changes from olen to en ole. The negative verb carries the person ending."
+      },
+      "tags": ["sentence", "transformation", "person-mina", "negative", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "I am not present.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "En",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes the negative-verb form en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e01",
+      "parallelExerciseId": "ppo-t10-e13"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Keep the person agreement exact. Change Hän on paikalla. “He or she is present.” → ____ “He or she is not present.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Hän ei ole paikalla."],
+      "explanation": "Hän changes from on to ei ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-han", "negative", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "He or she is not present.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ei",
+            "meaning": "does not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes the negative-verb form ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e02",
+      "parallelExerciseId": "ppo-t10-e14"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Read the whole meaning before answering. Change Te olette täällä vielä. “You are still here.” → ____ “You are not still here.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Te ette ole täällä vielä."],
+      "explanation": "Te changes from olette to ette ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-te", "negative", "standard-written-finnish"],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "You are not still here.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ette",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "te takes the negative-verb form ette"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e03",
+      "parallelExerciseId": "ppo-t10-e15"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the changed sentence in the correct order.",
+      "prompt": "Change Minä olen valmis. “I am ready.” → ____ “I am not ready.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Minä en ole valmis."],
+      "explanation": "Minä changes from olen to en ole. The negative verb carries the person ending.",
+      "tokens": ["ole", "Minä", "valmis.", "en"],
+      "tags": ["sentence", "transformation", "person-mina", "negative", "standard-written-finnish"],
+      "vocabulary": ["valmis"],
+      "sentenceExplanation": {
+        "translation": "I am not ready.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "En",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes the negative-verb form en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "valmis",
+            "meaning": "ready",
+            "role": "context: tells the location or state",
+            "baseForm": "valmis",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e04",
+      "parallelExerciseId": "ppo-t10-e16"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Notice who the sentence is about. Change Hän on valmis. “He or she is ready.” → ____ “He or she is not ready.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Hän ei ole valmis."],
+      "explanation": "Hän changes from on to ei ole. The negative verb carries the person ending.",
+      "options": ["Hän ei ole valmis.", "Me emme ole valmis.", "Hän ei on valmis."],
+      "optionFeedback": {
+        "Hän ei ole valmis.": "Correct. Hän changes from on to ei ole. The negative verb carries the person ending.",
+        "Me emme ole valmis.": "“Me emme ole valmis.” does not fit this subject or construction. Hän changes from on to ei ole. The negative verb carries the person ending.",
+        "Hän ei on valmis.": "“Hän ei on valmis.” does not fit this subject or construction. Hän changes from on to ei ole. The negative verb carries the person ending."
+      },
+      "tags": ["sentence", "transformation", "person-han", "negative", "standard-written-finnish"],
+      "vocabulary": ["valmis"],
+      "sentenceExplanation": {
+        "translation": "He or she is not ready.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ei",
+            "meaning": "does not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes the negative-verb form ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "valmis",
+            "meaning": "ready",
+            "role": "context: tells the location or state",
+            "baseForm": "valmis",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e05",
+      "parallelExerciseId": "ppo-t10-e17"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Build the form from the subject. Change Te olette paikalla tänään. “You are present today.” → ____ “You are not present today.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Te ette ole paikalla tänään."],
+      "explanation": "Te changes from olette to ette ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-te", "negative", "standard-written-finnish"],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "You are not present today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ette",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "te takes the negative-verb form ette"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e06",
+      "parallelExerciseId": "ppo-t10-e18"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Change Minä olen väsynyt. “I am tired.” → ____ “I am not tired.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Minä en ole väsynyt."],
+      "explanation": "Minä changes from olen to en ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-mina", "negative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "I am not tired.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "En",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes the negative-verb form en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e07",
+      "parallelExerciseId": "ppo-t10-e19"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the changed sentence in the correct order.",
+      "prompt": "Keep the person agreement exact. Change Hän on väsynyt. “He or she is tired.” → ____ “He or she is not tired.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Hän ei ole väsynyt."],
+      "explanation": "Hän changes from on to ei ole. The negative verb carries the person ending.",
+      "tokens": ["ole", "Hän", "väsynyt.", "ei"],
+      "tags": ["sentence", "transformation", "person-han", "negative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "He or she is not tired.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ei",
+            "meaning": "does not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes the negative-verb form ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e08",
+      "parallelExerciseId": "ppo-t10-e20"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Read the whole meaning before answering. Change Te olette ajoissa nyt. “You are on time now.” → ____ “You are not on time now.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Te ette ole ajoissa nyt."],
+      "explanation": "Te changes from olette to ette ole. The negative verb carries the person ending.",
+      "options": [
+        "Te ette ole ajoissa nyt.",
+        "He eivät ole ajoissa nyt.",
+        "Te ei olette ajoissa nyt."
+      ],
+      "optionFeedback": {
+        "Te ette ole ajoissa nyt.": "Correct. Te changes from olette to ette ole. The negative verb carries the person ending.",
+        "He eivät ole ajoissa nyt.": "“He eivät ole ajoissa nyt.” does not fit this subject or construction. Te changes from olette to ette ole. The negative verb carries the person ending.",
+        "Te ei olette ajoissa nyt.": "“Te ei olette ajoissa nyt.” does not fit this subject or construction. Te changes from olette to ette ole. The negative verb carries the person ending."
+      },
+      "tags": ["sentence", "transformation", "person-te", "negative", "standard-written-finnish"],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "You are not on time now.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ette",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "te takes the negative-verb form ette"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e09",
+      "parallelExerciseId": "ppo-t10-e21"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Change Minä olen opiskelija. “I am a student.” → ____ “I am not a student.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Minä en ole opiskelija."],
+      "explanation": "Minä changes from olen to en ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-mina", "negative", "standard-written-finnish"],
+      "vocabulary": ["opiskelija"],
+      "sentenceExplanation": {
+        "translation": "I am not a student.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "En",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes the negative-verb form en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "opiskelija",
+            "meaning": "a student",
+            "role": "context: tells the location or state",
+            "baseForm": "opiskelija",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e10",
+      "parallelExerciseId": "ppo-t10-e22"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Notice who the sentence is about. Change Hän on opiskelija. “He or she is a student.” → ____ “He or she is not a student.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Hän ei ole opiskelija."],
+      "explanation": "Hän changes from on to ei ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-han", "negative", "standard-written-finnish"],
+      "vocabulary": ["opiskelija"],
+      "sentenceExplanation": {
+        "translation": "He or she is not a student.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ei",
+            "meaning": "does not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes the negative-verb form ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "opiskelija",
+            "meaning": "a student",
+            "role": "context: tells the location or state",
+            "baseForm": "opiskelija",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e11",
+      "parallelExerciseId": "ppo-t10-e23"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the changed sentence in the correct order.",
+      "prompt": "Build the form from the subject. Change Te olette siellä nyt. “You are there now.” → ____ “You are not there now.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Te ette ole siellä nyt."],
+      "explanation": "Te changes from olette to ette ole. The negative verb carries the person ending.",
+      "tokens": ["ole", "Te", "siellä nyt.", "ette"],
+      "tags": ["sentence", "transformation", "person-te", "negative", "standard-written-finnish"],
+      "vocabulary": ["siellä nyt"],
+      "sentenceExplanation": {
+        "translation": "You are not there now.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ette",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "te takes the negative-verb form ette"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "siellä nyt",
+            "meaning": "there now",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e12",
+      "parallelExerciseId": "ppo-t10-e24"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the changed sentence in the correct order.",
+      "prompt": "Build the form from the subject. Change He ovat siellä nyt. “They are there now.” → ____ “They are not there now.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["He eivät ole siellä nyt."],
+      "explanation": "He changes from ovat to eivät ole. The negative verb carries the person ending.",
+      "tokens": ["ole", "He", "siellä nyt.", "eivät"],
+      "tags": ["sentence", "transformation", "person-he", "negative", "standard-written-finnish"],
+      "vocabulary": ["siellä nyt"],
+      "sentenceExplanation": {
+        "translation": "They are not there now.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Eivät",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes the negative-verb form eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "siellä nyt",
+            "meaning": "there now",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e24",
+      "parallelExerciseId": "ppo-t10-e12"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Notice who the sentence is about. Change Me olemme siellä nyt. “We are there now.” → ____ “We are not there now.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Me emme ole siellä nyt."],
+      "explanation": "Me changes from olemme to emme ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-me", "negative", "standard-written-finnish"],
+      "vocabulary": ["siellä nyt"],
+      "sentenceExplanation": {
+        "translation": "We are not there now.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Emme",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes the negative-verb form emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "siellä nyt",
+            "meaning": "there now",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e23",
+      "parallelExerciseId": "ppo-t10-e11"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Change Sinä olet opiskelija. “You are a student.” → ____ “You are not a student.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Sinä et ole opiskelija."],
+      "explanation": "Sinä changes from olet to et ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-sina", "negative", "standard-written-finnish"],
+      "vocabulary": ["opiskelija"],
+      "sentenceExplanation": {
+        "translation": "You are not a student.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Et",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "sinä takes the negative-verb form et"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "opiskelija",
+            "meaning": "a student",
+            "role": "context: tells the location or state",
+            "baseForm": "opiskelija",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e22",
+      "parallelExerciseId": "ppo-t10-e10"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Read the whole meaning before answering. Change He ovat ajoissa nyt. “They are on time now.” → ____ “They are not on time now.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["He eivät ole ajoissa nyt."],
+      "explanation": "He changes from ovat to eivät ole. The negative verb carries the person ending.",
+      "options": [
+        "He eivät ole ajoissa nyt.",
+        "Minä en ole ajoissa nyt.",
+        "He ei ovat ajoissa nyt."
+      ],
+      "optionFeedback": {
+        "He eivät ole ajoissa nyt.": "Correct. He changes from ovat to eivät ole. The negative verb carries the person ending.",
+        "Minä en ole ajoissa nyt.": "“Minä en ole ajoissa nyt.” does not fit this subject or construction. He changes from ovat to eivät ole. The negative verb carries the person ending.",
+        "He ei ovat ajoissa nyt.": "“He ei ovat ajoissa nyt.” does not fit this subject or construction. He changes from ovat to eivät ole. The negative verb carries the person ending."
+      },
+      "tags": ["sentence", "transformation", "person-he", "negative", "standard-written-finnish"],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "They are not on time now.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Eivät",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes the negative-verb form eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e21",
+      "parallelExerciseId": "ppo-t10-e09"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the changed sentence in the correct order.",
+      "prompt": "Keep the person agreement exact. Change Me olemme ajoissa nyt. “We are on time now.” → ____ “We are not on time now.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Me emme ole ajoissa nyt."],
+      "explanation": "Me changes from olemme to emme ole. The negative verb carries the person ending.",
+      "tokens": ["ole", "Me", "ajoissa nyt.", "emme"],
+      "tags": ["sentence", "transformation", "person-me", "negative", "standard-written-finnish"],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "We are not on time now.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Emme",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes the negative-verb form emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e20",
+      "parallelExerciseId": "ppo-t10-e08"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Change Sinä olet väsynyt. “You are tired.” → ____ “You are not tired.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Sinä et ole väsynyt."],
+      "explanation": "Sinä changes from olet to et ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-sina", "negative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "You are not tired.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Et",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "sinä takes the negative-verb form et"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e19",
+      "parallelExerciseId": "ppo-t10-e07"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Build the form from the subject. Change He ovat paikalla tänään. “They are present today.” → ____ “They are not present today.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["He eivät ole paikalla tänään."],
+      "explanation": "He changes from ovat to eivät ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-he", "negative", "standard-written-finnish"],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "They are not present today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Eivät",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes the negative-verb form eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e18",
+      "parallelExerciseId": "ppo-t10-e06"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Notice who the sentence is about. Change Me olemme paikalla tänään. “We are present today.” → ____ “We are not present today.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Me emme ole paikalla tänään."],
+      "explanation": "Me changes from olemme to emme ole. The negative verb carries the person ending.",
+      "options": [
+        "Me emme ole paikalla tänään.",
+        "Te ette ole paikalla tänään.",
+        "Me ei olemme paikalla tänään."
+      ],
+      "optionFeedback": {
+        "Me emme ole paikalla tänään.": "Correct. Me changes from olemme to emme ole. The negative verb carries the person ending.",
+        "Te ette ole paikalla tänään.": "“Te ette ole paikalla tänään.” does not fit this subject or construction. Me changes from olemme to emme ole. The negative verb carries the person ending.",
+        "Me ei olemme paikalla tänään.": "“Me ei olemme paikalla tänään.” does not fit this subject or construction. Me changes from olemme to emme ole. The negative verb carries the person ending."
+      },
+      "tags": ["sentence", "transformation", "person-me", "negative", "standard-written-finnish"],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "We are not present today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Emme",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes the negative-verb form emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e17",
+      "parallelExerciseId": "ppo-t10-e05"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the changed sentence in the correct order.",
+      "prompt": "Change Sinä olet valmis. “You are ready.” → ____ “You are not ready.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Sinä et ole valmis."],
+      "explanation": "Sinä changes from olet to et ole. The negative verb carries the person ending.",
+      "tokens": ["ole", "Sinä", "valmis.", "et"],
+      "tags": ["sentence", "transformation", "person-sina", "negative", "standard-written-finnish"],
+      "vocabulary": ["valmis"],
+      "sentenceExplanation": {
+        "translation": "You are not ready.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Et",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "sinä takes the negative-verb form et"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "valmis",
+            "meaning": "ready",
+            "role": "context: tells the location or state",
+            "baseForm": "valmis",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e16",
+      "parallelExerciseId": "ppo-t10-e04"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Read the whole meaning before answering. Change He ovat täällä vielä. “They are still here.” → ____ “They are not still here.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["He eivät ole täällä vielä."],
+      "explanation": "He changes from ovat to eivät ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-he", "negative", "standard-written-finnish"],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "They are not still here.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Eivät",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes the negative-verb form eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e15",
+      "parallelExerciseId": "ppo-t10-e03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Keep the person agreement exact. Change Me olemme täällä vielä. “We are still here.” → ____ “We are not still here.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Me emme ole täällä vielä."],
+      "explanation": "Me changes from olemme to emme ole. The negative verb carries the person ending.",
+      "tags": ["sentence", "transformation", "person-me", "negative", "standard-written-finnish"],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "We are not still here.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Emme",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes the negative-verb form emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e14",
+      "parallelExerciseId": "ppo-t10-e02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Change Sinä olet paikalla. “You are present.” → ____ “You are not present.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Sinä et ole paikalla."],
+      "explanation": "Sinä changes from olet to et ole. The negative verb carries the person ending.",
+      "options": ["Sinä et ole paikalla.", "Hän ei ole paikalla.", "Sinä ei olet paikalla."],
+      "optionFeedback": {
+        "Sinä et ole paikalla.": "Correct. Sinä changes from olet to et ole. The negative verb carries the person ending.",
+        "Hän ei ole paikalla.": "“Hän ei ole paikalla.” does not fit this subject or construction. Sinä changes from olet to et ole. The negative verb carries the person ending.",
+        "Sinä ei olet paikalla.": "“Sinä ei olet paikalla.” does not fit this subject or construction. Sinä changes from olet to et ole. The negative verb carries the person ending."
+      },
+      "tags": ["sentence", "transformation", "person-sina", "negative", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "You are not present.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Et",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "sinä takes the negative-verb form et"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form not yet secure",
+      "id": "ppo-t10-e13",
+      "parallelExerciseId": "ppo-t10-e01"
+    }
+  ]
+}

@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added three source-grounded `0 - A1.3` Finnish grammar packs for personal pronouns and affirmative `olla`, negative `olla` statements, and `olla` questions with short answers. The smaller learning maps preserve all fifteen Focused lessons and tests, 520 scored exercises, 60 optional lesson-practice exercises, all five response formats, stable exercise IDs, and register, boundary, duplicate, balance, topology, labeling, and mastery-pair validation.
+
 - A custom website icon derived from the in-app warm-paper **S** brand mark, supplied as a scalable SVG favicon, multi-size ICO fallback, and Apple touch icon with local-only browser metadata.
 
 - A welcoming, plain-language free and noncommercial license, contribution guide, and one-time contributor agreement supporting issues, pull requests, and trusted direct collaborators while preserving contributor copyright and keeping the official project free.
@@ -31,6 +33,10 @@
 - Safe choice, text, and word-order correction controls.
 
 ### Changed
+
+- Replaced the fixed 200-question minimum for a grammar pack with an assessment-justified non-empty count capped at 1,000, preventing narrow coherent topics from being padded merely to reach a universal size.
+
+- Standardized every installed pack's stored learner-facing range as `0 - A1.3` and visibly labelled it `Level:` on the topic catalog, topic detail, Reports, and Data & backup surfaces without changing content versions or learner progress.
 
 - Unified the Reports results table and Data saved-test clearing list under one shared punched, ruled ledger-sheet material while preserving their existing dimensions, table/list layouts, row interactions, copy, destructive controls, confirmations, and clearing behavior.
 

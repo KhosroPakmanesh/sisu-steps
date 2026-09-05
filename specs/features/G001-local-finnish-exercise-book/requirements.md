@@ -2,9 +2,9 @@
 
 ## Functional requirements
 
-- **REQ-G001-001:** The system shall display every bundled topic pack with its title, CEFR range, objectives, and completion summary.
+- **REQ-G001-001:** The system shall display every bundled topic pack with its title, learner-facing level range, objectives, and completion summary. Every rendered range shall be introduced by the visible label `Level:`.
 - **REQ-G001-002:** The system shall display every ordinary test in its authored order and make every test immediately accessible.
-- **REQ-G001-003:** Each grammatical-topic pack shall contain between 200 and 1,000 authored scored exercises divided into named tests in authored order, with the exact total chosen according to the topic's pedagogical coverage needs.
+- **REQ-G001-003:** Each grammatical-topic pack shall contain a non-empty authored scored set of no more than 1,000 exercises divided into named tests in authored order. Its exact total shall follow the topic's pedagogical coverage needs rather than a fixed minimum or common target.
 - **REQ-G001-004:** The first topic pack shall cover Finnish vowel harmony, KPT consonant gradation, and the nominative T-plural as Pre-A1 through A1.3 grammar foundations.
 - **REQ-G001-005:** The system shall support multiple-choice, fill-in-the-blank, English-to-Finnish translation, Finnish-to-English translation, and word-order exercises.
 - **REQ-G001-006:** The system shall present one exercise at a time and show progress within the active session.
@@ -75,7 +75,7 @@
 - **REQ-G001-059:** Every scored word shall be introduced by the current focused lesson or by the transitive lesson chain for a declared prerequisite skill; an unfamiliar contextual word may be supplied with an English meaning but shall not itself determine whether the answer is correct.
 - **REQ-G001-060:** Focused exercises shall not use irregular stems, undeclared inflection, or unrelated spelling transformations unless the complete non-target form is supplied directly in the prompt.
 - **REQ-G001-061:** When the installed content-pack version differs from the version associated with local learner data, the system shall clear incompatible attempts, sessions, mistakes, and lesson completions once and store the installed version before study continues.
-- **REQ-G001-062:** The first topic pack shall describe its level as Pre-A1–A1.3 Finnish grammar foundations and shall not present its results as proof of overall CEFR proficiency.
+- **REQ-G001-062:** The first topic pack shall store the learner-facing level range `0 - A1.3` and shall not present its results as proof of overall CEFR proficiency.
 - **REQ-G001-063:** Focused production exercises shall supply the Finnish base word and its English meaning whenever recalling that word is not the assessed target.
 - **REQ-G001-064:** A multiple-choice exercise shall define an explanation for every authored option, and feedback shall display the explanation associated with the learner's selected option.
 - **REQ-G001-065:** Every scored exercise shall declare a target skill, a misconception category for an incorrect response, and a stable parallel-exercise ID when delayed mastery is supported.
@@ -161,14 +161,14 @@
 - Given a review answer is revealed, when progress is stored, then no mastery is granted and the review remains available.
 - Given completed work, when reports open, then first-attempt, independent, skipped, corrected, and mastered test summaries reflect stored learner records.
 - Given a focused lesson, when its content is validated, then it introduces at most ten scored Finnish words and its associated test supplies English meanings where vocabulary is not the target.
-- Given a valid grammatical-topic pack, when its content is validated, then it contains at least 200 and at most 1,000 scored exercises.
+- Given a valid grammatical-topic pack, when its content is validated, then it contains scored exercises, contains no more than 1,000, and is supported by a recorded pedagogical count rationale rather than a universal minimum.
 - Given a declared important grammatical skill, when the pack is validated, then at least one Focused scored exercise requires that skill.
 - Given a test after the first Review, when the pack is validated, then that test is also a Review.
 - Given a topic learning map, when tests are displayed, then they appear under separate **Focused tests** and **Reviews** headings without per-card stage or set badges, and every test remains directly accessible.
 - Given two cataloged topic packs, when the app loads, then both appear in catalog order and their tests use topic-aware lesson and study links.
-- Given progress in two packs, when one pack version changes, then only that pack's attempts, sessions, mistakes, corrections, mastery, and lesson completions are cleared.
+- Given progress in multiple packs, when one pack version changes, then only that pack's attempts, sessions, mistakes, corrections, mastery, and lesson completions are cleared.
 - Given a new pack added to the catalog, when the app initializes, then existing progress is preserved and the new pack version is recorded.
-- Given mistake or review records in two packs, when one topic action is opened, then only that topic's exercises appear.
+- Given mistake or review records in multiple packs, when one topic action is opened, then only that topic's exercises appear.
 - Given a legacy single-pack backup whose version matches the installed first pack, when it is restored, then it is migrated to the per-pack version map without losing compatible progress.
 - Given a future topic and level, when the content-creator skill is used, then a saved pre-authoring pedagogy assessment approves the blueprint before bulk exercises are written.
 - Given a completed future pack, when final validation runs, then a saved final pedagogy assessment records its disposition and blocks approval for unresolved high-impact findings.
@@ -194,3 +194,12 @@ Acceptance: the topic shows fourteen tests, with one 33-question review; its sin
 - **REQ-G001-111:** Every exercise that asks the learner to construct or complete a Finnish sentence shall display the complete intended English meaning in its prompt before submission. Finnish-to-English translation exercises are exempt because producing that English meaning is the assessed task.
 
 Acceptance: given a Finnish sentence construction or completion exercise, when the prompt appears, then its complete intended English meaning is visible before the learner responds; given a Finnish-to-English translation exercise, the learner is still asked to supply that meaning.
+
+## Personal pronouns and present-tense olla packs
+
+- **REQ-G001-112:** The installed catalog shall divide personal pronouns and present-tense `olla` into the independently versioned `personal-pronouns-affirmative-olla`, `negative-olla-statements`, and `olla-questions-short-answers` topic packs, each with the stored learner-facing level range `0 - A1.3`. Together they shall preserve exactly fifteen single-target Focused tests of 24 questions, 520 scored exercises, fifteen lessons, and 60 optional practice exercises without duplicating a stable content ID.
+- **REQ-G001-113:** `personal-pronouns-affirmative-olla` shall contain seven Focused tests and two Reviews with 242 scored exercises; `negative-olla-statements` shall contain three Focused tests and one Review with 100; and `olla-questions-short-answers` shall contain five Focused tests and two Reviews with 178. Review exercises from the former combined scope shall belong only to the pack that owns their target skill.
+- **REQ-G001-114:** The three packs shall teach the standard Finnish personal pronouns `minä`, `sinä`, `hän`, `me`, `te`, and `he`; affirmative and negative present-tense `olla`; affirmative and negative yes/no questions; and short answers. They shall exclude spoken or informal forms from prompts, options, accepted answers, examples, and lesson guidance. Typed diagnostics may name an entered spoken form only to redirect the learner to standard Finnish.
+- **REQ-G001-115:** Every Focused lesson in the three packs shall retain exactly four optional unscored practice exercises. Each pack shall use all five supported response types, maintain suitable six-person and construction coverage for its boundary, preserve complete English meanings before Finnish construction, avoid duplicate normalized tasks, and pair every scored exercise mutually with a comparable same-skill exercise that has a different surface answer. Plural and polite-singular `te` shall retain second-person plural agreement, while capital `Te` remains an optional writing convention rather than a separate grammar target.
+
+Acceptance: given a fresh browser profile, all four installed topic packs appear without a network request; the three `olla` learning maps contain 9, 4, and 7 tests respectively; all 520 scored and 60 optional exercises remain reachable once in fixed authored order; every Review follows its pack's complete Focused sequence and contains only skills owned by that pack; spoken accepted answers, cross-boundary construction tags, duplicate tasks, invalid mastery pairs, and unjustified topology changes fail content validation.

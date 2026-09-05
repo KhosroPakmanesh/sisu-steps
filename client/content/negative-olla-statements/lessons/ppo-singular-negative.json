@@ -1,0 +1,267 @@
+{
+  "id": "ppo-singular-negative",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular negative olla"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    { "finnish": "kotona illalla", "english": "at home in the evening" },
+    { "finnish": "paikalla tänään", "english": "present today" },
+    { "finnish": "siellä aamulla", "english": "there in the morning" },
+    { "finnish": "Suomessa nyt", "english": "in Finland now" },
+    { "finnish": "täällä vielä", "english": "still here" },
+    { "finnish": "työssä huomenna", "english": "at work tomorrow" },
+    { "finnish": "kotona tänään", "english": "at home today" },
+    { "finnish": "lääkäri", "english": "a doctor" },
+    { "finnish": "työssä", "english": "at work" }
+  ],
+  "title": "Singular negative olla",
+  "summary": "Form en ole, et ole, and ei ole with singular subjects.",
+  "objectives": [
+    "Choose en, et, or ei from the subject.",
+    "Place ole after the negative verb.",
+    "Build complete negative singular sentences."
+  ],
+  "sections": [
+    {
+      "title": "Finnish has a negative verb",
+      "paragraphs": [
+        "Finnish negation uses a small verb that changes with the subject. For singular persons, use en, et, and ei.",
+        "The main verb olla then appears as ole: minä en ole, sinä et ole, hän ei ole."
+      ],
+      "keyPoints": ["minä en ole", "sinä et ole", "hän ei ole"]
+    },
+    {
+      "title": "Two verb words, one negative meaning",
+      "paragraphs": [
+        "The negative verb carries person agreement. Ole follows it and does not change across these three forms.",
+        "Keep both words. A single English word such as “isn’t” still corresponds to two Finnish verb words."
+      ],
+      "keyPoints": ["negative verb + ole", "person is marked on en/et/ei", "ole stays the same"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Minä en ole myöhässä.",
+      "english": "I am not late.",
+      "steps": ["Minä selects en.", "Add ole.", "myöhässä stays unchanged."]
+    },
+    {
+      "finnish": "Sinä et ole kotona.",
+      "english": "You are not at home.",
+      "steps": ["Sinä selects et.", "Add ole before kotona."]
+    },
+    {
+      "finnish": "Hän ei ole väsynyt.",
+      "english": "He or she is not tired.",
+      "steps": ["Hän selects ei.", "Olla becomes ole after the negative verb."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use ei for every person.",
+    "Do not leave out ole.",
+    "Do not keep the affirmative form after en, et, or ei."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Read the whole meaning before answering. Build “You are not still here.”",
+      "acceptedAnswers": ["Sinä et ole täällä vielä."],
+      "explanation": "Sinä uses et ole: the negative verb marks the person and olla becomes ole.",
+      "tokens": ["täällä vielä.", "Sinä", "et", "ole"],
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-sina",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "You are not still here.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Et",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "sinä takes the negative-verb form et"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla"],
+      "id": "ppo-l08-p01"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Read the whole meaning before answering. Build “He or she is not still here.”",
+      "acceptedAnswers": ["Hän ei ole täällä vielä."],
+      "explanation": "Hän uses ei ole: the negative verb marks the person and olla becomes ole.",
+      "tokens": ["täällä vielä.", "Hän", "ei", "ole"],
+      "tags": ["lesson-practice", "sentence", "person-han", "negative", "standard-written-finnish"],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "He or she is not still here.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ei",
+            "meaning": "does not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes the negative-verb form ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla"],
+      "id": "ppo-l08-p02"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: Translate “Minä en ole paikalla tänään.” into English.",
+      "acceptedAnswers": ["I am not present today."],
+      "explanation": "Minä uses en ole: the negative verb marks the person and olla becomes ole.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "I am not present today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "En",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes the negative-verb form en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla"],
+      "id": "ppo-l08-p03"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: Translate “Sinä et ole paikalla tänään.” into English.",
+      "acceptedAnswers": ["You are not present today."],
+      "explanation": "Sinä uses et ole: the negative verb marks the person and olla becomes ole.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-sina",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "You are not present today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Et",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "sinä takes the negative-verb form et"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla"],
+      "id": "ppo-l08-p04"
+    }
+  ]
+}

@@ -1,0 +1,294 @@
+{
+  "id": "ppo-singular-affirmative",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular affirmative olla"],
+  "prerequisiteSkills": ["Pronoun reference and polite te"],
+  "introducedVocabulary": [
+    {
+      "finnish": "täällä",
+      "english": "here"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home"
+    },
+    {
+      "finnish": "koulussa",
+      "english": "at school"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland"
+    },
+    {
+      "finnish": "ajoissa",
+      "english": "on time"
+    },
+    {
+      "finnish": "myöhässä",
+      "english": "late"
+    },
+    {
+      "finnish": "valmis",
+      "english": "ready"
+    },
+    {
+      "finnish": "väsynyt",
+      "english": "tired"
+    }
+  ],
+  "title": "Singular affirmative olla",
+  "summary": "Match minä, sinä, and hän with the present-tense forms olen, olet, and on.",
+  "objectives": [
+    "Form minä olen, sinä olet, and hän on.",
+    "Use the three forms in short complete sentences.",
+    "Keep the subject and verb in the same person."
+  ],
+  "sections": [
+    {
+      "title": "Olla links a subject and information",
+      "paragraphs": [
+        "Olla means “to be”. In the present tense, its form changes according to the subject.",
+        "Use minä olen, sinä olet, and hän on. The ending tells you who the sentence is about."
+      ],
+      "keyPoints": ["minä olen", "sinä olet", "hän on"]
+    },
+    {
+      "title": "Build one complete idea",
+      "paragraphs": [
+        "Place the subject first, the matching olla form next, and a supplied location or state last.",
+        "The location or state stays unchanged in these exercises, so your only new decision is the olla form."
+      ],
+      "keyPoints": [
+        "subject + olla + context",
+        "match one person",
+        "do not change the supplied context"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Minä olen täällä.",
+      "english": "I am here.",
+      "steps": ["Minä is the subject.", "Choose olen for minä.", "täällä is the supplied location."]
+    },
+    {
+      "finnish": "Sinä olet kotona.",
+      "english": "You are at home.",
+      "steps": ["Sinä is the subject.", "Choose olet for sinä.", "kotona stays unchanged."]
+    },
+    {
+      "finnish": "Hän on valmis.",
+      "english": "He or she is ready.",
+      "steps": ["Hän is one other person.", "Choose on for hän.", "valmis states the condition."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use one olla form for every subject.",
+    "Do not add a separate word for English “am”, “are”, or “is”.",
+    "Keep hän explicit while you are learning the agreement pattern."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Notice who the sentence is about. Write “He or she is on time.” Use the explicit subject hän.",
+      "acceptedAnswers": ["Hän on ajoissa."],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa"],
+      "sentenceExplanation": {
+        "translation": "He or she is on time.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "ajoissa",
+            "meaning": "on time",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "id": "ppo-l04-p01"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Notice who the sentence is about. Write “I am on time.” Use the explicit subject minä.",
+      "acceptedAnswers": ["Minä olen ajoissa."],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa"],
+      "sentenceExplanation": {
+        "translation": "I am on time.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "ajoissa",
+            "meaning": "on time",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Minä oon ajoissa."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Minä olen ajoissa.” here."
+        }
+      ],
+      "id": "ppo-l04-p02"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build the form from the subject. Build “You are on time.”",
+      "acceptedAnswers": ["Sinä olet ajoissa."],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "tokens": ["ajoissa.", "Sinä", "olet"],
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-sina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa"],
+      "sentenceExplanation": {
+        "translation": "You are on time.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "ajoissa",
+            "meaning": "on time",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä oot ajoissa."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Sinä olet ajoissa.” here."
+        }
+      ],
+      "id": "ppo-l04-p03"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build the form from the subject. Build “He or she is on time.”",
+      "acceptedAnswers": ["Hän on ajoissa."],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tokens": ["ajoissa.", "Hän", "on"],
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa"],
+      "sentenceExplanation": {
+        "translation": "He or she is on time.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "ajoissa",
+            "meaning": "on time",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "id": "ppo-l04-p04"
+    }
+  ]
+}

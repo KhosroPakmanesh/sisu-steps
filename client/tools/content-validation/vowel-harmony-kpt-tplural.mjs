@@ -17,6 +17,8 @@ const ARRIVAL_TRANSLATIONS = [
 export function validatePack(pack) {
   const errors = [];
   const lessons = pack.lessons ?? [];
+  if (pack.level !== '0 - A1.3')
+    errors.push('vowel-harmony-kpt-tplural: level range must be 0 - A1.3');
   for (const lessonId of KPT_LESSON_IDS) {
     const lesson = lessons.find((candidate) => candidate.id === lessonId);
     if (!lesson) {

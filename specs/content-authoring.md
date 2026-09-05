@@ -15,7 +15,7 @@ Create a stable list of important skills and subpoints. For each point, record i
 
 Give every non-review grammar topic its own focused test. Its **Learn first** preparation references only the lesson or lessons that teach that test's target skill. Declare earlier skills as prerequisites without adding their lessons to the preparation list. Only review material may combine multiple previously introduced topics.
 
-Choose the scored-question total between 200 and 1,000 from the number of distinct decisions, necessary response formats, retrieval spacing, common misconceptions, and transfer needs. Do not add paraphrased filler merely to increase the count.
+Choose a non-empty scored-question total, up to 1,000, from the number of distinct decisions, necessary response formats, retrieval spacing, common misconceptions, and transfer needs. Do not add paraphrased filler to reach a common pack size.
 
 Define the complete Focused sequence first. Focused tests must collectively assess every important skill, one target at a time. Put cumulative retrieval, mixed practice, and transfer only in Reviews, and do not add a second Core/Extended classification.
 

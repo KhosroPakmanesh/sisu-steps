@@ -2,7 +2,7 @@
 
 ## Automated validation
 
-- **VAL-G003-001** (`REQ-G003-001`, `002`, `007`): Dashboard component tests verify one summary per pack, compact progress, topic links, and absence of expanded test cards.
+- **VAL-G003-001** (`REQ-G003-001`, `002`, `007`): Dashboard component tests verify one summary per pack, an explicit `Level:` label, compact progress, topic links, and absence of expanded test cards.
 - **VAL-G003-002** (`REQ-G003-003`): Query and dashboard tests verify recent valid session resume, invalid-session fallback, and the first unattempted test recommendation.
 - **VAL-G003-003** (`REQ-G003-004`, `005`): Topic-page tests verify authored test order, separate Focused/Review sections without repeated classification badges, stage and skill guidance, lesson progress, and direct lesson/test links.
 - **VAL-G003-004** (`REQ-G003-006`): Topic-page tests verify a recoverable unknown-topic state and home link.

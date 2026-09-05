@@ -40,6 +40,9 @@ describe('ReportsPage', () => {
     expect(element.querySelector('.report-topic-heading h2')?.textContent?.trim()).toBe(
       'Finnish foundations',
     );
+    expect(element.querySelector('.report-topic-heading .eyebrow')?.textContent?.trim()).toBe(
+      'Level: A1',
+    );
     expect(element.querySelector('.report-topic-sheet')).not.toBeNull();
     expect(
       element.querySelector('.report-table .report-section-heading h3')?.textContent?.trim(),

@@ -1,0 +1,1071 @@
+{
+  "id": "ppo-pronoun-presence-test",
+  "title": "Subject pronouns in sentences",
+  "focus": "Learn when a olla sentence can omit a subject pronoun and when it should remain explicit.",
+  "lessonIds": ["ppo-pronoun-presence"],
+  "stage": "focused",
+  "targetSkills": ["Subject-pronoun use"],
+  "prerequisiteSkills": ["Affirmative pronoun–verb agreement"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Which shorter sentence still means “I am in Finland tomorrow”?",
+      "acceptedAnswers": ["Olen Suomessa huomenna."],
+      "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+      "options": ["Olen Suomessa huomenna.", "Minä olen Suomessa huomenna.", "Suomessa huomenna."],
+      "optionFeedback": {
+        "Olen Suomessa huomenna.": "Correct. Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+        "Minä olen Suomessa huomenna.": "“Minä olen Suomessa huomenna.” does not fit this subject or construction. Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+        "Suomessa huomenna.": "“Suomessa huomenna.” does not fit this subject or construction. Minä can be omitted here because the ending in olen already identifies the subject in Finnish."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "I am in Finland tomorrow.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e01",
+      "parallelExerciseId": "ppo-t07-e13"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Keep the person agreement exact. Write “He or she is in Finland tomorrow.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["Hän on Suomessa huomenna."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "He or she is in Finland tomorrow.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e02",
+      "parallelExerciseId": "ppo-t07-e14"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Read the whole meaning before answering. Write “You are there.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olette siellä."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "You are there.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e03",
+      "parallelExerciseId": "ppo-t07-e15"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “I am at home in the morning.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olen kotona aamulla."],
+      "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+      "tokens": ["aamulla.", "Olen", "kotona"],
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona aamulla"],
+      "sentenceExplanation": {
+        "translation": "I am at home in the morning.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "kotona aamulla",
+            "meaning": "at home in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e04",
+      "parallelExerciseId": "ppo-t07-e16"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Notice who the sentence is about. Translate “Hän on kotona aamulla.” into English and recover the subject from the form.",
+      "acceptedAnswers": [
+        "He or she is at home in the morning.",
+        "He is at home in the morning.",
+        "She is at home in the morning."
+      ],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona aamulla"],
+      "sentenceExplanation": {
+        "translation": "He or she is at home in the morning.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "kotona aamulla",
+            "meaning": "at home in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e05",
+      "parallelExerciseId": "ppo-t07-e17"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Build the form from the subject. Which shorter sentence still means “You are at home”?",
+      "acceptedAnswers": ["Olette kotona."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "options": ["Olette kotona.", "Te olette kotona.", "Kotona."],
+      "optionFeedback": {
+        "Olette kotona.": "Correct. Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+        "Te olette kotona.": "“Te olette kotona.” does not fit this subject or construction. Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+        "Kotona.": "“Kotona.” does not fit this subject or construction. Te can be omitted here because the ending in olette already identifies the subject in Finnish."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "You are at home.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e06",
+      "parallelExerciseId": "ppo-t07-e18"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “I am here in the evening.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olen täällä illalla."],
+      "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["täällä illalla"],
+      "sentenceExplanation": {
+        "translation": "I am here in the evening.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "täällä illalla",
+            "meaning": "here in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä illalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e07",
+      "parallelExerciseId": "ppo-t07-e19"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Keep the person agreement exact. Write “He or she is here in the evening.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["Hän on täällä illalla."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["täällä illalla"],
+      "sentenceExplanation": {
+        "translation": "He or she is here in the evening.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "täällä illalla",
+            "meaning": "here in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä illalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e08",
+      "parallelExerciseId": "ppo-t07-e20"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “You are at school.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olette koulussa."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "tokens": ["koulussa.", "Olette"],
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "You are at school.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "koulussa",
+            "meaning": "at school",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e09",
+      "parallelExerciseId": "ppo-t07-e21"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Translate “Olen turvassa nyt.” into English and recover the subject from the form.",
+      "acceptedAnswers": ["I am safe now."],
+      "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["turvassa nyt"],
+      "sentenceExplanation": {
+        "translation": "I am safe now.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "turvassa nyt",
+            "meaning": "safe now",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e10",
+      "parallelExerciseId": "ppo-t07-e22"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Notice who the sentence is about. No earlier sentence names the subject. Which sentence clearly means “He or she is safe now”?",
+      "acceptedAnswers": ["Hän on turvassa nyt."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "options": ["Hän on turvassa nyt.", "On turvassa nyt.", "Turvassa nyt."],
+      "optionFeedback": {
+        "Hän on turvassa nyt.": "Correct. Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "On turvassa nyt.": "“On turvassa nyt.” does not fit this subject or construction. Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "Turvassa nyt.": "“Turvassa nyt.” does not fit this subject or construction. Hän remains explicit because a third-person olla form does not identify a unique person or group by itself."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["turvassa nyt"],
+      "sentenceExplanation": {
+        "translation": "He or she is safe now.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "turvassa nyt",
+            "meaning": "safe now",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e11",
+      "parallelExerciseId": "ppo-t07-e23"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Build the form from the subject. Write “You are at work.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olette työssä."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "You are at work.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e12",
+      "parallelExerciseId": "ppo-t07-e24"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Build the form from the subject. Write “They are at work.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["He ovat työssä."],
+      "explanation": "He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-he",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "They are at work.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e24",
+      "parallelExerciseId": "ppo-t07-e12"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Notice who the sentence is about. Which shorter sentence still means “We are at work”?",
+      "acceptedAnswers": ["Olemme työssä."],
+      "explanation": "Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+      "options": ["Olemme työssä.", "Me olemme työssä.", "Työssä."],
+      "optionFeedback": {
+        "Olemme työssä.": "Correct. Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+        "Me olemme työssä.": "“Me olemme työssä.” does not fit this subject or construction. Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+        "Työssä.": "“Työssä.” does not fit this subject or construction. Me can be omitted here because the ending in olemme already identifies the subject in Finnish."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "We are at work.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e23",
+      "parallelExerciseId": "ppo-t07-e11"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Translate “Olet turvassa nyt.” into English and recover the subject from the form.",
+      "acceptedAnswers": ["You are safe now."],
+      "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-sina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["turvassa nyt"],
+      "sentenceExplanation": {
+        "translation": "You are safe now.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "turvassa nyt",
+            "meaning": "safe now",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e22",
+      "parallelExerciseId": "ppo-t07-e10"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “They are at school.” and keep the third-person subject explicit.",
+      "acceptedAnswers": ["He ovat koulussa."],
+      "explanation": "He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tokens": ["koulussa.", "He", "ovat"],
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-he",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "They are at school.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "koulussa",
+            "meaning": "at school",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e21",
+      "parallelExerciseId": "ppo-t07-e09"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Keep the person agreement exact. Write “We are at school.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olemme koulussa."],
+      "explanation": "Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "We are at school.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "koulussa",
+            "meaning": "at school",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e20",
+      "parallelExerciseId": "ppo-t07-e08"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “You are here in the evening.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olet täällä illalla."],
+      "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-sina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["täällä illalla"],
+      "sentenceExplanation": {
+        "translation": "You are here in the evening.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "täällä illalla",
+            "meaning": "here in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä illalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e19",
+      "parallelExerciseId": "ppo-t07-e07"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Build the form from the subject. No earlier sentence names the subject. Which sentence clearly means “They are at home”?",
+      "acceptedAnswers": ["He ovat kotona."],
+      "explanation": "He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "options": ["He ovat kotona.", "Ovat kotona.", "Kotona."],
+      "optionFeedback": {
+        "He ovat kotona.": "Correct. He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "Ovat kotona.": "“Ovat kotona.” does not fit this subject or construction. He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "Kotona.": "“Kotona.” does not fit this subject or construction. He remains explicit because a third-person olla form does not identify a unique person or group by itself."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-he",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "They are at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e18",
+      "parallelExerciseId": "ppo-t07-e06"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Notice who the sentence is about. Translate “Olemme kotona.” into English and recover the subject from the form.",
+      "acceptedAnswers": ["We are at home."],
+      "explanation": "Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "We are at home.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e17",
+      "parallelExerciseId": "ppo-t07-e05"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “You are at home in the morning.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olet kotona aamulla."],
+      "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
+      "tokens": ["aamulla.", "Olet", "kotona"],
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-sina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona aamulla"],
+      "sentenceExplanation": {
+        "translation": "You are at home in the morning.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "kotona aamulla",
+            "meaning": "at home in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e16",
+      "parallelExerciseId": "ppo-t07-e04"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Read the whole meaning before answering. Write “They are there.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["He ovat siellä."],
+      "explanation": "He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-he",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "They are there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e15",
+      "parallelExerciseId": "ppo-t07-e03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Keep the person agreement exact. Write “We are there.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olemme siellä."],
+      "explanation": "Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "We are there.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e14",
+      "parallelExerciseId": "ppo-t07-e02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Which shorter sentence still means “You are in Finland tomorrow”?",
+      "acceptedAnswers": ["Olet Suomessa huomenna."],
+      "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
+      "options": ["Olet Suomessa huomenna.", "Sinä olet Suomessa huomenna.", "Suomessa huomenna."],
+      "optionFeedback": {
+        "Olet Suomessa huomenna.": "Correct. Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
+        "Sinä olet Suomessa huomenna.": "“Sinä olet Suomessa huomenna.” does not fit this subject or construction. Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
+        "Suomessa huomenna.": "“Suomessa huomenna.” does not fit this subject or construction. Sinä can be omitted here because the ending in olet already identifies the subject in Finnish."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-sina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "You are in Finland tomorrow.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-t07-e13",
+      "parallelExerciseId": "ppo-t07-e01"
+    }
+  ]
+}

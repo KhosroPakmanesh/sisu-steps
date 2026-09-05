@@ -25,7 +25,7 @@ Create a calm, local-first interactive exercise book that helps one English-spea
 ## Content policy
 
 - Each content pack declares its topic, CEFR range, learning objectives, ordered test groups, and version.
-- Each grammatical-topic pack contains between 200 and 1,000 authored scored exercises, with the exact total chosen from the topic's pedagogical coverage needs rather than a fixed default.
+- Each grammatical-topic pack contains authored scored exercises in a pedagogically justified quantity, with no fixed minimum and a maximum of 1,000. The exact total follows the topic's distinct decisions, misconception coverage, retrieval spacing, and transfer needs rather than a common target or filler.
 - Each pack declares its important grammatical skills. Focused tests collectively cover every declared important skill before any Review appears.
 - Every test is either Focused or Review. Focused tests introduce and assess one target at a time; Reviews follow the focused sequence, mix previously introduced skills, and do not introduce an undeclared grammatical requirement.
 - Every new or materially revised pack receives a Finnish-teaching pedagogy assessment twice: once before bulk authoring to approve scope, prerequisites, progression, vocabulary load, and question count, and once after authoring to audit the finished lessons, exercises, explanations, and answer model.

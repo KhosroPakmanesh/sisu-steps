@@ -3,7 +3,6 @@ import { validateLessons } from './lesson.validator';
 import { validateTests } from './test.validator';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';
 
-const MINIMUM_SCORED_EXERCISES = 200;
 const MAXIMUM_SCORED_EXERCISES = 1000;
 
 export function validateTopicPack(value: unknown): TopicPack {
@@ -38,8 +37,8 @@ export function validateTopicPack(value: unknown): TopicPack {
         : 0),
     0,
   );
-  if (scoredCount < MINIMUM_SCORED_EXERCISES || scoredCount > MAXIMUM_SCORED_EXERCISES) {
-    throw new Error('The exercise pack must contain between 200 and 1,000 scored exercises.');
+  if (scoredCount === 0 || scoredCount > MAXIMUM_SCORED_EXERCISES) {
+    throw new Error('The exercise pack must contain scored exercises and no more than 1,000.');
   }
 
   const seenIds = new Set<string>();

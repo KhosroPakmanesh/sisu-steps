@@ -1,0 +1,293 @@
+{
+  "id": "ppo-affirmative-agreement",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Affirmative pronoun–verb agreement"],
+  "prerequisiteSkills": ["Plural affirmative olla"],
+  "introducedVocabulary": [
+    {
+      "finnish": "täällä nyt",
+      "english": "here now"
+    },
+    {
+      "finnish": "kotona tänään",
+      "english": "at home today"
+    },
+    {
+      "finnish": "koulussa tänään",
+      "english": "at school today"
+    },
+    {
+      "finnish": "työssä huomenna",
+      "english": "at work tomorrow"
+    },
+    {
+      "finnish": "Suomessa nyt",
+      "english": "in Finland now"
+    },
+    {
+      "finnish": "siellä aamulla",
+      "english": "there in the morning"
+    },
+    {
+      "finnish": "kotona illalla",
+      "english": "at home in the evening"
+    },
+    {
+      "finnish": "täällä vielä",
+      "english": "still here"
+    },
+    {
+      "finnish": "paikalla tänään",
+      "english": "present today"
+    },
+    {
+      "finnish": "ajoissa nyt",
+      "english": "on time now"
+    }
+  ],
+  "title": "Affirmative agreement across all six persons",
+  "summary": "Choose the correct affirmative olla form from the complete paradigm.",
+  "objectives": [
+    "Recall all six affirmative pairs.",
+    "Contrast neighboring person forms.",
+    "Use agreement in varied short contexts."
+  ],
+  "sections": [
+    {
+      "title": "The complete affirmative set",
+      "paragraphs": [
+        "A verb paradigm is the organized set of forms for all grammatical persons. The olla paradigm is olen, olet, on, olemme, olette, ovat.",
+        "Read the subject before choosing. Similar-looking forms still belong to different people."
+      ],
+      "keyPoints": ["olen · olet · on", "olemme · olette · ovat", "one subject selects one form"]
+    },
+    {
+      "title": "Use meaning and ending together",
+      "paragraphs": [
+        "The English words am, are, and is do not map to one Finnish form. Finnish agreement also distinguishes we, plural or polite you, and they.",
+        "Check both person and number before writing the form."
+      ],
+      "keyPoints": ["person matters", "singular and plural matter", "te always takes olette here"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Minä olen työssä.",
+      "english": "I am at work.",
+      "steps": ["Find minä.", "Select olen from the six-form paradigm."]
+    },
+    {
+      "finnish": "Te olette kotona.",
+      "english": "You are at home.",
+      "steps": ["Find te.", "Select olette, including for polite singular address."]
+    },
+    {
+      "finnish": "He ovat täällä.",
+      "english": "They are here.",
+      "steps": ["Find he.", "Select ovat."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not choose from the English word “are” alone.",
+    "Do not confuse olemme and olette.",
+    "Check the subject before reading the context."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Complete “I am on time now.” Minä ____ ajoissa nyt.",
+      "acceptedAnswers": ["olen"],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "Correct. Minä takes olen, the matching present-tense form of olla.",
+        "olet": "“olet” does not fit this subject or construction. Minä takes olen, the matching present-tense form of olla.",
+        "on": "“on” does not fit this subject or construction. Minä takes olen, the matching present-tense form of olla."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "I am on time now.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "id": "ppo-l06-p01"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Complete “You are on time now.” Sinä ____ ajoissa nyt.",
+      "acceptedAnswers": ["olet"],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "“olen” does not fit this subject or construction. Sinä takes olet, the matching present-tense form of olla.",
+        "olet": "Correct. Sinä takes olet, the matching present-tense form of olla.",
+        "on": "“on” does not fit this subject or construction. Sinä takes olet, the matching present-tense form of olla."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-sina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "You are on time now.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "id": "ppo-l06-p02"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Keep the person agreement exact. Complete “He or she is on time now.” Hän ____ ajoissa nyt.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "He or she is on time now.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "id": "ppo-l06-p03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Keep the person agreement exact. Complete “We are there in the morning.” Me ____ siellä aamulla.",
+      "acceptedAnswers": ["olemme"],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä aamulla"],
+      "sentenceExplanation": {
+        "translation": "We are there in the morning.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "siellä aamulla",
+            "meaning": "there in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ollaan"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olemme” here."
+        }
+      ],
+      "id": "ppo-l06-p04"
+    }
+  ]
+}

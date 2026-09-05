@@ -150,7 +150,12 @@ test('resets version 6.0 progress when the KPT verb sentences update to version 
   await expect(page.locator('.topic-overview')).toContainText('0/13');
   expect(await learnerState(page)).toEqual({
     schemaVersion: 1,
-    contentPackVersions: { [topic]: '6.1.0' },
+    contentPackVersions: {
+      [topic]: '6.1.0',
+      'personal-pronouns-affirmative-olla': '1.0.0',
+      'negative-olla-statements': '1.0.0',
+      'olla-questions-short-answers': '1.0.0',
+    },
     attempts: [],
     sessions: [],
     unresolvedMistakeIds: [],

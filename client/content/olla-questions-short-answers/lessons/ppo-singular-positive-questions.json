@@ -1,0 +1,270 @@
+{
+  "id": "ppo-singular-positive-questions",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular affirmative olla questions"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    { "finnish": "ajoissa huomenna", "english": "on time tomorrow" },
+    { "finnish": "kotona aamulla", "english": "at home in the morning" },
+    { "finnish": "myöhässä tänään", "english": "late today" },
+    { "finnish": "opiskelija", "english": "a student" },
+    { "finnish": "paikalla huomenna", "english": "present tomorrow" },
+    { "finnish": "siellä", "english": "there" },
+    { "finnish": "täällä", "english": "here" },
+    { "finnish": "täällä illalla", "english": "here in the evening" },
+    { "finnish": "turvassa nyt", "english": "safe now" },
+    { "finnish": "väsynyt", "english": "tired" }
+  ],
+  "title": "Singular affirmative yes/no questions",
+  "summary": "Form olenko, oletko, and onko questions for singular persons.",
+  "objectives": [
+    "Attach -ko to a singular affirmative olla form.",
+    "Place the question verb before the explicit subject.",
+    "Write complete yes/no questions."
+  ],
+  "sections": [
+    {
+      "title": "Attach -ko to the verb",
+      "paragraphs": [
+        "A yes/no question can begin with the verb plus the question suffix -ko or -kö. These olla forms take -ko: olenko, oletko, onko.",
+        "The question form carries the same person agreement as the statement form."
+      ],
+      "keyPoints": ["olen + -ko = olenko", "olet + -ko = oletko", "on + -ko = onko"]
+    },
+    {
+      "title": "Question order",
+      "paragraphs": [
+        "Put the question verb first. An explicit subject follows it: Oletko sinä kotona?",
+        "The supplied context comes last and the question ends with a question mark."
+      ],
+      "keyPoints": ["question verb + subject + context", "verb comes first", "use a question mark"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Olenko minä ajoissa?",
+      "english": "Am I on time?",
+      "steps": ["Start from olen.", "Add -ko.", "Place minä after olenko."]
+    },
+    {
+      "finnish": "Oletko sinä kotona?",
+      "english": "Are you at home?",
+      "steps": ["Start from olet.", "Add -ko.", "Place sinä after oletko."]
+    },
+    {
+      "finnish": "Onko hän työssä?",
+      "english": "Is he or she at work?",
+      "steps": ["Start from on.", "Add -ko.", "Place hän after onko."]
+    }
+  ],
+  "commonMistakes": [
+    "Attach -ko to the verb, not the pronoun.",
+    "Do not keep statement word order when the question verb must lead.",
+    "Keep the person ending inside the question form."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Optional practice: Read the whole meaning before answering. Complete “Are you tired?” ____ sinä väsynyt?",
+      "acceptedAnswers": ["oletko"],
+      "explanation": "Olet takes the question suffix -ko to form oletko.",
+      "options": ["olenko", "oletko", "onko"],
+      "optionFeedback": {
+        "olenko": "“olenko” does not fit this subject or construction. Olet takes the question suffix -ko to form oletko.",
+        "oletko": "Correct. Olet takes the question suffix -ko to form oletko.",
+        "onko": "“onko” does not fit this subject or construction. Olet takes the question suffix -ko to form oletko."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-sina",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "Are you tired?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olet + -ko forms oletko"
+          },
+          {
+            "finnish": "sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla questions"],
+      "id": "ppo-l11-p01"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Optional practice: Read the whole meaning before answering. Complete “Is he or she tired?” ____ hän väsynyt?",
+      "acceptedAnswers": ["onko"],
+      "explanation": "On takes the question suffix -ko to form onko.",
+      "options": ["olenko", "oletko", "onko"],
+      "optionFeedback": {
+        "olenko": "“olenko” does not fit this subject or construction. On takes the question suffix -ko to form onko.",
+        "oletko": "“oletko” does not fit this subject or construction. On takes the question suffix -ko to form onko.",
+        "onko": "Correct. On takes the question suffix -ko to form onko."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-han",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "Is he or she tired?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "on + -ko forms onko"
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla questions"],
+      "id": "ppo-l11-p02"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Optional practice: Complete “Am I a student?” ____ minä opiskelija?",
+      "acceptedAnswers": ["olenko"],
+      "explanation": "Olen takes the question suffix -ko to form olenko.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["opiskelija"],
+      "sentenceExplanation": {
+        "translation": "Am I a student?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olenko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olen + -ko forms olenko"
+          },
+          {
+            "finnish": "minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "opiskelija",
+            "meaning": "a student",
+            "role": "context: tells the location or state",
+            "baseForm": "opiskelija",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla questions"],
+      "answerDiagnostics": [
+        {
+          "answers": ["oonks"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olenko” here."
+        }
+      ],
+      "id": "ppo-l11-p03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Optional practice: Complete “Are you a student?” ____ sinä opiskelija?",
+      "acceptedAnswers": ["oletko"],
+      "explanation": "Olet takes the question suffix -ko to form oletko.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-sina",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["opiskelija"],
+      "sentenceExplanation": {
+        "translation": "Are you a student?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olet + -ko forms oletko"
+          },
+          {
+            "finnish": "sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "opiskelija",
+            "meaning": "a student",
+            "role": "context: tells the location or state",
+            "baseForm": "opiskelija",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla questions"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ootko"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “oletko” here."
+        }
+      ],
+      "id": "ppo-l11-p04"
+    }
+  ]
+}

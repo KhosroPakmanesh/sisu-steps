@@ -1,0 +1,274 @@
+{
+  "id": "ppo-singular-negative-questions",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular negative olla questions"],
+  "prerequisiteSkills": ["Plural affirmative olla questions"],
+  "introducedVocabulary": [
+    { "finnish": "kiireinen", "english": "busy" },
+    { "finnish": "lääkäri", "english": "a doctor" },
+    { "finnish": "opettaja", "english": "a teacher" },
+    { "finnish": "paikalla", "english": "present" },
+    { "finnish": "turvassa", "english": "safe" },
+    { "finnish": "valmis", "english": "ready" }
+  ],
+  "title": "Singular negative yes/no questions",
+  "summary": "Form enkö, etkö, and eikö questions followed by ole.",
+  "objectives": [
+    "Attach -kö to the singular negative verb.",
+    "Keep ole after the subject.",
+    "Distinguish negative questions from negative statements."
+  ],
+  "sections": [
+    {
+      "title": "The suffix moves to the negative verb",
+      "paragraphs": [
+        "In a negative question, the question suffix attaches to the negative verb. The singular forms are enkö, etkö, and eikö.",
+        "The main verb remains ole and follows the explicit subject."
+      ],
+      "keyPoints": ["en + -kö = enkö", "et + -kö = etkö", "ei + -kö = eikö"]
+    },
+    {
+      "title": "Build the complete question",
+      "paragraphs": [
+        "Use negative question verb + subject + ole + context: Etkö sinä ole kotona?",
+        "The form asks whether a negative statement is true. It does not change the agreement rule."
+      ],
+      "keyPoints": ["enkö minä ole", "etkö sinä ole", "eikö hän ole"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Enkö minä ole ajoissa?",
+      "english": "Am I not on time?",
+      "steps": ["Start from en.", "Add -kö to make enkö.", "Keep ole after minä."]
+    },
+    {
+      "finnish": "Etkö sinä ole kotona?",
+      "english": "Are you not at home?",
+      "steps": ["Start from et.", "Add -kö.", "Use ole after sinä."]
+    },
+    {
+      "finnish": "Eikö hän ole työssä?",
+      "english": "Is he or she not at work?",
+      "steps": ["Start from ei.", "Add -kö.", "Keep ole after hän."]
+    }
+  ],
+  "commonMistakes": [
+    "Attach -kö to the negative verb, not to ole.",
+    "Do not omit ole.",
+    "Do not use affirmative question forms in a negative question."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Optional practice: Notice who the sentence is about. Build “Is he or she not at work today?”",
+      "acceptedAnswers": ["Eikö hän ole työssä tänään?"],
+      "explanation": "Ei takes -kö to form eikö; ole follows after the subject.",
+      "tokens": ["työssä tänään?", "Eikö", "hän", "ole"],
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-han",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "Is he or she not at work today?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "ei + -kö forms eikö"
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla questions"],
+      "id": "ppo-l13-p01"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Optional practice: Notice who the sentence is about. Build “Am I not in Finland tomorrow?”",
+      "acceptedAnswers": ["Enkö minä ole Suomessa huomenna?"],
+      "explanation": "En takes -kö to form enkö; ole follows after the subject.",
+      "tokens": ["Suomessa huomenna?", "Enkö", "minä", "ole"],
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Am I not in Finland tomorrow?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Enkö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "en + -kö forms enkö"
+          },
+          {
+            "finnish": "minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla questions"],
+      "id": "ppo-l13-p02"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Optional practice: Build the form from the subject. Translate “Etkö sinä ole Suomessa huomenna?” into English.",
+      "acceptedAnswers": ["Are you not in Finland tomorrow?"],
+      "explanation": "Et takes -kö to form etkö; ole follows after the subject.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-sina",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are you not in Finland tomorrow?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Etkö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "et + -kö forms etkö"
+          },
+          {
+            "finnish": "sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla questions"],
+      "id": "ppo-l13-p03"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Optional practice: Build the form from the subject. Translate “Eikö hän ole Suomessa huomenna?” into English.",
+      "acceptedAnswers": [
+        "Is he or she not in Finland tomorrow?",
+        "Is he not in Finland tomorrow?",
+        "Is she not in Finland tomorrow?"
+      ],
+      "explanation": "Ei takes -kö to form eikö; ole follows after the subject.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-han",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Is he or she not in Finland tomorrow?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "ei + -kö forms eikö"
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla questions"],
+      "id": "ppo-l13-p04"
+    }
+  ]
+}

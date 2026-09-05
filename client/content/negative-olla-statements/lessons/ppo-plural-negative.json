@@ -1,0 +1,257 @@
+{
+  "id": "ppo-plural-negative",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural negative olla"],
+  "prerequisiteSkills": ["Singular negative olla"],
+  "introducedVocabulary": [
+    { "finnish": "ajoissa huomenna", "english": "on time tomorrow" },
+    { "finnish": "kotona aamulla", "english": "at home in the morning" },
+    { "finnish": "myöhässä tänään", "english": "late today" },
+    { "finnish": "paikalla huomenna", "english": "present tomorrow" },
+    { "finnish": "siellä", "english": "there" },
+    { "finnish": "Suomessa huomenna", "english": "in Finland tomorrow" },
+    { "finnish": "täällä", "english": "here" },
+    { "finnish": "täällä illalla", "english": "here in the evening" },
+    { "finnish": "turvassa nyt", "english": "safe now" },
+    { "finnish": "työssä tänään", "english": "at work today" }
+  ],
+  "title": "Plural negative olla",
+  "summary": "Form emme ole, ette ole, and eivät ole with plural subjects.",
+  "objectives": [
+    "Choose emme, ette, or eivät from the subject.",
+    "Use ole after every plural negative verb.",
+    "Keep polite te aligned with ette ole."
+  ],
+  "sections": [
+    {
+      "title": "Three plural negative forms",
+      "paragraphs": [
+        "For plural persons, the negative verb forms are emme, ette, and eivät. Use me emme ole, te ette ole, and he eivät ole.",
+        "Ole stays unchanged after each negative form."
+      ],
+      "keyPoints": ["me emme ole", "te ette ole", "he eivät ole"]
+    },
+    {
+      "title": "Plural and polite te",
+      "paragraphs": [
+        "A group addressed as te uses ette ole. One person addressed politely as te also uses ette ole.",
+        "Read the pronoun before choosing between emme, ette, and eivät."
+      ],
+      "keyPoints": ["te → ette ole", "polite te keeps plural agreement", "he → eivät ole"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Me emme ole koulussa.",
+      "english": "We are not at school.",
+      "steps": ["Me selects emme.", "Add ole.", "koulussa stays fixed."]
+    },
+    {
+      "finnish": "Te ette ole myöhässä.",
+      "english": "You are not late.",
+      "steps": ["Te selects ette.", "Use the same form for polite singular te."]
+    },
+    {
+      "finnish": "He eivät ole täällä.",
+      "english": "They are not here.",
+      "steps": ["He selects eivät.", "Ole follows unchanged."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not confuse emme with ette.",
+    "Keep the dots in eivät.",
+    "Do not use singular et with plural or polite te."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “We are not at work today.” Use the explicit subject me.",
+      "acceptedAnswers": ["Me emme ole työssä tänään."],
+      "explanation": "Me uses emme ole: the negative verb marks the person and olla becomes ole.",
+      "tags": ["lesson-practice", "sentence", "person-me", "negative", "standard-written-finnish"],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "We are not at work today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Emme",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes the negative-verb form emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla"],
+      "id": "ppo-l09-p01"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “You are not at work today.” Use the explicit subject te. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["Te ette ole työssä tänään."],
+      "explanation": "Te uses ette ole: the negative verb marks the person and olla becomes ole.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "te-polite",
+        "person-te",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "You are not at work today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ette",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "te takes the negative-verb form ette"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla"],
+      "id": "ppo-l09-p02"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Keep the person agreement exact. Build “They are not at work today.”",
+      "acceptedAnswers": ["He eivät ole työssä tänään."],
+      "explanation": "He uses eivät ole: the negative verb marks the person and olla becomes ole.",
+      "tokens": ["työssä tänään.", "He", "eivät", "ole"],
+      "tags": ["lesson-practice", "sentence", "person-he", "negative", "standard-written-finnish"],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "They are not at work today.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Eivät",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes the negative-verb form eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla"],
+      "id": "ppo-l09-p03"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Keep the person agreement exact. Build “We are not in Finland tomorrow.”",
+      "acceptedAnswers": ["Me emme ole Suomessa huomenna."],
+      "explanation": "Me uses emme ole: the negative verb marks the person and olla becomes ole.",
+      "tokens": ["Suomessa huomenna.", "Me", "emme", "ole"],
+      "tags": ["lesson-practice", "sentence", "person-me", "negative", "standard-written-finnish"],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "We are not in Finland tomorrow.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Emme",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes the negative-verb form emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla"],
+      "id": "ppo-l09-p04"
+    }
+  ]
+}

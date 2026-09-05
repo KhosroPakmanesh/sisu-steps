@@ -1,0 +1,258 @@
+{
+  "id": "ppo-plural-positive-questions",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural affirmative olla questions"],
+  "prerequisiteSkills": ["Singular affirmative olla questions"],
+  "introducedVocabulary": [
+    { "finnish": "ajoissa nyt", "english": "on time now" },
+    { "finnish": "koulussa huomenna", "english": "at school tomorrow" },
+    { "finnish": "paikalla tänään", "english": "present today" },
+    { "finnish": "siellä nyt", "english": "there now" },
+    { "finnish": "Suomessa huomenna", "english": "in Finland tomorrow" },
+    { "finnish": "täällä vielä", "english": "still here" },
+    { "finnish": "työssä tänään", "english": "at work today" }
+  ],
+  "title": "Plural affirmative yes/no questions",
+  "summary": "Form olemmeko, oletteko, and ovatko questions for plural persons.",
+  "objectives": [
+    "Attach -ko to each plural affirmative form.",
+    "Keep plural person agreement inside the question word.",
+    "Use oletteko for plural and polite-singular te."
+  ],
+  "sections": [
+    {
+      "title": "Three plural question forms",
+      "paragraphs": [
+        "Begin with the matching plural olla form and add -ko: olemmeko, oletteko, ovatko.",
+        "The entire form is one word. It appears before the explicit subject pronoun."
+      ],
+      "keyPoints": ["olemmeko me", "oletteko te", "ovatko he"]
+    },
+    {
+      "title": "Te in a question",
+      "paragraphs": [
+        "Oletteko te can address a group or one person politely. The grammatical form stays plural in both cases.",
+        "Use the context to understand the social meaning; use oletteko for the grammar."
+      ],
+      "keyPoints": [
+        "plural te → oletteko",
+        "polite te → oletteko",
+        "question form remains one word"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Olemmeko me täällä?",
+      "english": "Are we here?",
+      "steps": ["Start from olemme.", "Add -ko.", "Place me next."]
+    },
+    {
+      "finnish": "Oletteko te ajoissa?",
+      "english": "Are you on time?",
+      "steps": ["Start from olette.", "Add -ko.", "The form also fits polite singular te."]
+    },
+    {
+      "finnish": "Ovatko he Suomessa?",
+      "english": "Are they in Finland?",
+      "steps": ["Start from ovat.", "Add -ko.", "Place he after the question verb."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not separate -ko from the verb.",
+    "Do not shorten oletteko when addressing one person politely.",
+    "Do not pair he with olemmeko."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Optional practice: Translate “Olemmeko me Suomessa huomenna?” into English.",
+      "acceptedAnswers": ["Are we in Finland tomorrow?"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-me",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are we in Finland tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "id": "ppo-l12-p01"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Optional practice: Translate “Oletteko te Suomessa huomenna?” into English. Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["Are you in Finland tomorrow?"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are you in Finland tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "id": "ppo-l12-p02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Optional practice: Keep the person agreement exact. Complete “Are they in Finland tomorrow?” ____ he Suomessa huomenna?",
+      "acceptedAnswers": ["ovatko"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "“olemmeko” does not fit this subject or construction. Ovat takes the question suffix -ko to form ovatko.",
+        "oletteko": "“oletteko” does not fit this subject or construction. Ovat takes the question suffix -ko to form ovatko.",
+        "ovatko": "Correct. Ovat takes the question suffix -ko to form ovatko."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-he",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are they in Finland tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "id": "ppo-l12-p03"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Optional practice: Keep the person agreement exact. Complete “Are we at home in the morning?” ____ me kotona aamulla?",
+      "acceptedAnswers": ["olemmeko"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "Correct. Olemme takes the question suffix -ko to form olemmeko.",
+        "oletteko": "“oletteko” does not fit this subject or construction. Olemme takes the question suffix -ko to form olemmeko.",
+        "ovatko": "“ovatko” does not fit this subject or construction. Olemme takes the question suffix -ko to form olemmeko."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-me",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona aamulla"],
+      "sentenceExplanation": {
+        "translation": "Are we at home in the morning?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "kotona aamulla",
+            "meaning": "at home in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "id": "ppo-l12-p04"
+    }
+  ]
+}

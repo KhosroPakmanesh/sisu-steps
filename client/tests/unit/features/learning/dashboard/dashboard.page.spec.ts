@@ -29,6 +29,7 @@ describe('DashboardPage', () => {
     expect(element.querySelectorAll('.topic-card')).toHaveLength(1);
     expect(element.querySelector('.test-card')).toBeNull();
     expect(card?.textContent).toContain('Finnish foundations');
+    expect(card?.querySelector('.card-kicker')?.textContent?.trim()).toBe('Level: A1');
     expect(card?.textContent).toContain('Tests tried');
     expect(card?.textContent).toContain('0/2');
     expect(card?.querySelector('a[href="/topics/topic"]')).toBeTruthy();

@@ -1,6 +1,16 @@
-import { expect, type Locator, test } from '@playwright/test';
+import { expect, type Locator, type Page, test } from '@playwright/test';
 
 const TOPIC_SEGMENT = 'vowel-harmony-kpt-tplural';
+
+function vowelHarmonyTopicLink(page: Page) {
+  return page.locator(`.topic-card a[href="/topics/${TOPIC_SEGMENT}"]`);
+}
+
+function vowelHarmonyReport(page: Page) {
+  return page.locator('.report-topic').filter({
+    has: page.getByRole('heading', { name: 'Vowel harmony, KPT & T-plural', exact: true }),
+  });
+}
 
 async function expectClippedPaper(locator: Locator) {
   await expect(locator).toBeVisible();
@@ -307,9 +317,9 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.goto('/');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
-  await expect(page.locator('.topic-card')).toHaveCount(1);
+  await expect(page.locator('.topic-card')).toHaveCount(4);
   await expect(page.locator('.test-card')).toHaveCount(0);
-  await page.getByRole('link', { name: 'Open topic' }).click();
+  await vowelHarmonyTopicLink(page).click();
 
   await expect(page).toHaveURL(new RegExp(`/topics/${TOPIC_SEGMENT}$`));
   await expect(page.locator('.test-card')).toHaveCount(14);
@@ -382,7 +392,7 @@ test('places focus on routed content after in-app navigation', async ({ page }) 
 
   const initialMain = page.locator('main');
   await expect(initialMain).not.toBeFocused();
-  await page.getByRole('link', { name: 'Open topic' }).click();
+  await vowelHarmonyTopicLink(page).click();
 
   const routedMain = page.locator('main');
   await expect(routedMain).toBeFocused();
@@ -472,7 +482,7 @@ test('sizes cut-paper actions to their labels across app routes', async ({ page 
     await page.setViewportSize({ width, height: 900 });
 
     await page.goto('/');
-    await expectLabelSizedAction(page.getByRole('link', { name: 'Open topic' }));
+    await expectLabelSizedAction(vowelHarmonyTopicLink(page));
 
     await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
     await expectLabelSizedAction(page.getByRole('link', { name: 'Start test now' }));
@@ -675,7 +685,7 @@ test('saves a private sticky note without leaving the workbook', async ({ page }
   await expect(page.getByRole('status')).toContainText('Note saved locally');
 
   await page.getByRole('link', { name: 'All topics' }).click();
-  await page.getByRole('link', { name: 'Open topic' }).click();
+  await vowelHarmonyTopicLink(page).click();
   await expect(page.getByRole('textbox', { name: 'Topic note' })).toHaveValue(
     'Practise front-vowel endings tomorrow.',
   );
@@ -946,7 +956,8 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
       ),
     )
     .toBeCloseTo(expectedLift, 2);
-  const reportTopicSheet = page.locator('.report-topic-sheet');
+  const reportTopic = vowelHarmonyReport(page);
+  const reportTopicSheet = reportTopic.locator('.report-topic-sheet');
   await expectClippedPaper(reportTopicSheet);
   expect(
     await reportTopicSheet.evaluate(
@@ -961,19 +972,19 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
       ),
     )
     .toBeCloseTo(expectedLift, 2);
-  await expect(page.locator('.report-table > .report-section-heading .eyebrow')).toHaveText(
+  await expect(reportTopic.locator('.report-table > .report-section-heading .eyebrow')).toHaveText(
     'Test history',
   );
-  await expect(page.locator('.report-table > .report-section-heading h3')).toHaveText(
+  await expect(reportTopic.locator('.report-table > .report-section-heading h3')).toHaveText(
     'Results by test',
   );
-  await expect(page.locator('.report-table > .report-section-heading > p')).toHaveCount(0);
-  await expect(page.locator('.table-heading')).toHaveCount(0);
-  await expect(page.locator('.ledger-sheet table')).toHaveCount(1);
+  await expect(reportTopic.locator('.report-table > .report-section-heading > p')).toHaveCount(0);
+  await expect(reportTopic.locator('.table-heading')).toHaveCount(0);
+  await expect(reportTopic.locator('.ledger-sheet table')).toHaveCount(1);
   await expect(page.getByRole('heading', { name: 'Learning by skill' })).toHaveCount(0);
   await expect(page.getByRole('checkbox', { name: /Show studied tests only/ })).toHaveCount(0);
-  await expectClippedPaper(page.locator('.report-ledger'));
-  const firstReportRow = page.locator('.report-row').first();
+  await expectClippedPaper(reportTopic.locator('.report-ledger'));
+  const firstReportRow = reportTopic.locator('.report-row').first();
   const restingRowSurface = await firstReportRow.locator('th').evaluate((element) => ({
     background: getComputedStyle(element).backgroundColor,
     shadow: getComputedStyle(element).boxShadow,
@@ -996,14 +1007,14 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     })),
   ).toEqual(restingRowSurface);
   if ((page.viewportSize()?.width ?? 0) > 650) {
-    await expect(page.locator('.report-column-heading span')).toHaveText([
+    await expect(reportTopic.locator('.report-column-heading span')).toHaveText([
       'Test',
       'First',
       'Latest',
       'Best',
       'Average',
     ]);
-    await expectClippedPaper(page.locator('.report-column-heading'));
+    await expectClippedPaper(reportTopic.locator('.report-column-heading'));
     const ledgerAlignment = await page.evaluate(() => {
       const centers = (selector: string) =>
         [...document.querySelectorAll(selector)].map((element) => {
@@ -1022,7 +1033,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     expect(ledgerAlignment.leftEdgeDelta).toBeLessThanOrEqual(1);
     expect(Math.max(...ledgerAlignment.valueDeltas)).toBeLessThanOrEqual(2);
   } else {
-    await expect(page.locator('.report-column-heading')).toBeHidden();
+    await expect(reportTopic.locator('.report-column-heading')).toBeHidden();
   }
   const mistakeCta = page.locator('.mistake-cta');
   await expect(mistakeCta).toContainText('Turn errors into patterns');
@@ -1060,7 +1071,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(1);
+  await expect(page.locator('.topic-card')).toHaveCount(4);
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation).toContainText('Data');
   await expect(primaryNavigation.getByRole('link')).toHaveCount(3);
@@ -1081,7 +1092,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
     true,
   );
 
-  await page.getByRole('link', { name: 'Open topic' }).click();
+  await vowelHarmonyTopicLink(page).click();
   await expect(page.locator('.test-card').first()).toBeVisible();
   await expect(
     page.locator('.test-card').first().getByRole('link', { name: 'Learn first' }),
@@ -1163,14 +1174,15 @@ test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => 
   await page.goto('/reports');
 
   await expect(page.getByRole('heading', { name: 'Reports', exact: true })).toBeVisible();
-  await expect(page.getByRole('region', { name: /results by test/i })).toBeVisible();
+  const reportTopic = vowelHarmonyReport(page);
+  await expect(reportTopic.getByRole('region', { name: /results by test/i })).toBeVisible();
   await expect(page.locator('.reports-hero .back-link + .eyebrow')).toBeVisible();
   await expect(page.locator('.report-overview')).toBeVisible();
-  await expect(page.locator('.report-ledger .semantic-ledger-head')).toHaveCSS(
+  await expect(reportTopic.locator('.report-ledger .semantic-ledger-head')).toHaveCSS(
     'clip-path',
     'inset(50%)',
   );
-  const firstReportRow = page.locator('.report-row').first();
+  const firstReportRow = reportTopic.locator('.report-row').first();
   await expect(firstReportRow).toBeVisible();
   await expect(firstReportRow.locator('td')).toHaveCount(4);
   expect(
@@ -1477,7 +1489,7 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     )
     .toBe('none');
 
-  await page.getByRole('link', { name: 'Open topic' }).click();
+  await vowelHarmonyTopicLink(page).click();
   await expect(page.getByRole('heading', { name: 'Lessons and tests' })).toBeVisible();
   for (const surface of [
     page.locator('.objective-panel'),

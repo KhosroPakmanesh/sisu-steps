@@ -1,0 +1,1098 @@
+{
+  "id": "ppo-plural-affirmative-test",
+  "title": "Plural affirmative olla",
+  "focus": "Match me, te, and he with olemme, olette, and ovat.",
+  "lessonIds": ["ppo-plural-affirmative"],
+  "stage": "focused",
+  "targetSkills": ["Plural affirmative olla"],
+  "prerequisiteSkills": ["Singular affirmative olla"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Complete “We are at home.” Me ____ kotona.",
+      "acceptedAnswers": ["olemme"],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "options": ["olemme", "olette", "ovat"],
+      "optionFeedback": {
+        "olemme": "Correct. Me takes olemme, the matching present-tense form of olla.",
+        "olette": "“olette” does not fit this subject or construction. Me takes olemme, the matching present-tense form of olla.",
+        "ovat": "“ovat” does not fit this subject or construction. Me takes olemme, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "We are at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e01",
+      "parallelExerciseId": "ppo-t05-e13"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Keep the person agreement exact. Complete “They are at home.” He ____ kotona.",
+      "acceptedAnswers": ["ovat"],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "They are at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e02",
+      "parallelExerciseId": "ppo-t05-e14"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Read the whole meaning before answering. Write “You are at school.” Use the explicit subject te. Address more than one person with te.",
+      "acceptedAnswers": ["Te olette koulussa."],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tags": ["sentence", "te-plural", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "You are at school.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "koulussa",
+            "meaning": "at school",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Te ootte koulussa."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Te olette koulussa.” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e03",
+      "parallelExerciseId": "ppo-t05-e15"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “We are at work.”",
+      "acceptedAnswers": ["Me olemme työssä."],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tokens": ["työssä.", "Me", "olemme"],
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "We are at work.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Me ollaan työssä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Me olemme työssä.” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e04",
+      "parallelExerciseId": "ppo-t05-e16"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Notice who the sentence is about. Translate “He ovat työssä.” into English.",
+      "acceptedAnswers": ["They are at work."],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "They are at work.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e05",
+      "parallelExerciseId": "ppo-t05-e17"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Build the form from the subject. Complete “You are in Finland.” Te ____ Suomessa. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["olette"],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "options": ["olemme", "olette", "ovat"],
+      "optionFeedback": {
+        "olemme": "“olemme” does not fit this subject or construction. Te takes olette, the matching present-tense form of olla.",
+        "olette": "Correct. Te takes olette, the matching present-tense form of olla.",
+        "ovat": "“ovat” does not fit this subject or construction. Te takes olette, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["Suomessa"],
+      "sentenceExplanation": {
+        "translation": "You are in Finland.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "Suomessa",
+            "meaning": "in Finland",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e06",
+      "parallelExerciseId": "ppo-t05-e18"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “We are on time.” Me ____ ajoissa.",
+      "acceptedAnswers": ["olemme"],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["ajoissa"],
+      "sentenceExplanation": {
+        "translation": "We are on time.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "ajoissa",
+            "meaning": "on time",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ollaan"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olemme” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e07",
+      "parallelExerciseId": "ppo-t05-e19"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Keep the person agreement exact. Write “They are on time.” Use the explicit subject he.",
+      "acceptedAnswers": ["He ovat ajoissa."],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["ajoissa"],
+      "sentenceExplanation": {
+        "translation": "They are on time.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "ajoissa",
+            "meaning": "on time",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e08",
+      "parallelExerciseId": "ppo-t05-e20"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “You are late.” Address more than one person with te.",
+      "acceptedAnswers": ["Te olette myöhässä."],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tokens": ["myöhässä.", "Te", "olette"],
+      "tags": ["sentence", "te-plural", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["myöhässä"],
+      "sentenceExplanation": {
+        "translation": "You are late.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "myöhässä",
+            "meaning": "late",
+            "role": "context: tells the location or state",
+            "baseForm": "myöhässä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Te ootte myöhässä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Te olette myöhässä.” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e09",
+      "parallelExerciseId": "ppo-t05-e21"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Translate “Me olemme turvassa.” into English.",
+      "acceptedAnswers": ["We are safe."],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["turvassa"],
+      "sentenceExplanation": {
+        "translation": "We are safe.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "turvassa",
+            "meaning": "safe",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e10",
+      "parallelExerciseId": "ppo-t05-e22"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Notice who the sentence is about. Complete “They are safe.” He ____ turvassa.",
+      "acceptedAnswers": ["ovat"],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "options": ["olemme", "olette", "ovat"],
+      "optionFeedback": {
+        "olemme": "“olemme” does not fit this subject or construction. He takes ovat, the matching present-tense form of olla.",
+        "olette": "“olette” does not fit this subject or construction. He takes ovat, the matching present-tense form of olla.",
+        "ovat": "Correct. He takes ovat, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["turvassa"],
+      "sentenceExplanation": {
+        "translation": "They are safe.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "turvassa",
+            "meaning": "safe",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e11",
+      "parallelExerciseId": "ppo-t05-e23"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Build the form from the subject. Complete “You are present.” Te ____ paikalla. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["olette"],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "You are present.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ootte"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olette” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e12",
+      "parallelExerciseId": "ppo-t05-e24"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Build the form from the subject. Complete “They are present.” He ____ paikalla.",
+      "acceptedAnswers": ["ovat"],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "They are present.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e24",
+      "parallelExerciseId": "ppo-t05-e12"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Notice who the sentence is about. Complete “We are present.” Me ____ paikalla.",
+      "acceptedAnswers": ["olemme"],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "options": ["olemme", "olette", "ovat"],
+      "optionFeedback": {
+        "olemme": "Correct. Me takes olemme, the matching present-tense form of olla.",
+        "olette": "“olette” does not fit this subject or construction. Me takes olemme, the matching present-tense form of olla.",
+        "ovat": "“ovat” does not fit this subject or construction. Me takes olemme, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "We are present.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e23",
+      "parallelExerciseId": "ppo-t05-e11"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Translate “Te olette turvassa.” into English. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["You are safe."],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["turvassa"],
+      "sentenceExplanation": {
+        "translation": "You are safe.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "turvassa",
+            "meaning": "safe",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e22",
+      "parallelExerciseId": "ppo-t05-e10"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “They are late.”",
+      "acceptedAnswers": ["He ovat myöhässä."],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tokens": ["myöhässä.", "He", "ovat"],
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["myöhässä"],
+      "sentenceExplanation": {
+        "translation": "They are late.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "myöhässä",
+            "meaning": "late",
+            "role": "context: tells the location or state",
+            "baseForm": "myöhässä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e21",
+      "parallelExerciseId": "ppo-t05-e09"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Keep the person agreement exact. Write “We are late.” Use the explicit subject me.",
+      "acceptedAnswers": ["Me olemme myöhässä."],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["myöhässä"],
+      "sentenceExplanation": {
+        "translation": "We are late.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "myöhässä",
+            "meaning": "late",
+            "role": "context: tells the location or state",
+            "baseForm": "myöhässä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Me ollaan myöhässä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Me olemme myöhässä.” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e20",
+      "parallelExerciseId": "ppo-t05-e08"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “You are on time.” Te ____ ajoissa. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["olette"],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["ajoissa"],
+      "sentenceExplanation": {
+        "translation": "You are on time.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "ajoissa",
+            "meaning": "on time",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ootte"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olette” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e19",
+      "parallelExerciseId": "ppo-t05-e07"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Build the form from the subject. Complete “They are in Finland.” He ____ Suomessa.",
+      "acceptedAnswers": ["ovat"],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "options": ["olemme", "olette", "ovat"],
+      "optionFeedback": {
+        "olemme": "“olemme” does not fit this subject or construction. He takes ovat, the matching present-tense form of olla.",
+        "olette": "“olette” does not fit this subject or construction. He takes ovat, the matching present-tense form of olla.",
+        "ovat": "Correct. He takes ovat, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["Suomessa"],
+      "sentenceExplanation": {
+        "translation": "They are in Finland.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "Suomessa",
+            "meaning": "in Finland",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e18",
+      "parallelExerciseId": "ppo-t05-e06"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Notice who the sentence is about. Translate “Me olemme Suomessa.” into English.",
+      "acceptedAnswers": ["We are in Finland."],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["Suomessa"],
+      "sentenceExplanation": {
+        "translation": "We are in Finland.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "Suomessa",
+            "meaning": "in Finland",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e17",
+      "parallelExerciseId": "ppo-t05-e05"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “You are at work.” Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["Te olette työssä."],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tokens": ["työssä.", "Te", "olette"],
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["työssä"],
+      "sentenceExplanation": {
+        "translation": "You are at work.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Te ootte työssä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Te olette työssä.” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e16",
+      "parallelExerciseId": "ppo-t05-e04"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Read the whole meaning before answering. Write “They are at school.” Use the explicit subject he.",
+      "acceptedAnswers": ["He ovat koulussa."],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "They are at school.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "koulussa",
+            "meaning": "at school",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e15",
+      "parallelExerciseId": "ppo-t05-e03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Keep the person agreement exact. Complete “We are at school.” Me ____ koulussa.",
+      "acceptedAnswers": ["olemme"],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["koulussa"],
+      "sentenceExplanation": {
+        "translation": "We are at school.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "koulussa",
+            "meaning": "at school",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ollaan"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olemme” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e14",
+      "parallelExerciseId": "ppo-t05-e02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Complete “You are at home.” Te ____ kotona. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["olette"],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "options": ["olemme", "olette", "ovat"],
+      "optionFeedback": {
+        "olemme": "“olemme” does not fit this subject or construction. Te takes olette, the matching present-tense form of olla.",
+        "olette": "Correct. Te takes olette, the matching present-tense form of olla.",
+        "ovat": "“ovat” does not fit this subject or construction. Te takes olette, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "You are at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
+      "misconceptionCategory": "Plural affirmative olla: form not yet secure",
+      "id": "ppo-t05-e13",
+      "parallelExerciseId": "ppo-t05-e01"
+    }
+  ]
+}

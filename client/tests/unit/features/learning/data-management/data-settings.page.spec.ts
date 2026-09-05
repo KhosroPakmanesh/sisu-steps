@@ -56,6 +56,9 @@ describe('DataSettingsPage', () => {
       element.querySelector('[aria-labelledby="history-heading"].history-section'),
     ).not.toBeNull();
     expect(element.querySelector('.topic-file-label')).not.toBeNull();
+    expect(element.querySelector('.topic-file-label .eyebrow')?.textContent?.trim()).toBe(
+      'Level: A1 · Topic archive',
+    );
     expect(element.querySelectorAll('.clear-row')).toHaveLength(2);
     expect(element.querySelector('.backup-archive .clear-all-action-row')).not.toBeNull();
     expect(element.querySelector('.clear-all-slip')).toBeNull();

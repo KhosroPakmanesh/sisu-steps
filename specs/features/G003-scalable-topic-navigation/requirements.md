@@ -2,7 +2,7 @@
 
 ## Functional requirements
 
-- **REQ-G003-001:** The home route shall present every installed topic pack once as a compact summary with its title, level, summary, objectives, test progress, lesson progress, overall topic average, and prominent optional review status.
+- **REQ-G003-001:** The home route shall present every installed topic pack once as a compact summary with its title, level visibly introduced by `Level:`, summary, objectives, test progress, lesson progress, overall topic average, and prominent optional review status.
 - **REQ-G003-002:** The home route shall not render the full test sequence or lesson teaching content for any topic pack.
 - **REQ-G003-003:** The home route shall provide one prominent continue-learning action that resumes the most recently updated valid saved session or, when no session exists, starts the first test that has not yet been attempted.
 - **REQ-G003-004:** Selecting a topic pack shall open `/topics/:topicId`, where the pack's objectives and every authored test appear in order.
@@ -19,7 +19,7 @@
 ## Acceptance criteria
 
 - Given one installed pack, when home opens, then one topic card and no test cards or lesson bodies are present.
-- Given two installed packs, when home opens, then two topic cards are present and each opens only its own topic route.
+- Given multiple installed packs, when home opens, then one topic card per pack is present and each opens only its own topic route.
 - Given a saved test session, when home opens, then the continue-learning action resumes that session.
 - Given no saved session and an unattempted test, when home opens, then the continue-learning action starts the first unattempted test in catalog and authored order.
 - Given a valid topic ID, when its topic page opens, then all tests appear in authored order with separate lesson and study actions.

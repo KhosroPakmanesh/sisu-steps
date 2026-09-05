@@ -1,0 +1,274 @@
+{
+  "id": "ppo-plural-negative-questions",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural negative olla questions"],
+  "prerequisiteSkills": ["Singular negative olla questions"],
+  "introducedVocabulary": [
+    { "finnish": "ajoissa", "english": "on time" },
+    { "finnish": "kotona", "english": "at home" },
+    { "finnish": "koulussa", "english": "at school" },
+    { "finnish": "koulussa tänään", "english": "at school today" },
+    { "finnish": "myöhässä", "english": "late" },
+    { "finnish": "Suomessa", "english": "in Finland" },
+    { "finnish": "työssä", "english": "at work" },
+    { "finnish": "työssä huomenna", "english": "at work tomorrow" }
+  ],
+  "title": "Plural negative yes/no questions",
+  "summary": "Form emmekö, ettekö, and eivätkö questions followed by ole.",
+  "objectives": [
+    "Attach -kö to each plural negative verb.",
+    "Keep the plural person contrast clear.",
+    "Use ettekö for plural and polite-singular te."
+  ],
+  "sections": [
+    {
+      "title": "Three plural negative question forms",
+      "paragraphs": [
+        "The plural negative verb also takes -kö: emmekö, ettekö, eivätkö.",
+        "Use ole after the explicit subject: Eivätkö he ole täällä?"
+      ],
+      "keyPoints": ["emme + -kö = emmekö", "ette + -kö = ettekö", "eivät + -kö = eivätkö"]
+    },
+    {
+      "title": "Agreement stays visible",
+      "paragraphs": [
+        "The beginning of the question still tells you who the subject is. Match me with emmekö, te with ettekö, and he with eivätkö.",
+        "Polite singular te keeps the same ettekö form as plural te."
+      ],
+      "keyPoints": ["emmekö me ole", "ettekö te ole", "eivätkö he ole"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Emmekö me ole täällä?",
+      "english": "Are we not here?",
+      "steps": ["Start from emme.", "Add -kö.", "Keep ole after me."]
+    },
+    {
+      "finnish": "Ettekö te ole ajoissa?",
+      "english": "Are you not on time?",
+      "steps": ["Start from ette.", "Add -kö.", "The form also fits polite singular te."]
+    },
+    {
+      "finnish": "Eivätkö he ole koulussa?",
+      "english": "Are they not at school?",
+      "steps": ["Start from eivät.", "Add -kö.", "Keep ole after he."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not confuse emmekö and ettekö.",
+    "Keep ä in eivätkö.",
+    "Do not switch polite te to a singular negative form."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "Optional practice: Read the whole meaning before answering. Write “Are you not at school today?” Use the explicit subject te. Address a group with te.",
+      "acceptedAnswers": ["Ettekö te ole koulussa tänään?"],
+      "explanation": "Ette takes -kö to form ettekö; ole follows after the subject.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "te-plural",
+        "person-te",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa tänään"],
+      "sentenceExplanation": {
+        "translation": "Are you not at school today?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Ettekö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "ette + -kö forms ettekö"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "koulussa tänään",
+            "meaning": "at school today",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "id": "ppo-l14-p01"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "Optional practice: Read the whole meaning before answering. Write “Are they not at school today?” Use the explicit subject he.",
+      "acceptedAnswers": ["Eivätkö he ole koulussa tänään?"],
+      "explanation": "Eivät takes -kö to form eivätkö; ole follows after the subject.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-he",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa tänään"],
+      "sentenceExplanation": {
+        "translation": "Are they not at school today?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Eivätkö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "eivät + -kö forms eivätkö"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "koulussa tänään",
+            "meaning": "at school today",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "id": "ppo-l14-p02"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Optional practice: Build “Are we not at work tomorrow?”",
+      "acceptedAnswers": ["Emmekö me ole työssä huomenna?"],
+      "explanation": "Emme takes -kö to form emmekö; ole follows after the subject.",
+      "tokens": ["työssä huomenna?", "Emmekö", "me", "ole"],
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-me",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are we not at work tomorrow?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Emmekö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "emme + -kö forms emmekö"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "työssä huomenna",
+            "meaning": "at work tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "id": "ppo-l14-p03"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Optional practice: Build “Are you not at work tomorrow?” Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["Ettekö te ole työssä huomenna?"],
+      "explanation": "Ette takes -kö to form ettekö; ole follows after the subject.",
+      "tokens": ["työssä huomenna?", "Ettekö", "te", "ole"],
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "te-polite",
+        "person-te",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are you not at work tomorrow?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Ettekö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "ette + -kö forms ettekö"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "työssä huomenna",
+            "meaning": "at work tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "id": "ppo-l14-p04"
+    }
+  ]
+}

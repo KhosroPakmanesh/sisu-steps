@@ -1,0 +1,237 @@
+{
+  "id": "ppo-written-short-answers",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Short answers with olla"],
+  "prerequisiteSkills": ["Plural negative olla questions"],
+  "introducedVocabulary": [
+    { "finnish": "kotona illalla", "english": "at home in the evening" },
+    { "finnish": "kotona tänään", "english": "at home today" },
+    { "finnish": "siellä aamulla", "english": "there in the morning" },
+    { "finnish": "täällä nyt", "english": "here now" }
+  ],
+  "title": "Short answers with olla",
+  "summary": "Answer positive and negative olla questions with the correct viewpoint and polarity.",
+  "objectives": [
+    "Use kyllä plus the matching affirmative form.",
+    "Use the matching negative verb plus ole.",
+    "Answer negative questions according to the fact, not the wording alone."
+  ],
+  "sections": [
+    {
+      "title": "Positive and negative answer shapes",
+      "paragraphs": [
+        "A positive answer can use kyllä plus the appropriate olla form: Kyllä, olen. A negative answer uses the negative verb plus ole: En ole.",
+        "Choose the verb form from the person who answers or the person being discussed."
+      ],
+      "keyPoints": [
+        "kyllä + affirmative form",
+        "negative verb + ole",
+        "agreement follows the answer viewpoint"
+      ]
+    },
+    {
+      "title": "Negative questions do not reverse the facts",
+      "paragraphs": [
+        "Etkö sinä ole kotona? asks “Are you not at home?” If you are at home, answer Kyllä, olen. If you are not at home, answer En ole.",
+        "Read the stated fact in each exercise before choosing yes or no."
+      ],
+      "keyPoints": [
+        "answer the fact",
+        "positive fact → kyllä + affirmative",
+        "negative fact → negative verb + ole"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Oletko sinä kotona? — Kyllä, olen.",
+      "english": "Are you at home? — Yes, I am.",
+      "steps": ["The addressee answers about themself.", "Use olen in the reply."]
+    },
+    {
+      "finnish": "Etkö sinä ole kotona? — En ole.",
+      "english": "Are you not at home? — No, I am not.",
+      "steps": ["The stated fact is negative.", "Use en ole."]
+    },
+    {
+      "finnish": "Ovatko he täällä? — Kyllä, ovat.",
+      "english": "Are they here? — Yes, they are.",
+      "steps": ["The reply is about he.", "Use ovat after kyllä."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not copy the question person blindly when the addressee answers as minä or a group answers as me.",
+    "Do not let a negative question decide the fact for you.",
+    "Keep ole after a negative answer verb."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "Optional practice: The question is “Oletko sinä väsynyt?” (“Are you tired?”). One person answers about themself. Give the reply “Yes, I am.”",
+      "acceptedAnswers": ["Kyllä, olen."],
+      "explanation": "Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+      "options": ["Kyllä, olen.", "En ole.", "Kyllä, olet."],
+      "optionFeedback": {
+        "Kyllä, olen.": "Correct. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+        "En ole.": "“En ole.” does not fit this subject or construction. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+        "Kyllä, olet.": "“Kyllä, olet.” does not fit this subject or construction. Kyllä confirms the positive fact, and olen agrees with the person who answers or is described."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "short-answer",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "Yes, I am.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "minä takes olen"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "id": "ppo-l15-p01"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "Optional practice: The question is “Oletko sinä väsynyt?” (“Are you tired?”). One person answers about themself. Give the reply “No, I am not.”",
+      "acceptedAnswers": ["En ole."],
+      "explanation": "En carries the person agreement, and ole follows it.",
+      "options": ["En ole.", "Kyllä, olen.", "Kyllä, olet."],
+      "optionFeedback": {
+        "En ole.": "Correct. En carries the person agreement, and ole follows it.",
+        "Kyllä, olen.": "“Kyllä, olen.” does not fit this subject or construction. En carries the person agreement, and ole follows it.",
+        "Kyllä, olet.": "“Kyllä, olet.” does not fit this subject or construction. En carries the person agreement, and ole follows it."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "short-answer",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "No, I am not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "En",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "id": "ppo-l15-p02"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Optional practice: Keep the person agreement exact. The question is “Etkö sinä ole opiskelija?” (“Are you not a student?”). One person answers about themself. Give the reply “Yes, I am.”",
+      "acceptedAnswers": ["Kyllä, olen."],
+      "explanation": "Kyllä confirms the positive fact, and olen agrees with the person who answers or is described.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "short-answer",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["opiskelija"],
+      "sentenceExplanation": {
+        "translation": "Yes, I am.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "minä takes olen"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, oon."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olen.” here."
+        }
+      ],
+      "id": "ppo-l15-p03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Optional practice: Keep the person agreement exact. The question is “Etkö sinä ole opiskelija?” (“Are you not a student?”). One person answers about themself. Give the reply “No, I am not.”",
+      "acceptedAnswers": ["En ole."],
+      "explanation": "En carries the person agreement, and ole follows it.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "person-mina",
+        "short-answer",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["opiskelija"],
+      "sentenceExplanation": {
+        "translation": "No, I am not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "En",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "minä takes en"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "id": "ppo-l15-p04"
+    }
+  ]
+}

@@ -1,0 +1,1111 @@
+{
+  "id": "ppo-plural-positive-questions-test",
+  "title": "Plural affirmative yes/no questions",
+  "focus": "Form olemmeko, oletteko, and ovatko questions for plural persons.",
+  "lessonIds": ["ppo-plural-positive-questions"],
+  "stage": "focused",
+  "targetSkills": ["Plural affirmative olla questions"],
+  "prerequisiteSkills": ["Singular affirmative olla questions"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Complete “Are we still here?” ____ me täällä vielä?",
+      "acceptedAnswers": ["olemmeko"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "Correct. Olemme takes the question suffix -ko to form olemmeko.",
+        "oletteko": "“oletteko” does not fit this subject or construction. Olemme takes the question suffix -ko to form olemmeko.",
+        "ovatko": "“ovatko” does not fit this subject or construction. Olemme takes the question suffix -ko to form olemmeko."
+      },
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "Are we still here?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e01",
+      "parallelExerciseId": "ppo-t12-e13"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Keep the person agreement exact. Complete “Are they still here?” ____ he täällä vielä?",
+      "acceptedAnswers": ["ovatko"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "Are they still here?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e02",
+      "parallelExerciseId": "ppo-t12-e14"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "Read the whole meaning before answering. Write “Are you present today?” Use the explicit subject te. Address a group with te.",
+      "acceptedAnswers": ["Oletteko te paikalla tänään?"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tags": [
+        "sentence",
+        "te-plural",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "Are you present today?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e03",
+      "parallelExerciseId": "ppo-t12-e15"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Build “Are we on time now?”",
+      "acceptedAnswers": ["Olemmeko me ajoissa nyt?"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tokens": ["ajoissa nyt?", "Olemmeko", "me"],
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "Are we on time now?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e04",
+      "parallelExerciseId": "ppo-t12-e16"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Notice who the sentence is about. Translate “Ovatko he ajoissa nyt?” into English.",
+      "acceptedAnswers": ["Are they on time now?"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "Are they on time now?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e05",
+      "parallelExerciseId": "ppo-t12-e17"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Build the form from the subject. Complete “Are you there now?” ____ te siellä nyt? Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["oletteko"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "“olemmeko” does not fit this subject or construction. Olette takes the question suffix -ko to form oletteko.",
+        "oletteko": "Correct. Olette takes the question suffix -ko to form oletteko.",
+        "ovatko": "“ovatko” does not fit this subject or construction. Olette takes the question suffix -ko to form oletteko."
+      },
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä nyt"],
+      "sentenceExplanation": {
+        "translation": "Are you there now?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "siellä nyt",
+            "meaning": "there now",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e06",
+      "parallelExerciseId": "ppo-t12-e18"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Complete “Are we at school tomorrow?” ____ me koulussa huomenna?",
+      "acceptedAnswers": ["olemmeko"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["koulussa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are we at school tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "koulussa huomenna",
+            "meaning": "at school tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ollaanks"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olemmeko” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e07",
+      "parallelExerciseId": "ppo-t12-e19"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "Keep the person agreement exact. Write “Are they at school tomorrow?” Use the explicit subject he.",
+      "acceptedAnswers": ["Ovatko he koulussa huomenna?"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["koulussa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are they at school tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "koulussa huomenna",
+            "meaning": "at school tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e08",
+      "parallelExerciseId": "ppo-t12-e20"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “Are you at work today?” Address a group with te.",
+      "acceptedAnswers": ["Oletteko te työssä tänään?"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tokens": ["työssä tänään?", "Oletteko", "te"],
+      "tags": [
+        "sentence",
+        "te-plural",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "Are you at work today?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e09",
+      "parallelExerciseId": "ppo-t12-e21"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Translate “Olemmeko me Suomessa huomenna?” into English.",
+      "acceptedAnswers": ["Are we in Finland tomorrow?"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are we in Finland tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e10",
+      "parallelExerciseId": "ppo-t12-e22"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Notice who the sentence is about. Complete “Are they in Finland tomorrow?” ____ he Suomessa huomenna?",
+      "acceptedAnswers": ["ovatko"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "“olemmeko” does not fit this subject or construction. Ovat takes the question suffix -ko to form ovatko.",
+        "oletteko": "“oletteko” does not fit this subject or construction. Ovat takes the question suffix -ko to form ovatko.",
+        "ovatko": "Correct. Ovat takes the question suffix -ko to form ovatko."
+      },
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are they in Finland tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e11",
+      "parallelExerciseId": "ppo-t12-e23"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Build the form from the subject. Complete “Are you at home in the morning?” ____ te kotona aamulla? Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["oletteko"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona aamulla"],
+      "sentenceExplanation": {
+        "translation": "Are you at home in the morning?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "kotona aamulla",
+            "meaning": "at home in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ootteko"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “oletteko” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e12",
+      "parallelExerciseId": "ppo-t12-e24"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Build the form from the subject. Complete “Are they at home in the morning?” ____ he kotona aamulla?",
+      "acceptedAnswers": ["ovatko"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["kotona aamulla"],
+      "sentenceExplanation": {
+        "translation": "Are they at home in the morning?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "kotona aamulla",
+            "meaning": "at home in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e24",
+      "parallelExerciseId": "ppo-t12-e12"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Notice who the sentence is about. Complete “Are we at home in the morning?” ____ me kotona aamulla?",
+      "acceptedAnswers": ["olemmeko"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "Correct. Olemme takes the question suffix -ko to form olemmeko.",
+        "oletteko": "“oletteko” does not fit this subject or construction. Olemme takes the question suffix -ko to form olemmeko.",
+        "ovatko": "“ovatko” does not fit this subject or construction. Olemme takes the question suffix -ko to form olemmeko."
+      },
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["kotona aamulla"],
+      "sentenceExplanation": {
+        "translation": "Are we at home in the morning?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "kotona aamulla",
+            "meaning": "at home in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e23",
+      "parallelExerciseId": "ppo-t12-e11"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Translate “Oletteko te Suomessa huomenna?” into English. Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["Are you in Finland tomorrow?"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are you in Finland tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e22",
+      "parallelExerciseId": "ppo-t12-e10"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “Are they at work today?”",
+      "acceptedAnswers": ["Ovatko he työssä tänään?"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "tokens": ["työssä tänään?", "Ovatko", "he"],
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "Are they at work today?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e21",
+      "parallelExerciseId": "ppo-t12-e09"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "Keep the person agreement exact. Write “Are we at work today?” Use the explicit subject me.",
+      "acceptedAnswers": ["Olemmeko me työssä tänään?"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "Are we at work today?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e20",
+      "parallelExerciseId": "ppo-t12-e08"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Complete “Are you at school tomorrow?” ____ te koulussa huomenna? Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["oletteko"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are you at school tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "koulussa huomenna",
+            "meaning": "at school tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ootteko"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “oletteko” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e19",
+      "parallelExerciseId": "ppo-t12-e07"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Build the form from the subject. Complete “Are they there now?” ____ he siellä nyt?",
+      "acceptedAnswers": ["ovatko"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "“olemmeko” does not fit this subject or construction. Ovat takes the question suffix -ko to form ovatko.",
+        "oletteko": "“oletteko” does not fit this subject or construction. Ovat takes the question suffix -ko to form ovatko.",
+        "ovatko": "Correct. Ovat takes the question suffix -ko to form ovatko."
+      },
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["siellä nyt"],
+      "sentenceExplanation": {
+        "translation": "Are they there now?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "siellä nyt",
+            "meaning": "there now",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e18",
+      "parallelExerciseId": "ppo-t12-e06"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "Notice who the sentence is about. Translate “Olemmeko me siellä nyt?” into English.",
+      "acceptedAnswers": ["Are we there now?"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["siellä nyt"],
+      "sentenceExplanation": {
+        "translation": "Are we there now?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "siellä nyt",
+            "meaning": "there now",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e17",
+      "parallelExerciseId": "ppo-t12-e05"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the question in the correct order.",
+      "prompt": "Build “Are you on time now?” Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["Oletteko te ajoissa nyt?"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tokens": ["ajoissa nyt?", "Oletteko", "te"],
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["ajoissa nyt"],
+      "sentenceExplanation": {
+        "translation": "Are you on time now?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ajoissa nyt",
+            "meaning": "on time now",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e16",
+      "parallelExerciseId": "ppo-t12-e04"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "Read the whole meaning before answering. Write “Are they present today?” Use the explicit subject he.",
+      "acceptedAnswers": ["Ovatko he paikalla tänään?"],
+      "explanation": "Ovat takes the question suffix -ko to form ovatko.",
+      "tags": ["sentence", "person-he", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "Are they present today?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "ovat + -ko forms ovatko"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e15",
+      "parallelExerciseId": "ppo-t12-e03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the first word of the question.",
+      "prompt": "Keep the person agreement exact. Complete “Are we present today?” ____ me paikalla tänään?",
+      "acceptedAnswers": ["olemmeko"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "Are we present today?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "paikalla tänään",
+            "meaning": "present today",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ollaanks"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olemmeko” here."
+        }
+      ],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e14",
+      "parallelExerciseId": "ppo-t12-e02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "Complete “Are you still here?” ____ te täällä vielä? Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["oletteko"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "options": ["olemmeko", "oletteko", "ovatko"],
+      "optionFeedback": {
+        "olemmeko": "“olemmeko” does not fit this subject or construction. Olette takes the question suffix -ko to form oletteko.",
+        "oletteko": "Correct. Olette takes the question suffix -ko to form oletteko.",
+        "ovatko": "“ovatko” does not fit this subject or construction. Olette takes the question suffix -ko to form oletteko."
+      },
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["täällä vielä"],
+      "sentenceExplanation": {
+        "translation": "Are you still here?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "täällä vielä",
+            "meaning": "still here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä vielä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t12-e13",
+      "parallelExerciseId": "ppo-t12-e01"
+    }
+  ]
+}

@@ -61,16 +61,15 @@ const lessonsAvailableForTest = (test) => {
   return lessons.filter((lesson) => availableIds.has(lesson.id));
 };
 if (pack.schemaVersion !== 1) errors.push('schemaVersion must be 1');
-if (exercises.length < 200 || exercises.length > 1000)
-  errors.push('pack must contain between 200 and 1,000 scored exercises');
+if (exercises.length === 0 || exercises.length > 1000)
+  errors.push('pack must contain scored exercises and no more than 1,000');
 if (
   !hasTextArray(pack.importantSkills) ||
   pack.importantSkills.length === 0 ||
   new Set(pack.importantSkills).size !== pack.importantSkills.length
 )
   errors.push('pack must declare a non-empty list of unique important skills');
-if (!pack.level?.trim() || !/grammar/i.test(pack.level))
-  errors.push('pack level must describe grammar competency without claiming overall proficiency');
+if (!pack.level?.trim()) errors.push('pack must declare a learner-facing level range');
 if (lessons.length === 0) errors.push('pack must contain reusable lessons');
 const lessonIds = lessons.map((lesson) => lesson.id);
 if (new Set(lessonIds).size !== lessonIds.length) errors.push('lesson ids must be unique');

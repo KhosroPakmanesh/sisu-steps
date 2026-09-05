@@ -1,0 +1,1098 @@
+{
+  "id": "ppo-singular-affirmative-test",
+  "title": "Singular affirmative olla",
+  "focus": "Match minä, sinä, and hän with the present-tense forms olen, olet, and on.",
+  "lessonIds": ["ppo-singular-affirmative"],
+  "stage": "focused",
+  "targetSkills": ["Singular affirmative olla"],
+  "prerequisiteSkills": ["Pronoun reference and polite te"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Complete “I am tired.” Minä ____ väsynyt.",
+      "acceptedAnswers": ["olen"],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "Correct. Minä takes olen, the matching present-tense form of olla.",
+        "olet": "“olet” does not fit this subject or construction. Minä takes olen, the matching present-tense form of olla.",
+        "on": "“on” does not fit this subject or construction. Minä takes olen, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "I am tired.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e01",
+      "parallelExerciseId": "ppo-t04-e13"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Keep the person agreement exact. Complete “He or she is tired.” Hän ____ väsynyt.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "He or she is tired.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e02",
+      "parallelExerciseId": "ppo-t04-e14"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Read the whole meaning before answering. Write “You are tired.” Use the explicit subject sinä.",
+      "acceptedAnswers": ["Sinä olet väsynyt."],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "You are tired.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä oot väsynyt."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Sinä olet väsynyt.” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e03",
+      "parallelExerciseId": "ppo-t04-e15"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “I am here.”",
+      "acceptedAnswers": ["Minä olen täällä."],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "tokens": ["täällä.", "Minä", "olen"],
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "I am here.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Minä oon täällä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Minä olen täällä.” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e04",
+      "parallelExerciseId": "ppo-t04-e16"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Notice who the sentence is about. Translate “Hän on täällä.” into English.",
+      "acceptedAnswers": ["He or she is here.", "He is here.", "She is here."],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "He or she is here.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e05",
+      "parallelExerciseId": "ppo-t04-e17"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Build the form from the subject. Complete “You are here.” Sinä ____ täällä.",
+      "acceptedAnswers": ["olet"],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "“olen” does not fit this subject or construction. Sinä takes olet, the matching present-tense form of olla.",
+        "olet": "Correct. Sinä takes olet, the matching present-tense form of olla.",
+        "on": "“on” does not fit this subject or construction. Sinä takes olet, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "You are here.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e06",
+      "parallelExerciseId": "ppo-t04-e18"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “I am there.” Minä ____ siellä.",
+      "acceptedAnswers": ["olen"],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "I am there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["oon"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olen” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e07",
+      "parallelExerciseId": "ppo-t04-e19"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Keep the person agreement exact. Write “He or she is there.” Use the explicit subject hän.",
+      "acceptedAnswers": ["Hän on siellä."],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "He or she is there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e08",
+      "parallelExerciseId": "ppo-t04-e20"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “You are there.”",
+      "acceptedAnswers": ["Sinä olet siellä."],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "tokens": ["siellä.", "Sinä", "olet"],
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "You are there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä oot siellä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Sinä olet siellä.” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e09",
+      "parallelExerciseId": "ppo-t04-e21"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Translate “Minä olen kotona.” into English.",
+      "acceptedAnswers": ["I am at home."],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "I am at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e10",
+      "parallelExerciseId": "ppo-t04-e22"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Notice who the sentence is about. Complete “He or she is at home.” Hän ____ kotona.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "“olen” does not fit this subject or construction. Hän takes on, the matching present-tense form of olla.",
+        "olet": "“olet” does not fit this subject or construction. Hän takes on, the matching present-tense form of olla.",
+        "on": "Correct. Hän takes on, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "He or she is at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e11",
+      "parallelExerciseId": "ppo-t04-e23"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Build the form from the subject. Complete “You are at home.” Sinä ____ kotona.",
+      "acceptedAnswers": ["olet"],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "You are at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["oot"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olet” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e12",
+      "parallelExerciseId": "ppo-t04-e24"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Build the form from the subject. Complete “He or she is at home.” Hän ____ kotona.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "He or she is at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e24",
+      "parallelExerciseId": "ppo-t04-e12"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Notice who the sentence is about. Complete “I am at home.” Minä ____ kotona.",
+      "acceptedAnswers": ["olen"],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "Correct. Minä takes olen, the matching present-tense form of olla.",
+        "olet": "“olet” does not fit this subject or construction. Minä takes olen, the matching present-tense form of olla.",
+        "on": "“on” does not fit this subject or construction. Minä takes olen, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "I am at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e23",
+      "parallelExerciseId": "ppo-t04-e11"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Translate “Sinä olet kotona.” into English.",
+      "acceptedAnswers": ["You are at home."],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "You are at home.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e22",
+      "parallelExerciseId": "ppo-t04-e10"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Read the whole meaning before answering. Build “He or she is there.”",
+      "acceptedAnswers": ["Hän on siellä."],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tokens": ["siellä.", "Hän", "on"],
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "He or she is there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e21",
+      "parallelExerciseId": "ppo-t04-e09"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Keep the person agreement exact. Write “I am there.” Use the explicit subject minä.",
+      "acceptedAnswers": ["Minä olen siellä."],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "I am there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Minä oon siellä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Minä olen siellä.” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e20",
+      "parallelExerciseId": "ppo-t04-e08"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “You are there.” Sinä ____ siellä.",
+      "acceptedAnswers": ["olet"],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "You are there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["oot"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olet” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e19",
+      "parallelExerciseId": "ppo-t04-e07"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Build the form from the subject. Complete “He or she is here.” Hän ____ täällä.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "“olen” does not fit this subject or construction. Hän takes on, the matching present-tense form of olla.",
+        "olet": "“olet” does not fit this subject or construction. Hän takes on, the matching present-tense form of olla.",
+        "on": "Correct. Hän takes on, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "He or she is here.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e18",
+      "parallelExerciseId": "ppo-t04-e06"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Notice who the sentence is about. Translate “Minä olen täällä.” into English.",
+      "acceptedAnswers": ["I am here."],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "I am here.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e17",
+      "parallelExerciseId": "ppo-t04-e05"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “You are here.”",
+      "acceptedAnswers": ["Sinä olet täällä."],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "tokens": ["täällä.", "Sinä", "olet"],
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "You are here.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä oot täällä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Sinä olet täällä.” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e16",
+      "parallelExerciseId": "ppo-t04-e04"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Read the whole meaning before answering. Write “He or she is tired.” Use the explicit subject hän.",
+      "acceptedAnswers": ["Hän on väsynyt."],
+      "explanation": "Hän takes on, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "He or she is tired.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e15",
+      "parallelExerciseId": "ppo-t04-e03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Keep the person agreement exact. Complete “I am tired.” Minä ____ väsynyt.",
+      "acceptedAnswers": ["olen"],
+      "explanation": "Minä takes olen, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "I am tired.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["oon"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olen” here."
+        }
+      ],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e14",
+      "parallelExerciseId": "ppo-t04-e02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Complete “You are tired.” Sinä ____ väsynyt.",
+      "acceptedAnswers": ["olet"],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
+      "optionFeedback": {
+        "olen": "“olen” does not fit this subject or construction. Sinä takes olet, the matching present-tense form of olla.",
+        "olet": "Correct. Sinä takes olet, the matching present-tense form of olla.",
+        "on": "“on” does not fit this subject or construction. Sinä takes olet, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["väsynyt"],
+      "sentenceExplanation": {
+        "translation": "You are tired.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "sinä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "väsynyt",
+            "meaning": "tired",
+            "role": "context: tells the location or state",
+            "baseForm": "väsynyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
+      "misconceptionCategory": "Singular affirmative olla: form not yet secure",
+      "id": "ppo-t04-e13",
+      "parallelExerciseId": "ppo-t04-e01"
+    }
+  ]
+}

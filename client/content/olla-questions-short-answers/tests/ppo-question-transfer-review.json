@@ -1,0 +1,826 @@
+{
+  "id": "ppo-question-transfer-review",
+  "title": "Olla questions and short answers transfer review",
+  "focus": "Apply affirmative and negative question forms and answer polarity in new contexts.",
+  "lessonIds": [
+    "ppo-singular-positive-questions",
+    "ppo-plural-positive-questions",
+    "ppo-singular-negative-questions",
+    "ppo-plural-negative-questions",
+    "ppo-written-short-answers"
+  ],
+  "stage": "review",
+  "targetSkills": [
+    "Singular affirmative olla questions",
+    "Plural affirmative olla questions",
+    "Singular negative olla questions",
+    "Plural negative olla questions",
+    "Short answers with olla"
+  ],
+  "prerequisiteSkills": [],
+  "exercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "In the final review: Write “Are we in Finland?” Use the explicit subject me.",
+      "acceptedAnswers": ["Olemmeko me Suomessa?"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["Suomessa"],
+      "sentenceExplanation": {
+        "translation": "Are we in Finland?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa",
+            "meaning": "in Finland",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t19-e03",
+      "parallelExerciseId": "ppo-t19-e23"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "In the final review: Complete “Are we not at school tomorrow?” ____ me ole koulussa huomenna?",
+      "acceptedAnswers": ["emmekö"],
+      "explanation": "Emme takes -kö to form emmekö; ole follows after the subject.",
+      "options": ["emmekö", "ettekö", "eivätkö"],
+      "optionFeedback": {
+        "emmekö": "Correct. Emme takes -kö to form emmekö; ole follows after the subject.",
+        "ettekö": "“ettekö” does not fit this subject or construction. Emme takes -kö to form emmekö; ole follows after the subject.",
+        "eivätkö": "“eivätkö” does not fit this subject or construction. Emme takes -kö to form emmekö; ole follows after the subject."
+      },
+      "tags": ["sentence", "person-me", "negative-question", "standard-written-finnish"],
+      "vocabulary": ["koulussa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are we not at school tomorrow?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Emmekö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "emme + -kö forms emmekö"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "koulussa huomenna",
+            "meaning": "at school tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "targetSkill": "Plural negative olla questions",
+      "misconceptionCategory": "Plural negative olla questions: form not yet secure",
+      "id": "ppo-t19-e06",
+      "parallelExerciseId": "ppo-t19-e26"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "In the final review: Build the form from the subject. The question is “Emmekö me ole täällä nyt?” (“Are we not here now?”). The speaker asks about their own group. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "Kyllä confirms the positive fact, and olemme agrees with the person who answers or is described.",
+      "tokens": ["olemme.", "Kyllä,"],
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["täällä nyt"],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "me takes olemme"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, ollaan."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olemme.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t19-e08",
+      "parallelExerciseId": "ppo-t19-e28"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "In the final review: Keep the person agreement exact. Translate “Onko hän työssä tänään?” into English.",
+      "acceptedAnswers": [
+        "Is he or she at work today?",
+        "Is he at work today?",
+        "Is she at work today?"
+      ],
+      "explanation": "On takes the question suffix -ko to form onko.",
+      "tags": ["sentence", "person-han", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["työssä tänään"],
+      "sentenceExplanation": {
+        "translation": "Is he or she at work today?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "on + -ko forms onko"
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "työssä tänään",
+            "meaning": "at work today",
+            "role": "context: tells the location or state",
+            "baseForm": "työssä tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla questions"],
+      "targetSkill": "Singular affirmative olla questions",
+      "misconceptionCategory": "Singular affirmative olla questions: form not yet secure",
+      "id": "ppo-t19-e10",
+      "parallelExerciseId": "ppo-t19-e30"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "In the final review: Notice who the sentence is about. Write “Is he or she not safe?” Use the explicit subject hän.",
+      "acceptedAnswers": ["Eikö hän ole turvassa?"],
+      "explanation": "Ei takes -kö to form eikö; ole follows after the subject.",
+      "tags": ["sentence", "person-han", "negative-question", "standard-written-finnish"],
+      "vocabulary": ["turvassa"],
+      "sentenceExplanation": {
+        "translation": "Is he or she not safe?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "ei + -kö forms eikö"
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "turvassa",
+            "meaning": "safe",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla questions"],
+      "targetSkill": "Singular negative olla questions",
+      "misconceptionCategory": "Singular negative olla questions: form not yet secure",
+      "id": "ppo-t19-e13",
+      "parallelExerciseId": "ppo-t19-e33"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "In the final review: Keep the person agreement exact. The question is “Ettekö te ole paikalla tänään?” (“Are you not present today?”). The addressed group answers about itself. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "Kyllä confirms the positive fact, and olemme agrees with the person who answers or is described.",
+      "tokens": ["olemme.", "Kyllä,"],
+      "tags": ["sentence", "te-plural", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "me takes olemme"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, ollaan."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olemme.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t19-e16",
+      "parallelExerciseId": "ppo-t19-e36"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "In the final review: Write “Are we there in the morning?” Use the explicit subject me.",
+      "acceptedAnswers": ["Olemmeko me siellä aamulla?"],
+      "explanation": "Olemme takes the question suffix -ko to form olemmeko.",
+      "tags": ["sentence", "person-me", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["siellä aamulla"],
+      "sentenceExplanation": {
+        "translation": "Are we there in the morning?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olemmeko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olemme + -ko forms olemmeko"
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "siellä aamulla",
+            "meaning": "there in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t19-e18",
+      "parallelExerciseId": "ppo-t19-e38"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "In the final review: Notice who the sentence is about. The question is “Olemmeko me koulussa huomenna?” (“Are we at school tomorrow?”). The speaker asks about their own group. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "Kyllä confirms the positive fact, and olemme agrees with the person who answers or is described.",
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["koulussa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching present-tense olla form",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word: confirms the positive fact",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word; no ending is added"
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "are",
+            "role": "verb: agrees with the person answering or being described",
+            "baseForm": "olla",
+            "formation": "me takes olemme"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Kyllä, ollaan."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Kyllä, olemme.” here."
+        }
+      ],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t19-e19",
+      "parallelExerciseId": "ppo-t19-e39"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "In the final review: Build the form from the subject. Translate “Ettekö te ole täällä?” into English. Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["Are you not here?"],
+      "explanation": "Ette takes -kö to form ettekö; ole follows after the subject.",
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "Are you not here?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Ettekö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "ette + -kö forms ettekö"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "targetSkill": "Plural negative olla questions",
+      "misconceptionCategory": "Plural negative olla questions: form not yet secure",
+      "id": "ppo-t19-e20",
+      "parallelExerciseId": "ppo-t19-e40"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "In the final review: Build the form from the subject. Translate “Eivätkö he ole täällä?” into English.",
+      "acceptedAnswers": ["Are they not here?"],
+      "explanation": "Eivät takes -kö to form eivätkö; ole follows after the subject.",
+      "tags": ["sentence", "person-he", "negative-question", "standard-written-finnish"],
+      "vocabulary": ["täällä"],
+      "sentenceExplanation": {
+        "translation": "Are they not here?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Eivätkö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "eivät + -kö forms eivätkö"
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "context: tells the location or state",
+            "baseForm": "täällä",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "targetSkill": "Plural negative olla questions",
+      "misconceptionCategory": "Plural negative olla questions: form not yet secure",
+      "id": "ppo-t19-e40",
+      "parallelExerciseId": "ppo-t19-e20"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "In the final review: Notice who the sentence is about. The question is “Olemmeko me koulussa huomenna?” (“Are we at school tomorrow?”). The speaker asks about their own group. Give the reply “No, we are not.”",
+      "acceptedAnswers": ["Emme ole."],
+      "explanation": "Emme carries the person agreement, and ole follows it.",
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["koulussa huomenna"],
+      "sentenceExplanation": {
+        "translation": "No, we are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Emme",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t19-e39",
+      "parallelExerciseId": "ppo-t19-e19"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "In the final review: Write “Are you there in the morning?” Use the explicit subject te. Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["Oletteko te siellä aamulla?"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä aamulla"],
+      "sentenceExplanation": {
+        "translation": "Are you there in the morning?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "siellä aamulla",
+            "meaning": "there in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä aamulla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t19-e38",
+      "parallelExerciseId": "ppo-t19-e18"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "In the final review: Keep the person agreement exact. The question is “Ettekö te ole paikalla tänään?” (“Are you not present today?”). The addressed group answers about itself. Give the reply “No, we are not.”",
+      "acceptedAnswers": ["Emme ole."],
+      "explanation": "Emme carries the person agreement, and ole follows it.",
+      "tokens": ["ole.", "Emme"],
+      "tags": ["sentence", "te-plural", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["paikalla tänään"],
+      "sentenceExplanation": {
+        "translation": "No, we are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Emme",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t19-e36",
+      "parallelExerciseId": "ppo-t19-e16"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "In the final review: Notice who the sentence is about. Write “Am I not present?” Use the explicit subject minä.",
+      "acceptedAnswers": ["Enkö minä ole paikalla?"],
+      "explanation": "En takes -kö to form enkö; ole follows after the subject.",
+      "tags": ["sentence", "person-mina", "negative-question", "standard-written-finnish"],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "Am I not present?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Enkö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "en + -kö forms enkö"
+          },
+          {
+            "finnish": "minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative olla questions"],
+      "targetSkill": "Singular negative olla questions",
+      "misconceptionCategory": "Singular negative olla questions: form not yet secure",
+      "id": "ppo-t19-e33",
+      "parallelExerciseId": "ppo-t19-e13"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English question.",
+      "prompt": "In the final review: Keep the person agreement exact. Translate “Olenko minä Suomessa huomenna?” into English.",
+      "acceptedAnswers": ["Am I in Finland tomorrow?"],
+      "explanation": "Olen takes the question suffix -ko to form olenko.",
+      "tags": ["sentence", "person-mina", "positive-question", "standard-written-finnish"],
+      "vocabulary": ["Suomessa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Am I in Finland tomorrow?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Olenko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olen + -ko forms olenko"
+          },
+          {
+            "finnish": "minä",
+            "meaning": "I",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "minä",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa huomenna",
+            "meaning": "in Finland tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative olla questions"],
+      "targetSkill": "Singular affirmative olla questions",
+      "misconceptionCategory": "Singular affirmative olla questions: form not yet secure",
+      "id": "ppo-t19-e30",
+      "parallelExerciseId": "ppo-t19-e10"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the short answer in the correct order.",
+      "prompt": "In the final review: Build the form from the subject. The question is “Emmekö me ole täällä nyt?” (“Are we not here now?”). The speaker asks about their own group. Give the reply “No, we are not.”",
+      "acceptedAnswers": ["Emme ole."],
+      "explanation": "Emme carries the person agreement, and ole follows it.",
+      "tokens": ["ole.", "Emme"],
+      "tags": ["sentence", "person-me", "short-answer", "standard-written-finnish"],
+      "vocabulary": ["täällä nyt"],
+      "sentenceExplanation": {
+        "translation": "No, we are not.",
+        "pattern": "person-marked negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Emme",
+            "meaning": "not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          }
+        ]
+      },
+      "requiredSkills": ["Short answers with olla"],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form not yet secure",
+      "id": "ppo-t19-e28",
+      "parallelExerciseId": "ppo-t19-e08"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best question form.",
+      "prompt": "In the final review: Complete “Are you not at school tomorrow?” ____ te ole koulussa huomenna? Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["ettekö"],
+      "explanation": "Ette takes -kö to form ettekö; ole follows after the subject.",
+      "options": ["emmekö", "ettekö", "eivätkö"],
+      "optionFeedback": {
+        "emmekö": "“emmekö” does not fit this subject or construction. Ette takes -kö to form ettekö; ole follows after the subject.",
+        "ettekö": "Correct. Ette takes -kö to form ettekö; ole follows after the subject.",
+        "eivätkö": "“eivätkö” does not fit this subject or construction. Ette takes -kö to form ettekö; ole follows after the subject."
+      },
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "negative-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa huomenna"],
+      "sentenceExplanation": {
+        "translation": "Are you not at school tomorrow?",
+        "pattern": "negative verb + -kö + subject + ole + context",
+        "parts": [
+          {
+            "finnish": "Ettekö",
+            "meaning": "negative question form",
+            "role": "negative question verb: begins the question and carries person agreement",
+            "baseForm": "ei",
+            "formation": "ette + -kö forms ettekö"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "olla stays in the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "koulussa huomenna",
+            "meaning": "at school tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa huomenna",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative olla questions"],
+      "targetSkill": "Plural negative olla questions",
+      "misconceptionCategory": "Plural negative olla questions: form not yet secure",
+      "id": "ppo-t19-e26",
+      "parallelExerciseId": "ppo-t19-e06"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete question in Finnish.",
+      "prompt": "In the final review: Write “Are you in Finland?” Use the explicit subject te. Address one person politely with te; keep plural agreement.",
+      "acceptedAnswers": ["Oletteko te Suomessa?"],
+      "explanation": "Olette takes the question suffix -ko to form oletteko.",
+      "tags": [
+        "sentence",
+        "te-polite",
+        "person-te",
+        "positive-question",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["Suomessa"],
+      "sentenceExplanation": {
+        "translation": "Are you in Finland?",
+        "pattern": "present-tense olla + -ko + subject + context",
+        "parts": [
+          {
+            "finnish": "Oletteko",
+            "meaning": "question form of be",
+            "role": "question verb: begins the yes/no question and carries person agreement",
+            "baseForm": "olla",
+            "formation": "olette + -ko forms oletteko"
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Suomessa",
+            "meaning": "in Finland",
+            "role": "context: tells the location or state",
+            "baseForm": "Suomessa",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative olla questions"],
+      "targetSkill": "Plural affirmative olla questions",
+      "misconceptionCategory": "Plural affirmative olla questions: form not yet secure",
+      "id": "ppo-t19-e23",
+      "parallelExerciseId": "ppo-t19-e03"
+    }
+  ]
+}

@@ -335,17 +335,21 @@ describe('content-pack validation', () => {
       'Focused lesson lesson-1 introduces more than ten words.',
     );
   });
-  it('rejects packs outside the 200 to 1,000 scored-exercise range', () => {
-    const tooSmall = validPack();
-    tooSmall.tests[0].exercises = scoredExercises(199);
-    expect(() => validateTopicPack(tooSmall)).toThrowError(
-      'The exercise pack must contain between 200 and 1,000 scored exercises.',
+  it('allows pedagogically sized packs and rejects empty or over-limit scored sets', () => {
+    const compact = validPack();
+    compact.tests[0].exercises = scoredExercises(100);
+    expect(validateTopicPack(compact).tests[0].exercises).toHaveLength(100);
+
+    const empty = validPack();
+    empty.tests[0].exercises = [];
+    expect(() => validateTopicPack(empty)).toThrowError(
+      'The exercise pack must contain scored exercises and no more than 1,000.',
     );
 
     const tooLarge = validPack();
     tooLarge.tests[0].exercises = scoredExercises(1001);
     expect(() => validateTopicPack(tooLarge)).toThrowError(
-      'The exercise pack must contain between 200 and 1,000 scored exercises.',
+      'The exercise pack must contain scored exercises and no more than 1,000.',
     );
   });
   it('rejects an important skill that focused exercises do not cover', () => {

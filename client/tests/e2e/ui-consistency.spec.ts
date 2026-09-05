@@ -316,7 +316,7 @@ for (const theme of ['Day', 'Night']) {
       };
 
       await open(page, '/reports');
-      const reportsLedger = page.locator('.report-ledger.ledger-sheet');
+      const reportsLedger = page.locator('.report-ledger.ledger-sheet').first();
       const expected = await reportsLedger.evaluate(materialRecipe);
       expect(expected.punchedMargin.content).not.toBe('none');
       expect(expected.punchedMargin.backgroundImage).toContain('radial-gradient');
@@ -416,6 +416,9 @@ for (const theme of ['Day', 'Night']) {
 
       for (const [route, stationerySelector] of routes) {
         await open(page, route);
+        if (route === '/data') {
+          await page.locator('.button.danger:not(:disabled)').first().waitFor();
+        }
         samples.stationery.push(
           ...(await page.locator(stationerySelector).evaluateAll(
             (elements, currentRoute) =>

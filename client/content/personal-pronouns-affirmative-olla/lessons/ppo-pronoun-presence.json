@@ -1,0 +1,290 @@
+{
+  "id": "ppo-pronoun-presence",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Subject-pronoun use"],
+  "prerequisiteSkills": ["Affirmative pronoun–verb agreement"],
+  "introducedVocabulary": [
+    {
+      "finnish": "siellä nyt",
+      "english": "there now"
+    },
+    {
+      "finnish": "koulussa huomenna",
+      "english": "at school tomorrow"
+    },
+    {
+      "finnish": "työssä tänään",
+      "english": "at work today"
+    },
+    {
+      "finnish": "Suomessa huomenna",
+      "english": "in Finland tomorrow"
+    },
+    {
+      "finnish": "kotona aamulla",
+      "english": "at home in the morning"
+    },
+    {
+      "finnish": "täällä illalla",
+      "english": "here in the evening"
+    },
+    {
+      "finnish": "turvassa nyt",
+      "english": "safe now"
+    },
+    {
+      "finnish": "myöhässä tänään",
+      "english": "late today"
+    },
+    {
+      "finnish": "paikalla huomenna",
+      "english": "present tomorrow"
+    },
+    {
+      "finnish": "ajoissa huomenna",
+      "english": "on time tomorrow"
+    }
+  ],
+  "title": "Subject pronouns in sentences",
+  "summary": "Learn when a olla sentence can omit a subject pronoun and when it should remain explicit.",
+  "objectives": [
+    "Recognise person from first- and second-person verb endings.",
+    "Omit an optional first- or second-person subject carefully.",
+    "Keep third-person subjects clear when context does not identify them."
+  ],
+  "sections": [
+    {
+      "title": "Some endings already name the person",
+      "paragraphs": [
+        "In Finnish, minä, sinä, me, and te can be omitted when the verb ending makes the subject clear. Olen täällä still means “I am here”.",
+        "Keeping these pronouns is also grammatical. This lesson practises the shorter option when the instruction asks for it."
+      ],
+      "keyPoints": [
+        "olen identifies minä",
+        "olet identifies sinä",
+        "olemme and olette identify plural persons"
+      ]
+    },
+    {
+      "title": "Third person needs a clear subject",
+      "paragraphs": [
+        "The forms on and ovat do not name a specific person or group. If no earlier context identifies the subject, write hän or he.",
+        "This pack keeps third-person pronouns explicit in independent beginner sentences."
+      ],
+      "keyPoints": [
+        "hän on in an independent sentence",
+        "he ovat in an independent sentence",
+        "context can change pronoun needs in longer texts"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Olen täällä.",
+      "english": "I am here.",
+      "steps": ["The ending in olen identifies first-person singular.", "Minä may be omitted."]
+    },
+    {
+      "finnish": "Olette kotona.",
+      "english": "You are at home.",
+      "steps": [
+        "The ending in olette identifies te.",
+        "The subject may be omitted when the addressee is clear."
+      ]
+    },
+    {
+      "finnish": "Hän on koulussa.",
+      "english": "He or she is at school.",
+      "steps": [
+        "On is third person but does not identify who.",
+        "Keep hän because no earlier context names the person."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not assume every Finnish subject can disappear.",
+    "Pronoun omission is valid in writing when the verb ending makes the subject clear.",
+    "Follow the exercise instruction when it requests the shorter or explicit form."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: Notice who the sentence is about. Translate “Hän on turvassa nyt.” into English and recover the subject from the form.",
+      "acceptedAnswers": ["He or she is safe now.", "He is safe now.", "She is safe now."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["turvassa nyt"],
+      "sentenceExplanation": {
+        "translation": "He or she is safe now.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "turvassa nyt",
+            "meaning": "safe now",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "id": "ppo-l07-p01"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: Notice who the sentence is about. Translate “Olemme koulussa tänään.” into English and recover the subject from the form.",
+      "acceptedAnswers": ["We are at school today."],
+      "explanation": "Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "pronoun-omission",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa tänään"],
+      "sentenceExplanation": {
+        "translation": "We are at school today.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "koulussa tänään",
+            "meaning": "at school today",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "id": "ppo-l07-p02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Optional practice: Build the form from the subject. Which shorter sentence still means “You are at school today”?",
+      "acceptedAnswers": ["Olette koulussa tänään."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "options": ["Olette koulussa tänään.", "Te olette koulussa tänään.", "Koulussa tänään."],
+      "optionFeedback": {
+        "Olette koulussa tänään.": "Correct. Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+        "Te olette koulussa tänään.": "“Te olette koulussa tänään.” does not fit this subject or construction. Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+        "Koulussa tänään.": "“Koulussa tänään.” does not fit this subject or construction. Te can be omitted here because the ending in olette already identifies the subject in Finnish."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa tänään"],
+      "sentenceExplanation": {
+        "translation": "You are at school today.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "koulussa tänään",
+            "meaning": "at school today",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "id": "ppo-l07-p03"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Optional practice: Build the form from the subject. No earlier sentence names the subject. Which sentence clearly means “They are at school today”?",
+      "acceptedAnswers": ["He ovat koulussa tänään."],
+      "explanation": "He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "options": ["He ovat koulussa tänään.", "Ovat koulussa tänään.", "Koulussa tänään."],
+      "optionFeedback": {
+        "He ovat koulussa tänään.": "Correct. He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "Ovat koulussa tänään.": "“Ovat koulussa tänään.” does not fit this subject or construction. He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "Koulussa tänään.": "“Koulussa tänään.” does not fit this subject or construction. He remains explicit because a third-person olla form does not identify a unique person or group by itself."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "pronoun-required",
+        "person-he",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["koulussa tänään"],
+      "sentenceExplanation": {
+        "translation": "They are at school today.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "koulussa tänään",
+            "meaning": "at school today",
+            "role": "context: tells the location or state",
+            "baseForm": "koulussa tänään",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "id": "ppo-l07-p04"
+    }
+  ]
+}
