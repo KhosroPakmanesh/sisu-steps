@@ -113,44 +113,21 @@
   align-items: stretch;
 }
 
-:host .topic-card {
+.topic-grid > .card-kicker {
   position: relative;
+  z-index: 1;
+  grid-column: 1 / -1;
+  width: fit-content;
+  margin: 0 0 var(--space-1);
+  padding-bottom: var(--space-1);
+  border-bottom: 1px dashed var(--border-brand);
+}
+
+:host .topic-card {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
   min-width: 0;
-  padding: var(--space-5);
-  padding-left: calc(var(--space-5) + 0.65rem);
-  border: 1px solid var(--border-default);
-  border-top: 0.28rem solid transparent;
-  border-radius: var(--radius-large);
-  background-color: var(--surface-stationery);
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0 1.95rem,
-    var(--notebook-rule) 1.95rem 2rem
-  );
-  box-shadow:
-    0.18rem 0.18rem 0 var(--surface-subtle),
-    var(--shadow-small);
-}
-
-.topic-card::after {
-  position: absolute;
-  top: 0.9rem;
-  right: -0.15rem;
-  width: 1.1rem;
-  height: 3.4rem;
-  border: 1px solid var(--border-default);
-  border-left: 0;
-  border-radius: 0 var(--radius-small) var(--radius-small) 0;
-  background: var(--surface-brand-subtle);
-  box-shadow: 2px 1px 0 var(--notebook-shadow);
-  content: '';
-}
-
-:host .topic-card:hover {
-  filter: drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
 }
 
 .topic-card h3 {

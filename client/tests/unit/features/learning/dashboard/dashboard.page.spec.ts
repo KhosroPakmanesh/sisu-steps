@@ -29,7 +29,10 @@ describe('DashboardPage', () => {
     expect(element.querySelectorAll('.topic-card')).toHaveLength(1);
     expect(element.querySelector('.test-card')).toBeNull();
     expect(card?.textContent).toContain('Finnish foundations');
-    expect(card?.querySelector('.card-kicker')?.textContent?.trim()).toBe('Level: A1');
+    expect(card?.querySelector('.card-kicker')).toBeNull();
+    expect(element.querySelector('.topic-grid > .card-kicker')?.textContent?.trim()).toBe(
+      'Level: A1',
+    );
     expect(card?.textContent).toContain('Tests tried');
     expect(card?.textContent).toContain('0/2');
     expect(card?.querySelector('a[href="/topics/topic"]')).toBeTruthy();
@@ -52,6 +55,9 @@ describe('DashboardPage', () => {
       '/topics/second-topic',
     ]);
     expect(cards[1].textContent).toContain('A second topic');
+    expect(
+      (fixture.nativeElement as HTMLElement).querySelectorAll('.topic-grid > .card-kicker'),
+    ).toHaveLength(1);
   });
 
   it('offers the first untried test as the continue-learning action', () => {

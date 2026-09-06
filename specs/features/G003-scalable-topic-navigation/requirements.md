@@ -2,7 +2,7 @@
 
 ## Functional requirements
 
-- **REQ-G003-001:** The home route shall present every installed topic pack once as a compact summary with its title, level visibly introduced by `Level:`, summary, objectives, test progress, lesson progress, overall topic average, and prominent optional review status.
+- **REQ-G003-001:** The home route shall present every installed topic pack once as a compact summary with its title, summary, objectives, test progress, lesson progress, overall topic average, and prominent optional review status. The encompassing topic-grid sheet shall visibly introduce its installed packs' unique level range or ranges once as `Level:` or `Levels:` rather than repeating the same metadata on every card.
 - **REQ-G003-002:** The home route shall not render the full test sequence or lesson teaching content for any topic pack.
 - **REQ-G003-003:** The home route shall provide one prominent continue-learning action that resumes the most recently updated valid saved session or, when no session exists, starts the first test that has not yet been attempted.
 - **REQ-G003-004:** Selecting a topic pack shall open `/topics/:topicId`, where the pack's objectives and every authored test appear in order.

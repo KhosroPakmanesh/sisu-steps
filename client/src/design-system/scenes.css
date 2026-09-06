@@ -1,4 +1,4 @@
-/* Catalog: a row of real exercise-book covers on the desk. */
+/* Catalog: a bound exercise-book sheet on the desk. */
 .hero {
   position: relative;
 }
@@ -64,41 +64,16 @@ main.page-shell .catalog-stats:hover {
   transform: translateX(0.12rem) rotate(0);
 }
 
-main.page-shell .topic-card {
-  z-index: 0;
-  padding-left: calc(var(--space-6) + 0.65rem);
-  border: 0;
-  border-radius: 0.35rem 0.7rem 0.7rem 0.25rem;
-  background:
-    linear-gradient(135deg, rgb(255 255 255 / 10%), transparent 35%),
-    color-mix(in srgb, var(--surface-brand-subtle) 58%, var(--surface-raised));
-  box-shadow:
-    0.24rem 0.32rem 0 var(--paper-edge),
-    0.48rem 0.6rem 1rem var(--notebook-shadow);
-  transform: rotate(-0.35deg);
+main.page-shell .topic-grid {
   transform-origin: left center;
   transition:
     transform var(--motion-standard) ease,
-    box-shadow var(--motion-standard) ease;
+    filter var(--motion-standard) ease;
 }
 
-main.page-shell .topic-card:nth-child(even) {
-  box-shadow:
-    0.24rem 0.32rem 0 var(--paper-edge),
-    0.48rem 0.6rem 1rem var(--notebook-shadow);
-  transform: rotate(0.4deg);
-}
-
-main.page-shell .topic-card:hover {
+main.page-shell .topic-grid:hover {
   z-index: 2;
-  box-shadow:
-    0.45rem 0.6rem 0 var(--paper-edge),
-    0.7rem 1rem 1.7rem var(--notebook-shadow);
-  transform: translateY(-0.35rem) rotate(-0.14deg);
-}
-
-main.page-shell .topic-card:nth-child(even):hover {
-  transform: translateY(-0.35rem) rotate(0.16deg);
+  transform: translateY(-0.12rem) rotate(-0.25deg);
 }
 
 .topic-card header,

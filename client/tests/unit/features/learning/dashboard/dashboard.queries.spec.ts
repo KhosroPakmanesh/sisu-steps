@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  getCatalogLevelLabel,
   getContinueLearningTarget,
   getTopicSummary,
 } from '@/features/learning/dashboard/dashboard.queries';
@@ -8,6 +9,14 @@ import { CompletedAttempt, StudySession } from '@/shared/domain/learner-state.mo
 import { learningPack } from '../../../fixtures/learning-content.fixture';
 
 describe('dashboard queries', () => {
+  it('summarizes shared and mixed catalog levels truthfully', () => {
+    const secondPack = structuredClone(learningPack);
+    secondPack.level = 'A2';
+
+    expect(getCatalogLevelLabel([learningPack])).toBe('Level: A1');
+    expect(getCatalogLevelLabel([learningPack, secondPack])).toBe('Levels: A1 · A2');
+  });
+
   it('summarizes distinct attempted tests and version-matched lessons', () => {
     const state = createEmptyLearnerState({ topic: learningPack.version });
     state.attempts = [

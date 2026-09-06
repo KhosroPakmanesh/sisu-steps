@@ -9,6 +9,7 @@ import {
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import {
   ContinueLearningTarget,
+  getCatalogLevelLabel,
   getContinueLearningTarget,
   getTopicSummaries,
 } from './dashboard.queries';
@@ -30,6 +31,7 @@ export class DashboardPage {
   protected readonly topicSummaries = computed(() =>
     getTopicSummaries(this.store.learnerState(), this.store.packs()),
   );
+  protected readonly catalogLevelLabel = computed(() => getCatalogLevelLabel(this.store.packs()));
   protected readonly continueTarget = computed(() =>
     getContinueLearningTarget(this.store.learnerState(), this.store.packs()),
   );

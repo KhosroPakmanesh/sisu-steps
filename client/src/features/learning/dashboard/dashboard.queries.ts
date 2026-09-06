@@ -67,6 +67,11 @@ export function getTopicSummaries(
   return packs.map((pack) => getTopicSummary(state, packs, pack, now));
 }
 
+export function getCatalogLevelLabel(packs: TopicPack[]): string {
+  const levels = [...new Set(packs.map((pack) => pack.level))];
+  return `${levels.length === 1 ? 'Level' : 'Levels'}: ${levels.join(' · ')}`;
+}
+
 export function getContinueLearningTarget(
   state: LearnerState,
   packs: TopicPack[],

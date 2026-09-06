@@ -37,7 +37,7 @@ test('opens each smaller pronoun and olla topic pack without reducing the conten
 
   for (const pack of packs) {
     const topicCard = page.locator('.topic-card').filter({ hasText: pack.title });
-    await expect(topicCard.locator('.card-kicker')).toHaveText('Level: 0 - A1.3');
+    await expect(topicCard.locator('.card-kicker')).toHaveCount(0);
     await topicCard.getByRole('link', { name: 'Open topic' }).click();
 
     await expect(page).toHaveURL(`/topics/${pack.id}`);
@@ -59,7 +59,8 @@ test('opens each smaller pronoun and olla topic pack without reducing the conten
 test('labels the shared level range everywhere pack metadata appears', async ({ page }) => {
   const labels = Array.from({ length: 6 }, () => 'Level: 0 - A1.3');
   await page.goto('/');
-  await expect(page.locator('.topic-card .card-kicker')).toHaveText(labels);
+  await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
+  await expect(page.locator('.topic-card .card-kicker')).toHaveCount(0);
 
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);

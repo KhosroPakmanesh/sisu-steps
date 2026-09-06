@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Restyled the topic-card grid as one bound, ruled exercise-book sheet containing comfortably inset punched cards that reuse the existing Worked examples design-system treatments, while keeping the catalog heading outside, consolidating repeated level metadata into one truthful sheet-level label, and preserving every topic summary, action, and responsive three/two/one-column layout.
+
 - Split the combined `Vowel harmony, KPT & T-plural` learning map into three coherent `0 - A1.3` packs: **Vowel harmony and location endings**, **KPT and singular forms**, and **T-plural and plural agreement**. The successor family now provides 25 tests, 570 scored exercises, 18 lessons, and 66 optional practice exercises while preserving every former scored and practice ID exactly once. Existing version 6.1.0 attempts, unfinished sessions, mistakes, corrections, mastery, lesson completions, and notes migrate to their new owners, including compatible backups.
 
 - Replaced the fixed 200-question minimum for a grammar pack with an assessment-justified non-empty count capped at 1,000, preventing narrow coherent topics from being padded merely to reach a universal size.

@@ -460,26 +460,50 @@ test('uses a responsive three, two, and one-column topic-card grid', async ({ pa
   }
 });
 
-test('matches the topic-card background to the worked-examples surface', async ({
+test('reuses the worked-example sheet and card surfaces for the topic catalog', async ({
   page,
 }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
   await page.goto('/');
-  const topicBackground = await page
-    .locator('.topic-card')
-    .first()
-    .evaluate((element) => {
-      const styles = getComputedStyle(element);
-      return { color: styles.backgroundColor, image: styles.backgroundImage };
-    });
+  const material = (element: Element) => {
+    const styles = getComputedStyle(element);
+    return {
+      color: styles.backgroundColor,
+      image: styles.backgroundImage,
+      borderTop: styles.borderTop,
+      clipPath: styles.clipPath,
+      paddingBottom: styles.paddingBottom,
+    };
+  };
+  const catalogSection = await page.locator('.topic-catalog').evaluate((element) => {
+    const styles = getComputedStyle(element);
+    return {
+      paddingTop: Number.parseFloat(styles.paddingTop),
+      paddingBottom: Number.parseFloat(styles.paddingBottom),
+      headingInsideGrid: element
+        .querySelector('.topic-grid')
+        ?.contains(element.querySelector('.section-heading') ?? null),
+    };
+  });
+  const topicGridMaterial = await page.locator('.topic-grid').evaluate(material);
+  const topicCardMaterial = await page.locator('.topic-card').first().evaluate(material);
+  await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
+  await expect(page.locator('.topic-card .card-kicker')).toHaveCount(0);
 
   await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
-  const examplesBackground = await page.locator('.worked-examples').evaluate((element) => {
-    const styles = getComputedStyle(element);
-    return { color: styles.backgroundColor, image: styles.backgroundImage };
-  });
+  const workedExamplesMaterial = await page.locator('.worked-examples').evaluate(material);
+  const exampleCardMaterial = await page
+    .locator('.example-grid article')
+    .first()
+    .evaluate(material);
 
-  expect(topicBackground).toEqual(examplesBackground);
+  expect(topicGridMaterial).toEqual(workedExamplesMaterial);
+  expect(topicCardMaterial).toEqual(exampleCardMaterial);
+  expect(catalogSection).toEqual({
+    paddingTop: 64,
+    paddingBottom: 40,
+    headingInsideGrid: false,
+  });
 });
 
 test('sizes cut-paper actions to their labels across app routes', async ({ page }, testInfo) => {

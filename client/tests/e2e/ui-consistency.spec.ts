@@ -165,8 +165,8 @@ for (const theme of ['Day', 'Night']) {
     });
 
     test('keeps shared component colours under one semantic owner', async ({ page }) => {
-      const neutralCardColours = await Promise.all(
-        ['.continue-card', '.topic-card'].map((selector) =>
+      const neutralSheetColours = await Promise.all(
+        ['.continue-card', '.topic-grid'].map((selector) =>
           page
             .locator(selector)
             .first()
@@ -282,7 +282,7 @@ for (const theme of ['Day', 'Night']) {
       expect(owners.spinnerBody).toEqual(['.spinner']);
       expect(owners.sequenceMarkerVisual).toEqual(['.sequence-marker', '.sequence-marker.compact']);
       expect(owners.featureSharedColour).toEqual([]);
-      expect(new Set(neutralCardColours).size).toBe(1);
+      expect(new Set(neutralSheetColours).size).toBe(1);
       expect(new Set(mistakeNoteColours).size).toBe(1);
     });
 

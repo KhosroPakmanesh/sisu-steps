@@ -74,50 +74,6 @@ main.page-shell .catalog-stats div + div {
   border-left-style: dashed;
 }
 
-main.page-shell .topic-card {
-  padding-left: calc(var(--space-6) + 0.9rem);
-  border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
-  background-color: var(--surface-stationery);
-  background-image: repeating-linear-gradient(
-    to bottom,
-    transparent 0 1.95rem,
-    var(--notebook-rule) 1.95rem 2rem
-  );
-  clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
-  filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
-    drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
-}
-
-main.page-shell .topic-card::before {
-  position: absolute;
-  z-index: 1;
-  top: 0.65rem;
-  bottom: 0.65rem;
-  left: 0.5rem;
-  width: 0.28rem;
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--surface-paper) 0 0.32rem,
-    transparent 0.32rem 0.68rem
-  );
-  content: '';
-  opacity: 0.72;
-}
-
-main.page-shell .topic-card::after {
-  top: 0.45rem;
-  right: 0.08rem;
-  width: 0.55rem;
-  height: calc(100% - 0.9rem);
-  border: 0;
-  border-radius: 0 0.35rem 0.35rem 0;
-  background: repeating-linear-gradient(
-    to bottom,
-    var(--surface-paper) 0 0.28rem,
-    var(--notebook-rule) 0.28rem 0.31rem
-  );
-}
-
 /* Topic route: inside-cover pocket, taped goals, dividers, and punched map cards. */
 main.topic-page .objective-panel {
   border-style: dashed;
@@ -318,13 +274,11 @@ main.lesson-page .key-points li {
 }
 
 @container workbook (width <= 35rem) {
-  main.page-shell .topic-card,
   main.topic-page .test-card {
     padding-left: var(--space-5);
   }
 
-  main.topic-page .test-card::before,
-  main.page-shell .topic-card::before {
+  main.topic-page .test-card::before {
     display: none;
   }
 
