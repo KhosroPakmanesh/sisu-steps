@@ -1,0 +1,1162 @@
+{
+  "id": "plural-agreement-review",
+  "title": "Plural agreement review",
+  "focus": "Use plural nouns and written plural verbs in controlled complete sentences.",
+  "stage": "review",
+  "targetSkills": [
+    "T-plural recognition",
+    "Regular T-plural",
+    "KPT T-plural recognition",
+    "T-plural with KPT",
+    "Third-person plural -vat/-vät",
+    "Plural subject + ovat"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "t-plural-recognition",
+    "t-plural-basics",
+    "kpt-t-plural-recognition",
+    "kpt-t-plural",
+    "he-verbs",
+    "plural-sentences"
+  ],
+  "exercises": [
+    {
+      "id": "ff-a1-t14-e12",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "they leave — use the supplied stem lähte- from lähteä (“to leave”)",
+      "acceptedAnswers": ["he lähtevät", "lähtevät"],
+      "explanation": "lähteä means “to leave”; lähtevät means “they leave”. The stem lähte- is supplied. For he (“they”), vowel harmony selects -vät: lähtevät.",
+      "tags": ["vowel-harmony", "verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["lähteä"],
+      "sentenceExplanation": {
+        "translation": "They leave.",
+        "pattern": "Subject (who does it) + verb (what they do)",
+        "parts": [
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "Subject — the people doing the action.",
+            "baseForm": "he",
+            "formation": "he is already the basic pronoun meaning “they”, so it does not need an ending here."
+          },
+          {
+            "finnish": "lähtevät",
+            "meaning": "leave",
+            "role": "Verb — the action performed by the plural subject.",
+            "baseForm": "lähteä",
+            "formation": "The exercise supplies the stem lähte-, so no stem-building rule is being tested. Add -vät; this ending shows that the subject is he (“they”). Vowel harmony chooses -vät because the supplied stem uses front vowels ä, ö, or y, or only neutral vowels e and i."
+          }
+        ]
+      },
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "parallelExerciseId": "ff-a1-t11-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["lähtevat", "he lähtevat"],
+          "category": "Vowel harmony: front-vowel ending needed",
+          "explanation": "The supplied stem lähte- has ä and neutral e, with no back vowel. Use -vät: lähtevät."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e13",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "istua (“to sit”), supplied stem istu- → he ____ (“they sit”)",
+      "acceptedAnswers": ["istuvat"],
+      "explanation": "istua means “to sit”; istuvat means “they sit”. The stem istu- is supplied. For he (“they”), vowel harmony selects -vat: istuvat.",
+      "tags": ["vowel-harmony", "verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["istua"],
+      "sentenceExplanation": {
+        "translation": "They sit.",
+        "pattern": "Subject (who does it) + verb (what they do)",
+        "parts": [
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "Subject — the people doing the action.",
+            "baseForm": "he",
+            "formation": "he is already the basic pronoun meaning “they”, so it does not need an ending here."
+          },
+          {
+            "finnish": "istuvat",
+            "meaning": "sit",
+            "role": "Verb — the action performed by the plural subject.",
+            "baseForm": "istua",
+            "formation": "The exercise supplies the stem istu-, so no stem-building rule is being tested. Add -vat; this ending shows that the subject is he (“they”). Vowel harmony chooses -vat because the supplied stem contains a back vowel: a, o, or u."
+          }
+        ]
+      },
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e14",
+      "answerDiagnostics": [
+        {
+          "answers": ["istuvät"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The u in the supplied stem istu- selects -vat. Neutral i does not override it: istuvat."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e14",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "sanoa (“to say”), supplied stem sano- → he ____ (“they say”)",
+      "acceptedAnswers": ["sanovat"],
+      "explanation": "sanoa means “to say”; sanovat means “they say”. The stem sano- is supplied. For he (“they”), vowel harmony selects -vat: sanovat.",
+      "tags": ["vowel-harmony", "verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["sanoa"],
+      "sentenceExplanation": {
+        "translation": "They say.",
+        "pattern": "Subject (who does it) + verb (what they do)",
+        "parts": [
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "role": "Subject — the people doing the action.",
+            "baseForm": "he",
+            "formation": "he is already the basic pronoun meaning “they”, so it does not need an ending here."
+          },
+          {
+            "finnish": "sanovat",
+            "meaning": "say",
+            "role": "Verb — the action performed by the plural subject.",
+            "baseForm": "sanoa",
+            "formation": "The exercise supplies the stem sano-, so no stem-building rule is being tested. Add -vat; this ending shows that the subject is he (“they”). Vowel harmony chooses -vat because the supplied stem contains a back vowel: a, o, or u."
+          }
+        ]
+      },
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e13",
+      "answerDiagnostics": [
+        {
+          "answers": ["sanovät"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The a and o in supplied sano- select -vat: sanovat."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e15",
+      "type": "fill-blank",
+      "instruction": "Complete the plural subject.",
+      "prompt": "____ ovat kotona. (“The pictures are at home.”) · use kuva (“picture”); kotona is supplied as “at home”",
+      "acceptedAnswers": ["Kuvat"],
+      "explanation": "The subject is plural: kuva → Kuvat. A plural subject uses ovat, meaning “are”.",
+      "tags": ["t-plural", "sentence"],
+      "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
+      "vocabulary": ["kuva", "olla", "ovat", "kotona"],
+      "sentenceExplanation": {
+        "translation": "The pictures are at home.",
+        "pattern": "Plural subject (who or what) + ovat (“are”) + place or state",
+        "parts": [
+          {
+            "finnish": "Kuvat",
+            "meaning": "the pictures",
+            "role": "Subject — the people or things that the sentence is about.",
+            "baseForm": "kuva",
+            "formation": "Start with kuva. The stem stays unchanged. Add plural -t: kuvat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the plural subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "olla is the dictionary form meaning “to be”. Because the subject means more than one, use the third-person plural form ovat, meaning “they are”."
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "Place or state — tells where the subject is or what its condition is.",
+            "baseForm": "kotona",
+            "formation": "kotona is supplied as a complete fixed word meaning “at home”. No place-ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "parallelExerciseId": "ff-a1-t12-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["kuva"],
+          "category": "Plural subject + ovat: singular subject used",
+          "explanation": "The meaning “pictures” and the plural verb ovat need a plural subject. Add -t: Kuvat ovat kotona."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e16",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The chairs are outside.” Tuolit means “the chairs”; ulkona is supplied as “outside”.",
+      "acceptedAnswers": ["Tuolit ovat ulkona."],
+      "explanation": "The subject is plural: tuoli → Tuolit. A plural subject uses ovat, meaning “are”.",
+      "tags": ["t-plural", "sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["tuoli", "olla", "ovat", "ulkona"],
+      "sentenceExplanation": {
+        "translation": "The chairs are outside.",
+        "pattern": "Plural subject (who or what) + ovat (“are”) + place or state",
+        "parts": [
+          {
+            "finnish": "Tuolit",
+            "meaning": "the chairs",
+            "role": "Subject — the people or things that the sentence is about.",
+            "baseForm": "tuoli",
+            "formation": "Start with tuoli. The stem stays unchanged. Add plural -t: tuolit."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the plural subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "olla is the dictionary form meaning “to be”. Because the subject means more than one, use the third-person plural form ovat, meaning “they are”."
+          },
+          {
+            "finnish": "ulkona",
+            "meaning": "outside",
+            "role": "Place or state — tells where the subject is or what its condition is.",
+            "baseForm": "ulkona",
+            "formation": "ulkona is supplied as a complete fixed word meaning “outside”. No place-ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e17",
+      "tokens": ["ulkona.", "Tuolit", "ovat"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Tuolit ulkona ovat."],
+          "category": "Plural subject + ovat: sentence order",
+          "explanation": "Use the requested subject–verb–place order: Tuolit + ovat + ulkona."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-t14-e17",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The cats are here.” Kissat means “the cats”; täällä is supplied as “here”.",
+      "acceptedAnswers": ["Kissat ovat täällä."],
+      "explanation": "The subject is plural: kissa → Kissat. A plural subject uses ovat, meaning “are”.",
+      "tags": ["t-plural", "sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["kissa", "olla", "ovat", "täällä"],
+      "tokens": ["ovat", "täällä.", "Kissat"],
+      "sentenceExplanation": {
+        "translation": "The cats are here.",
+        "pattern": "Plural subject (who or what) + ovat (“are”) + place or state",
+        "parts": [
+          {
+            "finnish": "Kissat",
+            "meaning": "the cats",
+            "role": "Subject — the people or things that the sentence is about.",
+            "baseForm": "kissa",
+            "formation": "Start with kissa. The stem stays unchanged. Add plural -t: kissat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the plural subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "olla is the dictionary form meaning “to be”. Because the subject means more than one, use the third-person plural form ovat, meaning “they are”."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place or state — tells where the subject is or what its condition is.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word meaning “here”. No place-ending rule is being tested."
+          }
+        ]
+      },
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "parallelExerciseId": "ff-a1-t14-e16",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kissat täällä ovat."],
+          "category": "Plural subject + ovat: sentence order",
+          "explanation": "Use the requested subject–verb–place order: Kissat + ovat + täällä."
+        }
+      ]
+    },
+    {
+      "id": "tpx-sentence-review-recognition-001",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish noun form.",
+      "prompt": "Write the singular form meaning “pen”.",
+      "acceptedAnswers": ["kynä"],
+      "explanation": "kynä is singular. The singular is kynä (“pen”); the T-plural is kynät (“pens”).",
+      "tags": ["t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["kynä"],
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-recognition-002"
+    },
+    {
+      "id": "tpx-sentence-review-recognition-002",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish noun form.",
+      "prompt": "Write the plural form meaning “apples”.",
+      "acceptedAnswers": ["omenat"],
+      "explanation": "omenat is plural. The singular is omena (“apple”); the T-plural is omenat (“apples”).",
+      "tags": ["t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["omena"],
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-recognition-001"
+    },
+    {
+      "id": "tpx-sentence-review-recognition-003",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish noun form.",
+      "prompt": "Write the singular form meaning “word”.",
+      "acceptedAnswers": ["sana"],
+      "explanation": "sana is singular. The singular is sana (“word”); the T-plural is sanat (“words”).",
+      "tags": ["t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["sana"],
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-recognition-004"
+    },
+    {
+      "id": "tpx-sentence-review-recognition-004",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish noun form.",
+      "prompt": "Write the plural form meaning “pictures”.",
+      "acceptedAnswers": ["kuvat"],
+      "explanation": "kuvat is plural. The singular is kuva (“picture”); the T-plural is kuvat (“pictures”).",
+      "tags": ["t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["kuva"],
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-recognition-003"
+    },
+    {
+      "id": "tpx-sentence-review-regular-001",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "sanat",
+      "acceptedAnswers": ["words"],
+      "explanation": "The stem stays unchanged. Add plural -t: sanat (“words”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["sana"],
+      "targetSkill": "Regular T-plural",
+      "misconceptionCategory": "Regular T-plural: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-regular-002"
+    },
+    {
+      "id": "tpx-sentence-review-regular-002",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "kuvat",
+      "acceptedAnswers": ["pictures"],
+      "explanation": "The stem stays unchanged. Add plural -t: kuvat (“pictures”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["kuva"],
+      "targetSkill": "Regular T-plural",
+      "misconceptionCategory": "Regular T-plural: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-regular-001"
+    },
+    {
+      "id": "tpx-sentence-review-regular-003",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “chairs”. Use tuoli (“chair”); add the plural ending -t to the unchanged stem.",
+      "acceptedAnswers": ["tuolit"],
+      "explanation": "The stem stays unchanged. Add plural -t: tuolit (“chairs”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["tuoli"],
+      "targetSkill": "Regular T-plural",
+      "misconceptionCategory": "Regular T-plural: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-regular-004"
+    },
+    {
+      "id": "tpx-sentence-review-regular-004",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “cats”. Use kissa (“cat”); add the plural ending -t to the unchanged stem.",
+      "acceptedAnswers": ["kissat"],
+      "explanation": "The stem stays unchanged. Add plural -t: kissat (“cats”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["Regular T-plural"],
+      "vocabulary": ["kissa"],
+      "targetSkill": "Regular T-plural",
+      "misconceptionCategory": "Regular T-plural: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-regular-003"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-recognition-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the learned weak stem.",
+      "prompt": "Write the learned weak stem for kampa (“comb”): ____",
+      "acceptedAnswers": ["kamma-"],
+      "explanation": "kampa (“comb”) uses mp → mm in its learned weak stem kamma-. No case ending is being tested in this question.",
+      "tags": ["kpt", "weak-stem", "controlled-production"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["kampa"],
+      "options": ["kamma-", "kampa-", "kammat"],
+      "optionFeedback": {
+        "kamma-": "Correct. kampa (“comb”) uses mp → mm in its learned weak stem kamma-. No case ending is being tested in this question.",
+        "kampa-": "kampa- is not the weak stem. kampa (“comb”) uses mp → mm in its learned weak stem kamma-. No case ending is being tested in this question.",
+        "kammat": "kammat is not the weak stem. kampa (“comb”) uses mp → mm in its learned weak stem kamma-. No case ending is being tested in this question."
+      },
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-recognition-002"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-recognition-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the learned weak stem.",
+      "prompt": "Write the learned weak stem for takki (“coat”): ____",
+      "acceptedAnswers": ["taki-"],
+      "explanation": "takki (“coat”) uses kk → k in its learned weak stem taki-. No case ending is being tested in this question.",
+      "tags": ["kpt", "weak-stem", "controlled-production"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["takki"],
+      "options": ["taki-", "takki-", "takit"],
+      "optionFeedback": {
+        "taki-": "Correct. takki (“coat”) uses kk → k in its learned weak stem taki-. No case ending is being tested in this question.",
+        "takki-": "takki- is not the weak stem. takki (“coat”) uses kk → k in its learned weak stem taki-. No case ending is being tested in this question.",
+        "takit": "takit is not the weak stem. takki (“coat”) uses kk → k in its learned weak stem taki-. No case ending is being tested in this question."
+      },
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-recognition-001"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-recognition-003",
+      "type": "multiple-choice",
+      "instruction": "Choose the learned weak stem.",
+      "prompt": "Write the learned weak stem for katto (“roof”): ____",
+      "acceptedAnswers": ["kato-"],
+      "explanation": "katto (“roof”) uses tt → t in its learned weak stem kato-. No case ending is being tested in this question.",
+      "tags": ["kpt", "weak-stem", "controlled-production"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["katto"],
+      "options": ["kato-", "katto-", "katot"],
+      "optionFeedback": {
+        "kato-": "Correct. katto (“roof”) uses tt → t in its learned weak stem kato-. No case ending is being tested in this question.",
+        "katto-": "katto- is not the weak stem. katto (“roof”) uses tt → t in its learned weak stem kato-. No case ending is being tested in this question.",
+        "katot": "katot is not the weak stem. katto (“roof”) uses tt → t in its learned weak stem kato-. No case ending is being tested in this question."
+      },
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-recognition-004"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-recognition-004",
+      "type": "multiple-choice",
+      "instruction": "Choose the learned weak stem.",
+      "prompt": "Write the learned weak stem for tyttö (“girl”): ____",
+      "acceptedAnswers": ["tytö-"],
+      "explanation": "tyttö (“girl”) uses tt → t in its learned weak stem tytö-. No case ending is being tested in this question.",
+      "tags": ["kpt", "weak-stem", "controlled-production"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["tyttö"],
+      "options": ["tytö-", "tyttö-", "tytöt"],
+      "optionFeedback": {
+        "tytö-": "Correct. tyttö (“girl”) uses tt → t in its learned weak stem tytö-. No case ending is being tested in this question.",
+        "tyttö-": "tyttö- is not the weak stem. tyttö (“girl”) uses tt → t in its learned weak stem tytö-. No case ending is being tested in this question.",
+        "tytöt": "tytöt is not the weak stem. tyttö (“girl”) uses tt → t in its learned weak stem tytö-. No case ending is being tested in this question."
+      },
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-recognition-003"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-001",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "keitot",
+      "acceptedAnswers": ["soups"],
+      "explanation": "The plural ending -t is supplied. Apply tt → t to make keito-, then add -t: keitot (“soups”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["T-plural with KPT", "KPT T-plural recognition"],
+      "vocabulary": ["keitto"],
+      "targetSkill": "T-plural with KPT",
+      "misconceptionCategory": "T-plural with KPT: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-002"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-002",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "sillat",
+      "acceptedAnswers": ["bridges"],
+      "explanation": "The plural ending -t is supplied. Apply lt → ll to make silla-, then add -t: sillat (“bridges”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["T-plural with KPT", "KPT T-plural recognition"],
+      "vocabulary": ["silta"],
+      "targetSkill": "T-plural with KPT",
+      "misconceptionCategory": "T-plural with KPT: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-001"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-003",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "kammat",
+      "acceptedAnswers": ["combs"],
+      "explanation": "The plural ending -t is supplied. Apply mp → mm to make kamma-, then add -t: kammat (“combs”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["T-plural with KPT", "KPT T-plural recognition"],
+      "vocabulary": ["kampa"],
+      "targetSkill": "T-plural with KPT",
+      "misconceptionCategory": "T-plural with KPT: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-004"
+    },
+    {
+      "id": "tpx-sentence-review-kpt-004",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "takit",
+      "acceptedAnswers": ["coats"],
+      "explanation": "The plural ending -t is supplied. Apply kk → k to make taki-, then add -t: takit (“coats”).",
+      "tags": ["t-plural", "controlled-production"],
+      "requiredSkills": ["T-plural with KPT", "KPT T-plural recognition"],
+      "vocabulary": ["takki"],
+      "targetSkill": "T-plural with KPT",
+      "misconceptionCategory": "T-plural with KPT: form not yet correct",
+      "parallelExerciseId": "tpx-sentence-review-kpt-003"
+    },
+    {
+      "id": "tpx-sentence-review-he-001",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They watch.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He katsovat."],
+      "explanation": "The supplied stem is katso-. Add -vat to agree with he (“they”): katsovat.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["katsoa"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They watch.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "katsovat",
+            "meaning": "watch",
+            "role": "Verb — tells what they do.",
+            "baseForm": "katsoa",
+            "formation": "The stem katso- is supplied. Add -vat: katsovat."
+          }
+        ]
+      },
+      "tokens": ["katsovat.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-002"
+    },
+    {
+      "id": "tpx-sentence-review-he-002",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They stand.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He seisovat."],
+      "explanation": "The supplied stem is seiso-. Add -vat to agree with he (“they”): seisovat.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["seisoa"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They stand.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "seisovat",
+            "meaning": "stand",
+            "role": "Verb — tells what they do.",
+            "baseForm": "seisoa",
+            "formation": "The stem seiso- is supplied. Add -vat: seisovat."
+          }
+        ]
+      },
+      "tokens": ["seisovat.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-001"
+    },
+    {
+      "id": "tpx-sentence-review-he-003",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They speak.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He puhuvat."],
+      "explanation": "The supplied stem is puhu-. Add -vat to agree with he (“they”): puhuvat.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["puhua"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They speak.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "puhuvat",
+            "meaning": "speak",
+            "role": "Verb — tells what they do.",
+            "baseForm": "puhua",
+            "formation": "The stem puhu- is supplied. Add -vat: puhuvat."
+          }
+        ]
+      },
+      "tokens": ["puhuvat.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-004"
+    },
+    {
+      "id": "tpx-sentence-review-he-004",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They ask.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He kysyvät."],
+      "explanation": "The supplied stem is kysy-. Add -vät to agree with he (“they”): kysyvät.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["kysyä"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They ask.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "kysyvät",
+            "meaning": "ask",
+            "role": "Verb — tells what they do.",
+            "baseForm": "kysyä",
+            "formation": "The stem kysy- is supplied. Add -vät: kysyvät."
+          }
+        ]
+      },
+      "tokens": ["kysyvät.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-003"
+    },
+    {
+      "id": "tpx-sentence-review-he-005",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They live.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He asuvat."],
+      "explanation": "The supplied stem is asu-. Add -vat to agree with he (“they”): asuvat.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["asua"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They live.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "asuvat",
+            "meaning": "live",
+            "role": "Verb — tells what they do.",
+            "baseForm": "asua",
+            "formation": "The stem asu- is supplied. Add -vat: asuvat."
+          }
+        ]
+      },
+      "tokens": ["asuvat.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-006"
+    },
+    {
+      "id": "tpx-sentence-review-he-006",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They leave.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He lähtevät."],
+      "explanation": "The supplied stem is lähte-. Add -vät to agree with he (“they”): lähtevät.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["lähteä"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They leave.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "lähtevät",
+            "meaning": "leave",
+            "role": "Verb — tells what they do.",
+            "baseForm": "lähteä",
+            "formation": "The stem lähte- is supplied. Add -vät: lähtevät."
+          }
+        ]
+      },
+      "tokens": ["lähtevät.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-005"
+    },
+    {
+      "id": "tpx-sentence-review-he-007",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They sing.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He laulavat."],
+      "explanation": "The supplied stem is laula-. Add -vat to agree with he (“they”): laulavat.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["laulaa"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They sing.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "laulavat",
+            "meaning": "sing",
+            "role": "Verb — tells what they do.",
+            "baseForm": "laulaa",
+            "formation": "The stem laula- is supplied. Add -vat: laulavat."
+          }
+        ]
+      },
+      "tokens": ["laulavat.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-008"
+    },
+    {
+      "id": "tpx-sentence-review-he-008",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb order.",
+      "prompt": "Build “They sit.” The complete agreeing verb is supplied for recognition.",
+      "acceptedAnswers": ["He istuvat."],
+      "explanation": "The supplied stem is istu-. Add -vat to agree with he (“they”): istuvat.",
+      "tags": ["verb", "plural", "sentence"],
+      "requiredSkills": ["Third-person plural -vat/-vät"],
+      "vocabulary": ["istua"],
+      "targetSkill": "Third-person plural -vat/-vät",
+      "misconceptionCategory": "Third-person plural -vat/-vät: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "They sit.",
+        "pattern": "Plural subject (who) + third-person plural verb",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "Subject — names the people acting.",
+            "baseForm": "he",
+            "formation": "he is supplied unchanged."
+          },
+          {
+            "finnish": "istuvat",
+            "meaning": "sit",
+            "role": "Verb — tells what they do.",
+            "baseForm": "istua",
+            "formation": "The stem istu- is supplied. Add -vat: istuvat."
+          }
+        ]
+      },
+      "tokens": ["istuvat.", "He"],
+      "parallelExerciseId": "tpx-sentence-review-he-007"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete sentence.",
+      "prompt": "Choose “The balls are here.”",
+      "acceptedAnswers": ["Pallot ovat täällä."],
+      "explanation": "Pallot ovat täällä. means “The balls are here”. The subject is plural or supplied, ovat agrees with it, and täällä gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["pallo", "olla", "ovat", "täällä"],
+      "options": ["Pallot ovat täällä.", "Pallot täällä ovat."],
+      "optionFeedback": {
+        "Pallot ovat täällä.": "Correct. Pallot ovat täällä. means “The balls are here”. The subject is plural or supplied, ovat agrees with it, and täällä gives the supplied place or state.",
+        "Pallot täällä ovat.": "Use subject–verb–place order. Pallot ovat täällä. means “The balls are here”. The subject is plural or supplied, ovat agrees with it, and täällä gives the supplied place or state."
+      },
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The balls are here.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Pallot",
+            "meaning": "the balls",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "pallo",
+            "formation": "Start with pallo; use the learned plural form Pallot."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "tpx-sentence-review-ovat-002"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete sentence.",
+      "prompt": "Choose “The books are open.”",
+      "acceptedAnswers": ["Kirjat ovat auki."],
+      "explanation": "Kirjat ovat auki. means “The books are open”. The subject is plural or supplied, ovat agrees with it, and auki gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["kirja", "olla", "ovat", "auki"],
+      "options": ["Kirjat ovat auki.", "Kirjat auki ovat."],
+      "optionFeedback": {
+        "Kirjat ovat auki.": "Correct. Kirjat ovat auki. means “The books are open”. The subject is plural or supplied, ovat agrees with it, and auki gives the supplied place or state.",
+        "Kirjat auki ovat.": "Use subject–verb–place order. Kirjat ovat auki. means “The books are open”. The subject is plural or supplied, ovat agrees with it, and auki gives the supplied place or state."
+      },
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The books are open.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "the books",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "kirja",
+            "formation": "Start with kirja; use the learned plural form Kirjat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "auki",
+            "meaning": "open",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "auki",
+            "formation": "auki is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "tpx-sentence-review-ovat-001"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-003",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The books are here.”",
+      "acceptedAnswers": ["Kirjat ovat täällä."],
+      "explanation": "Kirjat ovat täällä. means “The books are here”. The subject is plural or supplied, ovat agrees with it, and täällä gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["kirja", "olla", "ovat", "täällä"],
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The books are here.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "the books",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "kirja",
+            "formation": "Start with kirja; use the learned plural form Kirjat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "tokens": ["täällä.", "Kirjat", "ovat"],
+      "parallelExerciseId": "tpx-sentence-review-ovat-004"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-004",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The dogs are at home.”",
+      "acceptedAnswers": ["Koirat ovat kotona."],
+      "explanation": "Koirat ovat kotona. means “The dogs are at home”. The subject is plural or supplied, ovat agrees with it, and kotona gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["koira", "olla", "ovat", "kotona"],
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The dogs are at home.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Koirat",
+            "meaning": "the dogs",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "koira",
+            "formation": "Start with koira; use the learned plural form Koirat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "kotona",
+            "formation": "kotona is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "tokens": ["kotona.", "Koirat", "ovat"],
+      "parallelExerciseId": "tpx-sentence-review-ovat-003"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-005",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Write “The pens are here.”",
+      "acceptedAnswers": ["Kynät ovat täällä."],
+      "explanation": "Kynät ovat täällä. means “The pens are here”. The subject is plural or supplied, ovat agrees with it, and täällä gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["kynä", "olla", "ovat", "täällä"],
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The pens are here.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Kynät",
+            "meaning": "the pens",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "kynä",
+            "formation": "Start with kynä; use the learned plural form Kynät."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "tpx-sentence-review-ovat-006"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-006",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Write “The apples are here.”",
+      "acceptedAnswers": ["Omenat ovat täällä."],
+      "explanation": "Omenat ovat täällä. means “The apples are here”. The subject is plural or supplied, ovat agrees with it, and täällä gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["omena", "olla", "ovat", "täällä"],
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The apples are here.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Omenat",
+            "meaning": "the apples",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "omena",
+            "formation": "Start with omena; use the learned plural form Omenat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "tpx-sentence-review-ovat-005"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-007",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Write “The chairs are outside.”",
+      "acceptedAnswers": ["Tuolit ovat ulkona."],
+      "explanation": "Tuolit ovat ulkona. means “The chairs are outside”. The subject is plural or supplied, ovat agrees with it, and ulkona gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["tuoli", "olla", "ovat", "ulkona"],
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The chairs are outside.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Tuolit",
+            "meaning": "the chairs",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "tuoli",
+            "formation": "Start with tuoli; use the learned plural form Tuolit."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "ulkona",
+            "meaning": "outside",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "ulkona",
+            "formation": "ulkona is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "tpx-sentence-review-ovat-008"
+    },
+    {
+      "id": "tpx-sentence-review-ovat-008",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Write “The cats are at home.”",
+      "acceptedAnswers": ["Kissat ovat kotona."],
+      "explanation": "Kissat ovat kotona. means “The cats are at home”. The subject is plural or supplied, ovat agrees with it, and kotona gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Plural subject + ovat"],
+      "vocabulary": ["kissa", "olla", "ovat", "kotona"],
+      "targetSkill": "Plural subject + ovat",
+      "misconceptionCategory": "Plural subject + ovat: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The cats are at home.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Kissat",
+            "meaning": "the cats",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "kissa",
+            "formation": "Start with kissa; use the learned plural form Kissat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "ovat is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "kotona",
+            "formation": "kotona is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "tpx-sentence-review-ovat-007"
+    }
+  ]
+}

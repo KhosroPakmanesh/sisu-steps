@@ -1,0 +1,259 @@
+{
+  "id": "vowel-ending-review",
+  "title": "Vowel and ending review",
+  "focus": "Retrieve vowel-family and ending choices without adding a new grammar rule.",
+  "stage": "review",
+  "targetSkills": ["Vowel harmony", "Neutral-vowel harmony", "Inessive -ssa/-ssä"],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "vowel-harmony-basics",
+    "neutral-vowel-harmony",
+    "inside-ending",
+    "inessive-location-sentences"
+  ],
+  "exercises": [
+    {
+      "id": "ff-a1-t13-e01",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which vowel group describes talo (“house”)?",
+      "acceptedAnswers": ["back vowels"],
+      "explanation": "The vowels a and o in talo are back vowels. The back-vowel group is a, o, u.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["talo"],
+      "options": ["front vowels", "only neutral vowels", "back vowels"],
+      "optionFeedback": {
+        "front vowels": "Front vowels are ä, ö, y. The a and o in talo belong to the back-vowel group.",
+        "only neutral vowels": "Only e and i are neutral. Talo contains a and o, which are back vowels.",
+        "back vowels": "Correct. Both a and o are back vowels."
+      },
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "ff-a1-t01-e09"
+    },
+    {
+      "id": "ff-a1-t13-e03",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "puisto (“park”) → ____ (“in the park”)",
+      "acceptedAnswers": ["puistossa"],
+      "explanation": "puisto means “park”; puistossa means “in the park”. The back vowels u/o select -ssa.",
+      "tags": ["vowel-harmony", "inessive"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["puisto"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "ff-a1-t02-e15",
+      "answerDiagnostics": [
+        {
+          "answers": ["puistossä"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The u and o in puisto require -ssa. Keep the stem unchanged: puisto + ssa = puistossa."
+        }
+      ]
+    },
+    {
+      "id": "vhx-review-one-vowel-001",
+      "type": "fill-blank",
+      "instruction": "Name the vowel group.",
+      "prompt": "Look at every vowel. Write “back vowels”, “front vowels”, or “only neutral vowels” for auto (“car”).",
+      "acceptedAnswers": ["back vowels"],
+      "explanation": "auto (“car”) belongs to the back vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["auto"],
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-vowel-002"
+    },
+    {
+      "id": "vhx-review-one-vowel-002",
+      "type": "fill-blank",
+      "instruction": "Name the vowel group.",
+      "prompt": "Look at every vowel. Write “back vowels”, “front vowels”, or “only neutral vowels” for nimi (“name”).",
+      "acceptedAnswers": ["only neutral vowels"],
+      "explanation": "nimi (“name”) belongs to the only neutral vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["nimi"],
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-vowel-001"
+    },
+    {
+      "id": "vhx-review-one-vowel-003",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Look at every vowel. Which vowel group describes päivä (“day”)?",
+      "acceptedAnswers": ["front vowels"],
+      "explanation": "päivä (“day”) belongs to the front vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["päivä"],
+      "options": ["back vowels", "front vowels", "only neutral vowels"],
+      "optionFeedback": {
+        "back vowels": "back vowels does not match all the vowels in päivä. päivä (“day”) belongs to the front vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+        "front vowels": "Correct. päivä (“day”) belongs to the front vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+        "only neutral vowels": "only neutral vowels does not match all the vowels in päivä. päivä (“day”) belongs to the front vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral."
+      },
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-vowel-004"
+    },
+    {
+      "id": "vhx-review-one-vowel-004",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Look at every vowel. Which vowel group describes tie (“road”)?",
+      "acceptedAnswers": ["only neutral vowels"],
+      "explanation": "tie (“road”) belongs to the only neutral vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["tie"],
+      "options": ["back vowels", "front vowels", "only neutral vowels"],
+      "optionFeedback": {
+        "back vowels": "back vowels does not match all the vowels in tie. tie (“road”) belongs to the only neutral vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+        "front vowels": "front vowels does not match all the vowels in tie. tie (“road”) belongs to the only neutral vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral.",
+        "only neutral vowels": "Correct. tie (“road”) belongs to the only neutral vowels group. Back vowels are a, o, u; front vowels are ä, ö, y; e and i are neutral."
+      },
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-vowel-003"
+    },
+    {
+      "id": "vhx-review-one-neutral-001",
+      "type": "fill-blank",
+      "instruction": "Write the ending.",
+      "prompt": "Choose the harmonic ending. tuoli (“chair”) + ____",
+      "acceptedAnswers": ["-ssa"],
+      "explanation": "tuoli (“chair”) takes -ssa because u and o are back vowels. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["tuoli"],
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-neutral-002"
+    },
+    {
+      "id": "vhx-review-one-neutral-002",
+      "type": "fill-blank",
+      "instruction": "Write the ending.",
+      "prompt": "Choose the harmonic ending. sininen (“blue”) + ____",
+      "acceptedAnswers": ["-ssä"],
+      "explanation": "sininen (“blue”) takes -ssä because i and e are neutral only. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["sininen"],
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-neutral-001"
+    },
+    {
+      "id": "vhx-review-one-neutral-003",
+      "type": "multiple-choice",
+      "instruction": "Choose the ending.",
+      "prompt": "Choose the harmonic ending. Which inessive ending belongs with toimisto (“office”)?",
+      "acceptedAnswers": ["-ssa"],
+      "explanation": "toimisto (“office”) takes -ssa because o is a back vowel. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["toimisto"],
+      "options": ["-ssa", "-ssä"],
+      "optionFeedback": {
+        "-ssa": "Correct. toimisto (“office”) takes -ssa because o is a back vowel. Neutral e and i do not force a back-vowel ending.",
+        "-ssä": "-ssä conflicts with the vowel family in this word. toimisto (“office”) takes -ssa because o is a back vowel. Neutral e and i do not force a back-vowel ending."
+      },
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-neutral-004"
+    },
+    {
+      "id": "vhx-review-one-neutral-004",
+      "type": "multiple-choice",
+      "instruction": "Choose the ending.",
+      "prompt": "Choose the harmonic ending. Which inessive ending belongs with keittiö (“kitchen”)?",
+      "acceptedAnswers": ["-ssä"],
+      "explanation": "keittiö (“kitchen”) takes -ssä because ö is a front vowel. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["keittiö"],
+      "options": ["-ssa", "-ssä"],
+      "optionFeedback": {
+        "-ssa": "-ssa conflicts with the vowel family in this word. keittiö (“kitchen”) takes -ssä because ö is a front vowel. Neutral e and i do not force a back-vowel ending.",
+        "-ssä": "Correct. keittiö (“kitchen”) takes -ssä because ö is a front vowel. Neutral e and i do not force a back-vowel ending."
+      },
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-neutral-003"
+    },
+    {
+      "id": "vhx-review-one-inessive-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "puisto (“park”) → ? (“in the park”). The stem remains puisto; choose -ssa and attach it directly.",
+      "acceptedAnswers": ["puistossa"],
+      "explanation": "puisto (“park”) takes -ssa. Attach it directly to the unchanged stem: puistossa (“in the park”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["puisto"],
+      "options": ["puistossa", "puistossä", "puisto"],
+      "optionFeedback": {
+        "puistossa": "Correct. puisto (“park”) takes -ssa. Attach it directly to the unchanged stem: puistossa (“in the park”).",
+        "puistossä": "puistossä does not use the required inessive construction. puisto (“park”) takes -ssa. Attach it directly to the unchanged stem: puistossa (“in the park”).",
+        "puisto": "puisto does not use the required inessive construction. puisto (“park”) takes -ssa. Attach it directly to the unchanged stem: puistossa (“in the park”)."
+      },
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-inessive-002"
+    },
+    {
+      "id": "vhx-review-one-inessive-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "elämä (“life”) → ? (“in life”). The stem remains elämä; choose -ssä and attach it directly.",
+      "acceptedAnswers": ["elämässä"],
+      "explanation": "elämä (“life”) takes -ssä. Attach it directly to the unchanged stem: elämässä (“in life”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["elämä"],
+      "options": ["elämässä", "elämässa", "elämä"],
+      "optionFeedback": {
+        "elämässä": "Correct. elämä (“life”) takes -ssä. Attach it directly to the unchanged stem: elämässä (“in life”).",
+        "elämässa": "elämässa does not use the required inessive construction. elämä (“life”) takes -ssä. Attach it directly to the unchanged stem: elämässä (“in life”).",
+        "elämä": "elämä does not use the required inessive construction. elämä (“life”) takes -ssä. Attach it directly to the unchanged stem: elämässä (“in life”)."
+      },
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-inessive-001"
+    },
+    {
+      "id": "vhx-review-one-inessive-003",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "kahvilassa",
+      "acceptedAnswers": ["in the café"],
+      "explanation": "kahvila (“café”) takes -ssa. Attach it directly to the unchanged stem: kahvilassa (“in the café”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["kahvila"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-inessive-004"
+    },
+    {
+      "id": "vhx-review-one-inessive-004",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "kylässä",
+      "acceptedAnswers": ["in the village"],
+      "explanation": "kylä (“village”) takes -ssä. Attach it directly to the unchanged stem: kylässä (“in the village”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["kylä"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-one-inessive-003"
+    }
+  ]
+}

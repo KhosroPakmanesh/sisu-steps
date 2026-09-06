@@ -5,32 +5,39 @@ import {
   alignLearnerStateWithPacks,
   learnerStateHasProgress,
 } from '../shared/state/align-learner-state.policy';
+import { migrateFoundationsPackSplit } from '../shared/state/migrate-foundations-split.policy';
 
 export function compatibleBackupState(
   backup: LearnerBackup,
   installedPacks: TopicPack[],
 ): LearnerState {
-  const backupVersions = resolveBackupVersions(backup.state, installedPacks);
+  const migratedState = migrateFoundationsPackSplit(
+    {
+      ...backup.state,
+      lessonCompletions: backup.state.lessonCompletions ?? [],
+      correctionRecords: backup.state.correctionRecords ?? [],
+      learnerNotes: backup.state.learnerNotes ?? [],
+    },
+    installedPacks,
+  );
+  const backupVersions = resolveBackupVersions(migratedState, installedPacks);
   validateVersions(backupVersions, installedPacks);
-  const referencedExerciseIds = collectExerciseReferences(backup.state);
+  const referencedExerciseIds = collectExerciseReferences(migratedState);
   validateExerciseReferences(referencedExerciseIds, installedPacks);
-  validateTopicAndTestReferences(backup.state, installedPacks);
-  validateCorrectionReferences(backup.state, installedPacks);
-  validateLessonReferences(backup.state, installedPacks);
-  validateNoteReferences(backup.state, installedPacks);
+  validateTopicAndTestReferences(migratedState, installedPacks);
+  validateCorrectionReferences(migratedState, installedPacks);
+  validateLessonReferences(migratedState, installedPacks);
+  validateNoteReferences(migratedState, installedPacks);
   validateReferencedTopicVersions(
-    backup.state,
+    migratedState,
     backupVersions,
     installedPacks,
     referencedExerciseIds,
   );
   return alignLearnerStateWithPacks(
     {
-      ...backup.state,
+      ...migratedState,
       contentPackVersions: backupVersions,
-      lessonCompletions: backup.state.lessonCompletions ?? [],
-      correctionRecords: backup.state.correctionRecords ?? [],
-      learnerNotes: backup.state.learnerNotes ?? [],
     },
     installedPacks,
   );

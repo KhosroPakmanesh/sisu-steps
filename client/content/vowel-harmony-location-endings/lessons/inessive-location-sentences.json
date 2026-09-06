@@ -1,0 +1,247 @@
+{
+  "id": "inessive-location-sentences",
+  "version": "1.0.0",
+  "title": "Short sentences with -ssa and -ssä",
+  "summary": "Put a learned inessive location after the supplied form on (“is”).",
+  "stage": "focused",
+  "targetSkills": ["Inessive location sentences"],
+  "prerequisiteSkills": ["Inessive -ssa/-ssä"],
+  "introducedVocabulary": [
+    {
+      "finnish": "kirja",
+      "english": "book"
+    },
+    {
+      "finnish": "takki",
+      "english": "coat"
+    },
+    {
+      "finnish": "isä",
+      "english": "father"
+    },
+    {
+      "finnish": "äiti",
+      "english": "mother"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog"
+    },
+    {
+      "finnish": "opiskelija",
+      "english": "student"
+    },
+    {
+      "finnish": "olla",
+      "english": "to be"
+    },
+    {
+      "finnish": "on",
+      "english": "is"
+    }
+  ],
+  "objectives": [
+    "Read the subject–on–location pattern.",
+    "Use a learned -ssa/-ssä location in a complete sentence.",
+    "Keep the supplied verb separate from the location word."
+  ],
+  "sections": [
+    {
+      "title": "A complete location statement",
+      "paragraphs": [
+        "A short Finnish location statement can use a subject, on (“is”), and an inessive location.",
+        "The verb on is supplied here. The assessed target is placing or producing the learned location form."
+      ],
+      "keyPoints": ["Kirja on kirjastossa.", "Äiti on toimistossa."]
+    },
+    {
+      "title": "Keep the words separate",
+      "paragraphs": [
+        "The subject, on, and the location are separate written words.",
+        "The ending -ssa/-ssä joins directly to the location noun."
+      ],
+      "keyPoints": ["on kirjastossa, not onkirjastossa", "myymälä + ssä = myymälässä"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Kirja on kirjastossa.",
+      "english": "The book is in the library.",
+      "steps": ["Kirja is the subject.", "on means “is”.", "kirjasto + -ssa gives kirjastossa."]
+    },
+    {
+      "finnish": "Takki on myymälässä.",
+      "english": "The coat is in the shop.",
+      "steps": ["Takki is the subject.", "myymälä has front vowels.", "Add -ssä: myymälässä."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not attach on to another word.",
+    "Do not choose the ending from the English word.",
+    "Do not omit the complete sentence meaning when building Finnish."
+  ],
+  "practiceExercises": [
+    {
+      "id": "vhx-location-practice-p01",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Optional practice: Build “The book is in the library.”",
+      "acceptedAnswers": ["Kirja on kirjastossa."],
+      "explanation": "Kirja on kirjastossa. means “The book is in the library”. The subject is plural or supplied, on agrees with it, and kirjastossa gives the supplied place or state.",
+      "tags": ["lesson-practice", "sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["kirja", "olla", "on", "kirjasto"],
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The book is in the library.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "kirja",
+            "formation": "Kirja is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "kirjastossa",
+            "meaning": "in the library",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "kirjasto",
+            "formation": "Start with kirjasto and attach the learned inessive ending to form kirjastossa."
+          }
+        ]
+      },
+      "tokens": ["kirjastossa.", "Kirja", "on"]
+    },
+    {
+      "id": "vhx-location-practice-p02",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Optional practice: Build “The coat is in the shop.”",
+      "acceptedAnswers": ["Takki on myymälässä."],
+      "explanation": "Takki on myymälässä. means “The coat is in the shop”. The subject is plural or supplied, on agrees with it, and myymälässä gives the supplied place or state.",
+      "tags": ["lesson-practice", "sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["takki", "olla", "on", "myymälä"],
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The coat is in the shop.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Takki",
+            "meaning": "coat",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "takki",
+            "formation": "Takki is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "myymälässä",
+            "meaning": "in the shop",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "myymälä",
+            "formation": "Start with myymälä and attach the learned inessive ending to form myymälässä."
+          }
+        ]
+      },
+      "tokens": ["myymälässä.", "Takki", "on"]
+    },
+    {
+      "id": "vhx-location-practice-p03",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Optional practice: Write “The car is in the park.”",
+      "acceptedAnswers": ["Auto on puistossa."],
+      "explanation": "Auto on puistossa. means “The car is in the park”. The subject is plural or supplied, on agrees with it, and puistossa gives the supplied place or state.",
+      "tags": ["lesson-practice", "sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["auto", "olla", "on", "puisto"],
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The car is in the park.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "auto",
+            "formation": "Auto is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "puistossa",
+            "meaning": "in the park",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "puisto",
+            "formation": "Start with puisto and attach the learned inessive ending to form puistossa."
+          }
+        ]
+      }
+    },
+    {
+      "id": "vhx-location-practice-p04",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Optional practice: Write “The father is in the sauna.”",
+      "acceptedAnswers": ["Isä on saunassa."],
+      "explanation": "Isä on saunassa. means “The father is in the sauna”. The subject is plural or supplied, on agrees with it, and saunassa gives the supplied place or state.",
+      "tags": ["lesson-practice", "sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["isä", "olla", "on", "sauna"],
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The father is in the sauna.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Isä",
+            "meaning": "father",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "isä",
+            "formation": "Isä is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "saunassa",
+            "meaning": "in the sauna",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "sauna",
+            "formation": "Start with sauna and attach the learned inessive ending to form saunassa."
+          }
+        ]
+      }
+    }
+  ]
+}

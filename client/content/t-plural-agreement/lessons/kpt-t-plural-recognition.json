@@ -1,0 +1,155 @@
+{
+  "id": "kpt-t-plural-recognition",
+  "version": "1.0.0",
+  "title": "Recognising KPT in T-plurals",
+  "summary": "Notice the weak consonant grade before the final plural -t.",
+  "stage": "focused",
+  "targetSkills": ["KPT T-plural recognition"],
+  "prerequisiteSkills": ["Regular T-plural"],
+  "introducedVocabulary": [
+    {
+      "finnish": "keitto",
+      "english": "soup"
+    },
+    {
+      "finnish": "silta",
+      "english": "bridge"
+    },
+    {
+      "finnish": "kampa",
+      "english": "comb"
+    },
+    {
+      "finnish": "takki",
+      "english": "coat"
+    },
+    {
+      "finnish": "katto",
+      "english": "roof"
+    },
+    {
+      "finnish": "tyttö",
+      "english": "girl"
+    },
+    {
+      "finnish": "ranta",
+      "english": "beach"
+    },
+    {
+      "finnish": "pankki",
+      "english": "bank"
+    },
+    {
+      "finnish": "kauppa",
+      "english": "shop"
+    },
+    {
+      "finnish": "pelto",
+      "english": "field"
+    }
+  ],
+  "objectives": [
+    "Separate the final plural -t from the noun stem.",
+    "Recognise the displayed strong-to-weak change.",
+    "Prepare to produce familiar KPT plurals."
+  ],
+  "sections": [
+    {
+      "title": "Stem first, plural ending second",
+      "paragraphs": [
+        "Some familiar nouns use a weak consonant grade before plural -t.",
+        "Identify the stem change separately from the final -t."
+      ],
+      "keyPoints": ["takki → taki- + t → takit", "ranta → ranna- + t → rannat"]
+    },
+    {
+      "title": "Known pairs only",
+      "paragraphs": [
+        "This pack teaches the displayed word pairs from first principles.",
+        "Do not assume every unfamiliar noun changes in the same way."
+      ],
+      "keyPoints": ["tt → t in keitto → keitot", "lt → ll in silta → sillat"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "takki → takit",
+      "english": "coat → coats",
+      "steps": ["Change kk to k: taki-.", "Add plural -t: takit."]
+    },
+    {
+      "finnish": "ranta → rannat",
+      "english": "beach → beaches",
+      "steps": ["Change nt to nn: ranna-.", "Add plural -t: rannat."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not attach -t to the unchanged strong form when the learned pair uses KPT.",
+    "Do not count an internal t as the plural ending.",
+    "Do not guess beyond the displayed vocabulary."
+  ],
+  "practiceExercises": [
+    {
+      "id": "tpx-kpt-recognition-practice-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose singular or plural.",
+      "prompt": "Optional practice: Is keitto singular or plural?",
+      "acceptedAnswers": ["singular"],
+      "explanation": "keitto is singular. The singular is keitto (“soup”); the T-plural is keitot (“soups”). The plural also shows tt → t.",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["keitto"],
+      "options": ["singular", "plural"],
+      "optionFeedback": {
+        "singular": "Correct. keitto is singular. The singular is keitto (“soup”); the T-plural is keitot (“soups”). The plural also shows tt → t.",
+        "plural": "keitto is not plural in this pair. keitto is singular. The singular is keitto (“soup”); the T-plural is keitot (“soups”). The plural also shows tt → t."
+      },
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct"
+    },
+    {
+      "id": "tpx-kpt-recognition-practice-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose singular or plural.",
+      "prompt": "Optional practice: Is sillat singular or plural?",
+      "acceptedAnswers": ["plural"],
+      "explanation": "sillat is plural. The singular is silta (“bridge”); the T-plural is sillat (“bridges”). The plural also shows lt → ll.",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["silta"],
+      "options": ["singular", "plural"],
+      "optionFeedback": {
+        "singular": "sillat is not singular in this pair. sillat is plural. The singular is silta (“bridge”); the T-plural is sillat (“bridges”). The plural also shows lt → ll.",
+        "plural": "Correct. sillat is plural. The singular is silta (“bridge”); the T-plural is sillat (“bridges”). The plural also shows lt → ll."
+      },
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct"
+    },
+    {
+      "id": "tpx-kpt-recognition-practice-p03",
+      "type": "fill-blank",
+      "instruction": "Write singular or plural.",
+      "prompt": "Optional practice: kampa is a ____ noun form.",
+      "acceptedAnswers": ["singular"],
+      "explanation": "kampa is singular. The singular is kampa (“comb”); the T-plural is kammat (“combs”). The plural also shows mp → mm.",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["kampa"],
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct"
+    },
+    {
+      "id": "tpx-kpt-recognition-practice-p04",
+      "type": "fill-blank",
+      "instruction": "Write singular or plural.",
+      "prompt": "Optional practice: takit is a ____ noun form.",
+      "acceptedAnswers": ["plural"],
+      "explanation": "takit is plural. The singular is takki (“coat”); the T-plural is takit (“coats”). The plural also shows kk → k.",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["KPT T-plural recognition"],
+      "vocabulary": ["takki"],
+      "targetSkill": "KPT T-plural recognition",
+      "misconceptionCategory": "KPT T-plural recognition: form not yet correct"
+    }
+  ]
+}

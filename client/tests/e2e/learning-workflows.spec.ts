@@ -1,6 +1,8 @@
 import { expect, type Locator, type Page, test } from '@playwright/test';
 
-const TOPIC_SEGMENT = 'vowel-harmony-kpt-tplural';
+const TOPIC_SEGMENT = 'vowel-harmony-location-endings';
+const KPT_TOPIC_SEGMENT = 'kpt-singular-forms';
+const PLURAL_TOPIC_SEGMENT = 't-plural-agreement';
 
 function vowelHarmonyTopicLink(page: Page) {
   return page.locator(`.topic-card a[href="/topics/${TOPIC_SEGMENT}"]`);
@@ -8,7 +10,10 @@ function vowelHarmonyTopicLink(page: Page) {
 
 function vowelHarmonyReport(page: Page) {
   return page.locator('.report-topic').filter({
-    has: page.getByRole('heading', { name: 'Vowel harmony, KPT & T-plural', exact: true }),
+    has: page.getByRole('heading', {
+      name: 'Vowel harmony and location endings',
+      exact: true,
+    }),
   });
 }
 
@@ -317,12 +322,12 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.goto('/');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
-  await expect(page.locator('.topic-card')).toHaveCount(4);
+  await expect(page.locator('.topic-card')).toHaveCount(6);
   await expect(page.locator('.test-card')).toHaveCount(0);
   await vowelHarmonyTopicLink(page).click();
 
   await expect(page).toHaveURL(new RegExp(`/topics/${TOPIC_SEGMENT}$`));
-  await expect(page.locator('.test-card')).toHaveCount(14);
+  await expect(page.locator('.test-card')).toHaveCount(6);
   await expect(page.locator('.test-group-heading h3')).toHaveText(['Focused tests', 'Reviews']);
   await expect(page.locator('.set-badge, .stage-badge')).toHaveCount(0);
   await expect(page.locator('body')).not.toContainText('Core set');
@@ -340,7 +345,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await expect(page.locator('.appearance-toggle-hardware')).toBeVisible();
   await expect(page.locator('.appearance-choice-icon')).toHaveCount(3);
 
-  await page.goto(`/learn/${TOPIC_SEGMENT}/kpt-nouns`);
+  await page.goto(`/learn/${KPT_TOPIC_SEGMENT}/kpt-nouns`);
   await expect(page.locator('.lesson-hero h1')).toHaveText('KPT in nouns');
   await expect(page.locator('.lesson-layout')).toHaveClass(/single-lesson/);
   await expect(page.locator('.lesson-list')).toHaveCount(0);
@@ -358,17 +363,19 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
     ).toBeLessThan(4);
   }
 
-  await page.goto(`/learn/${TOPIC_SEGMENT}/foundations-review`);
-  await expect(page.locator('.lesson-list button')).toHaveCount(13);
+  await page.goto(`/learn/${TOPIC_SEGMENT}/location-transfer-review`);
+  await expect(page.locator('.lesson-list button')).toHaveCount(4);
   await expect(page.locator('.lesson-hero .eyebrow')).toContainText('Review');
-  await expect(page.locator('.lesson-hero h1')).toHaveText('Foundations review');
+  await expect(page.locator('.lesson-hero h1')).toHaveText('Location transfer review');
 
   if ((page.viewportSize()?.width ?? 0) <= 800) {
     await expect(page.locator('.lesson-list')).toBeHidden();
     await expect(page.locator('.lesson-picker')).toBeVisible();
-    await expect(page.locator('.lesson-picker option')).toHaveCount(13);
+    await expect(page.locator('.lesson-picker option')).toHaveCount(4);
     await page.locator('.lesson-picker select').selectOption('1');
-    await expect(page.locator('.reader-heading h2')).toContainText('Saying “in”');
+    await expect(page.locator('.reader-heading h2')).toContainText(
+      'Neutral vowels in ending choice',
+    );
 
     const pickerBox = await page.locator('.lesson-picker').boundingBox();
     const readerBox = await page.locator('.lesson-reader').boundingBox();
@@ -638,7 +645,7 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   await page.getByRole('button', { name: 'Erase answer' }).click();
   await expect(answer).toHaveValue('');
 
-  await page.goto(`/study/${TOPIC_SEGMENT}/plural-in-sentences`);
+  await page.goto(`/study/${PLURAL_TOPIC_SEGMENT}/plural-in-sentences`);
   await page.getByRole('button', { name: /Show answer/ }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
   const availableWords = page.getByLabel('Available words');
@@ -668,7 +675,7 @@ test('keeps study targets truthful and readable at every supported width', async
     .toBe((page.viewportSize()?.width ?? 0) <= 800 ? 'block' : 'flex');
   await expect(page.locator('html')).toHaveJSProperty('scrollWidth', page.viewportSize()?.width);
 
-  await page.goto(`/study/${TOPIC_SEGMENT}/foundations-review`);
+  await page.goto(`/study/${TOPIC_SEGMENT}/location-transfer-review`);
 
   const reviewTarget = page.getByRole('complementary', { name: 'Test learning focus' });
   await expect(reviewTarget.getByRole('heading', { level: 2 })).toContainText('Skills reviewed:');
@@ -922,15 +929,20 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   await expect(reportBackLink).toHaveClass(/back-link/);
   await expect(page.locator('.reports-hero .back-link + .eyebrow')).toHaveCSS('margin-top', '20px');
   const reportOverview = page.locator('.report-overview');
-  const heroTopDelta = await page.locator('.reports-hero').evaluate((hero) => {
+  const heroLayout = await page.locator('.reports-hero').evaluate((hero) => {
     const content = hero.firstElementChild as HTMLElement | null;
     const overview = hero.querySelector('.report-overview') as HTMLElement | null;
-    return Math.abs((content?.offsetTop ?? 0) - (overview?.offsetTop ?? 0));
+    return {
+      columns: getComputedStyle(hero).gridTemplateColumns.split(' ').length,
+      topDelta: Math.abs(
+        (content?.getBoundingClientRect().top ?? 0) - (overview?.getBoundingClientRect().top ?? 0),
+      ),
+    };
   });
-  if ((page.viewportSize()?.width ?? 0) > 800) {
-    expect(heroTopDelta).toBeLessThanOrEqual(1);
+  if (heroLayout.columns > 1) {
+    expect(heroLayout.topDelta).toBeLessThanOrEqual(2);
   } else {
-    expect(heroTopDelta).toBeGreaterThan(0);
+    expect(heroLayout.topDelta).toBeGreaterThan(0);
   }
   await expect(reportOverview).toHaveClass(/assignment-sheet/);
   await expect(reportOverview.locator(':scope > div')).toHaveCount(5);
@@ -1071,7 +1083,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(4);
+  await expect(page.locator('.topic-card')).toHaveCount(6);
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation).toContainText('Data');
   await expect(primaryNavigation.getByRole('link')).toHaveCount(3);

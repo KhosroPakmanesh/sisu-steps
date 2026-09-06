@@ -1,6 +1,7 @@
 import { LearnerState } from '@/shared/domain/learner-state.models';
 import { TopicPack } from '../content/content.models';
 import { createEmptyLearnerState } from './learner-state.factory';
+import { migrateFoundationsPackSplit } from './migrate-foundations-split.policy';
 
 function hasLearnerProgress(state: LearnerState): boolean {
   return (
@@ -34,8 +35,8 @@ function clearPackData(state: LearnerState, pack: TopicPack): LearnerState {
 
 export function alignLearnerStateWithPacks(state: LearnerState, packs: TopicPack[]): LearnerState {
   const installedVersions = Object.fromEntries(packs.map((pack) => [pack.id, pack.version]));
-  let next = structuredClone(state);
-  let storedVersions = state.contentPackVersions;
+  let next = migrateFoundationsPackSplit(structuredClone(state), packs);
+  let storedVersions = next.contentPackVersions;
 
   if (!storedVersions) {
     const firstPack = packs[0];

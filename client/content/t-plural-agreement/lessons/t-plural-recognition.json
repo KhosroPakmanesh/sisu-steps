@@ -1,0 +1,155 @@
+{
+  "id": "t-plural-recognition",
+  "version": "1.0.0",
+  "title": "Recognising the T-plural",
+  "summary": "Distinguish one item from more than one before building plural forms.",
+  "stage": "focused",
+  "targetSkills": ["T-plural recognition"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    {
+      "finnish": "kirja",
+      "english": "book"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple"
+    },
+    {
+      "finnish": "sana",
+      "english": "word"
+    },
+    {
+      "finnish": "kuva",
+      "english": "picture"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat"
+    },
+    {
+      "finnish": "pallo",
+      "english": "ball"
+    },
+    {
+      "finnish": "ystävä",
+      "english": "friend"
+    }
+  ],
+  "objectives": [
+    "Recognise the final plural -t.",
+    "Distinguish a supplied singular and plural pair.",
+    "Connect the plural form with “more than one”."
+  ],
+  "sections": [
+    {
+      "title": "One or more than one",
+      "paragraphs": [
+        "The basic singular names one item. The nominative T-plural commonly names more than one item when the noun is a plural subject.",
+        "This first step asks only whether a displayed form is singular or plural."
+      ],
+      "keyPoints": ["kirja = book", "kirjat = books"]
+    },
+    {
+      "title": "The visible plural signal",
+      "paragraphs": [
+        "In the stable forms used here, plural -t appears at the end.",
+        "Other Finnish plural cases are outside this pack."
+      ],
+      "keyPoints": ["koira → koirat", "kynä → kynät"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "kirja → kirjat",
+      "english": "book → books",
+      "steps": ["kirja is singular.", "Final -t marks this nominative plural."]
+    },
+    {
+      "finnish": "kynä → kynät",
+      "english": "pen → pens",
+      "steps": ["kynä names one pen.", "kynät names more than one pen."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not treat every final t as a complete explanation of all Finnish plurals.",
+    "Do not add a second case ending.",
+    "Do not change a stable stem in this recognition step."
+  ],
+  "practiceExercises": [
+    {
+      "id": "tpx-recognition-practice-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose singular or plural.",
+      "prompt": "Optional practice: Is kirja singular or plural?",
+      "acceptedAnswers": ["singular"],
+      "explanation": "kirja is singular. The singular is kirja (“book”); the T-plural is kirjat (“books”).",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["kirja"],
+      "options": ["singular", "plural"],
+      "optionFeedback": {
+        "singular": "Correct. kirja is singular. The singular is kirja (“book”); the T-plural is kirjat (“books”).",
+        "plural": "kirja is not plural in this pair. kirja is singular. The singular is kirja (“book”); the T-plural is kirjat (“books”)."
+      },
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct"
+    },
+    {
+      "id": "tpx-recognition-practice-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose singular or plural.",
+      "prompt": "Optional practice: Is koirat singular or plural?",
+      "acceptedAnswers": ["plural"],
+      "explanation": "koirat is plural. The singular is koira (“dog”); the T-plural is koirat (“dogs”).",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["koira"],
+      "options": ["singular", "plural"],
+      "optionFeedback": {
+        "singular": "koirat is not singular in this pair. koirat is plural. The singular is koira (“dog”); the T-plural is koirat (“dogs”).",
+        "plural": "Correct. koirat is plural. The singular is koira (“dog”); the T-plural is koirat (“dogs”)."
+      },
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct"
+    },
+    {
+      "id": "tpx-recognition-practice-p03",
+      "type": "fill-blank",
+      "instruction": "Write singular or plural.",
+      "prompt": "Optional practice: kynä is a ____ noun form.",
+      "acceptedAnswers": ["singular"],
+      "explanation": "kynä is singular. The singular is kynä (“pen”); the T-plural is kynät (“pens”).",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["kynä"],
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct"
+    },
+    {
+      "id": "tpx-recognition-practice-p04",
+      "type": "fill-blank",
+      "instruction": "Write singular or plural.",
+      "prompt": "Optional practice: omenat is a ____ noun form.",
+      "acceptedAnswers": ["plural"],
+      "explanation": "omenat is plural. The singular is omena (“apple”); the T-plural is omenat (“apples”).",
+      "tags": ["lesson-practice", "t-plural", "recognition"],
+      "requiredSkills": ["T-plural recognition"],
+      "vocabulary": ["omena"],
+      "targetSkill": "T-plural recognition",
+      "misconceptionCategory": "T-plural recognition: form not yet correct"
+    }
+  ]
+}

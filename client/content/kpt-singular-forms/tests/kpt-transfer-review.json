@@ -1,0 +1,803 @@
+{
+  "id": "kpt-transfer-review",
+  "title": "KPT transfer review",
+  "focus": "Mix every learned KPT family and singular application without new grammar.",
+  "stage": "review",
+  "targetSkills": [
+    "Strong and weak KPT grades",
+    "KPT double consonants",
+    "KPT common single consonants",
+    "KPT special k changes",
+    "KPT consonant clusters",
+    "KPT recognition",
+    "Genitive -n",
+    "Minä verb forms with KPT"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "strong-weak-kpt-grades",
+    "kpt-doubles",
+    "kpt-singles",
+    "kpt-special-k",
+    "kpt-clusters",
+    "kpt-basics",
+    "genitive-nouns",
+    "verb-kpt"
+  ],
+  "exercises": [
+    {
+      "id": "kptx-transfer-review-grade-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair matto (“rug”) → maton (“of the rug”), which grade is matto?",
+      "acceptedAnswers": ["strong grade"],
+      "explanation": "matto is the strong grade form in the learned pair matto → maton. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["matto"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "Correct. matto is the strong grade form in the learned pair matto → maton. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+        "weak grade": "matto is not the weak grade member of this pair. Compare it with maton."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-grade-002"
+    },
+    {
+      "id": "kptx-transfer-review-grade-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair kukka (“flower”) → kukan (“of the flower”), which grade is kukan?",
+      "acceptedAnswers": ["weak grade"],
+      "explanation": "kukan is the weak grade form in the learned pair kukka → kukan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["kukka"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "kukan is not the strong grade member of this pair. Compare it with kukka.",
+        "weak grade": "Correct. kukan is the weak grade form in the learned pair kukka → kukan. The labels name consonant patterns; both forms are correct in their own grammatical positions."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-grade-001"
+    },
+    {
+      "id": "kptx-transfer-review-grade-003",
+      "type": "fill-blank",
+      "instruction": "Name the consonant grade.",
+      "prompt": "lippu in lippu (“ticket”) → lipun (“of the ticket”) is the ____ grade.",
+      "acceptedAnswers": ["strong"],
+      "explanation": "lippu is the strong grade form in the learned pair lippu → lipun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["lippu"],
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-grade-004"
+    },
+    {
+      "id": "kptx-transfer-review-grade-004",
+      "type": "fill-blank",
+      "instruction": "Name the consonant grade.",
+      "prompt": "jalan in jalka (“foot or leg”) → jalan (“of the foot or leg”) is the ____ grade.",
+      "acceptedAnswers": ["weak"],
+      "explanation": "jalan is the weak grade form in the learned pair jalka → jalan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["jalka"],
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-grade-003"
+    },
+    {
+      "id": "kptx-transfer-review-grade-005",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair katu (“street”) → kadun (“of the street”), which grade is katu?",
+      "acceptedAnswers": ["strong grade"],
+      "explanation": "katu is the strong grade form in the learned pair katu → kadun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["katu"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "Correct. katu is the strong grade form in the learned pair katu → kadun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+        "weak grade": "katu is not the weak grade member of this pair. Compare it with kadun."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-grade-006"
+    },
+    {
+      "id": "kptx-transfer-review-grade-006",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair tapa (“habit”) → tavan (“of the habit”), which grade is tavan?",
+      "acceptedAnswers": ["weak grade"],
+      "explanation": "tavan is the weak grade form in the learned pair tapa → tavan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["tapa"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "tavan is not the strong grade member of this pair. Compare it with tapa.",
+        "weak grade": "Correct. tavan is the weak grade form in the learned pair tapa → tavan. The labels name consonant patterns; both forms are correct in their own grammatical positions."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-grade-005"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-double-consonants-001",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the rug”. Use matto (“rug”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["maton"],
+      "explanation": "The genitive ending -n is supplied. Apply tt → t to make mato-, then add -n: maton (“of the rug”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["matto"],
+      "targetSkill": "KPT double consonants",
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-double-consonants-002"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-double-consonants-002",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the flower”. Use kukka (“flower”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["kukan"],
+      "explanation": "The genitive ending -n is supplied. Apply kk → k to make kuka-, then add -n: kukan (“of the flower”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["kukka"],
+      "targetSkill": "KPT double consonants",
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-double-consonants-001"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-common-single-consonants-001",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the table”. Use pöytä (“table”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["pöydän"],
+      "explanation": "The genitive ending -n is supplied. Apply t → d to make pöydä-, then add -n: pöydän (“of the table”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["pöytä"],
+      "targetSkill": "KPT common single consonants",
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-common-single-consonants-002"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-common-single-consonants-002",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the bread”. Use leipä (“bread”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["leivän"],
+      "explanation": "The genitive ending -n is supplied. Apply p → v to make leivä-, then add -n: leivän (“of the bread”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["leipä"],
+      "targetSkill": "KPT common single consonants",
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-common-single-consonants-001"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-special-k-changes-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the learned weak stem.",
+      "prompt": "Write the learned weak stem for poika (“boy”): ____",
+      "acceptedAnswers": ["poja-"],
+      "explanation": "poika (“boy”) uses k disappears and i becomes j in its learned weak stem poja-. No case ending is being tested in this question.",
+      "tags": ["kpt", "weak-stem", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika"],
+      "options": ["poja-", "poika-", "pojan"],
+      "optionFeedback": {
+        "poja-": "Correct. poika (“boy”) uses k disappears and i becomes j in its learned weak stem poja-. No case ending is being tested in this question.",
+        "poika-": "poika- is not the weak stem. poika (“boy”) uses k disappears and i becomes j in its learned weak stem poja-. No case ending is being tested in this question.",
+        "pojan": "pojan is not the weak stem. poika (“boy”) uses k disappears and i becomes j in its learned weak stem poja-. No case ending is being tested in this question."
+      },
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-special-k-changes-002"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-special-k-changes-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the learned weak stem.",
+      "prompt": "Write the learned weak stem for puku (“suit”): ____",
+      "acceptedAnswers": ["puvu-"],
+      "explanation": "puku (“suit”) uses k → v in its learned weak stem puvu-. No case ending is being tested in this question.",
+      "tags": ["kpt", "weak-stem", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["puku"],
+      "options": ["puvu-", "puku-", "puvun"],
+      "optionFeedback": {
+        "puvu-": "Correct. puku (“suit”) uses k → v in its learned weak stem puvu-. No case ending is being tested in this question.",
+        "puku-": "puku- is not the weak stem. puku (“suit”) uses k → v in its learned weak stem puvu-. No case ending is being tested in this question.",
+        "puvun": "puvun is not the weak stem. puku (“suit”) uses k → v in its learned weak stem puvu-. No case ending is being tested in this question."
+      },
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-special-k-changes-001"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-consonant-clusters-001",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the comb”. Use kampa (“comb”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["kamman"],
+      "explanation": "The genitive ending -n is supplied. Apply mp → mm to make kamma-, then add -n: kamman (“of the comb”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kampa"],
+      "targetSkill": "KPT consonant clusters",
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-consonant-clusters-002"
+    },
+    {
+      "id": "kptx-transfer-review-kpt-consonant-clusters-002",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the field”. Use pelto (“field”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["pellon"],
+      "explanation": "The genitive ending -n is supplied. Apply lt → ll to make pello-, then add -n: pellon (“of the field”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["pelto"],
+      "targetSkill": "KPT consonant clusters",
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-kpt-consonant-clusters-001"
+    },
+    {
+      "id": "kptx-transfer-review-recognition-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the KPT change.",
+      "prompt": "Which learned change appears in kenkä (“shoe”) → kengän (“of the shoe”)?",
+      "acceptedAnswers": ["nk → ng"],
+      "explanation": "kenkä → kengän uses nk → ng. The ending is already present; identify only the consonant change.",
+      "tags": ["kpt", "recognition"],
+      "requiredSkills": ["KPT recognition"],
+      "vocabulary": ["kenkä"],
+      "options": ["nk → ng", "kk → k", "pp → p"],
+      "optionFeedback": {
+        "nk → ng": "Correct. kenkä → kengän uses nk → ng. The ending is already present; identify only the consonant change.",
+        "kk → k": "kk → k does not describe the visible consonants in this pair.",
+        "pp → p": "pp → p does not describe the visible consonants in this pair."
+      },
+      "targetSkill": "KPT recognition",
+      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-recognition-002"
+    },
+    {
+      "id": "kptx-transfer-review-recognition-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the KPT change.",
+      "prompt": "Which learned change appears in kampa (“comb”) → kamman (“of the comb”)?",
+      "acceptedAnswers": ["mp → mm"],
+      "explanation": "kampa → kamman uses mp → mm. The ending is already present; identify only the consonant change.",
+      "tags": ["kpt", "recognition"],
+      "requiredSkills": ["KPT recognition"],
+      "vocabulary": ["kampa"],
+      "options": ["mp → mm", "kk → k", "pp → p"],
+      "optionFeedback": {
+        "mp → mm": "Correct. kampa → kamman uses mp → mm. The ending is already present; identify only the consonant change.",
+        "kk → k": "kk → k does not describe the visible consonants in this pair.",
+        "pp → p": "pp → p does not describe the visible consonants in this pair."
+      },
+      "targetSkill": "KPT recognition",
+      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-recognition-001"
+    },
+    {
+      "id": "kptx-transfer-review-recognition-003",
+      "type": "fill-blank",
+      "instruction": "Name the KPT change.",
+      "prompt": "pelto (“field”) → pellon (“of the field”): write the consonant change.",
+      "acceptedAnswers": ["lt → ll"],
+      "explanation": "pelto → pellon uses lt → ll. The ending is already present; identify only the consonant change.",
+      "tags": ["kpt", "recognition"],
+      "requiredSkills": ["KPT recognition"],
+      "vocabulary": ["pelto"],
+      "targetSkill": "KPT recognition",
+      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-recognition-004"
+    },
+    {
+      "id": "kptx-transfer-review-recognition-004",
+      "type": "fill-blank",
+      "instruction": "Name the KPT change.",
+      "prompt": "ranta (“beach”) → rannan (“of the beach”): write the consonant change.",
+      "acceptedAnswers": ["nt → nn"],
+      "explanation": "ranta → rannan uses nt → nn. The ending is already present; identify only the consonant change.",
+      "tags": ["kpt", "recognition"],
+      "requiredSkills": ["KPT recognition"],
+      "vocabulary": ["ranta"],
+      "targetSkill": "KPT recognition",
+      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-recognition-003"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "luku (“number or chapter”) → ? (“of the number or chapter”) · use the supplied stem luvu- and add genitive -n",
+      "acceptedAnswers": ["luvun"],
+      "explanation": "The weak stem luvu- is supplied. Add genitive -n: luvun (“of the number or chapter”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["luku"],
+      "options": ["luvun", "lukun", "luun"],
+      "optionFeedback": {
+        "luvun": "Correct. The weak stem luvu- is supplied. Add genitive -n: luvun (“of the number or chapter”).",
+        "lukun": "lukun misses the required construction. The weak stem luvu- is supplied. Add genitive -n: luvun (“of the number or chapter”).",
+        "luun": "luun misses the required construction. The weak stem luvu- is supplied. Add genitive -n: luvun (“of the number or chapter”)."
+      },
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-002"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "kaupunki (“city”) → ? (“of the city”) · use the supplied stem kaupungi- and add genitive -n",
+      "acceptedAnswers": ["kaupungin"],
+      "explanation": "The weak stem kaupungi- is supplied. Add genitive -n: kaupungin (“of the city”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["kaupunki"],
+      "options": ["kaupungin", "kaupunkin", "kaupung"],
+      "optionFeedback": {
+        "kaupungin": "Correct. The weak stem kaupungi- is supplied. Add genitive -n: kaupungin (“of the city”).",
+        "kaupunkin": "kaupunkin misses the required construction. The weak stem kaupungi- is supplied. Add genitive -n: kaupungin (“of the city”).",
+        "kaupung": "kaupung misses the required construction. The weak stem kaupungi- is supplied. Add genitive -n: kaupungin (“of the city”)."
+      },
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-001"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-003",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the shoe”. Use kenkä (“shoe”); use the supplied stem kengä- and add genitive -n.",
+      "acceptedAnswers": ["kengän"],
+      "explanation": "The weak stem kengä- is supplied. Add genitive -n: kengän (“of the shoe”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["kenkä"],
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-004"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-004",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the comb”. Use kampa (“comb”); use the supplied stem kamma- and add genitive -n.",
+      "acceptedAnswers": ["kamman"],
+      "explanation": "The weak stem kamma- is supplied. Add genitive -n: kamman (“of the comb”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["kampa"],
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-003"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-005",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "pelto (“field”) → ? (“of the field”) · use the supplied stem pello- and add genitive -n",
+      "acceptedAnswers": ["pellon"],
+      "explanation": "The weak stem pello- is supplied. Add genitive -n: pellon (“of the field”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["pelto"],
+      "options": ["pellon", "pelton", "pello"],
+      "optionFeedback": {
+        "pellon": "Correct. The weak stem pello- is supplied. Add genitive -n: pellon (“of the field”).",
+        "pelton": "pelton misses the required construction. The weak stem pello- is supplied. Add genitive -n: pellon (“of the field”).",
+        "pello": "pello misses the required construction. The weak stem pello- is supplied. Add genitive -n: pellon (“of the field”)."
+      },
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-006"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-006",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "ranta (“beach”) → ? (“of the beach”) · use the supplied stem ranna- and add genitive -n",
+      "acceptedAnswers": ["rannan"],
+      "explanation": "The weak stem ranna- is supplied. Add genitive -n: rannan (“of the beach”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["ranta"],
+      "options": ["rannan", "rantan", "ranna"],
+      "optionFeedback": {
+        "rannan": "Correct. The weak stem ranna- is supplied. Add genitive -n: rannan (“of the beach”).",
+        "rantan": "rantan misses the required construction. The weak stem ranna- is supplied. Add genitive -n: rannan (“of the beach”).",
+        "ranna": "ranna misses the required construction. The weak stem ranna- is supplied. Add genitive -n: rannan (“of the beach”)."
+      },
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-005"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-007",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the bridge”. Use silta (“bridge”); use the supplied stem silla- and add genitive -n.",
+      "acceptedAnswers": ["sillan"],
+      "explanation": "The weak stem silla- is supplied. Add genitive -n: sillan (“of the bridge”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["silta"],
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-008"
+    },
+    {
+      "id": "kptx-transfer-review-genitive-008",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the bank”. Use pankki (“bank”); use the supplied stem panki- and add genitive -n.",
+      "acceptedAnswers": ["pankin"],
+      "explanation": "The weak stem panki- is supplied. Add genitive -n: pankin (“of the bank”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["Genitive -n"],
+      "vocabulary": ["pankki"],
+      "targetSkill": "Genitive -n",
+      "misconceptionCategory": "Genitive -n: form not yet correct",
+      "parallelExerciseId": "kptx-transfer-review-genitive-007"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-001",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb–context order.",
+      "prompt": "Build “I sleep well.” The complete KPT verb form is supplied for recognition.",
+      "acceptedAnswers": ["Minä nukun hyvin."],
+      "explanation": "Minä nukun hyvin. means “I sleep well”. The prompt supplies minä, nukku-, the minä ending -n, and hyvin (“well”). Apply kk → k: nukun.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["nukkua", "hyvin"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I sleep well.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "nukun",
+            "meaning": "sleep",
+            "role": "Verb — tells what I do.",
+            "baseForm": "nukkua",
+            "formation": "Use the supplied stem nukku-. Apply kk → k, then add the supplied minä ending -n: nukun."
+          },
+          {
+            "finnish": "hyvin",
+            "meaning": "well",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "hyvin",
+            "formation": "hyvin is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "tokens": ["hyvin.", "Minä", "nukun"],
+      "parallelExerciseId": "kptx-transfer-review-verbs-002"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-002",
+      "type": "word-order",
+      "instruction": "Put the supplied words in subject–verb–context order.",
+      "prompt": "Build “I fly today.” The complete KPT verb form is supplied for recognition.",
+      "acceptedAnswers": ["Minä lennän tänään."],
+      "explanation": "Minä lennän tänään. means “I fly today”. The prompt supplies minä, lentä-, the minä ending -n, and tänään (“today”). Apply nt → nn: lennän.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["lentää", "tänään"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I fly today.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "lennän",
+            "meaning": "fly",
+            "role": "Verb — tells what I do.",
+            "baseForm": "lentää",
+            "formation": "Use the supplied stem lentä-. Apply nt → nn, then add the supplied minä ending -n: lennän."
+          },
+          {
+            "finnish": "tänään",
+            "meaning": "today",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "tänään",
+            "formation": "tänään is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "tokens": ["tänään.", "Minä", "lennän"],
+      "parallelExerciseId": "kptx-transfer-review-verbs-001"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-003",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I wait here.” Minä ____ täällä. Use the supplied subject Minä, stem odotta-, minä ending -n, and täällä (“here”).",
+      "acceptedAnswers": ["odotan"],
+      "explanation": "Minä odotan täällä. means “I wait here”. The prompt supplies minä, odotta-, the minä ending -n, and täällä (“here”). Apply tt → t: odotan.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["odottaa", "täällä"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I wait here.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "odotan",
+            "meaning": "wait",
+            "role": "Verb — tells what I do.",
+            "baseForm": "odottaa",
+            "formation": "Use the supplied stem odotta-. Apply tt → t, then add the supplied minä ending -n: odotan."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "täällä",
+            "formation": "täällä is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "kptx-transfer-review-verbs-004"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-004",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish sentence.",
+      "prompt": "Complete “I read now.” Minä ____ nyt. Use the supplied subject Minä, stem luke-, minä ending -n, and nyt (“now”).",
+      "acceptedAnswers": ["luen"],
+      "explanation": "Minä luen nyt. means “I read now”. The prompt supplies minä, luke-, the minä ending -n, and nyt (“now”). Apply k disappears: luen.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["lukea", "nyt"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I read now.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "luen",
+            "meaning": "read",
+            "role": "Verb — tells what I do.",
+            "baseForm": "lukea",
+            "formation": "Use the supplied stem luke-. Apply k disappears, then add the supplied minä ending -n: luen."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "kptx-transfer-review-verbs-003"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-005",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Write “I arrive soon.” Use the supplied subject Minä, stem saapu-, minä ending -n, and pian (“soon”).",
+      "acceptedAnswers": ["Minä saavun pian."],
+      "explanation": "Minä saavun pian. means “I arrive soon”. The prompt supplies minä, saapu-, the minä ending -n, and pian (“soon”). Apply p → v: saavun.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["saapua", "pian"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I arrive soon.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "saavun",
+            "meaning": "arrive",
+            "role": "Verb — tells what I do.",
+            "baseForm": "saapua",
+            "formation": "Use the supplied stem saapu-. Apply p → v, then add the supplied minä ending -n: saavun."
+          },
+          {
+            "finnish": "pian",
+            "meaning": "soon",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "pian",
+            "formation": "pian is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "kptx-transfer-review-verbs-006"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-006",
+      "type": "translation-fi",
+      "instruction": "Translate into Finnish.",
+      "prompt": "Write “I understand well.” Use the supplied subject Minä, stem ymmärtä-, minä ending -n, and hyvin (“well”).",
+      "acceptedAnswers": ["Minä ymmärrän hyvin."],
+      "explanation": "Minä ymmärrän hyvin. means “I understand well”. The prompt supplies minä, ymmärtä-, the minä ending -n, and hyvin (“well”). Apply rt → rr: ymmärrän.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["ymmärtää", "hyvin"],
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I understand well.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "ymmärrän",
+            "meaning": "understand",
+            "role": "Verb — tells what I do.",
+            "baseForm": "ymmärtää",
+            "formation": "Use the supplied stem ymmärtä-. Apply rt → rr, then add the supplied minä ending -n: ymmärrän."
+          },
+          {
+            "finnish": "hyvin",
+            "meaning": "well",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "hyvin",
+            "formation": "hyvin is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "kptx-transfer-review-verbs-005"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-007",
+      "type": "multiple-choice",
+      "instruction": "Choose the verb that completes the sentence.",
+      "prompt": "Complete “I learn quickly.” Minä ____ nopeasti. Use the supplied subject Minä, stem oppi-, minä ending -n, and nopeasti (“quickly”).",
+      "acceptedAnswers": ["opin"],
+      "explanation": "Minä opin nopeasti. means “I learn quickly”. The prompt supplies minä, oppi-, the minä ending -n, and nopeasti (“quickly”). Apply pp → p: opin.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["oppia", "nopeasti"],
+      "options": ["opin", "oppin", "oppia"],
+      "optionFeedback": {
+        "opin": "Correct. Minä opin nopeasti. means “I learn quickly”. The prompt supplies minä, oppi-, the minä ending -n, and nopeasti (“quickly”). Apply pp → p: opin.",
+        "oppin": "oppin does not show the required weak-grade minä form. Minä opin nopeasti. means “I learn quickly”. The prompt supplies minä, oppi-, the minä ending -n, and nopeasti (“quickly”). Apply pp → p: opin.",
+        "oppia": "oppia does not show the required weak-grade minä form. Minä opin nopeasti. means “I learn quickly”. The prompt supplies minä, oppi-, the minä ending -n, and nopeasti (“quickly”). Apply pp → p: opin."
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I learn quickly.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "opin",
+            "meaning": "learn",
+            "role": "Verb — tells what I do.",
+            "baseForm": "oppia",
+            "formation": "Use the supplied stem oppi-. Apply pp → p, then add the supplied minä ending -n: opin."
+          },
+          {
+            "finnish": "nopeasti",
+            "meaning": "quickly",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "nopeasti",
+            "formation": "nopeasti is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "kptx-transfer-review-verbs-008"
+    },
+    {
+      "id": "kptx-transfer-review-verbs-008",
+      "type": "multiple-choice",
+      "instruction": "Choose the verb that completes the sentence.",
+      "prompt": "Complete “I draw now.” Minä ____ nyt. Use the supplied subject Minä, stem piirtä-, minä ending -n, and nyt (“now”).",
+      "acceptedAnswers": ["piirrän"],
+      "explanation": "Minä piirrän nyt. means “I draw now”. The prompt supplies minä, piirtä-, the minä ending -n, and nyt (“now”). Apply rt → rr: piirrän.",
+      "tags": ["kpt", "verb", "sentence"],
+      "requiredSkills": ["Minä verb forms with KPT"],
+      "vocabulary": ["piirtää", "nyt"],
+      "options": ["piirrän", "piirtän", "piirtää"],
+      "optionFeedback": {
+        "piirrän": "Correct. Minä piirrän nyt. means “I draw now”. The prompt supplies minä, piirtä-, the minä ending -n, and nyt (“now”). Apply rt → rr: piirrän.",
+        "piirtän": "piirtän does not show the required weak-grade minä form. Minä piirrän nyt. means “I draw now”. The prompt supplies minä, piirtä-, the minä ending -n, and nyt (“now”). Apply rt → rr: piirrän.",
+        "piirtää": "piirtää does not show the required weak-grade minä form. Minä piirrän nyt. means “I draw now”. The prompt supplies minä, piirtä-, the minä ending -n, and nyt (“now”). Apply rt → rr: piirrän."
+      },
+      "targetSkill": "Minä verb forms with KPT",
+      "misconceptionCategory": "Minä verb forms with KPT: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "I draw now.",
+        "pattern": "Subject (who) + verb (action or state) + supplied context word",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "Subject — names who acts.",
+            "baseForm": "minä",
+            "formation": "minä is supplied unchanged."
+          },
+          {
+            "finnish": "piirrän",
+            "meaning": "draw",
+            "role": "Verb — tells what I do.",
+            "baseForm": "piirtää",
+            "formation": "Use the supplied stem piirtä-. Apply rt → rr, then add the supplied minä ending -n: piirrän."
+          },
+          {
+            "finnish": "nyt",
+            "meaning": "now",
+            "role": "Context — tells when, where, or how.",
+            "baseForm": "nyt",
+            "formation": "nyt is supplied as a complete fixed word."
+          }
+        ]
+      },
+      "parallelExerciseId": "kptx-transfer-review-verbs-007"
+    }
+  ]
+}

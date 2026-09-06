@@ -166,13 +166,26 @@ describe('pack-owned content source loader', () => {
     );
   });
 
-  it('assembles the installed source pack without topic-specific loading code', async () => {
+  it('assembles every installed source pack without topic-specific loading code', async () => {
     const source = await loadContentSource('content');
-    const pack = source.packs[0];
-
-    expect(pack['id']).toBe('vowel-harmony-kpt-tplural');
-    expect(pack['version']).toBe('6.1.0');
-    expect((pack['lessons'] as unknown[]).length).toBe(13);
-    expect((pack['tests'] as unknown[]).length).toBe(14);
+    expect(source.catalog.packs).toEqual([
+      'vowel-harmony-location-endings',
+      'kpt-singular-forms',
+      't-plural-agreement',
+      'personal-pronouns-affirmative-olla',
+      'negative-olla-statements',
+      'olla-questions-short-answers',
+    ]);
+    expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
+      '1.0.0',
+      '1.0.0',
+      '1.0.0',
+    ]);
+    expect(source.packs.slice(0, 3).map((pack) => (pack['lessons'] as unknown[]).length)).toEqual([
+      4, 8, 6,
+    ]);
+    expect(source.packs.slice(0, 3).map((pack) => (pack['tests'] as unknown[]).length)).toEqual([
+      6, 11, 8,
+    ]);
   });
 });

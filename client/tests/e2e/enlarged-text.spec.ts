@@ -1,6 +1,7 @@
 import { expect, type Page, test } from '@playwright/test';
 
-const TOPIC = 'vowel-harmony-kpt-tplural';
+const TOPIC = 'vowel-harmony-location-endings';
+const PLURAL_TOPIC = 't-plural-agreement';
 const LESSON = `/learn/${TOPIC}/vowel-families`;
 const STUDY = `/study/${TOPIC}/vowel-families`;
 
@@ -98,7 +99,7 @@ for (const appearance of ['Day', 'Night']) {
           '/',
           `/topics/${TOPIC}`,
           LESSON,
-          `/learn/${TOPIC}/foundations-review`,
+          `/learn/${TOPIC}/location-transfer-review`,
           STUDY,
           '/reports',
           '/data',
@@ -110,14 +111,14 @@ for (const appearance of ['Day', 'Night']) {
           await resizeText(page, pixels);
           await expectReadablePage(page);
           const picker = page.locator('.lesson-picker select');
-          if (route.endsWith('/foundations-review') && (await picker.isVisible())) {
+          if (route.endsWith('/location-transfer-review') && (await picker.isVisible())) {
             await picker.focus();
             await page.keyboard.press('Home');
             await page.keyboard.press('ArrowDown');
             await page.keyboard.press('Enter');
             await expect(picker).toHaveValue('1');
             await expect(page.locator('.reader-heading h2')).toHaveText(
-              'Saying “in” with -ssa and -ssä',
+              'Neutral vowels in ending choice',
             );
           }
           if (route === LESSON) {
@@ -191,7 +192,7 @@ for (const appearance of ['Day', 'Night']) {
       await page.getByRole('button', { name: 'Check answer', exact: true }).click();
       await expectReadablePage(page);
 
-      await page.goto(`/study/${TOPIC}/plural-in-sentences`);
+      await page.goto(`/study/${PLURAL_TOPIC}/plural-in-sentences`);
       await page.locator('main h1').waitFor();
       await resizeText(page, 32);
       await page.getByRole('button', { name: 'Show answer', exact: true }).click();

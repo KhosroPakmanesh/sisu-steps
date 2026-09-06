@@ -1,0 +1,577 @@
+{
+  "id": "kpt-family-review",
+  "title": "KPT family review",
+  "focus": "Retrieve the learned KPT families and strong–weak relationship.",
+  "stage": "review",
+  "targetSkills": [
+    "Strong and weak KPT grades",
+    "KPT double consonants",
+    "KPT common single consonants",
+    "KPT special k changes",
+    "KPT consonant clusters",
+    "KPT recognition",
+    "Genitive -n",
+    "Minä verb forms with KPT"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "strong-weak-kpt-grades",
+    "kpt-doubles",
+    "kpt-singles",
+    "kpt-special-k",
+    "kpt-clusters",
+    "kpt-basics",
+    "genitive-nouns",
+    "verb-kpt"
+  ],
+  "exercises": [
+    {
+      "id": "ff-a1-t13-e04",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "hattu (“hat”) → ____ (“of the hat”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["hatun"],
+      "explanation": "The ending -n is supplied. Recall the weak stem: tt becomes t, giving hatu-. Add -n: hatun (“of the hat”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["hattu"],
+      "targetSkill": "KPT double consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["hattun"],
+          "category": "KPT double consonants: strong grade retained",
+          "explanation": "The ending is correct, but tt must become t: hatu- + n = hatun."
+        }
+      ],
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e05"
+    },
+    {
+      "id": "ff-a1-t13-e05",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "lippu (“ticket”) → ____ (“of the ticket”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["lipun"],
+      "explanation": "The ending -n is supplied. The double pp becomes p in the weak stem lipu-. Add -n: lipun (“of the ticket”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["lippu"],
+      "targetSkill": "KPT double consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["lippun"],
+          "category": "KPT double consonants: strong grade retained",
+          "explanation": "Keep the supplied -n, but weaken pp to p: lipu- + n = lipun."
+        }
+      ],
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e04"
+    },
+    {
+      "id": "ff-a1-t13-e06",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "pöytä (“table”) → ____ (“of the table”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["pöydän"],
+      "explanation": "The ending -n is supplied. The single t changes to d: pöydä- + n = pöydän (“of the table”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["pöytä"],
+      "targetSkill": "KPT common single consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["pöytän"],
+          "category": "KPT common single consonants: strong grade retained",
+          "explanation": "The ending is correct. Change t to d in the weak stem: pöydän."
+        }
+      ],
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e07"
+    },
+    {
+      "id": "ff-a1-t13-e07",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "hakea (“to fetch”), supplied stem hake- + minä -n → ____ (“I fetch”)",
+      "acceptedAnswers": ["haen"],
+      "explanation": "The stem hake- and minä ending -n are supplied. In the weak stem, k disappears: hae- + n = haen (“I fetch”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["hakea"],
+      "targetSkill": "KPT common single consonants",
+      "answerDiagnostics": [
+        {
+          "answers": ["haken"],
+          "category": "KPT common single consonants: strong grade retained",
+          "explanation": "The single k disappears before the supplied ending: hae- + n = haen."
+        }
+      ],
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e06"
+    },
+    {
+      "id": "ff-a1-review-special-k-e01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "puku (“suit”) → ____ (“of the suit”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["puvun"],
+      "explanation": "Recall the taught pair puku–puvun. Here k changes to v, giving puvu-. Add the supplied -n: puvun (“of the suit”). This is a learned special-k pattern, not a rule for every k.",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["puku"],
+      "targetSkill": "KPT special k changes",
+      "answerDiagnostics": [
+        {
+          "answers": ["pukun", "puun"],
+          "category": "KPT special k changes: special weak stem missed",
+          "explanation": "For this taught word, use puvu-. Do not keep k or simply remove it: puvu- + n = puvun."
+        }
+      ],
+      "misconceptionCategory": "KPT special k changes: weak stem not yet correct",
+      "parallelExerciseId": "ff-a1-review-special-k-e02"
+    },
+    {
+      "id": "ff-a1-review-special-k-e02",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "poika (“boy”) → ____ (“of the boy”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["pojan"],
+      "explanation": "Recall the taught pair poika–pojan and the weak stem poja-. In this word, k disappears and i changes to j. Add the supplied -n: pojan (“of the boy”). Learn the whole pair; simply replacing k with j would give the wrong stem.",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika"],
+      "targetSkill": "KPT special k changes",
+      "answerDiagnostics": [
+        {
+          "answers": ["poikan", "poian", "poijan"],
+          "category": "KPT special k changes: special weak stem missed",
+          "explanation": "The taught weak stem is poja-, with oj rather than oi. Add the supplied -n to get pojan."
+        }
+      ],
+      "misconceptionCategory": "KPT special k changes: weak stem not yet correct",
+      "parallelExerciseId": "ff-a1-review-special-k-e01"
+    },
+    {
+      "id": "ff-a1-t13-e08",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "kampa (“comb”) → ____ (“of the comb”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["kamman"],
+      "explanation": "The ending -n is supplied. The cluster mp becomes mm: kamma- + n = kamman (“of the comb”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kampa"],
+      "targetSkill": "KPT consonant clusters",
+      "answerDiagnostics": [
+        {
+          "answers": ["kampan"],
+          "category": "KPT consonant clusters: strong grade retained",
+          "explanation": "The weak stem has mm, not mp: kamma- + n = kamman."
+        }
+      ],
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e09"
+    },
+    {
+      "id": "ff-a1-t13-e09",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "pelto (“field”) → ____ (“of the field”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["pellon"],
+      "explanation": "The ending -n is supplied. The cluster lt becomes ll: pello- + n = pellon (“of the field”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["pelto"],
+      "targetSkill": "KPT consonant clusters",
+      "answerDiagnostics": [
+        {
+          "answers": ["pelton"],
+          "category": "KPT consonant clusters: strong grade retained",
+          "explanation": "The weak stem has ll, not lt: pello- + n = pellon."
+        }
+      ],
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "ff-a1-t13-e08"
+    },
+    {
+      "id": "kptx-family-review-grade-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair poika (“boy”) → pojan (“of the boy”), which grade is poika?",
+      "acceptedAnswers": ["strong grade"],
+      "explanation": "poika is the strong grade form in the learned pair poika → pojan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["poika"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "Correct. poika is the strong grade form in the learned pair poika → pojan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+        "weak grade": "poika is not the weak grade member of this pair. Compare it with pojan."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-002"
+    },
+    {
+      "id": "kptx-family-review-grade-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair leipä (“bread”) → leivän (“of the bread”), which grade is leivän?",
+      "acceptedAnswers": ["weak grade"],
+      "explanation": "leivän is the weak grade form in the learned pair leipä → leivän. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["leipä"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "leivän is not the strong grade member of this pair. Compare it with leipä.",
+        "weak grade": "Correct. leivän is the weak grade form in the learned pair leipä → leivän. The labels name consonant patterns; both forms are correct in their own grammatical positions."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-001"
+    },
+    {
+      "id": "kptx-family-review-grade-003",
+      "type": "fill-blank",
+      "instruction": "Name the consonant grade.",
+      "prompt": "puku in puku (“suit”) → puvun (“of the suit”) is the ____ grade.",
+      "acceptedAnswers": ["strong"],
+      "explanation": "puku is the strong grade form in the learned pair puku → puvun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["puku"],
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-004"
+    },
+    {
+      "id": "kptx-family-review-grade-004",
+      "type": "fill-blank",
+      "instruction": "Name the consonant grade.",
+      "prompt": "rannan in ranta (“beach”) → rannan (“of the beach”) is the ____ grade.",
+      "acceptedAnswers": ["weak"],
+      "explanation": "rannan is the weak grade form in the learned pair ranta → rannan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["ranta"],
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-003"
+    },
+    {
+      "id": "kptx-family-review-grade-005",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair hattu (“hat”) → hatun (“of the hat”), which grade is hattu?",
+      "acceptedAnswers": ["strong grade"],
+      "explanation": "hattu is the strong grade form in the learned pair hattu → hatun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["hattu"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "Correct. hattu is the strong grade form in the learned pair hattu → hatun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+        "weak grade": "hattu is not the weak grade member of this pair. Compare it with hatun."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-006"
+    },
+    {
+      "id": "kptx-family-review-grade-006",
+      "type": "multiple-choice",
+      "instruction": "Choose the grade.",
+      "prompt": "In the pair pankki (“bank”) → pankin (“of the bank”), which grade is pankin?",
+      "acceptedAnswers": ["weak grade"],
+      "explanation": "pankin is the weak grade form in the learned pair pankki → pankin. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["pankki"],
+      "options": ["strong grade", "weak grade"],
+      "optionFeedback": {
+        "strong grade": "pankin is not the strong grade member of this pair. Compare it with pankki.",
+        "weak grade": "Correct. pankin is the weak grade form in the learned pair pankki → pankin. The labels name consonant patterns; both forms are correct in their own grammatical positions."
+      },
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-005"
+    },
+    {
+      "id": "kptx-family-review-grade-007",
+      "type": "fill-blank",
+      "instruction": "Name the consonant grade.",
+      "prompt": "kaupunki in kaupunki (“city”) → kaupungin (“of the city”) is the ____ grade.",
+      "acceptedAnswers": ["strong"],
+      "explanation": "kaupunki is the strong grade form in the learned pair kaupunki → kaupungin. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["kaupunki"],
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-008"
+    },
+    {
+      "id": "kptx-family-review-grade-008",
+      "type": "fill-blank",
+      "instruction": "Name the consonant grade.",
+      "prompt": "kaupan in kauppa (“shop”) → kaupan (“of the shop”) is the ____ grade.",
+      "acceptedAnswers": ["weak"],
+      "explanation": "kaupan is the weak grade form in the learned pair kauppa → kaupan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "tags": ["kpt", "grade-recognition"],
+      "requiredSkills": ["Strong and weak KPT grades"],
+      "vocabulary": ["kauppa"],
+      "targetSkill": "Strong and weak KPT grades",
+      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-grade-007"
+    },
+    {
+      "id": "kptx-family-review-kpt-double-consonants-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "hattu (“hat”) → ? (“of the hat”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["hatun"],
+      "explanation": "The genitive ending -n is supplied. Apply tt → t to make hatu-, then add -n: hatun (“of the hat”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["hattu"],
+      "options": ["hatun", "hattun", "hatu"],
+      "optionFeedback": {
+        "hatun": "Correct. The genitive ending -n is supplied. Apply tt → t to make hatu-, then add -n: hatun (“of the hat”).",
+        "hattun": "hattun misses the required construction. The genitive ending -n is supplied. Apply tt → t to make hatu-, then add -n: hatun (“of the hat”).",
+        "hatu": "hatu misses the required construction. The genitive ending -n is supplied. Apply tt → t to make hatu-, then add -n: hatun (“of the hat”)."
+      },
+      "targetSkill": "KPT double consonants",
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-double-consonants-002"
+    },
+    {
+      "id": "kptx-family-review-kpt-double-consonants-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "lippu (“ticket”) → ? (“of the ticket”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["lipun"],
+      "explanation": "The genitive ending -n is supplied. Apply pp → p to make lipu-, then add -n: lipun (“of the ticket”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["lippu"],
+      "options": ["lipun", "lippun", "lipu"],
+      "optionFeedback": {
+        "lipun": "Correct. The genitive ending -n is supplied. Apply pp → p to make lipu-, then add -n: lipun (“of the ticket”).",
+        "lippun": "lippun misses the required construction. The genitive ending -n is supplied. Apply pp → p to make lipu-, then add -n: lipun (“of the ticket”).",
+        "lipu": "lipu misses the required construction. The genitive ending -n is supplied. Apply pp → p to make lipu-, then add -n: lipun (“of the ticket”)."
+      },
+      "targetSkill": "KPT double consonants",
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-double-consonants-001"
+    },
+    {
+      "id": "kptx-family-review-kpt-double-consonants-003",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "pankin",
+      "acceptedAnswers": ["of the bank"],
+      "explanation": "The genitive ending -n is supplied. Apply kk → k to make panki-, then add -n: pankin (“of the bank”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["pankki"],
+      "targetSkill": "KPT double consonants",
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-double-consonants-004"
+    },
+    {
+      "id": "kptx-family-review-kpt-double-consonants-004",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "kaupan",
+      "acceptedAnswers": ["of the shop"],
+      "explanation": "The genitive ending -n is supplied. Apply pp → p to make kaupa-, then add -n: kaupan (“of the shop”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["kauppa"],
+      "targetSkill": "KPT double consonants",
+      "misconceptionCategory": "KPT double consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-double-consonants-003"
+    },
+    {
+      "id": "kptx-family-review-kpt-common-single-consonants-001",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "kadun",
+      "acceptedAnswers": ["of the street"],
+      "explanation": "The genitive ending -n is supplied. Apply t → d to make kadu-, then add -n: kadun (“of the street”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["katu"],
+      "targetSkill": "KPT common single consonants",
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-common-single-consonants-002"
+    },
+    {
+      "id": "kptx-family-review-kpt-common-single-consonants-002",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "tavan",
+      "acceptedAnswers": ["of the habit"],
+      "explanation": "The genitive ending -n is supplied. Apply p → v to make tava-, then add -n: tavan (“of the habit”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["tapa"],
+      "targetSkill": "KPT common single consonants",
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-common-single-consonants-001"
+    },
+    {
+      "id": "kptx-family-review-kpt-common-single-consonants-003",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "sadun",
+      "acceptedAnswers": ["of the story"],
+      "explanation": "The genitive ending -n is supplied. Apply t → d to make sadu-, then add -n: sadun (“of the story”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["satu"],
+      "targetSkill": "KPT common single consonants",
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-common-single-consonants-004"
+    },
+    {
+      "id": "kptx-family-review-kpt-common-single-consonants-004",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "luvan",
+      "acceptedAnswers": ["of the permission"],
+      "explanation": "The genitive ending -n is supplied. Apply p → v to make luva-, then add -n: luvan (“of the permission”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["lupa"],
+      "targetSkill": "KPT common single consonants",
+      "misconceptionCategory": "KPT common single consonants: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-common-single-consonants-003"
+    },
+    {
+      "id": "kptx-family-review-kpt-special-k-changes-001",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the boy”. Use poika (“boy”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["pojan"],
+      "explanation": "The genitive ending -n is supplied. Apply k disappears and i becomes j to make poja-, then add -n: pojan (“of the boy”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika"],
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-special-k-changes-002"
+    },
+    {
+      "id": "kptx-family-review-kpt-special-k-changes-002",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “of the suit”. Use puku (“suit”); use the supplied genitive ending -n.",
+      "acceptedAnswers": ["puvun"],
+      "explanation": "The genitive ending -n is supplied. Apply k → v to make puvu-, then add -n: puvun (“of the suit”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["puku"],
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-special-k-changes-001"
+    },
+    {
+      "id": "kptx-family-review-kpt-special-k-changes-003",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "ajan",
+      "acceptedAnswers": ["of the time"],
+      "explanation": "The genitive ending -n is supplied. Apply k disappears and i becomes j to make aja-, then add -n: ajan (“of the time”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["aika"],
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-special-k-changes-004"
+    },
+    {
+      "id": "kptx-family-review-kpt-special-k-changes-004",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "luvun",
+      "acceptedAnswers": ["of the number or chapter"],
+      "explanation": "The genitive ending -n is supplied. Apply k → v to make luvu-, then add -n: luvun (“of the number or chapter”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["luku"],
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-special-k-changes-003"
+    },
+    {
+      "id": "kptx-family-review-kpt-consonant-clusters-001",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "ranta (“beach”) → ? (“of the beach”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["rannan"],
+      "explanation": "The genitive ending -n is supplied. Apply nt → nn to make ranna-, then add -n: rannan (“of the beach”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["ranta"],
+      "options": ["rannan", "rantan", "ranna"],
+      "optionFeedback": {
+        "rannan": "Correct. The genitive ending -n is supplied. Apply nt → nn to make ranna-, then add -n: rannan (“of the beach”).",
+        "rantan": "rantan misses the required construction. The genitive ending -n is supplied. Apply nt → nn to make ranna-, then add -n: rannan (“of the beach”).",
+        "ranna": "ranna misses the required construction. The genitive ending -n is supplied. Apply nt → nn to make ranna-, then add -n: rannan (“of the beach”)."
+      },
+      "targetSkill": "KPT consonant clusters",
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-consonant-clusters-002"
+    },
+    {
+      "id": "kptx-family-review-kpt-consonant-clusters-002",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "silta (“bridge”) → ? (“of the bridge”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["sillan"],
+      "explanation": "The genitive ending -n is supplied. Apply lt → ll to make silla-, then add -n: sillan (“of the bridge”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["silta"],
+      "options": ["sillan", "siltan", "silla"],
+      "optionFeedback": {
+        "sillan": "Correct. The genitive ending -n is supplied. Apply lt → ll to make silla-, then add -n: sillan (“of the bridge”).",
+        "siltan": "siltan misses the required construction. The genitive ending -n is supplied. Apply lt → ll to make silla-, then add -n: sillan (“of the bridge”).",
+        "silla": "silla misses the required construction. The genitive ending -n is supplied. Apply lt → ll to make silla-, then add -n: sillan (“of the bridge”)."
+      },
+      "targetSkill": "KPT consonant clusters",
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-consonant-clusters-001"
+    },
+    {
+      "id": "kptx-family-review-kpt-consonant-clusters-003",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Retrieve the form without a family label. kaupunki (“city”) → ____ (“of the city”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["kaupungin"],
+      "explanation": "The genitive ending -n is supplied. Apply nk → ng to make kaupungi-, then add -n: kaupungin (“of the city”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kaupunki"],
+      "targetSkill": "KPT consonant clusters",
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-consonant-clusters-004"
+    },
+    {
+      "id": "kptx-family-review-kpt-consonant-clusters-004",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "Retrieve the form without a family label. kenkä (“shoe”) → ____ (“of the shoe”) · use the supplied genitive ending -n",
+      "acceptedAnswers": ["kengän"],
+      "explanation": "The genitive ending -n is supplied. Apply nk → ng to make kengä-, then add -n: kengän (“of the shoe”).",
+      "tags": ["kpt", "controlled-production"],
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kenkä"],
+      "targetSkill": "KPT consonant clusters",
+      "misconceptionCategory": "KPT consonant clusters: form not yet correct",
+      "parallelExerciseId": "kptx-family-review-kpt-consonant-clusters-003"
+    }
+  ]
+}

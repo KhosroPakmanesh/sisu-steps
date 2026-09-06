@@ -1,9 +1,10 @@
 import { expect, type Locator, type Page, test } from '@playwright/test';
 
-const TOPIC = 'vowel-harmony-kpt-tplural';
+const TOPIC = 'vowel-harmony-location-endings';
+const PLURAL_TOPIC = 't-plural-agreement';
 const TOPIC_PAGE = `/topics/${TOPIC}`;
 const LESSON = `/learn/${TOPIC}/vowel-families`;
-const REVIEW_LESSON = `/learn/${TOPIC}/foundations-review`;
+const REVIEW_LESSON = `/learn/${TOPIC}/location-transfer-review`;
 const STUDY = `/study/${TOPIC}/vowel-families`;
 
 async function open(page: Page, path: string) {
@@ -326,8 +327,8 @@ for (const theme of ['Day', 'Night']) {
       await expect(dataLedger).toBeVisible();
       expect(await dataLedger.evaluate(materialRecipe)).toEqual(expected);
       await expectNoInternalOverflow(dataLedger);
-      await expect(dataLedger.locator('.clear-row')).toHaveCount(14);
-      await expect(dataLedger.getByRole('button', { name: 'Clear this test' })).toHaveCount(14);
+      await expect(dataLedger.locator('.clear-row')).toHaveCount(6);
+      await expect(dataLedger.getByRole('button', { name: 'Clear this test' })).toHaveCount(6);
 
       const featureMaterialOwners = await page.evaluate(() => {
         const rules: CSSStyleRule[] = [];
@@ -554,7 +555,7 @@ for (const theme of ['Day', 'Night']) {
       }
 
       const lessonCards = page.locator('.lesson-list .subject-tab');
-      await expect(lessonCards).toHaveCount(13);
+      await expect(lessonCards).toHaveCount(4);
       const geometry = await lessonCards.evaluateAll((elements) =>
         elements.map((element) => {
           const bounds = element.getBoundingClientRect();
@@ -567,10 +568,7 @@ for (const theme of ['Day', 'Night']) {
           };
         }),
       );
-      const expectedHeights = [
-        90.734375, 90.734375, 90.734375, 90.734375, 90.734375, 90.734375, 90.734375, 90.734375,
-        90.734375, 90.734375, 69.734375, 69.734375, 90.734375,
-      ];
+      const expectedHeights = [90.734375, 90.734375, 90.734375, 90.734375];
       for (const [index, card] of geometry.entries()) {
         expect(card.width).toBeCloseTo(285.03125, 1);
         expect(card.height).toBeCloseTo(expectedHeights[index], 1);
@@ -646,7 +644,10 @@ for (const theme of ['Day', 'Night']) {
         .first()
         .evaluate(materialRecipe);
       expect(inactiveMaterial).toEqual(topicMaterial);
-      const reviewMaterial = await page.locator('.test-card.review-test').evaluate(materialRecipe);
+      const reviewMaterial = await page
+        .locator('.test-card.review-test')
+        .first()
+        .evaluate(materialRecipe);
       expect(selectedMaterial.background).toBe(reviewMaterial.background);
       expect(selectedMaterial.borderTop).toBe(reviewMaterial.borderTop);
       const topicMarkerMaterial = await page
@@ -755,13 +756,13 @@ for (const theme of ['Day', 'Night']) {
       await page.locator('.continue-button').click();
       await page.getByRole('button', { name: 'Show answer', exact: true }).click();
       await expectNoInternalOverflow(page.locator('.feedback'));
-      await open(page, `/study/${TOPIC}/plural-in-sentences`);
+      await open(page, `/study/${PLURAL_TOPIC}/plural-in-sentences`);
       await page.getByRole('button', { name: 'Show answer', exact: true }).click();
       await expectNoInternalOverflow(page.locator('.sentence-lesson'));
     });
 
     test('keeps the word-order instruction readable on its answer paper', async ({ page }) => {
-      await open(page, `/study/${TOPIC}/plural-in-sentences`);
+      await open(page, `/study/${PLURAL_TOPIC}/plural-in-sentences`);
       await page.getByRole('button', { name: 'Show answer', exact: true }).click();
       await page.locator('.continue-button').click();
       const instruction = page.locator('.placeholder');
@@ -827,7 +828,7 @@ for (const theme of ['Day', 'Night']) {
 
     test('draws visible focus pixels inside clipped controls', async ({ page }) => {
       await page.emulateMedia({ reducedMotion: 'reduce' });
-      await open(page, `/learn/${TOPIC}/foundations-review`);
+      await open(page, REVIEW_LESSON);
       await expectVisibleInsetFocus(page, page.locator('.back-link'));
       const lessonControl =
         (page.viewportSize()?.width ?? 0) <= 800

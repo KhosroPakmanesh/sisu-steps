@@ -35,8 +35,8 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     }
 
     await scrollAwayFromTop(page);
-    await page.locator('.topic-card a[href="/topics/vowel-harmony-kpt-tplural"]').click();
-    await expect(page).toHaveURL(/\/topics\/vowel-harmony-kpt-tplural$/);
+    await page.locator('.topic-card a[href="/topics/vowel-harmony-location-endings"]').click();
+    await expect(page).toHaveURL(/\/topics\/vowel-harmony-location-endings$/);
     await expectPageAtTop(page);
 
     await scrollAwayFromTop(page);
@@ -46,7 +46,7 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
 
     await scrollAwayFromTop(page);
     await page.goForward();
-    await expect(page).toHaveURL(/\/topics\/vowel-harmony-kpt-tplural$/);
+    await expect(page).toHaveURL(/\/topics\/vowel-harmony-location-endings$/);
     await expectPageAtTop(page);
   });
 }

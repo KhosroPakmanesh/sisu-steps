@@ -1,0 +1,158 @@
+{
+  "id": "neutral-vowel-harmony",
+  "version": "1.0.0",
+  "title": "Neutral vowels in ending choice",
+  "summary": "Use e and i with the word’s other vowels, or choose the front-vowel ending when they appear alone.",
+  "stage": "focused",
+  "targetSkills": ["Neutral-vowel harmony"],
+  "prerequisiteSkills": ["Vowel harmony"],
+  "introducedVocabulary": [
+    {
+      "finnish": "paperi",
+      "english": "paper"
+    },
+    {
+      "finnish": "kieli",
+      "english": "language"
+    },
+    {
+      "finnish": "hotelli",
+      "english": "hotel"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair"
+    },
+    {
+      "finnish": "toimisto",
+      "english": "office"
+    },
+    {
+      "finnish": "keittiö",
+      "english": "kitchen"
+    },
+    {
+      "finnish": "bussi",
+      "english": "bus"
+    },
+    {
+      "finnish": "museo",
+      "english": "museum"
+    },
+    {
+      "finnish": "pieni",
+      "english": "small"
+    },
+    {
+      "finnish": "mies",
+      "english": "man"
+    }
+  ],
+  "objectives": [
+    "Recognise e and i as neutral vowels.",
+    "Check the whole word for a, o, u or ä, ö, y.",
+    "Choose the correct harmonic ending without changing the stem."
+  ],
+  "sections": [
+    {
+      "title": "Neutral does not mean ignored",
+      "paragraphs": [
+        "The vowels e and i can occur with either vowel family. Look for another vowel in the word before choosing an ending.",
+        "If a simple word contains only e and i, use the front-vowel ending in this beginner scope."
+      ],
+      "keyPoints": [
+        "paperi takes -ssa because it contains a",
+        "kieli takes -ssä because it contains only e and i"
+      ]
+    },
+    {
+      "title": "Choose an ending, not a new stem",
+      "paragraphs": [
+        "These questions ask only for -ssa or -ssä. You do not need to build the complete inflected word.",
+        "Compound words and loanword exceptions are outside this pack."
+      ],
+      "keyPoints": ["tuoli → -ssa", "keittiö → -ssä"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "paperi + -ssa",
+      "english": "in the paper",
+      "steps": ["e and i are neutral.", "The back vowel a selects -ssa."]
+    },
+    {
+      "finnish": "kieli + -ssä",
+      "english": "in the language",
+      "steps": ["The word contains only neutral e and i.", "Use the front-vowel ending -ssä."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not choose from the final vowel alone.",
+    "Do not automatically choose -ssä whenever the word contains e or i.",
+    "Do not build an unstated stem when the task asks only for an ending."
+  ],
+  "practiceExercises": [
+    {
+      "id": "vhx-neutral-practice-p01",
+      "type": "multiple-choice",
+      "instruction": "Choose the ending.",
+      "prompt": "Optional practice: Choose the harmonic ending. Which inessive ending belongs with paperi (“paper”)?",
+      "acceptedAnswers": ["-ssa"],
+      "explanation": "paperi (“paper”) takes -ssa because a is a back vowel. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["lesson-practice", "vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["paperi"],
+      "options": ["-ssa", "-ssä"],
+      "optionFeedback": {
+        "-ssa": "Correct. paperi (“paper”) takes -ssa because a is a back vowel. Neutral e and i do not force a back-vowel ending.",
+        "-ssä": "-ssä conflicts with the vowel family in this word. paperi (“paper”) takes -ssa because a is a back vowel. Neutral e and i do not force a back-vowel ending."
+      },
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct"
+    },
+    {
+      "id": "vhx-neutral-practice-p02",
+      "type": "multiple-choice",
+      "instruction": "Choose the ending.",
+      "prompt": "Optional practice: Choose the harmonic ending. Which inessive ending belongs with kieli (“language”)?",
+      "acceptedAnswers": ["-ssä"],
+      "explanation": "kieli (“language”) takes -ssä because e and i are neutral only. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["lesson-practice", "vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["kieli"],
+      "options": ["-ssa", "-ssä"],
+      "optionFeedback": {
+        "-ssa": "-ssa conflicts with the vowel family in this word. kieli (“language”) takes -ssä because e and i are neutral only. Neutral e and i do not force a back-vowel ending.",
+        "-ssä": "Correct. kieli (“language”) takes -ssä because e and i are neutral only. Neutral e and i do not force a back-vowel ending."
+      },
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct"
+    },
+    {
+      "id": "vhx-neutral-practice-p03",
+      "type": "fill-blank",
+      "instruction": "Write the ending.",
+      "prompt": "Optional practice: Choose the harmonic ending. hotelli (“hotel”) + ____",
+      "acceptedAnswers": ["-ssa"],
+      "explanation": "hotelli (“hotel”) takes -ssa because o is a back vowel. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["lesson-practice", "vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["hotelli"],
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct"
+    },
+    {
+      "id": "vhx-neutral-practice-p04",
+      "type": "fill-blank",
+      "instruction": "Write the ending.",
+      "prompt": "Optional practice: Choose the harmonic ending. tie (“road”) + ____",
+      "acceptedAnswers": ["-ssä"],
+      "explanation": "tie (“road”) takes -ssä because i and e are neutral only. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["lesson-practice", "vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["tie"],
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct"
+    }
+  ]
+}

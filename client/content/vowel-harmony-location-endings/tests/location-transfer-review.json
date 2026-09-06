@@ -1,0 +1,381 @@
+{
+  "id": "location-transfer-review",
+  "title": "Location transfer review",
+  "focus": "Mix neutral-vowel choices, inessive forms, and complete location statements.",
+  "stage": "review",
+  "targetSkills": [
+    "Vowel harmony",
+    "Neutral-vowel harmony",
+    "Inessive -ssa/-ssä",
+    "Inessive location sentences"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "vowel-harmony-basics",
+    "neutral-vowel-harmony",
+    "inside-ending",
+    "inessive-location-sentences"
+  ],
+  "exercises": [
+    {
+      "id": "ff-a1-t13-e02",
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Which vowel group describes pöytä (“table”)?",
+      "acceptedAnswers": ["front vowels"],
+      "explanation": "All three vowels in pöytä, ö, y and ä, belong to the front-vowel group.",
+      "tags": ["vowel-harmony", "recognition"],
+      "requiredSkills": ["Vowel harmony"],
+      "vocabulary": ["pöytä"],
+      "options": ["back vowels", "front vowels", "only neutral vowels"],
+      "optionFeedback": {
+        "back vowels": "Back vowels are a, o, u. The dots distinguish ä and ö from a and o; pöytä has front vowels.",
+        "front vowels": "Correct. Ö, y and ä are all front vowels.",
+        "only neutral vowels": "Only e and i are neutral. Pöytä contains ö, y and ä, which are front vowels."
+      },
+      "targetSkill": "Vowel harmony",
+      "misconceptionCategory": "Vowel harmony: form not yet correct",
+      "parallelExerciseId": "ff-a1-t01-e10"
+    },
+    {
+      "id": "ff-a1-review-inessive-e01",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "kirjasto (“library”) → ____ (“in the library”)",
+      "acceptedAnswers": ["kirjastossa"],
+      "explanation": "Keep the stem kirjasto unchanged. Its a and o select the back-vowel ending -ssa: kirjastossa (“in the library”). The neutral i does not change that choice.",
+      "tags": ["inessive", "vowel-harmony"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["kirjasto"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: ending not yet correct",
+      "parallelExerciseId": "ff-a1-review-inessive-e02",
+      "answerDiagnostics": [
+        {
+          "answers": ["kirjastossä"],
+          "category": "Vowel harmony: back-vowel ending needed",
+          "explanation": "The a and o determine harmony even though i is neutral. Use -ssa: kirjastossa."
+        }
+      ]
+    },
+    {
+      "id": "ff-a1-review-inessive-e02",
+      "type": "fill-blank",
+      "instruction": "Complete the Finnish form.",
+      "prompt": "myymälä (“shop”) → ____ (“in the shop”)",
+      "acceptedAnswers": ["myymälässä"],
+      "explanation": "Keep the stem myymälä unchanged. Its y and ä select the front-vowel ending -ssä: myymälässä (“in the shop”).",
+      "tags": ["inessive", "vowel-harmony"],
+      "requiredSkills": ["Inessive -ssa/-ssä", "Vowel harmony"],
+      "vocabulary": ["myymälä"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: ending not yet correct",
+      "parallelExerciseId": "ff-a1-review-inessive-e01",
+      "answerDiagnostics": [
+        {
+          "answers": ["myymälässa"],
+          "category": "Vowel harmony: front-vowel ending needed",
+          "explanation": "Myymälä has front vowels y and ä. Use -ssä, preserving the dots: myymälässä."
+        }
+      ]
+    },
+    {
+      "id": "vhx-review-two-neutral-001",
+      "type": "fill-blank",
+      "instruction": "Write the ending.",
+      "prompt": "Choose the harmonic ending. bussi (“bus”) + ____",
+      "acceptedAnswers": ["-ssa"],
+      "explanation": "bussi (“bus”) takes -ssa because u is a back vowel. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["bussi"],
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-neutral-002"
+    },
+    {
+      "id": "vhx-review-two-neutral-002",
+      "type": "fill-blank",
+      "instruction": "Write the ending.",
+      "prompt": "Choose the harmonic ending. nimi (“name”) + ____",
+      "acceptedAnswers": ["-ssä"],
+      "explanation": "nimi (“name”) takes -ssä because i is neutral only. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["nimi"],
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-neutral-001"
+    },
+    {
+      "id": "vhx-review-two-neutral-003",
+      "type": "multiple-choice",
+      "instruction": "Choose the ending.",
+      "prompt": "Choose the harmonic ending. Which inessive ending belongs with museo (“museum”)?",
+      "acceptedAnswers": ["-ssa"],
+      "explanation": "museo (“museum”) takes -ssa because o is a back vowel. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["museo"],
+      "options": ["-ssa", "-ssä"],
+      "optionFeedback": {
+        "-ssa": "Correct. museo (“museum”) takes -ssa because o is a back vowel. Neutral e and i do not force a back-vowel ending.",
+        "-ssä": "-ssä conflicts with the vowel family in this word. museo (“museum”) takes -ssa because o is a back vowel. Neutral e and i do not force a back-vowel ending."
+      },
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-neutral-004"
+    },
+    {
+      "id": "vhx-review-two-neutral-004",
+      "type": "multiple-choice",
+      "instruction": "Choose the ending.",
+      "prompt": "Choose the harmonic ending. Which inessive ending belongs with pieni (“small”)?",
+      "acceptedAnswers": ["-ssä"],
+      "explanation": "pieni (“small”) takes -ssä because e and i are neutral only. Neutral e and i do not force a back-vowel ending.",
+      "tags": ["vowel-harmony", "neutral-vowels"],
+      "requiredSkills": ["Neutral-vowel harmony"],
+      "vocabulary": ["pieni"],
+      "options": ["-ssa", "-ssä"],
+      "optionFeedback": {
+        "-ssa": "-ssa conflicts with the vowel family in this word. pieni (“small”) takes -ssä because e and i are neutral only. Neutral e and i do not force a back-vowel ending.",
+        "-ssä": "Correct. pieni (“small”) takes -ssä because e and i are neutral only. Neutral e and i do not force a back-vowel ending."
+      },
+      "targetSkill": "Neutral-vowel harmony",
+      "misconceptionCategory": "Neutral-vowel harmony: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-neutral-003"
+    },
+    {
+      "id": "vhx-review-two-inessive-001",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “in the sauna.” Use sauna (“sauna”); The stem remains sauna; choose -ssa and attach it directly.",
+      "acceptedAnswers": ["saunassa"],
+      "explanation": "sauna (“sauna”) takes -ssa. Attach it directly to the unchanged stem: saunassa (“in the sauna”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["sauna"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-inessive-002"
+    },
+    {
+      "id": "vhx-review-two-inessive-002",
+      "type": "translation-fi",
+      "instruction": "Write the Finnish form.",
+      "prompt": "Write “in the forest.” Use metsä (“forest”); The stem remains metsä; choose -ssä and attach it directly.",
+      "acceptedAnswers": ["metsässä"],
+      "explanation": "metsä (“forest”) takes -ssä. Attach it directly to the unchanged stem: metsässä (“in the forest”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["metsä"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-inessive-001"
+    },
+    {
+      "id": "vhx-review-two-inessive-003",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "toimistossa",
+      "acceptedAnswers": ["in the office"],
+      "explanation": "toimisto (“office”) takes -ssa. Attach it directly to the unchanged stem: toimistossa (“in the office”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["toimisto"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-inessive-004"
+    },
+    {
+      "id": "vhx-review-two-inessive-004",
+      "type": "translation-en",
+      "instruction": "Translate the Finnish form into English.",
+      "prompt": "päivässä",
+      "acceptedAnswers": ["during the day"],
+      "explanation": "päivä (“day”) takes -ssä. Attach it directly to the unchanged stem: päivässä (“during the day”).",
+      "tags": ["inessive", "vowel-harmony", "controlled-production"],
+      "requiredSkills": ["Inessive -ssa/-ssä"],
+      "vocabulary": ["päivä"],
+      "targetSkill": "Inessive -ssa/-ssä",
+      "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
+      "parallelExerciseId": "vhx-review-two-inessive-003"
+    },
+    {
+      "id": "vhx-review-two-location-001",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The mother is in the office.”",
+      "acceptedAnswers": ["Äiti on toimistossa."],
+      "explanation": "Äiti on toimistossa. means “The mother is in the office”. The subject is plural or supplied, on agrees with it, and toimistossa gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["äiti", "olla", "on", "toimisto"],
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The mother is in the office.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Äiti",
+            "meaning": "mother",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "äiti",
+            "formation": "Äiti is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "toimistossa",
+            "meaning": "in the office",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "toimisto",
+            "formation": "Start with toimisto and attach the learned inessive ending to form toimistossa."
+          }
+        ]
+      },
+      "tokens": ["toimistossa.", "Äiti", "on"],
+      "parallelExerciseId": "vhx-review-two-location-002"
+    },
+    {
+      "id": "vhx-review-two-location-002",
+      "type": "word-order",
+      "instruction": "Put the words in subject–verb–place order.",
+      "prompt": "Build “The dog is in the village.”",
+      "acceptedAnswers": ["Koira on kylässä."],
+      "explanation": "Koira on kylässä. means “The dog is in the village”. The subject is plural or supplied, on agrees with it, and kylässä gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["koira", "olla", "on", "kylä"],
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The dog is in the village.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Koira",
+            "meaning": "dog",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "koira",
+            "formation": "Koira is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "kylässä",
+            "meaning": "in the village",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "kylä",
+            "formation": "Start with kylä and attach the learned inessive ending to form kylässä."
+          }
+        ]
+      },
+      "tokens": ["kylässä.", "Koira", "on"],
+      "parallelExerciseId": "vhx-review-two-location-001"
+    },
+    {
+      "id": "vhx-review-two-location-003",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete sentence.",
+      "prompt": "Choose “The student is in the café.”",
+      "acceptedAnswers": ["Opiskelija on kahvilassa."],
+      "explanation": "Opiskelija on kahvilassa. means “The student is in the café”. The subject is plural or supplied, on agrees with it, and kahvilassa gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["opiskelija", "olla", "on", "kahvila"],
+      "options": ["Opiskelija on kahvilassa.", "Opiskelija kahvilassa on."],
+      "optionFeedback": {
+        "Opiskelija on kahvilassa.": "Correct. Opiskelija on kahvilassa. means “The student is in the café”. The subject is plural or supplied, on agrees with it, and kahvilassa gives the supplied place or state.",
+        "Opiskelija kahvilassa on.": "Use subject–verb–place order. Opiskelija on kahvilassa. means “The student is in the café”. The subject is plural or supplied, on agrees with it, and kahvilassa gives the supplied place or state."
+      },
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The student is in the café.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Opiskelija",
+            "meaning": "student",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "opiskelija",
+            "formation": "Opiskelija is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "kahvilassa",
+            "meaning": "in the café",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "kahvila",
+            "formation": "Start with kahvila and attach the learned inessive ending to form kahvilassa."
+          }
+        ]
+      },
+      "parallelExerciseId": "vhx-review-two-location-004"
+    },
+    {
+      "id": "vhx-review-two-location-004",
+      "type": "multiple-choice",
+      "instruction": "Choose the complete sentence.",
+      "prompt": "Choose “The mother is in the forest.”",
+      "acceptedAnswers": ["Äiti on metsässä."],
+      "explanation": "Äiti on metsässä. means “The mother is in the forest”. The subject is plural or supplied, on agrees with it, and metsässä gives the supplied place or state.",
+      "tags": ["sentence"],
+      "requiredSkills": ["Inessive location sentences"],
+      "vocabulary": ["äiti", "olla", "on", "metsä"],
+      "options": ["Äiti on metsässä.", "Äiti metsässä on."],
+      "optionFeedback": {
+        "Äiti on metsässä.": "Correct. Äiti on metsässä. means “The mother is in the forest”. The subject is plural or supplied, on agrees with it, and metsässä gives the supplied place or state.",
+        "Äiti metsässä on.": "Use subject–verb–place order. Äiti on metsässä. means “The mother is in the forest”. The subject is plural or supplied, on agrees with it, and metsässä gives the supplied place or state."
+      },
+      "targetSkill": "Inessive location sentences",
+      "misconceptionCategory": "Inessive location sentences: form not yet correct",
+      "sentenceExplanation": {
+        "translation": "The mother is in the forest.",
+        "pattern": "Subject (who or what) + olla verb + place or state",
+        "parts": [
+          {
+            "finnish": "Äiti",
+            "meaning": "mother",
+            "role": "Subject — names who or what the sentence is about.",
+            "baseForm": "äiti",
+            "formation": "Äiti is supplied unchanged."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "Verb — connects the subject to its place or state.",
+            "baseForm": "olla",
+            "formation": "on is the supplied written form of olla for this subject."
+          },
+          {
+            "finnish": "metsässä",
+            "meaning": "in the forest",
+            "role": "Place or state — completes the idea.",
+            "baseForm": "metsä",
+            "formation": "Start with metsä and attach the learned inessive ending to form metsässä."
+          }
+        ]
+      },
+      "parallelExerciseId": "vhx-review-two-location-003"
+    }
+  ]
+}

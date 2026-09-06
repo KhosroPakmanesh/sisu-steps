@@ -2,7 +2,7 @@
 
 ## Goal
 
-Deliver a browser-only Angular exercise book and its first Pre-A1–A1.3 grammar-foundation pack covering vowel harmony, KPT consonant gradation, and the nominative T-plural.
+Deliver a browser-only Angular exercise book and a level `0 - A1.3` grammar-foundation pack family covering vowel harmony, KPT consonant gradation, the nominative T-plural, and related written agreement.
 
 ## Included capabilities
 
@@ -118,3 +118,11 @@ Implement `REQ-G001-112`–`115` as three independently versioned packs organize
 Keep seven pronoun-and-affirmative Focused targets with two Reviews for 242 questions; three negative-statement targets with one Review for 100; and five question-and-answer targets with two Reviews for 178. Partition the former cross-topic polarity and final Reviews by their actual target skills instead of copying or discarding questions. Remove cross-pack prerequisite declarations only where the lesson already teaches or visibly supplies the required forms from first principles.
 
 Replace the universal 200-question floor with a non-empty, 1,000-question maximum and require each pack's assessment to justify its actual count. Keep all learner-facing Finnish in standard form, maintain plural and polite-singular `te`, preserve controlled vocabulary and complete pre-response English meanings, and retain all mutual mastery pairs. Add split-boundary semantic validation and negative unit coverage, record separate pre-authoring and final pedagogy gates, update the catalog and user-visible documentation, run direct-source validation and the complete client quality gate, and inspect all three rendered learning maps at narrow and wide viewports.
+
+## 2026-09-05 grammar-foundation successor split
+
+Implement `REQ-G001-116`–`120` by replacing `vowel-harmony-kpt-tplural` with three larger but coherent packs: `vowel-harmony-location-endings`, `kpt-singular-forms`, and `t-plural-agreement`. Preserve every existing stable content ID once, partition the former cumulative Review by target skill, and expand the family from 14 tests and 200 scored exercises to 25 tests and 570 scored exercises. Use exact pack totals of 110, 260, and 200 without making equal size a design target.
+
+Add five first-principles Focused targets: neutral-vowel harmony, inessive location sentences, strong and weak KPT grades, T-plural recognition, and KPT T-plural recognition. Keep all Focused tests before each pack's Reviews, all content at level `0 - A1.3`, and all learner-facing Finnish in the standard written register. Do not expand into object cases, other plural cases, other verb types or persons, spoken Finnish, listening, pronunciation, or general CEFR claims.
+
+Implement a one-time local-state migration from the retired 6.1.0 pack. Reassign ordinary attempts and sessions by stable test ownership, split old cumulative-Review records by exercise ownership, retain exercise-based mistakes and mastery, move lesson completion and lesson notes with the lesson, and move the broad topic note unchanged to the largest successor pack. Update backup compatibility, content validation, specifications, assessments, browser workflows, and the changelog; then run direct-source validation, the complete client gate, and responsive rendered checks.
