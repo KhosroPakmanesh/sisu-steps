@@ -1,7 +1,7 @@
 export const routePaths = {
   home: '/',
-  reports: '/reports',
-  data: '/data',
+  stats: '/stats',
+  topicStats: (topicId: string) => ['/stats', topicId] as const,
   topic: (topicId: string) => ['/topics', topicId] as const,
   learn: (topicId: string, testId: string) => ['/learn', topicId, testId] as const,
   study: (topicId: string, testId: string) => ['/study', topicId, testId] as const,

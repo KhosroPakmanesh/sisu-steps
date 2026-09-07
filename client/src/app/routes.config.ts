@@ -5,6 +5,6 @@ export const routeSegments = {
   study: 'study/:topicId/:testId',
   mistakes: 'mistakes/:topicId',
   review: 'review/:topicId',
-  reports: 'reports',
-  data: 'data',
+  stats: 'stats',
+  topicStats: 'stats/:topicId',
 } as const;

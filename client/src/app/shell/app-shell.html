@@ -89,21 +89,14 @@
       [routerLinkActiveOptions]="{ exact: true }"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
-      ><span>Topics</span></a
-    >
-    <a
-      class="workbook-folder-tab tab-white"
-      [routerLink]="paths.reports"
-      routerLinkActive="active"
-      ariaCurrentWhenActive="page"
-      ><span>Reports</span></a
+      ><span>Notebook</span></a
     >
     <a
       class="workbook-folder-tab tab-yellow"
-      [routerLink]="paths.data"
+      [routerLink]="paths.stats"
       routerLinkActive="active"
       ariaCurrentWhenActive="page"
-      ><span>Data &amp; backup</span></a
+      ><span>Stats</span></a
     >
   </nav>
   <router-outlet (activate)="focusRoutedContent()" />

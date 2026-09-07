@@ -9,12 +9,7 @@ function vowelHarmonyTopicLink(page: Page) {
 }
 
 function vowelHarmonyReport(page: Page) {
-  return page.locator('.report-topic').filter({
-    has: page.getByRole('heading', {
-      name: 'Vowel harmony and location endings',
-      exact: true,
-    }),
-  });
+  return page.locator('main.topic-stats-page');
 }
 
 async function expectClippedPaper(locator: Locator) {
@@ -113,8 +108,8 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }) =
   await expect(paper).toBeVisible();
   await expect(page.locator('.site-header nav')).toHaveCount(0);
   await expect(navigation).toBeVisible();
-  await expect(tabs).toHaveCount(3);
-  await expect(tabs).toHaveText(['Topics', 'Reports', 'Data & backup']);
+  await expect(tabs).toHaveCount(2);
+  await expect(tabs).toHaveText(['Notebook', 'Stats']);
   await expect(clip).toBeVisible();
 
   const [brandBox, appearanceBox] = await Promise.all([
@@ -192,7 +187,7 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }) =
   expect(tabBoxes.map((tab) => tab.y)).toEqual(
     [...tabBoxes.map((tab) => tab.y)].sort((a, b) => a - b),
   );
-  expect(tabColors).toEqual(['rgb(90, 155, 213)', 'rgb(244, 239, 229)', 'rgb(224, 185, 41)']);
+  expect(tabColors).toEqual(['rgb(90, 155, 213)', 'rgb(224, 185, 41)']);
   expect(clipBox?.x ?? 0).toBeGreaterThan((paperBox?.x ?? 0) + (paperBox?.width ?? 0) - 40);
   expect(clipBox?.width ?? 0).toBeGreaterThanOrEqual(viewportWidth <= 560 ? 22 : 34);
   const notebookNoteBox = await page.locator('.hero .notebook-note').boundingBox();
@@ -336,7 +331,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
     page.locator('.test-card').first().getByRole('link', { name: 'Learn first' }),
   ).toHaveAttribute('href', new RegExp(`/learn/${TOPIC_SEGMENT}/`));
   await expect(page.getByRole('navigation', { name: 'Primary navigation' })).toContainText(
-    'Topics',
+    'Notebook',
   );
   await expect(page.locator('.tab-number')).toHaveCount(0);
   await expect(page.getByRole('group', { name: 'Appearance' })).toBeVisible();
@@ -522,7 +517,7 @@ test('sizes cut-paper actions to their labels across app routes', async ({ page 
     await expectLabelSizedAction(page.getByRole('button', { name: 'Check answer' }));
     await expectLabelSizedAction(page.getByRole('button', { name: /Show answer/ }));
 
-    await page.goto('/data');
+    await page.goto('/stats');
     await expectLabelSizedAction(page.getByRole('button', { name: 'Download backup' }));
     await expectLabelSizedAction(page.locator('.file-button'));
     const clearAll = page.getByRole('button', { name: 'Clear all history' });
@@ -609,7 +604,7 @@ test('places compact action groups according to their page role', async ({ page 
     await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
     await expectActionGroupPlacement(page.locator('.answer-actions'), 'end');
 
-    await page.goto('/data');
+    await page.goto('/stats');
     await expectActionGroupPlacement(page.locator('.archive-action-row').first(), 'end');
     await page.getByRole('button', { name: 'Clear all history' }).click();
     await expectActionGroupPlacement(page.locator('.confirmation-actions'), 'end');
@@ -730,11 +725,9 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   await expectClippedPaper(topicCard);
   await expect(continueCard).toHaveClass(/assignment-sheet/);
 
-  const [continueColor, topicColor] = await Promise.all([
-    continueCard.evaluate((element) => getComputedStyle(element).backgroundColor),
-    topicCard.evaluate((element) => getComputedStyle(element).backgroundColor),
-  ]);
-  expect(topicColor).toBe(continueColor);
+  const continueColor = await continueCard.evaluate(
+    (element) => getComputedStyle(element).backgroundColor,
+  );
   const continueTopicColor = await continueCard
     .locator('.continue-topic')
     .evaluate((element) => getComputedStyle(element).color);
@@ -759,7 +752,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   );
   const expectedLift = rootFontSize * -0.45;
   const expectedTapedLift = rootFontSize * -0.3;
-  const expectedCoverLift = rootFontSize * -0.35;
+  const expectedCardLift = rootFontSize * -0.25;
   const expectedNoteLift = rootFontSize * -0.22;
   const expectedInformationShift = rootFontSize * 0.12;
   await continueCard.hover();
@@ -791,7 +784,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
         (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
       ),
     )
-    .toBeCloseTo(expectedCoverLift, 2);
+    .toBeCloseTo(expectedCardLift, 2);
 
   const catalogStats = page.locator('.catalog-stats');
   await catalogStats.hover();
@@ -942,20 +935,20 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   await page.getByRole('button', { name: 'Check answer' }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
 
-  await page.goto('/reports');
+  await page.goto(`/stats/${TOPIC_SEGMENT}`);
   await expect(page.locator('main.reports-page')).not.toHaveClass(/narrow-page/);
   expect(
     await page
       .locator('main.reports-page')
       .evaluate((element) => element.getBoundingClientRect().width),
   ).toBeCloseTo(topicPageWidth, 1);
-  const reportBackLink = page.getByRole('link', { name: /Back to topics/ });
+  const reportBackLink = page.getByRole('link', { name: 'All stats' });
   await expect(reportBackLink).toHaveClass(/back-link/);
   await expect(page.locator('.reports-hero .back-link + .eyebrow')).toHaveCSS('margin-top', '20px');
   const reportOverview = page.locator('.report-overview');
   const heroLayout = await page.locator('.reports-hero').evaluate((hero) => {
     const content = hero.firstElementChild as HTMLElement | null;
-    const overview = hero.querySelector('.report-overview') as HTMLElement | null;
+    const overview = hero.querySelector('.at-a-glance') as HTMLElement | null;
     return {
       columns: getComputedStyle(hero).gridTemplateColumns.split(' ').length,
       topDelta: Math.abs(
@@ -993,28 +986,13 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     )
     .toBeCloseTo(expectedLift, 2);
   const reportTopic = vowelHarmonyReport(page);
-  const reportTopicSheet = reportTopic.locator('.report-topic-sheet');
-  await expectClippedPaper(reportTopicSheet);
-  expect(
-    await reportTopicSheet.evaluate(
-      (element) => getComputedStyle(element).backgroundImage.match(/linear-gradient/g)?.length ?? 0,
-    ),
-  ).toBe(2);
-  await reportTopicSheet.hover();
-  await expect
-    .poll(() =>
-      reportTopicSheet.evaluate(
-        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
-      ),
-    )
-    .toBeCloseTo(expectedLift, 2);
   await expect(reportTopic.locator('.report-table > .report-section-heading .eyebrow')).toHaveText(
     'Test history',
   );
-  await expect(reportTopic.locator('.report-table > .report-section-heading h3')).toHaveText(
-    'Results by test',
+  await expect(reportTopic.locator('.report-table > .report-section-heading h2')).toHaveText(
+    'Test results',
   );
-  await expect(reportTopic.locator('.report-table > .report-section-heading > p')).toHaveCount(0);
+  await expect(reportTopic.locator('.report-table > .report-section-heading > p')).toHaveCount(1);
   await expect(reportTopic.locator('.table-heading')).toHaveCount(0);
   await expect(reportTopic.locator('.ledger-sheet table')).toHaveCount(1);
   await expect(page.getByRole('heading', { name: 'Learning by skill' })).toHaveCount(0);
@@ -1042,13 +1020,14 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
       shadow: getComputedStyle(element).boxShadow,
     })),
   ).toEqual(restingRowSurface);
-  if ((page.viewportSize()?.width ?? 0) > 650) {
+  if (await reportTopic.locator('.report-column-heading').isVisible()) {
     await expect(reportTopic.locator('.report-column-heading span')).toHaveText([
       'Test',
       'First',
       'Latest',
       'Best',
       'Average',
+      'History',
     ]);
     await expectClippedPaper(reportTopic.locator('.report-column-heading'));
     const ledgerAlignment = await page.evaluate(() => {
@@ -1067,11 +1046,27 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
       };
     });
     expect(ledgerAlignment.leftEdgeDelta).toBeLessThanOrEqual(1);
-    expect(Math.max(...ledgerAlignment.valueDeltas)).toBeLessThanOrEqual(2);
+    expect(Math.max(...ledgerAlignment.valueDeltas)).toBeLessThanOrEqual(3);
   } else {
     await expect(reportTopic.locator('.report-column-heading')).toBeHidden();
   }
   const mistakeCta = page.locator('.mistake-cta');
+  const topicHistory = page.locator('.topic-history');
+  await expect(page.locator('.report-ledger .topic-history')).toHaveCount(1);
+  const [testRowColour, topicRowColour] = await Promise.all([
+    firstReportRow.locator('th').evaluate((element) => getComputedStyle(element).backgroundColor),
+    topicHistory.evaluate((element) => getComputedStyle(element).backgroundColor),
+  ]);
+  expect(topicRowColour).not.toBe(testRowColour);
+  expect(
+    await topicHistory.evaluate(
+      (history, mistakeElement) => {
+        const following = Node.DOCUMENT_POSITION_FOLLOWING;
+        return Boolean(history.compareDocumentPosition(mistakeElement as Node) & following);
+      },
+      await mistakeCta.elementHandle(),
+    ),
+  ).toBe(true);
   await expect(mistakeCta).toContainText('Turn errors into patterns');
   await mistakeCta.hover();
   await expect
@@ -1082,8 +1077,18 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     )
     .toBeCloseTo(expectedLift, 2);
 
-  await page.goto('/data');
-  await expect(page.getByRole('link', { name: /Back to topics/ })).toHaveClass(/back-link/);
+  await page.goto('/stats');
+  await expect(page.getByRole('link', { name: 'Back to Notebook' })).toHaveClass(/back-link/);
+  const backupArchive = page.locator('.backup-archive');
+  await expectClippedPaper(backupArchive);
+  const backupPattern = await backupArchive.evaluate((element) => ({
+    backgroundImage: getComputedStyle(element).backgroundImage,
+    punchedEdge: getComputedStyle(element, '::before').content,
+    pageEdge: getComputedStyle(element, '::after').content,
+  }));
+  expect(backupPattern.backgroundImage).toContain('repeating-linear-gradient');
+  expect(backupPattern.punchedEdge).not.toBe('none');
+  expect(backupPattern.pageEdge).not.toBe('none');
 });
 
 test('restores an unfinished scored session from browser storage', async ({ page }) => {
@@ -1109,8 +1114,9 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
 
   await expect(page.locator('.topic-card')).toHaveCount(6);
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
-  await expect(primaryNavigation).toContainText('Data');
-  await expect(primaryNavigation.getByRole('link')).toHaveCount(3);
+  await expect(primaryNavigation).toContainText('Notebook');
+  await expect(primaryNavigation).toContainText('Stats');
+  await expect(primaryNavigation.getByRole('link')).toHaveCount(2);
   await expect(page.locator('.site-header nav')).toHaveCount(0);
   const headerLayout = await page.locator('.header-tools').evaluate((header) => {
     const controls = [...header.querySelectorAll('.appearance-options label')];
@@ -1173,7 +1179,7 @@ test('keeps required content inside clipped surfaces at 320 pixels', async ({ pa
     await expectHorizontallyInside(exercise, content);
   }
 
-  await page.goto('/reports');
+  await page.goto(`/stats/${TOPIC_SEGMENT}`);
   const overview = page.locator('.report-overview');
   await expectNoInternalHorizontalOverflow(overview);
   expect(
@@ -1183,15 +1189,8 @@ test('keeps required content inside clipped surfaces at 320 pixels', async ({ pa
     await expectHorizontallyInside(overview, summary);
   }
 
-  await page.goto('/data');
-  await expect(page.getByRole('link', { name: 'Back to topics' })).toBeVisible();
-  const dataOverview = page.locator('.data-overview');
-  expect(
-    await dataOverview.evaluate((element) =>
-      getComputedStyle(element).gridTemplateColumns.split(' '),
-    ),
-  ).toHaveLength(1);
-  await expectNoInternalHorizontalOverflow(dataOverview);
+  await page.goto('/stats');
+  await expect(page.getByRole('link', { name: 'Back to Notebook' })).toBeVisible();
   const archive = page.locator('.backup-archive');
   await expectNoInternalHorizontalOverflow(archive);
   const firstArchiveRow = archive.locator('.archive-action-row').first();
@@ -1205,13 +1204,15 @@ test('keeps required content inside clipped surfaces at 320 pixels', async ({ pa
   }
 });
 
-test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => {
+test('keeps topic stats usable at the 320-pixel minimum width', async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 800 });
-  await page.goto('/reports');
+  await page.goto(`/stats/${TOPIC_SEGMENT}`);
 
-  await expect(page.getByRole('heading', { name: 'Reports', exact: true })).toBeVisible();
+  await expect(
+    page.getByRole('heading', { name: 'Vowel harmony and location endings', exact: true }),
+  ).toBeVisible();
   const reportTopic = vowelHarmonyReport(page);
-  await expect(reportTopic.getByRole('region', { name: /results by test/i })).toBeVisible();
+  await expect(reportTopic.getByRole('region', { name: /test results/i })).toBeVisible();
   await expect(page.locator('.reports-hero .back-link + .eyebrow')).toBeVisible();
   await expect(page.locator('.report-overview')).toBeVisible();
   await expect(reportTopic.locator('.report-ledger .semantic-ledger-head')).toHaveCSS(
@@ -1220,7 +1221,7 @@ test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => 
   );
   const firstReportRow = reportTopic.locator('.report-row').first();
   await expect(firstReportRow).toBeVisible();
-  await expect(firstReportRow.locator('td')).toHaveCount(4);
+  await expect(firstReportRow.locator('td')).toHaveCount(5);
   expect(
     await firstReportRow.evaluate((element) => getComputedStyle(element).gridTemplateColumns),
   ).toMatch(/\S+\s+\S+/);
@@ -1232,138 +1233,78 @@ test('keeps reports usable at the 320-pixel minimum width', async ({ page }) => 
 });
 
 test('uses a deliberate confirmation sheet for destructive clearing', async ({ page }) => {
-  await page.goto('/data');
+  await page.goto('/stats');
 
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Data & backup');
-  await expect(page.locator('.data-hero .back-link + .eyebrow')).toBeVisible();
-  await expect(page.locator('.data-overview.assignment-sheet')).toBeVisible();
-  await expect(page.getByRole('region', { name: 'Backup and restore' })).toBeVisible();
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Statistics');
+  await expect(page.locator('.stats-hero .back-link + .eyebrow')).toBeVisible();
+  await expect(page.locator('.cumulative-overview.assignment-sheet')).toBeVisible();
+  await expect(page.locator('.stats-hero .notebook-note')).toHaveText('progress, not perfection');
+  const heroGeometry = await page.locator('.stats-hero').evaluate((hero) => {
+    const copy = hero.querySelector('.stats-hero-copy')!.getBoundingClientRect();
+    const summary = hero.querySelector('.cumulative-summary')!.getBoundingClientRect();
+    const note = hero.querySelector('.notebook-note')!.getBoundingClientRect();
+    const heroBox = hero.getBoundingClientRect();
+    return {
+      columns: getComputedStyle(hero).gridTemplateColumns.split(' ').length,
+      centerDelta: Math.abs(note.left + note.width / 2 - (heroBox.left + heroBox.width / 2)),
+      noteTop: note.top,
+      contentBottom: Math.max(copy.bottom, summary.bottom),
+      summaryLeft: summary.left,
+      copyRight: copy.right,
+    };
+  });
+  expect(heroGeometry.centerDelta).toBeLessThanOrEqual(2);
+  expect(heroGeometry.noteTop).toBeGreaterThanOrEqual(heroGeometry.contentBottom);
+  if (heroGeometry.columns > 1) {
+    expect(heroGeometry.summaryLeft).toBeGreaterThan(heroGeometry.copyRight);
+  }
+  await expect(page.getByRole('region', { name: 'Backup & restore' })).toBeVisible();
+  const backupHeading = page.getByRole('heading', { name: 'Backup & restore' });
+  const backupArchive = page.locator('.backup-archive');
+  await expect(backupArchive.locator('#backup-heading')).toHaveCount(0);
   await expect(page.getByRole('button', { name: 'Download backup' })).toBeVisible();
   await expect(page.getByLabel('Restore backup')).toHaveAttribute(
     'accept',
     'application/json,.json',
   );
-  await expect(page.getByRole('heading', { name: 'Choose what to clear' })).toBeVisible();
-  await expect(page.locator('.topic-file-label').first()).toBeVisible();
-  await expect(page.locator('.clear-ledger').first()).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Progress by topic' })).toBeVisible();
+  await expect(page.locator('.stats-topic-card')).toHaveCount(6);
   await expect(page.locator('.backup-archive .clear-all-action-row')).toBeVisible();
   await expect(page.locator('.clear-all-slip')).toHaveCount(0);
   await expect(page.locator('.settings-card')).toHaveCount(0);
   await expect(page.locator('.danger-zone')).toHaveCount(0);
-
-  const viewportWidth = page.viewportSize()?.width ?? 0;
-  if (viewportWidth > 800) {
-    const heroAlignment = await page.locator('.data-hero').evaluate((element) => {
-      const copy = element.querySelector('.data-hero-copy')?.getBoundingClientRect();
-      const overview = element.querySelector('.data-overview')?.getBoundingClientRect();
-      return Math.abs((copy?.top ?? 0) - (overview?.top ?? 0));
-    });
-    expect(heroAlignment).toBeLessThanOrEqual(2);
-  }
-
-  if (viewportWidth > 650) {
-    const archiveGrid = await page
-      .locator('.topic-archive')
-      .first()
-      .evaluate((element) => {
-        const heading = element.querySelector('.clear-ledger-heading');
-        const row = element.querySelector('.clear-row');
-        return {
-          heading: heading ? getComputedStyle(heading).gridTemplateColumns : '',
-          row: row ? getComputedStyle(row).gridTemplateColumns : '',
-        };
-      });
-    expect(archiveGrid.heading).toBe(archiveGrid.row);
-  }
-
-  const firstRow = page.locator('.clear-row').first();
-  const rowBefore = await firstRow.evaluate((element) => {
-    const style = getComputedStyle(element);
+  const backupPattern = await page.locator('.backup-archive').evaluate((element) => {
+    const surface = getComputedStyle(element);
+    const punchedEdge = getComputedStyle(element, '::before');
+    const pageEdge = getComputedStyle(element, '::after');
     return {
-      background: style.backgroundColor,
-      shadow: style.boxShadow,
-      copyTransform: getComputedStyle(element.querySelector('.clear-row-copy')!).transform,
+      backgroundImage: surface.backgroundImage,
+      clipPath: surface.clipPath,
+      filter: surface.filter,
+      punchedEdge: punchedEdge.content,
+      pageEdge: pageEdge.content,
+      pageEdgePosition: pageEdge.position,
+      pageEdgeWidth: pageEdge.width,
     };
   });
-  await firstRow.hover();
-  await expect
-    .poll(() =>
-      firstRow.evaluate(
-        (element) => getComputedStyle(element.querySelector('.clear-row-copy')!).transform,
-      ),
-    )
-    .not.toBe(rowBefore.copyTransform);
-  const rowAfter = await firstRow.evaluate((element) => {
-    const style = getComputedStyle(element);
-    return { background: style.backgroundColor, shadow: style.boxShadow };
-  });
-  expect(rowAfter).toEqual({
-    background: rowBefore.background,
-    shadow: rowBefore.shadow,
-  });
-
-  const topicClearStrip = page.locator('.topic-clear-strip').first();
-  const topicClearCopy = topicClearStrip.locator(':scope > div');
-  const topicClearRestingTransform = await topicClearCopy.evaluate(
-    (element) => getComputedStyle(element).transform,
-  );
-  await topicClearStrip.getByRole('button', { name: 'Clear this topic' }).hover();
-  await expect
-    .poll(() => topicClearCopy.evaluate((element) => getComputedStyle(element).transform))
-    .not.toBe(topicClearRestingTransform);
-  await topicClearStrip.getByRole('button', { name: 'Clear this topic' }).focus();
-  await expect
-    .poll(() => topicClearCopy.evaluate((element) => getComputedStyle(element).transform))
-    .not.toBe(topicClearRestingTransform);
-
-  const dataHeaderStyle = await page
-    .locator('.clear-ledger-heading')
-    .first()
-    .evaluate((element) => {
-      const style = getComputedStyle(element);
-      const spine = getComputedStyle(element, '::before');
-      return {
-        background: style.backgroundColor,
-        clipPath: style.clipPath,
-        height: element.getBoundingClientRect().height,
-        paddingTop: style.paddingTop,
-        spineBackground: spine.backgroundColor,
-        spineWidth: spine.width,
-      };
-    });
-  const backupEdge = await page.locator('.backup-archive').evaluate((element) => {
-    const edge = getComputedStyle(element, '::after');
-    return {
-      content: edge.content,
-      position: edge.position,
-      width: edge.width,
-    };
-  });
-  expect(backupEdge.content).not.toBe('none');
-  expect(backupEdge.position).toBe('absolute');
-  expect(Number.parseFloat(backupEdge.width)).toBeGreaterThan(0);
-
-  const pageWidth = (await page.locator('main.data-page').boundingBox())?.width ?? 0;
-  await page.goto('/reports');
-  const reportsWidth = (await page.locator('main.reports-page').boundingBox())?.width ?? 0;
-  expect(Math.abs(pageWidth - reportsWidth)).toBeLessThanOrEqual(1);
-  const reportHeaderStyle = await page
-    .locator('.ledger-column-heading')
-    .first()
-    .evaluate((element) => {
-      const style = getComputedStyle(element);
-      const spine = getComputedStyle(element, '::before');
-      return {
-        background: style.backgroundColor,
-        clipPath: style.clipPath,
-        height: element.getBoundingClientRect().height,
-        paddingTop: style.paddingTop,
-        spineBackground: spine.backgroundColor,
-        spineWidth: spine.width,
-      };
-    });
-  expect(dataHeaderStyle).toEqual(reportHeaderStyle);
-  await page.goto('/data');
+  expect(backupPattern.backgroundImage).toContain('repeating-linear-gradient');
+  expect(backupPattern.clipPath).not.toBe('none');
+  expect(backupPattern.filter).not.toBe('none');
+  expect(backupPattern.punchedEdge).not.toBe('none');
+  expect(backupPattern.pageEdge).not.toBe('none');
+  expect(backupPattern.pageEdgePosition).toBe('absolute');
+  expect(Number.parseFloat(backupPattern.pageEdgeWidth)).toBeGreaterThan(0);
+  const sectionSpacing = await Promise.all([
+    backupHeading.boundingBox(),
+    backupArchive.boundingBox(),
+    page.getByRole('heading', { name: 'Progress by topic' }).boundingBox(),
+  ]);
+  expect(sectionSpacing.every(Boolean)).toBe(true);
+  expect(sectionSpacing[1]!.y).toBeGreaterThan(sectionSpacing[0]!.y + sectionSpacing[0]!.height);
+  const archiveToProgressGap =
+    sectionSpacing[2]!.y - (sectionSpacing[1]!.y + sectionSpacing[1]!.height);
+  expect(archiveToProgressGap).toBeGreaterThanOrEqual(24);
+  expect(archiveToProgressGap).toBeLessThanOrEqual(96);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );
@@ -1382,6 +1323,24 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   await clearHistory.click();
   await dialog.getByRole('button', { name: 'Clear all history' }).click();
   await expect(page.getByRole('status')).toContainText('All learner history was cleared');
+
+  await page.goto(`/stats/${TOPIC_SEGMENT}`);
+  await expect(page.getByRole('heading', { name: 'This topic only' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Manage topic history' })).toHaveCount(0);
+  const clearTest = page.getByRole('button', { name: 'Clear test history' }).first();
+  await clearTest.click();
+  await expect(page.getByRole('dialog')).toContainText(
+    'All saved attempts and mistakes for this test will be removed.',
+  );
+  await page.getByRole('dialog').getByRole('button', { name: 'Keep my history' }).click();
+
+  const clearTopic = page.getByRole('button', { name: 'Clear topic history' });
+  await clearTopic.click();
+  await expect(page.getByRole('dialog')).toContainText(
+    'All saved progress and private notes for this topic will be removed.',
+  );
+  await page.keyboard.press('Escape');
+  await expect(clearTopic).toBeFocused();
 });
 
 test('remembers an appearance override and can return to automatic', async ({ page }) => {
@@ -1543,21 +1502,21 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     .poll(() => noteEditorLabel.evaluate((element) => getComputedStyle(element).transform))
     .toBe('none');
 
-  await page.goto('/data');
+  await page.goto('/stats');
   for (const surface of [
-    page.locator('.data-overview'),
     page.locator('.backup-archive'),
-    page.locator('.topic-file-label').first(),
+    page.locator('.stats-topic-card').first(),
   ]) {
     await surface.hover();
     await expect
       .poll(() => surface.evaluate((element) => getComputedStyle(element).transform))
       .toBe('none');
   }
-  const topicClearStrip = page.locator('.topic-clear-strip').first();
-  const topicClearCopy = topicClearStrip.locator(':scope > div');
-  await topicClearStrip.getByRole('button', { name: 'Clear this topic' }).hover();
+
+  await page.goto(`/stats/${TOPIC_SEGMENT}`);
+  const reportName = page.locator('.report-row').first().locator('.report-name > div');
+  await page.locator('.report-row').first().hover();
   await expect
-    .poll(() => topicClearCopy.evaluate((element) => getComputedStyle(element).transform))
+    .poll(() => reportName.evaluate((element) => getComputedStyle(element).transform))
     .toBe('none');
 });

@@ -23,9 +23,8 @@ describe('AppShell', () => {
 
     expect(fixture.componentInstance).toBeTruthy();
     expect(element.querySelector('.brand')?.textContent).toContain('Sisu Steps');
-    expect(element.querySelector('nav')?.textContent).toContain('Topics');
-    expect(element.querySelector('nav')?.textContent).toContain('Reports');
-    expect(element.querySelector('nav')?.textContent).toContain('Data & backup');
+    expect(element.querySelector('nav')?.textContent).toContain('Notebook');
+    expect(element.querySelector('nav')?.textContent).toContain('Stats');
     expect(element.querySelectorAll('.tab-number')).toHaveLength(0);
     expect(element.querySelector('nav a[href="/mistakes/topic"]')).toBeNull();
     const appearanceControl = element.querySelector('.appearance-control');
@@ -54,16 +53,8 @@ describe('AppShell', () => {
     expect(folder?.querySelector('router-outlet')).not.toBeNull();
     expect(element.querySelector('.site-header nav')).toBeNull();
     expect(folder?.querySelector('nav[aria-label="Primary navigation"]')).not.toBeNull();
-    expect(tabs.map((tab) => tab.classList.item(1))).toEqual([
-      'tab-blue',
-      'tab-white',
-      'tab-yellow',
-    ]);
-    expect(tabs.map((tab) => tab.textContent?.trim())).toEqual([
-      'Topics',
-      'Reports',
-      'Data & backup',
-    ]);
+    expect(tabs.map((tab) => tab.classList.item(1))).toEqual(['tab-blue', 'tab-yellow']);
+    expect(tabs.map((tab) => tab.textContent?.trim())).toEqual(['Notebook', 'Stats']);
     expect(folder?.querySelector('.workbook-page-clip')).not.toBeNull();
     expect(element.querySelector('footer')?.textContent).toContain('stays safely in this browser');
   });

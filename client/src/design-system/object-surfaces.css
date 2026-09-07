@@ -74,6 +74,56 @@ main.page-shell .catalog-stats div + div {
   border-left-style: dashed;
 }
 
+/* Stats: one complete bound archive sheet around the global data operations. */
+main.stats-page .backup-archive {
+  border: 0;
+  border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
+  background-color: var(--surface-stationery);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.95rem,
+    var(--notebook-rule) 1.95rem 2rem
+  );
+  box-shadow: none;
+  clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
+  filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
+    drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
+}
+
+main.stats-page .backup-archive::before {
+  position: absolute;
+  z-index: 1;
+  top: 0.65rem;
+  bottom: 0.65rem;
+  left: 0.5rem;
+  width: 0.28rem;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.32rem,
+    transparent 0.32rem 0.68rem
+  );
+  content: '';
+  opacity: 0.72;
+  pointer-events: none;
+}
+
+main.stats-page .backup-archive::after {
+  position: absolute;
+  top: 0.45rem;
+  right: 0.08rem;
+  width: 0.55rem;
+  height: calc(100% - 0.9rem);
+  border: 0;
+  border-radius: 0 0.35rem 0.35rem 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    var(--surface-paper) 0 0.28rem,
+    var(--notebook-rule) 0.28rem 0.31rem
+  );
+  content: '';
+  pointer-events: none;
+}
+
 /* Topic route: inside-cover pocket, taped goals, dividers, and punched map cards. */
 main.topic-page .objective-panel {
   border-style: dashed;
@@ -229,15 +279,17 @@ main.lesson-page .mistake-notes {
 
 main.lesson-page .key-points li {
   position: relative;
-  padding-left: 1.25rem;
+  padding: calc(0.45rem - 1px) calc(0.65rem - 1px) calc(0.45rem - 1px) 1.25rem;
+  border: 1px solid var(--border-default);
   border-left: 0.22rem solid transparent;
   border-radius: 0.05rem;
-  background: var(--surface-stationery);
-  clip-path: polygon(0.12rem 0, 100% 0.08rem, calc(100% - 0.12rem) 100%, 0 94%);
-  box-shadow: 0.1rem 0.12rem 0 var(--paper-edge);
+  background-color: var(--surface-raised);
+  background-image: none;
+  clip-path: polygon(0 0.12rem, calc(100% - 0.5rem) 0, 100% 0.48rem, 100% 100%, 0.12rem 96%);
+  box-shadow: 0.12rem 0.16rem 0 var(--paper-edge);
 }
 
-/* Reports and Data share one punched ledger sheet; their rows remain workflow-owned. */
+/* Topic Stats keeps results and their history controls on one punched ledger sheet. */
 .ledger-sheet {
   position: relative;
   overflow: hidden;
@@ -274,12 +326,14 @@ main.lesson-page .key-points li {
 }
 
 @container workbook (width <= 35rem) {
-  main.topic-page .test-card {
-    padding-left: var(--space-5);
-  }
-
+  main.stats-page .backup-archive::before,
+  main.stats-page .backup-archive::after,
   main.topic-page .test-card::before {
     display: none;
+  }
+
+  main.topic-page .test-card {
+    padding-left: var(--space-5);
   }
 
   main.page-shell .catalog-stats {

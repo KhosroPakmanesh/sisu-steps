@@ -41,18 +41,18 @@ export const routes: Routes = [
     title: 'Review due · Sisu Steps',
   },
   {
-    path: routeSegments.reports,
+    path: routeSegments.topicStats,
     loadComponent: () =>
-      import('@/features/learning/reports/reports.page').then((module) => module.ReportsPage),
-    title: 'Reports · Sisu Steps',
+      import('@/features/learning/reports/topic-stats.page').then(
+        (module) => module.TopicStatsPage,
+      ),
+    title: 'Topic stats · Sisu Steps',
   },
   {
-    path: routeSegments.data,
+    path: routeSegments.stats,
     loadComponent: () =>
-      import('@/features/learning/data-management/data-settings.page').then(
-        (module) => module.DataSettingsPage,
-      ),
-    title: 'Data & backup · Sisu Steps',
+      import('@/features/learning/reports/stats.page').then((module) => module.StatsPage),
+    title: 'Stats · Sisu Steps',
   },
   { path: '**', redirectTo: '' },
 ];

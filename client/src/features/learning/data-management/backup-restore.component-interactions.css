@@ -1,0 +1,26 @@
+.archive-number,
+.archive-action-row > div {
+  transition: transform var(--motion-fast) ease;
+}
+
+.archive-action-row:hover .archive-number,
+.archive-action-row:focus-within .archive-number {
+  transform: translateY(-0.18rem) rotate(0);
+}
+
+.archive-action-row:hover > div,
+.archive-action-row:focus-within > div {
+  transform: translateY(-0.12rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .backup-archive,
+  .backup-archive:hover,
+  .backup-archive:focus-within,
+  .archive-action-row:hover .archive-number,
+  .archive-action-row:focus-within .archive-number,
+  .archive-action-row:hover > div,
+  .archive-action-row:focus-within > div {
+    transform: none;
+  }
+}

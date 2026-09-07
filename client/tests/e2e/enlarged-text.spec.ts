@@ -19,8 +19,8 @@ async function resizeText(page: Page, pixels: number) {
   await page.locator('main h1').first().waitFor();
   const path = new URL(page.url()).pathname;
   if (path === '/') await page.locator('.topic-card').first().waitFor();
-  if (path === '/reports') await page.locator('.report-ledger tbody tr').first().waitFor();
-  if (path === '/data') await page.locator('.topic-archive').first().waitFor();
+  if (path === '/stats') await page.locator('.stats-topic-card').first().waitFor();
+  if (path.startsWith('/stats/')) await page.locator('.report-ledger tbody tr').first().waitFor();
   await expect(page.locator('html')).toHaveCSS('font-size', `${pixels}px`);
   expect(
     await page.locator('.brand-mark').evaluate((element) => element.getBoundingClientRect().width),
@@ -101,8 +101,8 @@ for (const appearance of ['Day', 'Night']) {
           LESSON,
           `/learn/${TOPIC}/location-transfer-review`,
           STUDY,
-          '/reports',
-          '/data',
+          '/stats',
+          `/stats/${TOPIC}`,
           `/mistakes/${TOPIC}`,
           `/review/${TOPIC}`,
         ]) {
@@ -160,7 +160,7 @@ for (const appearance of ['Day', 'Night']) {
       await automatic.focus();
       await page.keyboard.press('ArrowRight');
       await expect(page.getByRole('radio', { name: 'Night', exact: true })).toBeChecked();
-      for (const name of ['Topics', 'Reports', 'Data & backup']) {
+      for (const name of ['Notebook', 'Stats']) {
         const link = page.getByRole('link', { name, exact: true });
         await link.scrollIntoViewIfNeeded();
         const bounds = await link.locator('span').boundingBox();

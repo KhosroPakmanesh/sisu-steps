@@ -1,0 +1,69 @@
+<section class="backup-section" aria-labelledby="backup-heading">
+  <header class="archive-section-heading">
+    <div>
+      <p class="eyebrow">Keep a safe copy</p>
+      <h2 id="backup-heading">Backup &amp; restore</h2>
+    </div>
+    <p>
+      Save your attempts, unfinished sessions, mistakes, completed lessons, and private notes in one
+      backup file.
+    </p>
+  </header>
+
+  <div class="backup-archive topic-card">
+    <div class="archive-actions">
+      <div class="archive-action-row">
+        <span class="archive-number sequence-marker" aria-hidden="true">01</span>
+        <div>
+          <h3>Download a copy</h3>
+          <p>Keep a portable snapshot before clearing data or changing browsers.</p>
+        </div>
+        <button class="button primary" type="button" (click)="exportBackup()">
+          <span aria-hidden="true">↓</span>
+          Download backup
+        </button>
+      </div>
+
+      <div class="archive-action-row">
+        <span class="archive-number sequence-marker" aria-hidden="true">02</span>
+        <div>
+          <h3>Restore a copy</h3>
+          <p>A selected file is checked completely before it can replace your saved work.</p>
+        </div>
+        <label class="button secondary file-button">
+          <span aria-hidden="true">↑</span>
+          Restore backup
+          <input type="file" accept="application/json,.json" (change)="importBackup($event)" />
+        </label>
+      </div>
+
+      @if (store.packs().length > 0) {
+        <div class="archive-action-row clear-all-action-row">
+          <span class="archive-number sequence-marker" aria-hidden="true">03</span>
+          <div>
+            <h3>Clear all history</h3>
+            <p>
+              Remove progress and private notes from every topic. Bundled lessons and exercises
+              remain available.
+            </p>
+          </div>
+          <button class="button danger" type="button" (click)="clearAll()">
+            Clear all history
+          </button>
+        </div>
+      }
+    </div>
+
+    @if (message()) {
+      <p class="notice success operation-notice" role="status">{{ message() }}</p>
+    }
+    @if (error()) {
+      <p class="notice failure operation-notice" role="alert">{{ error() }}</p>
+    }
+  </div>
+</section>
+
+<app-confirmation-sheet
+  [request]="pendingClear()?.request ?? null"
+  (resolved)="resolveClear($event)"
+/>

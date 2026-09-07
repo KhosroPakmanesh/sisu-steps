@@ -34,6 +34,10 @@
 
 ### Changed
 
+- Gave compact lesson key-point slips the raised vocabulary-card material and colour without changing their established dimensions or spacing.
+
+- Replaced the Topics, Reports, and Data & backup destinations with **Notebook** and **Stats**. The new `/stats` page uses a **Statistics** heading, pairs its introduction with an attached cumulative all-topic summary, centers the handwritten progress note beneath the hero, places the **Backup & restore** heading above a complete bound sheet containing Download, Restore, and Clear all history, gives the transition to **Progress by topic** balanced canonical breathing room, and shows the shared level range once above compact progress cards for every topic; each `/stats/:topicId` page combines that topic's full result ledger with adjacent test-history clearing and a warm, gutter-free **This topic only** final ledger row whose action remains **Clear topic history**, followed by optional mistake practice. The former `/reports` and `/data` routes are intentionally removed without compatibility redirects, while scoring, backup, restore, and clearing consequences remain unchanged.
+
 - Restyled the topic-card grid as one bound, ruled exercise-book sheet containing comfortably inset punched cards that reuse the existing Worked examples design-system treatments, while keeping the catalog heading outside, consolidating repeated level metadata into one truthful sheet-level label, and preserving every topic summary, action, and responsive three/two/one-column layout.
 
 - Split the combined `Vowel harmony, KPT & T-plural` learning map into three coherent `0 - A1.3` packs: **Vowel harmony and location endings**, **KPT and singular forms**, and **T-plural and plural agreement**. The successor family now provides 25 tests, 570 scored exercises, 18 lessons, and 66 optional practice exercises while preserving every former scored and practice ID exactly once. Existing version 6.1.0 attempts, unfinished sessions, mistakes, corrections, mastery, lesson completions, and notes migrate to their new owners, including compatible backups.

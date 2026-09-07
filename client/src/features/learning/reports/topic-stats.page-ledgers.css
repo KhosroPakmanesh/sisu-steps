@@ -67,7 +67,7 @@
 }
 
 .report-column-heading {
-  grid-template-columns: minmax(0, 58fr) repeat(4, minmax(0, 10.5fr));
+  grid-template-columns: minmax(0, 44fr) repeat(4, minmax(0, 9fr)) minmax(0, 20fr);
 }
 
 .ledger-sheet table {
@@ -118,11 +118,15 @@
 }
 
 .report-ledger .ledger-name-column {
-  width: 58%;
+  width: 44%;
 }
 
 .report-ledger .ledger-value-column {
-  width: 10.5%;
+  width: 9%;
+}
+
+.report-ledger .ledger-action-column {
+  width: 20%;
 }
 
 .report-name {
@@ -223,6 +227,12 @@
 
   .ledger-sheet tbody td:nth-of-type(even) {
     border-left: 1px solid var(--notebook-rule);
+  }
+
+  .ledger-sheet tbody .report-clear-cell {
+    grid-column: 1 / -1;
+    justify-items: end;
+    border-left: 0;
   }
 }
 

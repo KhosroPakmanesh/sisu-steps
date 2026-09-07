@@ -59,23 +59,23 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Stationery controls
 
-- Present primary navigation as three elongated, unnumbered, visibly labelled blue/white/yellow subject-divider links on the folder's left edge without changing link order, wording, destinations, or active-page semantics. Tuck each tab's right edge beneath the paper, use a darker shade rather than a selected border for the active route, start the stack with visible breathing room below the paper top, slide it outward on hover and keyboard focus, and keep the stack sticky after the paper top scrolls away while constraining it to the folder.
+- Present primary navigation as two elongated, unnumbered, visibly labelled blue/yellow **Notebook** and **Stats** subject-divider links on the folder's left edge. Tuck each tab's right edge beneath the paper, use a darker shade rather than a selected border for the active route, start the stack with visible breathing room below the paper top, slide it outward on hover and keyboard focus, and keep the stack sticky after the paper top scrolls away while constraining it to the folder.
 - Present every action as the same recognisable cut-paper piece. Primary, secondary, compact, text, review, file, dialog, disabled, and destructive variants keep one silhouette and physical behavior; vary only paper tint, ink, edge accent, internal marks, and explicit wording.
 - Present answer radios as pencil-marked circles, text answers as ruled fields, and word-order buttons as movable vocabulary cards while preserving native form behavior.
 - Put answer radios on perforated ruled slips, place selected word cards on a sentence-building strip, and keep available word cards in a labelled paper pocket. Operate answer reveal through its visible button without a separate shortcut badge or margin annotation.
 - Present progress as printed ruler scales without a pencil marker and state changes as readable teacher stamps, always paired with visible text, symbols, or numbers.
-- Present reports as ledgers and data actions as cut-paper archive labels without hiding values, local-storage scope, restore behavior, or clearing consequences.
+- Present `/stats` with a responsive cumulative assignment sheet opposite its introduction, followed by a centered handwritten note, then a backup-first overview and compact topic cards. Wrap Download, Restore, and Clear all in one complete bound archive sheet; present each `/stats/:topicId` page as a ledger whose result rows own their test-history actions and whose topic-wide action sits in one compact **This topic only** archive strip. Keep the visible **Clear topic history** wording and do not hide values, local-storage scope, restore behavior, or clearing consequences.
 - Use folded-corner back links on every secondary route. A back link does not become a generic action slip merely because it appears in a page heading.
 - Use the physical metaphor only as a visual aid. Do not require object recognition to discover, understand, or operate a control.
 - Use correction/eraser controls only for the current unsubmitted choice, typed answer, or word-order draft. Stored learner history continues to use explicit consequence-specific clearing controls.
 - Present topic and lesson notes as always-visible sticky notes with a native textarea, character count, explicit save/removal wording, and visible status; never render saved text as HTML.
-- Reports show every test row; the **Show studied tests only** filter is withdrawn.
+- Topic Stats shows every authored test row; the **Show studied tests only** filter remains withdrawn.
 - Do not introduce an accordion, disclosure, collapsible stationery tool, expandable tray, or other collapse/expand interaction.
 
 ## Interactive workbook world
 
 - Place route content on the same desk-and-workbook stage, but give each route a distinct physical scene that reinforces its purpose.
-- Use one bound catalog sheet containing punched topic cards, an unbroken connected path for the topic map, the current available-width teaching sequence for lessons, a loose worksheet for study, a returned marked paper for results, a ledger for reports, and labelled folders for data. Do not introduce a new maximum lesson reading width.
+- Use one bound catalog sheet containing punched topic cards, an unbroken connected path for the topic map, the current available-width teaching sequence for lessons, a loose worksheet for study, a returned marked paper for results, a bound archive for global backup operations, and one ledger per topic for Stats. Do not introduce a new maximum lesson reading width.
 - Use immediate page-turn, tab-slide, lift, settle, stamp, pencil-circle, answer-line, and light motion only as confirmation of a state change; never wait for animation before navigation, content, or input becomes available.
 - At 800 pixels and below, replace a multi-lesson sidebar with its native lesson selector; teaching sections remain in semantic reading order at every width. At 560 pixels and below, remove desk props and present the page as a pocket notebook.
 - Those content thresholds describe the default 16px text scale; use the equivalent root-relative `workbook` container boundaries when text is enlarged. Keep the header Appearance group intact while allowing it to wrap below the brand. Below 20rem of available width, reduce decoration spacing, slim the paper clip, omit the decorative binding pattern and printed workbook stamp, and stack cramped controls without shrinking required text.

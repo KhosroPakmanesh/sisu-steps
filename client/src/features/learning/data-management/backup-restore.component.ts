@@ -1,7 +1,5 @@
 import { Component, inject, signal } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { TextFileAdapter } from '@/shared/browser/text-file.adapter';
-import { routePaths } from '@/shared/navigation/route-paths';
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import { BackupService } from './backup.service';
 import { ClearProgressService } from './clear-progress.service';
@@ -13,29 +11,25 @@ import {
 interface PendingClear {
   request: ConfirmationSheetRequest;
   action: () => Promise<void>;
-  successMessage: string;
-  noticeTarget: string;
 }
 
 @Component({
-  selector: 'app-data-settings',
-  imports: [RouterLink, ConfirmationSheetComponent],
-  templateUrl: './data-settings.page.html',
-  styleUrls: ['./data-settings.page.css', './data-settings.page-interactions.css'],
+  selector: 'app-backup-restore',
+  imports: [ConfirmationSheetComponent],
+  templateUrl: './backup-restore.component.html',
+  styleUrls: ['./backup-restore.component.css', './backup-restore.component-interactions.css'],
 })
-export class DataSettingsPage {
+export class BackupRestoreComponent {
   protected readonly store = inject(LearningStateStore);
-  protected readonly paths = routePaths;
   protected readonly message = signal<string | null>(null);
   protected readonly error = signal<string | null>(null);
-  protected readonly noticeTarget = signal('backup');
   protected readonly pendingClear = signal<PendingClear | null>(null);
   private readonly backups = inject(BackupService);
   private readonly clearing = inject(ClearProgressService);
   private readonly files = inject(TextFileAdapter);
 
   protected exportBackup(): void {
-    this.resetNotices('backup');
+    this.resetNotices();
     const filename = `finnish-exercise-book-${new Date().toISOString().slice(0, 10)}.json`;
     this.files.downloadJson(filename, this.backups.create());
     this.message.set('Your backup was downloaded.');
@@ -45,7 +39,7 @@ export class DataSettingsPage {
     const input = event.target as HTMLInputElement;
     const file = input.files?.[0];
     if (!file) return;
-    this.resetNotices('backup');
+    this.resetNotices();
     try {
       await this.backups.restore(await this.files.readJson(file));
       this.message.set('Backup restored successfully.');
@@ -56,83 +50,35 @@ export class DataSettingsPage {
     }
   }
 
-  protected clearTest(topicId: string, testId: string, title: string): void {
-    this.requestClear(
-      {
-        eyebrow: 'One test only',
-        title: `Clear “${title}”?`,
-        message: 'All saved attempts and mistakes for this test will be removed.',
-        confirmLabel: 'Clear this test',
-      },
-      () => this.clearing.clearTest(topicId, testId),
-      `${title} history was cleared.`,
-      topicId,
-    );
-  }
-
-  protected clearTopic(topicId: string, title: string): void {
-    this.requestClear(
-      {
-        eyebrow: 'This topic only',
-        title: `Clear “${title}”?`,
-        message:
-          'All saved progress and private notes for this topic will be removed. Its lessons and exercises remain available.',
-        confirmLabel: 'Clear this topic',
-      },
-      () => this.clearing.clearTopic(topicId),
-      `${title} history was cleared.`,
-      topicId,
-    );
-  }
-
   protected clearAll(): void {
-    this.requestClear(
-      {
+    this.resetNotices();
+    this.pendingClear.set({
+      request: {
         eyebrow: 'Every topic and test',
         title: 'Clear all learner history?',
         message:
           'Every attempt, unfinished session, mistake, lesson completion, and private note will be removed. This cannot be undone without a backup.',
         confirmLabel: 'Clear all history',
       },
-      () => this.clearing.clearAll(),
-      'All learner history was cleared.',
-      'clear-all',
-    );
+      action: () => this.clearing.clearAll(),
+    });
   }
 
   protected async resolveClear(confirmed: boolean): Promise<void> {
     const pending = this.pendingClear();
     this.pendingClear.set(null);
     if (!confirmed || !pending) return;
-    await this.runClear(pending.action, pending.successMessage, pending.noticeTarget);
-  }
-
-  private async runClear(
-    action: () => Promise<void>,
-    successMessage: string,
-    noticeTarget: string,
-  ): Promise<void> {
-    this.resetNotices(noticeTarget);
+    this.resetNotices();
     try {
-      await action();
-      this.message.set(successMessage);
+      await pending.action();
+      this.message.set('All learner history was cleared.');
     } catch (error) {
       this.error.set(error instanceof Error ? error.message : 'The data could not be cleared.');
     }
   }
 
-  private resetNotices(noticeTarget: string): void {
-    this.noticeTarget.set(noticeTarget);
+  private resetNotices(): void {
     this.message.set(null);
     this.error.set(null);
-  }
-
-  private requestClear(
-    request: ConfirmationSheetRequest,
-    action: () => Promise<void>,
-    successMessage: string,
-    noticeTarget: string,
-  ): void {
-    this.pendingClear.set({ request, action, successMessage, noticeTarget });
   }
 }

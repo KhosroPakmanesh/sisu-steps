@@ -1,0 +1,122 @@
+:host {
+  display: block;
+}
+
+.backup-section {
+  margin-top: var(--space-5);
+}
+
+.backup-archive {
+  position: relative;
+  margin-top: var(--space-5);
+  padding: var(--space-8);
+  padding-left: calc(var(--space-6) + 0.9rem);
+}
+
+.backup-archive > * {
+  position: relative;
+  z-index: 2;
+}
+
+.archive-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-8);
+}
+
+.archive-section-heading > p {
+  max-width: 34rem;
+}
+
+.archive-section-heading h2 {
+  margin-top: var(--space-1);
+}
+
+.archive-actions {
+  border-top: 0;
+}
+
+.archive-action-row {
+  display: grid;
+  grid-template-columns: 3.4rem minmax(0, 1fr) minmax(10rem, auto);
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--notebook-rule);
+}
+
+.archive-action-row > .button {
+  justify-self: end;
+}
+
+.archive-action-row h3 {
+  margin: 0 0 var(--space-1);
+  font-size: 1.05rem;
+}
+
+.archive-action-row p {
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+}
+
+.clear-all-action-row {
+  margin-top: var(--space-2);
+  border-top: 1px dashed var(--border-danger-subtle);
+}
+
+.archive-action-row > div {
+  min-width: 0;
+}
+
+.file-button {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.file-button input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.operation-notice {
+  margin: var(--space-5) 0 0;
+}
+
+@container workbook (width <= 50rem) {
+  .archive-section-heading {
+    display: block;
+  }
+
+  .archive-section-heading > p {
+    margin-top: var(--space-3);
+  }
+}
+
+@container workbook (width <= 40.625rem) {
+  .backup-archive {
+    padding: var(--space-5);
+  }
+
+  .archive-action-row {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+
+  .archive-action-row > .button {
+    grid-column: 1 / -1;
+  }
+}
+
+@container workbook (width <= 26.25rem) {
+  .archive-action-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .archive-action-row > .button {
+    grid-column: 1;
+  }
+}

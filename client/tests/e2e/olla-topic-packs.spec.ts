@@ -57,7 +57,6 @@ test('opens each smaller pronoun and olla topic pack without reducing the conten
 });
 
 test('labels the shared level range everywhere pack metadata appears', async ({ page }) => {
-  const labels = Array.from({ length: 6 }, () => 'Level: 0 - A1.3');
   await page.goto('/');
   await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
   await expect(page.locator('.topic-card .card-kicker')).toHaveCount(0);
@@ -67,13 +66,14 @@ test('labels the shared level range everywhere pack metadata appears', async ({ 
     await expect(page.locator('.topic-hero .eyebrow')).toContainText('Level: 0 - A1.3');
   }
 
-  await page.goto('/reports');
-  await expect(page.locator('.report-topic-heading .eyebrow')).toHaveText(labels);
+  await page.goto('/stats');
+  await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
+  await expect(page.locator('.stats-topic-card .card-kicker')).toHaveCount(0);
 
-  await page.goto('/data');
-  await expect(page.locator('.topic-file-label .eyebrow')).toHaveText(
-    labels.map((label) => `${label} · Topic archive`),
-  );
+  for (const pack of packs) {
+    await page.goto(`/stats/${pack.id}`);
+    await expect(page.locator('.reports-hero .eyebrow')).toContainText('Level: 0 - A1.3');
+  }
 });
 
 test('opens an affirmative Focused lesson and its fixed 24-question test', async ({ page }) => {

@@ -6,6 +6,8 @@ const TOPIC_PAGE = `/topics/${TOPIC}`;
 const LESSON = `/learn/${TOPIC}/vowel-families`;
 const REVIEW_LESSON = `/learn/${TOPIC}/location-transfer-review`;
 const STUDY = `/study/${TOPIC}/vowel-families`;
+const STATS = '/stats';
+const TOPIC_STATS = `/stats/${TOPIC}`;
 
 async function open(page: Page, path: string) {
   await page.goto(path);
@@ -184,7 +186,7 @@ for (const theme of ['Day', 'Night']) {
         );
       }
 
-      for (const route of [TOPIC_PAGE, LESSON, STUDY, '/reports', '/data']) {
+      for (const route of [TOPIC_PAGE, LESSON, STUDY, STATS, TOPIC_STATS]) {
         await open(page, route);
       }
 
@@ -286,7 +288,7 @@ for (const theme of ['Day', 'Night']) {
       expect(new Set(mistakeNoteColours).size).toBe(1);
     });
 
-    test('uses one punched ledger material across Reports and Data', async ({ page }) => {
+    test('keeps topic results and their clear actions on one punched ledger', async ({ page }) => {
       const materialRecipe = (element: Element) => {
         const surface = getComputedStyle(element);
         const punchedMargin = getComputedStyle(element, '::before');
@@ -316,19 +318,16 @@ for (const theme of ['Day', 'Night']) {
         };
       };
 
-      await open(page, '/reports');
+      await open(page, TOPIC_STATS);
       const reportsLedger = page.locator('.report-ledger.ledger-sheet').first();
       const expected = await reportsLedger.evaluate(materialRecipe);
       expect(expected.punchedMargin.content).not.toBe('none');
       expect(expected.punchedMargin.backgroundImage).toContain('radial-gradient');
-
-      await open(page, '/data');
-      const dataLedger = page.locator('.clear-ledger.ledger-sheet').first();
-      await expect(dataLedger).toBeVisible();
-      expect(await dataLedger.evaluate(materialRecipe)).toEqual(expected);
-      await expectNoInternalOverflow(dataLedger);
-      await expect(dataLedger.locator('.clear-row')).toHaveCount(6);
-      await expect(dataLedger.getByRole('button', { name: 'Clear this test' })).toHaveCount(6);
+      await expectNoInternalOverflow(reportsLedger);
+      await expect(reportsLedger.locator('.report-row')).toHaveCount(6);
+      await expect(reportsLedger.getByRole('button', { name: 'Clear test history' })).toHaveCount(
+        6,
+      );
 
       const featureMaterialOwners = await page.evaluate(() => {
         const rules: CSSStyleRule[] = [];
@@ -340,7 +339,7 @@ for (const theme of ['Day', 'Night']) {
         };
         for (const sheet of document.styleSheets) collect(sheet.cssRules);
 
-        const sharedSurfaceTarget = /\.(?:ledger-sheet|clear-ledger)(?:\[[^\]]+\])?(?:::[\w-]+)?$/;
+        const sharedSurfaceTarget = /\.ledger-sheet(?:\[[^\]]+\])?(?:::[\w-]+)?$/;
         const materialProperties = [
           'position',
           'overflow',
@@ -400,24 +399,24 @@ for (const theme of ['Day', 'Night']) {
           kind,
         );
       const routes: [string, string][] = [
-        ['/', '.continue-card, .topic-card'],
+        ['/', '.continue-card'],
         [TOPIC_PAGE, '.topic-overview, .objective-panel, .test-card:not(.review-test)'],
         [
           LESSON,
-          '.reader-heading, .teaching-section, .worked-examples, .lesson-vocabulary, .mistake-notes, .lesson-practice, .key-points li',
+          '.reader-heading, .teaching-section, .worked-examples, .lesson-vocabulary, .mistake-notes, .lesson-practice',
         ],
         [
           REVIEW_LESSON,
-          '.reader-heading, .teaching-section, .worked-examples, .lesson-vocabulary, .mistake-notes, .lesson-practice, .key-points li',
+          '.reader-heading, .teaching-section, .worked-examples, .lesson-vocabulary, .mistake-notes, .lesson-practice',
         ],
         [STUDY, '.exercise-card'],
-        ['/reports', '.report-overview, .report-topic-sheet, .ledger-sheet'],
-        ['/data', '.data-overview, .backup-archive, .topic-file-label, .clear-ledger'],
+        [STATS, '.backup-archive, .topic-grid'],
+        [TOPIC_STATS, '.report-overview, .ledger-sheet'],
       ];
 
       for (const [route, stationerySelector] of routes) {
         await open(page, route);
-        if (route === '/data') {
+        if (route === STATS) {
           await page.locator('.button.danger:not(:disabled)').first().waitFor();
         }
         samples.stationery.push(
@@ -505,6 +504,34 @@ for (const theme of ['Day', 'Night']) {
       }
     });
 
+    test('gives compact lesson key points the vocabulary-card material', async ({ page }) => {
+      await open(page, LESSON);
+
+      const material = async (selector: string) =>
+        page
+          .locator(selector)
+          .first()
+          .evaluate((element) => {
+            const style = getComputedStyle(element);
+            return {
+              backgroundColor: style.backgroundColor,
+              backgroundImage: style.backgroundImage,
+              clipPath: style.clipPath,
+              boxShadow: style.boxShadow,
+            };
+          });
+
+      const keyPoint = await material('.key-points li');
+      const vocabularyCard = await material('.lesson-vocabulary dl div');
+      expect(keyPoint).toMatchObject({
+        backgroundColor: vocabularyCard.backgroundColor,
+        backgroundImage: vocabularyCard.backgroundImage,
+        clipPath: vocabularyCard.clipPath,
+        boxShadow: vocabularyCard.boxShadow,
+      });
+      await expect(page.locator('.key-points li').first()).toBeVisible();
+    });
+
     test('uses one visual recipe for sequence markers across feature pages', async ({ page }) => {
       const markerRecipe = (element: Element) => {
         const style = getComputedStyle(element);
@@ -530,12 +557,12 @@ for (const theme of ['Day', 'Night']) {
         .first()
         .evaluate(markerRecipe);
 
-      await open(page, '/reports');
+      await open(page, TOPIC_STATS);
       expect(
         await page.locator('.report-name > .sequence-marker').first().evaluate(markerRecipe),
       ).toEqual(expected);
 
-      await open(page, '/data');
+      await open(page, STATS);
       const archiveMarkers = page.locator('.archive-number.sequence-marker');
       await expect(
         page.locator('.archive-actions > .archive-action-row > .archive-number.sequence-marker'),
@@ -724,10 +751,11 @@ for (const theme of ['Day', 'Night']) {
     test('keeps danger semantic across sizes and correction actions in the shared family', async ({
       page,
     }) => {
-      await open(page, '/data');
+      await open(page, STATS);
       const standard = page.getByRole('button', { name: 'Clear all history', exact: true });
-      const compact = page.locator('.clear-action').first();
       const danger = await standard.evaluate((element) => getComputedStyle(element).color);
+      await open(page, TOPIC_STATS);
+      const compact = page.getByRole('button', { name: 'Clear test history' }).first();
       expect(await compact.evaluate((element) => getComputedStyle(element).color)).toBe(danger);
       await compact.hover();
       expect(await compact.evaluate((element) => getComputedStyle(element).color)).toBe(danger);
@@ -835,16 +863,13 @@ for (const theme of ['Day', 'Night']) {
           ? page.locator('.lesson-picker select')
           : page.locator('.lesson-list button').first();
       await expectVisibleInsetFocus(page, lessonControl);
-      await open(page, '/data');
+      await open(page, STATS);
       await expectVisibleInsetFocus(
         page,
         page.locator('.file-button'),
         page.locator('.file-button input'),
       );
-      await expectVisibleInsetFocus(
-        page,
-        page.getByRole('link', { name: 'Data & backup', exact: true }),
-      );
+      await expectVisibleInsetFocus(page, page.getByRole('link', { name: 'Stats', exact: true }));
     });
 
     test('keeps paper and selected controls stationary under reduced motion', async ({ page }) => {
@@ -874,7 +899,7 @@ for (const theme of ['Day', 'Night']) {
         [LESSON, '.reader-heading'],
         [LESSON, '.lesson-vocabulary'],
         [LESSON, '.worked-examples'],
-        ['/reports', '.report-topic-heading'],
+        [TOPIC_STATS, '.reports-hero'],
       ]) {
         await open(page, path);
         await expectNoInternalOverflow(page.locator(selector).first());

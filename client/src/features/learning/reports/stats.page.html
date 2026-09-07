@@ -1,0 +1,80 @@
+<main class="page-shell stats-page">
+  <header class="stats-hero">
+    <div class="stats-hero-copy">
+      <a class="back-link" [routerLink]="paths.home">← Back to Notebook</a>
+      <p class="eyebrow">Your progress and data</p>
+      <h1>Statistics</h1>
+      <p>
+        Keep a safe copy of your work, or choose one topic to inspect and manage its saved history.
+      </p>
+    </div>
+
+    <section class="cumulative-summary" aria-labelledby="cumulative-stats-heading">
+      <h2 class="visually-hidden" id="cumulative-stats-heading">Cumulative statistics</h2>
+      <dl class="cumulative-overview assignment-sheet">
+        <div class="cumulative-overview-primary">
+          <dt>Cumulative statistics</dt>
+          <dd>All topics</dd>
+        </div>
+        <div>
+          <dt>Completed attempts</dt>
+          <dd>{{ cumulativeAttempts() }}</dd>
+        </div>
+        <div>
+          <dt>Average score</dt>
+          <dd>{{ cumulativeAverage() === null ? '—' : cumulativeAverage() + '%' }}</dd>
+        </div>
+        <div class="cumulative-overview-wide">
+          <dt>Unresolved mistakes</dt>
+          <dd>{{ cumulativeMistakes() }}</dd>
+        </div>
+      </dl>
+    </section>
+
+    <p class="notebook-note" aria-hidden="true">progress, not perfection</p>
+  </header>
+
+  <app-backup-restore />
+
+  @if (store.packs().length > 0) {
+    <section class="topic-catalog stats-catalog" aria-labelledby="topic-stats-heading">
+      <header class="section-heading">
+        <div>
+          <p class="eyebrow">Your topic packs</p>
+          <h2 id="topic-stats-heading">Progress by topic</h2>
+        </div>
+        <p>Open one topic for its complete test results and history controls.</p>
+      </header>
+
+      <div class="topic-grid">
+        <p class="card-kicker">{{ catalogLevelLabel() }}</p>
+        @for (pack of store.packs(); track pack.id) {
+          <article class="topic-card stats-topic-card">
+            <header>
+              <h3>{{ pack.title }}</h3>
+            </header>
+
+            <dl class="stats-card-metrics">
+              <div>
+                <dt>Completed attempts</dt>
+                <dd>{{ completedAttempts(pack) }}</dd>
+              </div>
+              <div>
+                <dt>Average score</dt>
+                <dd>{{ average(pack) === null ? '—' : average(pack) + '%' }}</dd>
+              </div>
+              <div>
+                <dt>Unresolved mistakes</dt>
+                <dd>{{ unresolvedMistakes(pack) }}</dd>
+              </div>
+            </dl>
+
+            <div class="topic-card-actions">
+              <a class="button primary" [routerLink]="paths.topicStats(pack.id)">View stats</a>
+            </div>
+          </article>
+        }
+      </div>
+    </section>
+  }
+</main>

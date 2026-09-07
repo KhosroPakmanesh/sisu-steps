@@ -21,9 +21,8 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     await expect(page.locator('main')).not.toBeFocused();
 
     for (const [name, path] of [
-      ['Reports', '/reports'],
-      ['Data & backup', '/data'],
-      ['Topics', '/'],
+      ['Stats', '/stats'],
+      ['Notebook', '/'],
     ]) {
       await scrollAwayFromTop(page);
       await page
@@ -50,3 +49,11 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     await expectPageAtTop(page);
   });
 }
+
+test('does not preserve the replaced Reports and Data routes', async ({ page }) => {
+  for (const legacyPath of ['/reports', '/data']) {
+    await page.goto(legacyPath);
+    await expect(page).toHaveURL('/');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
+  }
+});

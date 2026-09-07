@@ -66,11 +66,17 @@ for (const appearance of ['Day', 'Night']) {
       `You answered ${review.exercises.length} of ${review.exercises.length} correctly.`,
     );
     await expect(page.locator('.result-ring')).toContainText('100%');
-    await page.getByRole('link', { name: 'Open reports' }).click();
+    await page.getByRole('link', { name: 'Open stats' }).click();
+    await expect(page).toHaveURL(`/stats/${topic}`);
     const row = page.locator('.report-row').filter({ hasText: review.title });
     await expect(row).toHaveCount(1);
     await expect(row).toContainText('1 attempt');
-    await expect(row.locator('td')).toHaveText(['100%', '100%', '100%', '100%']);
+    await expect(row.locator('td:not(.report-clear-cell)')).toHaveText([
+      '100%',
+      '100%',
+      '100%',
+      '100%',
+    ]);
     const stored = await learnerState(page);
     expect(stored.sessions).toEqual([]);
     expect(stored.attempts).toEqual([
@@ -87,6 +93,7 @@ for (const appearance of ['Day', 'Night']) {
 test('migrates saved version 6.1 progress into the three successor packs', async ({ page }) => {
   test.setTimeout(60_000);
   await page.goto(`/topics/${topic}`);
+  await expect(page.locator('.topic-overview')).toBeVisible();
   const when = '2026-09-05T12:00:00.000Z';
   const legacy: LearnerState = {
     schemaVersion: 1,

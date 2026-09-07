@@ -15,7 +15,7 @@
 
 - **VAL-G005-012** (`REQ-G005-028`, `029`, `031`): Browser checks compare instructional text roles, verify the essential-label minimum and preserve uncapped lesson prose at wide widths. Text-spacing checks inspect internal content bounds, not only document overflow.
 - **VAL-G005-013** (`REQ-G005-030`, `REQ-G005-007`): Browser checks compare optional Practice and scored Study choice padding/gaps at wide and narrow widths and retain native checked state.
-- **VAL-G005-014** (`REQ-G005-006`, `011`, `018`, `019`): Regression coverage checks danger variants, correction-action construction, inset keyboard focus, static reduced-motion interaction geometry, Home statistics, lesson vocabulary/headings, Reports headings and completed results in both appearances.
+- **VAL-G005-014** (`REQ-G005-006`, `011`, `013`, `018`, `019`): Regression coverage checks danger variants, correction-action construction, inset keyboard focus, static reduced-motion interaction geometry, Home statistics, lesson vocabulary/headings, vocabulary-card material on compact key-point slips, Reports headings and completed results in both appearances.
 - **VAL-G005-015** (`REQ-G005-016`): Unit and browser checks distinguish empty mistake/review sessions from startup errors and confirm a useful return action without learner-state mutation.
 
 - **VAL-G005-016** (`REQ-G005-002`, `003`, `019`, `029`, `032`): Exercise 150%/200% root text at narrow and wide widths across routed content, feedback, results and empty states; verify readable controls, navigation and Appearance keyboard operation, absence of document/internal overflow, and restoration of the default shell geometry. Record native zoom separately.
@@ -289,3 +289,10 @@ No generated learning content or AI quality-evaluation layer is part of this pre
 - ESLint, Stylelint, module size, source reachability, architecture boundaries, application and test TypeScript checks, direct-source content validation, the 81.25 kB estimated-transfer production build, and all 121 unit tests passed. The aggregate check stopped only at the unchanged repository-wide 18-file Prettier baseline; every file changed by this refinement is formatted.
 - Direct 1440-pixel Day inspection confirmed that the Data ledger now has the Reports-style ruled sheet, clipped perimeter, paper depth, and repeated punched margin while its fourteen saved-test rows and destructive buttons retain their established alignment.
 - No Finnish content, route, report value, learner state, persistence, backup, restore, confirmation, clearing consequence, or backend boundary changed. No commit was created.
+
+### 2026-09-06 Notebook and Stats navigation refinement
+
+- `G007-scalable-stats-navigation` supersedes the former three-tab Topics/Reports/Data presentation for the active requirements in `REQ-G005-004`, `REQ-G005-005`, and `REQ-G005-015`. The folder now exposes only the blue **Notebook** and yellow **Stats** links.
+- The Statistics hero pairs its introduction with an attached cumulative all-topic assignment sheet and centers the handwritten progress note beneath both. The Stats overview then retains the complete warm ruled, clipped, left-bound, layered-edge archive container around Download backup, Restore backup, and Clear all history before the bound **Progress by topic** catalog.
+- Detailed ledgers and their test/topic history actions now belong to one selected topic at `/stats/:topicId`; the previous `/reports` and `/data` routes are intentionally absent rather than preserved through redirects.
+- Scoring, report calculations, learner-state storage, backup/restore validation, confirmation safety, clearing consequences, local-only operation, and the existing responsive stationery vocabulary remain unchanged.

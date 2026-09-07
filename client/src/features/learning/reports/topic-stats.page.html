@@ -1,0 +1,195 @@
+<main class="page-shell reports-page topic-stats-page">
+  @if (errorMessage(); as pageError) {
+    <section class="state-card error-card" role="alert">
+      <p class="eyebrow">Stats</p>
+      <h1>We could not open these topic stats</h1>
+      <p>{{ pageError }}</p>
+      <a class="button primary" [routerLink]="paths.stats">All stats</a>
+    </section>
+  } @else if (pack(); as activePack) {
+    <header class="reports-hero">
+      <div>
+        <a class="back-link" [routerLink]="paths.stats">← All stats</a>
+        <p class="eyebrow">Topic stats · Level: {{ activePack.level }}</p>
+        <h1>{{ activePack.title }}</h1>
+        <p>{{ activePack.summary }}</p>
+        <p class="notebook-note" aria-hidden="true">progress, not perfection</p>
+      </div>
+
+      <section class="at-a-glance" aria-labelledby="at-a-glance-heading">
+        <p class="card-kicker">Topic summary</p>
+        <h2 id="at-a-glance-heading">At a glance</h2>
+        <dl class="report-overview assignment-sheet">
+          <div class="report-overview-primary">
+            <dt>Completed attempts</dt>
+            <dd>{{ attemptCount() }}</dd>
+          </div>
+          <div>
+            <dt>Average score</dt>
+            <dd>{{ average() === null ? '—' : average() + '%' }}</dd>
+          </div>
+          <div>
+            <dt>Unresolved mistakes</dt>
+            <dd>{{ unresolvedMistakes() }}</dd>
+          </div>
+          <div>
+            <dt>Corrected · review pending</dt>
+            <dd>{{ correctedCount() }}</dd>
+          </div>
+          <div>
+            <dt>Mastered after review</dt>
+            <dd>{{ masteredCount() }}</dd>
+          </div>
+        </dl>
+      </section>
+    </header>
+
+    <div class="report-topic">
+      <section class="report-table" aria-labelledby="test-results-heading">
+        <header class="report-section-heading">
+          <div>
+            <p class="eyebrow">Test history</p>
+            <h2 class="section-title" id="test-results-heading">Test results</h2>
+          </div>
+          <p>Review each test's statistics or clear only that test's saved history.</p>
+        </header>
+
+        <div class="ledger-column-heading report-column-heading" aria-hidden="true">
+          <span>Test</span>
+          <span>First</span>
+          <span>Latest</span>
+          <span>Best</span>
+          <span>Average</span>
+          <span>History</span>
+        </div>
+        <div class="ledger-sheet report-ledger">
+          <table>
+            <colgroup>
+              <col class="ledger-name-column" />
+              <col class="ledger-value-column" span="4" />
+              <col class="ledger-action-column" />
+            </colgroup>
+            <thead class="semantic-ledger-head">
+              <tr>
+                <th scope="col">Test</th>
+                <th scope="col">First</th>
+                <th scope="col">Latest</th>
+                <th scope="col">Best</th>
+                <th scope="col">Average</th>
+                <th scope="col">History</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (test of activePack.tests; track test.id; let index = $index) {
+                @let report = testReport(activePack, test.id);
+                <tr class="report-row">
+                  <th scope="row">
+                    <div class="report-name">
+                      <span class="sequence-marker" aria-hidden="true">{{
+                        (index + 1).toString().padStart(2, '0')
+                      }}</span>
+                      <div>
+                        <h3>{{ test.title }}</h3>
+                        <p class="report-state-summary">
+                          <span
+                            >{{ report.attempts }}
+                            {{ report.attempts === 1 ? 'attempt' : 'attempts' }}</span
+                          >
+                          <span [class.has-value]="report.mistakes > 0"
+                            >{{ report.mistakes }} to practise</span
+                          >
+                          <span [class.has-value]="report.corrected > 0"
+                            >{{ report.corrected }} corrected</span
+                          >
+                          <span [class.has-value]="report.mastered > 0"
+                            >{{ report.mastered }} mastered</span
+                          >
+                        </p>
+                        <p class="report-independent">
+                          Latest independent: {{ report.independentCorrect }}/{{
+                            test.exercises.length
+                          }}
+                          · skipped: {{ report.skipped }}
+                        </p>
+                      </div>
+                    </div>
+                  </th>
+                  <td data-label="First">
+                    <strong>{{
+                      report.firstAttempt === null ? '—' : report.firstAttempt + '%'
+                    }}</strong>
+                  </td>
+                  <td data-label="Latest">
+                    <strong>{{ report.latest === null ? '—' : report.latest + '%' }}</strong>
+                  </td>
+                  <td data-label="Best">
+                    <strong>{{ report.best === null ? '—' : report.best + '%' }}</strong>
+                  </td>
+                  <td data-label="Average">
+                    <strong>{{ report.average === null ? '—' : report.average + '%' }}</strong>
+                  </td>
+                  <td class="report-clear-cell" data-label="History">
+                    <button
+                      class="button danger compact"
+                      type="button"
+                      (click)="clearTest(activePack.id, test.id, test.title)"
+                    >
+                      Clear test history
+                    </button>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+          <section class="topic-history" aria-labelledby="manage-topic-heading">
+            <footer class="topic-clear-strip">
+              <div>
+                <h2 class="card-kicker" id="manage-topic-heading">This topic only</h2>
+                <p>
+                  Remove all saved progress and private notes for {{ activePack.title }}. Lessons
+                  and exercises remain available.
+                </p>
+              </div>
+              <button
+                class="button secondary"
+                type="button"
+                (click)="clearTopic(activePack.id, activePack.title)"
+              >
+                Clear topic history
+              </button>
+            </footer>
+          </section>
+        </div>
+      </section>
+
+      @if (unresolvedMistakes() > 0) {
+        <section class="mistake-cta">
+          <div>
+            <p class="eyebrow">Turn errors into patterns</p>
+            <h2>{{ unresolvedMistakes() }} exercises are ready to revisit.</h2>
+          </div>
+          <a class="button primary" [routerLink]="paths.mistakes(activePack.id)">
+            Practice mistakes
+          </a>
+        </section>
+      }
+
+      @if (message()) {
+        <p class="notice success operation-notice" role="status">{{ message() }}</p>
+      }
+      @if (error()) {
+        <p class="notice failure operation-notice" role="alert">{{ error() }}</p>
+      }
+    </div>
+  } @else {
+    <section class="state-card" aria-live="polite">
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Opening topic stats…</p>
+    </section>
+  }
+</main>
+
+<app-confirmation-sheet
+  [request]="pendingClear()?.request ?? null"
+  (resolved)="resolveClear($event)"
+/>
