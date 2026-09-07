@@ -2,15 +2,25 @@ import { readFile, readdir } from 'node:fs/promises';
 import { dirname, extname, join, relative, resolve, sep } from 'node:path';
 import { cwd } from 'node:process';
 
-const SOURCE_EXTENSIONS = new Set(['.css', '.ts']);
+const SOURCE_EXTENSIONS = new Set(['.css', '.html', '.ts']);
 const IMPORT_PATTERN = /(?:from\s+|import\s*\()\s*['"]([^'"]+)['"]/gu;
 const BROWSER_API_PATTERN =
   /\b(?:window\.|globalThis\.(?:window|document)|document\.(?:body|createElement|querySelector|querySelectorAll)|FileReader\b|indexedDB\b|URL\.(?:createObjectURL|revokeObjectURL))/u;
 const DOMAIN_DIRECTORIES = new Set(['mappers', 'policies', 'queries', 'services']);
 const VAGUE_DIRECTORIES = new Set(['common', 'core', 'helpers', 'lib', 'utils']);
 const FEATURE_ROOT_DIRECTORIES = new Map([
-  ['learning', new Set(['dashboard', 'data-management', 'lessons', 'reports', 'shared', 'study'])],
+  ['learning', new Set(['learner-data', 'lessons', 'shared', 'stats', 'study', 'topics'])],
 ]);
+const ROOT_SHARED_DIRECTORIES = new Set(['browser']);
+const LEARNING_WORKFLOW_DEPENDENCIES = new Map([
+  ['learner-data', new Set(['shared'])],
+  ['lessons', new Set(['shared'])],
+  ['shared', new Set()],
+  ['stats', new Set(['learner-data', 'shared'])],
+  ['study', new Set(['shared'])],
+  ['topics', new Set(['shared'])],
+]);
+const RETIRED_LEARNING_TERMINOLOGY = /\breport(?:s|ing)?\b|report[-_A-Z]/u;
 
 async function sourceFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
@@ -45,8 +55,26 @@ function featureTarget(path) {
   return /^src\/features\/([^/]+)(?:\/|$)/u.exec(path ?? '')?.[1];
 }
 
+function learningWorkflow(path, prefix = 'src/features/learning/') {
+  if (!path.startsWith(prefix)) return undefined;
+  return path.slice(prefix.length).split('/')[0];
+}
+
+function workflowDependencyViolation(sourceWorkflow, targetWorkflow) {
+  if (!sourceWorkflow || !targetWorkflow || sourceWorkflow === targetWorkflow) return false;
+  return !LEARNING_WORKFLOW_DEPENDENCIES.get(sourceWorkflow)?.has(targetWorkflow);
+}
+
 function containsDomainDirectory(path) {
   return path.split('/').some((segment) => DOMAIN_DIRECTORIES.has(segment));
+}
+
+function directoryOf(path) {
+  return path.slice(0, path.lastIndexOf('/'));
+}
+
+function moduleName(path) {
+  return path.split('/').at(-1)?.replace(/\.ts$/u, '');
 }
 
 function ownedPathParts(path, pattern) {
@@ -106,6 +134,19 @@ for (const file of files) {
   const owner = featureOwner(path);
   const featurePath = ownedPathParts(path, /^src\/features\/([^/]+)\/(.+)$/u);
   violations.push(...topologyViolations(path, featurePath));
+  const sourceWorkflow = learningWorkflow(path);
+
+  if (path.startsWith('src/shared/')) {
+    const sharedRoot = path.slice('src/shared/'.length).split('/')[0];
+    if (!ROOT_SHARED_DIRECTORIES.has(sharedRoot)) {
+      violations.push(
+        `${path}: learner-specific shared code must be owned by features/learning/shared`,
+      );
+    }
+  }
+  if (path.startsWith('src/features/learning/') && RETIRED_LEARNING_TERMINOLOGY.test(source)) {
+    violations.push(`${path}: use current progress-statistics terminology instead of report`);
+  }
 
   for (const specifier of importsFrom(source)) {
     const targetPath = resolvedSourcePath(root, file, specifier);
@@ -124,6 +165,12 @@ for (const file of files) {
       targets.add(target);
       graph.set(owner, targets);
     }
+    const targetWorkflow = learningWorkflow(targetPath ?? '');
+    if (workflowDependencyViolation(sourceWorkflow, targetWorkflow)) {
+      violations.push(
+        `${path}: ${sourceWorkflow} must not import ${targetWorkflow} workflow implementation ${specifier}`,
+      );
+    }
   }
 
   if (
@@ -139,8 +186,30 @@ for (const file of files) {
 
 for (const file of unitTestFiles) {
   const path = normalizedRelative(root, file);
+  const source = await readFile(file, 'utf8');
   const testPath = ownedPathParts(path, /^tests\/unit\/features\/([^/]+)\/(.+)$/u);
   violations.push(...topologyViolations(path, testPath));
+  const testWorkflow = learningWorkflow(path, 'tests/unit/features/learning/');
+  const testModuleName = moduleName(path)?.replace(/\.spec$/u, '');
+
+  for (const specifier of importsFrom(source)) {
+    const targetPath = resolvedSourcePath(root, file, specifier);
+    const targetWorkflow = learningWorkflow(targetPath ?? '');
+    if (targetWorkflow && targetWorkflow !== 'shared' && !testWorkflow) {
+      violations.push(`${path}: learning unit tests must mirror their production workflow owner`);
+    } else if (workflowDependencyViolation(testWorkflow, targetWorkflow)) {
+      violations.push(
+        `${path}: ${testWorkflow} unit tests must not reach into ${targetWorkflow} workflow implementation ${specifier}`,
+      );
+    }
+    if (
+      targetPath?.startsWith('src/') &&
+      moduleName(targetPath) === testModuleName &&
+      directoryOf(path) !== `tests/unit/${directoryOf(targetPath).slice('src/'.length)}`
+    ) {
+      violations.push(`${path}: purpose-named unit tests must mirror ${directoryOf(targetPath)}`);
+    }
+  }
 }
 
 for (const cycle of featureCycles(graph)) violations.push(`feature dependency cycle: ${cycle}`);

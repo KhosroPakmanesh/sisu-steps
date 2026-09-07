@@ -1,9 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { compatibleBackupState } from '@/features/learning/data-management/backup-compatibility.policy';
 import { TopicPack } from '@/features/learning/shared/content/content.models';
 import { alignLearnerStateWithPacks } from '@/features/learning/shared/state/align-learner-state.policy';
 import { migrateFoundationsPackSplit } from '@/features/learning/shared/state/migrate-foundations-split.policy';
-import { LearnerBackup, LearnerState } from '@/shared/domain/learner-state.models';
+import { LearnerState } from '@/features/learning/shared/state/learner-state.models';
 
 const packs = [
   successorPack(
@@ -74,7 +73,7 @@ describe('foundations pack split migration', () => {
     ]);
   });
 
-  it('keeps migrated history through normal alignment and legacy backup restore checks', () => {
+  it('keeps migrated history through normal content alignment', () => {
     const state = legacyState();
     const aligned = alignLearnerStateWithPacks(state, packs);
     expect(aligned.attempts).toHaveLength(4);
@@ -84,14 +83,6 @@ describe('foundations pack split migration', () => {
     expect(aligned.correctionRecords).toEqual([
       expect.objectContaining({ exerciseId: 'kpt-focused', masteredAt: expect.any(String) }),
     ]);
-
-    const backup: LearnerBackup = {
-      backupType: 'finnish-exercise-book',
-      backupVersion: 1,
-      exportedAt: '2026-09-05T10:00:00.000Z',
-      state,
-    };
-    expect(compatibleBackupState(backup, packs).attempts).toHaveLength(4);
   });
 });
 

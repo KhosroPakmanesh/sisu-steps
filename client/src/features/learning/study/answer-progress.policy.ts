@@ -3,7 +3,7 @@ import {
   LearnerState,
   StudySession,
   SubmittedAnswer,
-} from '@/shared/domain/learner-state.models';
+} from '../shared/state/learner-state.models';
 import { Exercise } from '../shared/content/content.models';
 import { nextReviewAt } from './review-schedule.policy';
 

@@ -1,6 +1,6 @@
 import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { routePaths } from '@/shared/navigation/route-paths';
+import { learningPaths } from '../shared/navigation/learning.paths';
 import { ExerciseTest, Lesson } from '../shared/content/content.models';
 import { findTest, lessonsForTest } from '../shared/content/content.queries';
 import { isLessonCompleted } from '../shared/progress/progress.queries';
@@ -19,7 +19,7 @@ export class LessonPage implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly lessonProgress = inject(LessonProgressService);
   protected readonly store = inject(LearningStateStore);
-  protected readonly paths = routePaths;
+  protected readonly paths = learningPaths;
   protected readonly topicId = signal('');
   protected readonly test = signal<ExerciseTest | null>(null);
   protected readonly lessons = signal<Lesson[]>([]);

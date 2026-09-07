@@ -4,8 +4,8 @@ import {
   BrowserJsonResourceLoader,
   JSON_RESOURCE_LOADER,
 } from '@/shared/browser/json-resource.loader';
-import { LEARNER_STATE_REPOSITORY } from '@/shared/persistence/learner-state.repository';
-import { IndexedDbLearnerStateRepository } from '@/shared/persistence/indexeddb/indexeddb-learner-state.repository';
+import { IndexedDbLearnerStateRepository } from '@/features/learning/shared/state/persistence/indexeddb/indexeddb-learner-state.repository';
+import { LEARNER_STATE_REPOSITORY } from '@/features/learning/shared/state/persistence/learner-state.repository';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {

@@ -14,7 +14,7 @@ The production version is available here:
 
 I am someone who needs a lot of practice to learn—sometimes more practice than many other people. I wanted a notebook where I could repeat Finnish exercises, understand my mistakes immediately, return to difficult topics, and practise as much as I need without being limited to a small set of examples.
 
-Sisu Steps is therefore designed as an interactive exercise book rather than a conventional course. Each topic pack owns its lessons, tests, and content version, while the app tracks progress, mistakes, reviews, and reports separately for that pack. The first pack contains 200 Pre-A1–A1.3 grammar-foundation exercises covering vowel harmony, KPT consonant gradation, and the nominative T-plural.
+Sisu Steps is therefore designed as an interactive exercise book rather than a conventional course. Each topic pack owns its lessons, tests, and content version, while the app tracks progress, mistakes, reviews, and learning history separately for that pack. Stats derives summaries from that history; there is no separate report record. The first pack contains 200 Pre-A1–A1.3 grammar-foundation exercises covering vowel harmony, KPT consonant gradation, and the nominative T-plural.
 
 ## Content accuracy and contributing
 
@@ -32,7 +32,7 @@ The architecture keeps three things separate:
 
 - **Finnish content:** what the learner studies.
 - **Presentation:** how lessons and exercises appear and behave.
-- **Learner data:** personal progress, answers, mistakes, and reports.
+- **Learner data:** personal progress, answers, mistakes, and learning history.
 
 ```mermaid
 flowchart LR
@@ -40,7 +40,7 @@ flowchart LR
   Pages --> Content["Finnish content files"]
   Content --> Check["Load and validate in the browser"]
   Check --> App
-  App --> Screen["Lessons, exercises, and reports"]
+  App --> Screen["Lessons, exercises, and progress statistics"]
   App <--> Progress[("Local learner progress")]
 ```
 
@@ -74,30 +74,30 @@ flowchart LR
 
 The client uses a feature-slice structure. This is similar to vertical-slice architecture: everything needed for one learner activity is kept together instead of putting every component in one folder and every service in another.
 
-- **Dashboard:** topic catalog, progress overview, and starting points.
+- **Topics:** topic catalog, topic details, progress overview, and starting points.
 - **Lessons:** teaching material, examples, optional practice, and lesson completion.
 - **Study:** starting sessions, answering questions, grading, mistakes, and reviews.
-- **Reports:** test results and skill-level summaries.
-- **Data management:** backup, restore, and progress clearing.
+- **Stats:** test progress and history-derived summaries.
+- **Learner data:** backup, restore, and history clearing.
 
-Each slice owns its page, visual files, operations, and rules. Code used by several learning journeys lives in a small Learning-shared area. General browser and storage code lives outside the features so it cannot become mixed with learner behavior.
+Each slice owns its page, visual files, operations, and rules. Code used by several learning journeys—including learner-state contracts, IndexedDB persistence, navigation, and derived progress summaries—lives in a small Learning-shared area. Only product-agnostic browser adapters live outside the feature.
 
 ```mermaid
 flowchart TB
   Routes["Application routes"]
-  Routes --> Dashboard["Dashboard"]
+  Routes --> Topics["Topics"]
   Routes --> Lessons["Lessons"]
   Routes --> Study["Study"]
-  Routes --> Reports["Reports"]
-  Routes --> Data["Data management"]
+  Routes --> Stats["Stats"]
+  Routes --> Data["Learner data"]
 
-  Dashboard --> Shared["Shared learning content, progress, and state"]
+  Topics --> Shared["Shared learning content, progress, and state"]
   Lessons --> Shared
   Study --> Shared
-  Reports --> Shared
+  Stats --> Shared
   Data --> Shared
 
-  Shared --> Browser["Browser and storage connections"]
+  Shared --> Browser["Product-agnostic browser connections"]
 ```
 
 All route pages are loaded only when they are needed. The small `app` area is responsible for startup, navigation, the application shell, and connecting features to browser implementations.
@@ -126,13 +126,13 @@ sequenceDiagram
   Page-->>Learner: Show feedback
 ```
 
-Because grading rules, report calculations, validation, and state decisions do not depend on Angular or browser APIs, they are easier to test and reason about.
+Because grading rules, progress calculations, validation, and state decisions do not depend on Angular or browser APIs, they are easier to test and reason about.
 
 ### Browser access stays behind small contracts
 
 Feature code does not directly open IndexedDB, fetch files, create downloads, or read imported backups. It asks a small interface—called a repository or adapter—to perform that work. Angular connects each interface to its browser implementation when the app starts.
 
-For example, learning features use a learner-state repository without knowing the details of IndexedDB. This keeps browser mechanics replaceable and prevents them from leaking into grading or reporting rules.
+For example, learning workflows use a learner-state repository without knowing the details of IndexedDB. This keeps browser mechanics replaceable and prevents them from leaking into grading or progress rules.
 
 ### UI and design tokens
 
@@ -145,7 +145,7 @@ flowchart LR
   Appearance["Day, Automatic, or Night"] --> Tokens["Shared design tokens"]
   Tokens --> Foundation["Paper, ink, type, spacing, and motion"]
   Foundation --> Controls["Buttons, fields, choices, and feedback"]
-  Controls --> Pages["Lessons, study pages, reports, and data pages"]
+  Controls --> Pages["Lessons, study pages, Stats, and learner-data controls"]
   Accessibility["Keyboard, focus, contrast, and reduced motion"] --> Controls
   Accessibility --> Pages
 ```
@@ -171,7 +171,7 @@ The learner can export and restore a versioned JSON backup. Before replacing exi
 - **Deployment:** GitHub Actions builds the production client and deploys the static output to GitHub Pages under `/sisu-steps/`.
 - **Server boundary:** `server/` is reserved for a possible future .NET backend. No backend, authentication, API, or remote database is currently implemented, and core learning workflows are designed to remain independent of one.
 
-Automated checks enforce the architecture as well as code quality. They detect invalid dependencies between features, circular imports, unreachable files, browser APIs inside pure rule modules, overly broad folders, oversized files, formatting problems, invalid content, and type errors. Unit tests mirror the production feature structure, while Playwright tests complete learner journeys in the browser.
+Automated checks enforce the architecture as well as code quality. They detect invalid dependencies between learning workflows, circular imports, unreachable files, browser APIs inside pure rule modules, overly broad folders, oversized files, formatting problems, invalid content, and type errors. Unit tests mirror one production owner, integration tests cover stateful cross-workflow operations, and Playwright tests complete learner journeys in the browser.
 
 ## Grammar references
 

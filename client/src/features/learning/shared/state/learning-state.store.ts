@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
-import { LearnerState } from '@/shared/domain/learner-state.models';
-import { LEARNER_STATE_REPOSITORY } from '@/shared/persistence/learner-state.repository';
+import { LearnerState } from './learner-state.models';
+import { LEARNER_STATE_REPOSITORY } from './persistence/learner-state.repository';
 import { ContentCatalogService } from '../content/content-catalog.service';
 import { TopicPack } from '../content/content.models';
 import { alignLearnerStateWithPacks } from './align-learner-state.policy';

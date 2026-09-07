@@ -5,13 +5,15 @@ export const routes: Routes = [
   {
     path: routeSegments.home,
     loadComponent: () =>
-      import('@/features/learning/dashboard/dashboard.page').then((module) => module.DashboardPage),
+      import('@/features/learning/topics/topic-catalog.page').then(
+        (module) => module.TopicCatalogPage,
+      ),
     title: 'Sisu Steps · Finnish exercise book',
   },
   {
     path: routeSegments.topic,
     loadComponent: () =>
-      import('@/features/learning/dashboard/topic.page').then((module) => module.TopicPage),
+      import('@/features/learning/topics/topic.page').then((module) => module.TopicPage),
     title: 'Topic · Sisu Steps',
   },
   {
@@ -43,15 +45,13 @@ export const routes: Routes = [
   {
     path: routeSegments.topicStats,
     loadComponent: () =>
-      import('@/features/learning/reports/topic-stats.page').then(
-        (module) => module.TopicStatsPage,
-      ),
+      import('@/features/learning/stats/topic-stats.page').then((module) => module.TopicStatsPage),
     title: 'Topic stats · Sisu Steps',
   },
   {
     path: routeSegments.stats,
     loadComponent: () =>
-      import('@/features/learning/reports/stats.page').then((module) => module.StatsPage),
+      import('@/features/learning/stats/stats.page').then((module) => module.StatsPage),
     title: 'Stats · Sisu Steps',
   },
   { path: '**', redirectTo: '' },

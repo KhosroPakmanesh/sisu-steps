@@ -6,8 +6,9 @@ These rules apply under `client/src/`.
 
 - Keep bootstrapping, providers, route metadata, route composition, and shell composition under `app/`.
 - Keep learner-facing UI and behavior under `features/learning/`.
-- Inside Learning, choose dashboard, lessons, study, reports, or data-management before a technical-role folder.
-- Keep cross-workflow Learning behavior under `features/learning/shared`; keep root `shared` for app-agnostic contracts and browser infrastructure.
+- Inside Learning, choose topics, lessons, study, stats, or learner-data before a technical-role folder.
+- Keep cross-workflow Learning behavior, navigation, state contracts, and persistence under `features/learning/shared`; keep root `shared` for product-agnostic browser infrastructure.
+- Treat progress statistics as derived read models. Do not introduce a report entity, report workflow, or persisted report shape.
 - Keep reusable visual primitives and tokens under `design-system/`.
 - Do not create broad root-level `components`, `pages`, `state`, `data`, `domain`, `core`, `lib`, `utils`, `helpers`, or `common` dumping grounds.
 
@@ -34,7 +35,7 @@ These rules apply under `client/src/`.
 
 - Read `client/specs/design-system/` before adding reusable visual behavior.
 - Use `design-system/tokens.css` before raw reusable colors, spacing, shadows, radii, typography, control geometry, or breakpoints.
-- Keep selectors scoped to the owning app shell, feature workflow, or design-system primitive.
+- Keep selectors scoped to the owning app shell, feature workflow, or design-system primitive. Shell-only global styles belong under `app/shell`.
 - Keep CSS with its owner and each stylesheet at or below 400 physical lines.
 - Avoid inline styles unless the value is dynamic and local.
 - Prevent overlap and clipped controls at desktop and mobile widths.

@@ -15,7 +15,7 @@ This contract governs the Angular browser client. Root product requirements rema
 
 ## Client boundaries
 
-- Core study, scoring, history, reporting, backup, and clearing remain usable without a server dependency.
+- Core study, scoring, history, progress statistics, backup, and clearing remain usable without a server dependency.
 - Automatic network access is limited to same-origin bundled client resources unless an explicit product requirement and versioned client/server contract approve another boundary.
 - Browser persistence, file access, downloads, confirmation, and identifiers remain behind purpose-named adapters or repositories.
 - Client code must not infer future server APIs, authentication, storage, or synchronization behavior.
@@ -29,3 +29,4 @@ This contract governs the Angular browser client. Root product requirements rema
 - `design-system/`
 - `features/G002-technical-guidance-alignment/`
 - `features/G006-pack-owned-content-sources/`
+- `features/G008-concept-aligned-client-structure/`

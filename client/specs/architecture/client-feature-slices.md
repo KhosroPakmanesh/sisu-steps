@@ -1,6 +1,6 @@
 # Angular client feature-slice architecture
 
-Sisu Steps is organized around learner workflows. Shared code exists only for cross-workflow contracts or genuinely reusable browser infrastructure.
+Sisu Steps is organized around learner concepts and workflows. Shared code exists only for behavior genuinely used by more than one learning workflow or for product-agnostic browser infrastructure.
 
 ## Target structure
 
@@ -14,71 +14,79 @@ client/
       routes.config.ts
       shell/
     design-system/
-      tokens.css
-      foundations.css
-      primitives.css
-      feedback.css
-      sentence-explanation.css
     features/
       learning/
-        dashboard/
+        topics/
         lessons/
         study/
-        reports/
-        data-management/
+        stats/
+        learner-data/
         shared/
           content/
-          state/
+          navigation/
+          notes/
           progress/
+          state/
+            persistence/
     shared/
       browser/
-      domain/
-      identity/
-      persistence/
   tests/
+    setup.ts
+    helpers/
+      unit/
     unit/
       app/
       features/
       shared/
+      tools/
+    integration/
+      learning/
     e2e/
-server/
-  .gitkeep
+      accessibility/
+      content/
+      support/
+      visual/
+      workflows/
 ```
 
 ## Rules
 
 - Keep `client/src/main.ts` small; compose providers, routes, and shell behavior under `client/src/app`.
-- Keep learner-facing behavior under the `learning` feature and choose the user workflow before a technical role.
-- Keep route pages with their workflows and make them composition boundaries.
-- Keep catalog-level summaries, continue-learning selection, and pack-level test maps under the `dashboard` workflow; lesson teaching content remains under `lessons`.
-- Keep modules used by several Learning workflows under `features/learning/shared`; do not move product behavior to root `shared` merely because it is reused.
-- Keep reusable visual foundations and canonical tokens under `client/src/design-system`.
-- Keep persisted cross-workflow contracts, generic IndexedDB infrastructure, identifier adapters, file/download adapters, and JSON resource loading under `client/src/shared`.
-- Keep siblings at approximately the same abstraction level. Do not create vague `core`, `lib`, `utils`, `helpers`, or `common` dumping grounds.
+- Keep learner-facing behavior under `learning` and choose `topics`, `lessons`, `study`, `stats`, or `learner-data` before a technical role.
+- Keep topic catalog summaries, continue-learning selection, and topic details under `topics`; keep computed progress summaries and their presentation under learning-shared progress and `stats` respectively.
+- Keep backup, restore, and scoped history clearing under `learner-data`. Sisu Steps has no report entity or report workflow.
+- Keep modules used by several learning workflows under `features/learning/shared`; learner state, IndexedDB, learning navigation, notes, content, and progress contracts are product-specific and belong there.
+- Keep root `shared` limited to product-agnostic browser adapters and identifier mechanics.
+- Keep reusable visual foundations and canonical tokens under `client/src/design-system`; keep the workbook shell's global CSS under `client/src/app/shell` and workflow-only CSS with its markup owner.
+- Keep siblings at approximately the same abstraction level. Do not create vague `core`, `lib`, `utils`, `helpers`, or `common` production owners.
 - Keep small workflow slices deliberately flat when more folders would add navigation without clarifying ownership.
 - Preserve lazy loading for every secondary route.
-- Keep tests outside production source and mirror the owning production path under `client/tests/unit`.
-- Keep `server/` limited to its tracking placeholder until backend behavior is explicitly approved and specified.
+- Keep isolated tests under the mirrored `client/tests/unit` owner, cross-workflow stateful tests under `client/tests/integration`, and browser journeys under a purpose-named `client/tests/e2e` group.
+- Keep reusable test fixtures under `client/tests/helpers`; production modules must never import them.
 
 ## Dependency direction
 
-- App composition may import features, design-system foundations, and shared infrastructure.
-- Feature workflows may import their feature-shared modules, design-system foundations, and shared contracts/infrastructure.
-- `features/learning/shared` must not import a workflow page or workflow presentation component.
+- App composition may import learning entry points, learning-shared providers, design-system foundations, and root browser infrastructure.
+- A learning workflow may import its own modules, `features/learning/shared`, design-system foundations, and root browser adapters.
+- `stats` may compose learner-data controls; no other sibling-workflow implementation dependency is allowed.
+- `features/learning/shared` must not import a workflow implementation.
 - Root `shared` and `design-system` must not import from `app` or `features`.
-- Features must not import app implementations.
-- Circular workflow or feature dependencies are prohibited.
+- Features must not import app implementations, and circular workflow dependencies are prohibited.
 
 ## Angular boundaries
 
 - A route page may read route parameters, invoke focused feature services, coordinate navigation-level errors, and compose child views.
 - Independent interaction state belongs in a focused standalone component or controller.
-- Complete user operations and persisted state transitions belong in purpose-named feature services.
-- Pure grading, validation, alignment, scheduling, reporting, and mapping decisions belong in policies, validators, queries, or mappers.
-- IndexedDB, fetch, `File`, download, confirmation, and identifier APIs belong behind shared adapters.
-- Stable route paths and navigation labels belong in typed app configuration.
+- Complete learner operations and persisted state transitions belong in purpose-named feature services.
+- Pure grading, validation, alignment, scheduling, and mapping decisions belong in policies, validators, queries, or mappers.
+- Derived test progress is a read model, not a stored report.
+- IndexedDB, fetch, `File`, download, confirmation, and identifier APIs belong behind repositories or browser adapters.
+- Stable learning route paths belong in learning-shared navigation; route matching and route composition remain app-owned.
 
 ## Enforcement
 
-- `npm --prefix client run lint:architecture` rejects invalid workflow roots, vague directories, shared/design-system back edges, feature-to-app imports, cycles, browser globals in pure feature owners, and tests inside `client/src`.
-- `npm --prefix client run lint:dead-code` follows TypeScript imports, lazy imports, aliases, Angular component templates/styles, and CSS imports from the explicit runtime entrypoints.
+- `npm --prefix client run lint:architecture` rejects retired workflow roots and terminology, vague directories, forbidden sibling imports, learner-specific root-shared modules, shared/design-system back edges, feature-to-app imports, cycles, browser globals in pure feature owners, misplaced learning unit tests, and tests inside `client/src`.
+- `npm --prefix client run lint:dead-code` follows TypeScript imports, lazy imports, aliases, Angular component templates/styles, and CSS imports from explicit runtime entry points.
+- `npm --prefix client run test:unit` and `npm --prefix client run test:integration` validate their layers independently; `npm --prefix client run check` runs both.
+
+G008 supersedes the workflow-root and test-topology portions of completed G002. G002's module-size, accessibility, storage-compatibility, and workflow rules remain in force.

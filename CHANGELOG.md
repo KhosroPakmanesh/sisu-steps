@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Reorganized the Angular client around the app's actual concepts: Topics, Lessons, Study, Stats, Learner data, and explicitly shared learning capabilities. Removed report-oriented production names in favor of derived progress summaries, moved learner state and IndexedDB under Learning ownership, separated unit and integration suites, grouped browser tests by concern, strengthened workflow-boundary enforcement and browser-server isolation, and added the aggregate client check to deployment CI without changing routes, stored data, bundled content, or learner behavior.
+
 - Gave compact lesson key-point slips the raised vocabulary-card material and colour without changing their established dimensions or spacing.
 
 - Replaced the Topics, Reports, and Data & backup destinations with **Notebook** and **Stats**. The new `/stats` page uses a **Statistics** heading, pairs its introduction with an attached cumulative all-topic summary, centers the handwritten progress note beneath the hero, places the **Backup & restore** heading above a complete bound sheet containing Download, Restore, and Clear all history, gives the transition to **Progress by topic** balanced canonical breathing room, and shows the shared level range once above compact progress cards for every topic; each `/stats/:topicId` page combines that topic's full result ledger with adjacent test-history clearing and a warm, gutter-free **This topic only** final ledger row whose action remains **Clear topic history**, followed by optional mistake practice. The former `/reports` and `/data` routes are intentionally removed without compatibility redirects, while scoring, backup, restore, and clearing consequences remain unchanged.

@@ -73,9 +73,17 @@
           "builder": "@angular/build:unit-test",
           "options": {
             "tsConfig": "tsconfig.spec.json",
-            "include": ["tests/unit/**/*.spec.ts"],
-            "setupFiles": ["tests/unit/setup.ts"]
-          }
+            "setupFiles": ["tests/setup.ts"]
+          },
+          "configurations": {
+            "unit": {
+              "include": ["tests/unit/**/*.spec.ts"]
+            },
+            "integration": {
+              "include": ["tests/integration/**/*.spec.ts"]
+            }
+          },
+          "defaultConfiguration": "unit"
         }
       }
     }

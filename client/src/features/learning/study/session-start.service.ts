@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { StudySession } from '@/shared/domain/learner-state.models';
+import { StudySession } from '../shared/state/learner-state.models';
 import { findExercise, findPack, findTest } from '../shared/content/content.queries';
 import {
   dueCorrections,

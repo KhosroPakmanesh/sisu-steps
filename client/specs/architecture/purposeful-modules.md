@@ -39,7 +39,7 @@ A file should normally occupy one category.
 
 - Queries read and derive; they do not persist or mutate input.
 - Policies and validators return decisions or throw safe domain errors; they do not access Angular, browser globals, or IndexedDB.
-- Keep content contracts separate from persisted learner contracts and workflow-only report/view types.
+- Keep content contracts separate from persisted learner contracts and workflow-only view types. Derived progress summaries are not persisted report records.
 - Split validation by catalog, exercise, lesson, test, pack, backup, and cross-pack responsibility so each boundary can be tested directly.
 - Keep public exports narrow; do not add forwarding barrels solely to preserve obsolete paths.
 
@@ -69,6 +69,6 @@ Crossing a size trigger requires decomposition unless the file is cohesive decla
 - Does the route page read as orchestration?
 - Are pure decisions separate from Angular signals and browser I/O?
 - Are complete operations purpose-named and committed atomically?
-- Are reports and content summaries derived by queries rather than templates reimplementing policy?
+- Are progress statistics and content summaries derived by queries rather than templates reimplementing policy?
 - Do adapters isolate every browser boundary?
 - Are dependency direction, workflow ownership, accessibility, error states, and data contracts still visible?

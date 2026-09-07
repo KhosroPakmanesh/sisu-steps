@@ -12,7 +12,7 @@ Use this checklist before asking for or creating a commit.
 ## Validation
 
 - [ ] `npm --prefix client run check` passed when code or configuration changed.
-- [ ] Targeted unit tests passed.
+- [ ] Targeted unit and integration tests passed.
 - [ ] `npm --prefix client run test:e2e` passed when routes, persistence, downloads, responsive behavior, or primary workflows changed.
 - [ ] Manual responsive, keyboard, accessibility, download, restore, or persistence checks were completed or explicitly deferred.
 

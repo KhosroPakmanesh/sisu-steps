@@ -38,6 +38,10 @@ jobs:
         working-directory: ./client
         run: npm ci
 
+      - name: Validate client
+        working-directory: ./client
+        run: npm run check
+
       - name: Build Angular
         working-directory: ./client
         run: npx ng build --configuration production --base-href "/sisu-steps/"

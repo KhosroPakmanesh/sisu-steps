@@ -1,4 +1,4 @@
-import { CorrectionRecord, LearnerState, StudySession } from '@/shared/domain/learner-state.models';
+import { CorrectionRecord, LearnerState, StudySession } from '../state/learner-state.models';
 import { ExerciseTest, Lesson, TopicPack } from '../content/content.models';
 import { findPack, lessonsForTest } from '../content/content.queries';
 

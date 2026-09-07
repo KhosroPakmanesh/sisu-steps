@@ -1,4 +1,4 @@
-import { LearnerState } from '@/shared/domain/learner-state.models';
+import { LearnerState } from './learner-state.models';
 import { TopicPack } from '../content/content.models';
 import { createEmptyLearnerState } from './learner-state.factory';
 import { migrateFoundationsPackSplit } from './migrate-foundations-split.policy';

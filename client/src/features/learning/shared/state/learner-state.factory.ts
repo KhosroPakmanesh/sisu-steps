@@ -1,4 +1,4 @@
-import { LearnerState } from '@/shared/domain/learner-state.models';
+import { LearnerState } from './learner-state.models';
 
 export function createEmptyLearnerState(
   contentPackVersions: Record<string, string> = {},

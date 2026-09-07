@@ -15,13 +15,15 @@
     "format:check": "prettier --check . \"../*.md\" ../docs ../specs ../server ../.vscode",
     "typecheck": "tsc -p tsconfig.app.json --noEmit --pretty false",
     "test:typecheck": "tsc -p tsconfig.spec.json --noEmit --pretty false",
-    "test": "ng test --no-watch --no-progress",
-    "test:watch": "ng test",
+    "test": "npm run test:unit",
+    "test:unit": "ng test --no-watch --no-progress --configuration unit",
+    "test:integration": "ng test --no-watch --no-progress --configuration integration",
+    "test:watch": "ng test --configuration unit",
     "pretest:e2e": "npm run build",
     "test:e2e": "playwright test",
     "content:generate:foundations": "node tools/content-generation/split-foundations.mjs",
     "content:validate": "node tools/validate-all-content.mjs",
-    "check": "npm run lint && npm run lint:css && npm run lint:modules && npm run lint:dead-code && npm run lint:architecture && npm run format:check && npm run typecheck && npm run test:typecheck && npm run content:validate && npm run build && npm run test"
+    "check": "npm run lint && npm run lint:css && npm run lint:modules && npm run lint:dead-code && npm run lint:architecture && npm run format:check && npm run typecheck && npm run test:typecheck && npm run content:validate && npm run build && npm run test:unit && npm run test:integration"
   },
   "private": true,
   "packageManager": "npm@11.6.2",

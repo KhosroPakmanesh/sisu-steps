@@ -1,0 +1,36 @@
+.ledger-sheet tbody .stats-row :is(.stats-name > span, .stats-name > div, td > strong) {
+  transition: transform var(--motion-fast) ease;
+}
+
+.ledger-sheet tbody .stats-row {
+  transition: background-color var(--motion-fast) ease;
+}
+
+.ledger-sheet tbody .stats-row:hover {
+  background: color-mix(in srgb, var(--surface-brand-subtle) 42%, transparent);
+}
+
+.ledger-sheet tbody .stats-row td > strong {
+  display: inline-block;
+}
+
+.ledger-sheet tbody .stats-row:hover .stats-name > div {
+  transform: translateX(0.25rem);
+}
+
+.ledger-sheet tbody .stats-row:hover .stats-name > span {
+  transform: translateX(0.25rem) rotate(-4deg);
+}
+
+.ledger-sheet tbody .stats-row:hover td > strong {
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ledger-sheet tbody .stats-row :is(.stats-name > span, .stats-name > div, td > strong),
+  .ledger-sheet tbody .stats-row:hover .stats-name > div,
+  .ledger-sheet tbody .stats-row:hover .stats-name > span,
+  .ledger-sheet tbody .stats-row:hover td > strong {
+    transform: none;
+  }
+}

@@ -29,9 +29,11 @@ npm --prefix client run check
 npm --prefix client run test:e2e
 ```
 
-The aggregate gate runs Angular TypeScript/template linting, Stylelint, module-size, source-reachability and architecture checks, repository formatting, production and test typechecking, content validation, a production build, and unit tests.
+For a focused test layer, use `npm --prefix client run test:unit` or `npm --prefix client run test:integration`.
 
-Playwright covers the critical dashboard, lesson, study persistence, reports, and data-management journeys at 320, 768, and 1440 pixels. Install Chromium when needed:
+The aggregate gate runs Angular TypeScript/template linting, Stylelint, module-size, source-reachability and architecture checks, repository formatting, production and test typechecking, content validation, a production build, unit tests, and cross-workflow integration tests.
+
+Playwright covers critical topic, lesson, study persistence, progress-statistics, and learner-data journeys at 320, 768, and 1440 pixels. Install Chromium when needed:
 
 ```powershell
 npm --prefix client exec -- playwright install chromium
@@ -40,10 +42,10 @@ npm --prefix client exec -- playwright install chromium
 ## Engineering structure
 
 - `src/app` owns bootstrapping, providers, route composition, and the application shell.
-- `src/features/learning` owns dashboard, lessons, study, reports, data management, and Learning-shared behavior.
+- `src/features/learning` owns topics, lessons, study, progress statistics, learner data, and learning-shared behavior including learner state and IndexedDB persistence.
 - `src/design-system` owns canonical tokens, visual foundations, primitives, feedback, and sentence-explanation patterns.
-- `src/shared` owns app-agnostic browser, identity, domain-contract, navigation, and persistence infrastructure.
-- `tests/unit` mirrors production ownership; `tests/e2e` covers critical browser journeys.
+- `src/shared` owns only product-agnostic browser infrastructure.
+- `tests/unit` mirrors production ownership, `tests/integration` owns cross-workflow stateful operations, `tests/helpers` owns reusable test fixtures, and `tests/e2e` groups critical browser journeys by concern.
 
 Start with `AGENTS.md`, `src/AGENTS.md`, and `specs/README.md`. Client review records live under `docs/`.
 

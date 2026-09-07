@@ -1,5 +1,5 @@
-import { StudySession } from '@/shared/domain/learner-state.models';
-import { createBrowserIdentifier } from '@/shared/identity/browser-identifier';
+import { createBrowserIdentifier } from '@/shared/browser/browser-identifier';
+import { StudySession } from '../shared/state/learner-state.models';
 
 interface StudySessionInput {
   mode: StudySession['mode'];

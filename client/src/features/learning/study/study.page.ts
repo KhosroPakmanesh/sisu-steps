@@ -1,8 +1,8 @@
 import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
-import { CompletedAttempt } from '@/shared/domain/learner-state.models';
-import { routePaths } from '@/shared/navigation/route-paths';
+import { learningPaths } from '../shared/navigation/learning.paths';
+import { CompletedAttempt } from '../shared/state/learner-state.models';
 import { Exercise } from '../shared/content/content.models';
 import { findExercise, findPack, findTest } from '../shared/content/content.queries';
 import { findSession, mistakeCount } from '../shared/progress/progress.queries';
@@ -21,7 +21,7 @@ export class StudyPage implements OnInit {
   private readonly sessionStart = inject(SessionStartService);
   private readonly sessionAnswers = inject(SessionAnswerService);
   protected readonly store = inject(LearningStateStore);
-  protected readonly paths = routePaths;
+  protected readonly paths = learningPaths;
   protected readonly sessionId = signal<string | null>(null);
   protected readonly response = signal('');
   protected readonly selectedTokenIndexes = signal<number[]>([]);

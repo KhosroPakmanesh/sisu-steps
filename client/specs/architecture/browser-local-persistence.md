@@ -8,9 +8,9 @@ Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exerc
 - Schema version: `1`.
 - Store name: `learner-state`.
 - State key: `current`.
-- Persisted record contracts: `client/src/shared/domain/learner-state.models.ts`.
-- Repository contract: `client/src/shared/persistence/learner-state.repository.ts`.
-- Native adapter: `client/src/shared/persistence/indexeddb/indexeddb-learner-state.repository.ts`.
+- Persisted record contracts: `client/src/features/learning/shared/state/learner-state.models.ts`.
+- Repository contract: `client/src/features/learning/shared/state/persistence/learner-state.repository.ts`.
+- Native adapter: `client/src/features/learning/shared/state/persistence/indexeddb/indexeddb-learner-state.repository.ts`.
 - Feature state composition: `client/src/features/learning/shared/state/learning-state.store.ts`.
 
 ## Rules
@@ -27,7 +27,7 @@ Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exerc
 
 - Feature services depend on the repository contract and the Learning state store, never on native IndexedDB details.
 - The app layer provides the native repository adapter through Angular dependency injection.
-- Shared persistence remains product-operation neutral; lesson completion, session, reporting, backup, and clearing behavior belongs to the owning Learning workflow.
+- Learning-shared persistence remains product-operation neutral; lesson completion, sessions, derived progress statistics, backup, and clearing behavior belongs to the owning learning workflow.
 - Pure policies, validators, queries, and mappers must not access browser globals.
 - The Appearance choice is presentation-only, uses `shared/browser/appearance-preference.adapter.ts`, and must never enter learner state or backup data.
 

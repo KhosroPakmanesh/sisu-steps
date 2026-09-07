@@ -3,7 +3,7 @@ import {
   LearnerState,
   StudySession,
   SubmittedAnswer,
-} from '@/shared/domain/learner-state.models';
+} from './learner-state.models';
 import { TopicPack } from '../content/content.models';
 
 const LEGACY_TOPIC_ID = 'vowel-harmony-kpt-tplural';

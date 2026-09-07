@@ -23,6 +23,11 @@ export function findLesson(packs: TopicPack[], lessonId: string): Lesson | undef
   return packs.flatMap((pack) => pack.lessons).find((lesson) => lesson.id === lessonId);
 }
 
+export function getLearningLevelLabel(packs: TopicPack[]): string {
+  const levels = [...new Set(packs.map((pack) => pack.level))];
+  return `${levels.length === 1 ? 'Level' : 'Levels'}: ${levels.join(' · ')}`;
+}
+
 export function lessonsForTest(packs: TopicPack[], topicId: string, testId: string): Lesson[] {
   const pack = findPack(packs, topicId);
   const test = pack?.tests.find((candidate) => candidate.id === testId);

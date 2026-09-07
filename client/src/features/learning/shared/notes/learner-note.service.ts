@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { LearnerNote, LearnerState } from '@/shared/domain/learner-state.models';
+import { LearnerNote, LearnerState } from '../state/learner-state.models';
 import { findPack } from '../content/content.queries';
 import { LearningStateStore } from '../state/learning-state.store';
 

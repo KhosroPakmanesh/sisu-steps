@@ -4,7 +4,7 @@ import {
   AppearancePreference,
   AppearancePreferenceAdapter,
 } from '@/shared/browser/appearance-preference.adapter';
-import { routePaths } from '@/shared/navigation/route-paths';
+import { learningPaths } from '@/features/learning/shared/navigation/learning.paths';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +16,7 @@ export class AppShell {
   private readonly appearancePreferences = inject(AppearancePreferenceAdapter);
   private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
   private hasActivatedRoute = false;
-  protected readonly paths = routePaths;
+  protected readonly paths = learningPaths;
   protected appearance: AppearancePreference = 'automatic';
 
   public constructor() {

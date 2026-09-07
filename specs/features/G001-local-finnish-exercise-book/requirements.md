@@ -26,21 +26,21 @@
 
 - **REQ-G001-017:** The system shall store completed attempts, submitted answers, mistake status, and unfinished-session state in native IndexedDB.
 - **REQ-G001-018:** Bundled exercise content shall remain separate from mutable learner data.
-- **REQ-G001-019:** Stored records shall include schema version, content-pack version, stable exercise IDs, and timestamps needed for migration and reporting.
+- **REQ-G001-019:** Stored records shall include schema version, content-pack version, stable exercise IDs, and timestamps needed for migration and progress statistics.
 - **REQ-G001-020:** The system shall export learner data as a versioned JSON backup without exporting executable content.
 - **REQ-G001-021:** The system shall validate a selected backup before importing it and shall not replace existing data when validation fails.
 - **REQ-G001-022:** The system shall ask for confirmation before clearing one test's history, one topic's history, or all learner history.
 - **REQ-G001-023:** Clearing learner history shall not remove bundled exercises.
 
-## Reporting requirements
+## Progress-statistics requirements
 
-- **REQ-G001-024:** The system shall report the latest, best, and average percentage for each attempted test.
-- **REQ-G001-025:** The system shall report completed-attempt and unresolved-mistake counts by test and topic.
+- **REQ-G001-024:** Stats shall display the latest, best, and average percentage for each attempted test.
+- **REQ-G001-025:** Stats shall display completed-attempt and unresolved-mistake counts by test and topic.
 - **REQ-G001-026:** A completed session shall display its score, correct count, incorrect count, and links to retry the test or practise mistakes.
 
 ## Quality requirements
 
-- **REQ-G001-027:** The core study and reporting experience shall function without a backend, account, cloud service, or runtime AI call.
+- **REQ-G001-027:** The core study and progress-statistics experience shall function without a backend, account, cloud service, or runtime AI call.
 - **REQ-G001-028:** Interactive controls shall be keyboard operable and expose visible focus states and accessible names.
 - **REQ-G001-029:** The interface shall remain usable at viewport widths from 320 pixels upward.
 - **REQ-G001-030:** If content or IndexedDB initialization fails, the system shall show a recoverable error message rather than silently discarding learner data.
@@ -50,7 +50,7 @@
 - **REQ-G001-034:** Sentence feedback shall define grammatical terms in plain English and shall not depend on prerequisite knowledge that is not explained in the same feedback.
 - **REQ-G001-035:** Before submitting an answer, the learner shall be able to reveal the answer with a visible, native keyboard-operable **Show answer** button without first entering or choosing a response. Scored study and optional lesson practice shall not expose a shortcut badge, shortcut metadata, or an `Alt+A` answer-reveal binding.
 - **REQ-G001-036:** Revealing an answer shall lock the exercise and display the same correct answer and explanation that follow a submitted response.
-- **REQ-G001-037:** A revealed answer shall be stored and reported as skipped, shall count as zero correct when calculating the percentage over all exercises, and shall not be included in the incorrect count.
+- **REQ-G001-037:** A revealed answer shall be stored and displayed as skipped, shall count as zero correct when calculating the percentage over all exercises, and shall not be included in the incorrect count.
 - **REQ-G001-038:** Skipping an exercise shall neither create a new unresolved mistake nor resolve an existing unresolved mistake.
 - **REQ-G001-039:** Completed-session feedback shall distinguish correct, incorrect, and skipped exercise counts.
 - **REQ-G001-040:** Every ordinary test shall display a **Learn first** action separately from its **Start test**, **Resume**, or **Try again** action.
@@ -59,7 +59,7 @@
 - **REQ-G001-043:** Each lesson shall teach from first principles with a title, purpose, learning objectives, plain-English sections, worked Finnish examples with English meanings and construction notes, and common mistakes to avoid.
 - **REQ-G001-044:** Each lesson shall provide between two and five optional unscored practice exercises that are separate from the pack's scored test exercises.
 - **REQ-G001-045:** Lesson practice shall use the supported test interaction patterns, immediate grading, correct-answer feedback, English explanation, and answer reveal without requiring a response.
-- **REQ-G001-046:** Lesson-practice responses and reveals shall be temporary and shall not create or change test attempts, percentages, reports, unfinished test sessions, or unresolved mistakes.
+- **REQ-G001-046:** Lesson-practice responses and reveals shall be temporary and shall not create or change test attempts, percentages, progress statistics, unfinished test sessions, or unresolved mistakes.
 - **REQ-G001-047:** The learner shall be able to finish a lesson without completing its optional practice, and **Finish lesson** shall record that lesson as completed.
 - **REQ-G001-048:** Lesson completion shall be stored in IndexedDB with the stable lesson ID, lesson version, and completion timestamp and shall be included in learner backup and restore.
 - **REQ-G001-049:** A completed lesson shall remain available for rereading and optional practice and shall be visibly marked wherever a review test reuses it.
@@ -83,11 +83,11 @@
 - **REQ-G001-067:** Answering an unresolved exercise correctly shall mark that exercise corrected and shall not by itself mark the associated skill as mastered.
 - **REQ-G001-068:** A corrected exercise shall become mastered only after the learner correctly answers its different, pre-authored parallel exercise in an eligible later review session.
 - **REQ-G001-069:** The system shall offer fixed authored review sessions after a correction becomes eligible, initially after one day and subsequently after three and seven days when mastery has not been demonstrated.
-- **REQ-G001-070:** A due review shall be displayed prominently on the dashboard but shall remain optional and shall never lock lessons, tests, reports, or mistake practice.
+- **REQ-G001-070:** A due review shall be displayed prominently on the topic catalog but shall remain optional and shall never lock lessons, tests, Stats, or mistake practice.
 - **REQ-G001-071:** Review sessions shall be unscored, shall preserve first-attempt test results, and shall store independent, skipped, corrected, and mastered outcomes separately.
 - **REQ-G001-072:** Skipping a parallel exercise in review shall not grant mastery and shall leave the review available.
 - **REQ-G001-073:** The system shall persist correction, review eligibility, review attempts, and mastery records in native IndexedDB and include them in validated JSON backup and restore.
-- **REQ-G001-074:** Reports shall distinguish first-attempt accuracy, latest, best, average, independently correct, skipped, corrected, and mastered counts.
+- **REQ-G001-074:** Stats shall distinguish first-attempt accuracy, latest, best, average, independently correct, skipped, corrected, and mastered counts.
 - **REQ-G001-075 (withdrawn 2026-08-26):** Skill and misconception aggregation was removed from Reports at the learner's request. Authored skill and misconception metadata remains available to teaching, validation, feedback, correction, and review workflows.
 - **REQ-G001-076:** The KPT teaching sequence shall separately introduce double consonants, common single-consonant changes, special `k` changes, consonant clusters, and mixed recognition before focused noun, verb, or plural production.
 - **REQ-G001-077:** Each difficult KPT lesson shall contain four or five optional unscored practice exercises, at least two worked contrasts, and no more than ten newly introduced scored vocabulary items.
@@ -102,7 +102,7 @@
 - **REQ-G001-086:** The bundled content directory shall contain a versioned catalog that lists every installed topic-pack ID and same-named folder in authored order; each folder shall expose a manifest with ordered lesson and learning-test references.
 - **REQ-G001-087:** Application initialization shall validate the catalog and manifests, load every referenced lesson and learning test, assemble each listed pack in memory, require catalog, folder, manifest, and fragment IDs to match, and reject duplicate pack, lesson, or scored-exercise IDs across the installed collection.
 - **REQ-G001-088:** The catalog, topic, lesson, and study routes shall identify the owning topic and test where applicable, display every installed topic pack, and keep every lesson and test directly accessible through its topic page.
-- **REQ-G001-089:** Mistake practice, scheduled review, reports, test history, and topic clearing shall be selectable and isolated by topic pack.
+- **REQ-G001-089:** Mistake practice, scheduled review, Stats, test history, and topic clearing shall be selectable and isolated by topic pack.
 - **REQ-G001-090:** Learner data shall store installed content versions by topic-pack ID rather than using one global content-pack version.
 - **REQ-G001-091:** Installing a new topic pack shall preserve all compatible existing progress; changing one installed pack's version shall clear only records belonging to that pack and shall preserve unrelated topic progress.
 - **REQ-G001-092:** Backup validation shall accept the current per-pack version map, migrate a compatible legacy single-pack version, and reject unknown topic, lesson, exercise, correction, session, or attempt references without replacing existing data.
@@ -129,7 +129,7 @@
 - Given a response that substitutes `a` for `ä`, when it is submitted, then it is marked incorrect unless explicitly listed as an accepted answer.
 - Given an incorrect response, when feedback appears, then the correct answer and English explanation are visible immediately.
 - Given a saved unfinished test, when the learner returns, then the test can resume without duplicating submitted answers.
-- Given multiple attempts, when reports open, then latest, best, and average values match the stored attempts.
+- Given multiple attempts, when Stats opens, then latest, best, and average values match the stored attempts.
 - Given an unresolved mistake, when it is answered correctly in later practice, then it no longer appears as unresolved.
 - Given an invalid backup, when import is attempted, then existing records remain unchanged and the learner sees an error.
 - Given confirmed topic-history clearing, when clearing completes, then that topic's learner records are removed while its bundled tests remain available.
@@ -142,7 +142,7 @@
 - Given any test card, when it is displayed, then separate **Learn first** and direct test actions are available and neither is locked.
 - Given a focused test with declared prerequisite skills, when **Learn first** opens, then only preparation lessons targeting that test's skill appear and earlier prerequisite lessons are not repeated.
 - Given a lesson, when it opens, then first-principles teaching, worked examples, common mistakes, and two to five separate practice exercises are available.
-- Given an optional practice response or answer reveal, when feedback appears, then no learner score, attempt, test session, report, or mistake status changes.
+- Given an optional practice response or answer reveal, when feedback appears, then no learner score, attempt, test session, progress statistic, or mistake status changes.
 - Given unfinished optional practice, when **Finish lesson** is selected, then the lesson is stored as completed and remains available to reread.
 - Given a lesson reused by review tests, when it is completed from one route, then every referencing review test displays that lesson as completed.
 - Given a lesson completion, when learner data is exported and restored, then the lesson ID, version, and completion timestamp are preserved.
@@ -157,9 +157,9 @@
 - Given an exact authored typed misconception, when the answer is submitted, then its specific diagnostic explanation and category are stored; otherwise the general category is stored.
 - Given an unresolved exercise that is later answered correctly, when progress is displayed, then it is marked corrected but not mastered.
 - Given a corrected exercise whose review is due, when its different parallel exercise is answered correctly in review, then the original is marked mastered.
-- Given a due review, when the dashboard is displayed, then a prominent review action is available and every ordinary test remains directly accessible.
+- Given a due review, when the topic catalog is displayed, then a prominent review action is available and every ordinary test remains directly accessible.
 - Given a review answer is revealed, when progress is stored, then no mastery is granted and the review remains available.
-- Given completed work, when reports open, then first-attempt, independent, skipped, corrected, and mastered test summaries reflect stored learner records.
+- Given completed work, when Stats opens, then first-attempt, independent, skipped, corrected, and mastered test summaries reflect stored learner records.
 - Given a focused lesson, when its content is validated, then it introduces at most ten scored Finnish words and its associated test supplies English meanings where vocabulary is not the target.
 - Given a valid grammatical-topic pack, when its content is validated, then it contains scored exercises, contains no more than 1,000, and is supported by a recorded pedagogical count rationale rather than a universal minimum.
 - Given a declared important grammatical skill, when the pack is validated, then at least one Focused scored exercise requires that skill.
@@ -187,7 +187,7 @@
 - **REQ-G001-109:** The cumulative review shall interleave previously taught skills in a fixed authored order, declare only the skills actually needed by each exercise, avoid duplicate question-and-answer tasks, and retain same-skill mutual mastery pairs with different surface answers and comparable response demands. Its optional preparation shall reference the thirteen existing lessons once each without copying or changing their teaching content.
 - **REQ-G001-110:** Installing pack version `6.0.0` shall use the existing per-pack version reset under `REQ-G001-061` and `REQ-G001-078`, without migrating the former review attempts or sessions. The learner explicitly approved losing this pack's progress on 2026-08-31. Other packs remain untouched and still-owned notes retain the existing policy under `REQ-G001-106`.
 
-Acceptance: the topic shows fourteen tests, with one 33-question review; its single preparation route exposes thirteen lessons; the complete pack retains 200 scored exercises and 44 unscored practice items; every review skill was taught and assessed earlier; save/resume, scoring, reports and delayed mastery continue through the existing workflows.
+Acceptance: the topic shows fourteen tests, with one 33-question review; its single preparation route exposes thirteen lessons; the complete pack retains 200 scored exercises and 44 unscored practice items; every review skill was taught and assessed earlier; save/resume, scoring, progress statistics, and delayed mastery continue through the existing workflows.
 
 ## Complete sentence-construction prompts
 

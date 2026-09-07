@@ -4,7 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { LessonPage } from '@/features/learning/lessons/lesson.page';
 import { LessonProgressService } from '@/features/learning/lessons/lesson-progress.service';
 import { LearningStateStore } from '@/features/learning/shared/state/learning-state.store';
-import { FakeLearningStateStore } from '../../../fixtures/learning-content.fixture';
+import { FakeLearningStateStore } from '@testing/helpers/unit/fake-learning-state.store';
 
 describe('LessonPage', () => {
   let fixture: ComponentFixture<LessonPage>;

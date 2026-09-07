@@ -1,5 +1,5 @@
-import { CompletedAttempt, StudySession } from '@/shared/domain/learner-state.models';
-import { createBrowserIdentifier } from '@/shared/identity/browser-identifier';
+import { createBrowserIdentifier } from '@/shared/browser/browser-identifier';
+import { CompletedAttempt, StudySession } from '../shared/state/learner-state.models';
 import { rounded } from '../shared/progress/progress.queries';
 
 export function createCompletedAttempt(session: StudySession): CompletedAttempt {

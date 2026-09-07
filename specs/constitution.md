@@ -7,8 +7,8 @@ Create a calm, local-first interactive exercise book that helps one English-spea
 ## Product principles
 
 1. **Pedagogy before scoring.** Every graded answer must include a useful correction or explanation. Sentence feedback must teach from first principles instead of assuming that the learner already knows grammatical terminology or how a displayed form was produced.
-2. **Local ownership.** Exercise attempts and reports remain under the learner's control unless an explicitly approved product requirement introduces another boundary.
-3. **Core independence.** Core study, scoring, history, and reporting must work without a backend, account, cloud database, or runtime AI call.
+2. **Local ownership.** Exercise attempts, learning history, and progress statistics remain under the learner's control unless an explicitly approved product requirement introduces another boundary.
+3. **Core independence.** Core study, scoring, history, and progress statistics must work without a backend, account, cloud database, or runtime AI call.
 4. **Predictable study structure.** Topic packs contain named, ordered tests rather than randomly assembled ordinary sessions.
 5. **Recoverability.** Learner data can be exported, restored, and deliberately cleared.
 6. **Accessible simplicity.** The interface must be keyboard-usable, responsive, and understandable at a glance.
@@ -32,7 +32,7 @@ Create a calm, local-first interactive exercise book that helps one English-spea
 - Each pack keeps a reviewable pedagogy record that states the assessment evidence, decisions, limitations, and final disposition.
 - Each exercise has a stable ID, prompt, answer definition, explanation, and tags.
 - Reusable lessons have stable IDs and versions and teach from first principles. Focused tests reference only lessons for their own target skill; review tests may reuse earlier lessons without duplicating their content.
-- Lesson practice is authored separately from scored test exercises and never changes attempts, reports, or mistake status.
+- Lesson practice is authored separately from scored test exercises and never changes attempts, progress statistics, or mistake status.
 - Each sentence exercise explains the complete meaning, sentence pattern, and every displayed part, including its English meaning, grammatical job, base form, endings, and relevant sound or stem changes. A prompt that asks the learner to construct or complete a Finnish sentence displays the complete intended English meaning before submission; Finnish-to-English translation is exempt because supplying that meaning is the assessed task.
 - Explanations introduce grammar terms in plain English before using them and do not rely on unstated prerequisite knowledge.
 - Every lesson and test is labelled as focused or review. Focused material has one target skill, declares any previously taught prerequisites, and does not repeat prerequisite lessons on its preparation page. Reviews are the only material that may combine multiple previously introduced skills.
@@ -42,7 +42,7 @@ Create a calm, local-first interactive exercise book that helps one English-spea
 
 ## Initial scope
 
-The first release serves one local learner and includes optional reusable preparation lessons, grouped tests, immediate feedback, mistake practice, reports, session recovery, JSON backup/restore, and scoped history clearing.
+The first release serves one local learner and includes optional reusable preparation lessons, grouped tests, immediate feedback, mistake practice, progress statistics, session recovery, JSON backup/restore, and scoped history clearing.
 
 Accounts, cloud synchronization, in-app content authoring, audio, speech recognition, pronunciation assessment, gamification, and runtime content generation are deferred.
 

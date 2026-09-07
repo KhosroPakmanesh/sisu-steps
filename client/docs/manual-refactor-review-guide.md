@@ -7,21 +7,21 @@ Use this after `npm --prefix client run check` and `npm --prefix client run test
 - Confirm route metadata/composition stays in `client/src/app` and route pages stay under their Learning workflow.
 - Confirm complete mutations live in services, pure decisions in policies/validators, derived reads in queries, and browser I/O in shared adapters/repositories.
 - Confirm no feature imports `client/src/app`, no shared/design-system module imports app/features, and no vague `core`, `lib`, `utils`, `helpers`, or `common` owner was introduced.
-- Confirm unit tests mirror their production owner under `client/tests/unit` and use explicit Vitest imports.
+- Confirm unit tests mirror their production owner under `client/tests/unit`, cross-workflow stateful tests use `client/tests/integration`, and reusable fixtures use `client/tests/helpers`.
 - Confirm new tokens/components/patterns are documented under `client/specs/design-system`.
 
 ## Learner workflow review
 
-1. Open the dashboard and verify 15 ordered tests remain grouped into **Focused tests** and **Reviews** sections without repeated classification badges on the cards.
+1. Open the topic catalog and verify ordered topics and tests remain grouped without repeated classification badges on the cards.
 2. Open Learn first, move through lesson navigation, run and reveal optional practice, and confirm it does not affect attempts or mistakes.
 3. Start a test, answer incorrectly, reload, and verify the session and feedback recover.
 4. Reveal with `Alt+A`; confirm it records a skip and does not create or resolve a mistake.
-5. Correct a mistake, verify its delayed review, then answer the paired review exercise and inspect Reports.
+5. Correct a mistake, verify its delayed review, then answer the paired review exercise and inspect Stats.
 6. Export a backup, reject malformed/incompatible imports without replacing state, and verify clear-test/topic/all confirmations describe their exact consequence.
 
 ## Accessibility and responsive review
 
-- Review dashboard, lesson, study, reports, and data settings at 320, 768, and 1440 pixels.
+- Review the topic catalog, lesson, study, Stats, and learner-data controls at 320, 768, and 1440 pixels.
 - Tab through the shell and every visible control; focus must remain visible and order must follow the page.
 - Confirm links navigate, buttons act, labels name inputs, feedback uses live regions, and status is not color-only.
 - Confirm no horizontal document overflow, overlapping controls, clipped text, or inaccessible touch targets.

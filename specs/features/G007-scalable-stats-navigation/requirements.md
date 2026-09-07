@@ -35,6 +35,6 @@
 - Given the backup archive followed by **Progress by topic**, when their layout is inspected, then the inter-section gap uses balanced canonical section spacing rather than either crowding the heading or recreating the former large empty band.
 - Given multiple installed packs, when `/stats` opens, then one compact card per pack shows truthful attempts, average, and unresolved mistakes.
 - Given a selected pack, when **View stats** is activated, then only that pack's summary and authored test ledger appear.
-- Given confirmed test-history clearing, when the operation completes, then that test's report values reset while shared lesson completions, private notes, other tests, and other packs remain unchanged.
+- Given confirmed test-history clearing, when the operation completes, then that test's progress values reset while shared lesson completions, private notes, other tests, and other packs remain unchanged.
 - Given confirmed topic-history clearing, when the operation completes, then the selected topic's learner records and notes are removed while other packs and bundled learning content remain unchanged.
 - Given an unknown Stats topic, when the page opens, then a recoverable error and **All stats** link are visible.

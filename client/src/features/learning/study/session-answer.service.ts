@@ -3,7 +3,7 @@ import {
   CompletedAttempt,
   StudySession,
   SubmittedAnswer,
-} from '@/shared/domain/learner-state.models';
+} from '../shared/state/learner-state.models';
 import { findExercise } from '../shared/content/content.queries';
 import { gradeAnswer } from '../shared/progress/grading.policy';
 import { findSession } from '../shared/progress/progress.queries';

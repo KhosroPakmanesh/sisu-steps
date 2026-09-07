@@ -4,7 +4,18 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/spec",
-    "types": ["vitest"]
+    "types": ["vitest"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@testing/*": ["tests/*"]
+    }
   },
-  "include": ["src/**/*.d.ts", "tests/unit/**/*.spec.ts", "tests/unit/setup.ts"]
+  "include": [
+    "src/**/*.d.ts",
+    "tests/helpers/**/*.ts",
+    "tests/helpers/**/*.d.mts",
+    "tests/integration/**/*.spec.ts",
+    "tests/unit/**/*.spec.ts",
+    "tests/setup.ts"
+  ]
 }
