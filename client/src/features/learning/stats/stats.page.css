@@ -145,3 +145,71 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+@media (width < 48rem) {
+  .stats-hero {
+    gap: var(--space-4);
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .stats-hero .back-link + .eyebrow {
+    margin-top: var(--space-3);
+  }
+
+  .topic-catalog.stats-catalog {
+    padding-top: var(--space-5);
+  }
+
+  .cumulative-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: var(--space-3) var(--space-2) var(--space-3) var(--space-5);
+  }
+
+  .cumulative-overview .cumulative-overview-primary,
+  .cumulative-overview .cumulative-overview-wide {
+    grid-template-columns: minmax(0, 1fr);
+    grid-column: auto;
+    padding-top: var(--space-2);
+    border: 0;
+  }
+
+  .cumulative-overview div {
+    padding: var(--space-2);
+  }
+
+  .stats-card-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stats-card-metrics div + div {
+    border-top: 0;
+    border-left: 1px solid var(--notebook-rule);
+  }
+
+  .stats-card-metrics div:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .stats-card-metrics div:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    border-top: 1px solid var(--notebook-rule);
+  }
+
+  @container workbook (width <= 20rem) {
+    .cumulative-overview,
+    .stats-card-metrics {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .stats-card-metrics div + div,
+    .stats-card-metrics div:nth-child(odd) {
+      grid-column: auto;
+      border-top: 1px solid var(--notebook-rule);
+      border-left: 0;
+    }
+
+    .stats-card-metrics div:first-child {
+      border-top: 0;
+    }
+  }
+}

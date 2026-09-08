@@ -249,3 +249,50 @@
     transform: none;
   }
 }
+
+@media (width < 48rem) {
+  .stats-hero {
+    gap: var(--space-4);
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .stats-hero .back-link + .eyebrow {
+    margin-top: var(--space-3);
+  }
+
+  .stats-topic-heading {
+    padding: var(--space-4);
+  }
+
+  .stats-topic-sheet {
+    margin: var(--space-3) 0 var(--space-5);
+  }
+
+  .mistake-cta {
+    gap: var(--space-4);
+    margin: var(--space-5) 0 var(--space-4);
+    padding: var(--space-4);
+  }
+
+  .stats-overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: var(--space-3) var(--space-2) var(--space-3) var(--space-5);
+  }
+
+  .stats-overview .stats-overview-primary {
+    grid-template-columns: minmax(0, 1fr);
+    grid-column: auto;
+    padding-top: var(--space-2);
+    border-bottom: 0;
+  }
+
+  .stats-overview div {
+    padding: var(--space-2);
+  }
+
+  @container workbook (width <= 20rem) {
+    .stats-overview {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+}

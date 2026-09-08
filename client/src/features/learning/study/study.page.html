@@ -303,40 +303,44 @@
               </ol>
             </section>
           }
-          <button
-            class="button primary continue-button"
-            type="button"
-            [disabled]="busy()"
-            (click)="continue()"
-          >
-            {{
-              activeSession.currentIndex === activeSession.exerciseIds.length - 1
-                ? 'See result'
-                : 'Continue'
-            }}
-          </button>
-        } @else {
-          <div class="answer-actions">
+          <div class="study-action-dock">
             <button
-              class="button primary submit-button"
+              class="button primary continue-button"
               type="button"
-              [disabled]="!canSubmit(currentExercise)"
-              (click)="submit()"
+              [disabled]="busy()"
+              (click)="continue()"
             >
-              Check answer
-            </button>
-            <button
-              class="button secondary reveal-button"
-              type="button"
-              [disabled]="!canRevealAnswer()"
-              (click)="showAnswer()"
-            >
-              Show answer
+              {{
+                activeSession.currentIndex === activeSession.exerciseIds.length - 1
+                  ? 'See result'
+                  : 'Continue'
+              }}
             </button>
           </div>
-          <p class="reveal-note">
-            Showing the answer records this exercise as skipped and does not add it to mistakes.
-          </p>
+        } @else {
+          <div class="study-action-dock">
+            <div class="answer-actions">
+              <button
+                class="button primary submit-button"
+                type="button"
+                [disabled]="!canSubmit(currentExercise)"
+                (click)="submit()"
+              >
+                Check answer
+              </button>
+              <button
+                class="button secondary reveal-button"
+                type="button"
+                [disabled]="!canRevealAnswer()"
+                (click)="showAnswer()"
+              >
+                Show answer
+              </button>
+            </div>
+            <p class="reveal-note">
+              Showing the answer records this exercise as skipped and does not add it to mistakes.
+            </p>
+          </div>
         }
       </section>
     }

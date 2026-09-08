@@ -274,6 +274,10 @@ test('gives phones a full-width paper-only shell', async ({ page }, testInfo) =>
     expect(navigationBox, `navigation bounds at ${width}px`).not.toBeNull();
     expect(paperBox!.width, `paper width at ${width}px`).toBeGreaterThanOrEqual(width - 16);
     expect(
+      paperSpacing.paddingLeft,
+      `paper clears the left ledger at ${width}px`,
+    ).toBeGreaterThanOrEqual(20);
+    expect(
       paperBox!.width - paperSpacing.paddingLeft - paperSpacing.paddingRight,
       `usable paper width at ${width}px`,
     ).toBeGreaterThanOrEqual(width - 40);
@@ -299,6 +303,120 @@ test('gives phones a full-width paper-only shell', async ({ page }, testInfo) =>
     'writing-mode',
     'vertical-rl',
   );
+});
+
+test('keeps phone navigation and study actions within reach without changing tablet geometry', async ({
+  page,
+}, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.setViewportSize({ width: 390, height: 720 });
+  await page.goto('/');
+
+  const navigation = page.locator('.workbook-folder-tabs');
+  const homeHero = page.locator('.hero');
+  await expect(navigation).toHaveCSS('position', 'sticky');
+  await expect(navigation).toHaveCSS('top', '0px');
+  await expect(navigation).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
+  await expect(navigation).toHaveCSS('box-shadow', 'none');
+  await expect(homeHero).toHaveCSS('padding-top', '20px');
+  await expect(page.locator('.site-header')).toHaveCSS('position', 'relative');
+  expect(
+    await page
+      .locator('.catalog-stats')
+      .evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ')),
+  ).toHaveLength(2);
+
+  await page.evaluate(() => window.scrollTo(0, 1_000));
+  await expect
+    .poll(async () => (await navigation.boundingBox())?.y ?? Number.POSITIVE_INFINITY)
+    .toBeLessThan(1);
+  await expect(navigation.getByRole('link')).toHaveCount(2);
+  await navigation.getByRole('link', { name: 'Stats' }).focus();
+  await expect(navigation.getByRole('link', { name: 'Stats' })).toBeFocused();
+
+  await page.goto(`/topics/${TOPIC_SEGMENT}`);
+  const topicOverview = page.locator('.topic-overview');
+  expect(
+    await topicOverview.evaluate((element) =>
+      getComputedStyle(element).gridTemplateColumns.split(' '),
+    ),
+  ).toHaveLength(2);
+  const firstTitleRow = page.locator('.test-title-row').first();
+  const firstScoreBadge = firstTitleRow.locator('.score-badge');
+  await expect(firstTitleRow).toHaveCSS('display', 'flex');
+  const [titleRowBox, scoreBadgeBox] = await Promise.all([
+    firstTitleRow.boundingBox(),
+    firstScoreBadge.boundingBox(),
+  ]);
+  expect(titleRowBox).not.toBeNull();
+  expect(scoreBadgeBox).not.toBeNull();
+  expect(
+    Math.abs(
+      (titleRowBox?.x ?? 0) +
+        (titleRowBox?.width ?? 0) -
+        ((scoreBadgeBox?.x ?? 0) + (scoreBadgeBox?.width ?? 0)),
+    ),
+  ).toBeLessThanOrEqual(1);
+
+  await page.goto('/stats');
+  expect(
+    await page
+      .locator('.cumulative-overview')
+      .evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ')),
+  ).toHaveLength(2);
+  await page.goto(`/stats/${TOPIC_SEGMENT}`);
+  expect(
+    await page
+      .locator('.stats-overview')
+      .evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ')),
+  ).toHaveLength(2);
+
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+  const actionDock = page.locator('.study-action-dock');
+  await expect(actionDock).toHaveCount(1);
+  await expect(actionDock).toHaveCSS('display', 'block');
+  await expect(actionDock).toHaveCSS('position', 'sticky');
+  await expect(actionDock.getByRole('button')).toHaveCount(2);
+  await expect(actionDock.locator('.reveal-note')).toBeVisible();
+  await expect(page.locator('.runner-shell')).toHaveCSS('padding-top', '16px');
+
+  await actionDock.scrollIntoViewIfNeeded();
+  const dockBox = await actionDock.boundingBox();
+  expect(dockBox).not.toBeNull();
+  expect((dockBox?.y ?? 0) + (dockBox?.height ?? 0)).toBeLessThanOrEqual(713);
+
+  await page.getByRole('radio', { name: 'back vowels' }).check();
+  await actionDock.getByRole('button', { name: 'Check answer' }).click();
+  await expect(actionDock.getByRole('button', { name: 'Continue' })).toBeVisible();
+  await expect(actionDock.getByRole('button')).toHaveCount(1);
+
+  const enlargedTextStyle = await page.addStyleTag({
+    content: ':root { font-size: 200% !important; }',
+  });
+  await expect(actionDock).toHaveCSS('position', 'static');
+  await enlargedTextStyle.evaluate((element) => element.remove());
+
+  await page.setViewportSize({ width: 768, height: 1_024 });
+  await expect(page.locator('.site-header')).toHaveCSS('position', 'sticky');
+  await expect(page.locator('.runner-shell')).toHaveCSS('padding-top', '32px');
+  await expect(actionDock).toHaveCSS('display', 'contents');
+  await expect(actionDock).toHaveCSS('position', 'static');
+  await expect(page.locator('.workbook-folder-tab').first().locator('span')).toHaveCSS(
+    'writing-mode',
+    'vertical-rl',
+  );
+
+  await page.goto('/');
+  await expect(page.locator('.hero')).toHaveCSS('padding-top', '48px');
+  expect(
+    await page
+      .locator('.catalog-stats')
+      .evaluate((element) => getComputedStyle(element).gridTemplateColumns.split(' ')),
+  ).toHaveLength(4);
+
+  await page.goto(`/stats/${TOPIC_SEGMENT}`);
+  await expect(page.locator('.stats-overview-primary')).toHaveCSS('grid-column-start', '1');
+  await expect(page.locator('.stats-overview-primary')).toHaveCSS('grid-column-end', '-1');
 });
 
 test('keeps the folder margin fixed between responsive breakpoints', async ({ page }, testInfo) => {
@@ -791,6 +909,7 @@ test('saves a private sticky note without leaving the workbook', async ({ page }
 
 test('uses dedicated notebook objects for repeated surfaces and return links', async ({ page }) => {
   await page.goto('/');
+  const compactHeroGap = (page.viewportSize()?.width ?? 1_440) < 768 ? '12px' : '20px';
   const continueCard = page.locator('.continue-card');
   const topicCard = page.locator('.topic-card').first();
   await expectClippedPaper(continueCard);
@@ -872,7 +991,10 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   const topicPageWidth = await page
     .locator('main.topic-page')
     .evaluate((element) => element.getBoundingClientRect().width);
-  await expect(page.locator('.topic-hero .back-link + .eyebrow')).toHaveCSS('margin-top', '20px');
+  await expect(page.locator('.topic-hero .back-link + .eyebrow')).toHaveCSS(
+    'margin-top',
+    compactHeroGap,
+  );
   const topicOverview = page.locator('.topic-overview');
   await expect(topicOverview).toHaveClass(/assignment-sheet/);
   expect(
@@ -1016,7 +1138,10 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   ).toBeCloseTo(topicPageWidth, 1);
   const statsBackLink = page.getByRole('link', { name: 'All stats' });
   await expect(statsBackLink).toHaveClass(/back-link/);
-  await expect(page.locator('.stats-hero .back-link + .eyebrow')).toHaveCSS('margin-top', '20px');
+  await expect(page.locator('.stats-hero .back-link + .eyebrow')).toHaveCSS(
+    'margin-top',
+    compactHeroGap,
+  );
   const statsOverview = page.locator('.stats-overview');
   const heroLayout = await page.locator('.stats-hero').evaluate((hero) => {
     const content = hero.firstElementChild as HTMLElement | null;
@@ -1512,6 +1637,10 @@ test('layers the faded desk lamp behind the workbook folder at compact widths', 
         : null;
 
       return {
+        folderCoverDisplay: getComputedStyle(
+          document.querySelector<HTMLElement>('.workbook-cover')!,
+        ).display,
+        lampDisplay: getComputedStyle(lamp).display,
         lampOwnsOverlap: overlapTarget === lamp || lamp.contains(overlapTarget),
         lampOpacity: Number.parseFloat(getComputedStyle(lamp).opacity),
         lampZIndex: getComputedStyle(lamp).zIndex,
@@ -1521,6 +1650,12 @@ test('layers the faded desk lamp behind the workbook folder at compact widths', 
 
     expect(layers.lampOpacity, `lamp opacity at ${width}px`).toBeLessThanOrEqual(0.22);
     expect(layers.lampZIndex, `lamp layer at ${width}px`).toBe('0');
+    if (width < 768) {
+      expect(layers.lampDisplay, `lamp visibility at ${width}px`).toBe('none');
+      expect(layers.folderCoverDisplay, `folder cover visibility at ${width}px`).toBe('none');
+      expect(layers.overlaps, `lamp/folder overlap at ${width}px`).toBe(false);
+      continue;
+    }
     if (width <= 1440) {
       expect(layers.overlaps, `lamp/folder overlap at ${width}px`).toBe(true);
       expect(layers.lampOwnsOverlap, `top element at lamp/folder overlap at ${width}px`).toBe(

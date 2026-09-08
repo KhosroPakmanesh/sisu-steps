@@ -6,7 +6,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 
 ## Requirement slice
 
-- `REQ-G005-001`–`REQ-G005-020`, `REQ-G005-022`, `REQ-G005-023`, and `REQ-G005-025`–`REQ-G005-035`; `REQ-G005-021` and `REQ-G005-024` are withdrawn.
+- `REQ-G005-001`–`REQ-G005-020`, `REQ-G005-022`, `REQ-G005-023`, and `REQ-G005-025`–`REQ-G005-036`; `REQ-G005-021` and `REQ-G005-024` are withdrawn.
 - Extends the stable G004 notebook baseline and explicitly permits custom-looking controls while preserving G001 learning, content, routing, grading, and persistence behavior.
 
 ## Included
@@ -20,6 +20,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 - Stronger selected-tab, selected-card, ruled-input, and stamped-completion feedback.
 - A custom confirmation sheet for destructive data actions with complete dialog semantics and deliberate confirmation.
 - Paper-only layouts below the 48rem tablet boundary, with horizontal Notebook/Stats navigation and the routed paper using nearly the complete viewport width; shared design-system guidance, automated coverage, responsive visual checks, and changelog evidence.
+- A phone-only compact vertical rhythm, transparent-backed sticky primary-navigation row, compact two-column summary groups and right-aligned card status marks where space permits, and safe-area-aware Study action dock that preserve content, typography, touch targets, document order, and the complete 48rem-and-wider layout.
 
 ## Non-goals
 
@@ -45,6 +46,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 10. Differentiate hover and focus movement by physical object: slide tabs and informational strips, pivot attached paper, preserve bound-cover offsets, keep nested reading surfaces calm, and suppress travel for disabled and reduced-motion states.
 11. Derive local browser and saved-site icons from the visible paper **S** brand mark with scalable and compatibility formats.
 12. Let phone layouts show the routed paper without the navy folder, page clip, hardware, vertical dividers, or desk objects; reflow the existing navigation horizontally and preserve the complete workbook composition from 48rem upward.
+13. Reduce phone-only decorative vertical travel, keep the existing transparent-backed navigation row reachable while scrolling, arrange suitable four-value summaries as 2×2 grids, retain right-aligned test status marks where space permits, and keep the current Study actions near the lower safe area without duplicating controls or changing the tablet/desktop cascade.
 
 ## Risks
 
@@ -53,6 +55,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 - Page depth and motion can cause discomfort or slow rendering; effects must use inexpensive CSS, avoid blocking navigation, and disappear under reduced motion.
 - A custom confirmation flow can weaken safety or focus handling; the default focus must be safe, Escape must cancel, and only explicit confirmation may perform the action.
 - Wide lesson and connected-map compositions can overflow narrow screens; they must become a simple single-column paper layout from 320 pixels upward, while the tablet and desktop workbook remains unchanged.
+- Sticky phone controls can consume scarce reading height or cover enlarged content; constrain them to their owning shell/exercise, reserve visible separation, and return Study actions to normal flow when effective text space is too narrow.
 
 ## 2026-08-31 consistency remediation
 

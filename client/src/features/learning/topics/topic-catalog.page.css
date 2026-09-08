@@ -233,3 +233,74 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+@media (width < 48rem) {
+  .hero {
+    gap: var(--space-4);
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .hero-copy,
+  .hero .notebook-note {
+    margin-top: var(--space-3);
+  }
+
+  .continue-card {
+    padding: var(--space-4);
+  }
+
+  .topic-catalog {
+    padding: var(--space-5) 0 var(--space-4);
+  }
+
+  .section-heading {
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+
+  :host .topic-card {
+    gap: var(--space-3);
+  }
+
+  .catalog-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catalog-stats div {
+    padding: var(--space-3);
+  }
+
+  .catalog-stats div + div {
+    border-top: 0;
+    border-left: 1px solid var(--border-default);
+  }
+
+  .catalog-stats div:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .catalog-stats div:nth-child(n + 3) {
+    border-top: 1px solid var(--border-default);
+  }
+
+  .topic-progress {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @container workbook (width <= 20rem) {
+    .catalog-stats,
+    .topic-progress {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .catalog-stats div + div,
+    .catalog-stats div:nth-child(odd) {
+      border-top: 1px solid var(--border-default);
+      border-left: 0;
+    }
+
+    .catalog-stats div:first-child {
+      border-top: 0;
+    }
+  }
+}

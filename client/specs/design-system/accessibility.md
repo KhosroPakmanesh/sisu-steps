@@ -19,6 +19,8 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Use live regions for loading and operation feedback without announcing decorative changes.
 - Ensure disabled states remain understandable and do not remove the explanation for why an action is unavailable.
 - Keep required text in readable print typography; decorative handwriting must be brief, optional, and hidden from assistive technology.
+- Keep phone sticky navigation and active-Study actions in their original document order with one operable control instance. Reserve safe-area separation, prevent sticky surfaces from covering focused or required content, and return Study actions to ordinary flow when enlarged text makes persistent placement impractical.
+- Keep compact phone metric grids in DOM reading order and allow summaries and heading-row status marks to stack at 20rem or less of available workbook width so labels, values, and focus outlines never clip or create horizontal page scrolling.
 - Preserve text contrast, visible focus, state meaning, and control boundaries in warm Light, low-glare Dark, and Automatic appearances.
 - Ensure every stationery-inspired control remains understandable from its visible label, native role, and state without requiring recognition of the represented object.
 - Render focus indicators inside clipped stationery controls so their silhouettes cannot hide the indicator.

@@ -172,6 +172,27 @@
   }
 }
 
+@media (width < 48rem) {
+  .site-header {
+    position: relative;
+    min-height: 0;
+    gap: var(--space-2);
+    padding: var(--space-2) max(var(--space-3), env(safe-area-inset-right, 0px)) var(--space-2)
+      max(var(--space-3), env(safe-area-inset-left, 0px));
+  }
+
+  .site-footer {
+    gap: var(--space-2);
+    padding: var(--space-4) max(var(--space-3), env(safe-area-inset-right, 0px))
+      max(var(--space-4), env(safe-area-inset-bottom, 0px))
+      max(var(--space-3), env(safe-area-inset-left, 0px));
+  }
+
+  .site-footer p {
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .brand-mark {
     transition: none;
