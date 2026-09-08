@@ -22,5 +22,5 @@ Sisu Steps should feel calm, encouraging, precise, and private during repeated F
 - Handwriting is decorative only; required information always uses highly readable print typography.
 - Notebook ruling, margins, tabs, stamps, labels, and layered paper remain subordinate to teaching content. Decorative objects never imitate controls; real controls may take a physical-object form only when their visible label, hierarchy, and operation stay obvious.
 - Binding holes, paper grain, tape, and stacked-sheet effects are CSS-only surface cues; keep them subtle, non-interactive, and outside the reading flow.
-- The application is one interactive workbook world: wide screens may reveal the surrounding desk and open-page depth, while narrow screens become a simple pocket notebook.
+- The application is one interactive workbook world: tablet and wide screens reveal the surrounding desk, folder and page depth, while phone screens show the routed paper itself without sacrificing reading width to folder hardware.
 - Game-like visual craft means responsive physical feedback and authored page scenes, never points, rewards, locked content, or learning delays.

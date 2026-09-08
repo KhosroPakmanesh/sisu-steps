@@ -301,6 +301,16 @@ body::before {
   }
 }
 
+@media (width < 48rem) {
+  .desk-light,
+  .desk-lamp,
+  .desk-pencil,
+  .desk-ruler,
+  .desk-paperclip {
+    display: none;
+  }
+}
+
 @container workbook (width <= 38.75rem) {
   .desk-lamp,
   .desk-pencil,

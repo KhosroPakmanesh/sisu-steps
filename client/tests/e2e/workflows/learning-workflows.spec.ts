@@ -81,7 +81,8 @@ async function expectActionGroupPlacement(group: Locator, placement: 'center' | 
   }
 }
 
-test('wraps the unchanged paper in a compact clipped folder', async ({ page }) => {
+test('wraps the unchanged paper in a compact clipped folder', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name === 'chromium-mobile');
   await page.goto('/');
 
   await expect(page.locator('link[rel="icon"][type="image/svg+xml"]')).toHaveAttribute(
@@ -229,11 +230,82 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }) =
   );
 });
 
+test('gives phones a full-width paper-only shell', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.goto('/');
+
+  for (const width of [320, 360, 390, 430, 767]) {
+    await page.setViewportSize({ width, height: 900 });
+
+    const cover = page.locator('.workbook-cover');
+    const hardware = page.locator('.workbook-page-hardware');
+    const navigation = page.locator('.workbook-folder-tabs');
+    const tabs = page.locator('.workbook-folder-tab');
+    const paper = page.locator('.page-shell');
+    const deskObjects = page.locator(
+      '.desk-light, .desk-lamp, .desk-pencil, .desk-ruler, .desk-paperclip',
+    );
+
+    await expect(cover, `folder cover at ${width}px`).toBeHidden();
+    await expect(hardware, `folder hardware at ${width}px`).toBeHidden();
+    await expect(deskObjects, `desk objects at ${width}px`).toHaveCount(5);
+    for (const deskObject of await deskObjects.all()) {
+      await expect(deskObject, `hidden desk object at ${width}px`).toBeHidden();
+    }
+    await expect(navigation, `navigation at ${width}px`).toBeVisible();
+    await expect(tabs, `navigation links at ${width}px`).toHaveCount(2);
+
+    const [paperBox, navigationBox, tabBoxes, paperSpacing] = await Promise.all([
+      paper.boundingBox(),
+      navigation.boundingBox(),
+      tabs.evaluateAll((elements) =>
+        elements.map((element) => element.getBoundingClientRect().toJSON()),
+      ),
+      paper.evaluate((element) => {
+        const style = getComputedStyle(element);
+        return {
+          paddingLeft: Number.parseFloat(style.paddingLeft),
+          paddingRight: Number.parseFloat(style.paddingRight),
+        };
+      }),
+    ]);
+
+    expect(paperBox, `paper at ${width}px`).not.toBeNull();
+    expect(navigationBox, `navigation bounds at ${width}px`).not.toBeNull();
+    expect(paperBox!.width, `paper width at ${width}px`).toBeGreaterThanOrEqual(width - 16);
+    expect(
+      paperBox!.width - paperSpacing.paddingLeft - paperSpacing.paddingRight,
+      `usable paper width at ${width}px`,
+    ).toBeGreaterThanOrEqual(width - 40);
+    expect(
+      tabBoxes.every((tab) => tab.height >= 44),
+      `touch targets at ${width}px`,
+    ).toBe(true);
+    expect(
+      Math.max(...tabBoxes.map((tab) => tab.y)) - Math.min(...tabBoxes.map((tab) => tab.y)),
+      `horizontal navigation at ${width}px`,
+    ).toBeLessThan(2);
+    expect(navigationBox!.width, `navigation width at ${width}px`).toBeCloseTo(paperBox!.width, 0);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      width,
+    );
+  }
+
+  await page.setViewportSize({ width: 768, height: 1024 });
+  await expect(page.locator('.workbook-cover')).toBeVisible();
+  await expect(page.locator('.workbook-page-clip')).toBeVisible();
+  await expect(page.locator('.desk-lamp')).toBeVisible();
+  await expect(page.locator('.workbook-folder-tab').first().locator('span')).toHaveCSS(
+    'writing-mode',
+    'vertical-rl',
+  );
+});
+
 test('keeps the folder margin fixed between responsive breakpoints', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
   await page.goto('/');
 
-  for (const width of [320, 560, 768, 901, 1000, 1100, 1248, 1440, 1754]) {
+  for (const width of [768, 901, 1000, 1100, 1248, 1440, 1754]) {
     await page.setViewportSize({ width, height: 900 });
     const [headerBox, folderBox, coverBox, paperBox, tabBoxes, contentInset] = await Promise.all([
       page.locator('.site-header').boundingBox(),

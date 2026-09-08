@@ -3,35 +3,17 @@
 @container workbook (width < 20rem) {
   .workbook-folder {
     --sheet-gutter: var(--space-reflow-inline);
-    --folder-clip-content-clearance: 18px;
-    --folder-tab-stack-height: 21.36rem;
-    --folder-cover-space: 80px;
+    --folder-clip-content-clearance: var(--space-reflow-inline);
 
-    margin-inline: 8px;
-    padding-top: 24px;
-    min-height: calc(var(--folder-tab-stack-height) + 5rem);
-  }
-
-  .workbook-cover,
-  .workbook-folder-tabs {
-    width: calc(100% - 4px);
-  }
-
-  .workbook-folder-tab {
-    width: 42.4px;
-    height: 7rem;
-    flex-shrink: 0;
-  }
-
-  .workbook-folder-tab span {
-    white-space: nowrap;
+    min-height: 0;
+    margin-inline: 0;
+    padding-top: 0;
   }
 
   .workbook-folder > router-outlet + * > .page-shell,
   .workbook-folder > router-outlet + * > .runner-shell {
-    width: calc(100% - var(--folder-cover-space));
-    padding-left: 20px;
-    padding-right: var(--folder-clip-content-clearance);
+    width: 100%;
+    padding-inline: var(--space-reflow-inline);
     overflow-wrap: anywhere;
     background-image: repeating-linear-gradient(
       to bottom,
@@ -40,20 +22,6 @@
       var(--notebook-rule) var(--notebook-line-height)
     );
     background-size: 100% var(--notebook-line-height);
-  }
-
-  .workbook-page-hardware {
-    width: calc(100% - var(--folder-cover-space));
-  }
-
-  .workbook-page-clip {
-    right: -1px;
-    width: 10px;
-  }
-
-  .workbook-page-clip::before {
-    right: 1px;
-    width: 4px;
   }
 
   .workbook-folder > router-outlet + * > main::after {

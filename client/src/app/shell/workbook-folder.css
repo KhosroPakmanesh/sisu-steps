@@ -273,6 +273,79 @@
   }
 }
 
+/* Phones keep the routed notebook paper and its learning surfaces, while the
+   physical folder yields its width to the content. The tablet breakpoint is
+   deliberately viewport-based so the established 768px workbook is unchanged. */
+@media (width < 48rem) {
+  .workbook-folder {
+    --sheet-gutter: var(--space-3);
+    --folder-clip-content-clearance: var(--space-3);
+    --folder-tab-stack-height: auto;
+
+    min-height: 0;
+    margin: var(--space-3) 0 0;
+    padding: 0 max(var(--space-2), env(safe-area-inset-right, 0px)) 0
+      max(var(--space-2), env(safe-area-inset-left, 0px));
+    overflow: visible;
+  }
+
+  .workbook-cover,
+  .workbook-page-hardware {
+    display: none;
+  }
+
+  .workbook-folder-tabs {
+    position: relative;
+    top: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-2);
+    width: 100%;
+    height: auto;
+    margin: 0 auto var(--space-2);
+  }
+
+  .workbook-folder-tab {
+    width: 100%;
+    height: auto;
+    min-height: var(--touch-target);
+    margin: 0;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-small);
+    font-size: var(--text-small);
+    line-height: var(--line-control);
+    overflow-wrap: anywhere;
+  }
+
+  .workbook-folder-tab span {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
+  }
+
+  .workbook-folder-tab:hover,
+  .workbook-folder-tab:focus-visible,
+  .workbook-folder-tab.active,
+  .workbook-folder-tab.active:hover,
+  .workbook-folder-tab.active:focus-visible {
+    transform: translateY(-0.1rem);
+  }
+
+  .workbook-folder > router-outlet + * > .page-shell,
+  .workbook-folder > router-outlet + * > .runner-shell {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: var(--space-3);
+    padding-right: var(--space-3);
+  }
+
+  .workbook-folder > router-outlet + * > .page-shell::after,
+  .workbook-folder > router-outlet + * > .runner-shell::after {
+    right: var(--space-3);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .workbook-folder-tab {
     transition: none;
