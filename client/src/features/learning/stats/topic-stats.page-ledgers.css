@@ -225,6 +225,10 @@
     font-size: var(--text-caption);
   }
 
+  .ledger-sheet tbody .stats-clear-cell::before {
+    content: none;
+  }
+
   .ledger-sheet tbody td:nth-of-type(even) {
     border-left: 1px solid var(--notebook-rule);
   }

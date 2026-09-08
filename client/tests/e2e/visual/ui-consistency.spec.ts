@@ -338,6 +338,12 @@ for (const theme of ['Day', 'Night']) {
       await expectNoInternalOverflow(statsLedger);
       await expect(statsLedger.locator('.stats-row')).toHaveCount(6);
       await expect(statsLedger.getByRole('button', { name: 'Clear test history' })).toHaveCount(6);
+      expect(
+        await statsLedger
+          .locator('.stats-clear-cell')
+          .first()
+          .evaluate((element) => getComputedStyle(element, '::before').content),
+      ).toBe('none');
 
       const featureMaterialOwners = await page.evaluate(() => {
         const rules: CSSStyleRule[] = [];
