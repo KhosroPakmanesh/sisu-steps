@@ -305,6 +305,42 @@ test('gives phones a full-width paper-only shell', async ({ page }, testInfo) =>
   );
 });
 
+test('keeps the typed answer line inside its phone exercise sheet', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+
+  for (const width of [320, 375, 390, 430, 767]) {
+    await page.setViewportSize({ width, height: 900 });
+    await page.goto(`/study/${TOPIC_SEGMENT}/harmony-in-forms`);
+
+    const answerLabel = page.locator('.text-answer');
+    const answerInput = answerLabel.locator('.notebook-input');
+    const exerciseSheet = page.locator('.exercise-card');
+    const [labelBox, inputBox, sheetBox] = await Promise.all([
+      answerLabel.boundingBox(),
+      answerInput.boundingBox(),
+      exerciseSheet.boundingBox(),
+    ]);
+
+    expect(labelBox, `answer label at ${width}px`).not.toBeNull();
+    expect(inputBox, `answer input at ${width}px`).not.toBeNull();
+    expect(sheetBox, `exercise sheet at ${width}px`).not.toBeNull();
+    expect(inputBox!.x, `input start at ${width}px`).toBeGreaterThanOrEqual(labelBox!.x);
+    expect(inputBox!.x + inputBox!.width, `input end at ${width}px`).toBeLessThanOrEqual(
+      labelBox!.x + labelBox!.width,
+    );
+    expect(
+      labelBox!.x + labelBox!.width - (inputBox!.x + inputBox!.width),
+      `input right inset at ${width}px`,
+    ).toBeGreaterThanOrEqual(7);
+    expect(inputBox!.x + inputBox!.width, `sheet containment at ${width}px`).toBeLessThan(
+      sheetBox!.x + sheetBox!.width,
+    );
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
+      width,
+    );
+  }
+});
+
 test('keeps phone navigation in flow and study actions within reach without changing tablet geometry', async ({
   page,
 }, testInfo) => {

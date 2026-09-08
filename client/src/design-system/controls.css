@@ -256,7 +256,10 @@
 }
 
 input.notebook-input {
+  display: block;
   width: 100%;
+  min-width: 0;
+  max-width: 100%;
   min-height: var(--control-height);
   padding: 0.9rem 1rem 0.72rem 1.2rem;
   border: 1px solid var(--border-control);
@@ -274,6 +277,12 @@ input.notebook-input {
   font: inherit;
   font-size: 1.05rem;
   box-shadow: inset 0 -0.18rem 0 var(--notebook-grid);
+}
+
+@media (width < 48rem) {
+  input.notebook-input {
+    width: calc(100% - var(--space-2));
+  }
 }
 
 .word-token {

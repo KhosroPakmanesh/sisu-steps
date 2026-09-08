@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Kept typed Study and optional-practice answer lines within their mobile exercise sheets with explicit width containment and a small phone-only gap at the right edge.
+
 - Added a subtle 2-pixel breathing gap to both sides of routed phone content so text sits more comfortably inside the notebook ledger, and returned the phone Notebook/Stats row to normal page flow instead of keeping it sticky while scrolling. Tablet and desktop geometry remain unchanged.
 
 - Kept teacher feedback stamps fully inside their green, amber, or blue feedback slips so the mark remains visible instead of being clipped by the paper edge.
