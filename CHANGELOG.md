@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Kept teacher feedback stamps fully inside their green, amber, or blue feedback slips so the mark remains visible instead of being clipped by the paper edge.
+
 - Reorganized the Angular client around the app's actual concepts: Topics, Lessons, Study, Stats, Learner data, and explicitly shared learning capabilities. Removed report-oriented production names in favor of derived progress summaries, moved learner state and IndexedDB under Learning ownership, separated unit and integration suites, grouped browser tests by concern, strengthened workflow-boundary enforcement and browser-server isolation, and added the aggregate client check to deployment CI without changing routes, stored data, bundled content, or learner behavior.
 
 - Gave compact lesson key-point slips the raised vocabulary-card material and colour without changing their established dimensions or spacing.

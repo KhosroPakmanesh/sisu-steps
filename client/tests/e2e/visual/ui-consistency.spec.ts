@@ -25,6 +25,18 @@ async function expectNoInternalOverflow(surface: Locator) {
   expect(overflow).toEqual([]);
 }
 
+async function expectContainedBy(child: Locator, parent: Locator, inlineEndRatio = 1) {
+  const [childBox, parentBox] = await Promise.all([child.boundingBox(), parent.boundingBox()]);
+  expect(childBox).not.toBeNull();
+  expect(parentBox).not.toBeNull();
+  expect(childBox!.x).toBeGreaterThanOrEqual(parentBox!.x);
+  expect(childBox!.y).toBeGreaterThanOrEqual(parentBox!.y);
+  expect(childBox!.x + childBox!.width).toBeLessThanOrEqual(
+    parentBox!.x + parentBox!.width * inlineEndRatio,
+  );
+  expect(childBox!.y + childBox!.height).toBeLessThanOrEqual(parentBox!.y + parentBox!.height);
+}
+
 async function expectEssentialTextMinimum(page: Page) {
   const undersized = await page.locator('body').evaluate((body) =>
     [...body.querySelectorAll<HTMLElement>('*')]
@@ -779,9 +791,11 @@ for (const theme of ['Day', 'Night']) {
       await page.getByRole('radio', { name: 'front vowels', exact: true }).check();
       await page.getByRole('button', { name: 'Check answer', exact: true }).click();
       await expectNoInternalOverflow(page.locator('.feedback'));
+      await expectContainedBy(page.locator('.feedback-stamp'), page.locator('.feedback'), 0.97);
       await page.locator('.continue-button').click();
       await page.getByRole('button', { name: 'Show answer', exact: true }).click();
       await expectNoInternalOverflow(page.locator('.feedback'));
+      await expectContainedBy(page.locator('.feedback-stamp'), page.locator('.feedback'), 0.97);
       await open(page, `/study/${PLURAL_TOPIC}/plural-in-sentences`);
       await page.getByRole('button', { name: 'Show answer', exact: true }).click();
       await expectNoInternalOverflow(page.locator('.sentence-lesson'));
