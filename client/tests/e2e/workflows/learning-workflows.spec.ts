@@ -280,7 +280,7 @@ test('gives phones a full-width paper-only shell', async ({ page }, testInfo) =>
     expect(
       paperBox!.width - paperSpacing.paddingLeft - paperSpacing.paddingRight,
       `usable paper width at ${width}px`,
-    ).toBeGreaterThanOrEqual(width - 40);
+    ).toBeGreaterThanOrEqual(width - 44);
     expect(
       tabBoxes.every((tab) => tab.height >= 44),
       `touch targets at ${width}px`,
@@ -305,7 +305,7 @@ test('gives phones a full-width paper-only shell', async ({ page }, testInfo) =>
   );
 });
 
-test('keeps phone navigation and study actions within reach without changing tablet geometry', async ({
+test('keeps phone navigation in flow and study actions within reach without changing tablet geometry', async ({
   page,
 }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
@@ -314,8 +314,7 @@ test('keeps phone navigation and study actions within reach without changing tab
 
   const navigation = page.locator('.workbook-folder-tabs');
   const homeHero = page.locator('.hero');
-  await expect(navigation).toHaveCSS('position', 'sticky');
-  await expect(navigation).toHaveCSS('top', '0px');
+  await expect(navigation).toHaveCSS('position', 'static');
   await expect(navigation).toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
   await expect(navigation).toHaveCSS('box-shadow', 'none');
   await expect(homeHero).toHaveCSS('padding-top', '20px');
@@ -328,11 +327,12 @@ test('keeps phone navigation and study actions within reach without changing tab
 
   await page.evaluate(() => window.scrollTo(0, 1_000));
   await expect
-    .poll(async () => (await navigation.boundingBox())?.y ?? Number.POSITIVE_INFINITY)
-    .toBeLessThan(1);
+    .poll(async () => {
+      const box = await navigation.boundingBox();
+      return (box?.y ?? 0) + (box?.height ?? 0);
+    })
+    .toBeLessThanOrEqual(0);
   await expect(navigation.getByRole('link')).toHaveCount(2);
-  await navigation.getByRole('link', { name: 'Stats' }).focus();
-  await expect(navigation.getByRole('link', { name: 'Stats' })).toBeFocused();
 
   await page.goto(`/topics/${TOPIC_SEGMENT}`);
   const topicOverview = page.locator('.topic-overview');

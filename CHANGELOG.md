@@ -34,11 +34,13 @@
 
 ### Changed
 
+- Added a subtle 2-pixel breathing gap to both sides of routed phone content so text sits more comfortably inside the notebook ledger, and returned the phone Notebook/Stats row to normal page flow instead of keeping it sticky while scrolling. Tablet and desktop geometry remain unchanged.
+
 - Kept teacher feedback stamps fully inside their green, amber, or blue feedback slips so the mark remains visible instead of being clipped by the paper edge.
 
 - Expanded the phone reading area by showing the routed notebook paper without the surrounding folder cover, page clip, hardware, vertical dividers, or desk objects below the tablet breakpoint. Notebook and Stats remain available as a horizontal touch-friendly row, while the complete folder composition and geometry remain unchanged at tablet and desktop sizes.
 
-- Reduced phone-only vertical travel with tighter decorative section spacing, a ledger-safe content inset, compact 2×2 summary groups and right-aligned test status marks where space permits; kept the transparent-backed Notebook/Stats row reachable while scrolling; and kept current Study actions together in a safe-area-aware lower dock that returns to normal flow for enlarged text. Tablet and desktop spacing, summary geometry, badge placement, and action geometry remain unchanged.
+- Reduced phone-only vertical travel with tighter decorative section spacing, a ledger-safe content inset, compact 2×2 summary groups and right-aligned test status marks where space permits; kept the transparent-backed Notebook/Stats row in normal flow above the paper; and kept current Study actions together in a safe-area-aware lower dock that returns to normal flow for enlarged text. Tablet and desktop spacing, summary geometry, badge placement, and action geometry remain unchanged.
 
 - Reorganized the Angular client around the app's actual concepts: Topics, Lessons, Study, Stats, Learner data, and explicitly shared learning capabilities. Removed report-oriented production names in favor of derived progress summaries, moved learner state and IndexedDB under Learning ownership, separated unit and integration suites, grouped browser tests by concern, strengthened workflow-boundary enforcement and browser-server isolation, and added the aggregate client check to deployment CI without changing routes, stored data, bundled content, or learner behavior.
 
