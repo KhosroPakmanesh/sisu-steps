@@ -281,8 +281,11 @@ body::before {
 
 @keyframes pencil-sketch {
   from {
-    clip-path: inset(0 88% 0 0);
     transform: translateX(-0.4rem);
+  }
+
+  to {
+    transform: translateX(0.4rem);
   }
 }
 
@@ -332,6 +335,10 @@ body::before {
   }
 
   .desk-light {
+    animation: none;
+  }
+
+  .spinner {
     animation: none;
   }
 

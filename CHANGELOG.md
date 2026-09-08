@@ -134,6 +134,8 @@
 
 ### Fixed
 
+- Kept the loading pencil fully visible while it sketches with a restrained side-to-side motion, and made it static when reduced motion is requested.
+
 - Allow enlarged-text layouts to reflow the header and reduce notebook decoration spacing while preserving the default layout and requested text size.
 
 - Repaired UI consistency across narrow layouts (including feedback, sentence explanations, results, and empty states), clipped keyboard focus, destructive and correction actions, instructional typography, essential-label sizes, answer-choice spacing, and reduced motion; strengthened muted text on tinted paper and focus contrast on colored folder tabs; preserved the notebook shell, available lesson reading width, learning behavior, and local data.
