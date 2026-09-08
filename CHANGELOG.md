@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Right-aligned completed-lesson and test-status badges when they stack on mobile, and centered the catalog, topic, and lesson heroes' handwritten notebook annotations on mobile, while preserving tablet and desktop placement.
+
 - Kept typed Study and optional-practice answer lines within their mobile exercise sheets with explicit width containment and a small phone-only gap at the right edge.
 
 - Added a subtle 2-pixel breathing gap to both sides of routed phone content so text sits more comfortably inside the notebook ledger, and returned the phone Notebook/Stats row to normal page flow instead of keeping it sticky while scrolling. Tablet and desktop geometry remain unchanged.

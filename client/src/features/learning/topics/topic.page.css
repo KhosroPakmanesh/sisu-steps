@@ -296,6 +296,10 @@
     margin-top: var(--space-3);
   }
 
+  .topic-hero .notebook-note {
+    margin-inline: auto;
+  }
+
   .topic-actions {
     padding-bottom: var(--space-4);
   }
@@ -348,7 +352,9 @@
     }
 
     .test-title-row .score-badge {
-      margin-top: var(--space-2);
+      display: block;
+      width: fit-content;
+      margin: var(--space-2) 0 0 auto;
     }
   }
 }
