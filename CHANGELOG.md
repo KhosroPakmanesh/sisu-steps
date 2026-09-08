@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Compacted Topic test cards and Stats backup actions on phones by keeping each numbered marker beside its heading and copy, removing the otherwise empty marker row while leaving tablet and desktop layouts unchanged.
+
 - Right-aligned completed-lesson and test-status badges when they stack on mobile, and centered the catalog, topic, and lesson heroes' handwritten notebook annotations on mobile, while preserving tablet and desktop placement.
 
 - Kept typed Study and optional-practice answer lines within their mobile exercise sheets with explicit width containment and a small phone-only gap at the right edge.

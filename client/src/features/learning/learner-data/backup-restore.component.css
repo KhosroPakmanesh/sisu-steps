@@ -120,3 +120,20 @@
     grid-column: 1;
   }
 }
+
+@media (width < 48rem) {
+  @container workbook (width <= 26.25rem) {
+    .archive-action-row {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--space-3);
+    }
+
+    .archive-number {
+      align-self: start;
+    }
+
+    .archive-action-row > .button {
+      grid-column: 1 / -1;
+    }
+  }
+}

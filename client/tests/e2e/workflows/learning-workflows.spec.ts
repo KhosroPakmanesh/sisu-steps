@@ -1392,6 +1392,13 @@ test('keeps required content inside clipped surfaces at 320 pixels', async ({ pa
   ).toHaveLength(1);
   const firstTest = page.locator('.test-card').first();
   await expectNoInternalHorizontalOverflow(firstTest);
+  const [testNumberBox, testBodyBox] = await Promise.all([
+    firstTest.locator('.test-number').boundingBox(),
+    firstTest.locator('.test-body').boundingBox(),
+  ]);
+  expect(testNumberBox).not.toBeNull();
+  expect(testBodyBox).not.toBeNull();
+  expect(Math.abs(testNumberBox!.y - testBodyBox!.y)).toBeLessThanOrEqual(2);
   for (const content of [
     firstTest.locator('.test-number'),
     firstTest.locator('.test-body'),
@@ -1428,6 +1435,13 @@ test('keeps required content inside clipped surfaces at 320 pixels', async ({ pa
   await expectNoInternalHorizontalOverflow(archive);
   const firstArchiveRow = archive.locator('.archive-action-row').first();
   await expectNoInternalHorizontalOverflow(firstArchiveRow);
+  const [archiveNumberBox, archiveCopyBox] = await Promise.all([
+    firstArchiveRow.locator('.archive-number').boundingBox(),
+    firstArchiveRow.locator('div').boundingBox(),
+  ]);
+  expect(archiveNumberBox).not.toBeNull();
+  expect(archiveCopyBox).not.toBeNull();
+  expect(Math.abs(archiveNumberBox!.y - archiveCopyBox!.y)).toBeLessThanOrEqual(2);
   for (const content of [
     firstArchiveRow.locator('.archive-number'),
     firstArchiveRow.locator('div'),

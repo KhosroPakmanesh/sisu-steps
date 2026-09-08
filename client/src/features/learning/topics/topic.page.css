@@ -342,6 +342,19 @@
     margin-top: 0;
   }
 
+  @container workbook (width <= 26.25rem) {
+    .test-card {
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: var(--space-3);
+      padding: var(--space-4);
+    }
+
+    .test-actions {
+      grid-column: 1 / -1;
+      min-width: 0;
+    }
+  }
+
   @container workbook (width <= 20rem) {
     .topic-page .topic-overview {
       grid-template-columns: minmax(0, 1fr);
