@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Let Study question headings use the full exercise-sheet width so longer prompts avoid unnecessary wrapping while retaining responsive mobile reflow.
+
 - Removed the redundant mobile **History** label above each **Clear test history** button while retaining the action label and desktop ledger heading.
 
 - Compacted Topic test cards and Stats backup actions on phones by keeping each numbered marker beside its heading and copy, removing the otherwise empty marker row while leaving tablet and desktop layouts unchanged.
