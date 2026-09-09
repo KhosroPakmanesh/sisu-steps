@@ -134,6 +134,8 @@
 
 ### Fixed
 
+- Kept the right-side workbook clip's inner grip vertically centered with equal top and bottom spacing at tablet and desktop sizes.
+
 - Kept the loading pencil fully visible while it sketches with a restrained side-to-side motion, and made it static when reduced motion is requested.
 
 - Allow enlarged-text layouts to reflow the header and reduce notebook decoration spacing while preserving the default layout and requested text size.

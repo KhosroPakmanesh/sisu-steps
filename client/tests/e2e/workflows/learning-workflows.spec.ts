@@ -191,6 +191,14 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }, t
   expect(tabColors).toEqual(['rgb(90, 155, 213)', 'rgb(224, 185, 41)']);
   expect(clipBox?.x ?? 0).toBeGreaterThan((paperBox?.x ?? 0) + (paperBox?.width ?? 0) - 40);
   expect(clipBox?.width ?? 0).toBeGreaterThanOrEqual(viewportWidth <= 560 ? 22 : 34);
+  const clipGripInsets = await clip.evaluate((element) => {
+    const gripStyle = getComputedStyle(element, '::before');
+    return {
+      top: gripStyle.top,
+      bottom: gripStyle.bottom,
+    };
+  });
+  expect(clipGripInsets.top).toBe(clipGripInsets.bottom);
   const notebookNoteBox = await page.locator('.hero .notebook-note').boundingBox();
   expect(notebookNoteBox).not.toBeNull();
   expect((notebookNoteBox?.x ?? 0) + (notebookNoteBox?.width ?? 0)).toBeLessThanOrEqual(
