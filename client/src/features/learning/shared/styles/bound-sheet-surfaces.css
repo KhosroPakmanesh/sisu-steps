@@ -77,12 +77,35 @@ main.page-shell .topic-grid .topic-card {
     filter var(--motion-standard) ease;
 }
 
+main.page-shell .topic-grid .topic-card {
+  border: 1px dashed var(--border-brand);
+  border-radius: 0.08rem;
+  background:
+    linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px),
+    color-mix(in srgb, var(--surface-stationery) 42%, var(--surface-raised));
+  background-size: 1.5rem 1.5rem;
+  clip-path: polygon(0.2rem 0, 99% 0.18rem, 100% 97%, 98% 100%, 0 98%);
+  box-shadow:
+    0.3rem 0.32rem 0 var(--surface-subtle),
+    var(--shadow-small);
+  filter: none;
+  transform: rotate(-0.2deg);
+  transform-origin: 15% 0;
+}
+
 main.lesson-page .example-grid article:hover,
 main.page-shell .topic-grid .topic-card:hover,
 main.page-shell .topic-grid .topic-card:focus-within {
   filter: drop-shadow(0.22rem 0.3rem 0 var(--paper-edge))
     drop-shadow(0.38rem 0.52rem 0.55rem var(--notebook-shadow));
   transform: translateY(-0.25rem) rotate(0.12deg);
+}
+
+main.page-shell .topic-grid .topic-card:hover,
+main.page-shell .topic-grid .topic-card:focus-within {
+  filter: none;
+  transform: translateY(-0.3rem) rotate(0.08deg);
 }
 
 main.lesson-page .example-grid article::before,
@@ -103,7 +126,19 @@ main.page-shell .topic-grid .topic-card::before {
 }
 
 main.page-shell .topic-grid .topic-card::after {
-  content: none;
+  position: absolute;
+  top: -0.55rem;
+  left: 15%;
+  width: 5rem;
+  height: 1rem;
+  background: var(--paper-tape);
+  clip-path: polygon(2% 8%, 100% 0, 97% 96%, 0 100%);
+  content: '';
+  transform: rotate(-2deg);
+}
+
+main.page-shell .topic-grid .topic-card::before {
+  display: none;
 }
 
 main.lesson-page .lesson-vocabulary dl div {
