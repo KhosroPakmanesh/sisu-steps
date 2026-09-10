@@ -90,17 +90,17 @@ for (const appearance of ['Day', 'Night']) {
   });
 }
 
-test('migrates saved version 6.1 progress into the three successor packs', async ({ page }) => {
+test('resets stored learner data that references an unsupported pack', async ({ page }) => {
   test.setTimeout(60_000);
   await page.goto(`/topics/${topic}`);
   await expect(page.locator('.topic-overview')).toBeVisible();
   const when = '2026-09-05T12:00:00.000Z';
-  const legacy: LearnerState = {
+  const unsupported: LearnerState = {
     schemaVersion: 1,
     contentPackVersions: { 'vowel-harmony-kpt-tplural': '6.1.0' },
     attempts: [
       {
-        id: 'legacy-kpt-attempt',
+        id: 'unsupported-attempt',
         mode: 'test',
         topicId: 'vowel-harmony-kpt-tplural',
         testId: 'kpt-verbs',
@@ -109,6 +109,8 @@ test('migrates saved version 6.1 progress into the three successor packs', async
         completedAt: when,
         answers: [],
         correctCount: 0,
+        incorrectCount: 0,
+        skippedCount: 0,
         total: 0,
         percentage: 0,
       },
@@ -123,36 +125,31 @@ test('migrates saved version 6.1 progress into the three successor packs', async
       {
         topicId: 'vowel-harmony-kpt-tplural',
         lessonId: 'vowel-harmony-basics',
-        text: 'Keep this vowel note',
+        text: 'Discard this note',
         updatedAt: when,
       },
     ],
   };
-  await learnerState(page, legacy);
+  await learnerState(page, unsupported);
   await page.reload();
   await expect(page.locator('.topic-overview')).toBeVisible();
   await expect
     .poll(async () => (await learnerState(page)).contentPackVersions)
     .not.toHaveProperty('vowel-harmony-kpt-tplural');
 
-  const migrated = await learnerState(page);
-  expect(migrated.contentPackVersions).toMatchObject({
+  const reset = await learnerState(page);
+  expect(reset.contentPackVersions).toMatchObject({
     'vowel-harmony-location-endings': '1.0.0',
     'kpt-singular-forms': '1.0.0',
     't-plural-agreement': '1.0.0',
   });
-  expect(migrated.contentPackVersions).not.toHaveProperty('vowel-harmony-kpt-tplural');
-  expect(migrated.attempts).toEqual([
-    expect.objectContaining({ id: 'legacy-kpt-attempt', topicId: 'kpt-singular-forms' }),
-  ]);
-  expect(migrated.lessonCompletions).toHaveLength(1);
-  expect(migrated.learnerNotes).toEqual([
-    expect.objectContaining({
-      topicId: 'vowel-harmony-location-endings',
-      lessonId: 'vowel-harmony-basics',
-      text: 'Keep this vowel note',
-    }),
-  ]);
+  expect(reset.contentPackVersions).not.toHaveProperty('vowel-harmony-kpt-tplural');
+  expect(reset.attempts).toEqual([]);
+  expect(reset.sessions).toEqual([]);
+  expect(reset.unresolvedMistakeIds).toEqual([]);
+  expect(reset.lessonCompletions).toEqual([]);
+  expect(reset.correctionRecords).toEqual([]);
+  expect(reset.learnerNotes).toEqual([]);
 });
 
 async function learnerState(page: Page, replacement?: LearnerState): Promise<LearnerState> {

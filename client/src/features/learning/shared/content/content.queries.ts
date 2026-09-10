@@ -1,6 +1,13 @@
-import { Exercise, ExerciseTest, Lesson, TopicPack } from './content.models';
+import { Exercise, ExerciseTest, Lesson, TopicPack, TopicPackSummary } from './content.models';
 
 export function findPack(packs: TopicPack[], topicId: string): TopicPack | undefined {
+  return packs.find((pack) => pack.id === topicId);
+}
+
+export function findPackSummary(
+  packs: TopicPackSummary[],
+  topicId: string,
+): TopicPackSummary | undefined {
   return packs.find((pack) => pack.id === topicId);
 }
 
@@ -23,15 +30,14 @@ export function findLesson(packs: TopicPack[], lessonId: string): Lesson | undef
   return packs.flatMap((pack) => pack.lessons).find((lesson) => lesson.id === lessonId);
 }
 
-export function getLearningLevelLabel(packs: TopicPack[]): string {
+export function getLearningLevelLabel(packs: ReadonlyArray<{ level: string }>): string {
   const levels = [...new Set(packs.map((pack) => pack.level))];
   return `${levels.length === 1 ? 'Level' : 'Levels'}: ${levels.join(' · ')}`;
 }
 
-export function lessonsForTest(packs: TopicPack[], topicId: string, testId: string): Lesson[] {
-  const pack = findPack(packs, topicId);
-  const test = pack?.tests.find((candidate) => candidate.id === testId);
-  if (!pack || !test) return [];
+export function lessonsForTest(pack: TopicPack, testId: string): Lesson[] {
+  const test = pack.tests.find((candidate) => candidate.id === testId);
+  if (!test) return [];
   return [...new Set(test.lessonIds)]
     .map((lessonId) => pack.lessons.find((lesson) => lesson.id === lessonId))
     .filter((lesson): lesson is Lesson => lesson !== undefined);

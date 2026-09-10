@@ -3,16 +3,24 @@ import { TopicPack } from '@/features/learning/shared/content/content.models';
 import { alignLearnerStateWithPacks } from '@/features/learning/shared/state/align-learner-state.policy';
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
 import { learningPack } from '@testing/helpers/unit/learning-content.fixture';
+import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 
 describe('content-pack version alignment', () => {
-  it('migrates a compatible legacy single-pack state', () => {
-    const oldState = createEmptyLearnerState();
-    delete oldState.contentPackVersions;
-    oldState.contentPackVersion = '1.0.0';
+  it('resets all learner data when a stored pack is no longer supported', () => {
+    const oldState = createEmptyLearnerState({ topic: '1.0.0', 'removed-topic': '1.0.0' });
+    oldState.attempts = [completedAttempt('current-attempt', 'topic', 'test-1')];
+    oldState.unresolvedMistakeIds = ['exercise-1'];
+    oldState.learnerNotes = [
+      {
+        topicId: 'topic',
+        text: 'This current-topic data is intentionally reset too.',
+        updatedAt: '2026-08-18T00:00:00.000Z',
+      },
+    ];
 
-    expect(alignLearnerStateWithPacks(oldState, [learningPack]).contentPackVersions).toEqual({
-      topic: '1.0.0',
-    });
+    expect(alignLearnerStateWithPacks(oldState, [topicPackToSummary(learningPack)])).toEqual(
+      createEmptyLearnerState({ topic: '1.0.0' }),
+    );
   });
 
   it('preserves compatible data and records newly installed packs', () => {
@@ -20,7 +28,10 @@ describe('content-pack version alignment', () => {
     state.unresolvedMistakeIds = ['exercise-1'];
     const secondPack = renamedPack('topic-two', '2.0.0');
 
-    const aligned = alignLearnerStateWithPacks(state, [learningPack, secondPack]);
+    const aligned = alignLearnerStateWithPacks(
+      state,
+      [learningPack, secondPack].map(topicPackToSummary),
+    );
     expect(aligned.unresolvedMistakeIds).toEqual(['exercise-1']);
     expect(aligned.contentPackVersions).toEqual({ topic: '1.0.0', 'topic-two': '2.0.0' });
   });
@@ -41,10 +52,13 @@ describe('content-pack version alignment', () => {
       },
     ];
 
-    const aligned = alignLearnerStateWithPacks(state, [learningPack, secondPack]);
+    const aligned = alignLearnerStateWithPacks(
+      state,
+      [learningPack, secondPack].map(topicPackToSummary),
+    );
     expect(aligned.attempts.map((attempt) => attempt.id)).toEqual(['other-topic-attempt']);
     expect(aligned.unresolvedMistakeIds).toEqual(['topic-two-exercise-1']);
-    expect(aligned.learnerNotes?.map((note) => note.text)).toEqual(['Keep this topic note.']);
+    expect(aligned.learnerNotes.map((note) => note.text)).toEqual(['Keep this topic note.']);
   });
 });
 
@@ -81,6 +95,8 @@ function completedAttempt(id: string, topicId: string, testId: string) {
     completedAt: '2026-08-18T00:01:00.000Z',
     answers: [],
     correctCount: 1,
+    incorrectCount: 0,
+    skippedCount: 0,
     total: 1,
     percentage: 100,
   };

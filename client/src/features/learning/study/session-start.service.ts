@@ -1,11 +1,9 @@
 import { inject, Injectable } from '@angular/core';
 import { StudySession } from '../shared/state/learner-state.models';
-import { findExercise, findPack, findTest } from '../shared/content/content.queries';
 import {
   dueCorrections,
   findModeSession,
   findTestSession,
-  packExerciseIds,
 } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import { createStudySession } from './study-session.factory';
@@ -15,15 +13,15 @@ export class SessionStartService {
   private readonly store = inject(LearningStateStore);
 
   async getOrCreateTestSession(topicId: string, testId: string): Promise<StudySession> {
+    const loaded = await this.store.loadPack(topicId);
     const existing = findTestSession(this.store.learnerState(), topicId, testId);
     if (existing) return existing;
-    const test = findTest(this.store.packs(), topicId, testId);
-    const pack = findPack(this.store.packs(), topicId);
-    if (!test || !pack) throw new Error('That test does not exist.');
+    const test = loaded.testById.get(testId);
+    if (!test) throw new Error('That test does not exist.');
     return this.persist(
       createStudySession({
         mode: 'test',
-        topicId: pack.id,
+        topicId: loaded.pack.id,
         testId: test.id,
         title: test.title,
         exerciseIds: test.exercises.map((exercise) => exercise.id),
@@ -33,9 +31,8 @@ export class SessionStartService {
 
   async getOrCreateMistakeSession(topicId: string): Promise<StudySession | null> {
     const state = this.store.learnerState();
-    const pack = findPack(this.store.packs(), topicId);
-    if (!pack) throw new Error('The exercise pack has not loaded yet.');
-    const exerciseIds = packExerciseIds(pack);
+    const loaded = await this.store.loadPack(topicId);
+    const exerciseIds = new Set(loaded.exerciseById.keys());
     const validIds = state.unresolvedMistakeIds.filter((id) => exerciseIds.has(id));
     const existing = findModeSession(state, topicId, 'mistakes');
     if (existing) {
@@ -48,7 +45,7 @@ export class SessionStartService {
     return this.persist(
       createStudySession({
         mode: 'mistakes',
-        topicId: pack.id,
+        topicId: loaded.pack.id,
         title: 'Practice mistakes',
         exerciseIds: validIds,
       }),
@@ -58,20 +55,19 @@ export class SessionStartService {
 
   async getOrCreateReviewSession(topicId: string): Promise<StudySession | null> {
     const state = this.store.learnerState();
+    const loaded = await this.store.loadPack(topicId);
     const existing = findModeSession(state, topicId, 'review');
     if (existing) return existing;
-    const due = dueCorrections(state, this.store.packs(), topicId).filter(
+    const due = dueCorrections(state, this.store.packSummaries(), topicId).filter(
       (record) =>
         record.exerciseId !== record.parallelExerciseId &&
-        findExercise(this.store.packs(), record.parallelExerciseId) !== undefined,
+        loaded.exerciseById.has(record.parallelExerciseId),
     );
     if (due.length === 0) return null;
-    const pack = findPack(this.store.packs(), topicId);
-    if (!pack) throw new Error('The exercise pack has not loaded yet.');
     return this.persist(
       createStudySession({
         mode: 'review',
-        topicId: pack.id,
+        topicId: loaded.pack.id,
         title: 'Review due',
         exerciseIds: due.map((record) => record.parallelExerciseId),
         sourceExerciseIds: due.map((record) => record.exerciseId),

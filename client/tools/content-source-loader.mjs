@@ -14,6 +14,8 @@ const PACK_MANIFEST_KEYS = new Set([
   'sources',
   'lessonIds',
   'testIds',
+  'lessonSummaries',
+  'testSummaries',
 ]);
 
 const isRecord = (value) => typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -109,6 +111,23 @@ function validateGlobalContentIds(packs) {
   }
 }
 
+function validateManifestSummaries(manifest, lessons, tests) {
+  const expectedLessons = lessons.map(({ id, version }) => ({ id, version }));
+  const expectedTests = tests.map(({ id, title, stage, lessonIds, exercises }) => ({
+    id,
+    title,
+    stage,
+    lessonIds,
+    exerciseIds: exercises.map((exercise) => exercise.id),
+  }));
+  if (
+    JSON.stringify(manifest.lessonSummaries) !== JSON.stringify(expectedLessons) ||
+    JSON.stringify(manifest.testSummaries) !== JSON.stringify(expectedTests)
+  ) {
+    throw new Error(`Pack ${manifest.id} manifest summaries do not match their source fragments.`);
+  }
+}
+
 export async function loadContentSource(sourceDirectory) {
   const sourceRoot = resolve(sourceDirectory);
   const catalog = await readJson(join(sourceRoot, 'index.json'), 'source catalog');
@@ -137,9 +156,12 @@ export async function loadContentSource(sourceDirectory) {
     const testIds = requireSafeIds(manifest.testIds, `Pack ${packId} testIds`);
     const lessons = await loadOwnedCollection(packDirectory, 'lessons', lessonIds, 'Lesson');
     const tests = await loadOwnedCollection(packDirectory, 'tests', testIds, 'Learning test');
+    validateManifestSummaries(manifest, lessons, tests);
     const metadata = { ...manifest };
     delete metadata.lessonIds;
     delete metadata.testIds;
+    delete metadata.lessonSummaries;
+    delete metadata.testSummaries;
     packs.push({ ...metadata, lessons, tests });
   }
 

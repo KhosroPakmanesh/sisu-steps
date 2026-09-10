@@ -14,7 +14,7 @@ The production version is available here:
 
 I am someone who needs a lot of practice to learn—sometimes more practice than many other people. I wanted a notebook where I could repeat Finnish exercises, understand my mistakes immediately, return to difficult topics, and practise as much as I need without being limited to a small set of examples.
 
-Sisu Steps is therefore designed as an interactive exercise book rather than a conventional course. Each topic pack owns its lessons, tests, and content version, while the app tracks progress, mistakes, reviews, and learning history separately for that pack. Stats derives summaries from that history; there is no separate report record. The first pack contains 200 Pre-A1–A1.3 grammar-foundation exercises covering vowel harmony, KPT consonant gradation, and the nominative T-plural.
+Sisu Steps is therefore designed as an interactive exercise book rather than a conventional course. Each topic pack owns its lessons, tests, and content version, while the app tracks progress, mistakes, reviews, and learning history separately for that pack. Stats derives summaries from that history; there is no separate report record. The six installed `0 - A1.3` packs currently contain 1,090 scored exercises across personal pronouns and present-tense `olla`, vowel harmony and location endings, KPT singular forms, and T-plural agreement.
 
 ## Content accuracy and contributing
 
@@ -48,7 +48,7 @@ flowchart LR
 
 Lessons, tests, exercises, answers, and explanations are stored as versioned JSON files under `client/content/`. They are not written inside Angular pages or visual components.
 
-When the app starts, a general-purpose content loader reads these files, checks that they are valid, and builds an in-memory learning model. The Angular presentation code receives that model and displays it using reusable pages and workbook components.
+When the app starts, a general-purpose content loader reads the catalog and compact pack manifests. It reads, validates, and builds a complete in-memory learning model for a pack only when that pack is opened, retaining at most two complete packs. The Angular presentation code receives that model and displays it using reusable pages and workbook components.
 
 This means Finnish content can be corrected or expanded without building a new screen for every topic. The visual design can also change without rewriting the learning material.
 
@@ -158,9 +158,9 @@ The layout uses container-based responsive rules that also react to enlarged tex
 
 ### Local state and recovery
 
-IndexedDB is the application's only runtime database. It stores learner progress but never stores the authored Finnish content. When the app starts, it loads content and progress and checks that saved progress still matches the installed content versions. For normal versioned data, changing one pack clears only that pack's incompatible progress; references to removed content are also cleaned up.
+IndexedDB is the application's only runtime database. It stores learner progress but never stores the authored Finnish content. When the app starts, it loads pack summaries and progress and checks that saved progress still matches the installed content versions. Changing an installed pack clears that pack's incompatible progress. An obsolete state shape or a version entry for a removed pack resets the complete learner state instead of migrating it.
 
-The learner can export and restore a versioned JSON backup. Before replacing existing progress, the app checks the backup format and export time, content versions, correction and note records, and references to installed topics, tests, exercises, and lessons.
+The learner can export and restore a versioned JSON backup. Before replacing existing progress, the app requires the complete current format and exact installed pack versions, then checks the export time, correction and note records, and references to installed topics, tests, exercises, and lessons. Unsupported backups are rejected without changing current progress.
 
 ### Technology and automated checks
 

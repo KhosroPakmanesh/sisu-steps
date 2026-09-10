@@ -2,6 +2,7 @@
 
 - Treat root `specs/constitution.md` and root product features as the product contract. Treat `client/specs/constitution.md`, its linked client architecture/design guidance, and client technical feature specs as the client implementation contract.
 - Keep the client usable for core study, scoring, history, and progress statistics without a backend dependency.
+- Do not introduce backward-compatibility shims, legacy aliases, fallback readers, transitional dual formats, or one-off migrations for obsolete client state, backups, content, routes, or APIs. When a breaking client change makes existing local progress or data incompatible, prefer explicitly resetting, discarding, or rejecting that data and remove the obsolete path. Record the intentional data loss in the governing specification and root `CHANGELOG.md` before implementation.
 - Use Angular standalone components, strict TypeScript, native browser APIs, IndexedDB, versioned bundled JSON, and plain CSS.
 - Keep the Angular application, tests, build configuration, content tooling, and client technical guidance under `client/`.
 - Organize production code by `app`, `features`, `design-system`, and `shared` ownership. Within Learning, choose the learner workflow before a technical role. Follow `src/AGENTS.md` for source-specific rules.

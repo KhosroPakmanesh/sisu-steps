@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { LearnerBackup } from './backup.models';
 import { LearningStateStore } from '../shared/state/learning-state.store';
-import { compatibleBackupState } from './backup-compatibility.policy';
+import { validatedBackupState } from './backup-state-validation.policy';
 import { parseLearnerBackup } from './learner-backup.validator';
 
 @Injectable({ providedIn: 'root' })
@@ -19,6 +19,6 @@ export class BackupService {
 
   async restore(value: unknown): Promise<void> {
     const backup = parseLearnerBackup(value);
-    await this.store.replace(compatibleBackupState(backup, this.store.packs()));
+    await this.store.replace(validatedBackupState(backup, await this.store.loadAllPacks()));
   }
 }

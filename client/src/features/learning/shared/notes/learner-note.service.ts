@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { LearnerNote, LearnerState } from '../state/learner-state.models';
-import { findPack } from '../content/content.queries';
+import { findPackSummary } from '../content/content.queries';
 import { LearningStateStore } from '../state/learning-state.store';
 
 export const MAX_LEARNER_NOTE_LENGTH = 1000;
@@ -10,9 +10,7 @@ export function findLearnerNote(
   topicId: string,
   lessonId?: string,
 ): LearnerNote | undefined {
-  return (state.learnerNotes ?? []).find(
-    (note) => note.topicId === topicId && note.lessonId === lessonId,
-  );
+  return state.learnerNotes.find((note) => note.topicId === topicId && note.lessonId === lessonId);
 }
 
 @Injectable({ providedIn: 'root' })
@@ -35,7 +33,7 @@ export class LearnerNoteService {
     await this.store.commit((state) => ({
       ...state,
       learnerNotes: [
-        ...(state.learnerNotes ?? []).filter(
+        ...state.learnerNotes.filter(
           (item) => item.topicId !== topicId || item.lessonId !== lessonId,
         ),
         ...(note ? [note] : []),
@@ -45,7 +43,7 @@ export class LearnerNoteService {
   }
 
   private validateScope(topicId: string, lessonId?: string): void {
-    const pack = findPack(this.store.packs(), topicId);
+    const pack = findPackSummary(this.store.packSummaries(), topicId);
     if (!pack) throw new Error('This note no longer belongs to an installed topic.');
     if (lessonId && !pack.lessons.some((lesson) => lesson.id === lessonId)) {
       throw new Error('This note no longer belongs to an installed lesson.');

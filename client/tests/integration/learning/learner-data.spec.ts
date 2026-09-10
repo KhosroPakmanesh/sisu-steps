@@ -14,18 +14,32 @@ describe('learner-data workflow', () => {
 
   it('stores shared versioned lesson completion and clears it only with the topic', async () => {
     expect(
-      lessonProgressForTest(context.store.learnerState(), context.store.packs(), 'topic', 'test-1'),
+      lessonProgressForTest(
+        context.store.learnerState(),
+        context.store.packSummaries(),
+        'topic',
+        'test-1',
+      ),
     ).toEqual({ completed: 0, total: 1 });
-    await context.lessons.completeLesson('lesson-1');
+    await context.lessons.completeLesson('topic', 'lesson-1');
     await context.clearing.clearTest('topic', 'test-1');
     expect(
-      lessonProgressForTest(context.store.learnerState(), context.store.packs(), 'topic', 'test-2'),
+      lessonProgressForTest(
+        context.store.learnerState(),
+        context.store.packSummaries(),
+        'topic',
+        'test-2',
+      ),
     ).toEqual({ completed: 1, total: 1 });
 
     await context.clearing.clearTopic('topic');
     expect(
-      lessonProgressForTest(context.store.learnerState(), context.store.packs(), 'topic', 'test-2')
-        .completed,
+      lessonProgressForTest(
+        context.store.learnerState(),
+        context.store.packSummaries(),
+        'topic',
+        'test-2',
+      ).completed,
     ).toBe(0);
   });
 
@@ -41,7 +55,7 @@ describe('learner-data workflow', () => {
     expect(context.store.learnerState().learnerNotes).toEqual([]);
 
     await context.backups.restore(backup);
-    expect(context.store.learnerState().learnerNotes?.map((note) => note.text)).toEqual([
+    expect(context.store.learnerState().learnerNotes.map((note) => note.text)).toEqual([
       'Review vowel harmony.',
       'Remember the back vowels.',
     ]);
@@ -79,7 +93,7 @@ describe('learner-data workflow', () => {
     missingVersion.state.contentPackVersions = {};
     missingVersion.state.unresolvedMistakeIds = ['exercise-1'];
     await expect(context.backups.restore(missingVersion)).rejects.toThrowError(
-      'This backup does not identify the exercise-pack versions it uses.',
+      'This backup belongs to a different exercise-pack version.',
     );
 
     const incompatible = context.backups.create();

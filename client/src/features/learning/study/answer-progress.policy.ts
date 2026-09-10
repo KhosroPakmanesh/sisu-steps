@@ -14,7 +14,7 @@ export function recordSubmittedAnswer(
   answer: SubmittedAnswer,
 ): LearnerState {
   const mistakes = new Set(state.unresolvedMistakeIds);
-  let corrections = [...(state.correctionRecords ?? [])];
+  let corrections = [...state.correctionRecords];
 
   if (session.mode === 'review') {
     corrections = updateReviewCorrection(corrections, session, answer);

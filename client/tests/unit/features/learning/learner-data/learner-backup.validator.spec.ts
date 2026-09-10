@@ -35,7 +35,7 @@ describe('learner-backup validation', () => {
           unresolvedMistakeIds: [],
         }),
       ),
-    ).toThrowError('This file is not a supported Finnish exercise-book backup.');
+    ).toThrowError('This backup uses an unsupported learner-data format.');
   });
 
   it('accepts versioned lesson completion data', () => {
@@ -56,13 +56,13 @@ describe('learner-backup validation', () => {
           lessonCompletions: [{ lessonId: 3 }],
         }),
       ),
-    ).toThrowError('The backup contains invalid lesson completion data.');
+    ).toThrowError('This backup uses an unsupported learner-data format.');
   });
 
-  it('rejects a malformed content-pack version', () => {
+  it('rejects the obsolete single-pack learner-data format', () => {
     expect(() =>
       parseLearnerBackup(backupWithState({ ...createEmptyLearnerState(), contentPackVersion: 2 })),
-    ).toThrowError('The backup contains an invalid content-pack version.');
+    ).toThrowError('This backup uses an unsupported learner-data format.');
   });
 
   it('accepts versioned correction and mastery data', () => {
@@ -91,7 +91,7 @@ describe('learner-backup validation', () => {
           correctionRecords: [{ exerciseId: 'one', reviewStage: 9 }],
         }),
       ),
-    ).toThrowError('The backup contains invalid correction and mastery data.');
+    ).toThrowError('This backup uses an unsupported learner-data format.');
   });
 
   it('accepts valid topic and lesson notes', () => {
@@ -118,12 +118,12 @@ describe('learner-backup validation', () => {
       { topicId: 'topic', text: 'Duplicate', updatedAt: exportedAt },
     ];
     expect(() => parseLearnerBackup(backupWithState(state))).toThrowError(
-      'The backup contains duplicate learner notes.',
+      'This backup uses an unsupported learner-data format.',
     );
 
     state.learnerNotes = [{ topicId: 'topic', text: 'x'.repeat(1001), updatedAt: exportedAt }];
     expect(() => parseLearnerBackup(backupWithState(state))).toThrowError(
-      'The backup contains invalid learner notes.',
+      'This backup uses an unsupported learner-data format.',
     );
   });
 });

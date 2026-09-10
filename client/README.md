@@ -53,7 +53,7 @@ Start with `AGENTS.md`, `src/AGENTS.md`, and `specs/README.md`. Client review re
 
 Authored packs are registered in `content/index.json`. Each pack owns a same-named folder containing `pack.json`, one JSON file per reusable lesson under `lessons/`, and one JSON file per authored learning test under `tests/`.
 
-`content/` is the only persisted content tree. Angular copies it unchanged to the deployed `/content/` path. At startup, the generic content service loads the catalog, each pack manifest, and its referenced lesson and test files; validates their identities and schemas; and assembles the existing runtime pack model in browser memory. Presentation components receive only that generic assembled model.
+`content/` is the only persisted content tree. Angular copies it unchanged to the deployed `/content/` path. At startup, the generic content service loads the catalog and each pack manifest. It loads, assembles, and validates a pack's lesson and test files only when that pack is opened, retaining at most two complete packs in memory. Presentation components receive only the generic assembled model.
 
 ```powershell
 npm --prefix client run content:validate
@@ -65,4 +65,4 @@ Product-level content policy and pedagogy records remain under root `specs/`. Th
 
 Progress is stored in IndexedDB under the browser origin serving the client. A different hostname, port, or deployment URL has separate browser storage. The client provides explicit JSON backup, restore, and scoped clearing controls.
 
-Adding a topic pack preserves existing progress. A materially changed pack version clears only that pack's incompatible local progress once, and backups require compatible installed pack versions.
+Adding a topic pack preserves current-format progress. A materially changed installed pack clears only that pack's incompatible local progress. A stored state containing an obsolete shape or removed pack resets completely, and backups must use the complete current state format and exact installed pack versions.

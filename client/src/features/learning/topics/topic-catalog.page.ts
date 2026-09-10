@@ -23,17 +23,19 @@ import {
 export class TopicCatalogPage {
   protected readonly store = inject(LearningStateStore);
   protected readonly paths = learningPaths;
-  protected readonly exerciseCount = computed(() => exerciseCount(this.store.packs()));
+  protected readonly exerciseCount = computed(() => exerciseCount(this.store.packSummaries()));
   protected readonly attemptCount = computed(() =>
     completedAttemptCount(this.store.learnerState()),
   );
   protected readonly average = computed(() => overallAverage(this.store.learnerState()));
   protected readonly topicSummaries = computed(() =>
-    getTopicSummaries(this.store.learnerState(), this.store.packs()),
+    getTopicSummaries(this.store.learnerState(), this.store.packSummaries()),
   );
-  protected readonly catalogLevelLabel = computed(() => getLearningLevelLabel(this.store.packs()));
+  protected readonly catalogLevelLabel = computed(() =>
+    getLearningLevelLabel(this.store.packSummaries()),
+  );
   protected readonly continueTarget = computed(() =>
-    getContinueLearningTarget(this.store.learnerState(), this.store.packs()),
+    getContinueLearningTarget(this.store.learnerState(), this.store.packSummaries()),
   );
 
   protected continuePath(target: ContinueLearningTarget): readonly string[] {

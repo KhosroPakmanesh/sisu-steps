@@ -3,8 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
 import { CompletedAttempt } from '../shared/state/learner-state.models';
-import { Exercise } from '../shared/content/content.models';
-import { findExercise, findPack, findTest } from '../shared/content/content.queries';
+import { Exercise, LoadedTopicPack } from '../shared/content/content.models';
+import { findPackSummary } from '../shared/content/content.queries';
 import { findSession, mistakeCount } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import { SessionAnswerService } from './session-answer.service';
@@ -23,6 +23,7 @@ export class StudyPage implements OnInit {
   protected readonly store = inject(LearningStateStore);
   protected readonly paths = learningPaths;
   protected readonly sessionId = signal<string | null>(null);
+  protected readonly loadedPack = signal<LoadedTopicPack | null>(null);
   protected readonly response = signal('');
   protected readonly selectedTokenIndexes = signal<number[]>([]);
   protected readonly pageError = signal<string | null>(null);
@@ -37,14 +38,12 @@ export class StudyPage implements OnInit {
   protected readonly exercise = computed(() => {
     const session = this.session();
     return session
-      ? findExercise(this.store.packs(), session.exerciseIds[session.currentIndex])
+      ? this.loadedPack()?.exerciseById.get(session.exerciseIds[session.currentIndex])
       : undefined;
   });
   protected readonly activeTest = computed(() => {
     const session = this.session();
-    return session?.testId
-      ? findTest(this.store.packs(), session.topicId, session.testId)
-      : undefined;
+    return session?.testId ? this.loadedPack()?.testById.get(session.testId) : undefined;
   });
   protected readonly feedback = computed(() => {
     const session = this.session();
@@ -66,6 +65,7 @@ export class StudyPage implements OnInit {
     try {
       const mode = this.route.snapshot.data['mode'];
       const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';
+      this.loadedPack.set(await this.store.loadPack(topicId));
       const session =
         mode === 'mistakes'
           ? await this.sessionStart.getOrCreateMistakeSession(topicId)
@@ -99,7 +99,10 @@ export class StudyPage implements OnInit {
   }
 
   protected mistakeCountForTopic(topicId: string): number {
-    return mistakeCount(this.store.learnerState(), findPack(this.store.packs(), topicId));
+    return mistakeCount(
+      this.store.learnerState(),
+      findPackSummary(this.store.packSummaries(), topicId),
+    );
   }
 
   protected chooseToken(index: number): void {

@@ -34,7 +34,11 @@ describe('study progress workflow', () => {
     const attempt = await context.answers.advanceSession(session.id);
     expect(attempt?.percentage).toBe(100);
     expect(
-      getTestProgress(context.store.learnerState(), context.store.packs()[0], 'test-1'),
+      getTestProgress(
+        context.store.learnerState(),
+        (await context.store.loadPack('topic')).pack,
+        'test-1',
+      ),
     ).toMatchObject({ attempts: 1, latest: 100, best: 100, average: 100 });
   });
 

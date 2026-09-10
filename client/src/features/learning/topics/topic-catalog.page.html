@@ -1,4 +1,4 @@
-<main class="page-shell">
+<main class="page-shell" [class.loading-page]="store.loading()">
   @if (store.loading()) {
     <section class="state-card" aria-live="polite">
       <span class="spinner" aria-hidden="true"></span>
@@ -11,7 +11,7 @@
       <p>{{ store.error() }}</p>
       <button class="button primary" type="button" (click)="store.initialize()">Try again</button>
     </section>
-  } @else if (store.packs().length > 0) {
+  } @else if (store.packSummaries().length > 0) {
     <section class="hero">
       <div>
         <p class="eyebrow">Your Finnish workbook</p>
@@ -41,8 +41,8 @@
 
     <section class="catalog-stats" aria-label="Learning overview">
       <div>
-        <strong>{{ store.packs().length }}</strong>
-        <span>{{ store.packs().length === 1 ? 'topic pack' : 'topic packs' }}</span>
+        <strong>{{ store.packSummaries().length }}</strong>
+        <span>{{ store.packSummaries().length === 1 ? 'topic pack' : 'topic packs' }}</span>
       </div>
       <div>
         <strong>{{ exerciseCount() }}</strong>

@@ -36,7 +36,7 @@
 
   <app-backup-restore />
 
-  @if (store.packs().length > 0) {
+  @if (store.packSummaries().length > 0) {
     <section class="topic-catalog stats-catalog" aria-labelledby="topic-stats-heading">
       <header class="section-heading">
         <div>
@@ -48,7 +48,7 @@
 
       <div class="topic-grid">
         <p class="card-kicker">{{ catalogLevelLabel() }}</p>
-        @for (pack of store.packs(); track pack.id) {
+        @for (pack of store.packSummaries(); track pack.id) {
           <article class="topic-card stats-topic-card">
             <header>
               <h3>{{ pack.title }}</h3>

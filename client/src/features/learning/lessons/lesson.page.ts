@@ -2,7 +2,7 @@ import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
 import { ExerciseTest, Lesson } from '../shared/content/content.models';
-import { findTest, lessonsForTest } from '../shared/content/content.queries';
+import { lessonsForTest } from '../shared/content/content.queries';
 import { isLessonCompleted } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import { StickyNoteComponent } from '../shared/notes/sticky-note.component';
@@ -37,12 +37,21 @@ export class LessonPage implements OnInit {
     if (this.store.error()) return;
     const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';
     const testId = this.route.snapshot.paramMap.get('testId') ?? '';
-    const test = findTest(this.store.packs(), topicId, testId);
+    let loaded;
+    try {
+      loaded = await this.store.loadPack(topicId);
+    } catch (error) {
+      this.pageError.set(
+        error instanceof Error ? error.message : 'That topic pack could not load.',
+      );
+      return;
+    }
+    const test = loaded.testById.get(testId);
     if (!test) {
       this.pageError.set('That test could not be found.');
       return;
     }
-    const lessons = lessonsForTest(this.store.packs(), topicId, test.id);
+    const lessons = lessonsForTest(loaded.pack, test.id);
     if (lessons.length === 0) {
       this.pageError.set('The preparation lessons for this test could not be found.');
       return;
@@ -74,7 +83,9 @@ export class LessonPage implements OnInit {
     this.busy.set(true);
     this.pageError.set(null);
     try {
-      if (!this.isCompleted(lesson)) await this.lessonProgress.completeLesson(lesson.id);
+      if (!this.isCompleted(lesson)) {
+        await this.lessonProgress.completeLesson(this.topicId(), lesson.id);
+      }
       if (this.lessonIndex() < this.lessons().length - 1) {
         this.openLesson(this.lessonIndex() + 1);
       } else this.preparationFinished.set(true);

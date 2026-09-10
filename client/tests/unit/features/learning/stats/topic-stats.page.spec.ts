@@ -28,7 +28,7 @@ describe('TopicStatsPage', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(TopicStatsPage);
     fixture.detectChanges();
-    await fixture.whenStable();
+    await fixture.componentInstance.ngOnInit();
     fixture.detectChanges();
   });
 

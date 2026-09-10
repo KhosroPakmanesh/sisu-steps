@@ -6,8 +6,8 @@ import {
   ConfirmationSheetComponent,
   ConfirmationSheetRequest,
 } from '../learner-data/confirmation-sheet.component';
-import { TopicPack } from '../shared/content/content.models';
-import { findPack } from '../shared/content/content.queries';
+import { TopicPack, TopicPackSummary } from '../shared/content/content.models';
+import { findPackSummary } from '../shared/content/content.queries';
 import {
   completedAttemptCount,
   correctionCount,
@@ -39,6 +39,7 @@ export class TopicStatsPage implements OnInit {
   protected readonly store = inject(LearningStateStore);
   protected readonly paths = learningPaths;
   protected readonly pack = signal<TopicPack | null>(null);
+  protected readonly packSummary = signal<TopicPackSummary | null>(null);
   protected readonly pageError = signal<string | null>(null);
   protected readonly message = signal<string | null>(null);
   protected readonly error = signal<string | null>(null);
@@ -51,25 +52,32 @@ export class TopicStatsPage implements OnInit {
     this.pack() ? overallAverage(this.store.learnerState(), this.pack()!.id) : null,
   );
   protected readonly unresolvedMistakes = computed(() =>
-    this.pack() ? mistakeCount(this.store.learnerState(), this.pack()!) : 0,
+    this.packSummary() ? mistakeCount(this.store.learnerState(), this.packSummary()!) : 0,
   );
   protected readonly correctedCount = computed(() =>
-    this.pack() ? correctionCount(this.store.learnerState(), false, this.pack()!) : 0,
+    this.packSummary() ? correctionCount(this.store.learnerState(), false, this.packSummary()!) : 0,
   );
   protected readonly masteredCount = computed(() =>
-    this.pack() ? correctionCount(this.store.learnerState(), true, this.pack()!) : 0,
+    this.packSummary() ? correctionCount(this.store.learnerState(), true, this.packSummary()!) : 0,
   );
 
   async ngOnInit(): Promise<void> {
     await this.store.ready;
     if (this.store.error()) return;
     const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';
-    const pack = findPack(this.store.packs(), topicId);
-    if (!pack) {
+    const summary = findPackSummary(this.store.packSummaries(), topicId);
+    if (!summary) {
       this.pageError.set('That topic pack could not be found.');
       return;
     }
-    this.pack.set(pack);
+    try {
+      this.pack.set((await this.store.loadPack(topicId)).pack);
+      this.packSummary.set(summary);
+    } catch (error) {
+      this.pageError.set(
+        error instanceof Error ? error.message : 'That topic pack could not load.',
+      );
+    }
   }
 
   protected testProgress(pack: TopicPack, testId: string) {

@@ -22,15 +22,27 @@ const manifest = (id: string, lessonIds: string[], testIds: string[]): unknown =
   sources: [],
   lessonIds,
   testIds,
+  lessonSummaries: lessonIds.map((lessonId) => ({ id: lessonId, version: '1.0.0' })),
+  testSummaries: testIds.map((testId) => ({
+    id: testId,
+    title: testId,
+    stage: 'focused',
+    lessonIds: [lessonIds[0]],
+    exerciseIds: [testId.replace(/test$/u, 'exercise')],
+  })),
 });
 
 const lesson = (id: string, practiceId: string): unknown => ({
   id,
+  version: '1.0.0',
   practiceExercises: [{ id: practiceId }],
 });
 
-const learningTest = (id: string, exerciseId: string): unknown => ({
+const learningTest = (id: string, exerciseId: string, lessonId: string): unknown => ({
   id,
+  title: id,
+  stage: 'focused',
+  lessonIds: [lessonId],
   exercises: [{ id: exerciseId }],
 });
 
@@ -42,10 +54,14 @@ function twoPackFixture(sharedLessonId = false): ContentSourceFixtureDefinition 
       'index.json': catalog(['alpha-pack', 'beta-pack']),
       'alpha-pack/pack.json': manifest('alpha-pack', [alphaLessonId], ['alpha-test']),
       [`alpha-pack/lessons/${alphaLessonId}.json`]: lesson(alphaLessonId, 'alpha-practice'),
-      'alpha-pack/tests/alpha-test.json': learningTest('alpha-test', 'alpha-exercise'),
+      'alpha-pack/tests/alpha-test.json': learningTest(
+        'alpha-test',
+        'alpha-exercise',
+        alphaLessonId,
+      ),
       'beta-pack/pack.json': manifest('beta-pack', [betaLessonId], ['beta-test']),
       [`beta-pack/lessons/${betaLessonId}.json`]: lesson(betaLessonId, 'beta-practice'),
-      'beta-pack/tests/beta-test.json': learningTest('beta-test', 'beta-exercise'),
+      'beta-pack/tests/beta-test.json': learningTest('beta-test', 'beta-exercise', betaLessonId),
     },
   };
 }
@@ -81,10 +97,20 @@ describe('pack-owned content source loader', () => {
     expect(source.catalog.packs).toEqual(['alpha-pack', 'beta-pack']);
     expect(source.packs.map((pack) => pack['id'])).toEqual(['alpha-pack', 'beta-pack']);
     expect(source.packs[0]['lessons']).toEqual([
-      { id: 'alpha-lesson', practiceExercises: [{ id: 'alpha-practice' }] },
+      {
+        id: 'alpha-lesson',
+        version: '1.0.0',
+        practiceExercises: [{ id: 'alpha-practice' }],
+      },
     ]);
     expect(source.packs[0]['tests']).toEqual([
-      { id: 'alpha-test', exercises: [{ id: 'alpha-exercise' }] },
+      {
+        id: 'alpha-test',
+        title: 'alpha-test',
+        stage: 'focused',
+        lessonIds: ['alpha-lesson'],
+        exercises: [{ id: 'alpha-exercise' }],
+      },
     ]);
   });
 
@@ -163,6 +189,36 @@ describe('pack-owned content source loader', () => {
   it('rejects stable IDs duplicated across pack-owned content', async () => {
     await expect(loadContentSource(await materialize(twoPackFixture(true)))).rejects.toThrow(
       'Content ID shared-lesson is used by both alpha-pack lesson and beta-pack lesson.',
+    );
+  });
+
+  it('rejects manifest summaries that drift from their source fragments', async () => {
+    const packManifest = manifest('alpha-pack', ['alpha-lesson'], ['alpha-test']) as Record<
+      string,
+      unknown
+    >;
+    packManifest['testSummaries'] = [
+      {
+        id: 'alpha-test',
+        title: 'Stale title',
+        stage: 'focused',
+        lessonIds: ['alpha-lesson'],
+        exerciseIds: ['alpha-exercise'],
+      },
+    ];
+    const fixture = await materialize(
+      singlePackFixture(packManifest, {
+        'alpha-pack/lessons/alpha-lesson.json': lesson('alpha-lesson', 'alpha-practice'),
+        'alpha-pack/tests/alpha-test.json': learningTest(
+          'alpha-test',
+          'alpha-exercise',
+          'alpha-lesson',
+        ),
+      }),
+    );
+
+    await expect(loadContentSource(fixture)).rejects.toThrow(
+      'Pack alpha-pack manifest summaries do not match their source fragments.',
     );
   });
 

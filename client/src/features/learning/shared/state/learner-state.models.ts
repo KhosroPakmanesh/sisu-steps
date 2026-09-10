@@ -15,7 +15,7 @@ export interface SubmittedAnswer {
   exerciseId: string;
   submittedAnswer: string;
   correct: boolean;
-  skipped?: boolean;
+  skipped: boolean;
   misconceptionCategory?: string;
   diagnosticExplanation?: string;
   answeredAt: string;
@@ -59,21 +59,19 @@ export interface CompletedAttempt {
   answers: SubmittedAnswer[];
   sourceExerciseIds?: string[];
   correctCount: number;
-  incorrectCount?: number;
-  skippedCount?: number;
+  incorrectCount: number;
+  skippedCount: number;
   total: number;
   percentage: number;
 }
 
 export interface LearnerState {
   schemaVersion: 1;
-  contentPackVersions?: Record<string, string>;
-  /** Legacy single-pack field accepted for migration and old backups. */
-  contentPackVersion?: string;
+  contentPackVersions: Record<string, string>;
   attempts: CompletedAttempt[];
   sessions: StudySession[];
   unresolvedMistakeIds: string[];
-  lessonCompletions?: LessonCompletion[];
-  correctionRecords?: CorrectionRecord[];
-  learnerNotes?: LearnerNote[];
+  lessonCompletions: LessonCompletion[];
+  correctionRecords: CorrectionRecord[];
+  learnerNotes: LearnerNote[];
 }

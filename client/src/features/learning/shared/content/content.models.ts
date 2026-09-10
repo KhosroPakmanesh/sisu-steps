@@ -97,6 +97,19 @@ export interface ContentCatalog {
   packs: string[];
 }
 
+export interface ContentLessonSummary {
+  id: string;
+  version: string;
+}
+
+export interface ContentTestSummary {
+  id: string;
+  title: string;
+  stage: LearningStage;
+  lessonIds: string[];
+  exerciseIds: string[];
+}
+
 export interface ContentPackManifest {
   schemaVersion: 1;
   id: string;
@@ -109,6 +122,22 @@ export interface ContentPackManifest {
   sources: ContentSource[];
   lessonIds: string[];
   testIds: string[];
+  lessonSummaries: ContentLessonSummary[];
+  testSummaries: ContentTestSummary[];
+}
+
+export interface TopicPackSummary {
+  schemaVersion: 1;
+  id: string;
+  version: string;
+  title: string;
+  level: string;
+  summary: string;
+  objectives: string[];
+  importantSkills: string[];
+  sources: ContentSource[];
+  lessons: ContentLessonSummary[];
+  tests: ContentTestSummary[];
 }
 
 export interface TopicPack {
@@ -123,6 +152,13 @@ export interface TopicPack {
   sources: ContentSource[];
   lessons: Lesson[];
   tests: ExerciseTest[];
+}
+
+export interface LoadedTopicPack {
+  pack: TopicPack;
+  lessonById: ReadonlyMap<string, Lesson>;
+  testById: ReadonlyMap<string, ExerciseTest>;
+  exerciseById: ReadonlyMap<string, Exercise>;
 }
 
 export interface GradingResult {

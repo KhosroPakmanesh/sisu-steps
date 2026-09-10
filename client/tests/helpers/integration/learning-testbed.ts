@@ -3,7 +3,12 @@ import { BackupService } from '@/features/learning/learner-data/backup.service';
 import { ClearHistoryService } from '@/features/learning/learner-data/clear-history.service';
 import { LessonProgressService } from '@/features/learning/lessons/lesson-progress.service';
 import { ContentCatalogService } from '@/features/learning/shared/content/content-catalog.service';
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import {
+  LoadedTopicPack,
+  TopicPackSummary,
+} from '@/features/learning/shared/content/content.models';
+import { PackContentRepository } from '@/features/learning/shared/content/pack-content.repository';
+import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { LearnerNoteService } from '@/features/learning/shared/notes/learner-note.service';
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
 import { LearnerState } from '@/features/learning/shared/state/learner-state.models';
@@ -17,8 +22,22 @@ import { SessionStartService } from '@/features/learning/study/session-start.ser
 import { learningPack } from '../unit/learning-content.fixture';
 
 class FakeContentCatalog {
-  async loadPacks(): Promise<TopicPack[]> {
-    return [structuredClone(learningPack)];
+  async loadPackSummaries(): Promise<TopicPackSummary[]> {
+    return [topicPackToSummary(learningPack)];
+  }
+}
+
+class FakePackContentRepository {
+  async load(): Promise<LoadedTopicPack> {
+    const pack = structuredClone(learningPack);
+    return {
+      pack,
+      lessonById: new Map(pack.lessons.map((lesson) => [lesson.id, lesson])),
+      testById: new Map(pack.tests.map((test) => [test.id, test])),
+      exerciseById: new Map(
+        pack.tests.flatMap((test) => test.exercises.map((exercise) => [exercise.id, exercise])),
+      ),
+    };
   }
 }
 
@@ -57,6 +76,7 @@ export async function createLearningTestContext(): Promise<LearningTestContext> 
       ClearHistoryService,
       BackupService,
       { provide: ContentCatalogService, useClass: FakeContentCatalog },
+      { provide: PackContentRepository, useClass: FakePackContentRepository },
       { provide: LEARNER_STATE_REPOSITORY, useClass: FakeLearnerStateRepository },
     ],
   });

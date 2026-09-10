@@ -1,5 +1,5 @@
 import { LearnerState, StudySession } from '../shared/state/learner-state.models';
-import { ExerciseTest, TopicPack } from '../shared/content/content.models';
+import { ContentTestSummary, TopicPackSummary } from '../shared/content/content.models';
 import {
   completedAttemptCount,
   dueCorrections,
@@ -9,7 +9,7 @@ import {
 } from '../shared/progress/progress.queries';
 
 export interface TopicSummary {
-  pack: TopicPack;
+  pack: TopicPackSummary;
   attemptedTests: number;
   completedLessons: number;
   totalLessons: number;
@@ -33,8 +33,8 @@ export interface ContinueLearningTarget {
 
 export function getTopicSummary(
   state: LearnerState,
-  packs: TopicPack[],
-  pack: TopicPack,
+  packs: TopicPackSummary[],
+  pack: TopicPackSummary,
   now = new Date(),
 ): TopicSummary {
   const attemptedTestIds = new Set(
@@ -48,7 +48,7 @@ export function getTopicSummary(
     attemptedTests: pack.tests.filter((test) => attemptedTestIds.has(test.id)).length,
     completedLessons: pack.lessons.filter((lesson) => isLessonCompleted(state, lesson)).length,
     totalLessons: pack.lessons.length,
-    exercises: pack.tests.reduce((total, test) => total + test.exercises.length, 0),
+    exercises: pack.tests.reduce((total, test) => total + test.exerciseIds.length, 0),
     attempts: completedAttemptCount(state, pack.id),
     average: overallAverage(state, pack.id),
     mistakes: mistakeCount(state, pack),
@@ -61,7 +61,7 @@ export function getTopicSummary(
 
 export function getTopicSummaries(
   state: LearnerState,
-  packs: TopicPack[],
+  packs: TopicPackSummary[],
   now = new Date(),
 ): TopicSummary[] {
   return packs.map((pack) => getTopicSummary(state, packs, pack, now));
@@ -69,7 +69,7 @@ export function getTopicSummaries(
 
 export function getContinueLearningTarget(
   state: LearnerState,
-  packs: TopicPack[],
+  packs: TopicPackSummary[],
 ): ContinueLearningTarget | null {
   const savedSession = mostRecentValidSession(state, packs);
   if (savedSession) return targetForSession(savedSession, packs);
@@ -89,7 +89,10 @@ export function getContinueLearningTarget(
   return firstPack && firstTest ? targetForTest(firstPack, firstTest, true) : null;
 }
 
-function mostRecentValidSession(state: LearnerState, packs: TopicPack[]): StudySession | undefined {
+function mostRecentValidSession(
+  state: LearnerState,
+  packs: TopicPackSummary[],
+): StudySession | undefined {
   return [...state.sessions]
     .sort((left, right) => Date.parse(right.updatedAt) - Date.parse(left.updatedAt))
     .find((session) => {
@@ -101,9 +104,7 @@ function mostRecentValidSession(state: LearnerState, packs: TopicPack[]): StudyS
           : undefined;
       if (session.mode === 'test' && !test) return false;
       const validExerciseIds = new Set(
-        test
-          ? test.exercises.map((exercise) => exercise.id)
-          : pack.tests.flatMap((candidate) => candidate.exercises.map((exercise) => exercise.id)),
+        test ? test.exerciseIds : pack.tests.flatMap((candidate) => candidate.exerciseIds),
       );
       return (
         session.currentIndex >= 0 &&
@@ -113,7 +114,10 @@ function mostRecentValidSession(state: LearnerState, packs: TopicPack[]): StudyS
     });
 }
 
-function targetForSession(session: StudySession, packs: TopicPack[]): ContinueLearningTarget {
+function targetForSession(
+  session: StudySession,
+  packs: TopicPackSummary[],
+): ContinueLearningTarget {
   const pack = packs.find((candidate) => candidate.id === session.topicId)!;
   const modeLabel =
     session.mode === 'review' ? 'review' : session.mode === 'mistakes' ? 'practice' : 'test';
@@ -134,8 +138,8 @@ function targetForSession(session: StudySession, packs: TopicPack[]): ContinueLe
 }
 
 function targetForTest(
-  pack: TopicPack,
-  test: ExerciseTest,
+  pack: TopicPackSummary,
+  test: ContentTestSummary,
   repeat: boolean,
 ): ContinueLearningTarget {
   return {

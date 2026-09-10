@@ -5,6 +5,7 @@ import { TopicCatalogPage } from '@/features/learning/topics/topic-catalog.page'
 import { LearningStateStore } from '@/features/learning/shared/state/learning-state.store';
 import { FakeLearningStateStore } from '@testing/helpers/unit/fake-learning-state.store';
 import { learningPack } from '@testing/helpers/unit/learning-content.fixture';
+import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 
 describe('TopicCatalogPage', () => {
   let fixture: ComponentFixture<TopicCatalogPage>;
@@ -44,7 +45,7 @@ describe('TopicCatalogPage', () => {
     const secondPack = structuredClone(learningPack);
     secondPack.id = 'second-topic';
     secondPack.title = 'A second topic';
-    store.packs.set([learningPack, secondPack]);
+    store.packSummaries.set([learningPack, secondPack].map(topicPackToSummary));
     fixture.detectChanges();
 
     const cards = [

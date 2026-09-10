@@ -1,4 +1,4 @@
-import { Component, ElementRef, inject } from '@angular/core';
+import { Component, ElementRef, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import {
   AppearancePreference,
@@ -15,7 +15,7 @@ import { learningPaths } from '@/features/learning/shared/navigation/learning.pa
 export class AppShell {
   private readonly appearancePreferences = inject(AppearancePreferenceAdapter);
   private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
-  private hasActivatedRoute = false;
+  protected readonly hasActivatedRoute = signal(false);
   protected readonly paths = learningPaths;
   protected appearance: AppearancePreference = 'automatic';
 
@@ -39,8 +39,8 @@ export class AppShell {
   }
 
   protected focusRoutedContent(): void {
-    if (!this.hasActivatedRoute) {
-      this.hasActivatedRoute = true;
+    if (!this.hasActivatedRoute()) {
+      this.hasActivatedRoute.set(true);
       return;
     }
 

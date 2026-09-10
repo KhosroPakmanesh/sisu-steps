@@ -2,8 +2,8 @@ import { Component, computed, inject, OnInit, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
 import { getTestProgress } from '../shared/progress/test-progress.queries';
-import { TopicPack } from '../shared/content/content.models';
-import { findPack } from '../shared/content/content.queries';
+import { TopicPack, TopicPackSummary } from '../shared/content/content.models';
+import { findPackSummary } from '../shared/content/content.queries';
 import {
   findModeSession,
   findTestSession,
@@ -24,23 +24,33 @@ export class TopicPage implements OnInit {
   protected readonly store = inject(LearningStateStore);
   protected readonly paths = learningPaths;
   protected readonly pack = signal<TopicPack | null>(null);
+  protected readonly packSummary = signal<TopicPackSummary | null>(null);
   protected readonly pageError = signal<string | null>(null);
   protected readonly errorMessage = computed(() => this.pageError() ?? this.store.error());
   protected readonly summary = computed(() => {
-    const pack = this.pack();
-    return pack ? getTopicSummary(this.store.learnerState(), this.store.packs(), pack) : null;
+    const pack = this.packSummary();
+    return pack
+      ? getTopicSummary(this.store.learnerState(), this.store.packSummaries(), pack)
+      : null;
   });
 
   async ngOnInit(): Promise<void> {
     await this.store.ready;
     if (this.store.error()) return;
     const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';
-    const pack = findPack(this.store.packs(), topicId);
-    if (!pack) {
+    const summary = findPackSummary(this.store.packSummaries(), topicId);
+    if (!summary) {
       this.pageError.set('That topic pack could not be found.');
       return;
     }
-    this.pack.set(pack);
+    try {
+      this.pack.set((await this.store.loadPack(topicId)).pack);
+      this.packSummary.set(summary);
+    } catch (error) {
+      this.pageError.set(
+        error instanceof Error ? error.message : 'That topic pack could not load.',
+      );
+    }
   }
 
   protected reviewSession(topicId: string) {
@@ -56,6 +66,11 @@ export class TopicPage implements OnInit {
   }
 
   protected lessonProgress(topicId: string, testId: string) {
-    return lessonProgressForTest(this.store.learnerState(), this.store.packs(), topicId, testId);
+    return lessonProgressForTest(
+      this.store.learnerState(),
+      this.store.packSummaries(),
+      topicId,
+      testId,
+    );
   }
 }

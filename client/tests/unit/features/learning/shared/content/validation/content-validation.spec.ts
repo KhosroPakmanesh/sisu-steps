@@ -7,8 +7,9 @@ import {
 } from '@/features/learning/shared/content/content.models';
 import { validateContentCatalog } from '@/features/learning/shared/content/validation/content-catalog.validator';
 import { validateContentManifest } from '@/features/learning/shared/content/validation/content-manifest.validator';
-import { validatePackCollection } from '@/features/learning/shared/content/validation/pack-collection.validator';
+import { validatePackSummaryCollection } from '@/features/learning/shared/content/validation/pack-summary-collection.validator';
 import { validateTopicPack } from '@/features/learning/shared/content/validation/topic-pack.validator';
+import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 
 const scoredExercises = (count = 200): Exercise[] =>
   Array.from({ length: count }, (_, index) => {
@@ -457,7 +458,10 @@ describe('content catalog validation', () => {
     }));
 
     expect(() =>
-      validatePackCollection(catalog(['pack', 'second-pack']), [first, second]),
+      validatePackSummaryCollection(
+        catalog(['pack', 'second-pack']),
+        [first, second].map(topicPackToSummary),
+      ),
     ).toThrowError('Content id lesson-1 is duplicated across installed topic packs.');
   });
 });
@@ -465,6 +469,7 @@ describe('content catalog validation', () => {
 describe('content manifest validation', () => {
   const manifest = (): ContentPackManifest => {
     const pack = validPack();
+    const summary = topicPackToSummary(pack);
     return {
       schemaVersion: pack.schemaVersion,
       id: pack.id,
@@ -477,6 +482,8 @@ describe('content manifest validation', () => {
       sources: pack.sources,
       lessonIds: pack.lessons.map((lesson) => lesson.id),
       testIds: pack.tests.map((test) => test.id),
+      lessonSummaries: summary.lessons,
+      testSummaries: summary.tests,
     };
   };
 

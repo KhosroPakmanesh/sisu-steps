@@ -3,7 +3,7 @@ import { RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
 import { BackupRestoreComponent } from '../learner-data/backup-restore.component';
 import { getLearningLevelLabel } from '../shared/content/content.queries';
-import { TopicPack } from '../shared/content/content.models';
+import { TopicPackSummary } from '../shared/content/content.models';
 import {
   completedAttemptCount,
   mistakeCount,
@@ -25,17 +25,19 @@ export class StatsPage {
   );
   protected readonly cumulativeAverage = computed(() => overallAverage(this.store.learnerState()));
   protected readonly cumulativeMistakes = computed(() => mistakeCount(this.store.learnerState()));
-  protected readonly catalogLevelLabel = computed(() => getLearningLevelLabel(this.store.packs()));
+  protected readonly catalogLevelLabel = computed(() =>
+    getLearningLevelLabel(this.store.packSummaries()),
+  );
 
-  protected completedAttempts(pack: TopicPack): number {
+  protected completedAttempts(pack: TopicPackSummary): number {
     return completedAttemptCount(this.store.learnerState(), pack.id);
   }
 
-  protected average(pack: TopicPack): number | null {
+  protected average(pack: TopicPackSummary): number | null {
     return overallAverage(this.store.learnerState(), pack.id);
   }
 
-  protected unresolvedMistakes(pack: TopicPack): number {
+  protected unresolvedMistakes(pack: TopicPackSummary): number {
     return mistakeCount(this.store.learnerState(), pack);
   }
 }

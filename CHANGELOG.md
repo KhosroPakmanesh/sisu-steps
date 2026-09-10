@@ -34,6 +34,10 @@
 
 ### Changed
 
+- Unsupported learner data now fails cleanly instead of passing through compatibility code: obsolete or removed-pack browser state resets completely, old or pack-incompatible backups are rejected before replacement, and current-format data continues unchanged. Removed the one-time foundations split migration, legacy single-pack state field and fallback hydration, and retired foundations content generator.
+
+- Changed client startup to load only the content catalog and compact pack summaries, then load and validate a full pack when its topic is opened. Full packs now use indexed lookups and a two-entry least-recently-used memory cache; existing routes, content, scoring, learner-state and backup schemas, workflows, and final appearance remain unchanged. A complete pencil-loading presentation now covers first HTML paint, Angular startup, and initial lazy-route activation without exposing an empty workbook folder; its loading paper fills the reserved folder height and stays aligned with visible page hardware. IndexedDB writes also no longer perform a redundant caller-side structured clone.
+
 - Let Study question headings use the full exercise-sheet width so longer prompts avoid unnecessary wrapping while retaining responsive mobile reflow.
 
 - Removed the redundant mobile **History** label above each **Clear test history** button while retaining the action label and desktop ledger heading.

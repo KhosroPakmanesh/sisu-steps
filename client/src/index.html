@@ -8,8 +8,127 @@
     <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <style>
+      html {
+        min-width: 320px;
+        background: #d8d1c3;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      app-root {
+        display: block;
+        min-height: 100dvh;
+      }
+
+      .app-boot,
+      .app-boot * {
+        box-sizing: border-box;
+      }
+
+      .app-boot {
+        display: grid;
+        min-height: 100dvh;
+        place-items: center;
+        padding: 1rem;
+        background: var(--surface-desk, #d8d1c3);
+        color: var(--text-secondary, #625e57);
+        font-family: var(--font-body, 'Segoe UI', 'Trebuchet MS', system-ui, sans-serif);
+      }
+
+      .app-boot__card {
+        display: grid;
+        justify-items: center;
+        gap: 1rem;
+        width: min(100%, 42rem);
+        padding: 3rem;
+        border: 1px dashed var(--border-control, #beb19c);
+        border-left: 0.32rem solid transparent;
+        background: var(--surface-raised, #fffaf0);
+        box-shadow: 0.25rem 0.32rem 0 var(--surface-subtle, #eee6d7);
+        text-align: center;
+      }
+
+      .app-boot__pencil {
+        position: relative;
+        width: 3.5rem;
+        height: 0.6rem;
+        border-radius: 0.1rem;
+        background: linear-gradient(
+          90deg,
+          var(--material-amber, #d9b96f),
+          var(--red-pencil, #a04e45)
+        );
+        box-shadow: 0 0.2rem 0 var(--notebook-shadow, rgb(48 44 36 / 18%));
+        animation: app-boot-pencil 1.2s ease-in-out infinite alternate;
+      }
+
+      .app-boot__pencil::after {
+        position: absolute;
+        right: -1.1rem;
+        border-block: 0.3rem solid transparent;
+        border-left: 1.15rem solid var(--stone-200, #d8cdb9);
+        content: '';
+      }
+
+      .app-boot__card p {
+        margin: 0;
+        line-height: 1.65;
+      }
+
+      @keyframes app-boot-pencil {
+        from {
+          transform: translateX(-0.4rem);
+        }
+
+        to {
+          transform: translateX(0.4rem);
+        }
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html {
+          background: #181d1c;
+        }
+
+        .app-boot {
+          background: #181d1c;
+          color: #b8b4a9;
+        }
+
+        .app-boot__card {
+          border-color: #5b6661;
+          background: #2c3331;
+          box-shadow: 0.25rem 0.32rem 0 #303735;
+        }
+
+        .app-boot__pencil {
+          background: linear-gradient(90deg, #9b7b42, #d38a81);
+          box-shadow: 0 0.2rem 0 rgb(0 0 0 / 35%);
+        }
+
+        .app-boot__pencil::after {
+          border-left-color: #46504c;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .app-boot__pencil {
+          animation: none;
+        }
+      }
+    </style>
   </head>
   <body>
-    <app-root></app-root>
+    <app-root>
+      <div class="app-boot" role="status" aria-live="polite">
+        <div class="app-boot__card">
+          <span class="app-boot__pencil" aria-hidden="true"></span>
+          <p>Opening your exercise book…</p>
+        </div>
+      </div>
+    </app-root>
   </body>
 </html>

@@ -16,7 +16,7 @@ Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exerc
 ## Rules
 
 - Treat the database name, version, store, key, transaction mode, and persisted shapes as durable public data contracts.
-- Add a versioned migration before changing a persisted shape; never reinterpret incompatible learner history only at render time.
+- Do not add compatibility migrations, fallback readers, legacy aliases, or transitional persisted shapes. When the current state contract cannot read a stored record, reset it to the current empty state; reject an unsupported backup before replacing current data.
 - Preserve topic, test, lesson, exercise, attempt, session, correction, and parallel-review identifiers.
 - Save each complete learner-state transition in one read-write transaction.
 - Close stale connections on `versionchange` so another tab can upgrade safely.
@@ -35,7 +35,7 @@ Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exerc
 
 - `client/content/` is immutable bundled input for a deployed version; Angular copies the same files to `/content/`, and the browser assembles manifests and fragments only in memory.
 - Learner state stores only progress and stable references, never executable content.
-- Content version alignment clears only incompatible progress for the changed or removed pack.
+- Content version alignment clears a changed pack's incompatible progress. A stored version map containing a pack that is no longer installed resets the complete learner state rather than remapping retired data.
 - Invalid backup data must be rejected before replacing existing state.
 
 ## Recoverability and security boundary

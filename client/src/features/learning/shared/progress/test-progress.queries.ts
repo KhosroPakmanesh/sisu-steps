@@ -15,7 +15,7 @@ export function getTestProgress(
   const exerciseIds = testExerciseIds(pack.tests.find((test) => test.id === testId));
   const percentages = attempts.map((attempt) => attempt.percentage);
   const latestAttempt = attempts.at(-1);
-  const corrections = (state.correctionRecords ?? []).filter((record) =>
+  const corrections = state.correctionRecords.filter((record) =>
     exerciseIds.has(record.exerciseId),
   );
   return {

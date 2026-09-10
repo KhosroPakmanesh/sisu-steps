@@ -1,6 +1,9 @@
-import { ContentCatalog, TopicPack } from '../content.models';
+import { ContentCatalog, TopicPackSummary } from '../content.models';
 
-export function validatePackCollection(catalog: ContentCatalog, packs: TopicPack[]): TopicPack[] {
+export function validatePackSummaryCollection(
+  catalog: ContentCatalog,
+  packs: TopicPackSummary[],
+): TopicPackSummary[] {
   if (catalog.packs.length !== packs.length) {
     throw new Error('The content catalog did not load every listed topic pack.');
   }
@@ -11,15 +14,15 @@ export function validatePackCollection(catalog: ContentCatalog, packs: TopicPack
         `Catalog pack ${catalog.packs[index]} does not match loaded pack ${pack.id}.`,
       );
     }
-    const contentIds = [
+    const ids = [
       ...pack.lessons.map((lesson) => lesson.id),
       ...pack.tests.map((test) => test.id),
-      ...pack.lessons.flatMap((lesson) => lesson.practiceExercises.map((exercise) => exercise.id)),
-      ...pack.tests.flatMap((test) => test.exercises.map((exercise) => exercise.id)),
+      ...pack.tests.flatMap((test) => test.exerciseIds),
     ];
-    for (const id of contentIds) {
-      if (globalIds.has(id))
+    for (const id of ids) {
+      if (globalIds.has(id)) {
         throw new Error(`Content id ${id} is duplicated across installed topic packs.`);
+      }
       globalIds.add(id);
     }
   }

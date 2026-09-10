@@ -4,7 +4,6 @@ import {
   StudySession,
   SubmittedAnswer,
 } from '../shared/state/learner-state.models';
-import { findExercise } from '../shared/content/content.queries';
 import { gradeAnswer } from '../shared/progress/grading.policy';
 import { findSession } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
@@ -17,7 +16,7 @@ export class SessionAnswerService {
 
   async submitAnswer(sessionId: string, submittedAnswer: string): Promise<SubmittedAnswer> {
     const session = this.requireSession(sessionId);
-    const exercise = this.requireCurrentExercise(session);
+    const exercise = await this.requireCurrentExercise(session);
     const existing = session.answers.find((answer) => answer.exerciseId === exercise.id);
     if (existing) return existing;
     const result = gradeAnswer(exercise, submittedAnswer);
@@ -36,7 +35,7 @@ export class SessionAnswerService {
 
   async revealAnswer(sessionId: string): Promise<SubmittedAnswer> {
     const session = this.requireSession(sessionId);
-    const exercise = this.requireCurrentExercise(session);
+    const exercise = await this.requireCurrentExercise(session);
     const existing = session.answers.find((answer) => answer.exerciseId === exercise.id);
     if (existing) return existing;
     const answer: SubmittedAnswer = {
@@ -59,7 +58,7 @@ export class SessionAnswerService {
 
   async advanceSession(sessionId: string): Promise<CompletedAttempt | null> {
     const session = this.requireSession(sessionId);
-    const exercise = this.requireCurrentExercise(session);
+    const exercise = await this.requireCurrentExercise(session);
     if (!session.answers.some((answer) => answer.exerciseId === exercise.id)) {
       throw new Error('Answer the current exercise before continuing.');
     }
@@ -90,8 +89,10 @@ export class SessionAnswerService {
     return session;
   }
 
-  private requireCurrentExercise(session: StudySession) {
-    const exercise = findExercise(this.store.packs(), session.exerciseIds[session.currentIndex]);
+  private async requireCurrentExercise(session: StudySession) {
+    const exercise = (await this.store.loadPack(session.topicId)).exerciseById.get(
+      session.exerciseIds[session.currentIndex],
+    );
     if (!exercise) throw new Error('The current exercise could not be found.');
     return exercise;
   }

@@ -1,11 +1,16 @@
 import { signal } from '@angular/core';
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import {
+  LoadedTopicPack,
+  TopicPack,
+  TopicPackSummary,
+} from '@/features/learning/shared/content/content.models';
+import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
 import { LearnerState } from '@/features/learning/shared/state/learner-state.models';
 import { learningPack } from './learning-content.fixture';
 
 export class FakeLearningStateStore {
-  readonly packs = signal<TopicPack[]>([structuredClone(learningPack)]);
+  readonly packSummaries = signal<TopicPackSummary[]>([topicPackToSummary(learningPack)]);
   readonly learnerState = signal<LearnerState>(
     createEmptyLearnerState({ [learningPack.id]: learningPack.version }),
   );
@@ -15,6 +20,23 @@ export class FakeLearningStateStore {
 
   async initialize(): Promise<void> {
     this.loading.set(false);
+  }
+
+  async loadPack(topicId: string): Promise<LoadedTopicPack> {
+    if (topicId !== learningPack.id) throw new Error('The exercise pack has not loaded yet.');
+    const pack = structuredClone(learningPack);
+    return {
+      pack,
+      lessonById: new Map(pack.lessons.map((lesson) => [lesson.id, lesson])),
+      testById: new Map(pack.tests.map((test) => [test.id, test])),
+      exerciseById: new Map(
+        pack.tests.flatMap((test) => test.exercises.map((exercise) => [exercise.id, exercise])),
+      ),
+    };
+  }
+
+  async loadAllPacks(): Promise<TopicPack[]> {
+    return [structuredClone(learningPack)];
   }
 
   async commit(update: (state: LearnerState) => LearnerState): Promise<void> {

@@ -10,6 +10,9 @@ import {
   StudySession,
 } from '@/features/learning/shared/state/learner-state.models';
 import { learningPack } from '@testing/helpers/unit/learning-content.fixture';
+import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
+
+const packSummary = topicPackToSummary(learningPack);
 
 describe('topic catalog queries', () => {
   it('summarizes shared and mixed catalog levels truthfully', () => {
@@ -34,7 +37,7 @@ describe('topic catalog queries', () => {
       },
     ];
 
-    const summary = getTopicSummary(state, [learningPack], learningPack);
+    const summary = getTopicSummary(state, [packSummary], packSummary);
     expect(summary.attemptedTests).toBe(1);
     expect(summary.attempts).toBe(2);
     expect(summary.completedLessons).toBe(1);
@@ -48,7 +51,7 @@ describe('topic catalog queries', () => {
       savedSession('newer-session', 'test-2', '2026-08-18T10:00:00.000Z'),
     ];
 
-    expect(getContinueLearningTarget(state, [learningPack])).toMatchObject({
+    expect(getContinueLearningTarget(state, [packSummary])).toMatchObject({
       mode: 'test',
       topicId: 'topic',
       testId: 'test-2',
@@ -60,7 +63,7 @@ describe('topic catalog queries', () => {
     const state = createEmptyLearnerState({ topic: learningPack.version });
     state.sessions = [savedSession('invalid-session', 'removed-test', '2026-08-18T10:00:00.000Z')];
 
-    expect(getContinueLearningTarget(state, [learningPack])).toMatchObject({
+    expect(getContinueLearningTarget(state, [packSummary])).toMatchObject({
       testId: 'test-1',
       actionLabel: 'Start next test',
     });
@@ -70,7 +73,7 @@ describe('topic catalog queries', () => {
     const state = createEmptyLearnerState({ topic: learningPack.version });
     state.attempts = [completedAttempt('attempt-1', 'test-1')];
 
-    expect(getContinueLearningTarget(state, [learningPack])?.testId).toBe('test-2');
+    expect(getContinueLearningTarget(state, [packSummary])?.testId).toBe('test-2');
   });
 });
 

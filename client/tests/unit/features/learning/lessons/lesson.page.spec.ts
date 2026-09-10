@@ -32,7 +32,7 @@ describe('LessonPage', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(LessonPage);
     fixture.detectChanges();
-    await fixture.whenStable();
+    await fixture.componentInstance.ngOnInit();
     fixture.detectChanges();
   });
 
@@ -106,7 +106,7 @@ describe('LessonPage', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    expect(completeLesson).toHaveBeenCalledWith('lesson-1');
+    expect(completeLesson).toHaveBeenCalledWith('topic', 'lesson-1');
     expect(fixture.nativeElement.textContent).toContain('Preparation complete');
   });
 });

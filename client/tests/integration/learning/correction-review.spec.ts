@@ -29,7 +29,7 @@ describe('correction and review workflow', () => {
       expect(
         dueCorrections(
           context.store.learnerState(),
-          context.store.packs(),
+          context.store.packSummaries(),
           'topic',
           new Date('2026-08-19T07:59:59.000Z'),
         ),
@@ -44,7 +44,11 @@ describe('correction and review workflow', () => {
       expect(correctionCount(context.store.learnerState(), false)).toBe(0);
       expect(correctionCount(context.store.learnerState(), true)).toBe(1);
       expect(
-        getTestProgress(context.store.learnerState(), context.store.packs()[0], 'test-1'),
+        getTestProgress(
+          context.store.learnerState(),
+          (await context.store.loadPack('topic')).pack,
+          'test-1',
+        ),
       ).toMatchObject({ firstAttempt: 0, corrected: 0, mastered: 1 });
     } finally {
       vi.useRealTimers();
@@ -65,7 +69,7 @@ describe('correction and review workflow', () => {
       await context.answers.submitAnswer(review!.id, 'wrong');
       await context.answers.advanceSession(review!.id);
 
-      expect(context.store.learnerState().correctionRecords?.[0]).toMatchObject({
+      expect(context.store.learnerState().correctionRecords[0]).toMatchObject({
         reviewStage: 1,
         reviewAttempts: 1,
         nextReviewAt: '2026-08-22T08:00:00.000Z',
