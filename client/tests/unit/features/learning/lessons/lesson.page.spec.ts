@@ -32,7 +32,7 @@ describe('LessonPage', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(LessonPage);
     fixture.detectChanges();
-    await fixture.componentInstance.ngOnInit();
+    await fixture.componentInstance.routeRenderReady;
     fixture.detectChanges();
   });
 

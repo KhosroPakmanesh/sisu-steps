@@ -32,7 +32,7 @@ describe('StudyPage', () => {
     answers = TestBed.inject(SessionAnswerService);
     fixture = TestBed.createComponent(StudyPage);
     fixture.detectChanges();
-    await fixture.componentInstance.ngOnInit();
+    await fixture.componentInstance.routeRenderReady;
     fixture.detectChanges();
   });
 

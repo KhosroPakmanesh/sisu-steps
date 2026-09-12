@@ -1,10 +1,12 @@
-import { Component, ElementRef, inject, signal } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import {
   AppearancePreference,
   AppearancePreferenceAdapter,
 } from '@/shared/browser/appearance-preference.adapter';
+import { BlockingOverlayAdapter } from '@/shared/browser/blocking-overlay.adapter';
 import { learningPaths } from '@/features/learning/shared/navigation/learning.paths';
+import { waitForRoute } from '@/features/learning/shared/navigation/route-readiness';
 
 @Component({
   selector: 'app-root',
@@ -14,12 +16,15 @@ import { learningPaths } from '@/features/learning/shared/navigation/learning.pa
 })
 export class AppShell {
   private readonly appearancePreferences = inject(AppearancePreferenceAdapter);
+  private readonly blockingOverlay = inject(BlockingOverlayAdapter);
   private readonly host = inject<ElementRef<HTMLElement>>(ElementRef);
-  protected readonly hasActivatedRoute = signal(false);
+  private hasActivatedRoute = false;
   protected readonly paths = learningPaths;
   protected appearance: AppearancePreference = 'automatic';
 
   public constructor() {
+    const appRoot = this.host.nativeElement;
+    this.blockingOverlay.connect(appRoot, appRoot.ownerDocument.getElementById('app-boot'));
     this.appearance = this.appearancePreferences.read();
     this.appearancePreferences.apply(this.appearance);
   }
@@ -38,18 +43,22 @@ export class AppShell {
     this.changeAppearance(lampIsOn ? 'light' : 'dark');
   }
 
-  protected focusRoutedContent(): void {
-    if (!this.hasActivatedRoute()) {
-      this.hasActivatedRoute.set(true);
-      return;
-    }
+  protected activateRoutedContent(component: unknown): void {
+    const shouldFocus = this.hasActivatedRoute;
+    this.hasActivatedRoute = true;
+    void this.revealRoutedContent(component, shouldFocus);
+  }
 
-    globalThis.requestAnimationFrame(() => {
-      const routeMain = this.host.nativeElement.querySelector<HTMLElement>('.workbook-folder main');
-      if (!routeMain) return;
+  private async revealRoutedContent(component: unknown, shouldFocus: boolean): Promise<void> {
+    await this.blockingOverlay.run(() => waitForRoute(component));
+    if (shouldFocus) this.focusRoutedContent();
+  }
 
-      routeMain.tabIndex = -1;
-      routeMain.focus({ preventScroll: true });
-    });
+  private focusRoutedContent(): void {
+    const routeMain = this.host.nativeElement.querySelector<HTMLElement>('.workbook-folder main');
+    if (!routeMain) return;
+
+    routeMain.tabIndex = -1;
+    routeMain.focus({ preventScroll: true });
   }
 }

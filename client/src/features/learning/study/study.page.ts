@@ -1,7 +1,8 @@
-import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
+import { RouteReadiness } from '../shared/navigation/route-readiness';
 import { CompletedAttempt } from '../shared/state/learner-state.models';
 import { Exercise, LoadedTopicPack } from '../shared/content/content.models';
 import { findPackSummary } from '../shared/content/content.queries';
@@ -16,7 +17,7 @@ import { SessionStartService } from './session-start.service';
   templateUrl: './study.page.html',
   styleUrl: './study.page.css',
 })
-export class StudyPage implements OnInit {
+export class StudyPage implements RouteReadiness {
   private readonly route = inject(ActivatedRoute);
   private readonly sessionStart = inject(SessionStartService);
   private readonly sessionAnswers = inject(SessionAnswerService);
@@ -58,10 +59,14 @@ export class StudyPage implements OnInit {
       .map((index) => tokens[index])
       .join(' ');
   });
+  readonly routeRenderReady = this.initialize();
 
-  async ngOnInit(): Promise<void> {
+  private async initialize(): Promise<void> {
     await this.store.ready;
-    if (this.store.error()) return;
+    if (this.store.error()) {
+      this.pageError.set(this.store.error());
+      return;
+    }
     try {
       const mode = this.route.snapshot.data['mode'];
       const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';

@@ -239,25 +239,6 @@ body::before {
   background: var(--blue-500);
 }
 
-.spinner {
-  position: relative;
-  width: 3.5rem;
-  height: 0.6rem;
-  border: 0;
-  border-radius: 0.1rem;
-  background: linear-gradient(90deg, var(--material-amber), var(--red-pencil));
-  box-shadow: 0 0.2rem 0 var(--notebook-shadow);
-  animation: pencil-sketch 1.2s ease-in-out infinite alternate;
-}
-
-.spinner::after {
-  position: absolute;
-  right: -1.1rem;
-  border-block: 0.3rem solid transparent;
-  border-left: 1.15rem solid var(--stone-200);
-  content: '';
-}
-
 @keyframes page-away {
   to {
     opacity: 0;
@@ -335,10 +316,6 @@ body::before {
   }
 
   .desk-light {
-    animation: none;
-  }
-
-  .spinner {
     animation: none;
   }
 

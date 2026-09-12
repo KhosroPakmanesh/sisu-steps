@@ -1,15 +1,10 @@
-<main class="page-shell" [class.loading-page]="store.loading()">
-  @if (store.loading()) {
-    <section class="state-card" aria-live="polite">
-      <span class="spinner" aria-hidden="true"></span>
-      <p>Opening your exercise book…</p>
-    </section>
-  } @else if (store.error()) {
+<main class="page-shell">
+  @if (store.error()) {
     <section class="state-card error-card" role="alert">
       <p class="eyebrow">Something needs attention</p>
       <h1>Your exercise book could not open</h1>
       <p>{{ store.error() }}</p>
-      <button class="button primary" type="button" (click)="store.initialize()">Try again</button>
+      <button class="button primary" type="button" (click)="retry()">Try again</button>
     </section>
   } @else if (store.packSummaries().length > 0) {
     <section class="hero">

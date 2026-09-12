@@ -99,17 +99,7 @@
       ><span>Stats</span></a
     >
   </nav>
-  <router-outlet (activate)="focusRoutedContent()" />
-  @if (!hasActivatedRoute()) {
-    <div class="shell-route-loading">
-      <main class="page-shell loading-page">
-        <section class="state-card" aria-live="polite">
-          <span class="spinner" aria-hidden="true"></span>
-          <p>Opening your exercise book…</p>
-        </section>
-      </main>
-    </div>
-  }
+  <router-outlet (activate)="activateRoutedContent($event)" />
   <div class="workbook-page-hardware" aria-hidden="true">
     <span class="workbook-page-clip"></span>
   </div>

@@ -1,6 +1,7 @@
-import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
+import { RouteReadiness } from '../shared/navigation/route-readiness';
 import { getTestProgress } from '../shared/progress/test-progress.queries';
 import { TopicPack, TopicPackSummary } from '../shared/content/content.models';
 import { findPackSummary } from '../shared/content/content.queries';
@@ -19,7 +20,7 @@ import { getTopicSummary } from './topic-catalog.queries';
   templateUrl: './topic.page.html',
   styleUrl: './topic.page.css',
 })
-export class TopicPage implements OnInit {
+export class TopicPage implements RouteReadiness {
   private readonly route = inject(ActivatedRoute);
   protected readonly store = inject(LearningStateStore);
   protected readonly paths = learningPaths;
@@ -33,8 +34,9 @@ export class TopicPage implements OnInit {
       ? getTopicSummary(this.store.learnerState(), this.store.packSummaries(), pack)
       : null;
   });
+  readonly routeRenderReady = this.initialize();
 
-  async ngOnInit(): Promise<void> {
+  private async initialize(): Promise<void> {
     await this.store.ready;
     if (this.store.error()) return;
     const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';

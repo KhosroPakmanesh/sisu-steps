@@ -12,9 +12,9 @@
 - **REQ-G009-008:** Each loaded pack shall expose prebuilt maps keyed by lesson, test, and scored-exercise identifier for repeated workflow lookups.
 - **REQ-G009-009:** Full-backup restoration shall validate the current backup contract, require the exact installed pack/version set, and validate referenced content against all installed full packs before replacing current data.
 - **REQ-G009-010:** Learner-state writes shall preserve the existing IndexedDB schema and values while avoiding a redundant explicit structured clone immediately before `IDBObjectStore.put`.
-- **REQ-G009-011:** The startup loading view shall reserve the application shell's remaining viewport height so resolving the initial route does not move the footer.
-- **REQ-G009-018:** The initial HTML response shall show a complete, self-styled loading presentation before Angular bootstraps, and the application shell shall retain the existing loading-card presentation until the initial lazy route activates; the workbook folder shall not render without routed or loading-page content.
-- **REQ-G009-019:** At widths where folder hardware is visible, the initial shell and catalog loading papers shall fill the folder's reserved route height and remain aligned with the page clip; the modifier shall not affect loaded-page layout.
+- **REQ-G009-011:** The startup transition shall keep the incomplete application shell hidden and shall reveal only its complete routed layout so shell construction does not create a visible layout shift.
+- **REQ-G009-018:** The initial HTML response shall show one complete, self-styled, full-viewport loading overlay outside the Angular root before bootstrap and retain that same DOM loader until the initial routed page reaches a renderable success, empty, or error state. While it remains, the Angular root shall be hidden, inert, and excluded from the accessibility tree.
+- **REQ-G009-019:** The application shall contain no route-specific or shell-specific loader. Removing the shared overlay shall reveal the complete routed page in one paint; direct pack-owned URLs shall retain it until their required pack fragments finish loading. Later in-app navigation to an uncached pack and catalog retry shall reuse that same full-viewport loader and keep the routed page hidden until the destination is renderable.
 
 ## Current behavior and breaking-data policy
 

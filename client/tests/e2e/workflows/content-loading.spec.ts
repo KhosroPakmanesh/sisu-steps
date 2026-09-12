@@ -15,8 +15,7 @@ test('shows a complete loading presentation before Angular bootstraps', async ({
   );
 });
 
-test('keeps the loading paper aligned with visible folder hardware', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name === 'chromium-mobile', 'Phone layout hides folder hardware.');
+test('keeps one initial loader above Angular until the catalog is ready', async ({ page }) => {
   await page.route('**/content/**/pack.json', async (route) => {
     await new Promise((resolve) => setTimeout(resolve, 500));
     await route.continue();
@@ -24,20 +23,87 @@ test('keeps the loading paper aligned with visible folder hardware', async ({ pa
 
   await page.goto('/');
 
-  const loadingPage = page.locator('main.loading-page');
-  const pageClip = page.locator('.workbook-page-clip');
-  await expect(loadingPage).toBeVisible();
-  await expect(pageClip).toBeVisible();
+  const appRoot = page.locator('app-root');
+  const initialLoader = page.locator('#app-boot');
+  await expect(page.locator('.site-header')).toBeAttached();
+  await expect(initialLoader).toBeVisible();
+  await expect(appRoot).toHaveAttribute('inert', '');
+  await expect(appRoot).toHaveAttribute('aria-hidden', 'true');
+  await expect(page.locator('.shell-route-loading')).toHaveCount(0);
+  await expect(page.locator('app-root .spinner')).toHaveCount(0);
 
-  const [loadingBox, clipBox] = await Promise.all([
-    loadingPage.boundingBox(),
-    pageClip.boundingBox(),
-  ]);
-  expect(loadingBox).not.toBeNull();
-  expect(clipBox).not.toBeNull();
-  expect(
-    Math.abs(loadingBox!.y + loadingBox!.height - (clipBox!.y + clipBox!.height)),
-  ).toBeLessThanOrEqual(8);
+  await expect(page.locator(`a[href="/topics/${SELECTED_PACK}"]`).first()).toBeVisible();
+  await expect(initialLoader).toBeHidden();
+  await expect(appRoot).not.toHaveAttribute('inert', '');
+  await expect(appRoot).not.toHaveAttribute('aria-hidden', 'true');
+});
+
+test('retains the same initial loader while a direct topic link loads its pack', async ({
+  page,
+}) => {
+  await page.route(new RegExp(`/content/${SELECTED_PACK}/(?:lessons|tests)/`), async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    await route.continue();
+  });
+
+  await page.goto(`/topics/${SELECTED_PACK}`);
+
+  await expect(page.locator('.site-header')).toBeAttached();
+  await expect(page.locator('#app-boot')).toBeVisible();
+  await expect(page.locator('app-root')).toHaveAttribute('inert', '');
+  await expect(page.locator('main.topic-page h1')).toBeVisible();
+  await expect(page.locator('#app-boot')).toBeHidden();
+});
+
+test('reuses the one full-screen loader when an uncached pack opens', async ({ page }) => {
+  await page.goto('/');
+  const topicLink = page.locator(`a[href="/topics/${SELECTED_PACK}"]`).first();
+  await expect(topicLink).toBeVisible();
+  await expect(page.locator('#app-boot')).toBeHidden();
+
+  await page.route(new RegExp(`/content/${SELECTED_PACK}/(?:lessons|tests)/`), async (route) => {
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    await route.continue();
+  });
+  await topicLink.click();
+
+  const appRoot = page.locator('app-root');
+  await expect(page.locator('#app-boot')).toBeVisible();
+  await expect(appRoot).toHaveAttribute('inert', '');
+  await expect(page.locator('app-root .spinner')).toHaveCount(0);
+  await expect(page.locator('main.topic-page h1')).toBeVisible();
+  await expect(page.locator('#app-boot')).toBeHidden();
+  await expect(appRoot).not.toHaveAttribute('inert', '');
+});
+
+test('reuses the one full-screen loader when catalog loading is retried', async ({ page }) => {
+  let failManifestRequests = true;
+  await page.route('**/content/**/pack.json', async (route) => {
+    if (failManifestRequests) {
+      await route.abort();
+      return;
+    }
+    await new Promise((resolve) => setTimeout(resolve, 500));
+    await route.continue();
+  });
+
+  await page.goto('/');
+  const loader = page.locator('#app-boot');
+  await expect(
+    page.getByRole('heading', { name: 'Your exercise book could not open' }),
+  ).toBeVisible();
+  await expect(loader).toBeHidden();
+  expect(await loader.count()).toBe(1);
+
+  failManifestRequests = false;
+  await page.getByRole('button', { name: 'Try again' }).click();
+
+  await expect(loader).toBeVisible();
+  await expect(page.locator('app-root')).toHaveAttribute('inert', '');
+  await expect(page.locator('app-root .spinner')).toHaveCount(0);
+  await expect(page.locator(`a[href="/topics/${SELECTED_PACK}"]`).first()).toBeVisible();
+  await expect(loader).toBeHidden();
+  expect(await loader.count()).toBe(1);
 });
 
 test('loads manifests at startup and full content only after a topic opens', async ({ page }) => {

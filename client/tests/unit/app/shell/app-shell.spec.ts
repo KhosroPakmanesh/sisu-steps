@@ -3,15 +3,24 @@ import { TestBed } from '@angular/core/testing';
 import { provideRouter, Router } from '@angular/router';
 import { afterEach, describe, expect, it } from 'vitest';
 import { AppShell } from '@/app/shell/app-shell';
+import { RouteReadiness } from '@/features/learning/shared/navigation/route-readiness';
 import { appearancePreferenceStorageKey } from '@/shared/browser/appearance-preference.adapter';
 
+let resolveTestRoute = (): void => undefined;
+
 @Component({ template: '<main class="test-route">Ready</main>' })
-class TestRoutePage {}
+class TestRoutePage implements RouteReadiness {
+  readonly routeRenderReady = new Promise<void>((resolve) => {
+    resolveTestRoute = resolve;
+  });
+}
 
 describe('AppShell', () => {
   afterEach(() => {
     window.localStorage.removeItem(appearancePreferenceStorageKey);
     document.documentElement.removeAttribute('data-appearance');
+    document.getElementById('app-boot')?.remove();
+    resolveTestRoute = (): void => undefined;
   });
 
   it('renders local-first navigation and the product shell', async () => {
@@ -55,8 +64,7 @@ describe('AppShell', () => {
     expect(folder).not.toBeNull();
     expect(folder?.querySelector('.workbook-cover')).not.toBeNull();
     expect(folder?.querySelector('router-outlet')).not.toBeNull();
-    expect(folder?.querySelector('.shell-route-loading .spinner')).not.toBeNull();
-    expect(folder?.querySelector('.shell-route-loading .loading-page')).not.toBeNull();
+    expect(folder?.querySelector('.shell-route-loading')).toBeNull();
     expect(element.querySelector('.site-header nav')).toBeNull();
     expect(folder?.querySelector('nav[aria-label="Primary navigation"]')).not.toBeNull();
     expect(tabs.map((tab) => tab.classList.item(1))).toEqual(['tab-blue', 'tab-yellow']);
@@ -65,22 +73,39 @@ describe('AppShell', () => {
     expect(element.querySelector('footer')?.textContent).toContain('stays safely in this browser');
   });
 
-  it('keeps a complete loading page in the folder until the first route activates', async () => {
+  it('keeps the one initial loader until the first route is ready', async () => {
     await TestBed.configureTestingModule({
       imports: [AppShell],
       providers: [provideRouter([{ path: '', component: TestRoutePage }])],
     }).compileComponents();
 
+    const initialLoader = document.createElement('div');
+    initialLoader.id = 'app-boot';
+    document.body.append(initialLoader);
     const fixture = TestBed.createComponent(AppShell);
+    const appRoot = fixture.nativeElement as HTMLElement;
+    appRoot.setAttribute('inert', '');
+    appRoot.setAttribute('aria-busy', 'true');
+    appRoot.setAttribute('aria-hidden', 'true');
     fixture.detectChanges();
-
-    expect(fixture.nativeElement.querySelector('.shell-route-loading .state-card')).not.toBeNull();
 
     await TestBed.inject(Router).navigateByUrl('/');
     fixture.detectChanges();
 
-    expect(fixture.nativeElement.querySelector('.shell-route-loading')).toBeNull();
-    expect(fixture.nativeElement.querySelector('.test-route')?.textContent).toBe('Ready');
+    expect(initialLoader.isConnected).toBe(true);
+    expect(appRoot.hasAttribute('inert')).toBe(true);
+    expect(appRoot.querySelector('.test-route')?.textContent).toBe('Ready');
+
+    resolveTestRoute();
+    await new Promise<void>((resolve) =>
+      requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+    );
+
+    expect(initialLoader.isConnected).toBe(true);
+    expect(initialLoader.hidden).toBe(true);
+    expect(appRoot.hasAttribute('inert')).toBe(false);
+    expect(appRoot.hasAttribute('aria-busy')).toBe(false);
+    expect(appRoot.hasAttribute('aria-hidden')).toBe(false);
   });
 
   it('applies and remembers an explicit appearance choice', async () => {

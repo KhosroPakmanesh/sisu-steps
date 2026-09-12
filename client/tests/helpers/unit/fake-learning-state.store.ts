@@ -14,12 +14,11 @@ export class FakeLearningStateStore {
   readonly learnerState = signal<LearnerState>(
     createEmptyLearnerState({ [learningPack.id]: learningPack.version }),
   );
-  readonly loading = signal(false);
   readonly error = signal<string | null>(null);
   readonly ready = Promise.resolve();
 
-  async initialize(): Promise<void> {
-    this.loading.set(false);
+  initialize(): Promise<void> {
+    return Promise.resolve();
   }
 
   async loadPack(topicId: string): Promise<LoadedTopicPack> {

@@ -1,6 +1,7 @@
-import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
+import { RouteReadiness } from '../shared/navigation/route-readiness';
 import { ClearHistoryService } from '../learner-data/clear-history.service';
 import {
   ConfirmationSheetComponent,
@@ -33,7 +34,7 @@ interface PendingClear {
     './topic-stats.page-interactions.css',
   ],
 })
-export class TopicStatsPage implements OnInit {
+export class TopicStatsPage implements RouteReadiness {
   private readonly route = inject(ActivatedRoute);
   private readonly clearing = inject(ClearHistoryService);
   protected readonly store = inject(LearningStateStore);
@@ -60,8 +61,9 @@ export class TopicStatsPage implements OnInit {
   protected readonly masteredCount = computed(() =>
     this.packSummary() ? correctionCount(this.store.learnerState(), true, this.packSummary()!) : 0,
   );
+  readonly routeRenderReady = this.initialize();
 
-  async ngOnInit(): Promise<void> {
+  private async initialize(): Promise<void> {
     await this.store.ready;
     if (this.store.error()) return;
     const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';

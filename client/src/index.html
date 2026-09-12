@@ -23,12 +23,19 @@
         min-height: 100dvh;
       }
 
+      app-root[inert] {
+        visibility: hidden;
+      }
+
       .app-boot,
       .app-boot * {
         box-sizing: border-box;
       }
 
       .app-boot {
+        position: fixed;
+        z-index: 100;
+        inset: 0;
         display: grid;
         min-height: 100dvh;
         place-items: center;
@@ -49,6 +56,10 @@
         background: var(--surface-raised, #fffaf0);
         box-shadow: 0.25rem 0.32rem 0 var(--surface-subtle, #eee6d7);
         text-align: center;
+      }
+
+      .app-boot[hidden] {
+        display: none;
       }
 
       .app-boot__pencil {
@@ -122,13 +133,12 @@
     </style>
   </head>
   <body>
-    <app-root>
-      <div class="app-boot" role="status" aria-live="polite">
-        <div class="app-boot__card">
-          <span class="app-boot__pencil" aria-hidden="true"></span>
-          <p>Opening your exercise book…</p>
-        </div>
+    <app-root inert aria-busy="true" aria-hidden="true"></app-root>
+    <div class="app-boot" id="app-boot" role="status" aria-live="polite">
+      <div class="app-boot__card">
+        <span class="app-boot__pencil" aria-hidden="true"></span>
+        <p>Opening your exercise book…</p>
       </div>
-    </app-root>
+    </div>
   </body>
 </html>

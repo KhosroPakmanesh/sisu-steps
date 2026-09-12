@@ -11,22 +11,22 @@
 - **VAL-G009-007 / REQ-G009-008:** Repository tests assert lesson, test, and exercise maps resolve the assembled objects.
 - **VAL-G009-008 / REQ-G009-009, REQ-G009-013:** State, backup, integration, and browser tests assert complete current state is retained, unsupported stored state resets completely, and obsolete or pack-incompatible backups are rejected before replacement.
 - **VAL-G009-009 / REQ-G009-010:** IndexedDB repository tests persist and retrieve learner state after the redundant caller-side clone is removed.
-- **VAL-G009-010 / REQ-G009-011, REQ-G009-014:** Shell unit/browser checks assert the loading markup remains present and the route area owns remaining viewport height without changing loaded-page markup.
+- **VAL-G009-010 / REQ-G009-011, REQ-G009-014:** Shell unit/browser checks assert the incomplete root stays hidden until its routed layout is ready, the full-viewport overlay prevents a visible startup shift, and final loaded-page markup remains unchanged.
 - **VAL-G009-011 / REQ-G009-012:** Existing learning unit, integration, and Playwright suites remain green.
 - **VAL-G009-012 / REQ-G009-015:** Direct-source tooling tests and the aggregate content validator continue reading `content/` in place.
 - **VAL-G009-013 / REQ-G009-017:** Source-policy and module-limit checks remain green.
 - **VAL-G009-014:** Run `npm --prefix client run check` from the repository root.
 - **VAL-G009-015:** Run `npm --prefix client run test:e2e` from the repository root.
-- **VAL-G009-016 / REQ-G009-018:** Shell unit tests shall assert loading-page ownership before and after first route activation. A browser test with application JavaScript blocked shall assert the self-styled first-paint loader remains visible and fills the viewport.
-- **VAL-G009-017 / REQ-G009-019:** Browser checks at tablet and wide widths shall delay manifest loading and assert that the loading paper and visible page clip end within eight pixels of each other; phone coverage shall retain the existing hardware-free loading layout.
+- **VAL-G009-016 / REQ-G009-018:** Shell and browser-adapter unit tests shall assert that the initial overlay remains until route readiness settles, concurrent operations cannot hide it early, and revealing the root removes its hidden, inert, busy, and accessibility-hidden state. A browser test with application JavaScript blocked shall assert the self-styled loader remains visible and fills the viewport.
+- **VAL-G009-017 / REQ-G009-019:** Browser checks at phone, tablet, and wide widths shall delay catalog manifests, direct-route pack fragments, and an uncached pack opened after startup; assert that the same overlay remains or reappears while Angular is ready underneath; assert that no route or shell spinner exists; and assert that the complete routed page replaces the overlay.
 
 ## Manual review
 
 - Confirm startup shows the same loading card and the loaded pages retain the same visual styling.
 - Confirm navigating among three topics reloads an evicted pack without losing learner state.
 - Confirm no lesson or test JSON request occurs before a pack-owned route is opened.
-- Confirm a throttled cold load moves continuously from the first-paint loader to the shell/page loader without exposing an empty workbook folder.
-- Confirm the loading-only height modifier is absent after the catalog renders.
+- Confirm a throttled cold load keeps the same full-viewport loader until the complete initial destination replaces it, without exposing the Angular shell or a second loader.
+- Confirm later navigation to an uncached pack and catalog retry reuse the same full-viewport loader and that route templates contain no separate loading state.
 
 ## Completion evidence — 2026-09-09
 
@@ -37,3 +37,10 @@
 - **Loading paper geometry:** With manifest responses delayed, browser checks confirm the loading paper and page clip bottom edges remain within eight pixels at 768 and 1440 pixels. The 320-pixel project intentionally omits this assertion because its established phone layout hides folder hardware. Covers VAL-G009-017.
 - **Current-format state:** State and backup coverage verifies the complete current contract, full reset of unsupported stored state, atomic rejection of obsolete or pack-incompatible backups, clearing, notes, lessons, sessions, corrections, and progress. The complete client gate passed 126 unit tests and 14 integration tests. The IndexedDB reset workflow passed at all three supported widths. Covers VAL-G009-008, VAL-G009-009, VAL-G009-011, VAL-G009-013, and VAL-G009-014.
 - **Broader browser suite:** The loading-specific browser checks passed, including the intentional phone-hardware skip. A full run against the already-running development server completed 198 tests with 34 intended skips. Five existing visual assertions about topic-card material and hover lift remain failing; this feature does not change those styles or assertions. No unrelated visual baseline was modified.
+
+## Single-loader completion evidence — 2026-09-10
+
+- **One physical loader:** Production-source inspection finds only the static `#app-boot` overlay; shell, catalog, topic, lesson, study, and topic-stats spinner markup and the obsolete shared spinner/loading-page CSS are absent. Covers REQ-G009-018 and REQ-G009-019.
+- **Lifecycle and accessibility:** Shell and adapter unit tests verify route-readiness waiting, concurrent-operation ownership, reuse of the same element, and removal of `inert`, `aria-busy`, and `aria-hidden` only when loading completes. The complete client gate passed 128 unit tests and 14 integration tests. Covers VAL-G009-010, VAL-G009-014, and VAL-G009-016.
+- **Browser behavior:** All 18 focused Playwright checks passed across 320, 768, and 1440 pixels. They cover JavaScript-blocked first paint, delayed catalog startup, a delayed direct topic URL, later navigation to an uncached pack, catalog retry, absence of route spinners, and unchanged request boundaries. Covers VAL-G009-015 and VAL-G009-017.
+- **Broader regression run:** Every loading check passed in the complete Playwright run. Unrelated existing topic-card material and hover-lift assertions kept the broad suite from an all-green result; no topic-card production or specification change is included in this work.

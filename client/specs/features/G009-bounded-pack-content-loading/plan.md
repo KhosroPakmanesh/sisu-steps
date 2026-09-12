@@ -13,9 +13,9 @@ This feature supersedes only the eager runtime-loading behavior documented by G0
 - Load and validate a complete pack when a workflow opens it.
 - Keep at most two successfully loaded packs in an in-memory least-recently-used cache and deduplicate concurrent loads.
 - Build per-pack maps for lesson, test, and exercise lookup when a pack is assembled.
-- Reserve the application shell's route area during startup so the footer does not jump when content resolves.
-- Show the existing pencil-loading presentation from the first HTML paint through initial lazy-route activation so the workbook folder never appears incomplete.
-- Keep the initial shell and catalog loading papers aligned with the visible folder hardware without changing loaded-page dimensions.
+- Keep the incomplete application shell hidden during startup so its construction cannot visibly shift the footer or routed paper.
+- Keep one reusable full-viewport pencil-loading overlay visible from the first HTML paint until the initial routed page is fully renderable, including pack content required by a direct URL, and reuse it for later uncached route loads.
+- Build the Angular shell behind that overlay while keeping it hidden, inert, and absent from the accessibility tree; reveal it atomically without a second shell loader.
 - Rely on IndexedDB's structured-clone operation instead of cloning learner state immediately before a write.
 - Cover startup request boundaries, pack loading, cache eviction, retry, validation, and unchanged workflows with automated tests.
 
@@ -34,7 +34,7 @@ This feature supersedes only the eager runtime-loading behavior documented by G0
 3. A pack content repository owns fragment I/O, full-pack validation, indexed read models, in-flight request deduplication, and the two-entry LRU cache.
 4. Pack-specific pages and services request the selected pack before using lessons, tests, or exercises. Catalog-wide operations continue from manifest summaries.
 5. Explicit full-backup restoration may load every pack because full exercise validation is required at that user-invoked boundary; the LRU still retains only two packs afterward.
-6. The initial HTML owns a small self-styled pencil-loading presentation until Angular replaces it. The shell then owns the same loading-card state until the first lazy route activates, after which the route's existing data-loading state takes over. A loading-only page modifier fills the folder's reserved route height and centers the card while visible hardware is present; final loaded-page CSS remains unchanged.
+6. The initial HTML owns the application's only self-styled pencil-loading overlay outside the Angular root. Angular builds each pending route behind it while the root remains hidden, inert, and excluded from the accessibility tree. Each route exposes its render readiness; a shared browser adapter hides the overlay and reveals the root together on the next animation frame. The loader stays in the document while idle so later uncached routes and catalog retry reuse the same element; route templates and the shell contain no competing loader markup or styling.
 7. Persisted learner state is accepted only in the complete current shape. Unsupported stored state resets to the current empty state, while unsupported backups are rejected before replacement; no legacy data is remapped.
 
 ## Delivery

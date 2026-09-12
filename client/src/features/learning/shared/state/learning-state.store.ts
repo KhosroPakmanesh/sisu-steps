@@ -16,12 +16,10 @@ export class LearningStateStore {
 
   readonly packSummaries = signal<TopicPackSummary[]>([]);
   readonly learnerState = signal<LearnerState>(createEmptyLearnerState());
-  readonly loading = signal(true);
   readonly error = signal<string | null>(null);
   readonly ready = this.initialize();
 
   async initialize(): Promise<void> {
-    this.loading.set(true);
     this.error.set(null);
     try {
       const [packs, storedState] = await Promise.all([
@@ -37,8 +35,6 @@ export class LearningStateStore {
       this.learnerState.set(alignedState);
     } catch (error) {
       this.error.set(error instanceof Error ? error.message : 'The app could not start.');
-    } finally {
-      this.loading.set(false);
     }
   }
 

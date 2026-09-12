@@ -28,7 +28,7 @@ describe('TopicStatsPage', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(TopicStatsPage);
     fixture.detectChanges();
-    await fixture.componentInstance.ngOnInit();
+    await fixture.componentInstance.routeRenderReady;
     fixture.detectChanges();
   });
 

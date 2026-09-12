@@ -24,7 +24,7 @@ describe('TopicPage', () => {
     store = TestBed.inject(LearningStateStore) as unknown as FakeLearningStateStore;
     fixture = TestBed.createComponent(TopicPage);
     fixture.detectChanges();
-    await fixture.componentInstance.ngOnInit();
+    await fixture.componentInstance.routeRenderReady;
     fixture.detectChanges();
   });
 

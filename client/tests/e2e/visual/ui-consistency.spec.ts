@@ -225,7 +225,6 @@ for (const theme of ['Day', 'Night']) {
           '.feedback',
           '.back-link',
           '.notebook-progress',
-          '.spinner',
           '.word-token',
           '.notebook-input',
           '.notebook-select',
@@ -244,9 +243,6 @@ for (const theme of ['Day', 'Night']) {
           ]),
           featureBackLinkText: selectorsWith('back-link', ['color']).filter((selector) =>
             selector.includes('[_ngcontent'),
-          ),
-          spinnerBody: selectorsWith('.spinner', ['background']).filter(
-            (selector) => !selector.includes('::'),
           ),
           sequenceMarkerVisual: rules
             .filter(
@@ -293,7 +289,6 @@ for (const theme of ['Day', 'Night']) {
       expect(owners.progress).toEqual(['.notebook-progress::-webkit-progress-value']);
       expect(owners.reviewDirectColour).toEqual([]);
       expect(owners.featureBackLinkText).toEqual([]);
-      expect(owners.spinnerBody).toEqual(['.spinner']);
       expect(owners.sequenceMarkerVisual).toEqual(['.sequence-marker', '.sequence-marker.compact']);
       expect(owners.featureSharedColour).toEqual([]);
       expect(new Set(neutralSheetColours).size).toBe(1);

@@ -1,6 +1,7 @@
-import { Component, computed, inject, OnInit, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
+import { RouteReadiness } from '../shared/navigation/route-readiness';
 import { ExerciseTest, Lesson } from '../shared/content/content.models';
 import { lessonsForTest } from '../shared/content/content.queries';
 import { isLessonCompleted } from '../shared/progress/progress.queries';
@@ -15,7 +16,7 @@ import { LessonProgressService } from './lesson-progress.service';
   templateUrl: './lesson.page.html',
   styleUrls: ['./lesson.page.css', './lesson.page-content.css', './lesson.page-responsive.css'],
 })
-export class LessonPage implements OnInit {
+export class LessonPage implements RouteReadiness {
   private readonly route = inject(ActivatedRoute);
   private readonly lessonProgress = inject(LessonProgressService);
   protected readonly store = inject(LearningStateStore);
@@ -31,10 +32,14 @@ export class LessonPage implements OnInit {
   protected readonly completedCount = computed(
     () => this.lessons().filter((lesson) => this.isCompleted(lesson)).length,
   );
+  readonly routeRenderReady = this.initialize();
 
-  async ngOnInit(): Promise<void> {
+  private async initialize(): Promise<void> {
     await this.store.ready;
-    if (this.store.error()) return;
+    if (this.store.error()) {
+      this.pageError.set(this.store.error());
+      return;
+    }
     const topicId = this.route.snapshot.paramMap.get('topicId') ?? '';
     const testId = this.route.snapshot.paramMap.get('testId') ?? '';
     let loaded;

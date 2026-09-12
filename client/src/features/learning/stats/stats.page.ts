@@ -1,6 +1,7 @@
 import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
+import { RouteReadiness } from '../shared/navigation/route-readiness';
 import { BackupRestoreComponent } from '../learner-data/backup-restore.component';
 import { getLearningLevelLabel } from '../shared/content/content.queries';
 import { TopicPackSummary } from '../shared/content/content.models';
@@ -17,8 +18,9 @@ import { LearningStateStore } from '../shared/state/learning-state.store';
   templateUrl: './stats.page.html',
   styleUrls: ['./stats.page.css', '../topics/topic-catalog.page.css'],
 })
-export class StatsPage {
+export class StatsPage implements RouteReadiness {
   protected readonly store = inject(LearningStateStore);
+  readonly routeRenderReady = this.store.ready;
   protected readonly paths = learningPaths;
   protected readonly cumulativeAttempts = computed(() =>
     completedAttemptCount(this.store.learnerState()),

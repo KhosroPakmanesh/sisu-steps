@@ -171,14 +171,6 @@
   right: var(--folder-clip-content-clearance);
 }
 
-@media (width >= 48rem) {
-  .workbook-folder > router-outlet + * > .loading-page {
-    display: grid;
-    min-height: calc(100dvh - var(--header-height) - 4rem);
-    align-items: center;
-  }
-}
-
 .workbook-page-hardware {
   z-index: 3;
   top: 2.35rem;
