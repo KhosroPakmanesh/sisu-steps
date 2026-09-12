@@ -714,7 +714,9 @@ for (const theme of ['Day', 'Night']) {
       }).toEqual(topicMarkerMaterial);
     });
 
-    test('shares instructional typography and responsive answer slips', async ({ page }) => {
+    test('shares instructional typography, practice color, and responsive answer slips', async ({
+      page,
+    }) => {
       await expectEssentialTextMinimum(page);
       await open(page, LESSON);
       const prose = await page
@@ -743,6 +745,15 @@ for (const theme of ['Day', 'Night']) {
       }
       await expectEssentialTextMinimum(page);
       await page.getByRole('button', { name: 'Start optional practice', exact: true }).click();
+      const workedExampleColor = await page
+        .locator('.example-grid article')
+        .first()
+        .evaluate((element) => getComputedStyle(element).backgroundColor);
+      expect(
+        await page
+          .locator('.practice-card')
+          .evaluate((element) => getComputedStyle(element).backgroundColor),
+      ).toBe(workedExampleColor);
       const practiceChoice = page.locator('.practice-choices label').first();
       const practice = await choiceGeometry(practiceChoice);
       await practiceChoice.click();

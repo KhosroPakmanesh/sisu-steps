@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Matched only the optional-practice question sheet's background color to the worked-example cards while preserving its ruling, border, shape, spacing, and behavior.
+
 - Moved the scored Study and optional lesson-practice forward actions above revealed feedback and sentence explanations, replacing **Check answer** and **Show answer** in the same action position so continuing no longer requires scrolling to the end of a long explanation.
 
 - Matched every Notebook topic card's base color to the surrounding notebook paper while preserving its grid, clipping, tape, depth, content, and interaction states.
