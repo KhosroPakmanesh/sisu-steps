@@ -95,6 +95,14 @@ describe('LessonPage', () => {
 
     expect(element.querySelector('.feedback')?.textContent).toContain('Answer revealed');
     expect(element.querySelector('.feedback')?.textContent).toContain('talossa');
+    const actions = element.querySelector('.practice-actions') as HTMLElement;
+    const feedback = element.querySelector('.feedback') as HTMLElement;
+    expect(actions.textContent).toContain('Continue');
+    expect(actions.textContent).not.toContain('Check answer');
+    expect(actions.textContent).not.toContain('Show answer');
+    expect(
+      actions.compareDocumentPosition(feedback) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
     expect(completeLesson).not.toHaveBeenCalled();
   });
 

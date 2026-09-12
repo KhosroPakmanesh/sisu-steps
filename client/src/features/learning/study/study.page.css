@@ -160,11 +160,6 @@
   line-height: 1.45;
 }
 
-.continue-button {
-  display: flex;
-  margin: 1.5rem var(--space-2) var(--space-2) auto;
-}
-
 .result-card {
   position: relative;
   margin: var(--space-8) auto 0;
@@ -256,10 +251,6 @@
     width: calc(100% - 0.75rem);
   }
 
-  .continue-button {
-    margin-right: var(--folder-clip-content-clearance);
-  }
-
   .runner-header {
     grid-template-columns: 1fr auto;
   }
@@ -326,10 +317,6 @@
 
   .study-action-dock .answer-actions {
     margin-top: 0;
-  }
-
-  .study-action-dock .continue-button {
-    margin: 0 0 0 auto;
   }
 
   .study-action-dock .reveal-note {

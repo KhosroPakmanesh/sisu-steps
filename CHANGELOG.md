@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Moved the scored Study and optional lesson-practice forward actions above revealed feedback and sentence explanations, replacing **Check answer** and **Show answer** in the same action position so continuing no longer requires scrolling to the end of a long explanation.
+
 - Matched every Notebook topic card's base color to the surrounding notebook paper while preserving its grid, clipping, tape, depth, content, and interaction states.
 
 - Unsupported learner data now fails cleanly instead of passing through compatibility code: obsolete or removed-pack browser state resets completely, old or pack-incompatible backups are rejected before replacement, and current-format data continues unchanged. Removed the one-time foundations split migration, legacy single-pack state field and fallback hydration, and retired foundations content generator.

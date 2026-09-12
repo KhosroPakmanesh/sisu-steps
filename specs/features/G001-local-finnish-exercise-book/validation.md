@@ -63,6 +63,8 @@
 
 ## Manual validation
 
+- **VAL-G001-080** (`REQ-G001-008`, `036`, `045`): In both scored Study and optional lesson practice, submit an answer and reveal an answer; confirm **Continue**, **See result**, or **Finish practice** replaces the **Check answer** and **Show answer** group in the same position before feedback and any step-by-step sentence explanation, with no duplicate forward action below the explanation.
+
 - **VAL-G001-013** (`REQ-G001-001`, `002`, `006`–`012`): Complete, leave, resume, repeat, and practise mistakes from a real browser session.
 - **VAL-G001-014** (`REQ-G001-020`–`023`): Export progress, clear it, restore it, try an invalid backup, and verify scoped clearing.
 - **VAL-G001-015** (`REQ-G001-028`): Navigate all primary flows using only a keyboard and inspect accessible names and focus order.

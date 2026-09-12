@@ -131,6 +131,28 @@
         </div>
       }
 
+      <div class="practice-actions">
+        @if (feedback()) {
+          <button class="button primary" type="button" (click)="continue()">
+            {{
+              exerciseIndex() === lesson.practiceExercises.length - 1
+                ? 'Finish practice'
+                : 'Continue'
+            }}
+          </button>
+        } @else {
+          <button
+            class="button primary"
+            type="button"
+            [disabled]="!canSubmit(currentExercise)"
+            (click)="submit()"
+          >
+            Check answer
+          </button>
+          <button class="button secondary" type="button" (click)="showAnswer()">Show answer</button>
+        }
+      </div>
+
       @if (feedback(); as answer) {
         <aside
           class="feedback"
@@ -216,23 +238,6 @@
             </ol>
           </section>
         }
-        <button class="button primary practice-continue" type="button" (click)="continue()">
-          {{
-            exerciseIndex() === lesson.practiceExercises.length - 1 ? 'Finish practice' : 'Continue'
-          }}
-        </button>
-      } @else {
-        <div class="practice-actions">
-          <button
-            class="button primary"
-            type="button"
-            [disabled]="!canSubmit(currentExercise)"
-            (click)="submit()"
-          >
-            Check answer
-          </button>
-          <button class="button secondary" type="button" (click)="showAnswer()">Show answer</button>
-        </div>
       }
     </div>
   }

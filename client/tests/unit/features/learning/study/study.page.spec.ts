@@ -53,6 +53,13 @@ describe('StudyPage', () => {
     expect(feedback.textContent).toContain('Answer revealed');
     expect(feedback.textContent).toContain('talossa');
     expect(feedback.textContent).toContain('The word talo has back vowels');
+    const actions = fixture.nativeElement.querySelector('.answer-actions') as HTMLElement;
+    expect(actions.textContent).toMatch(/Continue|See result/);
+    expect(actions.textContent).not.toContain('Check answer');
+    expect(actions.textContent).not.toContain('Show answer');
+    expect(
+      actions.compareDocumentPosition(feedback) & Node.DOCUMENT_POSITION_FOLLOWING,
+    ).toBeTruthy();
   });
 
   it('presents focused guidance with a same-level section heading', () => {

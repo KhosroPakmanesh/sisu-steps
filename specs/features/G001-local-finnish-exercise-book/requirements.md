@@ -9,7 +9,7 @@
 - **REQ-G001-005:** The system shall support multiple-choice, fill-in-the-blank, English-to-Finnish translation, Finnish-to-English translation, and word-order exercises.
 - **REQ-G001-006:** The system shall present one exercise at a time and show progress within the active session.
 - **REQ-G001-007:** The system shall grade an answer immediately after the learner submits it.
-- **REQ-G001-008:** The system shall lock the submitted answer and display whether it was correct, the correct answer, and an English explanation before continuing.
+- **REQ-G001-008:** The system shall lock the submitted answer and display whether it was correct, the correct answer, and an English explanation before continuing. After submission or answer reveal, the forward action shall replace **Check answer** and **Show answer** in their existing action-group position before the feedback and explanation, so the learner does not need to scroll past the explanation to continue.
 - **REQ-G001-009:** The system shall allow an unfinished ordinary test to be resumed at its saved position.
 - **REQ-G001-010:** The system shall allow any ordinary test to be attempted repeatedly without overwriting earlier completed attempts.
 - **REQ-G001-011:** The system shall offer a practice-mistakes session containing exercises the learner has answered incorrectly.
@@ -58,7 +58,7 @@
 - **REQ-G001-042:** The bundled content pack shall define versioned reusable lessons and shall associate each test with an ordered list of lesson IDs without duplicating a lesson on the same preparation page.
 - **REQ-G001-043:** Each lesson shall teach from first principles with a title, purpose, learning objectives, plain-English sections, worked Finnish examples with English meanings and construction notes, and common mistakes to avoid.
 - **REQ-G001-044:** Each lesson shall provide between two and five optional unscored practice exercises that are separate from the pack's scored test exercises.
-- **REQ-G001-045:** Lesson practice shall use the supported test interaction patterns, immediate grading, correct-answer feedback, English explanation, and answer reveal without requiring a response.
+- **REQ-G001-045:** Lesson practice shall use the supported test interaction patterns, immediate grading, correct-answer feedback, English explanation, and answer reveal without requiring a response. After grading or answer reveal, its forward action shall replace **Check answer** and **Show answer** in their existing action-group position before the feedback and explanation.
 - **REQ-G001-046:** Lesson-practice responses and reveals shall be temporary and shall not create or change test attempts, percentages, progress statistics, unfinished test sessions, or unresolved mistakes.
 - **REQ-G001-047:** The learner shall be able to finish a lesson without completing its optional practice, and **Finish lesson** shall record that lesson as completed.
 - **REQ-G001-048:** Lesson completion shall be stored in IndexedDB with the stable lesson ID, lesson version, and completion timestamp and shall be included in learner backup and restore.
