@@ -8,11 +8,17 @@ test('shows a complete loading presentation before Angular bootstraps', async ({
   await page.goto('/');
 
   const bootLoader = page.locator('.app-boot');
+  const loadingCard = bootLoader.locator('.app-boot__card');
   await expect(bootLoader).toBeVisible();
   await expect(bootLoader).toContainText('Opening your exercise book…');
   expect((await bootLoader.boundingBox())?.height).toBeGreaterThanOrEqual(
     page.viewportSize()?.height ?? 0,
   );
+  await expect(loadingCard).toHaveCSS('background-image', /repeating-linear-gradient/);
+  await expect(loadingCard).toHaveCSS('clip-path', /polygon/);
+  expect(
+    await loadingCard.evaluate((element) => getComputedStyle(element, '::before').content),
+  ).not.toBe('none');
 });
 
 test('keeps one initial loader above Angular until the catalog is ready', async ({ page }) => {

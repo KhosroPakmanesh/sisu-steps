@@ -46,6 +46,7 @@
       }
 
       .app-boot__card {
+        position: relative;
         display: grid;
         justify-items: center;
         gap: 1rem;
@@ -53,9 +54,37 @@
         padding: 3rem;
         border: 1px dashed var(--border-control, #beb19c);
         border-left: 0.32rem solid transparent;
-        background: var(--surface-raised, #fffaf0);
-        box-shadow: 0.25rem 0.32rem 0 var(--surface-subtle, #eee6d7);
+        border-radius: 0.08rem;
+        background-color: var(--surface-raised, #fffaf0);
+        background-image:
+          linear-gradient(
+            to right,
+            transparent 1.8rem,
+            var(--notebook-margin, rgb(160 78 69 / 27%)) 1.8rem 1.86rem,
+            transparent 0
+          ),
+          repeating-linear-gradient(
+            to bottom,
+            transparent 0 1.7rem,
+            var(--notebook-rule, rgb(67 109 122 / 13%)) 1.7rem 1.76rem
+          );
+        clip-path: polygon(0.2rem 0, 98% 0.12rem, 100% 96%, 96% 100%, 2% 98%, 0 0.4rem);
+        box-shadow: none;
+        filter: drop-shadow(0.25rem 0.32rem 0 var(--paper-edge, #d9cfbd))
+          drop-shadow(0.45rem 0.65rem 0.7rem var(--notebook-shadow, rgb(48 44 36 / 18%)));
         text-align: center;
+        transform: rotate(-0.2deg);
+      }
+
+      .app-boot__card::before {
+        position: absolute;
+        top: 0.2rem;
+        left: 50%;
+        width: 4.6rem;
+        height: 0.85rem;
+        background: var(--paper-tape, rgb(217 185 111 / 50%));
+        content: '';
+        transform: translateX(-50%) rotate(1deg);
       }
 
       .app-boot[hidden] {
@@ -112,7 +141,24 @@
         .app-boot__card {
           border-color: #5b6661;
           background: #2c3331;
-          box-shadow: 0.25rem 0.32rem 0 #303735;
+          background-image:
+            linear-gradient(
+              to right,
+              transparent 1.8rem,
+              rgb(211 138 129 / 30%) 1.8rem 1.86rem,
+              transparent 0
+            ),
+            repeating-linear-gradient(
+              to bottom,
+              transparent 0 1.7rem,
+              rgb(105 154 166 / 17%) 1.7rem 1.76rem
+            );
+          filter: drop-shadow(0.25rem 0.32rem 0 #303735)
+            drop-shadow(0.45rem 0.65rem 0.7rem rgb(0 0 0 / 35%));
+        }
+
+        .app-boot__card::before {
+          background: rgb(155 123 66 / 50%);
         }
 
         .app-boot__pencil {

@@ -142,6 +142,8 @@
 
 ### Fixed
 
+- Restored the loading card's established loose drafting-sheet appearance with notebook ruling, margin line, tape, clipped edges, and layered paper depth while preserving the single reusable loading overlay and its behavior.
+
 - Kept the right-side workbook clip's inner grip vertically centered with equal top and bottom spacing at tablet and desktop sizes.
 
 - Kept the loading pencil fully visible while it sketches with a restrained side-to-side motion, and made it static when reduced motion is requested.
