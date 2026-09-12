@@ -34,6 +34,8 @@
 
 ### Changed
 
+- Matched every Notebook topic card's base color to the surrounding notebook paper while preserving its grid, clipping, tape, depth, content, and interaction states.
+
 - Unsupported learner data now fails cleanly instead of passing through compatibility code: obsolete or removed-pack browser state resets completely, old or pack-incompatible backups are rejected before replacement, and current-format data continues unchanged. Removed the one-time foundations split migration, legacy single-pack state field and fallback hydration, and retired foundations content generator.
 
 - Changed client startup to load only the content catalog and compact pack summaries, then load and validate a full pack when its topic is opened. Full packs now use indexed lookups and a two-entry least-recently-used memory cache; existing routes, content, scoring, learner-state and backup schemas, workflows, and final appearance remain unchanged. One reusable full-viewport pencil loader is now the application's only loader: it remains visible from the first HTML paint until the complete initial destination is ready, including direct pack links, and reappears for later uncached route loads or catalog retry while Angular builds hidden and inert underneath. The former shell and route-specific loaders and their obsolete styling are removed. IndexedDB writes also no longer perform a redundant caller-side structured clone.

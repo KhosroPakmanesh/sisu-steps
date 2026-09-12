@@ -689,7 +689,7 @@ test('uses a responsive three, two, and one-column topic-card grid', async ({ pa
   }
 });
 
-test('reuses the worked-example sheet and card surfaces for the topic catalog', async ({
+test('reuses the worked-example treatment with notebook-paper topic cards', async ({
   page,
 }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
@@ -716,6 +716,9 @@ test('reuses the worked-example sheet and card surfaces for the topic catalog', 
   });
   const topicGridMaterial = await page.locator('.topic-grid').evaluate(material);
   const topicCardMaterial = await page.locator('.topic-card').first().evaluate(material);
+  const notebookPaperColor = await page
+    .locator('.page-shell')
+    .evaluate((element) => getComputedStyle(element).backgroundColor);
   await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
   await expect(page.locator('.topic-card .card-kicker')).toHaveCount(0);
 
@@ -727,7 +730,13 @@ test('reuses the worked-example sheet and card surfaces for the topic catalog', 
     .evaluate(material);
 
   expect(topicGridMaterial).toEqual(workedExamplesMaterial);
-  expect(topicCardMaterial).toEqual(exampleCardMaterial);
+  expect(topicCardMaterial).toMatchObject({
+    color: notebookPaperColor,
+    borderTop: exampleCardMaterial.borderTop,
+    paddingBottom: exampleCardMaterial.paddingBottom,
+  });
+  expect(topicCardMaterial.image).not.toBe('none');
+  expect(topicCardMaterial.clipPath).not.toBe('none');
   expect(catalogSection).toEqual({
     paddingTop: 64,
     paddingBottom: 40,

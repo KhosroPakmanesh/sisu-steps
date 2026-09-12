@@ -82,8 +82,7 @@ main.page-shell .topic-grid .topic-card {
   border-radius: 0.08rem;
   background:
     linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px),
-    color-mix(in srgb, var(--surface-stationery) 42%, var(--surface-raised));
+    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px), var(--surface-paper);
   background-size: 1.5rem 1.5rem;
   clip-path: polygon(0.2rem 0, 99% 0.18rem, 100% 97%, 98% 100%, 0 98%);
   box-shadow:
