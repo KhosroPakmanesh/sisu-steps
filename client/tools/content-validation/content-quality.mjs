@@ -94,13 +94,41 @@ export function validateVocabularyItemTypes(lessons) {
 }
 
 export function validateExerciseEditorialQuality(exercises) {
-  return exercises
-    .filter(
-      (exercise) =>
-        typeof exercise?.prompt === 'string' &&
-        /(?:Optional practice:\s*){2,}/iu.test(exercise.prompt),
-    )
-    .map((exercise) => `${exercise.id}: repeats the optional-practice label`);
+  const errors = [];
+  for (const exercise of exercises) {
+    if (
+      typeof exercise?.prompt === 'string' &&
+      /(?:Optional practice:\s*){2,}/iu.test(exercise.prompt)
+    ) {
+      errors.push(`${exercise.id}: repeats the optional-practice label`);
+    }
+    if (hasAmbiguousSecondPersonPrompt(exercise)) {
+      errors.push(
+        `${exercise.id}: second-person Finnish production prompt does not identify the intended form`,
+      );
+    }
+  }
+  return errors;
+}
+
+function hasAmbiguousSecondPersonPrompt(exercise) {
+  if (
+    exercise?.type === 'translation-en' ||
+    !exercise?.tags?.includes('sentence') ||
+    !/\byou\b/iu.test(exercise?.sentenceExplanation?.translation ?? '')
+  ) {
+    return false;
+  }
+  const prompt = exercise.prompt ?? '';
+  if (exercise.tags.includes('person-sina')) {
+    return !/(?<![\p{L}\p{N}])sinä(?![\p{L}\p{N}])|\bone person\b|\bsingular\b/iu.test(prompt);
+  }
+  if (exercise.tags.includes('person-te')) {
+    return !/(?<![\p{L}\p{N}])te(?![\p{L}\p{N}])|\bmore than one\b|\bgroup\b|\bplural\b|\bpolite(?:ly)?\b/iu.test(
+      prompt,
+    );
+  }
+  return false;
 }
 
 function collectStrings(value) {

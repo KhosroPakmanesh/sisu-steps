@@ -449,7 +449,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "In the form-and-agreement review: Build the form from the subject. Build “You are on time.”",
+      "prompt": "In the form-and-agreement review: Build the form from the subject. Build “You are on time.” Address one person with sinä.",
       "acceptedAnswers": ["Sinä olet ajoissa."],
       "explanation": "Sinä takes olet, the matching present-tense form of olla.",
       "tokens": ["ajoissa.", "Sinä", "olet"],
@@ -729,7 +729,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence.",
-      "prompt": "In the form-and-agreement review: Write “You are a student.” without the optional subject pronoun.",
+      "prompt": "In the form-and-agreement review: Write “You are a student.” Address one person; omit the optional subject pronoun sinä.",
       "acceptedAnswers": ["Olet opiskelija."],
       "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
       "tags": [

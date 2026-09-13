@@ -109,7 +109,62 @@ describe('standalone content-quality validation', () => {
       ]),
     ).toEqual(['practice: repeats the optional-practice label']);
   });
+
+  it('rejects number-neutral English you in Finnish-production prompts', () => {
+    expect(
+      validateExerciseEditorialQuality([
+        secondPersonExercise({ id: 'singular', tags: ['sentence', 'person-sina'] }),
+        secondPersonExercise({ id: 'plural', tags: ['sentence', 'person-te'] }),
+      ]),
+    ).toEqual([
+      'singular: second-person Finnish production prompt does not identify the intended form',
+      'plural: second-person Finnish production prompt does not identify the intended form',
+    ]);
+  });
+
+  it('accepts visible singular, plural, polite, subject, and translation exemptions', () => {
+    expect(
+      validateExerciseEditorialQuality([
+        secondPersonExercise({ prompt: 'Complete “You are here.” Sinä ____ täällä.' }),
+        secondPersonExercise({
+          id: 'one-person',
+          prompt: 'Write “You are here.” Address one person.',
+        }),
+        secondPersonExercise({
+          id: 'plural',
+          tags: ['sentence', 'person-te'],
+          prompt: 'Write “You are here.” Address more than one person.',
+        }),
+        secondPersonExercise({
+          id: 'polite',
+          tags: ['sentence', 'person-te'],
+          prompt: 'Write “You are here.” Address one person politely.',
+        }),
+        secondPersonExercise({
+          id: 'subject',
+          tags: ['sentence', 'person-te'],
+          prompt: 'Complete “You are here.” Te ____ täällä.',
+        }),
+        secondPersonExercise({
+          id: 'translation',
+          type: 'translation-en',
+          prompt: 'Translate “Sinä olet täällä.” into English.',
+        }),
+      ]),
+    ).toEqual([]);
+  });
 });
+
+function secondPersonExercise(overrides: Record<string, unknown> = {}): Record<string, unknown> {
+  return {
+    id: 'singular',
+    type: 'translation-fi',
+    prompt: 'Write “You are here.”',
+    tags: ['sentence', 'person-sina'],
+    sentenceExplanation: { translation: 'You are here.' },
+    ...overrides,
+  };
+}
 
 function lesson(overrides: Record<string, unknown>): Record<string, unknown> {
   return {

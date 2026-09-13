@@ -100,6 +100,27 @@ const validPack = (): TopicPack => ({
   ],
 });
 
+const secondPersonExplanation = () => ({
+  translation: 'You are here.',
+  pattern: 'Subject + verb + place word',
+  parts: [
+    {
+      finnish: 'Sinä',
+      meaning: 'you',
+      role: 'singular subject',
+      baseForm: 'sinä',
+      formation: 'Use sinä for one person.',
+    },
+    {
+      finnish: 'olet täällä',
+      meaning: 'are here',
+      role: 'verb and place word',
+      baseForm: 'olla; täällä',
+      formation: 'Use olet with sinä; täällä is unchanged.',
+    },
+  ],
+});
+
 describe('content-pack validation', () => {
   it('accepts a well-formed pack', () => {
     expect(validateTopicPack(validPack()).id).toBe('pack');
@@ -166,6 +187,45 @@ describe('content-pack validation', () => {
     expect(() => validateTopicPack(pack)).toThrowError(
       'Sentence construction exercise exercise-1 must show its complete English meaning before submission.',
     );
+  });
+  it('rejects ambiguous singular and plural English you in Finnish production', () => {
+    for (const personTag of ['person-sina', 'person-te']) {
+      const pack = validPack();
+      const exercise = pack.tests[0].exercises[0];
+      exercise.type = 'translation-fi';
+      exercise.prompt = 'Write “You are here.”';
+      exercise.tags = ['sentence', personTag];
+      exercise.sentenceExplanation = secondPersonExplanation();
+
+      expect(() => validateTopicPack(pack)).toThrowError(
+        'Exercise exercise-1 must identify the intended Finnish form of English “you” before submission.',
+      );
+    }
+  });
+  it('accepts visible second-person form guidance and Finnish-to-English prompts', () => {
+    const cases = [
+      { tag: 'person-sina', prompt: 'Complete “You are here.” Sinä ____ täällä.' },
+      { tag: 'person-sina', prompt: 'Write “You are here.” Address one person.' },
+      { tag: 'person-te', prompt: 'Write “You are here.” Address more than one person.' },
+      { tag: 'person-te', prompt: 'Write “You are here.” Address one person politely.' },
+      { tag: 'person-te', prompt: 'Complete “You are here.” Te ____ täällä.' },
+      {
+        tag: 'person-sina',
+        prompt: 'Translate “Sinä olet täällä.” into English.',
+        translate: true,
+      },
+    ];
+
+    for (const item of cases) {
+      const pack = validPack();
+      const exercise = pack.tests[0].exercises[0];
+      exercise.type = item.translate ? 'translation-en' : 'translation-fi';
+      exercise.prompt = item.prompt;
+      exercise.tags = ['sentence', item.tag];
+      exercise.sentenceExplanation = secondPersonExplanation();
+
+      expect(validateTopicPack(pack).id).toBe('pack');
+    }
   });
   it('does not reveal the assessed meaning in Finnish-to-English translation prompts', () => {
     const pack = validPack();

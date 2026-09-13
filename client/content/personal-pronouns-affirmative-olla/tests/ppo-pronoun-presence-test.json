@@ -103,7 +103,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence.",
-      "prompt": "Read the whole meaning before answering. Write “You are there.” without the optional subject pronoun.",
+      "prompt": "Read the whole meaning before answering. Write “You are there.” Address more than one person; omit the optional subject pronoun te.",
       "acceptedAnswers": ["Olette siellä."],
       "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
       "tags": [
@@ -235,7 +235,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the sentence requested.",
-      "prompt": "Build the form from the subject. Which shorter sentence still means “You are at home”?",
+      "prompt": "Build the form from the subject. Which shorter sentence still means “You are at home”? Address more than one person; omit te.",
       "acceptedAnswers": ["Olette kotona."],
       "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
       "options": ["Olette kotona.", "Te olette kotona.", "Kotona."],
@@ -368,7 +368,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Read the whole meaning before answering. Build “You are at school.” without the optional subject pronoun.",
+      "prompt": "Read the whole meaning before answering. Build “You are at school.” Address more than one person; omit the optional subject pronoun te.",
       "acceptedAnswers": ["Olette koulussa."],
       "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
       "tokens": ["koulussa.", "Olette"],
@@ -502,7 +502,7 @@
     {
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
-      "prompt": "Build the form from the subject. Write “You are at work.” without the optional subject pronoun.",
+      "prompt": "Build the form from the subject. Write “You are at work.” Address more than one person; omit the optional subject pronoun te.",
       "acceptedAnswers": ["Olette työssä."],
       "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
       "tags": [
@@ -763,7 +763,7 @@
     {
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
-      "prompt": "Write “You are here in the evening.” without the optional subject pronoun.",
+      "prompt": "Write “You are here in the evening.” Address one person; omit the optional subject pronoun sinä.",
       "acceptedAnswers": ["Olet täällä illalla."],
       "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
       "tags": [
@@ -896,7 +896,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “You are at home in the morning.” without the optional subject pronoun.",
+      "prompt": "Build “You are at home in the morning.” Address one person; omit the optional subject pronoun sinä.",
       "acceptedAnswers": ["Olet kotona aamulla."],
       "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
       "tokens": ["aamulla.", "Olet", "kotona"],
@@ -1024,7 +1024,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the sentence requested.",
-      "prompt": "Which shorter sentence still means “You are in Finland tomorrow”?",
+      "prompt": "Which shorter sentence still means “You are in Finland tomorrow”? Address one person; omit the optional subject pronoun sinä.",
       "acceptedAnswers": ["Olet Suomessa huomenna."],
       "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
       "options": ["Olet Suomessa huomenna.", "Sinä olet Suomessa huomenna.", "Suomessa huomenna."],

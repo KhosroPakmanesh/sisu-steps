@@ -1,6 +1,6 @@
 {
   "id": "ppo-singular-affirmative",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Singular affirmative olla"],
   "prerequisiteSkills": ["Pronoun reference and polite te"],
@@ -208,7 +208,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Build the form from the subject. Build “You are on time.”",
+      "prompt": "Optional practice: Build the form from the subject. Build “You are on time.” Address one person with sinä.",
       "acceptedAnswers": ["Sinä olet ajoissa."],
       "explanation": "Sinä takes olet, the matching present-tense form of olla.",
       "tokens": ["ajoissa.", "Sinä", "olet"],

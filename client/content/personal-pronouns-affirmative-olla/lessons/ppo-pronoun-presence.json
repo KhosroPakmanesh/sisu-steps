@@ -1,6 +1,6 @@
 {
   "id": "ppo-pronoun-presence",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "stage": "focused",
   "targetSkills": ["Subject-pronoun use"],
   "prerequisiteSkills": ["Affirmative pronoun–verb agreement"],
@@ -231,7 +231,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the sentence requested.",
-      "prompt": "Optional practice: Build the form from the subject. Which shorter sentence still means “You are at school today”?",
+      "prompt": "Optional practice: Build the form from the subject. Which shorter sentence still means “You are at school today”? Address more than one person; omit te.",
       "acceptedAnswers": ["Olette koulussa tänään."],
       "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
       "options": ["Olette koulussa tänään.", "Te olette koulussa tänään.", "Koulussa tänään."],

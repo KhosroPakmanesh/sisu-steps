@@ -152,6 +152,8 @@
 
 ### Fixed
 
+- Clarified 24 Finnish-production prompts whose English `you` did not identify the intended `sinä` or `te` form, and added runtime and standalone validation that prevents similarly ambiguous second-person questions from being accepted as content.
+
 - Corrected eleven lesson-version regressions while preserving monotonic version history, removed repeated labels from three optional-practice prompts, corrected four singular-subject practice explanations, and added the missing supplied `kotona — at home` declaration without changing IDs, answers, ordering, response types, diagnostics, or mastery pairs.
 
 - Restored the loading card's established loose drafting-sheet appearance with notebook ruling, margin line, tape, clipped edges, and layered paper depth while preserving the single reusable loading overlay and its behavior.

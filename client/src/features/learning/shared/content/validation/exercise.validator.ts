@@ -44,6 +44,34 @@ function validateEditorialQuality(exercise: Record<string, unknown>): void {
   if (/(?:Optional practice:\s*){2,}/iu.test(exercise['prompt'] as string)) {
     throw new Error(`Exercise ${exercise['id']} repeats the optional-practice label.`);
   }
+  if (hasAmbiguousSecondPersonPrompt(exercise)) {
+    throw new Error(
+      `Exercise ${exercise['id']} must identify the intended Finnish form of English “you” before submission.`,
+    );
+  }
+}
+
+function hasAmbiguousSecondPersonPrompt(exercise: Record<string, unknown>): boolean {
+  const tags = exercise['tags'] as unknown[];
+  const sentence = exercise['sentenceExplanation'];
+  if (
+    exercise['type'] === 'translation-en' ||
+    !tags.includes('sentence') ||
+    !isRecord(sentence) ||
+    !/\byou\b/iu.test((sentence['translation'] as string | undefined) ?? '')
+  ) {
+    return false;
+  }
+  const prompt = exercise['prompt'] as string;
+  if (tags.includes('person-sina')) {
+    return !/(?<![\p{L}\p{N}])sinä(?![\p{L}\p{N}])|\bone person\b|\bsingular\b/iu.test(prompt);
+  }
+  if (tags.includes('person-te')) {
+    return !/(?<![\p{L}\p{N}])te(?![\p{L}\p{N}])|\bmore than one\b|\bgroup\b|\bplural\b|\bpolite(?:ly)?\b/iu.test(
+      prompt,
+    );
+  }
+  return false;
 }
 
 function validateTransformationPrompt(exercise: Record<string, unknown>): void {
