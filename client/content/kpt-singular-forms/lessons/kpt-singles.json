@@ -1,48 +1,59 @@
 {
   "id": "kpt-singles",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "stage": "focused",
   "targetSkills": ["KPT common single consonants"],
   "prerequisiteSkills": ["Strong and weak KPT grades"],
   "introducedVocabulary": [
     {
       "finnish": "jalka",
-      "english": "foot or leg"
-    },
-    {
-      "finnish": "leipä",
-      "english": "bread"
-    },
-    {
-      "finnish": "pöytä",
-      "english": "table"
+      "english": "foot or leg",
+      "type": "word"
     },
     {
       "finnish": "hakea",
-      "english": "to fetch"
+      "english": "to fetch",
+      "type": "word"
     },
     {
       "finnish": "lukea",
-      "english": "to read"
+      "english": "to read",
+      "type": "word"
     },
     {
       "finnish": "katu",
-      "english": "street"
+      "english": "street",
+      "type": "word"
     },
     {
       "finnish": "tapa",
-      "english": "habit"
+      "english": "habit",
+      "type": "word"
     },
     {
       "finnish": "satu",
-      "english": "story"
+      "english": "story",
+      "type": "word"
     },
     {
       "finnish": "lupa",
-      "english": "permission"
+      "english": "permission",
+      "type": "word"
     }
   ],
-  "practiceVocabulary": ["jalka", "leipä", "pöytä", "hakea"],
+  "reusedVocabulary": [
+    {
+      "finnish": "leipä",
+      "english": "bread",
+      "type": "word"
+    },
+    {
+      "finnish": "pöytä",
+      "english": "table",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
   "title": "KPT step 2: common single consonants",
   "summary": "Learn three common weak changes without mixing in double consonants or clusters.",
   "objectives": ["Recognise when k disappears.", "Recognise p → v.", "Recognise t → d."],

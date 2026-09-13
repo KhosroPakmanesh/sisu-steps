@@ -3,9 +3,12 @@ export type ExerciseType =
 
 export type LearningStage = 'focused' | 'review';
 
+export type VocabularyItemType = 'word' | 'fixed-expression';
+
 export interface VocabularyItem {
   finnish: string;
   english: string;
+  type: VocabularyItemType;
 }
 
 export interface SentencePartExplanation {
@@ -80,6 +83,8 @@ export interface Lesson {
   targetSkills: string[];
   prerequisiteSkills: string[];
   introducedVocabulary: VocabularyItem[];
+  reusedVocabulary: VocabularyItem[];
+  suppliedVocabulary: VocabularyItem[];
   objectives: string[];
   sections: LessonSection[];
   examples: LessonExample[];

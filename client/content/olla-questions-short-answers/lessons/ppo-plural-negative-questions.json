@@ -1,19 +1,69 @@
 {
   "id": "ppo-plural-negative-questions",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Plural negative olla questions"],
   "prerequisiteSkills": ["Singular negative olla questions"],
   "introducedVocabulary": [
-    { "finnish": "ajoissa", "english": "on time" },
-    { "finnish": "kotona", "english": "at home" },
-    { "finnish": "koulussa", "english": "at school" },
-    { "finnish": "koulussa tänään", "english": "at school today" },
-    { "finnish": "myöhässä", "english": "late" },
-    { "finnish": "Suomessa", "english": "in Finland" },
-    { "finnish": "työssä", "english": "at work" },
-    { "finnish": "työssä huomenna", "english": "at work tomorrow" }
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    }
   ],
+  "reusedVocabulary": [
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    },
+    {
+      "finnish": "koulussa",
+      "english": "at school",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "myöhässä",
+      "english": "late",
+      "type": "word"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    },
+    {
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "turvassa",
+      "english": "safe",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
   "title": "Plural negative yes/no questions",
   "summary": "Form emmekö, ettekö, and eivätkö questions followed by ole.",
   "objectives": [
@@ -76,7 +126,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["koulussa tänään"],
+      "vocabulary": ["koulussa", "tänään"],
       "sentenceExplanation": {
         "translation": "Are you not at school today?",
         "pattern": "negative verb + -kö + subject + ole + context",
@@ -127,7 +177,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["koulussa tänään"],
+      "vocabulary": ["koulussa", "tänään"],
       "sentenceExplanation": {
         "translation": "Are they not at school today?",
         "pattern": "negative verb + -kö + subject + ole + context",
@@ -179,7 +229,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["työssä huomenna"],
+      "vocabulary": ["työssä", "huomenna"],
       "sentenceExplanation": {
         "translation": "Are we not at work tomorrow?",
         "pattern": "negative verb + -kö + subject + ole + context",
@@ -232,7 +282,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["työssä huomenna"],
+      "vocabulary": ["työssä", "huomenna"],
       "sentenceExplanation": {
         "translation": "Are you not at work tomorrow?",
         "pattern": "negative verb + -kö + subject + ole + context",

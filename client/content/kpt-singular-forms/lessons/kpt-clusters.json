@@ -1,52 +1,64 @@
 {
   "id": "kpt-clusters",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "stage": "focused",
   "targetSkills": ["KPT consonant clusters"],
   "prerequisiteSkills": ["Strong and weak KPT grades"],
   "introducedVocabulary": [
     {
-      "finnish": "kaupunki",
-      "english": "city"
-    },
-    {
-      "finnish": "kenkä",
-      "english": "shoe"
-    },
-    {
       "finnish": "kampa",
-      "english": "comb"
+      "english": "comb",
+      "type": "word"
     },
     {
       "finnish": "pelto",
-      "english": "field"
+      "english": "field",
+      "type": "word"
     },
     {
       "finnish": "antaa",
-      "english": "to give"
+      "english": "to give",
+      "type": "word"
     },
     {
       "finnish": "lentää",
-      "english": "to fly"
+      "english": "to fly",
+      "type": "word"
     },
     {
       "finnish": "kertoa",
-      "english": "to tell"
+      "english": "to tell",
+      "type": "word"
     },
     {
       "finnish": "ymmärtää",
-      "english": "to understand"
-    },
-    {
-      "finnish": "ranta",
-      "english": "beach"
+      "english": "to understand",
+      "type": "word"
     },
     {
       "finnish": "silta",
-      "english": "bridge"
+      "english": "bridge",
+      "type": "word"
     }
   ],
-  "practiceVocabulary": ["kenkä", "kampa", "pelto", "ranta"],
+  "reusedVocabulary": [
+    {
+      "finnish": "kaupunki",
+      "english": "city",
+      "type": "word"
+    },
+    {
+      "finnish": "kenkä",
+      "english": "shoe",
+      "type": "word"
+    },
+    {
+      "finnish": "ranta",
+      "english": "beach",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
   "title": "KPT step 4: consonant clusters",
   "summary": "Learn changes where two neighbouring consonants act as one pattern.",
   "objectives": [

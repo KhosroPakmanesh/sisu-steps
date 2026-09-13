@@ -1,44 +1,99 @@
 {
   "id": "kpt-t-plural",
-  "version": "5.1.0",
+  "version": "5.2.0",
   "stage": "focused",
   "targetSkills": ["T-plural with KPT"],
   "prerequisiteSkills": ["Regular T-plural", "KPT T-plural recognition"],
   "introducedVocabulary": [
     {
       "finnish": "matto",
-      "english": "rug"
+      "english": "rug",
+      "type": "word"
     },
     {
       "finnish": "kukka",
-      "english": "flower"
+      "english": "flower",
+      "type": "word"
     },
     {
       "finnish": "hattu",
-      "english": "hat"
+      "english": "hat",
+      "type": "word"
     },
     {
       "finnish": "lippu",
-      "english": "ticket"
+      "english": "ticket",
+      "type": "word"
     },
     {
       "finnish": "kenkä",
-      "english": "shoe"
+      "english": "shoe",
+      "type": "word"
     },
     {
       "finnish": "kaupunki",
-      "english": "city"
+      "english": "city",
+      "type": "word"
     },
     {
       "finnish": "pöytä",
-      "english": "table"
+      "english": "table",
+      "type": "word"
     },
     {
       "finnish": "leipä",
-      "english": "bread"
+      "english": "bread",
+      "type": "word"
     }
   ],
-  "practiceVocabulary": ["pankki", "kauppa", "pelto"],
+  "reusedVocabulary": [
+    {
+      "finnish": "katto",
+      "english": "roof",
+      "type": "word"
+    },
+    {
+      "finnish": "kauppa",
+      "english": "shop",
+      "type": "word"
+    },
+    {
+      "finnish": "keitto",
+      "english": "soup",
+      "type": "word"
+    },
+    {
+      "finnish": "pankki",
+      "english": "bank",
+      "type": "word"
+    },
+    {
+      "finnish": "pelto",
+      "english": "field",
+      "type": "word"
+    },
+    {
+      "finnish": "ranta",
+      "english": "beach",
+      "type": "word"
+    },
+    {
+      "finnish": "silta",
+      "english": "bridge",
+      "type": "word"
+    },
+    {
+      "finnish": "takki",
+      "english": "coat",
+      "type": "word"
+    },
+    {
+      "finnish": "tyttö",
+      "english": "girl",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
   "title": "T-plurals that use KPT",
   "summary": "Change the consonant stem first and add plural -t second.",
   "objectives": [

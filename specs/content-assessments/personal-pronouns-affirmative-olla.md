@@ -57,3 +57,13 @@ No unresolved high-impact scope, prerequisite, sequencing, or count issue remain
 ## Final decision
 
 The pack is approved for controlled `0 - A1.3` standard-Finnish grammar practice within the stated limitations. It does not assess spoken Finnish, listening, pronunciation, interaction, free composition, other verbs or tenses, overall CEFR ability, or independently calibrated difficulty.
+
+## Vocabulary visibility addendum — 2026-09-12
+
+**Pre-authoring disposition: approved with limitations.** The seven-lesson audit would make prerequisite context visible without deleting locations, states, occupations, time expressions, or any of the six-person practice that gives the pack its transfer range.
+
+**Final disposition: approved with limitations.** The rendered inventory contains 38 introduced, 19 reused, and no supplied teaching entries. In **Plural affirmative olla**, `ajoissa`, `kotona`, `koulussa`, `myöhässä`, `Suomessa`, `täällä`, and `työssä` are now visibly marked **Used again** with their meanings. The all-person agreement and pronoun-presence lessons likewise expose earlier states and locations instead of presenting them as hidden context. Every reused item and meaning resolves through the declared prerequisite chain, and no Focused lesson exceeds ten introduced items. Direct-source validation and the complete client quality gate pass. The 242 scored and 28 practice questions, all IDs, wording, answers, order, response formats, diagnostics, and mastery pairs remain unchanged; exact and semantic duplicate guards therefore preserve the existing purposeful variety. Existing scope limitations remain.
+
+## Lexical-unit vocabulary addendum — 2026-09-13
+
+**Final disposition: approved with limitations.** This addendum supersedes the preceding vocabulary counts. Twenty-one transparent combinations were split into individual words, producing 24 introduced, 33 reused, and no supplied entries. All 57 entries are explicitly typed `word`; the pack contains no genuine multiword fixed expression. `Suomessa`, `huomenna`, `kotona`, `aamulla`, `työssä`, `tänään`, and the other components now keep one reusable meaning throughout the prerequisite chain. Two visibly revised lessons advance to `1.2.0`. Only exercise vocabulary metadata changed; all questions, answers, IDs, order, response types, diagnostics, and mastery pairs remain intact. Existing scope limitations remain.

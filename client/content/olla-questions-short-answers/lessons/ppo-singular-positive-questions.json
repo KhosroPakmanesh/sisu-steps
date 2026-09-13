@@ -1,20 +1,88 @@
 {
   "id": "ppo-singular-positive-questions",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Singular affirmative olla questions"],
   "prerequisiteSkills": [],
   "introducedVocabulary": [
-    { "finnish": "ajoissa huomenna", "english": "on time tomorrow" },
-    { "finnish": "kotona aamulla", "english": "at home in the morning" },
-    { "finnish": "myöhässä tänään", "english": "late today" },
-    { "finnish": "opiskelija", "english": "a student" },
-    { "finnish": "paikalla huomenna", "english": "present tomorrow" },
-    { "finnish": "siellä", "english": "there" },
-    { "finnish": "täällä", "english": "here" },
-    { "finnish": "täällä illalla", "english": "here in the evening" },
-    { "finnish": "turvassa nyt", "english": "safe now" },
-    { "finnish": "väsynyt", "english": "tired" }
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "illalla",
+      "english": "in the evening",
+      "type": "word"
+    },
+    {
+      "finnish": "turvassa",
+      "english": "safe",
+      "type": "word"
+    },
+    {
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
+    },
+    {
+      "finnish": "myöhässä",
+      "english": "late",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
+    },
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [],
+  "suppliedVocabulary": [
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "aamulla",
+      "english": "in the morning",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "opiskelija",
+      "english": "a student",
+      "type": "word"
+    },
+    {
+      "finnish": "väsynyt",
+      "english": "tired",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    }
   ],
   "title": "Singular affirmative yes/no questions",
   "summary": "Form olenko, oletko, and onko questions for singular persons.",
@@ -38,7 +106,12 @@
         "Put the question verb first. An explicit subject follows it: Oletko sinä kotona?",
         "The supplied context comes last and the question ends with a question mark."
       ],
-      "keyPoints": ["question verb + subject + context", "verb comes first", "use a question mark"]
+      "keyPoints": [
+        "question verb + subject + context",
+        "verb comes first",
+        "use a question mark",
+        "In the supplied contexts, aamulla means in the morning and siellä means there."
+      ]
     }
   ],
   "examples": [
@@ -83,7 +156,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["väsynyt"],
+      "vocabulary": [],
       "sentenceExplanation": {
         "translation": "Are you tired?",
         "pattern": "present-tense olla + -ko + subject + context",
@@ -133,7 +206,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["väsynyt"],
+      "vocabulary": [],
       "sentenceExplanation": {
         "translation": "Is he or she tired?",
         "pattern": "present-tense olla + -ko + subject + context",
@@ -177,7 +250,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["opiskelija"],
+      "vocabulary": [],
       "sentenceExplanation": {
         "translation": "Am I a student?",
         "pattern": "present-tense olla + -ko + subject + context",
@@ -228,7 +301,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["opiskelija"],
+      "vocabulary": [],
       "sentenceExplanation": {
         "translation": "Are you a student?",
         "pattern": "present-tense olla + -ko + subject + context",

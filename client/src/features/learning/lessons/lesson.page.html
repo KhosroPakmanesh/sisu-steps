@@ -172,25 +172,58 @@
               <section class="lesson-vocabulary" aria-labelledby="lesson-vocabulary-title">
                 <p class="card-kicker">Words used here</p>
                 <h3 id="lesson-vocabulary-title">Lesson vocabulary</h3>
-                @if (current.introducedVocabulary.length > 0) {
-                  <p>
-                    These are the new Finnish words that may appear in this lesson or its associated
-                    test.
-                  </p>
-                  <dl>
-                    @for (word of current.introducedVocabulary; track word.finnish) {
-                      <div>
-                        <dt lang="fi">{{ word.finnish }}</dt>
-                        <dd>{{ word.english }}</dd>
-                      </div>
-                    }
-                  </dl>
-                } @else {
-                  <p>
-                    No new vocabulary is introduced here. This lesson reuses words from its
-                    prerequisite lesson.
-                  </p>
-                }
+                <section class="vocabulary-group" aria-labelledby="new-vocabulary-title">
+                  <h4 id="new-vocabulary-title">New words</h4>
+                  @if (current.introducedVocabulary.length > 0) {
+                    <p>These words are first taught here and may be used in the associated test.</p>
+                    <dl>
+                      @for (word of current.introducedVocabulary; track word.finnish) {
+                        <div>
+                          <dt lang="fi">{{ word.finnish }}</dt>
+                          <dd>{{ word.english }}</dd>
+                        </div>
+                      }
+                    </dl>
+                  } @else {
+                    <p>No new vocabulary is introduced here.</p>
+                  }
+                </section>
+
+                <section class="vocabulary-group" aria-labelledby="reused-vocabulary-title">
+                  <h4 id="reused-vocabulary-title">Used again</h4>
+                  @if (current.reusedVocabulary.length > 0) {
+                    <p>These words were introduced with an earlier grammar skill.</p>
+                    <dl>
+                      @for (word of current.reusedVocabulary; track word.finnish) {
+                        <div>
+                          <dt lang="fi">{{ word.finnish }}</dt>
+                          <dd>{{ word.english }}</dd>
+                        </div>
+                      }
+                    </dl>
+                  } @else {
+                    <p>No previously introduced vocabulary is used here.</p>
+                  }
+                </section>
+
+                <section class="vocabulary-group" aria-labelledby="supplied-vocabulary-title">
+                  <h4 id="supplied-vocabulary-title">Supplied in examples</h4>
+                  @if (current.suppliedVocabulary.length > 0) {
+                    <p>
+                      These meanings are shown with the examples and are not tested as new words.
+                    </p>
+                    <dl>
+                      @for (word of current.suppliedVocabulary; track word.finnish) {
+                        <div>
+                          <dt lang="fi">{{ word.finnish }}</dt>
+                          <dd>{{ word.english }}</dd>
+                        </div>
+                      }
+                    </dl>
+                  } @else {
+                    <p>No additional vocabulary is supplied in this lesson.</p>
+                  }
+                </section>
               </section>
 
               <aside class="mistake-notes">

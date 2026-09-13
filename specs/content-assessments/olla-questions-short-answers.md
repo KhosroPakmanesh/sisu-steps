@@ -57,3 +57,13 @@ No unresolved high-impact scope, prerequisite, sequencing, or count issue remain
 ## Final decision
 
 The pack is approved for controlled `0 - A1.3` standard-Finnish grammar practice within the stated limitations. It does not assess content questions, spoken Finnish, listening, pronunciation, interaction, free composition, other verbs or tenses, overall CEFR ability, or independently calibrated difficulty.
+
+## Vocabulary visibility addendum — 2026-09-12
+
+**Pre-authoring disposition: approved with limitations.** The five-lesson audit would preserve the existing affirmative, negative, singular, plural, and short-answer context range. Earlier words would be reclassified, teaching-only words supplied, and no question would be replaced merely to shorten a list.
+
+**Final disposition: approved with limitations.** The rendered inventory contains 36 introduced, 23 reused, and eight supplied teaching entries. Later question lessons and short-answer work now expose prerequisite locations, states, occupations, and time phrases. `kyllä — yes` is explicitly introduced for short answers; bare `ajoissa`, `kotona`, `työssä`, and `Suomessa` used only in translated examples are visibly supplied where applicable. Every reused item and meaning resolves through the declared prerequisite chain, supplied entries do not satisfy scored-vocabulary validation, and no Focused lesson exceeds ten introduced items. Direct-source validation and the complete client quality gate pass. All 178 scored and 20 practice questions remain unchanged, preserving polarity, person, context, response-format, exact and semantic duplicate, and mastery-pair coverage. The new real-content browser check passes at 320, 768, and 1440 pixels. Existing scope limitations remain.
+
+## Lexical-unit vocabulary addendum — 2026-09-13
+
+**Final disposition: approved with limitations.** This addendum supersedes the preceding vocabulary counts. Twenty-five transparent combinations were split into individual words, producing 23 introduced, 39 reused, and nine supplied entries. All 71 entries are explicitly typed `word`; the pack contains no genuine multiword fixed expression. The first question lesson keeps nine lexically recalled new words and visibly supplies `kotona`, `aamulla`, `siellä`, `opiskelija`, `väsynyt`, and `työssä`; later lessons introduce those words before any lexical-recall task that needs them. All five lessons advance to `1.2.0`. Exercise wording and mechanics remain unchanged; only vocabulary metadata was split or omitted for visibly supplied grammar-only context. Existing scope limitations remain.

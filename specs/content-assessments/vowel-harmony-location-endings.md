@@ -56,3 +56,13 @@ Limitations: the pack teaches controlled written form recognition and production
 - Unit and responsive browser coverage verify the six-test learning map, four-lesson Review preparation, save/reload/resume, reporting, Data & backup ownership, and migration of the former pack's lesson completion and note.
 
 No unresolved high-impact content issue remains. The limitation is deliberate: this is controlled written-form practice with authored difficulty, not listening, speaking, free composition, empirical calibration, CEFR certification, or independent professional Finnish-teacher review.
+
+## Vocabulary visibility addendum — 2026-09-12
+
+**Pre-authoring disposition: approved with limitations.** The four-lesson audit was limited to making lexical ownership visible without changing grammar scope, exercise wording, scoring, order, or mastery pairs. Previously taught words would be reclassified rather than removed, so the existing range of locations and sentence contexts would remain intact.
+
+**Final disposition: approved with limitations.** The rendered inventory contains 35 introduced, 19 reused, and no supplied teaching entries. `auto`, `koulu`, `nimi`, `päivä`, `sininen`, and `tie` are now visibly reused in neutral-vowel work; the inessive lessons likewise identify prior nouns used again. Every reused Finnish form and English meaning resolves through the declared prerequisite chain, and no Focused lesson exceeds ten introduced items. Direct-source validation and the complete client quality gate pass. No scored question changed. Four practice explanations now correctly identify `Kirja`, `Takki`, `Auto`, and `Isä` as singular subjects; their prompts, IDs, answers, order, response types, and teaching tasks remain unchanged. The existing exact-task, semantic-duplicate, response-format, transfer, written-only, and independent-review limitations remain.
+
+## Lexical-unit vocabulary addendum — 2026-09-13
+
+**Final disposition: approved with limitations.** The inventory remains 35 introduced, 19 reused, and no supplied entries. All 54 entries now explicitly declare `type: word`, every Finnish value is one whitespace-free lexical word, and no genuine multiword fixed expression is needed. Lesson versions and exercise metadata remain unchanged because this pack contained no transparent multiword vocabulary declaration. Existing scope limitations remain.

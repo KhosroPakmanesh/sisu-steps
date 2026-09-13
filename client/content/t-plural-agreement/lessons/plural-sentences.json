@@ -1,40 +1,104 @@
 {
   "id": "plural-sentences",
-  "version": "6.1.0",
+  "version": "6.2.0",
   "stage": "focused",
   "targetSkills": ["Plural subject + ovat"],
   "prerequisiteSkills": ["Regular T-plural"],
   "introducedVocabulary": [
     {
       "finnish": "olla",
-      "english": "to be"
+      "english": "to be",
+      "type": "word"
     },
     {
       "finnish": "ovat",
-      "english": "are, for a plural subject"
+      "english": "are, for a plural subject",
+      "type": "word"
     },
     {
       "finnish": "täällä",
-      "english": "here"
+      "english": "here",
+      "type": "word"
     },
     {
       "finnish": "kotona",
-      "english": "at home"
+      "english": "at home",
+      "type": "word"
     },
     {
       "finnish": "ulkona",
-      "english": "outside"
+      "english": "outside",
+      "type": "word"
     },
     {
       "finnish": "auki",
-      "english": "open"
+      "english": "open",
+      "type": "word"
     },
     {
       "finnish": "auto",
-      "english": "car"
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "on",
+      "english": "is, for a singular subject",
+      "type": "word"
     }
   ],
-  "practiceVocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+  "reusedVocabulary": [
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "kuva",
+      "english": "picture",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple",
+      "type": "word"
+    },
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "sana",
+      "english": "word",
+      "type": "word"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair",
+      "type": "word"
+    },
+    {
+      "finnish": "ystävä",
+      "english": "friend",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
   "title": "Building short plural sentences",
   "summary": "Combine a T-plural subject with ovat and a word that tells its place or state.",
   "objectives": [
@@ -93,7 +157,7 @@
       "id": "ff-a1-l-sent-p01",
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Build “The cats are at home.”",
+      "prompt": "Optional practice: Build “The cats are at home.”",
       "acceptedAnswers": ["Kissat ovat kotona."],
       "explanation": "Kissat is the plural subject, ovat means “are”, and kotona means “at home”.",
       "tags": ["lesson-practice", "t-plural", "sentence"],
@@ -132,7 +196,7 @@
       "id": "ff-a1-l-sent-p02",
       "type": "translation-en",
       "instruction": "Translate into English.",
-      "prompt": "Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Pallot ovat täällä.",
+      "prompt": "Optional practice: Pallot ovat täällä.",
       "acceptedAnswers": ["The balls are here."],
       "explanation": "Pallot means “the balls”, ovat means “are”, and täällä means “here”.",
       "tags": ["lesson-practice", "t-plural", "sentence"],
@@ -170,7 +234,7 @@
       "id": "ff-a1-l-sent-p03",
       "type": "fill-blank",
       "instruction": "Complete the Finnish form.",
-      "prompt": "Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Optional practice: Complete “The cars are outside.” Autot ____ ulkona. The missing word means “are”.",
+      "prompt": "Optional practice: Complete “The cars are outside.” Autot ____ ulkona. The missing word means “are”.",
       "acceptedAnswers": ["ovat"],
       "explanation": "Autot is already plural. A plural subject uses ovat; ulkona is supplied as the fixed word “outside”.",
       "tags": ["lesson-practice", "t-plural", "sentence"],

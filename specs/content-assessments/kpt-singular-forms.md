@@ -63,3 +63,13 @@ Limitations: KPT is taught through controlled known families and is not presente
 - Unit and responsive browser coverage verify independent topic ownership and the one-time remapping of the former version 6.1.0 attempts, unfinished sessions, mistakes, corrections, mastery, topic note, lesson notes, and compatible backups.
 
 No unresolved high-impact content issue remains. The limitation is deliberate: the pack practises known standard-written-Finnish KPT families and does not claim full predictability for unfamiliar vocabulary, other persons or tenses, free composition, empirical calibration, CEFR certification, or independent professional Finnish-teacher review.
+
+## Vocabulary visibility addendum — 2026-09-12
+
+**Pre-authoring disposition: approved with limitations.** The eight-lesson audit would expose prerequisite vocabulary without replacing the varied noun, verb, and context inventory. Exact words already introduced in the strong/weak lesson would move to **Used again** in later KPT-family lessons; unfamiliar translated teaching-only words would remain supplied rather than becoming hidden recall.
+
+**Final disposition: approved with limitations.** The rendered inventory contains 45 introduced, 45 reused, and no supplied teaching entries. Ten exact duplicate introductions across the double, single, special-`k`, and cluster lessons, plus `ranta` in the genitive lesson, are now correctly shown as reused. Mixed KPT recognition, genitive, and verb lessons expose all prerequisite words they use; `talo — house` was added as the one previously undeclared teaching example. Every reused item and meaning resolves through the declared prerequisite chain, and no Focused lesson exceeds ten introduced items. Direct-source validation and the complete client quality gate pass. The 260 scored and 32 practice questions are unchanged, preserving existing lexical variety, response formats, duplicate guards, and mastery pairs. Existing scope limitations remain.
+
+## Lexical-unit vocabulary addendum — 2026-09-13
+
+**Final disposition: approved with limitations.** The inventory remains 45 introduced, 45 reused, and no supplied entries. All 90 entries now explicitly declare `type: word`, every Finnish value is one whitespace-free lexical word, and no genuine multiword fixed expression is needed. Lesson versions and exercise metadata remain unchanged because this pack contained no transparent multiword vocabulary declaration. Existing scope limitations remain.

@@ -1,51 +1,88 @@
 {
   "id": "ppo-pronoun-presence",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Subject-pronoun use"],
   "prerequisiteSkills": ["Affirmative pronoun–verb agreement"],
-  "introducedVocabulary": [
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
     {
-      "finnish": "siellä nyt",
-      "english": "there now"
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
     },
     {
-      "finnish": "koulussa huomenna",
-      "english": "at school tomorrow"
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
     },
     {
-      "finnish": "työssä tänään",
-      "english": "at work today"
+      "finnish": "koulussa",
+      "english": "at school",
+      "type": "word"
     },
     {
-      "finnish": "Suomessa huomenna",
-      "english": "in Finland tomorrow"
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
     },
     {
-      "finnish": "kotona aamulla",
-      "english": "at home in the morning"
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
     },
     {
-      "finnish": "täällä illalla",
-      "english": "here in the evening"
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
     },
     {
-      "finnish": "turvassa nyt",
-      "english": "safe now"
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
     },
     {
-      "finnish": "myöhässä tänään",
-      "english": "late today"
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
     },
     {
-      "finnish": "paikalla huomenna",
-      "english": "present tomorrow"
+      "finnish": "aamulla",
+      "english": "in the morning",
+      "type": "word"
     },
     {
-      "finnish": "ajoissa huomenna",
-      "english": "on time tomorrow"
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "illalla",
+      "english": "in the evening",
+      "type": "word"
+    },
+    {
+      "finnish": "turvassa",
+      "english": "safe",
+      "type": "word"
+    },
+    {
+      "finnish": "myöhässä",
+      "english": "late",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
     }
   ],
+  "suppliedVocabulary": [],
   "title": "Subject pronouns in sentences",
   "summary": "Learn when a olla sentence can omit a subject pronoun and when it should remain explicit.",
   "objectives": [
@@ -122,7 +159,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["turvassa nyt"],
+      "vocabulary": ["turvassa", "nyt"],
       "sentenceExplanation": {
         "translation": "He or she is safe now.",
         "pattern": "subject + present-tense olla + context",
@@ -167,7 +204,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["koulussa tänään"],
+      "vocabulary": ["koulussa", "tänään"],
       "sentenceExplanation": {
         "translation": "We are at school today.",
         "pattern": "present-tense olla + context (the verb ending identifies the subject)",
@@ -211,7 +248,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["koulussa tänään"],
+      "vocabulary": ["koulussa", "tänään"],
       "sentenceExplanation": {
         "translation": "You are at school today.",
         "pattern": "present-tense olla + context (the verb ending identifies the subject)",
@@ -255,7 +292,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["koulussa tänään"],
+      "vocabulary": ["koulussa", "tänään"],
       "sentenceExplanation": {
         "translation": "They are at school today.",
         "pattern": "subject + present-tense olla + context",

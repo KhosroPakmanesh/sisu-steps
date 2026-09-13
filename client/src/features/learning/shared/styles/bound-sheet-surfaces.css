@@ -55,6 +55,7 @@ main.page-shell .topic-grid::after {
 }
 
 main.lesson-page .example-grid article,
+main.lesson-page .vocabulary-group,
 main.page-shell .topic-grid .topic-card {
   position: relative;
   padding: var(--space-4);
@@ -77,6 +78,11 @@ main.page-shell .topic-grid .topic-card {
     filter var(--motion-standard) ease;
 }
 
+main.lesson-page .vocabulary-group {
+  padding: var(--space-4);
+  border-left: 1px dashed var(--border-brand);
+}
+
 main.page-shell .topic-grid .topic-card {
   border: 1px dashed var(--border-brand);
   border-radius: 0.08rem;
@@ -94,6 +100,7 @@ main.page-shell .topic-grid .topic-card {
 }
 
 main.lesson-page .example-grid article:hover,
+main.lesson-page .vocabulary-group:hover,
 main.page-shell .topic-grid .topic-card:hover,
 main.page-shell .topic-grid .topic-card:focus-within {
   filter: drop-shadow(0.22rem 0.3rem 0 var(--paper-edge))
@@ -108,6 +115,7 @@ main.page-shell .topic-grid .topic-card:focus-within {
 }
 
 main.lesson-page .example-grid article::before,
+main.lesson-page .vocabulary-group::before,
 main.page-shell .topic-grid .topic-card::before {
   position: absolute;
   top: 0.45rem;
@@ -163,6 +171,7 @@ main.lesson-page .lesson-practice .practice-card {
 @container workbook (width <= 35rem) {
   main.lesson-page .worked-examples,
   main.lesson-page .example-grid article,
+  main.lesson-page .vocabulary-group,
   main.page-shell .topic-grid,
   main.page-shell .topic-grid .topic-card {
     padding: var(--space-3);
@@ -171,6 +180,7 @@ main.lesson-page .lesson-practice .practice-card {
   main.lesson-page .worked-examples::before,
   main.lesson-page .worked-examples::after,
   main.lesson-page .example-grid article::before,
+  main.lesson-page .vocabulary-group::before,
   main.page-shell .topic-grid::before,
   main.page-shell .topic-grid::after,
   main.page-shell .topic-grid .topic-card::before {

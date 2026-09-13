@@ -4,6 +4,8 @@
 
 ### Added
 
+- Lesson preparation now always displays separate semantic containers for **New words**, **Used again**, and **Supplied in examples**, with validation that reused vocabulary comes from declared prerequisites and keeps its original meaning, known worked-example vocabulary is classified, and supplied forms and meanings are visible in teaching. Each vocabulary group exactly reuses the worked-example punched-paper surface and behavior, and sparse groups retain the same word-card sizing as **New words**.
+
 - Added three source-grounded `0 - A1.3` Finnish grammar packs for personal pronouns and affirmative `olla`, negative `olla` statements, and `olla` questions with short answers. The smaller learning maps preserve all fifteen Focused lessons and tests, 520 scored exercises, 60 optional lesson-practice exercises, all five response formats, stable exercise IDs, and register, boundary, duplicate, balance, topology, labeling, and mastery-pair validation.
 
 - A custom website icon derived from the in-app warm-paper **S** brand mark, supplied as a scalable SVG favicon, multi-size ICO fallback, and Apple touch icon with local-only browser metadata.
@@ -33,6 +35,10 @@
 - Safe choice, text, and word-order correction controls.
 
 ### Changed
+
+- Vocabulary declarations now store one Finnish lexical word per entry by default. Every entry is explicitly typed as a `word` or `fixed-expression`; transparent combinations such as `Suomessa huomenna` are split into reusable component words, while multiword entries are reserved for genuine fixed expressions. Exercise wording and behavior are unchanged; only lexical-recall metadata changes where context is already visibly supplied.
+
+- Audited all installed Finnish lessons for vocabulary visibility, reclassified previously taught words instead of counting them as new, and preserved the existing exercise inventory and purposeful question variety.
 
 - Matched only the optional-practice question sheet's background color to the worked-example cards while preserving its ruling, border, shape, spacing, and behavior.
 
@@ -145,6 +151,8 @@
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 
 ### Fixed
+
+- Corrected eleven lesson-version regressions while preserving monotonic version history, removed repeated labels from three optional-practice prompts, corrected four singular-subject practice explanations, and added the missing supplied `kotona — at home` declaration without changing IDs, answers, ordering, response types, diagnostics, or mastery pairs.
 
 - Restored the loading card's established loose drafting-sheet appearance with notebook ruling, margin line, tape, clipped edges, and layered paper depth while preserving the single reusable loading overlay and its behavior.
 

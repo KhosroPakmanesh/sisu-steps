@@ -32,11 +32,18 @@ export function validateExercise(exercise: unknown, seenIds: Set<string>): Exerc
   validateDiagnostics(exercise);
   validateSentenceExplanation(exercise);
   validateTransformationPrompt(exercise);
+  validateEditorialQuality(exercise);
   if (seenIds.has(exercise['id'])) {
     throw new Error(`Duplicate exercise id: ${exercise['id']}`);
   }
   seenIds.add(exercise['id']);
   return exercise as unknown as Exercise;
+}
+
+function validateEditorialQuality(exercise: Record<string, unknown>): void {
+  if (/(?:Optional practice:\s*){2,}/iu.test(exercise['prompt'] as string)) {
+    throw new Error(`Exercise ${exercise['id']} repeats the optional-practice label.`);
+  }
 }
 
 function validateTransformationPrompt(exercise: Record<string, unknown>): void {

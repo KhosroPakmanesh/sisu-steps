@@ -62,10 +62,50 @@ describe('grammar-foundation successor pack validation', () => {
       expect.stringContaining('learner-facing content contains excluded spoken form'),
     ]);
   });
+
+  it('keeps the corrected optional-practice labels and singular-subject explanations', () => {
+    const pluralSentences = requireLesson(plural, 'plural-sentences');
+    const correctedPrompts = ['ff-a1-l-sent-p01', 'ff-a1-l-sent-p02', 'ff-a1-l-sent-p03'].map(
+      (id) => requirePractice(pluralSentences, id).prompt,
+    );
+    expect(correctedPrompts).toEqual(
+      correctedPrompts.map((prompt) =>
+        prompt.replace(/^(?:Optional practice:\s*)+/u, 'Optional practice: '),
+      ),
+    );
+
+    const locationSentences = requireLesson(harmony, 'inessive-location-sentences');
+    for (const id of [
+      'vhx-location-practice-p01',
+      'vhx-location-practice-p02',
+      'vhx-location-practice-p03',
+      'vhx-location-practice-p04',
+    ]) {
+      expect(requirePractice(locationSentences, id).explanation).toContain('singular subject');
+      expect(requirePractice(locationSentences, id).explanation).not.toContain(
+        'subject is plural or supplied',
+      );
+    }
+  });
 });
 
 function requirePack(packs: TopicPack[], id: string): TopicPack {
   const pack = packs.find((candidate) => candidate.id === id);
   if (!pack) throw new Error(`Missing installed pack ${id}.`);
   return pack;
+}
+
+function requireLesson(pack: TopicPack, id: string): TopicPack['lessons'][number] {
+  const lesson = pack.lessons.find((candidate) => candidate.id === id);
+  if (!lesson) throw new Error(`Missing lesson ${id}.`);
+  return lesson;
+}
+
+function requirePractice(
+  lesson: TopicPack['lessons'][number],
+  id: string,
+): TopicPack['lessons'][number]['practiceExercises'][number] {
+  const exercise = lesson.practiceExercises.find((candidate) => candidate.id === id);
+  if (!exercise) throw new Error(`Missing practice exercise ${id}.`);
+  return exercise;
 }

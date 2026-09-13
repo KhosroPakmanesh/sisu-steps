@@ -1,16 +1,84 @@
 {
   "id": "ppo-singular-negative-questions",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Singular negative olla questions"],
   "prerequisiteSkills": ["Plural affirmative olla questions"],
   "introducedVocabulary": [
-    { "finnish": "kiireinen", "english": "busy" },
-    { "finnish": "lääkäri", "english": "a doctor" },
-    { "finnish": "opettaja", "english": "a teacher" },
-    { "finnish": "paikalla", "english": "present" },
-    { "finnish": "turvassa", "english": "safe" },
-    { "finnish": "valmis", "english": "ready" }
+    {
+      "finnish": "kiireinen",
+      "english": "busy",
+      "type": "word"
+    },
+    {
+      "finnish": "lääkäri",
+      "english": "a doctor",
+      "type": "word"
+    },
+    {
+      "finnish": "opettaja",
+      "english": "a teacher",
+      "type": "word"
+    },
+    {
+      "finnish": "valmis",
+      "english": "ready",
+      "type": "word"
+    },
+    {
+      "finnish": "opiskelija",
+      "english": "a student",
+      "type": "word"
+    },
+    {
+      "finnish": "väsynyt",
+      "english": "tired",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "turvassa",
+      "english": "safe",
+      "type": "word"
+    },
+    {
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    },
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    }
   ],
   "title": "Singular negative yes/no questions",
   "summary": "Form enkö, etkö, and eikö questions followed by ole.",
@@ -74,7 +142,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["työssä tänään"],
+      "vocabulary": ["työssä", "tänään"],
       "sentenceExplanation": {
         "translation": "Is he or she not at work today?",
         "pattern": "negative verb + -kö + subject + ole + context",
@@ -126,7 +194,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["Suomessa huomenna"],
+      "vocabulary": ["Suomessa", "huomenna"],
       "sentenceExplanation": {
         "translation": "Am I not in Finland tomorrow?",
         "pattern": "negative verb + -kö + subject + ole + context",
@@ -177,7 +245,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["Suomessa huomenna"],
+      "vocabulary": ["Suomessa", "huomenna"],
       "sentenceExplanation": {
         "translation": "Are you not in Finland tomorrow?",
         "pattern": "negative verb + -kö + subject + ole + context",
@@ -232,7 +300,7 @@
         "negative-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["Suomessa huomenna"],
+      "vocabulary": ["Suomessa", "huomenna"],
       "sentenceExplanation": {
         "translation": "Is he or she not in Finland tomorrow?",
         "pattern": "negative verb + -kö + subject + ole + context",

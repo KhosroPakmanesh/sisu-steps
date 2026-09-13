@@ -37,6 +37,7 @@ Create a calm, local-first interactive exercise book that helps one English-spea
 - Explanations introduce grammar terms in plain English before using them and do not rely on unstated prerequisite knowledge.
 - Every lesson and test is labelled as focused or review. Focused material has one target skill, declares any previously taught prerequisites, and does not repeat prerequisite lessons on its preparation page. Reviews are the only material that may combine multiple previously introduced skills.
 - Scored vocabulary is introduced in the current or a referenced prerequisite lesson. Any unfamiliar contextual word is translated where it appears and is never an unannounced grading requirement.
+- Lesson vocabulary distinguishes words first taught in the current lesson, words deliberately reused from declared prerequisites, and contextual words supplied with their meanings. Each declaration owns one lexical word by default and records whether it is a `word` or a genuine `fixed-expression`; transparent combinations are represented by their component words. This classification must preserve natural example and exercise variety rather than removing useful vocabulary merely to satisfy a list limit.
 - Finnish diacritics remain significant during typed-answer grading.
 - Content changes must not silently corrupt or reinterpret stored attempt history.
 

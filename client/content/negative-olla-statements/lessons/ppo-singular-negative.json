@@ -1,19 +1,83 @@
 {
   "id": "ppo-singular-negative",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Singular negative olla"],
   "prerequisiteSkills": [],
   "introducedVocabulary": [
-    { "finnish": "kotona illalla", "english": "at home in the evening" },
-    { "finnish": "paikalla tänään", "english": "present today" },
-    { "finnish": "siellä aamulla", "english": "there in the morning" },
-    { "finnish": "Suomessa nyt", "english": "in Finland now" },
-    { "finnish": "täällä vielä", "english": "still here" },
-    { "finnish": "työssä huomenna", "english": "at work tomorrow" },
-    { "finnish": "kotona tänään", "english": "at home today" },
-    { "finnish": "lääkäri", "english": "a doctor" },
-    { "finnish": "työssä", "english": "at work" }
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "illalla",
+      "english": "in the evening",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "aamulla",
+      "english": "in the morning",
+      "type": "word"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
+    },
+    {
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    },
+    {
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [],
+  "suppliedVocabulary": [
+    {
+      "finnish": "myöhässä",
+      "english": "late",
+      "type": "word"
+    },
+    {
+      "finnish": "väsynyt",
+      "english": "tired",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "vielä",
+      "english": "still",
+      "type": "word"
+    }
   ],
   "title": "Singular negative olla",
   "summary": "Form en ole, et ole, and ei ole with singular subjects.",
@@ -77,7 +141,7 @@
         "negative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["täällä vielä"],
+      "vocabulary": [],
       "sentenceExplanation": {
         "translation": "You are not still here.",
         "pattern": "subject + person-marked negative verb + ole + context",
@@ -123,7 +187,7 @@
       "explanation": "Hän uses ei ole: the negative verb marks the person and olla becomes ole.",
       "tokens": ["täällä vielä.", "Hän", "ei", "ole"],
       "tags": ["lesson-practice", "sentence", "person-han", "negative", "standard-written-finnish"],
-      "vocabulary": ["täällä vielä"],
+      "vocabulary": [],
       "sentenceExplanation": {
         "translation": "He or she is not still here.",
         "pattern": "subject + person-marked negative verb + ole + context",
@@ -174,7 +238,7 @@
         "negative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["paikalla tänään"],
+      "vocabulary": ["paikalla", "tänään"],
       "sentenceExplanation": {
         "translation": "I am not present today.",
         "pattern": "subject + person-marked negative verb + ole + context",
@@ -225,7 +289,7 @@
         "negative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["paikalla tänään"],
+      "vocabulary": ["paikalla", "tänään"],
       "sentenceExplanation": {
         "translation": "You are not present today.",
         "pattern": "subject + person-marked negative verb + ole + context",

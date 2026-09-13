@@ -20,9 +20,11 @@ export const learningPack: TopicPack = {
       targetSkills: ['Vowel harmony'],
       prerequisiteSkills: [],
       introducedVocabulary: [
-        { finnish: 'talo', english: 'house' },
-        { finnish: 'koulu', english: 'school' },
+        { finnish: 'talo', english: 'house', type: 'word' },
+        { finnish: 'koulu', english: 'school', type: 'word' },
       ],
+      reusedVocabulary: [],
+      suppliedVocabulary: [{ finnish: 'hyvin', english: 'well', type: 'word' }],
       objectives: ['Choose -ssa or -ssä.'],
       sections: [
         {
@@ -36,6 +38,11 @@ export const learningPack: TopicPack = {
           finnish: 'talo → talossa',
           english: 'in the house',
           steps: ['Find a and o.', 'Add -ssa.'],
+        },
+        {
+          finnish: 'Minä opin hyvin.',
+          english: 'I learn well.',
+          steps: ['hyvin means “well”.'],
         },
       ],
       commonMistakes: ['Do not replace ä with a.'],

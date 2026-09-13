@@ -7,6 +7,7 @@ import {
 } from '@/features/learning/shared/content/content.models';
 import { validateContentCatalog } from '@/features/learning/shared/content/validation/content-catalog.validator';
 import { validateContentManifest } from '@/features/learning/shared/content/validation/content-manifest.validator';
+import { validateLessons } from '@/features/learning/shared/content/validation/lesson.validator';
 import { validatePackSummaryCollection } from '@/features/learning/shared/content/validation/pack-summary-collection.validator';
 import { validateTopicPack } from '@/features/learning/shared/content/validation/topic-pack.validator';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
@@ -50,7 +51,9 @@ const validPack = (): TopicPack => ({
       stage: 'focused',
       targetSkills: ['Rule'],
       prerequisiteSkills: [],
-      introducedVocabulary: [{ finnish: 'talo', english: 'house' }],
+      introducedVocabulary: [{ finnish: 'talo', english: 'house', type: 'word' }],
+      reusedVocabulary: [],
+      suppliedVocabulary: [],
       objectives: ['Learn the rule.'],
       sections: [
         { title: 'Rule', paragraphs: ['A complete explanation.'], keyPoints: ['Remember this.'] },
@@ -331,9 +334,219 @@ describe('content-pack validation', () => {
     pack.lessons[0].introducedVocabulary = Array.from({ length: 11 }, (_, index) => ({
       finnish: `word-${index}`,
       english: `meaning-${index}`,
+      type: 'word' as const,
     }));
     expect(() => validateTopicPack(pack)).toThrowError(
       'Focused lesson lesson-1 introduces more than ten words.',
+    );
+  });
+  it('requires explicit reused and supplied vocabulary categories', () => {
+    const pack = validPack();
+    delete (pack.lessons[0] as unknown as Partial<Record<'reusedVocabulary', unknown>>)
+      .reusedVocabulary;
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'A lesson is missing required teaching information.',
+    );
+  });
+  it('requires an explicit vocabulary item type', () => {
+    const pack = validPack();
+    delete (pack.lessons[0].introducedVocabulary[0] as unknown as { type?: string }).type;
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'A lesson is missing required teaching information.',
+    );
+  });
+  it('rejects an unsupported vocabulary item type', () => {
+    const pack = validPack();
+    (pack.lessons[0].introducedVocabulary[0] as unknown as { type: string }).type = 'phrase';
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'A lesson is missing required teaching information.',
+    );
+  });
+  it('rejects a transparent multiword combination declared as one word', () => {
+    const pack = validPack();
+    pack.lessons[0].introducedVocabulary[0] = {
+      finnish: 'Suomessa huomenna',
+      english: 'in Finland tomorrow',
+      type: 'word',
+    };
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Lesson lesson-1 declares multiword vocabulary Suomessa huomenna as a word.',
+    );
+  });
+  it('rejects a one-word item labeled as a fixed expression', () => {
+    const pack = validPack();
+    pack.lessons[0].introducedVocabulary[0] = {
+      finnish: 'talo',
+      english: 'house',
+      type: 'fixed-expression',
+    };
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Lesson lesson-1 declares one-word vocabulary talo as a fixed expression.',
+    );
+  });
+  it('accepts a genuine fixed expression as one explicitly typed item', () => {
+    const pack = validPack();
+    const expression = {
+      finnish: 'hyvää huomenta',
+      english: 'good morning',
+      type: 'fixed-expression' as const,
+    };
+    pack.lessons[0].introducedVocabulary = [expression];
+    pack.lessons[0].examples = [
+      { finnish: 'Hyvää huomenta!', english: 'Good morning!', steps: ['Learn the greeting.'] },
+    ];
+    for (const exercise of pack.lessons[0].practiceExercises) {
+      exercise.vocabulary = [expression.finnish];
+    }
+    for (const exercise of pack.tests[0].exercises) {
+      exercise.vocabulary = [expression.finnish];
+    }
+
+    expect(validateTopicPack(pack).id).toBe('pack');
+  });
+  it('rejects vocabulary repeated across lesson categories', () => {
+    const pack = validPack();
+    pack.lessons[0].suppliedVocabulary = [{ finnish: 'talo', english: 'house', type: 'word' }];
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Lesson lesson-1 repeats vocabulary across its categories.',
+    );
+  });
+  it('rejects reused vocabulary outside the declared prerequisite chain', () => {
+    const pack = validPack();
+    pack.lessons[0].reusedVocabulary = [{ finnish: 'koulu', english: 'school', type: 'word' }];
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Lesson lesson-1 reuses vocabulary outside its declared prerequisite chain.',
+    );
+  });
+  it('rejects a changed meaning for vocabulary from the declared prerequisite chain', () => {
+    const prerequisite = structuredClone(validPack().lessons[0]);
+    prerequisite.id = 'prerequisite-lesson';
+    prerequisite.targetSkills = ['Prerequisite rule'];
+    prerequisite.practiceExercises = prerequisite.practiceExercises.map((exercise, index) => ({
+      ...exercise,
+      id: `prerequisite-practice-${index + 1}`,
+      requiredSkills: ['Prerequisite rule'],
+    }));
+
+    const current = structuredClone(validPack().lessons[0]);
+    current.id = 'current-lesson';
+    current.targetSkills = ['Current rule'];
+    current.prerequisiteSkills = ['Prerequisite rule'];
+    current.introducedVocabulary = [{ finnish: 'koulu', english: 'school', type: 'word' }];
+    current.reusedVocabulary = [{ finnish: 'talo', english: 'building', type: 'word' }];
+    current.practiceExercises = current.practiceExercises.map((exercise, index) => ({
+      ...exercise,
+      id: `current-practice-${index + 1}`,
+      requiredSkills: ['Current rule'],
+      vocabulary: ['koulu'],
+    }));
+
+    expect(() => validateLessons([prerequisite, current], new Set())).toThrowError(
+      'Lesson current-lesson reuses vocabulary outside its declared prerequisite chain.',
+    );
+  });
+  it('rejects a changed vocabulary type from the declared prerequisite chain', () => {
+    const prerequisite = structuredClone(validPack().lessons[0]);
+    prerequisite.id = 'prerequisite-lesson';
+    prerequisite.targetSkills = ['Prerequisite rule'];
+    prerequisite.introducedVocabulary = [
+      { finnish: 'hyvää huomenta', english: 'good morning', type: 'fixed-expression' },
+    ];
+    prerequisite.examples = [
+      { finnish: 'Hyvää huomenta!', english: 'Good morning!', steps: ['Learn the greeting.'] },
+    ];
+    prerequisite.practiceExercises = prerequisite.practiceExercises.map((exercise, index) => ({
+      ...exercise,
+      id: `prerequisite-practice-${index + 1}`,
+      requiredSkills: ['Prerequisite rule'],
+      vocabulary: ['hyvää huomenta'],
+    }));
+
+    const current = structuredClone(validPack().lessons[0]);
+    current.id = 'current-lesson';
+    current.targetSkills = ['Current rule'];
+    current.prerequisiteSkills = ['Prerequisite rule'];
+    current.reusedVocabulary = [
+      { finnish: 'hyvää huomenta', english: 'good morning', type: 'word' },
+    ];
+    current.practiceExercises = current.practiceExercises.map((exercise, index) => ({
+      ...exercise,
+      id: `current-practice-${index + 1}`,
+      requiredSkills: ['Current rule'],
+    }));
+
+    expect(() => validateLessons([prerequisite, current], new Set())).toThrowError(
+      'Lesson current-lesson declares multiword vocabulary hyvää huomenta as a word.',
+    );
+  });
+  it('rejects known vocabulary hidden in a worked example', () => {
+    const prerequisite = structuredClone(validPack().lessons[0]);
+    prerequisite.id = 'prerequisite-lesson';
+    prerequisite.targetSkills = ['Prerequisite rule'];
+    prerequisite.practiceExercises = prerequisite.practiceExercises.map((exercise, index) => ({
+      ...exercise,
+      id: `prerequisite-practice-${index + 1}`,
+      requiredSkills: ['Prerequisite rule'],
+    }));
+
+    const current = structuredClone(validPack().lessons[0]);
+    current.id = 'current-lesson';
+    current.targetSkills = ['Current rule'];
+    current.prerequisiteSkills = ['Prerequisite rule'];
+    current.introducedVocabulary = [{ finnish: 'koulu', english: 'school', type: 'word' }];
+    current.examples = [{ finnish: 'talo', english: 'house', steps: ['Read the word.'] }];
+    current.practiceExercises = current.practiceExercises.map((exercise, index) => ({
+      ...exercise,
+      id: `current-practice-${index + 1}`,
+      requiredSkills: ['Current rule'],
+      vocabulary: ['koulu'],
+    }));
+
+    expect(() => validateLessons([prerequisite, current], new Set())).toThrowError(
+      'Lesson current-lesson uses vocabulary talo in a worked example without classifying it.',
+    );
+  });
+  it('rejects supplied vocabulary without a visible English meaning', () => {
+    const pack = validPack();
+    pack.lessons[0].suppliedVocabulary = [{ finnish: 'hyvin', english: 'well', type: 'word' }];
+    pack.lessons[0].examples.push({
+      finnish: 'hyvin',
+      english: 'clearly',
+      steps: ['Read the word.'],
+    });
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Lesson lesson-1 supplies vocabulary hyvin without showing its Finnish form and English meaning in teaching.',
+    );
+  });
+  it('rejects a repeated optional-practice label', () => {
+    const pack = validPack();
+    pack.lessons[0].practiceExercises[0].prompt =
+      'Optional practice: Optional practice: Answer this.';
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Exercise practice-1 repeats the optional-practice label.',
+    );
+  });
+  it('does not make supplied teaching vocabulary available for scored recall', () => {
+    const pack = validPack();
+    pack.lessons[0].suppliedVocabulary = [{ finnish: 'koulu', english: 'school', type: 'word' }];
+    pack.lessons[0].examples.push({
+      finnish: 'koulu',
+      english: 'school',
+      steps: ['Read the word.'],
+    });
+    pack.tests[0].exercises[0].vocabulary = ['koulu'];
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Exercise exercise-1 uses vocabulary not introduced for test test.',
     );
   });
   it('allows pedagogically sized packs and rejects empty or over-limit scored sets', () => {

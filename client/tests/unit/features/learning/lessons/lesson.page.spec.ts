@@ -51,12 +51,72 @@ describe('LessonPage', () => {
     expect(element.textContent).toContain('Target: Vowel harmony');
     expect(element.textContent).toContain('talo');
     expect(element.textContent).toContain('house');
+    expect(element.textContent).toContain('New words');
+    expect(element.textContent).toContain('Supplied in examples');
+    expect(element.textContent).toContain('hyvin');
+    expect(element.textContent).toContain('well');
     const startTest = [...element.querySelectorAll('a')].find((link) =>
       link.textContent?.includes('Start test now'),
     );
     expect(startTest?.getAttribute('href')).toBe('/study/topic/test-1');
     expect(element.querySelector('.sticky-note textarea')).not.toBeNull();
     expect(element.querySelector('.sticky-note')?.textContent).toContain('Lesson note');
+  });
+
+  it('shows previously introduced vocabulary separately from new words', () => {
+    const component = fixture.componentInstance as unknown as {
+      lessons: {
+        (): Array<{
+          reusedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+        }>;
+        set(
+          value: Array<{
+            reusedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+          }>,
+        ): void;
+      };
+    };
+    const lessons = structuredClone(component.lessons());
+    lessons[0].reusedVocabulary = [{ finnish: 'päivä', english: 'day', type: 'word' }];
+    component.lessons.set(lessons);
+    fixture.detectChanges();
+
+    const element = fixture.nativeElement as HTMLElement;
+    expect(element.querySelectorAll('.vocabulary-group')).toHaveLength(3);
+    expect(element.textContent).toContain('Used again');
+    expect(element.textContent).toContain('päivä');
+    expect(element.textContent).toContain('day');
+  });
+
+  it('keeps all vocabulary categories visible when their lists are empty', () => {
+    const component = fixture.componentInstance as unknown as {
+      lessons: {
+        (): Array<{
+          introducedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+          reusedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+          suppliedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+        }>;
+        set(
+          value: Array<{
+            introducedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+            reusedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+            suppliedVocabulary: Array<{ finnish: string; english: string; type: 'word' }>;
+          }>,
+        ): void;
+      };
+    };
+    const lessons = structuredClone(component.lessons());
+    lessons[0].introducedVocabulary = [];
+    lessons[0].reusedVocabulary = [];
+    lessons[0].suppliedVocabulary = [];
+    component.lessons.set(lessons);
+    fixture.detectChanges();
+
+    const element = fixture.nativeElement as HTMLElement;
+    expect(element.querySelectorAll('.vocabulary-group')).toHaveLength(3);
+    expect(element.textContent).toContain('No new vocabulary is introduced here.');
+    expect(element.textContent).toContain('No previously introduced vocabulary is used here.');
+    expect(element.textContent).toContain('No additional vocabulary is supplied in this lesson.');
   });
 
   it('grades optional practice locally without touching scored state', () => {

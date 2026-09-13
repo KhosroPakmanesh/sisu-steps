@@ -1,6 +1,11 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import {
+  validateExerciseEditorialQuality,
+  validateLessonVocabularyVisibility,
+  validateVocabularyItemTypes,
+} from './content-validation/content-quality.mjs';
 
 const input = process.argv[2];
 if (input !== '--stdin') throw new Error('Provide an assembled content pack through --stdin.');
@@ -60,6 +65,23 @@ const lessonsAvailableForTest = (test) => {
   }
   return lessons.filter((lesson) => availableIds.has(lesson.id));
 };
+const vocabularyForSkills = (skills) => {
+  const vocabulary = new Map();
+  const visitedSkills = new Set();
+  const pendingSkills = [...(skills ?? [])];
+  while (pendingSkills.length > 0) {
+    const skill = pendingSkills.pop();
+    if (visitedSkills.has(skill)) continue;
+    visitedSkills.add(skill);
+    for (const lesson of lessons.filter((candidate) => candidate.targetSkills?.includes(skill))) {
+      for (const item of lesson.introducedVocabulary ?? []) {
+        vocabulary.set(item.finnish, [...(vocabulary.get(item.finnish) ?? []), item]);
+      }
+      pendingSkills.push(...(lesson.prerequisiteSkills ?? []));
+    }
+  }
+  return vocabulary;
+};
 if (pack.schemaVersion !== 1) errors.push('schemaVersion must be 1');
 if (exercises.length === 0 || exercises.length > 1000)
   errors.push('pack must contain scored exercises and no more than 1,000');
@@ -74,7 +96,6 @@ if (lessons.length === 0) errors.push('pack must contain reusable lessons');
 const lessonIds = lessons.map((lesson) => lesson.id);
 if (new Set(lessonIds).size !== lessonIds.length) errors.push('lesson ids must be unique');
 const taughtSkills = new Set();
-const taughtVocabulary = new Set();
 for (const lesson of lessons) {
   checkFocus(lesson, lesson.id);
   if (lesson.stage === 'focused' && (lesson.introducedVocabulary?.length ?? 0) > 10)
@@ -85,13 +106,35 @@ for (const lesson of lessons) {
   }
   if (!Array.isArray(lesson.introducedVocabulary))
     errors.push(`${lesson.id}: missing introduced vocabulary`);
-  for (const item of lesson.introducedVocabulary ?? []) {
-    if (!item?.finnish?.trim() || !item?.english?.trim())
+  if (!Array.isArray(lesson.reusedVocabulary))
+    errors.push(`${lesson.id}: missing reused vocabulary`);
+  if (!Array.isArray(lesson.suppliedVocabulary))
+    errors.push(`${lesson.id}: missing supplied vocabulary`);
+  const vocabularyCategories = [
+    ...(lesson.introducedVocabulary ?? []),
+    ...(lesson.reusedVocabulary ?? []),
+    ...(lesson.suppliedVocabulary ?? []),
+  ];
+  const vocabularyKeys = [];
+  for (const item of vocabularyCategories) {
+    if (!item?.finnish?.trim() || !item?.english?.trim()) {
       errors.push(`${lesson.id}: incomplete vocabulary entry`);
-    else taughtVocabulary.add(item.finnish);
+    } else vocabularyKeys.push(item.finnish);
   }
+  if (new Set(vocabularyKeys).size !== vocabularyKeys.length)
+    errors.push(`${lesson.id}: vocabulary is repeated across categories`);
+  const prerequisiteVocabulary = vocabularyForSkills(lesson.prerequisiteSkills);
+  for (const item of lesson.reusedVocabulary ?? [])
+    if (
+      !(prerequisiteVocabulary.get(item.finnish) ?? []).some(
+        (prior) => prior.english === item.english && prior.type === item.type,
+      )
+    )
+      errors.push(`${lesson.id}: reused vocabulary is outside its prerequisite chain`);
   for (const skill of lesson.targetSkills ?? []) taughtSkills.add(skill);
 }
+errors.push(...validateVocabularyItemTypes(lessons));
+errors.push(...validateLessonVocabularyVisibility(lessons));
 const focusedCoveredSkills = new Set();
 const focusedReferencedLessonIds = new Set();
 let focusedTestCount = 0;
@@ -241,8 +284,12 @@ for (const lesson of lessons) {
       errors.push(`${exercise.id}: focused lesson target is not required`);
     if (!hasTextArray(exercise.vocabulary))
       errors.push(`${exercise.id}: invalid vocabulary declaration`);
+    const lessonVocabulary = new Set([
+      ...(lesson.introducedVocabulary ?? []).map((item) => item.finnish),
+      ...(lesson.reusedVocabulary ?? []).map((item) => item.finnish),
+    ]);
     for (const word of exercise.vocabulary ?? [])
-      if (!taughtVocabulary.has(word))
+      if (!lessonVocabulary.has(word))
         errors.push(`${exercise.id}: undeclared lesson vocabulary ${word}`);
   }
 }
@@ -312,6 +359,7 @@ for (const exercise of allExercises) {
     }
   }
 }
+errors.push(...validateExerciseEditorialQuality(allExercises));
 const scoredById = new Map(exercises.map((exercise) => [exercise.id, exercise]));
 for (const exercise of exercises) {
   const parallel = scoredById.get(exercise.parallelExerciseId);
@@ -364,6 +412,14 @@ const stageCounts = Object.fromEntries(
     pack.tests.filter((test) => test.stage === stage).length,
   ]),
 );
+const lessonVocabularyCounts = {
+  introduced: lessons.reduce(
+    (total, lesson) => total + (lesson.introducedVocabulary?.length ?? 0),
+    0,
+  ),
+  reused: lessons.reduce((total, lesson) => total + (lesson.reusedVocabulary?.length ?? 0), 0),
+  supplied: lessons.reduce((total, lesson) => total + (lesson.suppliedVocabulary?.length ?? 0), 0),
+};
 console.log(
   JSON.stringify(
     {
@@ -373,6 +429,7 @@ console.log(
       lessons: lessons.length,
       practiceExercises: practiceExercises.length,
       sentenceExercises,
+      lessonVocabularyCounts,
       stageCounts,
       typeCounts,
       practiceTypeCounts,

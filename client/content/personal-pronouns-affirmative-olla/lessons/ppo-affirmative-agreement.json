@@ -1,51 +1,99 @@
 {
   "id": "ppo-affirmative-agreement",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Affirmative pronoun–verb agreement"],
   "prerequisiteSkills": ["Plural affirmative olla"],
   "introducedVocabulary": [
     {
-      "finnish": "täällä nyt",
-      "english": "here now"
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
     },
     {
-      "finnish": "kotona tänään",
-      "english": "at home today"
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
     },
     {
-      "finnish": "koulussa tänään",
-      "english": "at school today"
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
     },
     {
-      "finnish": "työssä huomenna",
-      "english": "at work tomorrow"
+      "finnish": "aamulla",
+      "english": "in the morning",
+      "type": "word"
     },
     {
-      "finnish": "Suomessa nyt",
-      "english": "in Finland now"
+      "finnish": "illalla",
+      "english": "in the evening",
+      "type": "word"
     },
     {
-      "finnish": "siellä aamulla",
-      "english": "there in the morning"
-    },
-    {
-      "finnish": "kotona illalla",
-      "english": "at home in the evening"
-    },
-    {
-      "finnish": "täällä vielä",
-      "english": "still here"
-    },
-    {
-      "finnish": "paikalla tänään",
-      "english": "present today"
-    },
-    {
-      "finnish": "ajoissa nyt",
-      "english": "on time now"
+      "finnish": "vielä",
+      "english": "still",
+      "type": "word"
     }
   ],
+  "reusedVocabulary": [
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "koulussa",
+      "english": "at school",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    },
+    {
+      "finnish": "kiireinen",
+      "english": "busy",
+      "type": "word"
+    },
+    {
+      "finnish": "rauhallinen",
+      "english": "calm",
+      "type": "word"
+    },
+    {
+      "finnish": "tervetullut",
+      "english": "welcome",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
   "title": "Affirmative agreement across all six persons",
   "summary": "Choose the correct affirmative olla form from the complete paradigm.",
   "objectives": [
@@ -113,7 +161,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["ajoissa nyt"],
+      "vocabulary": ["ajoissa", "nyt"],
       "sentenceExplanation": {
         "translation": "I am on time now.",
         "pattern": "subject + present-tense olla + context",
@@ -163,7 +211,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["ajoissa nyt"],
+      "vocabulary": ["ajoissa", "nyt"],
       "sentenceExplanation": {
         "translation": "You are on time now.",
         "pattern": "subject + present-tense olla + context",
@@ -207,7 +255,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["ajoissa nyt"],
+      "vocabulary": ["ajoissa", "nyt"],
       "sentenceExplanation": {
         "translation": "He or she is on time now.",
         "pattern": "subject + present-tense olla + context",
@@ -251,7 +299,7 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["siellä aamulla"],
+      "vocabulary": ["siellä", "aamulla"],
       "sentenceExplanation": {
         "translation": "We are there in the morning.",
         "pattern": "subject + present-tense olla + context",

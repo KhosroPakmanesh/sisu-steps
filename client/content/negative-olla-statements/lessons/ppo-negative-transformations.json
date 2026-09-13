@@ -1,19 +1,79 @@
 {
   "id": "ppo-negative-transformations",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Affirmative-to-negative olla transformation"],
   "prerequisiteSkills": ["Plural negative olla"],
   "introducedVocabulary": [
-    { "finnish": "ajoissa nyt", "english": "on time now" },
-    { "finnish": "kotona", "english": "at home" },
-    { "finnish": "opiskelija", "english": "a student" },
-    { "finnish": "paikalla", "english": "present" },
-    { "finnish": "rauhallinen", "english": "calm" },
-    { "finnish": "siellä nyt", "english": "there now" },
-    { "finnish": "valmis", "english": "ready" },
-    { "finnish": "väsynyt", "english": "tired" }
+    {
+      "finnish": "opiskelija",
+      "english": "a student",
+      "type": "word"
+    },
+    {
+      "finnish": "rauhallinen",
+      "english": "calm",
+      "type": "word"
+    },
+    {
+      "finnish": "valmis",
+      "english": "ready",
+      "type": "word"
+    },
+    {
+      "finnish": "väsynyt",
+      "english": "tired",
+      "type": "word"
+    },
+    {
+      "finnish": "vielä",
+      "english": "still",
+      "type": "word"
+    },
+    {
+      "finnish": "lääkäri",
+      "english": "a doctor",
+      "type": "word"
+    }
   ],
+  "reusedVocabulary": [
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    },
+    {
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
   "title": "Change affirmative olla into negative",
   "summary": "Keep the subject and context while changing only the polarity pattern.",
   "objectives": [

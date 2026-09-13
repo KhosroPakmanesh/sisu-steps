@@ -1,45 +1,101 @@
 {
   "id": "inessive-location-sentences",
-  "version": "1.0.0",
-  "title": "Short sentences with -ssa and -ssä",
-  "summary": "Put a learned inessive location after the supplied form on (“is”).",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Inessive location sentences"],
   "prerequisiteSkills": ["Inessive -ssa/-ssä"],
   "introducedVocabulary": [
     {
       "finnish": "kirja",
-      "english": "book"
+      "english": "book",
+      "type": "word"
     },
     {
       "finnish": "takki",
-      "english": "coat"
+      "english": "coat",
+      "type": "word"
     },
     {
       "finnish": "isä",
-      "english": "father"
+      "english": "father",
+      "type": "word"
     },
     {
       "finnish": "äiti",
-      "english": "mother"
+      "english": "mother",
+      "type": "word"
     },
     {
       "finnish": "koira",
-      "english": "dog"
+      "english": "dog",
+      "type": "word"
     },
     {
       "finnish": "opiskelija",
-      "english": "student"
+      "english": "student",
+      "type": "word"
     },
     {
       "finnish": "olla",
-      "english": "to be"
+      "english": "to be",
+      "type": "word"
     },
     {
       "finnish": "on",
-      "english": "is"
+      "english": "is",
+      "type": "word"
     }
   ],
+  "reusedVocabulary": [
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kahvila",
+      "english": "café",
+      "type": "word"
+    },
+    {
+      "finnish": "kirjasto",
+      "english": "library",
+      "type": "word"
+    },
+    {
+      "finnish": "kylä",
+      "english": "village",
+      "type": "word"
+    },
+    {
+      "finnish": "metsä",
+      "english": "forest",
+      "type": "word"
+    },
+    {
+      "finnish": "myymälä",
+      "english": "shop",
+      "type": "word"
+    },
+    {
+      "finnish": "puisto",
+      "english": "park",
+      "type": "word"
+    },
+    {
+      "finnish": "sauna",
+      "english": "sauna",
+      "type": "word"
+    },
+    {
+      "finnish": "toimisto",
+      "english": "office",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Short sentences with -ssa and -ssä",
+  "summary": "Put a learned inessive location after the supplied form on (“is”).",
   "objectives": [
     "Read the subject–on–location pattern.",
     "Use a learned -ssa/-ssä location in a complete sentence.",
@@ -87,7 +143,7 @@
       "instruction": "Put the words in subject–verb–place order.",
       "prompt": "Optional practice: Build “The book is in the library.”",
       "acceptedAnswers": ["Kirja on kirjastossa."],
-      "explanation": "Kirja on kirjastossa. means “The book is in the library”. The subject is plural or supplied, on agrees with it, and kirjastossa gives the supplied place or state.",
+      "explanation": "Kirja on kirjastossa. means “The book is in the library”. Kirja is the singular subject, on agrees with it, and kirjastossa gives the place.",
       "tags": ["lesson-practice", "sentence"],
       "requiredSkills": ["Inessive location sentences"],
       "vocabulary": ["kirja", "olla", "on", "kirjasto"],
@@ -128,7 +184,7 @@
       "instruction": "Put the words in subject–verb–place order.",
       "prompt": "Optional practice: Build “The coat is in the shop.”",
       "acceptedAnswers": ["Takki on myymälässä."],
-      "explanation": "Takki on myymälässä. means “The coat is in the shop”. The subject is plural or supplied, on agrees with it, and myymälässä gives the supplied place or state.",
+      "explanation": "Takki on myymälässä. means “The coat is in the shop”. Takki is the singular subject, on agrees with it, and myymälässä gives the place.",
       "tags": ["lesson-practice", "sentence"],
       "requiredSkills": ["Inessive location sentences"],
       "vocabulary": ["takki", "olla", "on", "myymälä"],
@@ -169,7 +225,7 @@
       "instruction": "Translate into Finnish.",
       "prompt": "Optional practice: Write “The car is in the park.”",
       "acceptedAnswers": ["Auto on puistossa."],
-      "explanation": "Auto on puistossa. means “The car is in the park”. The subject is plural or supplied, on agrees with it, and puistossa gives the supplied place or state.",
+      "explanation": "Auto on puistossa. means “The car is in the park”. Auto is the singular subject, on agrees with it, and puistossa gives the place.",
       "tags": ["lesson-practice", "sentence"],
       "requiredSkills": ["Inessive location sentences"],
       "vocabulary": ["auto", "olla", "on", "puisto"],
@@ -209,7 +265,7 @@
       "instruction": "Translate into Finnish.",
       "prompt": "Optional practice: Write “The father is in the sauna.”",
       "acceptedAnswers": ["Isä on saunassa."],
-      "explanation": "Isä on saunassa. means “The father is in the sauna”. The subject is plural or supplied, on agrees with it, and saunassa gives the supplied place or state.",
+      "explanation": "Isä on saunassa. means “The father is in the sauna”. Isä is the singular subject, on agrees with it, and saunassa gives the place.",
       "tags": ["lesson-practice", "sentence"],
       "requiredSkills": ["Inessive location sentences"],
       "vocabulary": ["isä", "olla", "on", "sauna"],

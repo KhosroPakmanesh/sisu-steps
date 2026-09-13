@@ -1,20 +1,89 @@
 {
   "id": "ppo-plural-negative",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Plural negative olla"],
   "prerequisiteSkills": ["Singular negative olla"],
   "introducedVocabulary": [
-    { "finnish": "ajoissa huomenna", "english": "on time tomorrow" },
-    { "finnish": "kotona aamulla", "english": "at home in the morning" },
-    { "finnish": "myöhässä tänään", "english": "late today" },
-    { "finnish": "paikalla huomenna", "english": "present tomorrow" },
-    { "finnish": "siellä", "english": "there" },
-    { "finnish": "Suomessa huomenna", "english": "in Finland tomorrow" },
-    { "finnish": "täällä", "english": "here" },
-    { "finnish": "täällä illalla", "english": "here in the evening" },
-    { "finnish": "turvassa nyt", "english": "safe now" },
-    { "finnish": "työssä tänään", "english": "at work today" }
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    },
+    {
+      "finnish": "myöhässä",
+      "english": "late",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "turvassa",
+      "english": "safe",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "aamulla",
+      "english": "in the morning",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
+    },
+    {
+      "finnish": "illalla",
+      "english": "in the evening",
+      "type": "word"
+    },
+    {
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [
+    {
+      "finnish": "koulussa",
+      "english": "at school",
+      "type": "word"
+    }
   ],
   "title": "Plural negative olla",
   "summary": "Form emme ole, ette ole, and eivät ole with plural subjects.",
@@ -71,7 +140,7 @@
       "acceptedAnswers": ["Me emme ole työssä tänään."],
       "explanation": "Me uses emme ole: the negative verb marks the person and olla becomes ole.",
       "tags": ["lesson-practice", "sentence", "person-me", "negative", "standard-written-finnish"],
-      "vocabulary": ["työssä tänään"],
+      "vocabulary": ["työssä", "tänään"],
       "sentenceExplanation": {
         "translation": "We are not at work today.",
         "pattern": "subject + person-marked negative verb + ole + context",
@@ -123,7 +192,7 @@
         "negative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["työssä tänään"],
+      "vocabulary": ["työssä", "tänään"],
       "sentenceExplanation": {
         "translation": "You are not at work today.",
         "pattern": "subject + person-marked negative verb + ole + context",
@@ -169,7 +238,7 @@
       "explanation": "He uses eivät ole: the negative verb marks the person and olla becomes ole.",
       "tokens": ["työssä tänään.", "He", "eivät", "ole"],
       "tags": ["lesson-practice", "sentence", "person-he", "negative", "standard-written-finnish"],
-      "vocabulary": ["työssä tänään"],
+      "vocabulary": ["työssä", "tänään"],
       "sentenceExplanation": {
         "translation": "They are not at work today.",
         "pattern": "subject + person-marked negative verb + ole + context",
@@ -215,7 +284,7 @@
       "explanation": "Me uses emme ole: the negative verb marks the person and olla becomes ole.",
       "tokens": ["Suomessa huomenna.", "Me", "emme", "ole"],
       "tags": ["lesson-practice", "sentence", "person-me", "negative", "standard-written-finnish"],
-      "vocabulary": ["Suomessa huomenna"],
+      "vocabulary": ["Suomessa", "huomenna"],
       "sentenceExplanation": {
         "translation": "We are not in Finland tomorrow.",
         "pattern": "subject + person-marked negative verb + ole + context",

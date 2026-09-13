@@ -56,3 +56,13 @@ No unresolved high-impact scope, prerequisite, sequencing, or count issue remain
 ## Final decision
 
 The 100-question total is approved because it fully covers three narrow decisions with a separate retrieval pass and avoids padding. The pack is approved for controlled `0 - A1.3` standard-Finnish grammar practice; questions, spoken Finnish, listening, pronunciation, interaction, free composition, other verbs or tenses, overall CEFR ability, and independently calibrated difficulty remain outside scope.
+
+## Vocabulary visibility addendum — 2026-09-12
+
+**Pre-authoring disposition: approved with limitations.** The three-lesson audit would preserve all singular, plural, and transformation contexts. Words used only in translated teaching examples would be identified as supplied rather than added to scored recall or used as a reason to simplify questions.
+
+**Final disposition: approved with limitations.** The rendered inventory contains 27 introduced, three reused, and five supplied teaching entries. The transformation lesson now exposes its prerequisite context phrases and `täällä`; bare `myöhässä`, `väsynyt`, `koulussa`, and `kotona` used only in translated examples are visibly identified as supplied where applicable. Every reused item and meaning resolves through the declared prerequisite chain, supplied entries do not satisfy scored-vocabulary validation, and no Focused lesson exceeds ten introduced items. Direct-source validation and the complete client quality gate pass. All 100 scored and 12 practice questions remain unchanged, preserving six-person, polarity, context, response-format, duplicate, and mastery-pair coverage. Existing scope limitations remain.
+
+## Lexical-unit vocabulary addendum — 2026-09-13
+
+**Final disposition: approved with limitations.** This addendum supersedes the preceding vocabulary counts. Nineteen transparent combinations were split into individual words, producing 20 introduced, 17 reused, and five supplied entries. All 42 entries are explicitly typed `word`; the pack contains no genuine multiword fixed expression. The first Focused lesson introduces exactly ten lexically recalled words; `täällä` and `vielä` are visibly supplied through its translated word-order context, while `lääkäri` and `vielä` are introduced later before Review recall. All three lessons advance to `1.2.0`. Exercise substance and variety are unchanged; only vocabulary metadata was split or emptied where the context is supplied. Existing scope limitations remain.

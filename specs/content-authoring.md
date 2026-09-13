@@ -37,7 +37,27 @@ Record a disposition of **approved**, **approved with limitations**, or **revisi
 
 ## 3. Author lessons and exercises
 
-Lessons teach from first principles, declare targets and prerequisites, introduce at most ten scored words when focused, contain worked examples and common mistakes, and provide two to five optional unscored practice items.
+Lessons teach from first principles, declare targets and prerequisites, introduce at most ten scored vocabulary entries when focused, contain worked examples and common mistakes, and provide two to five optional unscored practice items.
+
+### Vocabulary ownership and variety
+
+Classify every learner-relevant Finnish lexical item used in lesson explanations, worked examples, common mistakes, optional practice, and scored exercises as one of:
+
+- **New word:** first taught in the current lesson and expected to be recalled. Display it under **New words** and count it toward the focused lesson's ten-word ceiling.
+- **Used again:** introduced by the transitive chain for a declared prerequisite skill. Display it with the same English meaning under **Used again**, but do not count it as new.
+- **Supplied vocabulary:** used only as translated context and not assessed as lexical recall. Display its meaning where it appears and identify it under **Supplied in examples** when it occurs in lesson teaching.
+
+Do not count a personal pronoun as vocabulary when that pronoun is itself the lesson's declared grammar target. Supporting nouns, verbs, adjectives, adverbs, fixed expressions, and other lexical material still require one of the three classifications.
+
+Determine vocabulary ownership by the authored lexical item rather than treating every inflected surface form as a separate new word. When the current grammar derives a form, list the base word and show the encountered form where useful. When that derivation is not the target, supply the complete Finnish form.
+
+Every vocabulary object must declare `type` as either `word` or `fixed-expression`. A `word` contains exactly one whitespace-free Finnish lexical word. Split transparent combinations into separate entries with their own stable meanings: for example, represent `Suomessa huomenna` as `Suomessa — in Finland` and `huomenna — tomorrow`. Use `fixed-expression` only for a genuine conventional or idiomatic unit learned as a whole, such as `hyvää huomenta — good morning`; it must contain more than one written word. Sentence fragments, convenient context bundles, and combinations created only to stay under the ten-item ceiling are not fixed expressions.
+
+An exercise's `vocabulary` array lists only the individual words or genuine fixed expressions the learner must retrieve lexically. Omit visibly translated Finnish context and Finnish word-order tokens when the answer tests only grammar rather than recall of that context. Splitting vocabulary metadata never requires splitting a natural phrase inside a prompt, answer, explanation, or word-order token.
+
+Do not remove useful vocabulary merely to satisfy the ceiling. First reclassify previously taught vocabulary, visibly supply non-assessed context, or redistribute genuinely new vocabulary. Replace a word only when it is incidental, has little retrieval value, and its removal does not reduce naturalness, semantic range, or question variety.
+
+Repeated grammatical decisions are purposeful practice, but exercises must still vary meaningfully through context, grammatical person, polarity, response format, vocabulary combination, or production demand. Surface-only paraphrases are repetitive filler rather than meaningful variation.
 
 Keep each pack's authored implementation under `client/content/<pack-id>/`: pack metadata and ordered references in `pack.json`, one pure-JSON lesson per stable ID under `lessons/`, and one pure-JSON learning test per stable ID under `tests/`. Store every pedagogical value and semantic relationship explicitly there. `client/content/` is the sole source and is deployed unchanged; do not author content in JavaScript or create a generated content copy.
 
@@ -51,7 +71,7 @@ Focused tests and Reviews remain immediately accessible in separate learning-map
 
 ## 4. Technical validation
 
-Assemble and validate every registered pack directly from its pack-owned JSON files, run automated tests, format changed files, and build the production app. A pack is not complete when source-structure checks, universal schema checks, pack-grouped topic-specific guards, cross-pack ID checks, direct deployment checks, or the production build fail.
+Assemble and validate every registered pack directly from its pack-owned JSON files, run automated tests, format changed files, and build the production app. Runtime and standalone validation must reject known vocabulary used without classification in worked examples, supplied vocabulary whose Finnish form and English meaning are not visible in teaching, and repeated optional-practice labels. A pack is not complete when source-structure checks, universal schema checks, pack-grouped topic-specific guards, cross-pack ID checks, direct deployment checks, or the production build fail.
 
 ## 5. Final Finnish-teaching pedagogy assessment
 
@@ -62,8 +82,9 @@ Audit the finished pack rather than only its metadata:
 - verify distractors are plausible, diagnostic, and unambiguously wrong;
 - ensure explanations define terminology and expose every non-obvious construction step;
 - verify focused exercises contain no hidden grammar or lexical recall burden;
+- inventory vocabulary from the rendered lesson body and exercises rather than metadata alone, and verify that every learner-relevant item is correctly classified as new, used again through a declared prerequisite, or visibly supplied;
 - check recognition-to-production progression and cumulative cognitive load;
-- distinguish purposeful retrieval from repetitive filler;
+- distinguish purposeful retrieval from repetitive filler by comparing context, person, polarity, response format, vocabulary combination, and production demand;
 - confirm every important point has sufficient Focused evidence and Reviews introduce nothing new;
 - compare parallel exercises for same-skill, different-surface, comparable-difficulty mastery evidence;
 - state limitations such as missing listening, speaking, pronunciation, dialect, or communicative assessment.

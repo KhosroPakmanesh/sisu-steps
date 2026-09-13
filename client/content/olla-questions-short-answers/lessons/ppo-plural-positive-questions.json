@@ -1,17 +1,79 @@
 {
   "id": "ppo-plural-positive-questions",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "stage": "focused",
   "targetSkills": ["Plural affirmative olla questions"],
   "prerequisiteSkills": ["Singular affirmative olla questions"],
   "introducedVocabulary": [
-    { "finnish": "ajoissa nyt", "english": "on time now" },
-    { "finnish": "koulussa huomenna", "english": "at school tomorrow" },
-    { "finnish": "paikalla tänään", "english": "present today" },
-    { "finnish": "siellä nyt", "english": "there now" },
-    { "finnish": "Suomessa huomenna", "english": "in Finland tomorrow" },
-    { "finnish": "täällä vielä", "english": "still here" },
-    { "finnish": "työssä tänään", "english": "at work today" }
+    {
+      "finnish": "koulussa",
+      "english": "at school",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
+    },
+    {
+      "finnish": "vielä",
+      "english": "still",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    },
+    {
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
+    },
+    {
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "aamulla",
+      "english": "in the morning",
+      "type": "word"
+    }
   ],
   "title": "Plural affirmative yes/no questions",
   "summary": "Form olemmeko, oletteko, and ovatko questions for plural persons.",
@@ -78,7 +140,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["Suomessa huomenna"],
+      "vocabulary": ["Suomessa", "huomenna"],
       "sentenceExplanation": {
         "translation": "Are we in Finland tomorrow?",
         "pattern": "present-tense olla + -ko + subject + context",
@@ -123,7 +185,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["Suomessa huomenna"],
+      "vocabulary": ["Suomessa", "huomenna"],
       "sentenceExplanation": {
         "translation": "Are you in Finland tomorrow?",
         "pattern": "present-tense olla + -ko + subject + context",
@@ -173,7 +235,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["Suomessa huomenna"],
+      "vocabulary": ["Suomessa", "huomenna"],
       "sentenceExplanation": {
         "translation": "Are they in Finland tomorrow?",
         "pattern": "present-tense olla + -ko + subject + context",
@@ -223,7 +285,7 @@
         "positive-question",
         "standard-written-finnish"
       ],
-      "vocabulary": ["kotona aamulla"],
+      "vocabulary": [],
       "sentenceExplanation": {
         "translation": "Are we at home in the morning?",
         "pattern": "present-tense olla + -ko + subject + context",
