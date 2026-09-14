@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added five source-grounded `0 - A1.3` demonstrative-pronoun packs for singular and plural reference, negative statements, questions, and bounded inessive forms, with 24 Focused lessons and tests, five Reviews, 632 scored exercises, 96 optional practice exercises, all five response formats, controlled vocabulary, complete sentence explanations, diagnostics, and mutual delayed-mastery pairs.
+
 - Lesson preparation now always displays separate semantic containers for **New words**, **Used again**, and **Supplied in examples**, with validation that reused vocabulary comes from declared prerequisites and keeps its original meaning, known worked-example vocabulary is classified, and supplied forms and meanings are visible in teaching. Each vocabulary group exactly reuses the worked-example punched-paper surface and behavior, and sparse groups retain the same word-card sizing as **New words**.
 
 - Added three source-grounded `0 - A1.3` Finnish grammar packs for personal pronouns and affirmative `olla`, negative `olla` statements, and `olla` questions with short answers. The smaller learning maps preserve all fifteen Focused lessons and tests, 520 scored exercises, 60 optional lesson-practice exercises, all five response formats, stable exercise IDs, and register, boundary, duplicate, balance, topology, labeling, and mastery-pair validation.
@@ -35,6 +37,8 @@
 - Safe choice, text, and word-order correction controls.
 
 ### Changed
+
+- Reworked the five pending demonstrative-pronoun packs with natural English glosses and translations, plausible noun/location combinations, form-only introductory support, explicit bounded contexts for all independent inessive tasks, natural English location alternatives, and distractor-specific feedback. Demonstrative validation now rejects malformed glosses, spoken `tää`/`toi`/`nää`/`noi`, scene-only sentence duplicates, untaught Review-exercise targets, hidden malformed Finnish question frames, missing inessive contexts, and repeated wrong-option feedback while preserving all 632 scored IDs and 96 practice IDs.
 
 - Vocabulary declarations now store one Finnish lexical word per entry by default. Every entry is explicitly typed as a `word` or `fixed-expression`; transparent combinations such as `Suomessa huomenna` are split into reusable component words, while multiword entries are reserved for genuine fixed expressions. Exercise wording and behavior are unchanged; only lexical-recall metadata changes where context is already visibly supplied.
 

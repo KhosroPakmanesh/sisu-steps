@@ -1,0 +1,1181 @@
+{
+  "id": "idf-singular-inessive-test",
+  "title": "In this, that, or it: tässä, tuossa, siinä",
+  "focus": "Recognise and produce the singular inessive demonstrative forms.",
+  "lessonIds": ["idf-singular-inessive"],
+  "stage": "focused",
+  "targetSkills": ["Singular inessive demonstratives"],
+  "prerequisiteSkills": [],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Choose the sentence that means “The book is in this one.” At a study desk. Start from tämä (“this”). Use the supplied subject kirja (“book”).",
+      "acceptedAnswers": ["Kirja on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e001",
+      "options": ["Kirja on tässä.", "Kirja on tuossa.", "Kirja on siinä.", "Kirja on tämä."],
+      "optionFeedback": {
+        "Kirja on tässä.": "Correct. Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+        "Kirja on tuossa.": "“tuossa” is the singular inessive form linked to tuo; use “tässä”, the singular inessive form linked to tämä.",
+        "Kirja on siinä.": "“siinä” is the singular inessive form linked to se; use “tässä”, the singular inessive form linked to tämä.",
+        "Kirja on tämä.": "“tämä” is a singular nominative form for a referent near the speaker; use “tässä”, the singular inessive form linked to tämä."
+      },
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirja on tuossa."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e002"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Choose the sentence that means “The book is in that one over there.” In a classroom. Start from tuo (“that over there”). Use the supplied subject kirja (“book”).",
+      "acceptedAnswers": ["Kirja on tuossa."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e002",
+      "options": ["Kirja on tuossa.", "Kirja on tässä.", "Kirja on siinä.", "Kirja on tuo."],
+      "optionFeedback": {
+        "Kirja on tuossa.": "Correct. Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+        "Kirja on tässä.": "“tässä” is the singular inessive form linked to tämä; use “tuossa”, the singular inessive form linked to tuo.",
+        "Kirja on siinä.": "“siinä” is the singular inessive form linked to se; use “tuossa”, the singular inessive form linked to tuo.",
+        "Kirja on tuo.": "“tuo” is a singular nominative form for a farther, jointly visible referent; use “tuossa”, the singular inessive form linked to tuo."
+      },
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirja on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e001"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Complete “The book is in it.” At a library table. Start from se (“that or it, already identifiable”). Use the supplied subject kirja (“book”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Kirja on siinä."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e003",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirja on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e004"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Three garages are visible. The speaker indicates the nearby garage. Complete “The car is in this one.” In a shop window. Start from tämä (“this”). Use the supplied subject auto (“car”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Auto on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The car is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "the car",
+            "role": "subject being located",
+            "baseForm": "auto",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e004",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Auto on tuossa."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e003"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Context: Three garages are visible. The speaker indicates the farther-away garage, visible to both people. Write “The car is in that one over there.” in Finnish. Beside a noticeboard. Start from tuo (“that over there”). Use the supplied subject auto (“car”).",
+      "acceptedAnswers": ["Auto on tuossa."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The car is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "the car",
+            "role": "subject being located",
+            "baseForm": "auto",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e005",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Auto on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e006"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Context: Three garages are visible. Both people refer to the garage they identified earlier. Write “The car is in it.” in Finnish. During a picture exercise. Start from se (“that or it, already identifiable”). Use the supplied subject auto (“car”).",
+      "acceptedAnswers": ["Auto on siinä."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The car is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "the car",
+            "role": "subject being located",
+            "baseForm": "auto",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e006",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Auto on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e005"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Context: A map shows three outlined districts. The speaker indicates the nearby district. While unpacking a bag. Translate “Talo on tässä.” into English.",
+      "acceptedAnswers": ["The house is in this one.", "The house is here."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["talo"],
+      "sentenceExplanation": {
+        "translation": "The house is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Talo",
+            "meaning": "the house",
+            "role": "subject being located",
+            "baseForm": "talo",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e007",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "parallelExerciseId": "idf-singular-inessive-test-e008"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Context: A map shows three outlined districts. The speaker indicates the farther-away district, visible to both people. At a museum display. Translate “Talo on tuossa.” into English.",
+      "acceptedAnswers": ["The house is in that one over there.", "The house is over there."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["talo"],
+      "sentenceExplanation": {
+        "translation": "The house is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Talo",
+            "meaning": "the house",
+            "role": "subject being located",
+            "baseForm": "talo",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e008",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "parallelExerciseId": "idf-singular-inessive-test-e007"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Context: A map shows three outlined districts. Both people refer to the district they identified earlier. Build “The house is in it.” During a video call. Start from se (“that or it, already identifiable”). Use the supplied subject talo (“house”).",
+      "acceptedAnswers": ["Talo on siinä."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The house is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Talo",
+            "meaning": "the house",
+            "role": "subject being located",
+            "baseForm": "talo",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e009",
+      "tokens": ["on", "siinä.", "Talo"],
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Talo on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e010"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Build “The bag is in this one.” At the kitchen table. Start from tämä (“this”). Use the supplied subject laukku (“bag”).",
+      "acceptedAnswers": ["Laukku on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The bag is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Laukku",
+            "meaning": "the bag",
+            "role": "subject being located",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e010",
+      "tokens": ["tässä.", "Laukku", "on"],
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Laukku on tuossa."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e009"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Choose the sentence that means “The bag is in that one over there.” While comparing two photos. Start from tuo (“that over there”). Use the supplied subject laukku (“bag”).",
+      "acceptedAnswers": ["Laukku on tuossa."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The bag is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Laukku",
+            "meaning": "the bag",
+            "role": "subject being located",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e011",
+      "options": ["Laukku on tuossa.", "Laukku on tässä.", "Laukku on siinä.", "Laukku on tuo."],
+      "optionFeedback": {
+        "Laukku on tuossa.": "Correct. Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+        "Laukku on tässä.": "“tässä” is the singular inessive form linked to tämä; use “tuossa”, the singular inessive form linked to tuo.",
+        "Laukku on siinä.": "“siinä” is the singular inessive form linked to se; use “tuossa”, the singular inessive form linked to tuo.",
+        "Laukku on tuo.": "“tuo” is a singular nominative form for a farther, jointly visible referent; use “tuossa”, the singular inessive form linked to tuo."
+      },
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Laukku on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e012"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Choose the sentence that means “The bag is in it.” During a vocabulary game. Start from se (“that or it, already identifiable”). Use the supplied subject laukku (“bag”).",
+      "acceptedAnswers": ["Laukku on siinä."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The bag is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Laukku",
+            "meaning": "the bag",
+            "role": "subject being located",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e012",
+      "options": ["Laukku on siinä.", "Laukku on tässä.", "Laukku on tuossa.", "Laukku on se."],
+      "optionFeedback": {
+        "Laukku on siinä.": "Correct. Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+        "Laukku on tässä.": "“tässä” is the singular inessive form linked to tämä; use “siinä”, the singular inessive form linked to se.",
+        "Laukku on tuossa.": "“tuossa” is the singular inessive form linked to tuo; use “siinä”, the singular inessive form linked to se.",
+        "Laukku on se.": "“se” is a singular nominative form for an already identifiable non-human referent; use “siinä”, the singular inessive form linked to se."
+      },
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Laukku on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e011"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Complete “The key is in this one.” At a bus stop. Start from tämä (“this”). Use the supplied subject avain (“key”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Avain on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The key is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Avain",
+            "meaning": "the key",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e013",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avain on tuossa."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e014"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Complete “The key is in that one over there.” In an office. Start from tuo (“that over there”). Use the supplied subject avain (“key”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Avain on tuossa."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The key is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Avain",
+            "meaning": "the key",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e014",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avain on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e013"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Write “The key is in it.” in Finnish. At a reception desk. Start from se (“that or it, already identifiable”). Use the supplied subject avain (“key”).",
+      "acceptedAnswers": ["Avain on siinä."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The key is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Avain",
+            "meaning": "the key",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e015",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avain on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e016"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Context: Three rooms are visible. The speaker indicates the nearby room. Write “The chair is in this one.” in Finnish. While checking a list. Start from tämä (“this”). Use the supplied subject tuoli (“chair”).",
+      "acceptedAnswers": ["Tuoli on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The chair is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Tuoli",
+            "meaning": "the chair",
+            "role": "subject being located",
+            "baseForm": "tuoli",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e016",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Tuoli on tuossa."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e015"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Context: Three rooms are visible. The speaker indicates the farther-away room, visible to both people. During a house tour. Translate “Tuoli on tuossa.” into English.",
+      "acceptedAnswers": ["The chair is in that one over there.", "The chair is over there."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["tuoli"],
+      "sentenceExplanation": {
+        "translation": "The chair is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Tuoli",
+            "meaning": "the chair",
+            "role": "subject being located",
+            "baseForm": "tuoli",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e017",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "parallelExerciseId": "idf-singular-inessive-test-e018"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Context: Three rooms are visible. Both people refer to the room they identified earlier. At a market stall. Translate “Tuoli on siinä.” into English.",
+      "acceptedAnswers": ["The chair is in it.", "The chair is there."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["tuoli"],
+      "sentenceExplanation": {
+        "translation": "The chair is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Tuoli",
+            "meaning": "the chair",
+            "role": "subject being located",
+            "baseForm": "tuoli",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e018",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "parallelExerciseId": "idf-singular-inessive-test-e017"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Build “The book is in this one.” While arranging a shelf. Start from tämä (“this”). Use the supplied subject kirja (“book”).",
+      "acceptedAnswers": ["Kirja on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e019",
+      "tokens": ["on", "tässä.", "Kirja"],
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirja on tuossa."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e020"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Build “The book is in that one over there.” During a map activity. Start from tuo (“that over there”). Use the supplied subject kirja (“book”).",
+      "acceptedAnswers": ["Kirja on tuossa."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e020",
+      "tokens": ["tuossa.", "Kirja", "on"],
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirja on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e019"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Choose the sentence that means “The book is in it.” At a school entrance. Start from se (“that or it, already identifiable”). Use the supplied subject kirja (“book”).",
+      "acceptedAnswers": ["Kirja on siinä."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e021",
+      "options": ["Kirja on siinä.", "Kirja on tässä.", "Kirja on tuossa.", "Kirja on se."],
+      "optionFeedback": {
+        "Kirja on siinä.": "Correct. Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+        "Kirja on tässä.": "“tässä” is the singular inessive form linked to tämä; use “siinä”, the singular inessive form linked to se.",
+        "Kirja on tuossa.": "“tuossa” is the singular inessive form linked to tuo; use “siinä”, the singular inessive form linked to se.",
+        "Kirja on se.": "“se” is a singular nominative form for an already identifiable non-human referent; use “siinä”, the singular inessive form linked to se."
+      },
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirja on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e022"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Context: Three garages are visible. The speaker indicates the nearby garage. Choose the sentence that means “The car is in this one.” While sorting objects. Start from tämä (“this”). Use the supplied subject auto (“car”).",
+      "acceptedAnswers": ["Auto on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The car is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "the car",
+            "role": "subject being located",
+            "baseForm": "auto",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e022",
+      "options": ["Auto on tässä.", "Auto on tuossa.", "Auto on siinä.", "Auto on tämä."],
+      "optionFeedback": {
+        "Auto on tässä.": "Correct. Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+        "Auto on tuossa.": "“tuossa” is the singular inessive form linked to tuo; use “tässä”, the singular inessive form linked to tämä.",
+        "Auto on siinä.": "“siinä” is the singular inessive form linked to se; use “tässä”, the singular inessive form linked to tämä.",
+        "Auto on tämä.": "“tämä” is a singular nominative form for a referent near the speaker; use “tässä”, the singular inessive form linked to tämä."
+      },
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Auto on tuossa."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e021"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Three garages are visible. The speaker indicates the farther-away garage, visible to both people. Complete “The car is in that one over there.” During a memory exercise. Start from tuo (“that over there”). Use the supplied subject auto (“car”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Auto on tuossa."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The car is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "the car",
+            "role": "subject being located",
+            "baseForm": "auto",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e023",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Auto on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e024"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Three garages are visible. Both people refer to the garage they identified earlier. Complete “The car is in it.” At a café table. Start from se (“that or it, already identifiable”). Use the supplied subject auto (“car”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Auto on siinä."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The car is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "the car",
+            "role": "subject being located",
+            "baseForm": "auto",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-test-e024",
+      "targetSkill": "Singular inessive demonstratives",
+      "misconceptionCategory": "Singular inessive demonstratives: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Auto on tässä."],
+          "category": "Singular inessive demonstratives: form not yet secure",
+          "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation."
+        }
+      ],
+      "parallelExerciseId": "idf-singular-inessive-test-e023"
+    }
+  ]
+}

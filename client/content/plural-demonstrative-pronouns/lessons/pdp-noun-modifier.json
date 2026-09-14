@@ -1,0 +1,321 @@
+{
+  "id": "pdp-noun-modifier",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural demonstratives before nouns"],
+  "prerequisiteSkills": ["Independent plural demonstratives"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "nämä",
+      "english": "these",
+      "type": "word"
+    },
+    {
+      "finnish": "nuo",
+      "english": "those over there",
+      "type": "word"
+    },
+    {
+      "finnish": "ne",
+      "english": "those or they, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "ovat",
+      "english": "are",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "sisällä",
+      "english": "inside",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Using plural demonstratives before a noun",
+  "summary": "Place a plural demonstrative directly before a supplied plural noun.",
+  "objectives": [
+    "Place the plural demonstrative before its noun.",
+    "Retain the supplied plural noun form.",
+    "Distinguish modifier use from independent use."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "A plural demonstrative can modify a following plural noun: nämä kirjat, nuo autot, ne talot.",
+        "The demonstrative comes first and identifies the group."
+      ],
+      "keyPoints": ["demonstrative + plural noun", "nämä kirjat", "nuo autot"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The complete noun plural is supplied when plural formation is not the target.",
+        "This lesson assesses the demonstrative's position, not how every noun forms its plural."
+      ],
+      "keyPoints": ["ne talot", "demonstrative comes first", "noun plural is supplied"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Nuo laukut ovat täällä.",
+      "english": "Those bags are here.",
+      "steps": [
+        "Nuo: basic plural form.",
+        "laukut: the complete T-plural form is supplied.",
+        "ovat: third-person plural present form.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Ne laukut ovat täällä.",
+      "english": "The previously identified bags are here.",
+      "steps": [
+        "Ne: basic plural form.",
+        "laukut: the complete T-plural form is supplied.",
+        "ovat: third-person plural present form.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Nämä avaimet ovat täällä.",
+      "english": "These keys are here.",
+      "steps": [
+        "Nämä: basic plural form.",
+        "avaimet: the complete T-plural form is supplied.",
+        "ovat: third-person plural present form.",
+        "täällä: unchanged location word."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not put the plural noun before the demonstrative.",
+    "Do not remove the noun when the meaning names it.",
+    "Do not alter a supplied noun plural."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “These books are here.” At a storage cupboard. Use the supplied plural kirjat (“books”) and täällä (“here”).",
+      "acceptedAnswers": ["Nämä kirjat ovat täällä."],
+      "explanation": "Nämä comes directly before the plural noun kirjat.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "These books are here.",
+        "pattern": "demonstrative modifier + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "kirjat",
+            "meaning": "books",
+            "role": "plural noun",
+            "baseForm": "kirja",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstratives before nouns"],
+      "id": "pdp-noun-modifier-p01",
+      "options": ["Nämä kirjat ovat täällä.", "Nämä ovat täällä.", "Kirjat nämä ovat täällä."],
+      "optionFeedback": {
+        "Nämä kirjat ovat täällä.": "Correct. Nämä comes directly before the plural noun kirjat.",
+        "Nämä ovat täällä.": "“ovat” is the plural affirmative form of olla; use “kirjat”, which keeps the supplied sentence frame.",
+        "Kirjat nämä ovat täällä.": "“Kirjat” is not the required form here; use “Nämä”, a plural nominative form for referents near the speaker."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “Those books are here.” While labelling pictures. Use the supplied plural kirjat (“books”) and täällä (“here”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Nuo kirjat ovat täällä."],
+      "explanation": "Nuo comes directly before the plural noun kirjat.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Those books are here.",
+        "pattern": "demonstrative modifier + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Nuo",
+            "meaning": "those over there",
+            "role": "demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "kirjat",
+            "meaning": "books",
+            "role": "plural noun",
+            "baseForm": "kirja",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstratives before nouns"],
+      "id": "pdp-noun-modifier-p02"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “The previously identified books are here.” in Finnish. During a pair exercise. Use the supplied plural kirjat (“books”) and täällä (“here”).",
+      "acceptedAnswers": ["Ne kirjat ovat täällä."],
+      "explanation": "Ne comes directly before the plural noun kirjat.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The previously identified books are here.",
+        "pattern": "demonstrative modifier + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Ne",
+            "meaning": "those or they, already identifiable",
+            "role": "demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "kirjat",
+            "meaning": "books",
+            "role": "plural noun",
+            "baseForm": "kirja",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstratives before nouns"],
+      "id": "pdp-noun-modifier-p03"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: In a shop window. Translate “Nämä autot ovat täällä.” into English.",
+      "acceptedAnswers": ["These cars are here."],
+      "explanation": "Nämä comes directly before the plural noun autot.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["auto", "täällä"],
+      "sentenceExplanation": {
+        "translation": "These cars are here.",
+        "pattern": "demonstrative modifier + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "autot",
+            "meaning": "cars",
+            "role": "plural noun",
+            "baseForm": "auto",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstratives before nouns"],
+      "id": "pdp-noun-modifier-p04"
+    }
+  ]
+}

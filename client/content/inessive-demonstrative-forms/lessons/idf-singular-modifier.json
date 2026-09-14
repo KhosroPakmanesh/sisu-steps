@@ -1,0 +1,318 @@
+{
+  "id": "idf-singular-modifier",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular inessive demonstrative-noun agreement"],
+  "prerequisiteSkills": ["Plural inessive demonstratives"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "tässä",
+      "english": "in this one",
+      "type": "word"
+    },
+    {
+      "finnish": "tuossa",
+      "english": "in that one over there",
+      "type": "word"
+    },
+    {
+      "finnish": "siinä",
+      "english": "in it",
+      "type": "word"
+    },
+    {
+      "finnish": "on",
+      "english": "is",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Inessive forms before singular nouns",
+  "summary": "Match tässä, tuossa, or siinä with a supplied singular inessive noun.",
+  "objectives": [
+    "Place a singular inessive demonstrative before its noun.",
+    "Match singular number and inessive case.",
+    "Leave the supplied noun form unchanged."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "Before a singular inessive noun, use the matching singular demonstrative form: tässä kirjassa, tuossa laukussa, siinä talossa.",
+        "Both words express singular number and the inessive relation."
+      ],
+      "keyPoints": ["tässä kirjassa", "tuossa laukussa", "siinä talossa"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The complete noun form is supplied because noun-case formation is not the target.",
+        "Choose only the demonstrative form that matches reference and agreement."
+      ],
+      "keyPoints": ["same case", "same singular number", "noun form is supplied"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Avain on tässä laukussa.",
+      "english": "The key is in this bag.",
+      "steps": [
+        "Avain: basic singular form.",
+        "on: singular present form.",
+        "tässä: learned inessive form of tämä.",
+        "laukussa: the complete non-target noun form is supplied."
+      ]
+    },
+    {
+      "finnish": "Kirja on tuossa laukussa.",
+      "english": "The book is in that bag over there.",
+      "steps": [
+        "Kirja: basic singular form.",
+        "on: singular present form.",
+        "tuossa: learned inessive form of tuo.",
+        "laukussa: the complete non-target noun form is supplied."
+      ]
+    },
+    {
+      "finnish": "Avain on siinä autossa.",
+      "english": "The key is in that car.",
+      "steps": [
+        "Avain: basic singular form.",
+        "on: singular present form.",
+        "siinä: learned inessive form of se.",
+        "autossa: the complete non-target noun form is supplied."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use nominative tämä before an inessive noun.",
+    "Do not use plural näissä with a singular noun.",
+    "Do not alter the supplied noun ending."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “The key is in this bag.” in Finnish. At a study desk. Use the supplied Avain (“key”) and laukussa (“in the bag”). Start from tämä.",
+      "acceptedAnswers": ["Avain on tässä laukussa."],
+      "explanation": "Tässä matches laukussa in inessive case and singular number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The key is in this bag.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avain",
+            "meaning": "the key",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "tämä",
+            "formation": "learned singular inessive form"
+          },
+          {
+            "finnish": "laukussa",
+            "meaning": "in the bag",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstrative-noun agreement"],
+      "id": "idf-singular-modifier-p01"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: In a classroom. Translate “Kirja on tuossa laukussa.” into English.",
+      "acceptedAnswers": ["The book is in that bag over there."],
+      "explanation": "Tuossa matches laukussa in inessive case and singular number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["kirja", "laukku"],
+      "sentenceExplanation": {
+        "translation": "The book is in that bag over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "tuo",
+            "formation": "learned singular inessive form"
+          },
+          {
+            "finnish": "laukussa",
+            "meaning": "in the bag",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstrative-noun agreement"],
+      "id": "idf-singular-modifier-p02"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “The key is in that car.” At a library table. Use the supplied Avain (“key”) and autossa (“in the car”). Start from se.",
+      "acceptedAnswers": ["Avain on siinä autossa."],
+      "explanation": "Siinä matches autossa in inessive case and singular number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The key is in that car.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avain",
+            "meaning": "the key",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in that",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "se",
+            "formation": "learned singular inessive form"
+          },
+          {
+            "finnish": "autossa",
+            "meaning": "in the car",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstrative-noun agreement"],
+      "id": "idf-singular-modifier-p03",
+      "tokens": ["autossa.", "Avain", "on", "siinä"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “The book is in this car.” While unpacking. Use the supplied Kirja (“book”) and autossa (“in the car”). Start from tämä.",
+      "acceptedAnswers": ["Kirja on tässä autossa."],
+      "explanation": "Tässä matches autossa in inessive case and singular number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is in this car.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "the book",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "tämä",
+            "formation": "learned singular inessive form"
+          },
+          {
+            "finnish": "autossa",
+            "meaning": "in the car",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstrative-noun agreement"],
+      "id": "idf-singular-modifier-p04",
+      "options": [
+        "Kirja on tässä autossa.",
+        "Kirja on tämä autossa.",
+        "Kirja on tuossa autossa.",
+        "Kirja on tässä autoissa."
+      ],
+      "optionFeedback": {
+        "Kirja on tässä autossa.": "Correct. Tässä matches autossa in inessive case and singular number.",
+        "Kirja on tämä autossa.": "“tämä” is a singular nominative form for a referent near the speaker; use “tässä”, the singular inessive form linked to tämä.",
+        "Kirja on tuossa autossa.": "“tuossa” is the singular inessive form linked to tuo; use “tässä”, the singular inessive form linked to tämä.",
+        "Kirja on tässä autoissa.": "“Kirja on tässä autoissa.” changes the supplied form or word order. The required sentence is “Kirja on tässä autossa.”: Tässä matches autossa in inessive case and singular number."
+      }
+    }
+  ]
+}

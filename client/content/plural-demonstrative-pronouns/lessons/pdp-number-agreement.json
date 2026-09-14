@@ -1,0 +1,322 @@
+{
+  "id": "pdp-number-agreement",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural demonstrative-noun agreement"],
+  "prerequisiteSkills": ["Plural demonstratives before nouns"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "nämä",
+      "english": "these",
+      "type": "word"
+    },
+    {
+      "finnish": "nuo",
+      "english": "those over there",
+      "type": "word"
+    },
+    {
+      "finnish": "ne",
+      "english": "those or they, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "ovat",
+      "english": "are",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "sisällä",
+      "english": "inside",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Matching demonstratives with plural nouns",
+  "summary": "Match a plural demonstrative with a visibly supplied nominative plural noun.",
+  "objectives": [
+    "Choose a plural demonstrative when the noun is plural.",
+    "Reject mixed singular-plural phrases.",
+    "Keep the complete plural sentence agreement visible."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "The demonstrative and noun express the same number.",
+        "Use nämä kirjat, not tämä kirjat; use nuo autot, not tuo autot."
+      ],
+      "keyPoints": ["plural with plural", "nämä + kirjat", "nuo + autot"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The noun's plural form is already shown so the decision stays on the demonstrative.",
+        "Ovat confirms that the whole subject is plural."
+      ],
+      "keyPoints": ["ne + talot", "avoid mixed number", "ovat confirms plurality"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Nuo avaimet ovat täällä.",
+      "english": "Those keys are here.",
+      "steps": [
+        "Nuo: basic plural form.",
+        "avaimet: the complete T-plural form is supplied.",
+        "ovat: third-person plural present form.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Ne avaimet ovat täällä.",
+      "english": "The previously identified keys are here.",
+      "steps": [
+        "Ne: basic plural form.",
+        "avaimet: the complete T-plural form is supplied.",
+        "ovat: third-person plural present form.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Nämä kirjat ovat kotona.",
+      "english": "These books are at home.",
+      "steps": [
+        "Nämä: basic plural form.",
+        "kirjat: the complete T-plural form is supplied.",
+        "ovat: third-person plural present form.",
+        "kotona: unchanged location word."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not pair a singular demonstrative with a plural noun.",
+    "Do not change the supplied plural noun back to singular.",
+    "Do not use on with the plural noun phrase."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: At a study desk. Translate “Nämä autot ovat täällä.” into English.",
+      "acceptedAnswers": ["These cars are here."],
+      "explanation": "Nämä and autot are both plural, so the demonstrative and noun agree in number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["auto", "täällä"],
+      "sentenceExplanation": {
+        "translation": "These cars are here.",
+        "pattern": "plural demonstrative agreeing with the noun + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "plural demonstrative agreeing with the noun",
+            "baseForm": "nämä",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "autot",
+            "meaning": "cars",
+            "role": "plural noun",
+            "baseForm": "auto",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative-noun agreement"],
+      "id": "pdp-number-agreement-p01"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “Those cars are here.” While reading a short note. Use the supplied plural autot (“cars”) and täällä (“here”).",
+      "acceptedAnswers": ["Nuo autot ovat täällä."],
+      "explanation": "Nuo and autot are both plural, so the demonstrative and noun agree in number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Those cars are here.",
+        "pattern": "plural demonstrative agreeing with the noun + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Nuo",
+            "meaning": "those over there",
+            "role": "plural demonstrative agreeing with the noun",
+            "baseForm": "nuo",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "autot",
+            "meaning": "cars",
+            "role": "plural noun",
+            "baseForm": "auto",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative-noun agreement"],
+      "id": "pdp-number-agreement-p02",
+      "tokens": ["ovat", "täällä.", "Nuo", "autot"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “The previously identified cars are here.” During a guided tour. Use the supplied plural autot (“cars”) and täällä (“here”).",
+      "acceptedAnswers": ["Ne autot ovat täällä."],
+      "explanation": "Ne and autot are both plural, so the demonstrative and noun agree in number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The previously identified cars are here.",
+        "pattern": "plural demonstrative agreeing with the noun + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Ne",
+            "meaning": "those or they, already identifiable",
+            "role": "plural demonstrative agreeing with the noun",
+            "baseForm": "ne",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "autot",
+            "meaning": "cars",
+            "role": "plural noun",
+            "baseForm": "auto",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative-noun agreement"],
+      "id": "pdp-number-agreement-p03",
+      "options": ["Ne autot ovat täällä.", "Se autot ovat täällä.", "Ne auto ovat täällä."],
+      "optionFeedback": {
+        "Ne autot ovat täällä.": "Correct. Ne and autot are both plural, so the demonstrative and noun agree in number.",
+        "Se autot ovat täällä.": "“Se” is a singular nominative form for an already identifiable non-human referent; use “Ne”, a plural nominative form for already identifiable non-human referents.",
+        "Ne auto ovat täällä.": "“Ne auto ovat täällä.” changes the supplied form or word order. The required sentence is “Ne autot ovat täällä.”: Ne and autot are both plural, so the demonstrative and noun agree in number."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “These houses are here.” At a study desk. Use the supplied plural talot (“houses”) and täällä (“here”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Nämä talot ovat täällä."],
+      "explanation": "Nämä and talot are both plural, so the demonstrative and noun agree in number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "These houses are here.",
+        "pattern": "plural demonstrative agreeing with the noun + plural noun + linking verb + location",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "plural demonstrative agreeing with the noun",
+            "baseForm": "nämä",
+            "formation": "basic plural form"
+          },
+          {
+            "finnish": "talot",
+            "meaning": "houses",
+            "role": "plural noun",
+            "baseForm": "talo",
+            "formation": "the complete T-plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person plural present form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative-noun agreement"],
+      "id": "pdp-number-agreement-p04"
+    }
+  ]
+}

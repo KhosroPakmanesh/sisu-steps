@@ -1,0 +1,278 @@
+{
+  "id": "idf-singular-inessive",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular inessive demonstratives"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    {
+      "finnish": "tässä",
+      "english": "in this one",
+      "type": "word"
+    },
+    {
+      "finnish": "tuossa",
+      "english": "in that one over there",
+      "type": "word"
+    },
+    {
+      "finnish": "siinä",
+      "english": "in it",
+      "type": "word"
+    },
+    {
+      "finnish": "on",
+      "english": "is",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [],
+  "suppliedVocabulary": [],
+  "title": "In this, that, or it: tässä, tuossa, siinä",
+  "summary": "Recognise and produce the singular inessive demonstrative forms.",
+  "objectives": [
+    "Connect tässä, tuossa, and siinä with their base demonstratives.",
+    "Use the forms independently for bounded locations.",
+    "Distinguish them from nominative forms and broader location adverbs."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "The singular inessive demonstrative forms are tässä, tuossa, and siinä.",
+        "They can mean here or there, or “in this/that/it” when the context supplies a bounded container or area."
+      ],
+      "keyPoints": ["tämä → tässä", "tuo → tuossa", "se → siinä"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "Learn each whole form; do not build it by simply attaching -ssa to the nominative.",
+        "In every independent example here, the context explicitly identifies the container or bounded area. Finnish location adverbs such as täällä, tuolla, and siellä remain outside the production target."
+      ],
+      "keyPoints": ["singular inessive", "bounded location", "not nominative"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Kirja on tuossa.",
+      "english": "The book is in that one over there.",
+      "steps": [
+        "Context: the speaker indicates the farther, jointly visible bounded container or area.",
+        "Kirja: basic singular form.",
+        "on: singular present form.",
+        "tuossa: learned inessive form of tuo."
+      ]
+    },
+    {
+      "finnish": "Kirja on siinä.",
+      "english": "The book is in it.",
+      "steps": [
+        "Context: both people already know which bounded container or area is meant.",
+        "Kirja: basic singular form.",
+        "on: singular present form.",
+        "siinä: learned inessive form of se."
+      ]
+    },
+    {
+      "finnish": "Auto on tässä.",
+      "english": "The car is in this one.",
+      "steps": [
+        "Context: both people already know which bounded container or area is meant.",
+        "Auto: basic singular form.",
+        "on: singular present form.",
+        "tässä: learned inessive form of tämä."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not write tämässa, tuossa from tuo by guesswork, or sessa.",
+    "Do not substitute täällä, tuolla, or siellä when the target is an inessive demonstrative.",
+    "Do not use the plural forms näissä, noissa, or niissä for one container."
+  ],
+  "practiceExercises": [
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Optional practice: Complete “The bag is in this one.” At a market stall. Start from tämä (“this”). Use the supplied subject laukku (“bag”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Laukku on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The bag is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Laukku",
+            "meaning": "the bag",
+            "role": "subject being located",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-p01"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Optional practice: Write “The bag is in that one over there.” in Finnish. While arranging a shelf. Start from tuo (“that over there”). Use the supplied subject laukku (“bag”).",
+      "acceptedAnswers": ["Laukku on tuossa."],
+      "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The bag is in that one over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Laukku",
+            "meaning": "the bag",
+            "role": "subject being located",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tuossa",
+            "meaning": "in that one over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "tuo",
+            "formation": "learned inessive form of tuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-p02"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Optional practice: At a library table. Translate “Laukku on siinä.” into English.",
+      "acceptedAnswers": ["The bag is in it.", "The bag is there."],
+      "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["laukku"],
+      "sentenceExplanation": {
+        "translation": "The bag is in it.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Laukku",
+            "meaning": "the bag",
+            "role": "subject being located",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "siinä",
+            "meaning": "in it",
+            "role": "inessive demonstrative location",
+            "baseForm": "se",
+            "formation": "learned inessive form of se"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-p03"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Optional practice: Build “The key is in this one.” At a school entrance. Start from tämä (“this”). Use the supplied subject avain (“key”).",
+      "acceptedAnswers": ["Avain on tässä."],
+      "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The key is in this one.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Avain",
+            "meaning": "the key",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "tässä",
+            "meaning": "in this one",
+            "role": "inessive demonstrative location",
+            "baseForm": "tämä",
+            "formation": "learned inessive form of tämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular inessive demonstratives"],
+      "id": "idf-singular-inessive-p04",
+      "tokens": ["tässä.", "Avain", "on"]
+    }
+  ]
+}

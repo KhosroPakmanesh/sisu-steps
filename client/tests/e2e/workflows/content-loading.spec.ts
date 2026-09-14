@@ -135,7 +135,7 @@ test('loads manifests at startup and full content only after a topic opens', asy
 
   const startupRequests = [...contentRequests];
   expect(startupRequests.filter(isPackFragment)).toEqual([]);
-  expect(startupRequests.filter((path) => path.endsWith('/pack.json'))).toHaveLength(6);
+  expect(startupRequests.filter((path) => path.endsWith('/pack.json'))).toHaveLength(11);
   expect(
     await page.evaluate(
       () => (globalThis as typeof globalThis & { startupLayoutShift: number }).startupLayoutShift,

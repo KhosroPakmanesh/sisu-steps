@@ -1,0 +1,327 @@
+{
+  "id": "sdp-noun-modifier",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular demonstratives before nouns"],
+  "prerequisiteSkills": ["Independent singular demonstratives"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "tämä",
+      "english": "this",
+      "type": "word"
+    },
+    {
+      "finnish": "tuo",
+      "english": "that over there",
+      "type": "word"
+    },
+    {
+      "finnish": "se",
+      "english": "that or it, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "on",
+      "english": "is",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    },
+    {
+      "finnish": "uusi",
+      "english": "new",
+      "type": "word"
+    },
+    {
+      "finnish": "vanha",
+      "english": "old",
+      "type": "word"
+    },
+    {
+      "finnish": "pieni",
+      "english": "small",
+      "type": "word"
+    },
+    {
+      "finnish": "suuri",
+      "english": "large",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Using singular demonstratives before a noun",
+  "summary": "Place a singular demonstrative directly before a singular nominative noun.",
+  "objectives": [
+    "Place the demonstrative before the noun it identifies.",
+    "Keep both words singular and nominative.",
+    "Distinguish a named noun phrase from an independent demonstrative."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "A demonstrative can also modify a following noun: tämä kirja, tuo auto, se talo.",
+        "The demonstrative identifies which noun the speaker means."
+      ],
+      "keyPoints": ["demonstrative + noun", "tämä kirja", "tuo auto"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "In this pack both words stay in the singular nominative form.",
+        "Other cases and their agreement patterns are taught separately."
+      ],
+      "keyPoints": ["se talo", "both forms are singular", "do not reverse the order"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Tämä laukku on uusi.",
+      "english": "This bag is new.",
+      "steps": [
+        "Tämä: basic singular form.",
+        "laukku: basic singular form.",
+        "on: third-person singular present form.",
+        "uusi: basic singular form."
+      ]
+    },
+    {
+      "finnish": "Tuo laukku on uusi.",
+      "english": "That bag over there is new.",
+      "steps": [
+        "Tuo: basic singular form.",
+        "laukku: basic singular form.",
+        "on: third-person singular present form.",
+        "uusi: basic singular form."
+      ]
+    },
+    {
+      "finnish": "Se laukku on uusi.",
+      "english": "The previously identified bag is new.",
+      "steps": [
+        "Se: basic singular form.",
+        "laukku: basic singular form.",
+        "on: third-person singular present form.",
+        "uusi: basic singular form."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not put the noun before the demonstrative.",
+    "Do not omit the noun when the English meaning names it.",
+    "Do not add a case ending in this nominative-only lesson."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “The previously identified key is old.” During a phone conversation. Use avain (“key”) and vanha (“old”).",
+      "acceptedAnswers": ["Se avain on vanha."],
+      "explanation": "Se comes before the singular noun avain; both remain in the basic nominative form.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The previously identified key is old.",
+        "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
+        "parts": [
+          {
+            "finnish": "Se",
+            "meaning": "that or it, already identifiable",
+            "role": "demonstrative modifier",
+            "baseForm": "se",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "avain",
+            "meaning": "key",
+            "role": "singular noun being identified",
+            "baseForm": "avain",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person singular present form"
+          },
+          {
+            "finnish": "vanha",
+            "meaning": "old",
+            "role": "description",
+            "baseForm": "vanha",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstratives before nouns"],
+      "id": "sdp-noun-modifier-p01",
+      "tokens": ["avain", "on", "vanha.", "Se"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “This book is small.” At a storage cupboard. Use kirja (“book”) and pieni (“small”).",
+      "acceptedAnswers": ["Tämä kirja on pieni."],
+      "explanation": "Tämä comes before the singular noun kirja; both remain in the basic nominative form.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "This book is small.",
+        "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "demonstrative modifier",
+            "baseForm": "tämä",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "kirja",
+            "meaning": "book",
+            "role": "singular noun being identified",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person singular present form"
+          },
+          {
+            "finnish": "pieni",
+            "meaning": "small",
+            "role": "description",
+            "baseForm": "pieni",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstratives before nouns"],
+      "id": "sdp-noun-modifier-p02",
+      "options": ["Tämä kirja on pieni.", "Tämä on pieni.", "Kirja tämä on pieni."],
+      "optionFeedback": {
+        "Tämä kirja on pieni.": "Correct. Tämä comes before the singular noun kirja; both remain in the basic nominative form.",
+        "Tämä on pieni.": "“on” is the singular affirmative form of olla; use “kirja”, which keeps the supplied sentence frame.",
+        "Kirja tämä on pieni.": "“Kirja” is not the required form here; use “Tämä”, a singular nominative form for a referent near the speaker."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “That book over there is small.” While labelling pictures. Use kirja (“book”) and pieni (“small”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Tuo kirja on pieni."],
+      "explanation": "Tuo comes before the singular noun kirja; both remain in the basic nominative form.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "That book over there is small.",
+        "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
+        "parts": [
+          {
+            "finnish": "Tuo",
+            "meaning": "that over there",
+            "role": "demonstrative modifier",
+            "baseForm": "tuo",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "kirja",
+            "meaning": "book",
+            "role": "singular noun being identified",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person singular present form"
+          },
+          {
+            "finnish": "pieni",
+            "meaning": "small",
+            "role": "description",
+            "baseForm": "pieni",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstratives before nouns"],
+      "id": "sdp-noun-modifier-p03"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “The previously identified book is small.” in Finnish. During a pair exercise. Use kirja (“book”) and pieni (“small”).",
+      "acceptedAnswers": ["Se kirja on pieni."],
+      "explanation": "Se comes before the singular noun kirja; both remain in the basic nominative form.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The previously identified book is small.",
+        "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
+        "parts": [
+          {
+            "finnish": "Se",
+            "meaning": "that or it, already identifiable",
+            "role": "demonstrative modifier",
+            "baseForm": "se",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "kirja",
+            "meaning": "book",
+            "role": "singular noun being identified",
+            "baseForm": "kirja",
+            "formation": "basic singular form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "third-person singular present form"
+          },
+          {
+            "finnish": "pieni",
+            "meaning": "small",
+            "role": "description",
+            "baseForm": "pieni",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstratives before nouns"],
+      "id": "sdp-noun-modifier-p04"
+    }
+  ]
+}

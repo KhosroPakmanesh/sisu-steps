@@ -1,0 +1,318 @@
+{
+  "id": "nds-plural-negative",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural negative demonstrative statements"],
+  "prerequisiteSkills": ["Singular negative demonstrative statements"],
+  "introducedVocabulary": [
+    {
+      "finnish": "nämä",
+      "english": "these",
+      "type": "word"
+    },
+    {
+      "finnish": "nuo",
+      "english": "those over there",
+      "type": "word"
+    },
+    {
+      "finnish": "ne",
+      "english": "those or they, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "eivät",
+      "english": "do not, third-person plural",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "ole",
+      "english": "be after the negative verb",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Plural negatives: nämä, nuo, ne eivät ole…",
+  "summary": "Build plural demonstrative statements with eivät ole.",
+  "objectives": [
+    "Place eivät ole after a plural demonstrative subject.",
+    "Keep plural subject and negative agreement aligned.",
+    "Contrast plural eivät with singular ei."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "A plural demonstrative subject uses eivät ole.",
+        "Eivät carries third-person plural agreement; ole follows without another ending."
+      ],
+      "keyPoints": ["plural subject", "eivät + ole", "nämä eivät ole"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The plural subject may be a demonstrative alone or a supplied demonstrative noun phrase.",
+        "Compare singular ei ole with plural eivät ole before producing the sentence."
+      ],
+      "keyPoints": ["nuo eivät ole", "ne eivät ole", "number appears on eivät"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Ne autot eivät ole täällä.",
+      "english": "The previously identified cars are not here.",
+      "steps": [
+        "Ne autot: the complete plural subject is supplied.",
+        "eivät: third-person plural form.",
+        "ole: fixed form after the negative verb.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Nämä talot eivät ole täällä.",
+      "english": "These houses are not here.",
+      "steps": [
+        "Nämä talot: the complete plural subject is supplied.",
+        "eivät: third-person plural form.",
+        "ole: fixed form after the negative verb.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Nuo talot eivät ole täällä.",
+      "english": "Those houses are not here.",
+      "steps": [
+        "Nuo talot: the complete plural subject is supplied.",
+        "eivät: third-person plural form.",
+        "ole: fixed form after the negative verb.",
+        "täällä: unchanged location word."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use ei with a plural demonstrative subject.",
+    "Do not write eivät ovat.",
+    "Do not change the supplied plural noun form."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “Those cars are not at home.” While sorting objects. Use the supplied subject nuo autot (“those cars”) and kotona (“at home”).",
+      "acceptedAnswers": ["Nuo autot eivät ole kotona."],
+      "explanation": "Nuo autot is plural and therefore takes eivät ole.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Those cars are not at home.",
+        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "parts": [
+          {
+            "finnish": "Nuo autot",
+            "meaning": "those cars",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "nuo + auto",
+            "formation": "the complete plural subject is supplied"
+          },
+          {
+            "finnish": "eivät",
+            "meaning": "not",
+            "role": "negative verb carrying number agreement",
+            "baseForm": "ei",
+            "formation": "third-person plural form"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed form after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative demonstrative statements"],
+      "id": "nds-plural-negative-p01",
+      "options": [
+        "Nuo autot eivät ole kotona.",
+        "Nuo autot ei ole kotona.",
+        "Nuo autot ovat kotona.",
+        "Nuo autot eivät ovat kotona."
+      ],
+      "optionFeedback": {
+        "Nuo autot eivät ole kotona.": "Correct. Nuo autot is plural and therefore takes eivät ole.",
+        "Nuo autot ei ole kotona.": "“ei” is the singular negative verb; use “eivät”, the plural negative verb.",
+        "Nuo autot ovat kotona.": "“ovat” is the plural affirmative form of olla; use “eivät”, the plural negative verb.",
+        "Nuo autot eivät ovat kotona.": "“ovat” is the plural affirmative form of olla; use “ole”, the main verb form required after the negative verb."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “The previously identified cars are not at home.” During a memory exercise. Use the supplied subject ne autot (“the previously identified cars”) and kotona (“at home”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Ne autot eivät ole kotona."],
+      "explanation": "Ne autot is plural and therefore takes eivät ole.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The previously identified cars are not at home.",
+        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "parts": [
+          {
+            "finnish": "Ne autot",
+            "meaning": "the previously identified cars",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "ne + auto",
+            "formation": "the complete plural subject is supplied"
+          },
+          {
+            "finnish": "eivät",
+            "meaning": "not",
+            "role": "negative verb carrying number agreement",
+            "baseForm": "ei",
+            "formation": "third-person plural form"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed form after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative demonstrative statements"],
+      "id": "nds-plural-negative-p02"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “These cars are not at home.” in Finnish. At a café table. Use the supplied subject nämä autot (“these cars”) and kotona (“at home”).",
+      "acceptedAnswers": ["Nämä autot eivät ole kotona."],
+      "explanation": "Nämä autot is plural and therefore takes eivät ole.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "These cars are not at home.",
+        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "parts": [
+          {
+            "finnish": "Nämä autot",
+            "meaning": "these cars",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "nämä + auto",
+            "formation": "the complete plural subject is supplied"
+          },
+          {
+            "finnish": "eivät",
+            "meaning": "not",
+            "role": "negative verb carrying number agreement",
+            "baseForm": "ei",
+            "formation": "third-person plural form"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed form after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative demonstrative statements"],
+      "id": "nds-plural-negative-p03"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: In a shop window. Translate “Nuo autot eivät ole kotona.” into English.",
+      "acceptedAnswers": ["Those cars are not at home."],
+      "explanation": "Nuo autot is plural and therefore takes eivät ole.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["auto", "kotona"],
+      "sentenceExplanation": {
+        "translation": "Those cars are not at home.",
+        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "parts": [
+          {
+            "finnish": "Nuo autot",
+            "meaning": "those cars",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "nuo + auto",
+            "formation": "the complete plural subject is supplied"
+          },
+          {
+            "finnish": "eivät",
+            "meaning": "not",
+            "role": "negative verb carrying number agreement",
+            "baseForm": "ei",
+            "formation": "third-person plural form"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed form after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural negative demonstrative statements"],
+      "id": "nds-plural-negative-p04"
+    }
+  ]
+}

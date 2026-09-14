@@ -1,0 +1,329 @@
+{
+  "id": "dqs-negative-singular",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular negative demonstrative questions"],
+  "prerequisiteSkills": ["Plural affirmative demonstrative questions"],
+  "introducedVocabulary": [
+    {
+      "finnish": "eikö",
+      "english": "isn't, singular negative question",
+      "type": "word"
+    },
+    {
+      "finnish": "ole",
+      "english": "be after a negative verb",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "tämä",
+      "english": "this",
+      "type": "word"
+    },
+    {
+      "finnish": "tuo",
+      "english": "that over there",
+      "type": "word"
+    },
+    {
+      "finnish": "se",
+      "english": "that or it, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Singular negative questions: Eikö tämä ole…?",
+  "summary": "Build singular negative yes/no questions with eikö and ole.",
+  "objectives": [
+    "Begin a singular negative question with eikö.",
+    "Place the supplied subject before ole.",
+    "Keep both parts of the negative question construction."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "A singular negative yes/no question begins with Eikö.",
+        "Eikö contains the negative verb ei and the front-vowel question suffix -kö."
+      ],
+      "keyPoints": ["Eikö first", "ei + -kö", "singular subject"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The subject follows, and ole appears later as the main verb.",
+        "Keep both eikö and ole in the complete question."
+      ],
+      "keyPoints": ["ole after the subject", "question mark", "negative yes/no meaning"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Eikö tämä avain ole täällä?",
+      "english": "Isn't this key here?",
+      "steps": [
+        "Eikö: ei + -kö.",
+        "tämä avain: the complete subject is supplied.",
+        "ole: fixed negative main-verb form.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Eikö tuo avain ole täällä?",
+      "english": "Isn't that key here?",
+      "steps": [
+        "Eikö: ei + -kö.",
+        "tuo avain: the complete subject is supplied.",
+        "ole: fixed negative main-verb form.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Eikö se avain ole täällä?",
+      "english": "Isn't the previously identified key here?",
+      "steps": [
+        "Eikö: ei + -kö.",
+        "se avain: the complete subject is supplied.",
+        "ole: fixed negative main-verb form.",
+        "täällä: unchanged location word."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not write ei oleko.",
+    "Do not omit ole.",
+    "Do not use eivätkö with a singular subject."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “Isn't the previously identified book here?” in Finnish. During a pair exercise. Use the supplied phrase se kirja (“the previously identified book”) and täällä (“here”).",
+      "acceptedAnswers": ["Eikö se kirja ole täällä?"],
+      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Isn't the previously identified book here?",
+        "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "isn't",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "ei + -kö"
+          },
+          {
+            "finnish": "se kirja",
+            "meaning": "the previously identified book",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "se + kirja",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "fixed negative main-verb form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative demonstrative questions"],
+      "id": "dqs-negative-singular-p01"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: In a classroom. Translate “Eikö tämä auto ole täällä?” into English.",
+      "acceptedAnswers": ["Isn't this car here?"],
+      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["auto", "täällä"],
+      "sentenceExplanation": {
+        "translation": "Isn't this car here?",
+        "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "isn't",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "ei + -kö"
+          },
+          {
+            "finnish": "tämä auto",
+            "meaning": "this car",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "tämä + auto",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "fixed negative main-verb form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative demonstrative questions"],
+      "id": "dqs-negative-singular-p02"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “Isn't that car here?” While reading a short note. Use the supplied phrase tuo auto (“that car”) and täällä (“here”).",
+      "acceptedAnswers": ["Eikö tuo auto ole täällä?"],
+      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Isn't that car here?",
+        "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "isn't",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "ei + -kö"
+          },
+          {
+            "finnish": "tuo auto",
+            "meaning": "that car",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "tuo + auto",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "fixed negative main-verb form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative demonstrative questions"],
+      "id": "dqs-negative-singular-p03",
+      "tokens": ["ole", "täällä?", "Eikö", "tuo", "auto"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “Isn't the previously identified car here?” During a guided tour. Use the supplied phrase se auto (“the previously identified car”) and täällä (“here”).",
+      "acceptedAnswers": ["Eikö se auto ole täällä?"],
+      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Isn't the previously identified car here?",
+        "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "isn't",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "ei + -kö"
+          },
+          {
+            "finnish": "se auto",
+            "meaning": "the previously identified car",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "se + auto",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative question verb",
+            "baseForm": "olla",
+            "formation": "fixed negative main-verb form"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative demonstrative questions"],
+      "id": "dqs-negative-singular-p04",
+      "options": [
+        "Eikö se auto ole täällä?",
+        "Eivätkö se auto ole täällä?",
+        "Ei se auto ole täällä.",
+        "Onko se auto täällä?"
+      ],
+      "optionFeedback": {
+        "Eikö se auto ole täällä?": "Correct. Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+        "Eivätkö se auto ole täällä?": "“Eivätkö” is the plural negative question verb; use “Eikö”, the singular negative question verb.",
+        "Ei se auto ole täällä.": "“Ei” is the singular negative verb; use “Eikö”, the singular negative question verb.",
+        "Onko se auto täällä?": "“Onko” is the singular affirmative question verb; use “Eikö”, the singular negative question verb."
+      }
+    }
+  ]
+}

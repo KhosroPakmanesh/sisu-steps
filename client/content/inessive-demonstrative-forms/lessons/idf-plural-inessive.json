@@ -1,0 +1,291 @@
+{
+  "id": "idf-plural-inessive",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural inessive demonstratives"],
+  "prerequisiteSkills": ["Singular inessive demonstratives"],
+  "introducedVocabulary": [
+    {
+      "finnish": "näissä",
+      "english": "in these",
+      "type": "word"
+    },
+    {
+      "finnish": "noissa",
+      "english": "in those over there",
+      "type": "word"
+    },
+    {
+      "finnish": "niissä",
+      "english": "in them",
+      "type": "word"
+    },
+    {
+      "finnish": "ovat",
+      "english": "are",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "In these or those: näissä, noissa, niissä",
+  "summary": "Recognise and produce the plural inessive demonstrative forms.",
+  "objectives": [
+    "Connect näissä, noissa, and niissä with plural reference.",
+    "Use the forms independently for several bounded containers.",
+    "Contrast singular and plural inessive forms."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "The plural inessive demonstratives are näissä, noissa, and niissä.",
+        "They can mean in these/those/them when the context explicitly supplies several containers, groups, or bounded areas."
+      ],
+      "keyPoints": ["nämä → näissä", "nuo → noissa", "ne → niissä"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The plural subject in the examples uses ovat.",
+        "Each independent example identifies the intended containers or areas before the Finnish sentence. Compare tässä with näissä, tuossa with noissa, and siinä with niissä."
+      ],
+      "keyPoints": ["plural inessive", "several containers", "ovat keeps plural agreement"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Autot ovat noissa.",
+      "english": "Cars are in those over there.",
+      "steps": [
+        "Context: the speaker indicates the farther, jointly visible bounded container or area.",
+        "Autot: the complete plural form is supplied.",
+        "ovat: plural present form.",
+        "noissa: learned inessive form of nuo."
+      ]
+    },
+    {
+      "finnish": "Autot ovat niissä.",
+      "english": "Cars are in them.",
+      "steps": [
+        "Context: both people already know which bounded container or area is meant.",
+        "Autot: the complete plural form is supplied.",
+        "ovat: plural present form.",
+        "niissä: learned inessive form of ne."
+      ]
+    },
+    {
+      "finnish": "Talot ovat näissä.",
+      "english": "Houses are in these.",
+      "steps": [
+        "Context: both people already know which bounded container or area is meant.",
+        "Talot: the complete plural form is supplied.",
+        "ovat: plural present form.",
+        "näissä: learned inessive form of nämä."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use tässä for several containers.",
+    "Do not confuse noissa with nuo.",
+    "Do not substitute the broader adverbs täällä, tuolla, or siellä."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Context: Several storage compartments are open. The speaker indicates the nearby compartments. Optional practice: Build “Keys are in these.” At a school entrance. Start from nämä (“these”). Use the supplied subject avaimet (“keys”).",
+      "acceptedAnswers": ["Avaimet ovat näissä."],
+      "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in these.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative location",
+            "baseForm": "nämä",
+            "formation": "learned inessive form of nämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstratives"],
+      "id": "idf-plural-inessive-p01",
+      "tokens": ["ovat", "näissä.", "Avaimet"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Context: Several storage compartments are open. The speaker indicates the farther-away compartments, visible to both people. Optional practice: Choose the sentence that means “Keys are in those over there.” While sorting objects. Start from nuo (“those over there”). Use the supplied subject avaimet (“keys”).",
+      "acceptedAnswers": ["Avaimet ovat noissa."],
+      "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in those over there.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative location",
+            "baseForm": "nuo",
+            "formation": "learned inessive form of nuo"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstratives"],
+      "id": "idf-plural-inessive-p02",
+      "options": [
+        "Avaimet ovat noissa.",
+        "Avaimet ovat näissä.",
+        "Avaimet ovat niissä.",
+        "Avaimet ovat nuo."
+      ],
+      "optionFeedback": {
+        "Avaimet ovat noissa.": "Correct. Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
+        "Avaimet ovat näissä.": "“näissä” is the plural inessive form linked to nämä; use “noissa”, the plural inessive form linked to nuo.",
+        "Avaimet ovat niissä.": "“niissä” is the plural inessive form linked to ne; use “noissa”, the plural inessive form linked to nuo.",
+        "Avaimet ovat nuo.": "“nuo” is a plural nominative form for farther, jointly visible referents; use “noissa”, the plural inessive form linked to nuo."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Context: Several storage compartments are open. Both people refer to the compartments they identified earlier. Optional practice: Complete “Keys are in them.” During a memory exercise. Start from ne (“those or they, already identifiable”). Use the supplied subject avaimet (“keys”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Avaimet ovat niissä."],
+      "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in them.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in them",
+            "role": "inessive demonstrative location",
+            "baseForm": "ne",
+            "formation": "learned inessive form of ne"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstratives"],
+      "id": "idf-plural-inessive-p03"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Context: Several rooms are visible. The speaker indicates the nearby rooms. Optional practice: Write “Chairs are in these.” in Finnish. At a café table. Start from nämä (“these”). Use the supplied subject tuolit (“chairs”).",
+      "acceptedAnswers": ["Tuolit ovat näissä."],
+      "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Chairs are in these.",
+        "pattern": "subject being located + linking verb + inessive demonstrative location",
+        "parts": [
+          {
+            "finnish": "Tuolit",
+            "meaning": "chairs",
+            "role": "subject being located",
+            "baseForm": "tuoli",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative location",
+            "baseForm": "nämä",
+            "formation": "learned inessive form of nämä"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstratives"],
+      "id": "idf-plural-inessive-p04"
+    }
+  ]
+}

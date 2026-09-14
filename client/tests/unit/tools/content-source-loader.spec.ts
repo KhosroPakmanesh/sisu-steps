@@ -231,6 +231,11 @@ describe('pack-owned content source loader', () => {
       'personal-pronouns-affirmative-olla',
       'negative-olla-statements',
       'olla-questions-short-answers',
+      'singular-demonstrative-pronouns',
+      'plural-demonstrative-pronouns',
+      'negative-demonstrative-statements',
+      'demonstrative-questions',
+      'inessive-demonstrative-forms',
     ]);
     expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
       '1.0.0',

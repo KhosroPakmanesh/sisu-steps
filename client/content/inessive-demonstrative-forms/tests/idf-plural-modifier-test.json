@@ -1,0 +1,1343 @@
+{
+  "id": "idf-plural-modifier-test",
+  "title": "Inessive forms before plural nouns",
+  "focus": "Match näissä, noissa, or niissä with a supplied plural inessive noun.",
+  "lessonIds": ["idf-plural-modifier"],
+  "stage": "focused",
+  "targetSkills": ["Plural inessive demonstrative-noun agreement"],
+  "prerequisiteSkills": ["Singular inessive demonstrative-noun agreement"],
+  "exercises": [
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "At a study desk. Translate “Avaimet ovat näissä laukuissa.” into English.",
+      "acceptedAnswers": ["Keys are in these bags.", "Keys are here bags."],
+      "explanation": "Näissä matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["avain", "laukku"],
+      "sentenceExplanation": {
+        "translation": "Keys are in these bags.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e001",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "parallelExerciseId": "idf-plural-modifier-test-e002"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "In a classroom. Translate “Kirjat ovat noissa laukuissa.” into English.",
+      "acceptedAnswers": ["Books are in those bags over there."],
+      "explanation": "Noissa matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["kirja", "laukku"],
+      "sentenceExplanation": {
+        "translation": "Books are in those bags over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e002",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "parallelExerciseId": "idf-plural-modifier-test-e001"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “Keys are in those cars.” At a library table. Use the supplied avaimet (“keys”) and autoissa (“in the cars”). Start from ne.",
+      "acceptedAnswers": ["Avaimet ovat niissä autoissa."],
+      "explanation": "Niissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in those cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e003",
+      "tokens": ["autoissa.", "Avaimet", "ovat", "niissä"],
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat ne autoissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Niissä matches autoissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e004"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “Books are in these cars.” While unpacking. Use the supplied kirjat (“books”) and autoissa (“in the cars”). Start from nämä.",
+      "acceptedAnswers": ["Kirjat ovat näissä autoissa."],
+      "explanation": "Näissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in these cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e004",
+      "tokens": ["ovat", "näissä", "autoissa.", "Kirjat"],
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat nämä autoissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Näissä matches autoissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e003"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the sentence that means “Keys are in those houses over there.” During a house tour. Use the supplied avaimet (“keys”) and taloissa (“in the houses”). Start from nuo.",
+      "acceptedAnswers": ["Avaimet ovat noissa taloissa."],
+      "explanation": "Noissa matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in those houses over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e005",
+      "options": [
+        "Avaimet ovat noissa taloissa.",
+        "Avaimet ovat nuo taloissa.",
+        "Avaimet ovat niissä taloissa.",
+        "Avaimet ovat noissa talossa."
+      ],
+      "optionFeedback": {
+        "Avaimet ovat noissa taloissa.": "Correct. Noissa matches taloissa in inessive case and plural number.",
+        "Avaimet ovat nuo taloissa.": "“nuo” is a plural nominative form for farther, jointly visible referents; use “noissa”, the plural inessive form linked to nuo.",
+        "Avaimet ovat niissä taloissa.": "“niissä” is the plural inessive form linked to ne; use “noissa”, the plural inessive form linked to nuo.",
+        "Avaimet ovat noissa talossa.": "“Avaimet ovat noissa talossa.” changes the supplied form or word order. The required sentence is “Avaimet ovat noissa taloissa.”: Noissa matches taloissa in inessive case and plural number."
+      },
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat nuo taloissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Noissa matches taloissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e006"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the sentence that means “Books are in those houses.” At a lost-property desk. Use the supplied kirjat (“books”) and taloissa (“in the houses”). Start from ne.",
+      "acceptedAnswers": ["Kirjat ovat niissä taloissa."],
+      "explanation": "Niissä matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in those houses.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e006",
+      "options": [
+        "Kirjat ovat niissä taloissa.",
+        "Kirjat ovat ne taloissa.",
+        "Kirjat ovat näissä taloissa.",
+        "Kirjat ovat niissä talossa."
+      ],
+      "optionFeedback": {
+        "Kirjat ovat niissä taloissa.": "Correct. Niissä matches taloissa in inessive case and plural number.",
+        "Kirjat ovat ne taloissa.": "“ne” is a plural nominative form for already identifiable non-human referents; use “niissä”, the plural inessive form linked to ne.",
+        "Kirjat ovat näissä taloissa.": "“näissä” is the plural inessive form linked to nämä; use “niissä”, the plural inessive form linked to ne.",
+        "Kirjat ovat niissä talossa.": "“Kirjat ovat niissä talossa.” changes the supplied form or word order. The required sentence is “Kirjat ovat niissä taloissa.”: Niissä matches taloissa in inessive case and plural number."
+      },
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat ne taloissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Niissä matches taloissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e005"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “Keys are in these bags.” While arranging a shelf. Use the supplied avaimet (“keys”) and laukuissa (“in the bags”). Start from nämä. Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Avaimet ovat näissä laukuissa."],
+      "explanation": "Näissä matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in these bags.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e007",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat nämä laukuissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Näissä matches laukuissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e008"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “Books are in those bags over there.” During a picture exercise. Use the supplied kirjat (“books”) and laukuissa (“in the bags”). Start from nuo. Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Kirjat ovat noissa laukuissa."],
+      "explanation": "Noissa matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in those bags over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e008",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat nuo laukuissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Noissa matches laukuissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e007"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Write “Keys are in those cars.” in Finnish. At a study desk. Use the supplied avaimet (“keys”) and autoissa (“in the cars”). Start from ne.",
+      "acceptedAnswers": ["Avaimet ovat niissä autoissa."],
+      "explanation": "Niissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in those cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e009",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat ne autoissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Niissä matches autoissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e010"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Write “Books are in these cars.” in Finnish. In a classroom. Use the supplied kirjat (“books”) and autoissa (“in the cars”). Start from nämä.",
+      "acceptedAnswers": ["Kirjat ovat näissä autoissa."],
+      "explanation": "Näissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in these cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e010",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat nämä autoissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Näissä matches autoissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e009"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "At a library table. Translate “Avaimet ovat noissa taloissa.” into English.",
+      "acceptedAnswers": ["Keys are in those houses over there."],
+      "explanation": "Noissa matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["avain", "talo"],
+      "sentenceExplanation": {
+        "translation": "Keys are in those houses over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e011",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "parallelExerciseId": "idf-plural-modifier-test-e012"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "While unpacking. Translate “Kirjat ovat niissä taloissa.” into English.",
+      "acceptedAnswers": ["Books are in those houses."],
+      "explanation": "Niissä matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["kirja", "talo"],
+      "sentenceExplanation": {
+        "translation": "Books are in those houses.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e012",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "parallelExerciseId": "idf-plural-modifier-test-e011"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “Keys are in these bags.” During a house tour. Use the supplied avaimet (“keys”) and laukuissa (“in the bags”). Start from nämä.",
+      "acceptedAnswers": ["Avaimet ovat näissä laukuissa."],
+      "explanation": "Näissä matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in these bags.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e013",
+      "tokens": ["ovat", "näissä", "laukuissa.", "Avaimet"],
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat nämä laukuissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Näissä matches laukuissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e014"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “Books are in those bags over there.” At a lost-property desk. Use the supplied kirjat (“books”) and laukuissa (“in the bags”). Start from nuo.",
+      "acceptedAnswers": ["Kirjat ovat noissa laukuissa."],
+      "explanation": "Noissa matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in those bags over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e014",
+      "tokens": ["noissa", "laukuissa.", "Kirjat", "ovat"],
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat nuo laukuissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Noissa matches laukuissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e013"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the sentence that means “Keys are in those cars.” While arranging a shelf. Use the supplied avaimet (“keys”) and autoissa (“in the cars”). Start from ne.",
+      "acceptedAnswers": ["Avaimet ovat niissä autoissa."],
+      "explanation": "Niissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in those cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e015",
+      "options": [
+        "Avaimet ovat niissä autoissa.",
+        "Avaimet ovat ne autoissa.",
+        "Avaimet ovat näissä autoissa.",
+        "Avaimet ovat niissä autossa."
+      ],
+      "optionFeedback": {
+        "Avaimet ovat niissä autoissa.": "Correct. Niissä matches autoissa in inessive case and plural number.",
+        "Avaimet ovat ne autoissa.": "“ne” is a plural nominative form for already identifiable non-human referents; use “niissä”, the plural inessive form linked to ne.",
+        "Avaimet ovat näissä autoissa.": "“näissä” is the plural inessive form linked to nämä; use “niissä”, the plural inessive form linked to ne.",
+        "Avaimet ovat niissä autossa.": "“Avaimet ovat niissä autossa.” changes the supplied form or word order. The required sentence is “Avaimet ovat niissä autoissa.”: Niissä matches autoissa in inessive case and plural number."
+      },
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat ne autoissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Niissä matches autoissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e016"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose the sentence that means “Books are in these cars.” During a picture exercise. Use the supplied kirjat (“books”) and autoissa (“in the cars”). Start from nämä.",
+      "acceptedAnswers": ["Kirjat ovat näissä autoissa."],
+      "explanation": "Näissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in these cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e016",
+      "options": [
+        "Kirjat ovat näissä autoissa.",
+        "Kirjat ovat nämä autoissa.",
+        "Kirjat ovat noissa autoissa.",
+        "Kirjat ovat näissä autossa."
+      ],
+      "optionFeedback": {
+        "Kirjat ovat näissä autoissa.": "Correct. Näissä matches autoissa in inessive case and plural number.",
+        "Kirjat ovat nämä autoissa.": "“nämä” is a plural nominative form for referents near the speaker; use “näissä”, the plural inessive form linked to nämä.",
+        "Kirjat ovat noissa autoissa.": "“noissa” is the plural inessive form linked to nuo; use “näissä”, the plural inessive form linked to nämä.",
+        "Kirjat ovat näissä autossa.": "“Kirjat ovat näissä autossa.” changes the supplied form or word order. The required sentence is “Kirjat ovat näissä autoissa.”: Näissä matches autoissa in inessive case and plural number."
+      },
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat nämä autoissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Näissä matches autoissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e015"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “Keys are in those houses over there.” At a study desk. Use the supplied avaimet (“keys”) and taloissa (“in the houses”). Start from nuo. Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Avaimet ovat noissa taloissa."],
+      "explanation": "Noissa matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in those houses over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e017",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat nuo taloissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Noissa matches taloissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e018"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “Books are in those houses.” In a classroom. Use the supplied kirjat (“books”) and taloissa (“in the houses”). Start from ne. Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Kirjat ovat niissä taloissa."],
+      "explanation": "Niissä matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in those houses.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e018",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat ne taloissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Niissä matches taloissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e017"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Write “Keys are in these bags.” in Finnish. At a library table. Use the supplied avaimet (“keys”) and laukuissa (“in the bags”). Start from nämä.",
+      "acceptedAnswers": ["Avaimet ovat näissä laukuissa."],
+      "explanation": "Näissä matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in these bags.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e019",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat nämä laukuissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Näissä matches laukuissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e020"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Write “Books are in those bags over there.” in Finnish. While unpacking. Use the supplied kirjat (“books”) and laukuissa (“in the bags”). Start from nuo.",
+      "acceptedAnswers": ["Kirjat ovat noissa laukuissa."],
+      "explanation": "Noissa matches laukuissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in those bags over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "laukuissa",
+            "meaning": "in the bags",
+            "role": "inessive noun naming the container",
+            "baseForm": "laukku",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e020",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat nuo laukuissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Noissa matches laukuissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e019"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "During a house tour. Translate “Avaimet ovat niissä autoissa.” into English.",
+      "acceptedAnswers": ["Keys are in those cars."],
+      "explanation": "Niissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["avain", "auto"],
+      "sentenceExplanation": {
+        "translation": "Keys are in those cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e021",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "parallelExerciseId": "idf-plural-modifier-test-e022"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "At a lost-property desk. Translate “Kirjat ovat näissä autoissa.” into English.",
+      "acceptedAnswers": ["Books are in these cars.", "Books are here cars."],
+      "explanation": "Näissä matches autoissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": ["kirja", "auto"],
+      "sentenceExplanation": {
+        "translation": "Books are in these cars.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "näissä",
+            "meaning": "in these",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nämä",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "autoissa",
+            "meaning": "in the cars",
+            "role": "inessive noun naming the container",
+            "baseForm": "auto",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e022",
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "parallelExerciseId": "idf-plural-modifier-test-e021"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “Keys are in those houses over there.” While arranging a shelf. Use the supplied avaimet (“keys”) and taloissa (“in the houses”). Start from nuo.",
+      "acceptedAnswers": ["Avaimet ovat noissa taloissa."],
+      "explanation": "Noissa matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Keys are in those houses over there.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Avaimet",
+            "meaning": "keys",
+            "role": "subject being located",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "noissa",
+            "meaning": "in those over there",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "nuo",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e023",
+      "tokens": ["noissa", "taloissa.", "Avaimet", "ovat"],
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Avaimet ovat nuo taloissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Noissa matches taloissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e024"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “Books are in those houses.” During a picture exercise. Use the supplied kirjat (“books”) and taloissa (“in the houses”). Start from ne.",
+      "acceptedAnswers": ["Kirjat ovat niissä taloissa."],
+      "explanation": "Niissä matches taloissa in inessive case and plural number.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Books are in those houses.",
+        "pattern": "subject + olla + inessive demonstrative modifier + inessive noun",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "subject being located",
+            "baseForm": "kirja",
+            "formation": "the complete plural form is supplied"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "niissä",
+            "meaning": "in those",
+            "role": "inessive demonstrative modifier",
+            "baseForm": "ne",
+            "formation": "learned plural inessive form"
+          },
+          {
+            "finnish": "taloissa",
+            "meaning": "in the houses",
+            "role": "inessive noun naming the container",
+            "baseForm": "talo",
+            "formation": "the complete non-target noun form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural inessive demonstrative-noun agreement"],
+      "id": "idf-plural-modifier-test-e024",
+      "tokens": ["taloissa.", "Kirjat", "ovat", "niissä"],
+      "targetSkill": "Plural inessive demonstrative-noun agreement",
+      "misconceptionCategory": "Plural inessive demonstrative-noun agreement: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["Kirjat ovat ne taloissa."],
+          "category": "Plural inessive demonstrative-noun agreement: form not yet secure",
+          "explanation": "Niissä matches taloissa in inessive case and plural number."
+        }
+      ],
+      "parallelExerciseId": "idf-plural-modifier-test-e023"
+    }
+  ]
+}

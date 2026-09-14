@@ -551,7 +551,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.goto('/');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
-  await expect(page.locator('.topic-card')).toHaveCount(6);
+  await expect(page.locator('.topic-card')).toHaveCount(11);
   await expect(page.locator('.test-card')).toHaveCount(0);
   await vowelHarmonyTopicLink(page).click();
 
@@ -1362,7 +1362,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(6);
+  await expect(page.locator('.topic-card')).toHaveCount(11);
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation).toContainText('Notebook');
   await expect(primaryNavigation).toContainText('Stats');
@@ -1532,7 +1532,7 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     'application/json,.json',
   );
   await expect(page.getByRole('heading', { name: 'Progress by topic' })).toBeVisible();
-  await expect(page.locator('.stats-topic-card')).toHaveCount(6);
+  await expect(page.locator('.stats-topic-card')).toHaveCount(11);
   await expect(page.locator('.backup-archive .clear-all-action-row')).toBeVisible();
   await expect(page.locator('.clear-all-slip')).toHaveCount(0);
   await expect(page.locator('.settings-card')).toHaveCount(0);

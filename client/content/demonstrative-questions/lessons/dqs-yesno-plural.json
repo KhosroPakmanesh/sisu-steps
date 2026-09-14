@@ -1,0 +1,293 @@
+{
+  "id": "dqs-yesno-plural",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural affirmative demonstrative questions"],
+  "prerequisiteSkills": ["Singular affirmative demonstrative questions"],
+  "introducedVocabulary": [
+    {
+      "finnish": "ovatko",
+      "english": "are, in a yes/no question",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "nämä",
+      "english": "these",
+      "type": "word"
+    },
+    {
+      "finnish": "nuo",
+      "english": "those over there",
+      "type": "word"
+    },
+    {
+      "finnish": "ne",
+      "english": "those or they, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Plural yes/no questions: Ovatko nämä…?",
+  "summary": "Build affirmative plural yes/no questions with ovatko.",
+  "objectives": [
+    "Begin a plural affirmative question with ovatko.",
+    "Keep the supplied plural subject unchanged.",
+    "Contrast plural ovatko with singular onko."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "A plural affirmative yes/no question begins with Ovatko.",
+        "Ovatko combines ovat with the question suffix -ko."
+      ],
+      "keyPoints": ["Ovatko first", "ovat + -ko", "plural subject follows"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The demonstrative and supplied noun remain plural after it.",
+        "Read the subject number before choosing the question verb."
+      ],
+      "keyPoints": ["nämä, nuo, ne", "question mark", "contrast onko"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Ovatko nämä laukut täällä?",
+      "english": "Are these bags here?",
+      "steps": [
+        "Ovatko: ovat + -ko.",
+        "nämä laukut: the complete subject is supplied.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Ovatko nuo laukut täällä?",
+      "english": "Are those bags here?",
+      "steps": [
+        "Ovatko: ovat + -ko.",
+        "nuo laukut: the complete subject is supplied.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Ovatko ne laukut täällä?",
+      "english": "Are the previously identified bags here?",
+      "steps": [
+        "Ovatko: ovat + -ko.",
+        "ne laukut: the complete subject is supplied.",
+        "täällä: unchanged location word."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not use onko with a plural subject.",
+    "Do not change the supplied plural noun.",
+    "Do not place ovatko after the subject."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “Are the previously identified keys at home?” During a phone conversation. Use the supplied phrase ne avaimet (“the previously identified keys”) and kotona (“at home”).",
+      "acceptedAnswers": ["Ovatko ne avaimet kotona?"],
+      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Are the previously identified keys at home?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "are",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "ovat + -ko"
+          },
+          {
+            "finnish": "ne avaimet",
+            "meaning": "the previously identified keys",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "ne + avain",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative demonstrative questions"],
+      "id": "dqs-yesno-plural-p01",
+      "tokens": ["ne", "avaimet", "kotona?", "Ovatko"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “Are these books here?” At a storage cupboard. Use the supplied phrase nämä kirjat (“these books”) and täällä (“here”).",
+      "acceptedAnswers": ["Ovatko nämä kirjat täällä?"],
+      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Are these books here?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "are",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "ovat + -ko"
+          },
+          {
+            "finnish": "nämä kirjat",
+            "meaning": "these books",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "nämä + kirja",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative demonstrative questions"],
+      "id": "dqs-yesno-plural-p02",
+      "options": [
+        "Ovatko nämä kirjat täällä?",
+        "Onko nämä kirjat täällä?",
+        "Ovat nämä kirjat täällä.",
+        "Eivätkö nämä kirjat ole täällä?"
+      ],
+      "optionFeedback": {
+        "Ovatko nämä kirjat täällä?": "Correct. Ovatko is the plural olla form with the question suffix -ko.",
+        "Onko nämä kirjat täällä?": "“Onko” is the singular affirmative question verb; use “Ovatko”, the plural affirmative question verb.",
+        "Ovat nämä kirjat täällä.": "“Ovat” is the plural affirmative form of olla; use “Ovatko”, the plural affirmative question verb.",
+        "Eivätkö nämä kirjat ole täällä?": "“Eivätkö” is the plural negative question verb; use “Ovatko”, the plural affirmative question verb."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “Are those books here?” While labelling pictures. Use the supplied phrase nuo kirjat (“those books”) and täällä (“here”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Ovatko nuo kirjat täällä?"],
+      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Are those books here?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "are",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "ovat + -ko"
+          },
+          {
+            "finnish": "nuo kirjat",
+            "meaning": "those books",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "nuo + kirja",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative demonstrative questions"],
+      "id": "dqs-yesno-plural-p03"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “Are the previously identified books here?” in Finnish. During a pair exercise. Use the supplied phrase ne kirjat (“the previously identified books”) and täällä (“here”).",
+      "acceptedAnswers": ["Ovatko ne kirjat täällä?"],
+      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Are the previously identified books here?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Ovatko",
+            "meaning": "are",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "ovat + -ko"
+          },
+          {
+            "finnish": "ne kirjat",
+            "meaning": "the previously identified books",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "ne + kirja",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural affirmative demonstrative questions"],
+      "id": "dqs-yesno-plural-p04"
+    }
+  ]
+}

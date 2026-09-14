@@ -1,0 +1,276 @@
+{
+  "id": "pdp-reference-choice",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Plural demonstrative reference"],
+  "prerequisiteSkills": ["Plural demonstrative forms"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "nämä",
+      "english": "these",
+      "type": "word"
+    },
+    {
+      "finnish": "nuo",
+      "english": "those over there",
+      "type": "word"
+    },
+    {
+      "finnish": "ne",
+      "english": "those or they, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "ovat",
+      "english": "are",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "tuoli",
+      "english": "chair",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Choosing the correct plural demonstrative",
+  "summary": "Choose among nearby, farther visible, and identifiable plural referents.",
+  "objectives": [
+    "Use nämä for nearby groups.",
+    "Use nuo for farther jointly visible groups.",
+    "Use ne for context-identifiable groups."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "Plural reference still depends on the speaker-listener situation.",
+        "English “these,” “those,” and “they” are useful clues but do not replace the Finnish reference contrast."
+      ],
+      "keyPoints": ["near group — nämä", "farther visible group — nuo", "identifiable group — ne"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "Read whether the group is near, farther and visible, or already identifiable.",
+        "Then choose one plural form without changing the supplied sentence frame."
+      ],
+      "keyPoints": ["several referents", "scene before translation", "keep ovat plural"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Nuo ovat autot.",
+      "english": "Those over there are the cars.",
+      "steps": [
+        "Nuo: basic nominative form.",
+        "ovat: plural present form.",
+        "autot: the complete plural form is supplied."
+      ]
+    },
+    {
+      "finnish": "Ne ovat autot.",
+      "english": "Those are the cars.",
+      "steps": [
+        "Ne: basic nominative form.",
+        "ovat: plural present form.",
+        "autot: the complete plural form is supplied."
+      ]
+    },
+    {
+      "finnish": "Nämä ovat talot.",
+      "english": "These are the houses.",
+      "steps": [
+        "Nämä: basic nominative form.",
+        "ovat: plural present form.",
+        "talot: the complete plural form is supplied."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not choose nuo only because English says “those.”",
+    "Do not use nämä for a group explicitly placed farther away.",
+    "Do not replace ne with he unless the referents are people in standard writing."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “These are the bags.” At a school entrance. The referents are close to the speaker. Use laukut (“the bags”) and ovat (“are”).",
+      "acceptedAnswers": ["Nämä ovat laukut."],
+      "explanation": "Nämä is the plural demonstrative for a situation where the referents are close to the speaker.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "These are the bags.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "nämä",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "laukut",
+            "meaning": "the bags",
+            "role": "identity information",
+            "baseForm": "laukku",
+            "formation": "the complete plural form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative reference"],
+      "id": "pdp-reference-choice-p01",
+      "tokens": ["ovat", "laukut.", "Nämä"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “Those over there are the bags.” While sorting objects. The referents are farther away and visible. Use laukut (“the bags”) and ovat (“are”).",
+      "acceptedAnswers": ["Nuo ovat laukut."],
+      "explanation": "Nuo is the plural demonstrative for a situation where the referents are farther away and visible.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Those over there are the bags.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Nuo",
+            "meaning": "those over there",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "nuo",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "laukut",
+            "meaning": "the bags",
+            "role": "identity information",
+            "baseForm": "laukku",
+            "formation": "the complete plural form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative reference"],
+      "id": "pdp-reference-choice-p02",
+      "options": ["Nuo ovat laukut.", "Nämä ovat laukut.", "Ne ovat laukut."],
+      "optionFeedback": {
+        "Nuo ovat laukut.": "Correct. Nuo is the plural demonstrative for a situation where the referents are farther away and visible.",
+        "Nämä ovat laukut.": "“Nämä” is a plural nominative form for referents near the speaker; use “Nuo”, a plural nominative form for farther, jointly visible referents.",
+        "Ne ovat laukut.": "“Ne” is a plural nominative form for already identifiable non-human referents; use “Nuo”, a plural nominative form for farther, jointly visible referents."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “Those are the bags.” During a memory exercise. The listener can identify the referents. Use laukut (“the bags”) and ovat (“are”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Ne ovat laukut."],
+      "explanation": "Ne is the plural demonstrative for a situation where the listener can identify the referents.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Those are the bags.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Ne",
+            "meaning": "those or they, already identifiable",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "ne",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "laukut",
+            "meaning": "the bags",
+            "role": "identity information",
+            "baseForm": "laukku",
+            "formation": "the complete plural form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative reference"],
+      "id": "pdp-reference-choice-p03"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “These are the keys.” in Finnish. At a café table. The referents are close to the speaker. Use avaimet (“the keys”) and ovat (“are”).",
+      "acceptedAnswers": ["Nämä ovat avaimet."],
+      "explanation": "Nämä is the plural demonstrative for a situation where the referents are close to the speaker.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "These are the keys.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "nämä",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "plural present form"
+          },
+          {
+            "finnish": "avaimet",
+            "meaning": "the keys",
+            "role": "identity information",
+            "baseForm": "avain",
+            "formation": "the complete plural form is supplied"
+          }
+        ]
+      },
+      "requiredSkills": ["Plural demonstrative reference"],
+      "id": "pdp-reference-choice-p04"
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "id": "sdp-reference-choice",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular demonstrative reference"],
+  "prerequisiteSkills": ["Singular demonstrative forms"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "tämä",
+      "english": "this",
+      "type": "word"
+    },
+    {
+      "finnish": "tuo",
+      "english": "that over there",
+      "type": "word"
+    },
+    {
+      "finnish": "se",
+      "english": "that or it, already identifiable",
+      "type": "word"
+    },
+    {
+      "finnish": "on",
+      "english": "is",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Choosing nearby, farther away, or identifiable",
+  "summary": "Choose a singular demonstrative from the speaker-listener situation.",
+  "objectives": [
+    "Use tämä for a nearby referent.",
+    "Use tuo for a farther jointly visible referent.",
+    "Use se when the listener or context identifies the referent."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "The English word “that” does not by itself choose a Finnish demonstrative.",
+        "Finnish tracks how the speaker and listener can identify the referent."
+      ],
+      "keyPoints": [
+        "near the speaker — tämä",
+        "farther but visible — tuo",
+        "identifiable to the listener — se"
+      ]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "Read the scene before choosing: close suggests tämä, farther and visible suggests tuo, and listener-known suggests se.",
+        "The exact context matters more than a one-word English translation."
+      ],
+      "keyPoints": [
+        "read the scene",
+        "do not guess from English alone",
+        "keep one referent singular"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Tämä on auto.",
+      "english": "This is a car.",
+      "steps": [
+        "Tämä: basic nominative form.",
+        "on: singular present form.",
+        "auto: basic singular form."
+      ]
+    },
+    {
+      "finnish": "Tuo on auto.",
+      "english": "That one over there is a car.",
+      "steps": [
+        "Tuo: basic nominative form.",
+        "on: singular present form.",
+        "auto: basic singular form."
+      ]
+    },
+    {
+      "finnish": "Se on auto.",
+      "english": "That is a car.",
+      "steps": [
+        "Se: basic nominative form.",
+        "on: singular present form.",
+        "auto: basic singular form."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not choose tuo merely because the English sentence says “that.”",
+    "Do not use tämä for an item described as farther away.",
+    "Do not use se when the scene explicitly introduces a newly pointed-out nearby item."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: At a study desk. Translate “Se on talo.” into English. The referent is already identifiable from the conversation.",
+      "acceptedAnswers": ["That is a house.", "It is a house."],
+      "explanation": "Se is the singular demonstrative for a situation where the listener can identify the referent.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["talo"],
+      "sentenceExplanation": {
+        "translation": "That is a house.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Se",
+            "meaning": "that or it, already identifiable",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "se",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "talo",
+            "meaning": "a house",
+            "role": "identity information",
+            "baseForm": "talo",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstrative reference"],
+      "id": "sdp-reference-choice-p01"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “This is a bag.” At a school entrance. The referent is close to the speaker. Use laukku (“a bag”) and on (“is”).",
+      "acceptedAnswers": ["Tämä on laukku."],
+      "explanation": "Tämä is the singular demonstrative for a situation where the referent is close to the speaker.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "This is a bag.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "tämä",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "laukku",
+            "meaning": "a bag",
+            "role": "identity information",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstrative reference"],
+      "id": "sdp-reference-choice-p02",
+      "tokens": ["laukku.", "Tämä", "on"]
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Optional practice: Choose the sentence that means “That one over there is a bag.” While sorting objects. The referent is farther away and visible. Use laukku (“a bag”) and on (“is”).",
+      "acceptedAnswers": ["Tuo on laukku."],
+      "explanation": "Tuo is the singular demonstrative for a situation where the referent is farther away and visible.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "That one over there is a bag.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Tuo",
+            "meaning": "that over there",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "tuo",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "laukku",
+            "meaning": "a bag",
+            "role": "identity information",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstrative reference"],
+      "id": "sdp-reference-choice-p03",
+      "options": ["Tuo on laukku.", "Tämä on laukku.", "Se on laukku."],
+      "optionFeedback": {
+        "Tuo on laukku.": "Correct. Tuo is the singular demonstrative for a situation where the referent is farther away and visible.",
+        "Tämä on laukku.": "“Tämä” is a singular nominative form for a referent near the speaker; use “Tuo”, a singular nominative form for a farther, jointly visible referent.",
+        "Se on laukku.": "“Se” is a singular nominative form for an already identifiable non-human referent; use “Tuo”, a singular nominative form for a farther, jointly visible referent."
+      }
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “That is a bag.” During a memory exercise. The listener can identify the referent. Use laukku (“a bag”) and on (“is”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Se on laukku."],
+      "explanation": "Se is the singular demonstrative for a situation where the listener can identify the referent.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "That is a bag.",
+        "pattern": "demonstrative subject: identifies the referent + linking verb + identity information",
+        "parts": [
+          {
+            "finnish": "Se",
+            "meaning": "that or it, already identifiable",
+            "role": "demonstrative subject: identifies the referent",
+            "baseForm": "se",
+            "formation": "basic nominative form"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "singular present form"
+          },
+          {
+            "finnish": "laukku",
+            "meaning": "a bag",
+            "role": "identity information",
+            "baseForm": "laukku",
+            "formation": "basic singular form"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular demonstrative reference"],
+      "id": "sdp-reference-choice-p04"
+    }
+  ]
+}

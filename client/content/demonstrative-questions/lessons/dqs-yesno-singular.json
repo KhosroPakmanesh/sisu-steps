@@ -1,0 +1,281 @@
+{
+  "id": "dqs-yesno-singular",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Singular affirmative demonstrative questions"],
+  "prerequisiteSkills": ["Plural demonstrative classification questions"],
+  "introducedVocabulary": [
+    {
+      "finnish": "onko",
+      "english": "is, in a yes/no question",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "laukku",
+      "english": "bag",
+      "type": "word"
+    },
+    {
+      "finnish": "avain",
+      "english": "key",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "tämä",
+      "english": "this",
+      "type": "word"
+    },
+    {
+      "finnish": "tuo",
+      "english": "that over there",
+      "type": "word"
+    },
+    {
+      "finnish": "se",
+      "english": "that or it, already identifiable",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Singular yes/no questions: Onko tämä…?",
+  "summary": "Build affirmative singular yes/no questions with onko.",
+  "objectives": [
+    "Move the singular olla question verb to the beginning.",
+    "Use onko before the supplied singular demonstrative subject.",
+    "Preserve the complete intended meaning."
+  ],
+  "sections": [
+    {
+      "title": "See the pattern",
+      "paragraphs": [
+        "A singular affirmative yes/no question begins with Onko.",
+        "Onko combines on with the question suffix -ko."
+      ],
+      "keyPoints": ["Onko first", "on + -ko", "singular subject follows"]
+    },
+    {
+      "title": "Use one clear decision",
+      "paragraphs": [
+        "The supplied demonstrative subject follows the question verb.",
+        "Nothing else in the sentence needs to change."
+      ],
+      "keyPoints": ["question mark", "keep context unchanged", "yes/no meaning"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Onko tämä talo täällä?",
+      "english": "Is this house here?",
+      "steps": [
+        "Onko: on + -ko.",
+        "tämä talo: the complete subject is supplied.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Onko tuo talo täällä?",
+      "english": "Is that house here?",
+      "steps": [
+        "Onko: on + -ko.",
+        "tuo talo: the complete subject is supplied.",
+        "täällä: unchanged location word."
+      ]
+    },
+    {
+      "finnish": "Onko se talo täällä?",
+      "english": "Is the previously identified house here?",
+      "steps": [
+        "Onko: on + -ko.",
+        "se talo: the complete subject is supplied.",
+        "täällä: unchanged location word."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not keep On in statement position.",
+    "Do not use ovatko with a singular subject.",
+    "Do not omit the question suffix."
+  ],
+  "practiceExercises": [
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Complete “Is the previously identified bag at home?” During a memory exercise. Use the supplied phrase se laukku (“the previously identified bag”) and kotona (“at home”). Write the complete Finnish sentence: ____",
+      "acceptedAnswers": ["Onko se laukku kotona?"],
+      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Is the previously identified bag at home?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "is",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "on + -ko"
+          },
+          {
+            "finnish": "se laukku",
+            "meaning": "the previously identified bag",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "se + laukku",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative demonstrative questions"],
+      "id": "dqs-yesno-singular-p01"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Optional practice: Write “Is this key at home?” in Finnish. At a café table. Use the supplied phrase tämä avain (“this key”) and kotona (“at home”).",
+      "acceptedAnswers": ["Onko tämä avain kotona?"],
+      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Is this key at home?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "is",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "on + -ko"
+          },
+          {
+            "finnish": "tämä avain",
+            "meaning": "this key",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "tämä + avain",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative demonstrative questions"],
+      "id": "dqs-yesno-singular-p02"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: At a library table. Translate “Onko tuo avain kotona?” into English.",
+      "acceptedAnswers": ["Is that key at home?"],
+      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": ["avain", "kotona"],
+      "sentenceExplanation": {
+        "translation": "Is that key at home?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "is",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "on + -ko"
+          },
+          {
+            "finnish": "tuo avain",
+            "meaning": "that key",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "tuo + avain",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative demonstrative questions"],
+      "id": "dqs-yesno-singular-p03"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “Is the previously identified key at home?” During a phone conversation. Use the supplied phrase se avain (“the previously identified key”) and kotona (“at home”).",
+      "acceptedAnswers": ["Onko se avain kotona?"],
+      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Is the previously identified key at home?",
+        "pattern": "question verb + demonstrative noun phrase subject + location",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "is",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "on + -ko"
+          },
+          {
+            "finnish": "se avain",
+            "meaning": "the previously identified key",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "se + avain",
+            "formation": "the complete subject is supplied"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular affirmative demonstrative questions"],
+      "id": "dqs-yesno-singular-p04",
+      "tokens": ["se", "avain", "kotona?", "Onko"]
+    }
+  ]
+}
