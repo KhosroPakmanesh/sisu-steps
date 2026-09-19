@@ -647,12 +647,15 @@ test('uses a responsive three, two, and one-column topic-card grid', async ({ pa
     [320, 1],
   ] as const) {
     await page.setViewportSize({ width, height: 900 });
-    const columnCount = await page.locator('.topic-grid').evaluate(
-      (element) =>
-        getComputedStyle(element)
-          .gridTemplateColumns.split(' ')
-          .filter((column) => column.length > 0).length,
-    );
+    const columnCount = await page
+      .locator('.pack-group .group-cards')
+      .first()
+      .evaluate(
+        (element) =>
+          getComputedStyle(element)
+            .gridTemplateColumns.split(' ')
+            .filter((column) => column.length > 0).length,
+      );
     expect(columnCount, `topic-card columns at ${width}px`).toBe(expectedColumns);
     const firstCard = page.locator('.topic-card').first();
     await expect(firstCard).toBeVisible();
@@ -667,7 +670,7 @@ test('uses a responsive three, two, and one-column topic-card grid', async ({ pa
           borderTopWidth: Number.parseFloat(styles.borderTopWidth),
         };
       });
-      expect(cardSurface.backgroundImage).toContain('repeating-linear-gradient');
+      expect(cardSurface.backgroundImage).toContain('linear-gradient');
       expect(cardSurface.borderTopWidth).toBeGreaterThan(0);
       expect(
         await firstCard.evaluate(
@@ -716,8 +719,8 @@ test('reuses the worked-example treatment with notebook-paper topic cards', asyn
   });
   const topicGridMaterial = await page.locator('.topic-grid').evaluate(material);
   const topicCardMaterial = await page.locator('.topic-card').first().evaluate(material);
-  const notebookPaperColor = await page
-    .locator('.page-shell')
+  const stationeryPaperColor = await page
+    .locator('.topic-grid')
     .evaluate((element) => getComputedStyle(element).backgroundColor);
   await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
   await expect(page.locator('.topic-card .card-kicker')).toHaveCount(0);
@@ -731,7 +734,7 @@ test('reuses the worked-example treatment with notebook-paper topic cards', asyn
 
   expect(topicGridMaterial).toEqual(workedExamplesMaterial);
   expect(topicCardMaterial).toMatchObject({
-    color: notebookPaperColor,
+    color: stationeryPaperColor,
     borderTop: exampleCardMaterial.borderTop,
     paddingBottom: exampleCardMaterial.paddingBottom,
   });
@@ -996,7 +999,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   );
   const expectedLift = rootFontSize * -0.45;
   const expectedTapedLift = rootFontSize * -0.3;
-  const expectedCardLift = rootFontSize * -0.25;
+  const expectedCardLift = rootFontSize * -0.3;
   const expectedNoteLift = rootFontSize * -0.22;
   const expectedInformationShift = rootFontSize * 0.12;
   await continueCard.hover();

@@ -3,6 +3,12 @@ export type ExerciseType =
 
 export type LearningStage = 'focused' | 'review';
 
+export interface ContentCatalogGroup {
+  id: string;
+  title: string;
+  packs: string[];
+}
+
 export type VocabularyItemType = 'word' | 'fixed-expression';
 
 export interface VocabularyItem {
@@ -98,8 +104,8 @@ export interface ContentSource {
 }
 
 export interface ContentCatalog {
-  schemaVersion: 1;
-  packs: string[];
+  schemaVersion: 2;
+  groups: ContentCatalogGroup[];
 }
 
 export interface ContentLessonSummary {
@@ -164,6 +170,17 @@ export interface LoadedTopicPack {
   lessonById: ReadonlyMap<string, Lesson>;
   testById: ReadonlyMap<string, ExerciseTest>;
   exerciseById: ReadonlyMap<string, Exercise>;
+}
+
+export interface PackGroupSummary {
+  id: string;
+  title: string;
+  packs: TopicPackSummary[];
+}
+
+export interface LoadedContentCatalog {
+  groups: PackGroupSummary[];
+  packs: TopicPackSummary[];
 }
 
 export interface GradingResult {

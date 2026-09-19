@@ -1,6 +1,7 @@
 import { signal } from '@angular/core';
 import {
   LoadedTopicPack,
+  PackGroupSummary,
   TopicPack,
   TopicPackSummary,
 } from '@/features/learning/shared/content/content.models';
@@ -11,6 +12,13 @@ import { learningPack } from './learning-content.fixture';
 
 export class FakeLearningStateStore {
   readonly packSummaries = signal<TopicPackSummary[]>([topicPackToSummary(learningPack)]);
+  readonly packGroups = signal<PackGroupSummary[]>([
+    {
+      id: 'foundations',
+      title: 'Foundations',
+      packs: [topicPackToSummary(learningPack)],
+    },
+  ]);
   readonly learnerState = signal<LearnerState>(
     createEmptyLearnerState({ [learningPack.id]: learningPack.version }),
   );

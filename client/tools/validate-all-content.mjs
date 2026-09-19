@@ -14,6 +14,4 @@ for (const pack of source.packs) {
   });
 }
 
-console.log(
-  `Validated ${source.catalog.packs.length} pack-owned content source(s) with global IDs.`,
-);
+console.log(`Validated ${source.packs.length} pack-owned content source(s) with global IDs.`);

@@ -13,7 +13,7 @@ import { LearningStateStore } from '../shared/state/learning-state.store';
 import {
   ContinueLearningTarget,
   getContinueLearningTarget,
-  getTopicSummaries,
+  getTopicGroups,
 } from './topic-catalog.queries';
 
 @Component({
@@ -32,8 +32,8 @@ export class TopicCatalogPage implements RouteReadiness {
     completedAttemptCount(this.store.learnerState()),
   );
   protected readonly average = computed(() => overallAverage(this.store.learnerState()));
-  protected readonly topicSummaries = computed(() =>
-    getTopicSummaries(this.store.learnerState(), this.store.packSummaries()),
+  protected readonly topicGroups = computed(() =>
+    getTopicGroups(this.store.learnerState(), this.store.packSummaries(), this.store.packGroups()),
   );
   protected readonly catalogLevelLabel = computed(() =>
     getLearningLevelLabel(this.store.packSummaries()),

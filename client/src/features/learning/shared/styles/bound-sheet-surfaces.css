@@ -88,7 +88,7 @@ main.page-shell .topic-grid .topic-card {
   border-radius: 0.08rem;
   background:
     linear-gradient(to right, var(--notebook-grid) 1px, transparent 1px),
-    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px), var(--surface-paper);
+    linear-gradient(to bottom, var(--notebook-grid) 1px, transparent 1px), var(--surface-stationery);
   background-size: 1.5rem 1.5rem;
   clip-path: polygon(0.2rem 0, 99% 0.18rem, 100% 97%, 98% 100%, 0 98%);
   box-shadow:
@@ -148,6 +148,85 @@ main.page-shell .topic-grid .topic-card::before {
   display: none;
 }
 
+/* Pack groups keep related topic cards together on ruled paper inside one bound sheet. */
+main.page-shell .pack-group-stack {
+  display: grid;
+  grid-column: 1 / -1;
+  gap: var(--space-6);
+}
+
+main.page-shell .pack-group {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  padding-left: calc(var(--space-5) + 0.65rem);
+  border: 1px dashed var(--border-brand);
+  border-radius: 0.08rem;
+  background-color: var(--surface-paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 1.9rem,
+    var(--notebook-rule) 1.9rem 1.95rem
+  );
+  clip-path: polygon(0.3rem 0, 98% 0.12rem, 100% 94%, 98% 100%, 0 98%);
+  filter: drop-shadow(0.18rem 0.22rem 0 var(--paper-edge))
+    drop-shadow(0.28rem 0.4rem 0.45rem var(--notebook-shadow));
+  transition:
+    transform var(--motion-standard) ease,
+    filter var(--motion-standard) ease;
+}
+
+main.page-shell .pack-group:hover,
+main.page-shell .pack-group:focus-within {
+  filter: drop-shadow(0.22rem 0.3rem 0 var(--paper-edge))
+    drop-shadow(0.38rem 0.52rem 0.55rem var(--notebook-shadow));
+  transform: translateY(-0.25rem) rotate(0.12deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  main.page-shell .pack-group,
+  main.page-shell .pack-group:hover,
+  main.page-shell .pack-group:focus-within {
+    transform: none;
+  }
+}
+
+main.page-shell .pack-group::before {
+  position: absolute;
+  top: 0.45rem;
+  bottom: 0.45rem;
+  left: 0.22rem;
+  width: 0.46rem;
+  background: radial-gradient(
+      circle,
+      var(--surface-paper) 0 0.1rem,
+      var(--border-control) 0.11rem 0.14rem,
+      transparent 0.15rem
+    )
+    center top / 0.46rem 1.55rem repeat-y;
+  content: '';
+}
+
+main.page-shell .pack-group .group-cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  align-items: stretch;
+}
+
+@container workbook (width <= 56.25rem) {
+  main.page-shell .pack-group .group-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container workbook (width <= 40.625rem) {
+  main.page-shell .pack-group .group-cards {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 main.lesson-page .lesson-vocabulary dl div {
   border-radius: 0.05rem;
   border-left: 0.28rem solid transparent;
@@ -177,13 +256,23 @@ main.lesson-page .lesson-practice .practice-card {
     padding: var(--space-3);
   }
 
+  main.page-shell .pack-group-stack {
+    gap: var(--space-4);
+  }
+
+  main.page-shell .pack-group {
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+
   main.lesson-page .worked-examples::before,
   main.lesson-page .worked-examples::after,
   main.lesson-page .example-grid article::before,
   main.lesson-page .vocabulary-group::before,
   main.page-shell .topic-grid::before,
   main.page-shell .topic-grid::after,
-  main.page-shell .topic-grid .topic-card::before {
+  main.page-shell .topic-grid .topic-card::before,
+  main.page-shell .pack-group::before {
     display: none;
   }
 }

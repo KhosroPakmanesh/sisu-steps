@@ -44,5 +44,9 @@ export function validateTopicPack(value: unknown): TopicPack {
   const seenIds = new Set<string>();
   const validatedLessons = validateLessons(lessons, seenIds);
   const validatedTests = validateTests(tests, validatedLessons, importantSkills, seenIds);
-  return { ...(value as unknown as TopicPack), lessons: validatedLessons, tests: validatedTests };
+  return {
+    ...(value as unknown as TopicPack),
+    lessons: validatedLessons,
+    tests: validatedTests,
+  };
 }

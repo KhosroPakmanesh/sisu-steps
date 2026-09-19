@@ -128,13 +128,40 @@ function validateManifestSummaries(manifest, lessons, tests) {
   }
 }
 
+function requireCatalogGroups(value) {
+  if (!Array.isArray(value) || value.length === 0) {
+    throw new Error('The source catalog must declare at least one pack group.');
+  }
+  const groupIds = new Set();
+  const packIds = [];
+  for (const group of value) {
+    if (!isRecord(group)) throw new Error('Each source catalog group must be a JSON object.');
+    requireExactKeys(group, new Set(['id', 'title', 'packs']), 'A source catalog group');
+    if (
+      typeof group.id !== 'string' ||
+      !SAFE_ID.test(group.id) ||
+      groupIds.has(group.id) ||
+      typeof group.title !== 'string' ||
+      !group.title.trim()
+    ) {
+      throw new Error('The source catalog contains an invalid or duplicate group declaration.');
+    }
+    groupIds.add(group.id);
+    packIds.push(...requireSafeIds(group.packs, `Pack group ${group.id}`));
+  }
+  if (new Set(packIds).size !== packIds.length) {
+    throw new Error('The source catalog registers a pack ID more than once.');
+  }
+  return packIds;
+}
+
 export async function loadContentSource(sourceDirectory) {
   const sourceRoot = resolve(sourceDirectory);
   const catalog = await readJson(join(sourceRoot, 'index.json'), 'source catalog');
   if (!isRecord(catalog)) throw new Error('The source catalog must be a JSON object.');
-  requireExactKeys(catalog, new Set(['schemaVersion', 'packs']), 'The source catalog');
-  if (catalog.schemaVersion !== 1) throw new Error('The source catalog must use schema 1.');
-  const packIds = requireSafeIds(catalog.packs, 'The source catalog pack list');
+  requireExactKeys(catalog, new Set(['schemaVersion', 'groups']), 'The source catalog');
+  if (catalog.schemaVersion !== 2) throw new Error('The source catalog must use schema 2.');
+  const packIds = requireCatalogGroups(catalog.groups);
   await requireDirectoryShape(sourceRoot, ['index.json'], packIds, 'The content source root');
 
   const packs = [];
@@ -166,5 +193,5 @@ export async function loadContentSource(sourceDirectory) {
   }
 
   validateGlobalContentIds(packs);
-  return { catalog: { schemaVersion: 1, packs: [...packIds] }, packs };
+  return { catalog: { schemaVersion: 2, groups: structuredClone(catalog.groups) }, packs };
 }

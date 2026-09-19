@@ -1,7 +1,11 @@
 export interface LoadedContentSource {
   catalog: {
-    schemaVersion: 1;
-    packs: string[];
+    schemaVersion: 2;
+    groups: Array<{
+      id: string;
+      title: string;
+      packs: string[];
+    }>;
   };
   packs: Array<Record<string, unknown>>;
 }

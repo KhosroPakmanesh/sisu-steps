@@ -12,6 +12,7 @@ Separate catalog-level discovery from pack-level study navigation so additional 
 ## Included
 
 - Compact topic cards and one continue-learning summary on home.
+- Catalog-owned group metadata, runtime structure validation, and labeled grouped topic-card sections.
 - A lazy `/topics/:topicId` route containing the existing ordered test map and pack objectives.
 - Topic-aware back-navigation from lessons and study sessions.
 - Focused unit and browser coverage for catalog-to-topic navigation.
@@ -19,7 +20,7 @@ Separate catalog-level discovery from pack-level study navigation so additional 
 
 ## Non-goals
 
-- New Finnish lessons, tests, packs, or content schema fields.
+- New Finnish lessons, tests, packs, or changes to existing learning-content semantics.
 - Changes to grading, attempts, mistakes, reviews, reports, backups, IndexedDB, or content-version alignment.
 - Accounts, cloud synchronization, runtime content generation, or an in-app content browser/editor.
 - Locking tests behind lesson completion or test-order progression.
@@ -28,7 +29,7 @@ Separate catalog-level discovery from pack-level study navigation so additional 
 
 1. Add typed topic-route metadata and lazy route composition.
 2. Extract pure topic-summary and continue-learning queries.
-3. Replace the expanded home map with catalog cards and a continue-learning action.
+3. Replace the expanded home map with catalog cards and a continue-learning action, rendering validated catalog-owned groups in authored order.
 4. Move the ordered Focused/Review test map and objectives into a topic route page.
 5. Point valid lesson and study exits back to their owning topic.
 6. Update unit, end-to-end, architecture, design-system, and changelog evidence.
@@ -37,4 +38,5 @@ Separate catalog-level discovery from pack-level study navigation so additional 
 
 - Existing bookmarks to lesson and study routes must remain valid.
 - A saved session may reference content that is no longer installed; the continue query must ignore invalid session targets.
+- Group IDs and pack registrations must be unique so malformed bundled content cannot duplicate, reorder, or mislabel the catalog at runtime.
 - "Tests completed" has no pass threshold in the product model, so the interface must truthfully say "tests tried" when counting distinct attempted tests.

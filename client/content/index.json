@@ -1,16 +1,30 @@
 {
-  "schemaVersion": 1,
-  "packs": [
-    "vowel-harmony-location-endings",
-    "kpt-singular-forms",
-    "t-plural-agreement",
-    "personal-pronouns-affirmative-olla",
-    "negative-olla-statements",
-    "olla-questions-short-answers",
-    "singular-demonstrative-pronouns",
-    "plural-demonstrative-pronouns",
-    "negative-demonstrative-statements",
-    "demonstrative-questions",
-    "inessive-demonstrative-forms"
+  "schemaVersion": 2,
+  "groups": [
+    {
+      "id": "foundations",
+      "title": "Foundations",
+      "packs": ["vowel-harmony-location-endings", "kpt-singular-forms", "t-plural-agreement"]
+    },
+    {
+      "id": "pronouns-and-olla",
+      "title": "Pronouns and olla",
+      "packs": [
+        "personal-pronouns-affirmative-olla",
+        "negative-olla-statements",
+        "olla-questions-short-answers"
+      ]
+    },
+    {
+      "id": "demonstratives",
+      "title": "Demonstratives",
+      "packs": [
+        "singular-demonstrative-pronouns",
+        "plural-demonstrative-pronouns",
+        "negative-demonstrative-statements",
+        "demonstrative-questions",
+        "inessive-demonstrative-forms"
+      ]
+    }
   ]
 }

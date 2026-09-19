@@ -8,7 +8,10 @@ import {
 
 const activeFixtures: TemporaryContentSourceFixture[] = [];
 
-const catalog = (packs: string[]): unknown => ({ schemaVersion: 1, packs });
+const catalog = (packs: string[]): unknown => ({
+  schemaVersion: 2,
+  groups: [{ id: 'test-group', title: 'Test group', packs }],
+});
 
 const manifest = (id: string, lessonIds: string[], testIds: string[]): unknown => ({
   schemaVersion: 1,
@@ -94,7 +97,9 @@ describe('pack-owned content source loader', () => {
   it('assembles multiple packs and their learning tests in explicit authored order', async () => {
     const source = await loadContentSource(await materialize(twoPackFixture()));
 
-    expect(source.catalog.packs).toEqual(['alpha-pack', 'beta-pack']);
+    expect(source.catalog.groups).toEqual([
+      { id: 'test-group', title: 'Test group', packs: ['alpha-pack', 'beta-pack'] },
+    ]);
     expect(source.packs.map((pack) => pack['id'])).toEqual(['alpha-pack', 'beta-pack']);
     expect(source.packs[0]['lessons']).toEqual([
       {
@@ -125,7 +130,7 @@ describe('pack-owned content source loader', () => {
     const fixture = await materialize({ files: { 'index.json': catalog(['../unsafe']) } });
 
     await expect(loadContentSource(fixture)).rejects.toThrow(
-      'The source catalog pack list must contain unique safe IDs in authored order.',
+      'Pack group test-group must contain unique safe IDs in authored order.',
     );
   });
 
@@ -162,7 +167,7 @@ describe('pack-owned content source loader', () => {
       files: { 'index.json': catalog(['alpha-pack', 'alpha-pack']) },
     });
     await expect(loadContentSource(duplicatePack)).rejects.toThrow(
-      'The source catalog pack list must contain unique safe IDs in authored order.',
+      'Pack group test-group must contain unique safe IDs in authored order.',
     );
 
     const duplicateReference = await materialize(
@@ -189,6 +194,32 @@ describe('pack-owned content source loader', () => {
   it('rejects stable IDs duplicated across pack-owned content', async () => {
     await expect(loadContentSource(await materialize(twoPackFixture(true)))).rejects.toThrow(
       'Content ID shared-lesson is used by both alpha-pack lesson and beta-pack lesson.',
+    );
+  });
+
+  it('rejects invalid groups and pack IDs registered in more than one group', async () => {
+    const invalidGroup = await materialize({
+      files: {
+        'index.json': { schemaVersion: 2, groups: [{ id: 'Bad ID', title: '', packs: ['pack'] }] },
+      },
+    });
+    await expect(loadContentSource(invalidGroup)).rejects.toThrow(
+      'The source catalog contains an invalid or duplicate group declaration.',
+    );
+
+    const duplicatePack = await materialize({
+      files: {
+        'index.json': {
+          schemaVersion: 2,
+          groups: [
+            { id: 'first', title: 'First', packs: ['alpha-pack'] },
+            { id: 'second', title: 'Second', packs: ['alpha-pack'] },
+          ],
+        },
+      },
+    });
+    await expect(loadContentSource(duplicatePack)).rejects.toThrow(
+      'The source catalog registers a pack ID more than once.',
     );
   });
 
@@ -224,18 +255,32 @@ describe('pack-owned content source loader', () => {
 
   it('assembles every installed source pack without topic-specific loading code', async () => {
     const source = await loadContentSource('content');
-    expect(source.catalog.packs).toEqual([
-      'vowel-harmony-location-endings',
-      'kpt-singular-forms',
-      't-plural-agreement',
-      'personal-pronouns-affirmative-olla',
-      'negative-olla-statements',
-      'olla-questions-short-answers',
-      'singular-demonstrative-pronouns',
-      'plural-demonstrative-pronouns',
-      'negative-demonstrative-statements',
-      'demonstrative-questions',
-      'inessive-demonstrative-forms',
+    expect(source.catalog.groups).toEqual([
+      {
+        id: 'foundations',
+        title: 'Foundations',
+        packs: ['vowel-harmony-location-endings', 'kpt-singular-forms', 't-plural-agreement'],
+      },
+      {
+        id: 'pronouns-and-olla',
+        title: 'Pronouns and olla',
+        packs: [
+          'personal-pronouns-affirmative-olla',
+          'negative-olla-statements',
+          'olla-questions-short-answers',
+        ],
+      },
+      {
+        id: 'demonstratives',
+        title: 'Demonstratives',
+        packs: [
+          'singular-demonstrative-pronouns',
+          'plural-demonstrative-pronouns',
+          'negative-demonstrative-statements',
+          'demonstrative-questions',
+          'inessive-demonstrative-forms',
+        ],
+      },
     ]);
     expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
       '1.0.0',

@@ -30,6 +30,7 @@ export class StatsPage implements RouteReadiness {
   protected readonly catalogLevelLabel = computed(() =>
     getLearningLevelLabel(this.store.packSummaries()),
   );
+  protected readonly packGroups = this.store.packGroups;
 
   protected completedAttempts(pack: TopicPackSummary): number {
     return completedAttemptCount(this.store.learnerState(), pack.id);

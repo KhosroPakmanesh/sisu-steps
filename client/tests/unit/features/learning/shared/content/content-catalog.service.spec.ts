@@ -32,9 +32,11 @@ describe('ContentCatalogService summary loading', () => {
   it('loads only the catalog and registered manifests during startup', async () => {
     const { service, loader } = createService(resourcesFor(installedPacks));
 
-    await expect(service.loadPackSummaries()).resolves.toEqual(
-      installedPacks.map(topicPackToSummary),
-    );
+    const summaries = installedPacks.map(topicPackToSummary);
+    await expect(service.loadCatalog()).resolves.toEqual({
+      packs: summaries,
+      groups: [{ id: 'test-group', title: 'Test group', packs: summaries }],
+    });
     expect(loader.requestedPaths).toEqual([
       'content/index.json',
       ...installedPacks.map((pack) => `content/${pack.id}/pack.json`),
@@ -51,9 +53,23 @@ describe('ContentCatalogService summary loading', () => {
     });
     const { service, loader } = createService(resources);
 
-    await expect(service.loadPackSummaries()).rejects.toThrow(
+    await expect(service.loadCatalog()).rejects.toThrow(
       `Topic pack ${pack.id} has an incomplete manifest.`,
     );
     expect(loader.requestedPaths).toEqual(['content/index.json', manifestPath]);
+  });
+
+  it('rejects invalid catalog-owned group metadata before loading manifests', async () => {
+    const resources = resourcesFor(installedPacks.slice(0, 1));
+    resources.set('content/index.json', {
+      schemaVersion: 2,
+      groups: [{ id: 'Bad ID', title: '', packs: [installedPacks[0].id] }],
+    });
+    const { service, loader } = createService(resources);
+
+    await expect(service.loadCatalog()).rejects.toThrow(
+      'The content catalog contains an invalid or duplicate group declaration.',
+    );
+    expect(loader.requestedPaths).toEqual(['content/index.json']);
   });
 });

@@ -48,32 +48,45 @@
 
       <div class="topic-grid">
         <p class="card-kicker">{{ catalogLevelLabel() }}</p>
-        @for (pack of store.packSummaries(); track pack.id) {
-          <article class="topic-card stats-topic-card">
-            <header>
-              <h3>{{ pack.title }}</h3>
-            </header>
+        <div class="pack-group-stack">
+          @for (group of packGroups(); track group.id) {
+            <section class="pack-group" [attr.aria-labelledby]="'stats-group-heading-' + group.id">
+              <h3 class="card-kicker" [id]="'stats-group-heading-' + group.id">
+                {{ group.title }}
+              </h3>
+              <div class="group-cards">
+                @for (pack of group.packs; track pack.id) {
+                  <article class="topic-card stats-topic-card">
+                    <header>
+                      <h4>{{ pack.title }}</h4>
+                    </header>
 
-            <dl class="stats-card-metrics">
-              <div>
-                <dt>Completed attempts</dt>
-                <dd>{{ completedAttempts(pack) }}</dd>
-              </div>
-              <div>
-                <dt>Average score</dt>
-                <dd>{{ average(pack) === null ? '—' : average(pack) + '%' }}</dd>
-              </div>
-              <div>
-                <dt>Unresolved mistakes</dt>
-                <dd>{{ unresolvedMistakes(pack) }}</dd>
-              </div>
-            </dl>
+                    <dl class="stats-card-metrics">
+                      <div>
+                        <dt>Completed attempts</dt>
+                        <dd>{{ completedAttempts(pack) }}</dd>
+                      </div>
+                      <div>
+                        <dt>Average score</dt>
+                        <dd>{{ average(pack) === null ? '—' : average(pack) + '%' }}</dd>
+                      </div>
+                      <div>
+                        <dt>Unresolved mistakes</dt>
+                        <dd>{{ unresolvedMistakes(pack) }}</dd>
+                      </div>
+                    </dl>
 
-            <div class="topic-card-actions">
-              <a class="button primary" [routerLink]="paths.topicStats(pack.id)">View stats</a>
-            </div>
-          </article>
-        }
+                    <div class="topic-card-actions">
+                      <a class="button primary" [routerLink]="paths.topicStats(pack.id)">
+                        View stats
+                      </a>
+                    </div>
+                  </article>
+                }
+              </div>
+            </section>
+          }
+        </div>
       </div>
     </section>
   }

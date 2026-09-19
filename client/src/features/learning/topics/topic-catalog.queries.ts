@@ -1,5 +1,9 @@
 import { LearnerState, StudySession } from '../shared/state/learner-state.models';
-import { ContentTestSummary, TopicPackSummary } from '../shared/content/content.models';
+import {
+  ContentTestSummary,
+  PackGroupSummary,
+  TopicPackSummary,
+} from '../shared/content/content.models';
 import {
   completedAttemptCount,
   dueCorrections,
@@ -65,6 +69,22 @@ export function getTopicSummaries(
   now = new Date(),
 ): TopicSummary[] {
   return packs.map((pack) => getTopicSummary(state, packs, pack, now));
+}
+
+export interface TopicGroupSummary extends Omit<PackGroupSummary, 'packs'> {
+  packs: TopicSummary[];
+}
+
+export function getTopicGroups(
+  state: LearnerState,
+  packs: TopicPackSummary[],
+  groups: PackGroupSummary[],
+  now = new Date(),
+): TopicGroupSummary[] {
+  return groups.map((group) => ({
+    ...group,
+    packs: group.packs.map((pack) => getTopicSummary(state, packs, pack, now)),
+  }));
 }
 
 export function getContinueLearningTarget(

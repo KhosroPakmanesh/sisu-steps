@@ -43,7 +43,13 @@ export function manifestFor(pack: TopicPack): ContentPackManifest {
 
 export function resourcesFor(packs: TopicPack[]): Map<string, unknown> {
   const resources = new Map<string, unknown>([
-    [`${CONTENT_DIRECTORY}/index.json`, { schemaVersion: 1, packs: packs.map(({ id }) => id) }],
+    [
+      `${CONTENT_DIRECTORY}/index.json`,
+      {
+        schemaVersion: 2,
+        groups: [{ id: 'test-group', title: 'Test group', packs: packs.map(({ id }) => id) }],
+      },
+    ],
   ]);
   for (const pack of packs) {
     const packDirectory = `${CONTENT_DIRECTORY}/${pack.id}`;

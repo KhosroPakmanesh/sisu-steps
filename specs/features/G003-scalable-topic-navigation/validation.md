@@ -2,7 +2,7 @@
 
 ## Automated validation
 
-- **VAL-G003-001** (`REQ-G003-001`, `002`, `007`): Dashboard component tests verify one summary per pack, one truthful encompassing-grid `Level:` or `Levels:` label, no repeated card-level labels, compact progress, topic links, and absence of expanded test cards.
+- **VAL-G003-001** (`REQ-G003-001`, `002`, `007`): Dashboard component and browser tests verify one summary per pack, one truthful encompassing-grid `Level:` or `Levels:` label, no repeated card-level labels, compact progress, topic links, absence of expanded test cards, and labeled catalog-owned groups in authored group and pack order. Content-catalog service tests reject invalid or duplicate group declarations before loading manifests.
 - **VAL-G003-002** (`REQ-G003-003`): Query and dashboard tests verify recent valid session resume, invalid-session fallback, and the first unattempted test recommendation.
 - **VAL-G003-003** (`REQ-G003-004`, `005`): Topic-page tests verify authored test order, separate Focused/Review sections without repeated classification badges, stage and skill guidance, lesson progress, and direct lesson/test links.
 - **VAL-G003-004** (`REQ-G003-006`): Topic-page tests verify a recoverable unknown-topic state and home link.
@@ -17,6 +17,13 @@
 - Create or resume a saved session and confirm the home continue action names and opens the correct workflow.
 
 ## Execution evidence
+
+### 2026-09-19 pack grouping extension
+
+- `npm.cmd run check`: passed ESLint, Stylelint, purposeful-module size, source reachability, architecture boundaries, repository-wide Prettier, application and test TypeScript checks, all 11-pack direct-source validation, production build, 172 unit tests, and 14 integration tests.
+- Content-catalog service tests reject invalid or duplicate catalog-owned group declarations before loading pack manifests, matching the standalone source validator at the browser trust boundary.
+- `npx.cmd playwright test tests/e2e/content/pack-groups.spec.ts tests/e2e/workflows/content-loading.spec.ts --config=playwright.review.config.ts`: 27 checks passed across the configured mobile, tablet, and wide Chromium projects, covering labeled headings, authored group and pack order, matching Notebook/Stats groups, containment inside the bound sheet, startup manifest loading, direct routes, retry, and lazy full-pack loading. The disposable port-4211 review server and config were removed after the run because an unrelated process occupied the standard port 4200.
+- Persistence review: no IndexedDB schema, learner-state shape, backup shape, stable content ID, lesson/test/exercise content, pack version, grading, or clearing behavior changed.
 
 ### 2026-08-19 implementation
 

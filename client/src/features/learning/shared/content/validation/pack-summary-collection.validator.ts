@@ -1,17 +1,18 @@
-import { ContentCatalog, TopicPackSummary } from '../content.models';
+import { ContentCatalog, LoadedContentCatalog, TopicPackSummary } from '../content.models';
 
 export function validatePackSummaryCollection(
   catalog: ContentCatalog,
   packs: TopicPackSummary[],
-): TopicPackSummary[] {
-  if (catalog.packs.length !== packs.length) {
+): LoadedContentCatalog {
+  const catalogPackIds = catalog.groups.flatMap((group) => group.packs);
+  if (catalogPackIds.length !== packs.length) {
     throw new Error('The content catalog did not load every listed topic pack.');
   }
   const globalIds = new Set<string>();
   for (const [index, pack] of packs.entries()) {
-    if (catalog.packs[index] !== pack.id) {
+    if (catalogPackIds[index] !== pack.id) {
       throw new Error(
-        `Catalog pack ${catalog.packs[index]} does not match loaded pack ${pack.id}.`,
+        `Catalog pack ${catalogPackIds[index]} does not match loaded pack ${pack.id}.`,
       );
     }
     const ids = [
@@ -26,5 +27,13 @@ export function validatePackSummaryCollection(
       globalIds.add(id);
     }
   }
-  return packs;
+  const packsById = new Map(packs.map((pack) => [pack.id, pack]));
+  return {
+    packs,
+    groups: catalog.groups.map((group) => ({
+      id: group.id,
+      title: group.title,
+      packs: group.packs.map((packId) => packsById.get(packId)!),
+    })),
+  };
 }

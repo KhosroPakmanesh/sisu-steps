@@ -51,7 +51,9 @@ describe('StatsPage', () => {
     const secondPack = structuredClone(learningPack);
     secondPack.id = 'second-topic';
     secondPack.title = 'A second topic';
-    store.packSummaries.set([learningPack, secondPack].map(topicPackToSummary));
+    const summaries = [learningPack, secondPack].map(topicPackToSummary);
+    store.packSummaries.set(summaries);
+    store.packGroups.set([{ id: 'foundations', title: 'Foundations', packs: summaries }]);
     fixture.detectChanges();
 
     const cards = [

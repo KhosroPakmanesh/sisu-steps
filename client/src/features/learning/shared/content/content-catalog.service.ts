@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { JSON_RESOURCE_LOADER } from '@/shared/browser/json-resource.loader';
-import { TopicPackSummary } from './content.models';
+import { LoadedContentCatalog, TopicPackSummary } from './content.models';
 import { manifestToPackSummary } from './pack-summary.mapper';
 import { validateContentCatalog } from './validation/content-catalog.validator';
 import { validateContentManifest } from './validation/content-manifest.validator';
@@ -13,11 +13,12 @@ const CATALOG_URL = `${CONTENT_DIRECTORY}/index.json`;
 export class ContentCatalogService {
   private readonly loader = inject(JSON_RESOURCE_LOADER);
 
-  async loadPackSummaries(): Promise<TopicPackSummary[]> {
+  async loadCatalog(): Promise<LoadedContentCatalog> {
     const catalog = validateContentCatalog(
       await this.loader.load(CATALOG_URL, 'the content catalog'),
     );
-    const packs = await Promise.all(catalog.packs.map((packId) => this.loadSummary(packId)));
+    const packIds = catalog.groups.flatMap((group) => group.packs);
+    const packs = await Promise.all(packIds.map((packId) => this.loadSummary(packId)));
     return validatePackSummaryCollection(catalog, packs);
   }
 

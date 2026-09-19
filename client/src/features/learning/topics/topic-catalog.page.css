@@ -108,9 +108,7 @@
 
 .topic-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-4);
-  align-items: stretch;
 }
 
 .topic-grid > .card-kicker {
@@ -130,7 +128,7 @@
   min-width: 0;
 }
 
-.topic-card h3 {
+.topic-card :is(h3, h4) {
   margin: var(--space-1) 0 var(--space-2);
   font-size: var(--text-heading-small);
   line-height: 1.2;
@@ -190,18 +188,6 @@
 
   .section-heading > p {
     margin-top: var(--space-3);
-  }
-}
-
-@container workbook (width <= 56.25rem) {
-  .topic-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@container workbook (width <= 40.625rem) {
-  .topic-grid {
-    grid-template-columns: minmax(0, 1fr);
   }
 }
 

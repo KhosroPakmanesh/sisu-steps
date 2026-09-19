@@ -697,12 +697,12 @@ describe('content-pack validation', () => {
 
 describe('content catalog validation', () => {
   const catalog = (packs = ['pack']): ContentCatalog => ({
-    schemaVersion: 1,
-    packs,
+    schemaVersion: 2,
+    groups: [{ id: 'test-group', title: 'Test group', packs }],
   });
 
   it('accepts safe, unique catalog pack IDs', () => {
-    expect(validateContentCatalog(catalog(['vowel-harmony-kpt-tplural'])).packs).toHaveLength(1);
+    expect(validateContentCatalog(catalog(['vowel-harmony-kpt-tplural'])).groups).toHaveLength(1);
   });
 
   it('rejects duplicate and unsafe pack IDs', () => {
@@ -711,6 +711,20 @@ describe('content catalog validation', () => {
     );
     expect(() => validateContentCatalog(catalog(['pack', 'pack']))).toThrowError(
       'The content catalog contains an invalid or duplicate pack ID.',
+    );
+  });
+
+  it('rejects invalid or duplicate group declarations', () => {
+    const invalid = catalog();
+    invalid.groups[0].id = 'Bad ID';
+    expect(() => validateContentCatalog(invalid)).toThrowError(
+      'The content catalog contains an invalid or duplicate group declaration.',
+    );
+
+    const duplicated = catalog();
+    duplicated.groups.push({ id: 'test-group', title: 'Another title', packs: ['second-pack'] });
+    expect(() => validateContentCatalog(duplicated)).toThrowError(
+      'The content catalog contains an invalid or duplicate group declaration.',
     );
   });
 

@@ -4,8 +4,8 @@ import { ClearHistoryService } from '@/features/learning/learner-data/clear-hist
 import { LessonProgressService } from '@/features/learning/lessons/lesson-progress.service';
 import { ContentCatalogService } from '@/features/learning/shared/content/content-catalog.service';
 import {
+  LoadedContentCatalog,
   LoadedTopicPack,
-  TopicPackSummary,
 } from '@/features/learning/shared/content/content.models';
 import { PackContentRepository } from '@/features/learning/shared/content/pack-content.repository';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
@@ -22,8 +22,12 @@ import { SessionStartService } from '@/features/learning/study/session-start.ser
 import { learningPack } from '../unit/learning-content.fixture';
 
 class FakeContentCatalog {
-  async loadPackSummaries(): Promise<TopicPackSummary[]> {
-    return [topicPackToSummary(learningPack)];
+  async loadCatalog(): Promise<LoadedContentCatalog> {
+    const pack = topicPackToSummary(learningPack);
+    return {
+      packs: [pack],
+      groups: [{ id: 'foundations', title: 'Foundations', packs: [pack] }],
+    };
   }
 }
 

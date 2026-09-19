@@ -64,58 +64,74 @@
 
       <div class="topic-grid">
         <p class="card-kicker">{{ catalogLevelLabel() }}</p>
-        @for (summary of topicSummaries(); track summary.pack.id) {
-          <article class="topic-card">
-            <header>
-              <h3>{{ summary.pack.title }}</h3>
-              <p>{{ summary.pack.summary }}</p>
-            </header>
+        <div class="pack-group-stack">
+          @for (group of topicGroups(); track group.id) {
+            <section class="pack-group" [attr.aria-labelledby]="'group-heading-' + group.id">
+              <h3 class="card-kicker" [id]="'group-heading-' + group.id">{{ group.title }}</h3>
+              <div class="group-cards">
+                @for (summary of group.packs; track summary.pack.id) {
+                  <article class="topic-card">
+                    <header>
+                      <h4>{{ summary.pack.title }}</h4>
+                      <p>{{ summary.pack.summary }}</p>
+                    </header>
 
-            <div class="topic-progress">
-              <div class="topic-progress-item">
-                <div>
-                  <span>Tests tried</span>
-                  <strong>{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong>
-                </div>
-                <div class="progress-ruler">
-                  <progress
-                    class="notebook-progress"
-                    [attr.aria-label]="summary.pack.title + ' tests tried'"
-                    [max]="summary.pack.tests.length"
-                    [value]="summary.attemptedTests"
-                  ></progress>
-                </div>
-              </div>
-              <div class="topic-progress-item">
-                <div>
-                  <span>Lessons read</span>
-                  <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
-                </div>
-                <div class="progress-ruler">
-                  <progress
-                    class="notebook-progress"
-                    [attr.aria-label]="summary.pack.title + ' lessons read'"
-                    [max]="summary.totalLessons"
-                    [value]="summary.completedLessons"
-                  ></progress>
-                </div>
-              </div>
-            </div>
+                    <div class="topic-progress">
+                      <div class="topic-progress-item">
+                        <div>
+                          <span>Tests tried</span>
+                          <strong
+                            >{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong
+                          >
+                        </div>
+                        <div class="progress-ruler">
+                          <progress
+                            class="notebook-progress"
+                            [attr.aria-label]="summary.pack.title + ' tests tried'"
+                            [max]="summary.pack.tests.length"
+                            [value]="summary.attemptedTests"
+                          ></progress>
+                        </div>
+                      </div>
+                      <div class="topic-progress-item">
+                        <div>
+                          <span>Lessons read</span>
+                          <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
+                        </div>
+                        <div class="progress-ruler">
+                          <progress
+                            class="notebook-progress"
+                            [attr.aria-label]="summary.pack.title + ' lessons read'"
+                            [max]="summary.totalLessons"
+                            [value]="summary.completedLessons"
+                          ></progress>
+                        </div>
+                      </div>
+                    </div>
 
-            <div class="topic-card-actions">
-              @if (summary.reviewsDue > 0 || summary.reviewInProgress) {
-                <a class="button review-action" [routerLink]="paths.review(summary.pack.id)">
-                  {{
-                    summary.reviewInProgress
-                      ? 'Resume optional review'
-                      : 'Optional review due · ' + summary.reviewsDue
-                  }}
-                </a>
-              }
-              <a class="button primary" [routerLink]="paths.topic(summary.pack.id)"> Open topic </a>
-            </div>
-          </article>
-        }
+                    <div class="topic-card-actions">
+                      @if (summary.reviewsDue > 0 || summary.reviewInProgress) {
+                        <a
+                          class="button review-action"
+                          [routerLink]="paths.review(summary.pack.id)"
+                        >
+                          {{
+                            summary.reviewInProgress
+                              ? 'Resume optional review'
+                              : 'Optional review due · ' + summary.reviewsDue
+                          }}
+                        </a>
+                      }
+                      <a class="button primary" [routerLink]="paths.topic(summary.pack.id)">
+                        Open topic
+                      </a>
+                    </div>
+                  </article>
+                }
+              </div>
+            </section>
+          }
+        </div>
       </div>
     </section>
   }

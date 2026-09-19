@@ -2,7 +2,12 @@ import { inject, Injectable, signal } from '@angular/core';
 import { LearnerState } from './learner-state.models';
 import { LEARNER_STATE_REPOSITORY } from './persistence/learner-state.repository';
 import { ContentCatalogService } from '../content/content-catalog.service';
-import { LoadedTopicPack, TopicPack, TopicPackSummary } from '../content/content.models';
+import {
+  LoadedTopicPack,
+  PackGroupSummary,
+  TopicPack,
+  TopicPackSummary,
+} from '../content/content.models';
 import { PackContentRepository } from '../content/pack-content.repository';
 import { findPackSummary } from '../content/content.queries';
 import { alignLearnerStateWithPacks } from './align-learner-state.policy';
@@ -15,6 +20,7 @@ export class LearningStateStore {
   private readonly repository = inject(LEARNER_STATE_REPOSITORY);
 
   readonly packSummaries = signal<TopicPackSummary[]>([]);
+  readonly packGroups = signal<PackGroupSummary[]>([]);
   readonly learnerState = signal<LearnerState>(createEmptyLearnerState());
   readonly error = signal<string | null>(null);
   readonly ready = this.initialize();
@@ -22,16 +28,17 @@ export class LearningStateStore {
   async initialize(): Promise<void> {
     this.error.set(null);
     try {
-      const [packs, storedState] = await Promise.all([
-        this.contentCatalog.loadPackSummaries(),
+      const [catalog, storedState] = await Promise.all([
+        this.contentCatalog.loadCatalog(),
         this.repository.load(),
       ]);
       const learnerState = storedState ?? createEmptyLearnerState();
-      const alignedState = alignLearnerStateWithPacks(learnerState, packs);
+      const alignedState = alignLearnerStateWithPacks(learnerState, catalog.packs);
       if (!storedState || JSON.stringify(alignedState) !== JSON.stringify(learnerState)) {
         await this.repository.save(alignedState);
       }
-      this.packSummaries.set(packs);
+      this.packSummaries.set(catalog.packs);
+      this.packGroups.set(catalog.groups);
       this.learnerState.set(alignedState);
     } catch (error) {
       this.error.set(error instanceof Error ? error.message : 'The app could not start.');
