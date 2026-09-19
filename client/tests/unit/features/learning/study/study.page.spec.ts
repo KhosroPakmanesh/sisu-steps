@@ -34,6 +34,70 @@ describe('StudyPage', () => {
     fixture.detectChanges();
     await fixture.componentInstance.routeRenderReady;
     fixture.detectChanges();
+    await fixture.whenStable();
+    fixture.componentInstance.focusRouteContent();
+  });
+
+  it('focuses the answer and uses Enter to check, continue, and open the result', async () => {
+    const input = fixture.nativeElement.querySelector('.text-answer input') as HTMLInputElement;
+    expect(document.activeElement).toBe(input);
+
+    input.value = 'talossa';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    input.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }),
+    );
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const continueButton = fixture.nativeElement.querySelector(
+      '.continue-button',
+    ) as HTMLButtonElement;
+    expect(document.activeElement).toBe(continueButton);
+
+    continueButton.dispatchEvent(
+      new KeyboardEvent('keydown', { key: 'Enter', bubbles: true, cancelable: true }),
+    );
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const resultAction = fixture.nativeElement.querySelector(
+      '.result-actions a',
+    ) as HTMLAnchorElement;
+    expect(document.activeElement).toBe(resultAction);
+    expect(storeSnapshot()).toEqual({ attempts: 1, answers: 0 });
+  });
+
+  it('ignores a repeated Enter keydown', async () => {
+    const input = fixture.nativeElement.querySelector('.text-answer input') as HTMLInputElement;
+    input.value = 'talossa';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+
+    const event = new KeyboardEvent('keydown', {
+      key: 'Enter',
+      repeat: true,
+      bubbles: true,
+      cancelable: true,
+    });
+    input.dispatchEvent(event);
+    await fixture.whenStable();
+
+    expect(event.defaultPrevented).toBe(true);
+    const modifiedEvent = new KeyboardEvent('keydown', {
+      key: 'Enter',
+      shiftKey: true,
+      bubbles: true,
+      cancelable: true,
+    });
+    input.dispatchEvent(modifiedEvent);
+    await fixture.whenStable();
+    expect(modifiedEvent.defaultPrevented).toBe(false);
+    expect(fixture.nativeElement.querySelector('.feedback')).toBeNull();
+    expect(storeSnapshot()).toEqual({ attempts: 0, answers: 0 });
   });
 
   it('reveals the answer and explanation from the visible control', async () => {

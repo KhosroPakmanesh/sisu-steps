@@ -51,6 +51,15 @@ export class AppShell {
 
   private async revealRoutedContent(component: unknown, shouldFocus: boolean): Promise<void> {
     await this.blockingOverlay.run(() => waitForRoute(component));
+    if (
+      typeof component === 'object' &&
+      component !== null &&
+      'focusRouteContent' in component &&
+      typeof component.focusRouteContent === 'function'
+    ) {
+      component.focusRouteContent();
+      return;
+    }
     if (shouldFocus) this.focusRoutedContent();
   }
 

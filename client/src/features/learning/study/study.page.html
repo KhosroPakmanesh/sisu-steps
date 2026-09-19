@@ -27,7 +27,9 @@
         >
       </div>
       <div class="result-actions">
-        <a class="button primary" [routerLink]="paths.topic(result.topicId)">Return to topic</a>
+        <a #resultAction class="button primary" [routerLink]="paths.topic(result.topicId)"
+          >Return to topic</a
+        >
         @if (mistakeCountForTopic(result.topicId) > 0) {
           <a class="button secondary" [routerLink]="paths.mistakes(result.topicId)"
             >Practice mistakes</a
@@ -118,6 +120,7 @@
             @for (option of currentExercise.options; track option) {
               <label [class.selected]="response() === option">
                 <input
+                  #answerChoice
                   type="radio"
                   name="answer"
                   [value]="option"
@@ -157,6 +160,7 @@
             <div class="token-bank" aria-label="Available words">
               @for (token of currentExercise.tokens; track $index; let index = $index) {
                 <button
+                  #wordToken
                   class="word-token"
                   type="button"
                   [disabled]="selectedTokenIndexes().includes(index) || !!feedback()"
@@ -189,6 +193,7 @@
           <label class="text-answer">
             <span>Your answer</span>
             <input
+              #textAnswer
               class="notebook-input"
               [class.has-writing]="response().length > 0"
               type="text"
@@ -196,7 +201,6 @@
               [disabled]="!!feedback()"
               [ngModel]="response()"
               (ngModelChange)="response.set($event)"
-              (keydown.enter)="submit()"
               placeholder="Type your answer…"
             />
           </label>
@@ -216,6 +220,7 @@
           <div class="answer-actions">
             @if (feedback()) {
               <button
+                #continueButton
                 class="button primary continue-button"
                 type="button"
                 [disabled]="busy()"

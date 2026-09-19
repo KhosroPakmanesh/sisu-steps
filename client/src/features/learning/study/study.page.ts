@@ -1,4 +1,13 @@
-import { Component, computed, inject, signal } from '@angular/core';
+import {
+  afterNextRender,
+  Component,
+  computed,
+  ElementRef,
+  inject,
+  Injector,
+  signal,
+  viewChild,
+} from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../shared/navigation/learning.paths';
@@ -10,14 +19,15 @@ import { findSession, mistakeCount } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import { SessionAnswerService } from './session-answer.service';
 import { SessionStartService } from './session-start.service';
-
 @Component({
   selector: 'app-runner',
   imports: [FormsModule, RouterLink],
   templateUrl: './study.page.html',
   styleUrl: './study.page.css',
+  host: { '(keydown.enter)': 'handleEnter($event)' },
 })
 export class StudyPage implements RouteReadiness {
+  private readonly injector = inject(Injector);
   private readonly route = inject(ActivatedRoute);
   private readonly sessionStart = inject(SessionStartService);
   private readonly sessionAnswers = inject(SessionAnswerService);
@@ -31,7 +41,11 @@ export class StudyPage implements RouteReadiness {
   protected readonly emptySession = signal<{ title: string; message: string } | null>(null);
   protected readonly completedAttempt = signal<CompletedAttempt | null>(null);
   protected readonly busy = signal(false);
-
+  private readonly textAnswer = viewChild<ElementRef<HTMLInputElement>>('textAnswer');
+  private readonly answerChoice = viewChild<ElementRef<HTMLInputElement>>('answerChoice');
+  private readonly availableWordToken = viewChild<ElementRef<HTMLButtonElement>>('wordToken');
+  private readonly continueButton = viewChild<ElementRef<HTMLButtonElement>>('continueButton');
+  private readonly resultAction = viewChild<ElementRef<HTMLAnchorElement>>('resultAction');
   protected readonly session = computed(() => {
     const id = this.sessionId();
     return id ? findSession(this.store.learnerState(), id) : undefined;
@@ -60,7 +74,6 @@ export class StudyPage implements RouteReadiness {
       .join(' ');
   });
   readonly routeRenderReady = this.initialize();
-
   private async initialize(): Promise<void> {
     await this.store.ready;
     if (this.store.error()) {
@@ -102,12 +115,14 @@ export class StudyPage implements RouteReadiness {
       );
     }
   }
-
   protected mistakeCountForTopic(topicId: string): number {
     return mistakeCount(
       this.store.learnerState(),
       findPackSummary(this.store.packSummaries(), topicId),
     );
+  }
+  public focusRouteContent(): void {
+    this.focusState(this.completedAttempt() ? 'result' : this.feedback() ? 'continue' : 'question');
   }
 
   protected chooseToken(index: number): void {
@@ -115,7 +130,6 @@ export class StudyPage implements RouteReadiness {
       this.selectedTokenIndexes.update((indexes) => [...indexes, index]);
     }
   }
-
   protected removeToken(position: number): void {
     if (!this.feedback()) {
       this.selectedTokenIndexes.update((indexes) =>
@@ -123,7 +137,6 @@ export class StudyPage implements RouteReadiness {
       );
     }
   }
-
   protected eraseResponse(): void {
     if (!this.feedback()) this.response.set('');
   }
@@ -147,7 +160,7 @@ export class StudyPage implements RouteReadiness {
     const sessionId = this.sessionId();
     const exercise = this.exercise();
     if (!sessionId || !exercise || !this.canSubmit(exercise)) return;
-    await this.runOperation(
+    const answer = await this.runOperation(
       () =>
         this.sessionAnswers.submitAnswer(
           sessionId,
@@ -155,6 +168,7 @@ export class StudyPage implements RouteReadiness {
         ),
       'Your answer could not be saved.',
     );
+    if (answer) this.scheduleFocus('continue');
   }
 
   protected canRevealAnswer(): boolean {
@@ -168,7 +182,10 @@ export class StudyPage implements RouteReadiness {
       () => this.sessionAnswers.revealAnswer(sessionId),
       'The answer could not be revealed.',
     );
-    if (revealed) this.resetResponse();
+    if (revealed) {
+      this.resetResponse();
+      this.scheduleFocus('continue');
+    }
   }
 
   protected async continue(): Promise<void> {
@@ -181,7 +198,45 @@ export class StudyPage implements RouteReadiness {
     if (attempt) {
       this.completedAttempt.set(attempt);
       this.sessionId.set(null);
-    } else if (attempt === null) this.resetResponse();
+      this.scheduleFocus('result');
+    } else if (attempt === null) {
+      this.resetResponse();
+      this.scheduleFocus('question');
+    }
+  }
+  protected handleEnter(event: Event): void {
+    if (!(event instanceof KeyboardEvent)) return;
+    if (event.repeat) {
+      event.preventDefault();
+      return;
+    }
+    if (
+      event.defaultPrevented ||
+      event.isComposing ||
+      event.altKey ||
+      event.ctrlKey ||
+      event.metaKey ||
+      event.shiftKey
+    ) {
+      return;
+    }
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+    if (target.closest('a, button:not(.submit-button):not(.continue-button)')) return;
+    if (this.feedback()) {
+      event.preventDefault();
+      void this.continue();
+      return;
+    }
+    const exercise = this.exercise();
+    if (!exercise) return;
+    const answerControl =
+      target.matches('input[type="text"], input[type="radio"]') ||
+      !!target.closest('.submit-button');
+    if (answerControl && this.canSubmit(exercise)) {
+      event.preventDefault();
+      void this.submit();
+    }
   }
 
   private async runOperation<T>(
@@ -220,5 +275,25 @@ export class StudyPage implements RouteReadiness {
   private resetResponse(): void {
     this.response.set('');
     this.selectedTokenIndexes.set([]);
+  }
+
+  private scheduleFocus(target: 'question' | 'continue' | 'result'): void {
+    afterNextRender(() => this.focusState(target), { injector: this.injector });
+  }
+
+  private focusState(target: 'question' | 'continue' | 'result'): void {
+    if (target === 'continue') {
+      this.continueButton()?.nativeElement.focus();
+      return;
+    }
+    if (target === 'result') {
+      this.resultAction()?.nativeElement.focus();
+      return;
+    }
+    const control =
+      this.textAnswer()?.nativeElement ??
+      this.answerChoice()?.nativeElement ??
+      this.availableWordToken()?.nativeElement;
+    control?.focus();
   }
 }

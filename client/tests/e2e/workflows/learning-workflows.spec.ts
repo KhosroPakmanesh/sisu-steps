@@ -949,6 +949,45 @@ test('keeps stationery exercise controls native and keyboard usable', async ({ p
   await expect(page.locator('details, [aria-expanded]')).toHaveCount(0);
 });
 
+test('completes each study response type with contextual Enter behavior', async ({ page }) => {
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+  const firstChoice = page.getByRole('radio', { name: 'back vowels' });
+  await expect(firstChoice).toBeFocused();
+  await page.keyboard.press('Space');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.exercise-card .feedback')).toContainText('Correct');
+  await expect(page.getByRole('button', { name: 'Continue' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('radio', { name: 'back vowels' })).toBeFocused();
+
+  await page.goto(`/study/${TOPIC_SEGMENT}/harmony-in-forms`);
+  const textAnswer = page.getByRole('textbox', { name: 'Your answer' });
+  await expect(textAnswer).toBeFocused();
+  await page.keyboard.insertText('talossa');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.exercise-card .feedback')).toContainText('Correct');
+  await expect(page.getByRole('button', { name: 'Continue' })).toBeFocused();
+
+  await page.goto(`/study/${PLURAL_TOPIC_SEGMENT}/plural-in-sentences`);
+  await expect(page.getByRole('textbox', { name: 'Your answer' })).toBeFocused();
+  await page.keyboard.insertText('Kirjat');
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('button', { name: 'Continue' })).toBeFocused();
+  await page.keyboard.press('Enter');
+
+  const availableWords = page.getByLabel('Available words');
+  await expect(availableWords.getByRole('button', { name: 'ovat' })).toBeFocused();
+  for (const [index, word] of ['Koirat', 'ovat', 'ulkona.'].entries()) {
+    await availableWords.getByRole('button', { name: word }).press('Enter');
+    await expect(page.getByLabel('Your sentence').getByRole('button')).toHaveCount(index + 1);
+  }
+  await expect(page.locator('.exercise-card .feedback')).toHaveCount(0);
+  const checkAnswer = page.getByRole('button', { name: 'Check answer' });
+  await checkAnswer.press('Enter');
+  await expect(page.locator('.exercise-card .feedback')).toContainText('Correct');
+  await expect(page.getByRole('button', { name: 'Continue' })).toBeFocused();
+});
+
 test('keeps study targets truthful and readable at every supported width', async ({ page }) => {
   await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
 

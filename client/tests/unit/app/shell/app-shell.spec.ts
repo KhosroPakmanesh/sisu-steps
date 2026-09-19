@@ -7,12 +7,17 @@ import { RouteReadiness } from '@/features/learning/shared/navigation/route-read
 import { appearancePreferenceStorageKey } from '@/shared/browser/appearance-preference.adapter';
 
 let resolveTestRoute = (): void => undefined;
+let routeFocusCount = 0;
 
 @Component({ template: '<main class="test-route">Ready</main>' })
 class TestRoutePage implements RouteReadiness {
   readonly routeRenderReady = new Promise<void>((resolve) => {
     resolveTestRoute = resolve;
   });
+
+  focusRouteContent(): void {
+    routeFocusCount += 1;
+  }
 }
 
 describe('AppShell', () => {
@@ -21,6 +26,7 @@ describe('AppShell', () => {
     document.documentElement.removeAttribute('data-appearance');
     document.getElementById('app-boot')?.remove();
     resolveTestRoute = (): void => undefined;
+    routeFocusCount = 0;
   });
 
   it('renders local-first navigation and the product shell', async () => {
@@ -106,6 +112,7 @@ describe('AppShell', () => {
     expect(appRoot.hasAttribute('inert')).toBe(false);
     expect(appRoot.hasAttribute('aria-busy')).toBe(false);
     expect(appRoot.hasAttribute('aria-hidden')).toBe(false);
+    expect(routeFocusCount).toBe(1);
   });
 
   it('applies and remembers an explicit appearance choice', async () => {

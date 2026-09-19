@@ -1,5 +1,6 @@
 export interface RouteReadiness {
   readonly routeRenderReady: Promise<void>;
+  focusRouteContent?(): void;
 }
 
 export function waitForRoute(component: unknown): Promise<void> {
