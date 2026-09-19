@@ -238,6 +238,30 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }, t
   );
 });
 
+test('keeps the page clip aligned with short paper at tall tablet sizes', async ({ page }) => {
+  await page.setViewportSize({ width: 1032, height: 1376 });
+  await page.goto('/study/olla-questions-short-answers/ppo-singular-positive-questions-test');
+
+  const [paperBox, hardwareBox, clipBox] = await Promise.all([
+    page.locator('.runner-shell').boundingBox(),
+    page.locator('.workbook-page-hardware').boundingBox(),
+    page.locator('.workbook-page-clip').boundingBox(),
+  ]);
+  expect(paperBox).not.toBeNull();
+  expect(hardwareBox).not.toBeNull();
+  expect(clipBox).not.toBeNull();
+
+  const topInset = (hardwareBox?.y ?? 0) - (paperBox?.y ?? 0);
+  const bottomInset =
+    (paperBox?.y ?? 0) +
+    (paperBox?.height ?? 0) -
+    ((hardwareBox?.y ?? 0) + (hardwareBox?.height ?? 0));
+  expect(topInset).toBeGreaterThan(0);
+  expect(bottomInset).toBeGreaterThan(0);
+  expect(Math.abs(topInset - bottomInset)).toBeLessThan(1);
+  expect(clipBox?.height).toBeCloseTo(hardwareBox?.height ?? 0, 0);
+});
+
 test('gives phones a full-width paper-only shell', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
   await page.goto('/');

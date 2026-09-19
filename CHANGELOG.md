@@ -158,6 +158,8 @@
 
 ### Fixed
 
+- Kept the right-side workbook page clip aligned with shorter study paper on tall tablet and desktop viewports instead of stretching it through the folder's spare height.
+
 - Clarified 24 Finnish-production prompts whose English `you` did not identify the intended `sinä` or `te` form, and added runtime and standalone validation that prevents similarly ambiguous second-person questions from being accepted as content.
 
 - Corrected eleven lesson-version regressions while preserving monotonic version history, removed repeated labels from three optional-practice prompts, corrected four singular-subject practice explanations, and added the missing supplied `kotona — at home` declaration without changing IDs, answers, ordering, response types, diagnostics, or mastery pairs.

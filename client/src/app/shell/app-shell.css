@@ -6,8 +6,7 @@
 }
 
 .workbook-folder {
-  flex: 1 0 auto;
-  min-height: calc(100dvh - var(--header-height));
+  flex: 0 0 auto;
 }
 
 .site-header {
@@ -118,6 +117,7 @@
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  margin-top: auto;
   padding: 2rem var(--space-page);
   border-top: 1px solid var(--border-default);
   color: var(--text-muted);
