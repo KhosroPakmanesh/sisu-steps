@@ -1,4 +1,4 @@
-import { Component, computed, ElementRef, inject, input, viewChild } from '@angular/core';
+import { Component, computed, ElementRef, inject, input, output, viewChild } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { findPackSummary } from '../../shared/content/content.queries';
 import { learningPaths } from '../../shared/navigation/learning.paths';
@@ -16,6 +16,8 @@ export class StudyResultComponent {
   private readonly store = inject(LearningStateStore);
   private readonly resultAction = viewChild<ElementRef<HTMLAnchorElement>>('resultAction');
   readonly result = input.required<CompletedAttempt>();
+  readonly busy = input(false);
+  readonly practiceMistakes = output<void>();
   protected readonly paths = learningPaths;
   protected readonly hasMistakes = computed(
     () =>

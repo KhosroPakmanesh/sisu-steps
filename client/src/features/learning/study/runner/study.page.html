@@ -1,6 +1,10 @@
 <main class="runner-shell">
   @if (completedAttempt(); as result) {
-    <app-study-result [result]="result" />
+    <app-study-result
+      [result]="result"
+      [busy]="busy()"
+      (practiceMistakes)="restartMistakePractice()"
+    />
   } @else if (emptySession(); as empty) {
     <section class="state-card empty-card" aria-live="polite">
       <p class="eyebrow">Study session</p>

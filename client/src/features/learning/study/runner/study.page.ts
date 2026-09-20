@@ -134,6 +134,26 @@ export class StudyPage implements RouteReadiness {
       this.scheduleFocus('question');
     }
   }
+
+  protected async restartMistakePractice(): Promise<void> {
+    if (this.busy()) return;
+    const loaded = await this.runOperation(
+      () => this.routeLoader.load(this.route.snapshot),
+      'Mistake practice could not restart.',
+    );
+    if (!loaded) {
+      this.completedAttempt.set(null);
+      return;
+    }
+    this.loadedPack.set(loaded.pack);
+    this.emptySession.set(loaded.empty);
+    this.sessionId.set(loaded.session?.id ?? null);
+    this.completedAttempt.set(null);
+    this.answer.reset();
+    this.restoreResponse();
+    if (loaded.session) this.scheduleFocus('question');
+  }
+
   protected handleEnter(event: Event): void {
     if (!(event instanceof KeyboardEvent)) return;
     const action = studyEnterAction(

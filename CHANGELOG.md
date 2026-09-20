@@ -170,6 +170,8 @@
 
 ### Fixed
 
+- Restarted mistake practice directly from its completed result so unresolved mistakes open in a fresh round instead of leaving the learner on the same result screen.
+
 - Kept the right-side workbook page clip aligned with shorter study paper on tall tablet and desktop viewports instead of stretching it through the folder's spare height.
 
 - Clarified 24 Finnish-production prompts whose English `you` did not identify the intended `sinä` or `te` form, and added runtime and standalone validation that prevents similarly ambiguous second-person questions from being accepted as content.

@@ -29,9 +29,20 @@
       Return to topic
     </a>
     @if (hasMistakes()) {
-      <a class="button secondary" [routerLink]="paths.mistakes(result().topicId)">
-        Practice mistakes
-      </a>
+      @if (result().mode === 'mistakes') {
+        <button
+          class="button secondary"
+          type="button"
+          [disabled]="busy()"
+          (click)="practiceMistakes.emit()"
+        >
+          Practice mistakes
+        </button>
+      } @else {
+        <a class="button secondary" [routerLink]="paths.mistakes(result().topicId)">
+          Practice mistakes
+        </a>
+      }
     }
     <a class="button secondary" [routerLink]="paths.topicStats(result().topicId)">Open stats</a>
   </div>

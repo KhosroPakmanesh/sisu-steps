@@ -205,3 +205,64 @@ describe('StudyPage', () => {
     };
   }
 });
+
+describe('StudyPage mistake-practice restart', () => {
+  it('opens a fresh round when unresolved mistakes remain', async () => {
+    await TestBed.configureTestingModule({
+      imports: [StudyPage],
+      providers: [
+        provideRouter([]),
+        { provide: LearningStateStore, useClass: FakeLearningStateStore },
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            snapshot: {
+              data: { mode: 'mistakes' },
+              paramMap: { get: (name: string) => (name === 'topicId' ? 'topic' : null) },
+            },
+          },
+        },
+      ],
+    }).compileComponents();
+    const store = TestBed.inject(LearningStateStore);
+    store.learnerState.update((state) => ({
+      ...state,
+      unresolvedMistakeIds: ['exercise-1'],
+    }));
+    const fixture = TestBed.createComponent(StudyPage);
+    fixture.detectChanges();
+    await fixture.componentInstance.routeRenderReady;
+    fixture.detectChanges();
+    const firstSessionId = store.learnerState().sessions[0]?.id;
+
+    const input = fixture.nativeElement.querySelector('.text-answer input') as HTMLInputElement;
+    input.value = 'wrong';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
+    (fixture.nativeElement.querySelector('.submit-button') as HTMLButtonElement).click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    (fixture.nativeElement.querySelector('.continue-button') as HTMLButtonElement).click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+
+    const element = fixture.nativeElement as HTMLElement;
+    const restart = Array.from(
+      element.querySelectorAll<HTMLButtonElement>('.result-actions button'),
+    ).find((button) => button.textContent?.includes('Practice mistakes'));
+    expect(restart).toBeDefined();
+    restart!.click();
+    await fixture.whenStable();
+    fixture.detectChanges();
+    await fixture.whenStable();
+
+    const nextSession = store.learnerState().sessions[0];
+    const nextInput = fixture.nativeElement.querySelector('.text-answer input') as HTMLInputElement;
+    expect(fixture.nativeElement.querySelector('.result-card')).toBeNull();
+    expect(nextSession?.id).toBeDefined();
+    expect(nextSession?.id).not.toBe(firstSessionId);
+    expect(nextSession?.exerciseIds).toEqual(['exercise-1']);
+    expect(store.learnerState().unresolvedMistakeIds).toEqual(['exercise-1']);
+    expect(document.activeElement).toBe(nextInput);
+  });
+});
