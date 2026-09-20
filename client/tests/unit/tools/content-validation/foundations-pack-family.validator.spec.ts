@@ -1,9 +1,9 @@
 import { beforeAll, describe, expect, it } from 'vitest';
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
-import { validatePack as validateHarmony } from '../../../../tools/content-validation/vowel-harmony-location-endings.mjs';
-import { validatePack as validateKpt } from '../../../../tools/content-validation/kpt-singular-forms.mjs';
-import { validatePack as validatePlural } from '../../../../tools/content-validation/t-plural-agreement.mjs';
+import { validatePack as validateHarmony } from '../../../../tools/content-validation/foundations/vowel-harmony-location-endings.mjs';
+import { validatePack as validateKpt } from '../../../../tools/content-validation/foundations/kpt-singular-forms.mjs';
+import { validatePack as validatePlural } from '../../../../tools/content-validation/foundations/t-plural-agreement.mjs';
 
 describe('grammar-foundation successor pack validation', () => {
   let harmony: TopicPack;

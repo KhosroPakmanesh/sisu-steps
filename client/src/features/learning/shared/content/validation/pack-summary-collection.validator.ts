@@ -1,4 +1,4 @@
-import { ContentCatalog, LoadedContentCatalog, TopicPackSummary } from '../content.models';
+import { ContentCatalog, LoadedContentCatalog, TopicPackSummary } from '../catalog.models';
 
 export function validatePackSummaryCollection(
   catalog: ContentCatalog,

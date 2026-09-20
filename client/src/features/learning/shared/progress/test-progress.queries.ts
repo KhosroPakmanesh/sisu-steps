@@ -1,6 +1,7 @@
-import { TopicPack } from '../content/content.models';
+import { TopicPack } from '../content/topic-pack.models';
 import { LearnerState } from '../state/learner-state.models';
-import { rounded, testExerciseIds } from './progress.queries';
+import { testExerciseIds } from './exercise-reference.queries';
+import { rounded } from './percentage';
 import { TestProgressSummary } from './test-progress.models';
 
 export function getTestProgress(

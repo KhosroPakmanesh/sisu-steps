@@ -1,4 +1,4 @@
-import { LearningStage } from '../content.models';
+import { LearningStage } from '../learning-stage.models';
 
 const LEARNING_STAGES = new Set<LearningStage>(['focused', 'review']);
 

@@ -44,6 +44,10 @@
 
 ### Changed
 
+- Changed the client development and Playwright server port from `4200` to `14200` to avoid collisions with local proxy and API services; updated the documented URL and browser launch configuration to match.
+
+- Grouped the Angular learning workflows into purpose-named subfolders for topic catalog/detail, lesson reader/practice, study runner/session/result/vocabulary, statistics overview/topic detail, and learner-data backup/restore/confirmation. Split broad content and progress contracts by concept, extracted shared answer-draft behavior, removed Stats' stylesheet dependency on Topics, grouped offline validators by content family, and separated validation logic from its CLI, with mirrored unit-test ownership and no route, storage, content, or learner-behavior changes.
+
 - Unified confirmation and Cheat mode dialogs on one responsive ruled-paper modal shell without clip decoration, replaced textual cancellation controls with compact accessible top-right × buttons with precisely centered marks, added safe backdrop dismissal, and matched Cheat mode word cards to lesson vocabulary cards.
 
 - Reworked the five pending demonstrative-pronoun packs with natural English glosses and translations, plausible noun/location combinations, form-only introductory support, explicit bounded contexts for all independent inessive tasks, natural English location alternatives, and distractor-specific feedback. Demonstrative validation now rejects malformed glosses, spoken `tää`/`toi`/`nää`/`noi`, scene-only sentence duplicates, untaught Review-exercise targets, hidden malformed Finnish question frames, missing inessive contexts, and repeated wrong-option feedback while preserving all 632 scored IDs and 96 practice IDs.

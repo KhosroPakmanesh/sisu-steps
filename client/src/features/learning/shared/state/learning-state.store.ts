@@ -2,12 +2,8 @@ import { inject, Injectable, signal } from '@angular/core';
 import { LearnerState } from './learner-state.models';
 import { LEARNER_STATE_REPOSITORY } from './persistence/learner-state.repository';
 import { ContentCatalogService } from '../content/content-catalog.service';
-import {
-  LoadedTopicPack,
-  PackGroupSummary,
-  TopicPack,
-  TopicPackSummary,
-} from '../content/content.models';
+import { PackGroupSummary, TopicPackSummary } from '../content/catalog.models';
+import { LoadedTopicPack, TopicPack } from '../content/topic-pack.models';
 import { PackContentRepository } from '../content/pack-content.repository';
 import { findPackSummary } from '../content/content.queries';
 import { alignLearnerStateWithPacks } from './align-learner-state.policy';

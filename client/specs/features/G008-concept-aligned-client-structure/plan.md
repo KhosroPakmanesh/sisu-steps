@@ -29,19 +29,40 @@ src/
   design-system/
   features/learning/
     topics/
+      catalog/
+      detail/
     lessons/
+      practice/
+      reader/
     study/
+      result/
+      runner/
+      session/
+      vocabulary/
     stats/
+      overview/
+      topic/
     learner-data/
+      backup/
+      backup-restore/
+      confirmation/
     shared/
+      answer-entry/
       content/
       navigation/
       notes/
       progress/
+      styles/
       state/
         persistence/
   shared/
     browser/
+tools/
+  content-validation/
+    shared/
+    foundations/
+    olla/
+    demonstratives/
 ```
 
 ## Target test structure

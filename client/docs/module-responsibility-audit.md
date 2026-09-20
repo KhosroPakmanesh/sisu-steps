@@ -45,6 +45,6 @@ The client tree now reflects the app's actual concepts. There is no stored or ge
 - `test:unit` runs only mirrored unit tests.
 - `test:integration` runs cross-workflow stateful tests.
 - `check` runs both layers after static, type, content, and production-build validation.
-- Playwright specs are grouped by concern; global setup serves the just-built static application and no longer silently accepts an unrelated server on port 4200.
+- Playwright specs are grouped by concern; global setup serves the just-built static application on port 14200 and does not silently accept an unrelated server.
 
 No module-size, function-size, CSS-size, reachability, architecture, lint, or test exception is introduced by G008.

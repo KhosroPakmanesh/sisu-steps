@@ -1,0 +1,251 @@
+:host {
+  display: block;
+}
+
+.runner-shell {
+  width: min(100% - 2rem, var(--page-width));
+  margin: 1.25rem auto 2rem;
+  padding: 2rem var(--sheet-gutter) 5rem;
+}
+
+.runner-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.runner-heading {
+  text-align: center;
+}
+
+.runner-heading h1 {
+  font-size: var(--text-title-compact);
+}
+
+.question-count {
+  justify-self: end;
+  padding: 0.28rem 0.48rem;
+  border: 1px solid var(--border-default);
+  border-bottom: 0.18rem solid transparent;
+  border-radius: 0.18rem;
+  background: var(--surface-raised);
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: var(--weight-heavy);
+  box-shadow: 1px 2px 0 var(--notebook-shadow);
+}
+
+.runner-progress {
+  display: block;
+  margin: 0;
+}
+
+.exercise-card {
+  position: relative;
+  display: grid;
+  gap: var(--space-5);
+  padding: calc(var(--space-6) + 0.9rem);
+}
+
+.exercise-card > * {
+  min-width: 0;
+}
+
+.exercise-context {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.type-label {
+  padding: 0.3rem 0.55rem;
+  border: 2px double var(--border-brand-emphasis);
+  border-radius: 0.18rem;
+  background: var(--surface-brand-subtle);
+  color: var(--text-brand);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transform: rotate(-1deg);
+}
+
+.exercise-card h2 {
+  margin: var(--space-2) 0 var(--space-4);
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 3vw, 1.85rem);
+  line-height: 1.2;
+  text-wrap: wrap;
+}
+
+.text-answer {
+  display: grid;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.82rem;
+  font-weight: var(--weight-heavy);
+}
+
+.text-answer input:focus-visible {
+  border-color: var(--border-brand-strong);
+}
+
+.word-builder {
+  display: grid;
+  gap: 1rem;
+}
+
+.answer-zone,
+.token-bank {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  gap: 0.5rem;
+  min-height: 4.5rem;
+  padding: 1rem;
+  border-radius: var(--radius-small);
+}
+
+.answer-zone {
+  position: relative;
+  border: 2px dashed var(--border-brand);
+  border-left: 0.28rem solid transparent;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent calc(var(--notebook-line-height) - 1px),
+      var(--notebook-rule) var(--notebook-line-height)
+    ),
+    var(--surface-brand-subtle);
+}
+
+.token-bank {
+  border: 1px solid var(--border-default);
+  background: color-mix(in srgb, var(--surface-subtle) 68%, transparent);
+}
+
+.placeholder {
+  color: var(--text-muted);
+  align-self: center;
+}
+
+.answer-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.study-action-dock {
+  display: contents;
+}
+
+.reveal-button {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.reveal-note {
+  margin-top: 0.55rem;
+  color: var(--text-secondary);
+  font-size: var(--text-caption);
+  line-height: 1.45;
+}
+
+@container workbook (width <= 35rem) {
+  .runner-shell {
+    width: calc(100% - 0.75rem);
+  }
+
+  .runner-header {
+    grid-template-columns: 1fr auto;
+  }
+
+  .runner-heading {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: left;
+  }
+
+  .exercise-card {
+    gap: var(--space-4);
+    padding: var(--space-4);
+  }
+
+  .exercise-context {
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+}
+
+@media (width < 48rem) {
+  .runner-shell {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-6);
+  }
+
+  .runner-header {
+    gap: var(--space-2);
+  }
+
+  .runner-shell .runner-ruler {
+    margin: var(--space-3) 0 var(--space-4);
+  }
+
+  main.runner-shell .test-focus {
+    gap: var(--space-3);
+    margin: var(--space-2) 0;
+    padding: var(--space-3);
+  }
+
+  .exercise-card {
+    gap: var(--space-3);
+    padding: var(--space-3);
+  }
+
+  .exercise-card h2 {
+    margin: var(--space-1) 0 var(--space-3);
+  }
+
+  .study-action-dock {
+    position: sticky;
+    z-index: 4;
+    bottom: max(var(--space-2), env(safe-area-inset-bottom, 0px));
+    display: block;
+    margin-top: var(--space-4);
+    padding: var(--space-2);
+    border: 1px solid var(--border-control);
+    border-radius: var(--radius-small);
+    background: color-mix(in srgb, var(--surface-paper) 94%, transparent);
+    box-shadow: 0 -0.18rem 0.48rem color-mix(in srgb, var(--notebook-shadow) 74%, transparent);
+    backdrop-filter: blur(0.45rem);
+  }
+
+  .study-action-dock .answer-actions {
+    margin-top: 0;
+  }
+
+  .study-action-dock .reveal-note {
+    margin: var(--space-1) 0 0;
+  }
+
+  @container workbook (width < 20rem) {
+    .study-action-dock {
+      position: static;
+      margin-top: var(--space-4);
+      padding: 0;
+      border: 0;
+      background: none;
+      box-shadow: none;
+      backdrop-filter: none;
+    }
+  }
+}

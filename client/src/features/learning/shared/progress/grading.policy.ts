@@ -1,4 +1,5 @@
-import { Exercise, GradingResult } from '../content/content.models';
+import { Exercise } from '../content/exercise.models';
+import { GradingResult } from './grading.models';
 
 export function normalizeAnswer(value: string): string {
   return value

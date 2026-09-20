@@ -1,4 +1,6 @@
-import { Exercise, ExerciseTest, Lesson } from '../content.models';
+import { Exercise } from '../exercise.models';
+import { Lesson } from '../lesson.models';
+import { ExerciseTest } from '../test.models';
 import { validateExercise } from './exercise.validator';
 import { hasText, isRecord, validateStage } from './validation-primitives';
 

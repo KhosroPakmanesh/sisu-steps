@@ -1,4 +1,4 @@
-import { Exercise, ExerciseType } from '../content.models';
+import { Exercise, ExerciseType } from '../exercise.models';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';
 
 const EXERCISE_TYPES = new Set<ExerciseType>([

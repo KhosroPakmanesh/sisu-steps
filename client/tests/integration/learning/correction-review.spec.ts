@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   correctionCount,
   dueCorrections,
-} from '@/features/learning/shared/progress/progress.queries';
+} from '@/features/learning/shared/progress/correction.queries';
 import { getTestProgress } from '@/features/learning/shared/progress/test-progress.queries';
 import {
   completeTestAnswer,

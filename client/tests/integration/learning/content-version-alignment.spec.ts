@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { alignLearnerStateWithPacks } from '@/features/learning/shared/state/align-learner-state.policy';
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
 import { learningPack } from '@testing/helpers/unit/learning-content.fixture';

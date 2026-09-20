@@ -2,9 +2,9 @@ import { describe, expect, it } from 'vitest';
 import {
   ContentCatalog,
   ContentPackManifest,
-  Exercise,
-  TopicPack,
-} from '@/features/learning/shared/content/content.models';
+} from '@/features/learning/shared/content/catalog.models';
+import { Exercise } from '@/features/learning/shared/content/exercise.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { validateContentCatalog } from '@/features/learning/shared/content/validation/content-catalog.validator';
 import { validateContentManifest } from '@/features/learning/shared/content/validation/content-manifest.validator';
 import { validateLessons } from '@/features/learning/shared/content/validation/lesson.validator';

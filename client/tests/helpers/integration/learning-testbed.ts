@@ -1,12 +1,10 @@
 import { TestBed } from '@angular/core/testing';
-import { BackupService } from '@/features/learning/learner-data/backup.service';
+import { BackupService } from '@/features/learning/learner-data/backup/backup.service';
 import { ClearHistoryService } from '@/features/learning/learner-data/clear-history.service';
-import { LessonProgressService } from '@/features/learning/lessons/lesson-progress.service';
+import { LessonProgressService } from '@/features/learning/lessons/reader/lesson-progress.service';
 import { ContentCatalogService } from '@/features/learning/shared/content/content-catalog.service';
-import {
-  LoadedContentCatalog,
-  LoadedTopicPack,
-} from '@/features/learning/shared/content/content.models';
+import { LoadedContentCatalog } from '@/features/learning/shared/content/catalog.models';
+import { LoadedTopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { PackContentRepository } from '@/features/learning/shared/content/pack-content.repository';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { LearnerNoteService } from '@/features/learning/shared/notes/learner-note.service';
@@ -17,8 +15,8 @@ import {
   LEARNER_STATE_REPOSITORY,
   LearnerStateRepository,
 } from '@/features/learning/shared/state/persistence/learner-state.repository';
-import { SessionAnswerService } from '@/features/learning/study/session-answer.service';
-import { SessionStartService } from '@/features/learning/study/session-start.service';
+import { SessionAnswerService } from '@/features/learning/study/session/session-answer.service';
+import { SessionStartService } from '@/features/learning/study/session/session-start.service';
 import { learningPack } from '../unit/learning-content.fixture';
 
 class FakeContentCatalog {

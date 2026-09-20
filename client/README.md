@@ -20,7 +20,7 @@ npm --prefix client install
 npm --prefix client start
 ```
 
-Open the URL printed by Angular, normally `http://localhost:4200`.
+Open the URL printed by Angular, normally `http://localhost:14200`.
 
 ## Validate
 

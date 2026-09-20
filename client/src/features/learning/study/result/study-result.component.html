@@ -1,0 +1,38 @@
+<section class="result-card" aria-live="polite">
+  @if (result().mode !== 'review') {
+    <div class="result-ring" [class.excellent]="result().percentage >= 80">
+      <strong>{{ result().percentage }}%</strong><span>score</span>
+    </div>
+  }
+  <span class="teacher-stamp result-stamp" aria-hidden="true">DONE</span>
+  <p class="eyebrow">
+    {{ result().mode === 'review' ? 'Unscored review complete' : 'Session complete' }}
+  </p>
+  <h1>{{ result().title }}</h1>
+  <p>
+    You answered <strong>{{ result().correctCount }}</strong> of
+    <strong>{{ result().total }}</strong> correctly.
+  </p>
+  <div class="result-breakdown" aria-label="Session answer counts">
+    <span
+      ><strong>{{ result().correctCount }}</strong> correct</span
+    >
+    <span
+      ><strong>{{ result().incorrectCount }}</strong> incorrect</span
+    >
+    <span
+      ><strong>{{ result().skippedCount }}</strong> skipped</span
+    >
+  </div>
+  <div class="result-actions">
+    <a #resultAction class="button primary" [routerLink]="paths.topic(result().topicId)">
+      Return to topic
+    </a>
+    @if (hasMistakes()) {
+      <a class="button secondary" [routerLink]="paths.mistakes(result().topicId)">
+        Practice mistakes
+      </a>
+    }
+    <a class="button secondary" [routerLink]="paths.topicStats(result().topicId)">Open stats</a>
+  </div>
+</section>

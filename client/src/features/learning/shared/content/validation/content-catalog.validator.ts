@@ -1,4 +1,4 @@
-import { ContentCatalog } from '../content.models';
+import { ContentCatalog } from '../catalog.models';
 import { hasText, isRecord } from './validation-primitives';
 
 const SAFE_ID = /^[a-z0-9][a-z0-9-]*$/;

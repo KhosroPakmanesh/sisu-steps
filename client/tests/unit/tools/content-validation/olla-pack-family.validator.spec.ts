@@ -1,9 +1,9 @@
 import { beforeAll, describe, expect, it } from 'vitest';
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
-import { validatePack as validateAffirmative } from '../../../../tools/content-validation/personal-pronouns-affirmative-olla.mjs';
-import { validatePack as validateNegative } from '../../../../tools/content-validation/negative-olla-statements.mjs';
-import { validatePack as validateQuestions } from '../../../../tools/content-validation/olla-questions-short-answers.mjs';
+import { validatePack as validateAffirmative } from '../../../../tools/content-validation/olla/personal-pronouns-affirmative-olla.mjs';
+import { validatePack as validateNegative } from '../../../../tools/content-validation/olla/negative-olla-statements.mjs';
+import { validatePack as validateQuestions } from '../../../../tools/content-validation/olla/olla-questions-short-answers.mjs';
 
 describe('split personal-pronoun and olla content validation', () => {
   let affirmative: TopicPack;

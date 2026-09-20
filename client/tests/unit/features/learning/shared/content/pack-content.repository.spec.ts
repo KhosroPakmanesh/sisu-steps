@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { beforeAll, describe, expect, it } from 'vitest';
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { PackContentRepository } from '@/features/learning/shared/content/pack-content.repository';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { JSON_RESOURCE_LOADER } from '@/shared/browser/json-resource.loader';

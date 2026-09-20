@@ -3,7 +3,7 @@ import {
   validateExerciseEditorialQuality,
   validateLessonVocabularyVisibility,
   validateVocabularyItemTypes,
-} from '../../../../tools/content-validation/content-quality.mjs';
+} from '../../../../tools/content-validation/shared/content-quality.mjs';
 
 describe('standalone content-quality validation', () => {
   it('rejects known vocabulary hidden in a worked example', () => {

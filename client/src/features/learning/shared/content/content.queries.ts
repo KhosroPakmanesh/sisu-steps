@@ -1,11 +1,8 @@
-import {
-  Exercise,
-  ExerciseTest,
-  Lesson,
-  TopicPack,
-  TopicPackSummary,
-  VocabularyItem,
-} from './content.models';
+import { TopicPackSummary } from './catalog.models';
+import { Exercise } from './exercise.models';
+import { Lesson, VocabularyItem } from './lesson.models';
+import { ExerciseTest } from './test.models';
+import { TopicPack } from './topic-pack.models';
 
 export function findPack(packs: TopicPack[], topicId: string): TopicPack | undefined {
   return packs.find((pack) => pack.id === topicId);

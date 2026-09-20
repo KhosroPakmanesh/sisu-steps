@@ -1,4 +1,4 @@
-import { Lesson, VocabularyItem } from '../content.models';
+import { Lesson, VocabularyItem } from '../lesson.models';
 import { validateExercise } from './exercise.validator';
 import {
   collectKnownVocabulary,

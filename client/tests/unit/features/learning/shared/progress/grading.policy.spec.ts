@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { Exercise } from '@/features/learning/shared/content/content.models';
+import { Exercise } from '@/features/learning/shared/content/exercise.models';
 import { gradeAnswer, normalizeAnswer } from '@/features/learning/shared/progress/grading.policy';
 
 const exercise: Exercise = {

@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { JSON_RESOURCE_LOADER } from '@/shared/browser/json-resource.loader';
-import { LoadedTopicPack, TopicPack, TopicPackSummary } from './content.models';
+import { TopicPackSummary } from './catalog.models';
+import { LoadedTopicPack, TopicPack } from './topic-pack.models';
 import { validatePackMatchesSummary } from './validation/pack-summary-match.validator';
 import { validateTopicPack } from './validation/topic-pack.validator';
 import { isRecord } from './validation/validation-primitives';

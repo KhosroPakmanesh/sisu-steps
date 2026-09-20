@@ -1,4 +1,4 @@
-import { TopicPack } from '../content.models';
+import { TopicPack } from '../topic-pack.models';
 import { validateLessons } from './lesson.validator';
 import { validateTests } from './test.validator';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';

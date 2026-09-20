@@ -1,7 +1,7 @@
 import { beforeAll, describe, expect, it } from 'vitest';
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
-import { validateDemonstrativePack } from '../../../../tools/content-validation/demonstrative-pack-family.mjs';
+import { validateDemonstrativePack } from '../../../../tools/content-validation/demonstratives/demonstrative-pack-family.mjs';
 
 const PACK_IDS = [
   'singular-demonstrative-pronouns',

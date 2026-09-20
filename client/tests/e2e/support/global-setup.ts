@@ -3,7 +3,7 @@ import { createServer } from 'node:http';
 import { extname, resolve, sep } from 'node:path';
 
 const host = '127.0.0.1';
-const port = 4200;
+const port = 14200;
 const baseUrl = `http://${host}:${port}`;
 const browserRoot = resolve('dist/personal-finnish-learning-app/browser');
 const contentTypes: Record<string, string> = {

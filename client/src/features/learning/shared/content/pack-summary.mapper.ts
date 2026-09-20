@@ -1,9 +1,5 @@
-import {
-  ContentPackManifest,
-  ContentTestSummary,
-  TopicPack,
-  TopicPackSummary,
-} from './content.models';
+import { ContentPackManifest, ContentTestSummary, TopicPackSummary } from './catalog.models';
+import { TopicPack } from './topic-pack.models';
 
 export function manifestToPackSummary(manifest: ContentPackManifest): TopicPackSummary {
   return {

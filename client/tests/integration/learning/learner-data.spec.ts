@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import { lessonProgressForTest } from '@/features/learning/shared/progress/progress.queries';
+import { lessonProgressForTest } from '@/features/learning/shared/progress/lesson-progress.queries';
 import {
   createLearningTestContext,
   LearningTestContext,

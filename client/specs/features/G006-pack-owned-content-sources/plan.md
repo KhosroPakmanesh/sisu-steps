@@ -53,9 +53,20 @@ client/
       ...generic runtime validators...
   tools/
     validate-all-content.mjs
-    ...generic source validators...
+    validate-content.mjs
     content-validation/
-      vowel-harmony-kpt-tplural.mjs
+      shared/
+        content-quality.mjs
+        pack-content.validator.mjs
+      foundations/
+        foundations-pack-family.mjs
+        ...pack-specific validators...
+      olla/
+        olla-pack-family.mjs
+        ...pack-specific validators...
+      demonstratives/
+        demonstrative-pack-family.mjs
+        ...pack-specific validators...
   tests/
     unit/
       features/learning/shared/content/

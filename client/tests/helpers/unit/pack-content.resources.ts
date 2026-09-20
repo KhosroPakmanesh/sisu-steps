@@ -1,4 +1,5 @@
-import { ContentPackManifest, TopicPack } from '@/features/learning/shared/content/content.models';
+import { ContentPackManifest } from '@/features/learning/shared/content/catalog.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { JsonResourceLoader } from '@/shared/browser/json-resource.loader';
 

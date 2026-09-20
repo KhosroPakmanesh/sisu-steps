@@ -1,7 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { beforeAll, describe, expect, it } from 'vitest';
 import { ContentCatalogService } from '@/features/learning/shared/content/content-catalog.service';
-import { ContentPackManifest, TopicPack } from '@/features/learning/shared/content/content.models';
+import { ContentPackManifest } from '@/features/learning/shared/content/catalog.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { JSON_RESOURCE_LOADER } from '@/shared/browser/json-resource.loader';
 import {

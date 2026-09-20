@@ -1,4 +1,5 @@
-import { TopicPack, TopicPackSummary } from '../content.models';
+import { TopicPackSummary } from '../catalog.models';
+import { TopicPack } from '../topic-pack.models';
 import { topicPackToSummary } from '../pack-summary.mapper';
 
 export function validatePackMatchesSummary(summary: TopicPackSummary, pack: TopicPack): TopicPack {

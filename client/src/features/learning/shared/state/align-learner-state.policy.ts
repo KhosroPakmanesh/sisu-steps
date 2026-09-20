@@ -1,5 +1,5 @@
 import { LearnerState } from './learner-state.models';
-import { TopicPackSummary } from '../content/content.models';
+import { TopicPackSummary } from '../content/catalog.models';
 import { createEmptyLearnerState } from './learner-state.factory';
 
 function clearPackData(state: LearnerState, pack: TopicPackSummary): LearnerState {

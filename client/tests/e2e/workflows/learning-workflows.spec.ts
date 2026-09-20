@@ -1775,7 +1775,7 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     true,
   );
 
-  const clearHistory = page.getByRole('button', { name: 'Clear all history' });
+  const clearHistory = backupArchive.getByRole('button', { name: 'Clear all history' });
   await clearHistory.click();
 
   const dialog = page.getByRole('dialog');
@@ -1787,6 +1787,8 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   await expect(page.getByRole('status')).toHaveCount(0);
 
   await clearHistory.click();
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByRole('button', { name: 'Cancel clearing history' })).toBeFocused();
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
   await expect(clearHistory).toBeFocused();

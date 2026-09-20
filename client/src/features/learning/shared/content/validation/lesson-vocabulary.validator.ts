@@ -1,4 +1,4 @@
-import { Lesson } from '../content.models';
+import { Lesson } from '../lesson.models';
 
 export function collectKnownVocabulary(lessons: Lesson[]): Set<string> {
   return new Set(

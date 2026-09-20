@@ -1,6 +1,6 @@
 import { inject, Injectable } from '@angular/core';
 import { JSON_RESOURCE_LOADER } from '@/shared/browser/json-resource.loader';
-import { LoadedContentCatalog, TopicPackSummary } from './content.models';
+import { LoadedContentCatalog, TopicPackSummary } from './catalog.models';
 import { manifestToPackSummary } from './pack-summary.mapper';
 import { validateContentCatalog } from './validation/content-catalog.validator';
 import { validateContentManifest } from './validation/content-manifest.validator';

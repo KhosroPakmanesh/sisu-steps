@@ -1,4 +1,4 @@
-import { ContentLessonSummary, ContentPackManifest, ContentTestSummary } from '../content.models';
+import { ContentLessonSummary, ContentPackManifest, ContentTestSummary } from '../catalog.models';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';
 
 const SAFE_ID = /^[a-z0-9][a-z0-9-]*$/;

@@ -1,10 +1,9 @@
 import { signal } from '@angular/core';
 import {
-  LoadedTopicPack,
   PackGroupSummary,
-  TopicPack,
   TopicPackSummary,
-} from '@/features/learning/shared/content/content.models';
+} from '@/features/learning/shared/content/catalog.models';
+import { LoadedTopicPack, TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
 import { LearnerState } from '@/features/learning/shared/state/learner-state.models';

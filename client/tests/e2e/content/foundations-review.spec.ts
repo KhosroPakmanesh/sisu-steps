@@ -1,6 +1,6 @@
 import { expect, type Page, test } from '@playwright/test';
 import reviewContent from '../../../content/vowel-harmony-location-endings/tests/location-transfer-review.json';
-import type { ExerciseTest } from '../../../src/features/learning/shared/content/content.models';
+import type { ExerciseTest } from '../../../src/features/learning/shared/content/test.models';
 import type { LearnerState } from '../../../src/features/learning/shared/state/learner-state.models';
 
 const topic = 'vowel-harmony-location-endings';

@@ -1,4 +1,4 @@
-import { TopicPack } from '@/features/learning/shared/content/content.models';
+import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 
 export const learningPack: TopicPack = {
   schemaVersion: 1,

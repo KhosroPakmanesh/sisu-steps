@@ -1,8 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
-import {
-  correctionCount,
-  mistakeCount,
-} from '@/features/learning/shared/progress/progress.queries';
+import { correctionCount } from '@/features/learning/shared/progress/correction.queries';
+import { mistakeCount } from '@/features/learning/shared/progress/progress-statistics.queries';
 import { getTestProgress } from '@/features/learning/shared/progress/test-progress.queries';
 import {
   completeTestAnswer,

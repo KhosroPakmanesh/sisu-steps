@@ -9,7 +9,7 @@ export default defineConfig({
   workers: 2,
   reporter: 'list',
   use: {
-    baseURL: 'http://127.0.0.1:4200',
+    baseURL: 'http://127.0.0.1:14200',
     trace: 'retain-on-failure',
   },
   projects: [

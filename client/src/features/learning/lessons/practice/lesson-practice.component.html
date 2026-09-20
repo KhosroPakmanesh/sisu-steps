@@ -1,0 +1,248 @@
+<section class="lesson-practice" aria-labelledby="lesson-practice-title">
+  <div class="practice-heading">
+    <div>
+      <p class="card-kicker">Optional · unscored</p>
+      <h3 id="lesson-practice-title">Try the pattern</h3>
+    </div>
+    <span>{{ lesson.practiceExercises.length }} practice questions</span>
+  </div>
+  <p>
+    These questions work like the test, but answers stay on this page and never change scores,
+    statistics, sessions, or mistakes.
+  </p>
+
+  @if (!started()) {
+    <button class="button secondary" type="button" (click)="start()">
+      Start optional practice
+    </button>
+  } @else if (finished()) {
+    <div class="practice-complete" aria-live="polite">
+      <span class="teacher-stamp practice-stamp" aria-hidden="true">PRACTISED</span>
+      <strong>Practice complete</strong>
+      <p>You can repeat it, finish the lesson, or start the test.</p>
+      <button class="button secondary compact" type="button" (click)="start()">
+        Practise again
+      </button>
+    </div>
+  } @else if (exercise(); as currentExercise) {
+    <div class="practice-card">
+      <div class="practice-count">
+        Question {{ exerciseIndex() + 1 }} of {{ lesson.practiceExercises.length }}
+      </div>
+      <p>{{ currentExercise.instruction }}</p>
+      <h4>{{ currentExercise.prompt }}</h4>
+
+      @if (currentExercise.type === 'multiple-choice') {
+        <fieldset class="practice-choices" [disabled]="!!feedback()">
+          <legend class="visually-hidden">Choose one answer</legend>
+          @for (option of currentExercise.options; track option) {
+            <label [class.selected]="answer.response() === option">
+              <input
+                type="radio"
+                name="practice-answer"
+                [value]="option"
+                [ngModel]="answer.response()"
+                (ngModelChange)="answer.response.set($event)"
+              />
+              <span>{{ option }}</span>
+            </label>
+          }
+        </fieldset>
+        <div class="answer-tool-row" role="toolbar" aria-label="Choice correction tools">
+          <button
+            class="button secondary compact answer-tool eraser-tool"
+            type="button"
+            [disabled]="!answer.response() || !!feedback()"
+            (click)="answer.eraseResponse()"
+          >
+            Erase choice
+          </button>
+        </div>
+      } @else if (currentExercise.type === 'word-order') {
+        <div class="practice-word-builder">
+          <div class="practice-answer-zone" aria-label="Your sentence">
+            @if (answer.selectedTokenIndexes().length === 0) {
+              <span>Build the sentence here</span>
+            }
+            @for (
+              tokenIndex of answer.selectedTokenIndexes();
+              track $index;
+              let position = $index
+            ) {
+              <button
+                class="word-token selected-token"
+                type="button"
+                (click)="answer.removeToken(position)"
+              >
+                {{ currentExercise.tokens?.[tokenIndex] }}
+              </button>
+            }
+          </div>
+          <div class="practice-token-bank" aria-label="Available words">
+            @for (token of currentExercise.tokens; track $index; let index = $index) {
+              <button
+                class="word-token"
+                type="button"
+                [disabled]="answer.selectedTokenIndexes().includes(index) || !!feedback()"
+                (click)="answer.chooseToken(index)"
+              >
+                {{ token }}
+              </button>
+            }
+          </div>
+        </div>
+        <div class="answer-tool-row" role="toolbar" aria-label="Sentence correction tools">
+          <button
+            class="button secondary compact answer-tool correction-tape-tool"
+            type="button"
+            [disabled]="answer.selectedTokenIndexes().length === 0 || !!feedback()"
+            (click)="answer.undoLastWord()"
+          >
+            Undo last word
+          </button>
+          <button
+            class="button secondary compact answer-tool eraser-tool"
+            type="button"
+            [disabled]="answer.selectedTokenIndexes().length === 0 || !!feedback()"
+            (click)="answer.clearWordOrder()"
+          >
+            Clear sentence
+          </button>
+        </div>
+      } @else {
+        <label class="practice-text-answer">
+          <span>Your answer</span>
+          <input
+            class="notebook-input"
+            [class.has-writing]="answer.response().length > 0"
+            type="text"
+            autocomplete="off"
+            [disabled]="!!feedback()"
+            [ngModel]="answer.response()"
+            (ngModelChange)="answer.response.set($event)"
+            (keydown.enter)="submit()"
+          />
+        </label>
+        <div class="answer-tool-row" role="toolbar" aria-label="Answer correction tools">
+          <button
+            class="button secondary compact answer-tool eraser-tool"
+            type="button"
+            [disabled]="!answer.response() || !!feedback()"
+            (click)="answer.eraseResponse()"
+          >
+            Erase answer
+          </button>
+        </div>
+      }
+
+      <div class="practice-actions">
+        @if (feedback()) {
+          <button class="button primary" type="button" (click)="continue()">
+            {{
+              exerciseIndex() === lesson.practiceExercises.length - 1
+                ? 'Finish practice'
+                : 'Continue'
+            }}
+          </button>
+        } @else {
+          <button
+            class="button primary"
+            type="button"
+            [disabled]="!answer.canSubmit()"
+            (click)="submit()"
+          >
+            Check answer
+          </button>
+          <button class="button secondary" type="button" (click)="showAnswer()">Show answer</button>
+        }
+      </div>
+
+      @if (feedback(); as answer) {
+        <aside
+          class="feedback"
+          [class.correct]="answer.correct"
+          [class.incorrect]="!answer.correct && !answer.skipped"
+          [class.skipped]="answer.skipped"
+          aria-live="polite"
+        >
+          <span class="teacher-stamp feedback-stamp" aria-hidden="true">
+            {{ answer.skipped ? 'SHOWN' : answer.correct ? 'HYVÄ' : 'CHECK' }}
+          </span>
+          <div class="feedback-icon" aria-hidden="true">
+            {{ answer.skipped ? '?' : answer.correct ? '✓' : '!' }}
+          </div>
+          <div>
+            <p class="feedback-title">
+              {{
+                answer.skipped
+                  ? 'Answer revealed'
+                  : answer.correct
+                    ? 'Correct — hyvä!'
+                    : 'Not quite yet'
+              }}
+            </p>
+            @if (!answer.correct && !answer.skipped) {
+              <p>
+                Your answer: <strong>{{ answer.submittedAnswer }}</strong>
+              </p>
+              @if (answer.diagnosticExplanation) {
+                <p><strong>What happened:</strong> {{ answer.diagnosticExplanation }}</p>
+              }
+            }
+            <p>
+              Correct answer: <strong lang="fi">{{ currentExercise.acceptedAnswers[0] }}</strong>
+            </p>
+            <p class="explanation">{{ currentExercise.explanation }}</p>
+            <p>
+              <small
+                >This was optional practice. Nothing was added to your test history or
+                mistakes.</small
+              >
+            </p>
+          </div>
+        </aside>
+        @if (currentExercise.sentenceExplanation; as sentence) {
+          <section class="sentence-lesson" aria-label="How this practice sentence is built">
+            <div class="lesson-heading">
+              <div>
+                <p class="card-kicker">Step-by-step explanation</p>
+                <h3>How this sentence is built</h3>
+              </div>
+              <p>
+                <span>Complete meaning</span><strong>{{ sentence.translation }}</strong>
+              </p>
+            </div>
+            <div class="sentence-pattern">
+              <span>Sentence pattern</span><strong>{{ sentence.pattern }}</strong>
+            </div>
+            <ol class="sentence-parts">
+              @for (part of sentence.parts; track $index) {
+                <li>
+                  <div class="part-word">
+                    <span>Part {{ $index + 1 }}</span>
+                    <strong lang="fi">{{ part.finnish }}</strong>
+                    <small>{{ part.meaning }}</small>
+                  </div>
+                  <dl>
+                    <div>
+                      <dt>Job in this sentence</dt>
+                      <dd>{{ part.role }}</dd>
+                    </div>
+                    <div>
+                      <dt>Base form</dt>
+                      <dd lang="fi">{{ part.baseForm }}</dd>
+                    </div>
+                    <div>
+                      <dt>How it is made</dt>
+                      <dd>{{ part.formation }}</dd>
+                    </div>
+                  </dl>
+                </li>
+              }
+            </ol>
+          </section>
+        }
+      }
+    </div>
+  }
+</section>
