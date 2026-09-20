@@ -44,6 +44,8 @@
 
 ### Changed
 
+- Aligned the npm package, Angular project, build targets, and Playwright production-build path with the `sisu-steps` product name.
+
 - Changed the client development and Playwright server port from `4200` to `14200` to avoid collisions with local proxy and API services; updated the documented URL and browser launch configuration to match.
 
 - Grouped the Angular learning workflows into purpose-named subfolders for topic catalog/detail, lesson reader/practice, study runner/session/result/vocabulary, statistics overview/topic detail, and learner-data backup/restore/confirmation. Split broad content and progress contracts by concept, extracted shared answer-draft behavior, removed Stats' stylesheet dependency on Topics, grouped offline validators by content family, and separated validation logic from its CLI, with mirrored unit-test ownership and no route, storage, content, or learner-behavior changes.
