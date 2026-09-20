@@ -55,6 +55,74 @@ async function expectHorizontallyInside(surface: Locator, content: Locator) {
   );
 }
 
+async function modalSurface(locator: Locator) {
+  return locator.evaluate((element) => {
+    const style = getComputedStyle(element);
+    return {
+      backgroundColor: style.backgroundColor,
+      backgroundImage: style.backgroundImage,
+      borderRadius: style.borderRadius,
+      borderTopColor: style.borderTopColor,
+      borderTopStyle: style.borderTopStyle,
+      boxShadow: style.boxShadow,
+    };
+  });
+}
+
+async function vocabularyCardMaterial(locator: Locator) {
+  return locator.evaluate((element) => {
+    const style = getComputedStyle(element);
+    const term = getComputedStyle(element.querySelector('dt')!);
+    const definition = getComputedStyle(element.querySelector('dd')!);
+    return {
+      backgroundColor: style.backgroundColor,
+      backgroundImage: style.backgroundImage,
+      borderRadius: style.borderRadius,
+      borderTopColor: style.borderTopColor,
+      boxShadow: style.boxShadow,
+      clipPath: style.clipPath,
+      definitionColor: definition.color,
+      definitionFontSize: definition.fontSize,
+      padding: style.padding,
+      termWeight: term.fontWeight,
+    };
+  });
+}
+
+async function expectModalCloseControl(dialog: Locator) {
+  const geometry = await dialog.evaluate((element) => {
+    const bounds = element.getBoundingClientRect();
+    const closeElement = element.querySelector<HTMLElement>('.modal-sheet__close')!;
+    const close = closeElement.getBoundingClientRect();
+    const closeStyle = getComputedStyle(closeElement);
+    const mark = closeElement.querySelector<HTMLElement>('span')!;
+    const before = getComputedStyle(mark, '::before');
+    const after = getComputedStyle(mark, '::after');
+    return {
+      bounds: bounds.toJSON(),
+      close: close.toJSON(),
+      closeHeight: closeStyle.height,
+      closeWidth: closeStyle.width,
+      clips: element.querySelectorAll('.modal-sheet__clip').length,
+      mark: {
+        afterLeft: after.left,
+        afterTop: after.top,
+        beforeLeft: before.left,
+        beforeTop: before.top,
+      },
+    };
+  });
+  expect(geometry.clips).toBe(0);
+  expect(geometry.close.x).toBeGreaterThanOrEqual(geometry.bounds.x - 1);
+  expect(geometry.close.y).toBeGreaterThanOrEqual(geometry.bounds.y - 1);
+  expect(geometry.close.right).toBeLessThanOrEqual(geometry.bounds.right + 1);
+  expect(geometry.close.bottom).toBeLessThanOrEqual(geometry.bounds.bottom + 1);
+  expect(geometry.closeWidth).toBe('40px');
+  expect(geometry.closeHeight).toBe('40px');
+  expect(geometry.mark.beforeLeft).toBe(geometry.mark.afterLeft);
+  expect(geometry.mark.beforeTop).toBe(geometry.mark.afterTop);
+}
+
 async function expectActionGroupPlacement(group: Locator, placement: 'center' | 'end') {
   await expect(group).toBeVisible();
   const geometry = await group.evaluate((element) => {
@@ -793,8 +861,9 @@ test('sizes cut-paper actions to their labels across app routes', async ({ page 
     const clearAll = page.getByRole('button', { name: 'Clear all history' });
     await expectLabelSizedAction(clearAll);
     await clearAll.click();
-    await expectLabelSizedAction(page.getByRole('button', { name: 'Keep my history' }));
-    await page.getByRole('button', { name: 'Keep my history' }).click();
+    const cancelClear = page.getByRole('button', { name: 'Cancel clearing history' });
+    await expect(cancelClear).toBeVisible();
+    await cancelClear.click();
 
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
       width,
@@ -856,6 +925,73 @@ test('keeps focus visible on clipped actions and note fields', async ({ page }, 
   expect(fieldFocus.color).toBe(fieldFocus.focusRing);
 });
 
+test('shares responsive modal and vocabulary-card styling with safe dismissal', async ({
+  page,
+}) => {
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+
+  const trigger = page.getByRole('button', { name: 'Cheat mode', exact: true });
+  const dialog = page.getByRole('dialog', { name: 'Words for this question' });
+  await expect(trigger).toBeVisible();
+  await expect(dialog).toBeHidden();
+
+  await trigger.click();
+  await expect(dialog).toBeVisible();
+  await expect(dialog.getByText('talo', { exact: true })).toBeVisible();
+  await expect(dialog.getByText('house', { exact: true })).toBeVisible();
+  await expect(dialog.getByText('koulu', { exact: true })).toHaveCount(0);
+  await expect(page.getByRole('button', { name: 'Close Cheat mode' })).toBeFocused();
+  await expect(dialog).not.toContainText('Close Cheat mode');
+  await expectModalCloseControl(dialog);
+  const cheatSurface = await modalSurface(dialog);
+  const cheatVocabularyCard = await vocabularyCardMaterial(
+    dialog.locator('.question-vocabulary > div'),
+  );
+
+  const bounds = await dialog.boundingBox();
+  expect(bounds).not.toBeNull();
+  expect(bounds?.x ?? -1).toBeGreaterThanOrEqual(0);
+  expect((bounds?.x ?? 0) + (bounds?.width ?? 0)).toBeLessThanOrEqual(
+    page.viewportSize()?.width ?? 0,
+  );
+
+  await page.mouse.click(1, 1);
+  await expect(dialog).toBeHidden();
+  await expect(trigger).toBeFocused();
+  await expect(page.locator('.question-count')).toContainText('1 /');
+
+  await trigger.click();
+  await page.keyboard.press('Escape');
+  await expect(dialog).toBeHidden();
+
+  await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
+  expect(
+    await page
+      .locator('.teaching-section')
+      .first()
+      .evaluate((element) => getComputedStyle(element).backgroundColor),
+  ).toBe(cheatSurface.backgroundColor);
+  expect(await vocabularyCardMaterial(page.locator('.lesson-vocabulary dl div').first())).toEqual(
+    cheatVocabularyCard,
+  );
+
+  await page.goto('/stats');
+  const clearHistory = page.getByRole('button', { name: 'Clear all history' });
+  await clearHistory.click();
+  const confirmation = page.getByRole('dialog', { name: 'Clear all learner history?' });
+  await expect(confirmation.getByRole('button', { name: 'Cancel clearing history' })).toBeFocused();
+  await expect(confirmation).not.toContainText('Keep my history');
+  expect(await modalSurface(confirmation)).toEqual(cheatSurface);
+  await expectModalCloseControl(confirmation);
+
+  await confirmation.getByRole('heading', { name: 'Clear all learner history?' }).click();
+  await expect(confirmation).toBeVisible();
+  await page.mouse.click(1, 1);
+  await expect(confirmation).toBeHidden();
+  await expect(clearHistory).toBeFocused();
+  await expect(page.getByRole('status')).toHaveCount(0);
+});
+
 test('places compact action groups according to their page role', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
 
@@ -878,7 +1014,7 @@ test('places compact action groups according to their page role', async ({ page 
     await expectActionGroupPlacement(page.locator('.archive-action-row').first(), 'end');
     await page.getByRole('button', { name: 'Clear all history' }).click();
     await expectActionGroupPlacement(page.locator('.confirmation-actions'), 'end');
-    await page.getByRole('button', { name: 'Keep my history' }).click();
+    await page.getByRole('button', { name: 'Cancel clearing history' }).click();
 
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
       width,
@@ -1644,7 +1780,13 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
 
   const dialog = page.getByRole('dialog');
   await expect(dialog).toContainText('Every attempt, unfinished session, mistake');
-  await expect(dialog.getByRole('button', { name: 'Keep my history' })).toBeFocused();
+  await expect(dialog.getByRole('button', { name: 'Cancel clearing history' })).toBeFocused();
+  await page.mouse.click(1, 1);
+  await expect(dialog).toBeHidden();
+  await expect(clearHistory).toBeFocused();
+  await expect(page.getByRole('status')).toHaveCount(0);
+
+  await clearHistory.click();
   await page.keyboard.press('Escape');
   await expect(dialog).toBeHidden();
   await expect(clearHistory).toBeFocused();
@@ -1662,7 +1804,7 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   await expect(page.getByRole('dialog')).toContainText(
     'All saved attempts and mistakes for this test will be removed.',
   );
-  await page.getByRole('dialog').getByRole('button', { name: 'Keep my history' }).click();
+  await page.getByRole('dialog').getByRole('button', { name: 'Cancel clearing history' }).click();
 
   const clearTopic = page.getByRole('button', { name: 'Clear topic history' });
   await clearTopic.click();

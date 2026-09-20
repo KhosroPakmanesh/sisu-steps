@@ -1,0 +1,51 @@
+@if (vocabulary().length > 0) {
+  <div class="cheat-mode-access">
+    <span>Need a word?</span>
+    <button #trigger class="button secondary compact" type="button" (click)="open()">
+      Cheat mode
+    </button>
+  </div>
+
+  <dialog
+    #dialog
+    class="modal-sheet cheat-mode-dialog"
+    tabindex="-1"
+    aria-labelledby="cheat-mode-title"
+    aria-describedby="cheat-mode-description"
+    (cancel)="close(true, $event)"
+    (close)="handleClosed()"
+    (click)="dismissFromBackdrop($event)"
+    (keydown.escape)="close(true, $event)"
+  >
+    <button
+      #closeButton
+      class="modal-sheet__close"
+      type="button"
+      aria-label="Close Cheat mode"
+      autofocus
+      (click)="close()"
+    >
+      <span aria-hidden="true"></span>
+    </button>
+    <header class="modal-sheet__header cheat-mode-heading">
+      <p class="card-kicker">Cheat mode</p>
+      <h2 id="cheat-mode-title">Words for this question</h2>
+    </header>
+    <p id="cheat-mode-description">
+      This reference does not affect your score. It closes when you move to the next question.
+    </p>
+    <dl class="question-vocabulary">
+      @for (item of vocabulary(); track item.finnish) {
+        <div>
+          <dt lang="fi">{{ item.finnish }}</dt>
+          <dd>
+            {{ item.english }}
+            @if (item.type === 'fixed-expression') {
+              <small>fixed expression</small>
+            }
+          </dd>
+        </div>
+      }
+    </dl>
+  </dialog>
+}

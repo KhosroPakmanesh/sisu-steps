@@ -29,3 +29,16 @@ Object.defineProperty(window, 'localStorage', {
   configurable: true,
   value: testLocalStorage,
 });
+
+if (!HTMLDialogElement.prototype.showModal) {
+  HTMLDialogElement.prototype.showModal = function showModal(): void {
+    this.setAttribute('open', '');
+  };
+}
+
+if (!HTMLDialogElement.prototype.close) {
+  HTMLDialogElement.prototype.close = function close(): void {
+    this.removeAttribute('open');
+    this.dispatchEvent(new Event('close'));
+  };
+}

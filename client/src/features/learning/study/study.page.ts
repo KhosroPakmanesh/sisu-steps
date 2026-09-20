@@ -19,9 +19,10 @@ import { findSession, mistakeCount } from '../shared/progress/progress.queries';
 import { LearningStateStore } from '../shared/state/learning-state.store';
 import { SessionAnswerService } from './session-answer.service';
 import { SessionStartService } from './session-start.service';
+import { QuestionVocabularyDialogComponent } from './question-vocabulary-dialog.component';
 @Component({
   selector: 'app-runner',
-  imports: [FormsModule, RouterLink],
+  imports: [FormsModule, QuestionVocabularyDialogComponent, RouterLink],
   templateUrl: './study.page.html',
   styleUrl: './study.page.css',
   host: { '(keydown.enter)': 'handleEnter($event)' },
@@ -282,10 +283,7 @@ export class StudyPage implements RouteReadiness {
   }
 
   private focusState(target: 'question' | 'continue' | 'result'): void {
-    if (target === 'continue') {
-      this.continueButton()?.nativeElement.focus();
-      return;
-    }
+    if (target === 'continue') return this.continueButton()?.nativeElement.focus();
     if (target === 'result') {
       this.resultAction()?.nativeElement.focus();
       return;

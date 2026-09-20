@@ -32,6 +32,8 @@ Deliver a browser-only Angular exercise book and a level `0 - A1.3` grammar-foun
 - Prominent but optional fixed review sessions with locally calculated due dates
 - Separate corrected and delayed-mastery states using pre-authored parallel exercises
 - Private topic and lesson notes stored with local learner data and included in backup and restore
+- Optional score-neutral **Cheat mode** access to only the current Study question's lesson vocabulary
+- One responsive loose-sheet modal system with contained stationery, an icon-only close action, and safe backdrop dismissal
 
 ## Non-goals
 
@@ -85,6 +87,8 @@ Deliver a browser-only Angular exercise book and a level `0 - A1.3` grammar-foun
 17. Remove the guided-combination stage, give every non-review topic separate focused preparation and testing, and reserve multi-topic combination for review.
 18. Remove the redundant Core/Extended test-set classification, group the learning map by Focused tests and Reviews, and communicate each group through its section rather than repeated card badges.
 19. Add one private sticky note per topic and lesson with validated local persistence, backup/restore coverage, and explicit clearing behavior.
+20. Add a responsive, keyboard-accessible **Cheat mode** dialog that resolves only the current Study question's declared vocabulary and closes for every newly opened question without changing learner data.
+21. Consolidate confirmation and reference dialogs on one reusable loose-sheet surface without clip decoration, replace textual cancellation controls with a compact top-right accessible × whose mark is precisely centered, and treat Escape or backdrop activation as safe cancellation.
 
 ## Risks
 
@@ -102,6 +106,8 @@ Deliver a browser-only Angular exercise book and a level `0 - A1.3` grammar-foun
 - Exercise and lesson IDs must remain globally unique because mistakes, corrections, mastery, and lesson completion refer to them outside a single active topic.
 - Multi-pack backup migration must preserve compatible existing progress while rejecting unknown or internally inconsistent references.
 - Learner-authored notes must survive compatible pack updates without retaining references to removed topics or lessons, and destructive clearing text must state when notes are affected.
+- A whole-test vocabulary reference could overwhelm the learner or become a substitute for preparation; Cheat mode therefore remains closed by default and exposes only the current question's declared words.
+- An icon-only close control can become ambiguous or cramped at narrow widths; every modal therefore requires a purpose-specific accessible name, a compact practical touch target, visible focus, a precisely centered ×, and clear contained placement at the top-right.
 
 ## 2026-08-31 single-review consolidation
 

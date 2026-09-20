@@ -1,5 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, ElementRef, effect, inject, input, output, viewChild } from '@angular/core';
+import { isDialogBackdropClick } from '@/shared/browser/dialog-backdrop';
 
 export interface ConfirmationSheetRequest {
   eyebrow: string;
@@ -18,7 +19,7 @@ export class ConfirmationSheetComponent {
   public readonly resolved = output<boolean>();
   private readonly document = inject(DOCUMENT);
   private readonly dialog = viewChild<ElementRef<HTMLDialogElement>>('dialog');
-  private readonly cancelButton = viewChild<ElementRef<HTMLButtonElement>>('cancelButton');
+  private readonly closeButton = viewChild<ElementRef<HTMLButtonElement>>('closeButton');
   private returnFocus: HTMLElement | null = null;
 
   public constructor() {
@@ -32,7 +33,7 @@ export class ConfirmationSheetComponent {
         dialog.showModal();
       }
       if (request) {
-        this.cancelButton()?.nativeElement.focus();
+        this.closeButton()?.nativeElement.focus();
       } else if (dialog.open) {
         dialog.close();
       }
@@ -42,6 +43,11 @@ export class ConfirmationSheetComponent {
   protected cancel(event?: Event): void {
     event?.preventDefault();
     this.finish(false);
+  }
+
+  protected dismissFromBackdrop(event: MouseEvent): void {
+    const dialog = this.dialog()?.nativeElement;
+    if (dialog && isDialogBackdropClick(event, dialog)) this.cancel();
   }
 
   protected confirm(): void {

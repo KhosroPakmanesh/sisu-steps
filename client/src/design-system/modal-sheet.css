@@ -1,0 +1,136 @@
+.modal-sheet {
+  --modal-sheet-width: 34rem;
+
+  position: fixed;
+  width: min(calc(100% - 2rem), var(--modal-sheet-width));
+  max-height: min(90dvh, 38rem);
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  overflow: visible auto;
+  border: 1px solid var(--border-control);
+  border-left: 0.35rem solid transparent;
+  border-radius: 0.18rem 0.5rem 0.25rem 0.35rem;
+  background-color: var(--surface-stationery);
+  background-image:
+    linear-gradient(to right, transparent 2rem, var(--notebook-margin) 2rem 2.05rem, transparent 0),
+    repeating-linear-gradient(to bottom, transparent 0 1.95rem, var(--notebook-rule) 1.95rem 2rem);
+  color: var(--text-primary);
+  box-shadow:
+    0.28rem 0.35rem 0 var(--surface-subtle),
+    0 2rem 5rem rgb(0 0 0 / 38%);
+  transform: rotate(-0.35deg);
+  animation: modal-sheet-arrives var(--motion-standard) cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.modal-sheet::backdrop {
+  background:
+    radial-gradient(circle at center, transparent, rgb(9 15 14 / 46%)), rgb(9 15 14 / 38%);
+  backdrop-filter: blur(3px);
+}
+
+.modal-sheet__header {
+  padding-right: 3.5rem;
+}
+
+.modal-sheet__close {
+  position: absolute;
+  z-index: 1;
+  top: 0.65rem;
+  right: 0.65rem;
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  min-width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-small);
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font: inherit;
+  cursor: pointer;
+  box-shadow: 0.12rem 0.16rem 0 var(--paper-edge);
+  transition:
+    transform var(--motion-fast) ease,
+    box-shadow var(--motion-fast) ease;
+}
+
+.modal-sheet__close span {
+  position: relative;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+}
+
+.modal-sheet__close span::before,
+.modal-sheet__close span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.15rem;
+  height: 0.13rem;
+  border-radius: 999px;
+  background: currentcolor;
+  content: '';
+}
+
+.modal-sheet__close span::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal-sheet__close span::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal-sheet__close:hover {
+  box-shadow: 0.18rem 0.24rem 0 var(--paper-edge);
+  transform: translateY(-0.1rem) rotate(1deg);
+}
+
+.modal-sheet__close:active {
+  box-shadow: 0.06rem 0.08rem 0 var(--paper-edge);
+  transform: translateY(0.08rem);
+}
+
+.modal-sheet__close:focus-visible {
+  outline: 0.2rem solid var(--focus-ring);
+  outline-offset: -0.35rem;
+}
+
+.modal-sheet__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+}
+
+@keyframes modal-sheet-arrives {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem) rotate(1.5deg) scale(0.96);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-sheet,
+  .modal-sheet__close {
+    animation: none;
+    transition: none;
+  }
+
+  .modal-sheet__close:hover,
+  .modal-sheet__close:active {
+    transform: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .modal-sheet,
+  .modal-sheet__close {
+    border-color: CanvasText;
+    background: Canvas;
+    color: CanvasText;
+    box-shadow: none;
+  }
+}

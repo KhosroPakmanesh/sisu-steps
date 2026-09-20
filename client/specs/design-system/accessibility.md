@@ -27,7 +27,7 @@ Accessibility is part of implementation and validation, not a cleanup phase.
 - Keep **Show answer** as a native keyboard-operable button without an `Alt+A` binding, shortcut metadata, or a visible shortcut annotation.
 - Permit fully custom control appearance only while the underlying link, button, input, textarea, radio, checkbox, select, file input, progress, or dialog semantics and keyboard behavior remain native.
 - Keep correction/eraser actions and sticky-note fields visible, labelled, focusable, and understandable without recognizing their stationery metaphors; do not put them behind collapse/expand controls. The report filter is withdrawn.
-- For destructive confirmation, focus the safe Cancel action when the modal sheet opens, cancel on Escape, return focus to the initiating control, and execute only through explicit confirmation.
+- For every modal, focus the purpose-labelled icon-only × when the sheet opens; dismiss through ×, Escape, or backdrop activation; ignore ordinary clicks inside the sheet; and return focus to the initiating control. For destructive confirmation, treat every dismissal as cancellation and execute only through the explicit consequence-labelled action.
 - Keep route content available immediately during page-turn effects, and reduce all desk, page, tab, paper, stamp, pencil, light, and token movement to a static state under `prefers-reduced-motion`.
 
 ## Validation

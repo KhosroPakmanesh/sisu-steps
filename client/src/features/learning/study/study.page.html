@@ -107,6 +107,7 @@
           }
         </aside>
       }
+      <app-question-vocabulary-dialog [exercise]="currentExercise" [pack]="loadedPack()!.pack" />
       <section class="exercise-card">
         <div class="exercise-context">
           <span class="type-label">{{ currentExercise.type.replace('-', ' ') }}</span>

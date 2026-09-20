@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added a responsive, keyboard-accessible **Cheat mode** to scored Study, scheduled review, and mistake practice. It stays hidden by default, shows only the current question's lesson-authored Finnish vocabulary and English meanings, closes for each new question, and never changes scoring or learner progress.
+
 - Made scored tests, scheduled reviews, and mistake practice fully keyboard-completable without changing their visible interface: each exercise focuses its first answer control, Enter checks valid answers and advances from feedback, word-order tokens retain native keyboard activation, results focus their first action, and held Enter presses cannot duplicate an operation.
 
 - Labeled topic-pack groups on the topic catalog and stats catalog. Catalog schema 2 makes `content/index.json` declare each group once with its stable ID, learner-facing title, and ordered pack IDs; grouped packs render together on a ruled, punched white-paper sheet inside the level sheet with a real heading, topic cards rest on the warm stationery paper in both appearances, and validation rejects invalid or duplicate group and pack registrations.
@@ -41,6 +43,8 @@
 - Safe choice, text, and word-order correction controls.
 
 ### Changed
+
+- Unified confirmation and Cheat mode dialogs on one responsive ruled-paper modal shell without clip decoration, replaced textual cancellation controls with compact accessible top-right × buttons with precisely centered marks, added safe backdrop dismissal, and matched Cheat mode word cards to lesson vocabulary cards.
 
 - Reworked the five pending demonstrative-pronoun packs with natural English glosses and translations, plausible noun/location combinations, form-only introductory support, explicit bounded contexts for all independent inessive tasks, natural English location alternatives, and distractor-specific feedback. Demonstrative validation now rejects malformed glosses, spoken `tää`/`toi`/`nää`/`noi`, scene-only sentence duplicates, untaught Review-exercise targets, hidden malformed Finnish question frames, missing inessive contexts, and repeated wrong-option feedback while preserving all 632 scored IDs and 96 practice IDs.
 

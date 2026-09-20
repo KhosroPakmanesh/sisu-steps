@@ -136,6 +136,22 @@ describe('StudyPage', () => {
     );
   });
 
+  it('keeps current-question vocabulary hidden until cheat mode opens without storing progress', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const dialog = element.querySelector('.cheat-mode-dialog') as HTMLDialogElement;
+    expect(dialog.open).toBe(false);
+
+    (element.querySelector('.cheat-mode-access button') as HTMLButtonElement).click();
+    fixture.detectChanges();
+
+    expect(dialog.open).toBe(true);
+    expect(dialog.textContent).toContain('talo');
+    expect(dialog.textContent).toContain('house');
+    expect(dialog.textContent).not.toContain('koulu');
+    expect(dialog.textContent).not.toContain('well');
+    expect(storeSnapshot()).toEqual({ attempts: 0, answers: 0 });
+  });
+
   it('does not reveal the answer or intercept Alt+A', async () => {
     const reveal = vi.spyOn(answers, 'revealAnswer');
     const event = new KeyboardEvent('keydown', { key: 'a', altKey: true, cancelable: true });

@@ -15,7 +15,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - State which attempts, sessions, mistakes, lessons, corrections, and mastery records will be removed.
 - State that bundled lessons and exercises remain available.
 - State when the action cannot be undone without a backup.
-- Present the consequence on a modal loose sheet, focus the safe cancellation action first, let Escape cancel, and return focus to the action that opened it.
+- Present the consequence on the shared modal loose sheet, focus its purpose-labelled top-right × first, and treat ×, Escape, or backdrop activation as safe cancellation before returning focus to the action that opened it. Keep only the explicit destructive action in the footer; do not add a textual cancellation button.
 
 ## Backup restore
 
