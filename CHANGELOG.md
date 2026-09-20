@@ -44,6 +44,8 @@
 
 ### Changed
 
+- Made the decorative desk pencil, ruler, and paperclip respond when noticed with restrained material-specific hover motion while keeping them non-operable, out of the focus order, hidden on phones, and static under reduced-motion preferences.
+
 - Aligned the npm package, Angular project, build targets, and Playwright production-build path with the `sisu-steps` product name.
 
 - Changed the client development and Playwright server port from `4200` to `14200` to avoid collisions with local proxy and API services; updated the documented URL and browser launch configuration to match.

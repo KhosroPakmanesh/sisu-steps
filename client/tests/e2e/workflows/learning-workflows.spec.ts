@@ -1883,6 +1883,114 @@ test('turns the interactive desk lamp off in Day and makes it radiate in Night',
   expect(await bulb.evaluate((element) => getComputedStyle(element).boxShadow)).not.toBe('none');
 });
 
+test('lets decorative desk stationery react to hover without becoming controls', async ({
+  page,
+}, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.setViewportSize({ width: 1920, height: 900 });
+  await page.goto('/');
+
+  const ruler = page.locator('.desk-ruler');
+  const pencil = page.locator('.desk-pencil');
+  const paperclip = page.locator('.desk-paperclip');
+  const stationery = [ruler, pencil, paperclip];
+
+  const hoverExposedDeskSide = async (
+    object: (typeof stationery)[number],
+    side: 'left' | 'right',
+  ): Promise<void> => {
+    const exposedPoint = await object.evaluate((element, deskSide) => {
+      const objectBox = element.getBoundingClientRect();
+      const coverBox = document
+        .querySelector<HTMLElement>('.workbook-cover')!
+        .getBoundingClientRect();
+      const exposedStart =
+        deskSide === 'left' ? objectBox.left : Math.max(objectBox.left, coverBox.right);
+      const exposedEnd =
+        deskSide === 'left' ? Math.min(objectBox.right, coverBox.left) : objectBox.right;
+
+      for (let row = 1; row < 10; row += 1) {
+        for (let column = 1; column < 10; column += 1) {
+          const x = exposedStart + ((exposedEnd - exposedStart) * column) / 10;
+          const y = objectBox.top + (objectBox.height * row) / 10;
+          const target = document.elementFromPoint(x, y);
+          if (target === element || (target instanceof Node && element.contains(target))) {
+            return { x, y };
+          }
+        }
+      }
+      return undefined;
+    }, side);
+    expect(exposedPoint).toBeDefined();
+    await page.mouse.move(exposedPoint!.x, exposedPoint!.y);
+    await expect.poll(() => object.evaluate((element) => element.matches(':hover'))).toBe(true);
+  };
+
+  for (const object of stationery) {
+    await expect(object).toBeVisible();
+    await expect(object).toHaveAttribute('aria-hidden', 'true');
+    expect(
+      await object.evaluate((element) => ({
+        cursor: getComputedStyle(element).cursor,
+        tagName: element.tagName,
+        tabIndex: (element as HTMLElement).tabIndex,
+      })),
+    ).toEqual({ cursor: 'default', tagName: 'SPAN', tabIndex: -1 });
+  }
+
+  const rulerRestingPosition = await ruler.evaluate(
+    (element) => getComputedStyle(element).backgroundPosition,
+  );
+  await hoverExposedDeskSide(ruler, 'right');
+  await expect
+    .poll(() => ruler.evaluate((element) => getComputedStyle(element).backgroundPosition))
+    .not.toBe(rulerRestingPosition);
+
+  await hoverExposedDeskSide(pencil, 'left');
+  await expect
+    .poll(() =>
+      pencil.evaluate((element) =>
+        Number.parseFloat(getComputedStyle(element, '::before').opacity),
+      ),
+    )
+    .toBeGreaterThan(0.5);
+
+  const paperclipRestingTransform = await paperclip.evaluate(
+    (element) => getComputedStyle(element).transform,
+  );
+  await hoverExposedDeskSide(paperclip, 'right');
+  await expect
+    .poll(() => paperclip.evaluate((element) => getComputedStyle(element).transform))
+    .not.toBe(paperclipRestingTransform);
+
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.mouse.move(0, 0);
+  for (const [object, side] of [
+    [ruler, 'right'],
+    [pencil, 'left'],
+    [paperclip, 'right'],
+  ] as const) {
+    const restingTransform = await object.evaluate(
+      (element) => getComputedStyle(element).transform,
+    );
+    const restingFilter = await object.evaluate((element) => getComputedStyle(element).filter);
+    await hoverExposedDeskSide(object, side);
+    await expect
+      .poll(() => object.evaluate((element) => getComputedStyle(element).transform))
+      .toBe(restingTransform);
+    await expect
+      .poll(() => object.evaluate((element) => getComputedStyle(element).filter))
+      .not.toBe(restingFilter);
+  }
+  await expect
+    .poll(() =>
+      pencil.evaluate((element) =>
+        Number.parseFloat(getComputedStyle(element, '::before').opacity),
+      ),
+    )
+    .toBe(0);
+});
+
 test('layers the faded desk lamp behind the workbook folder at compact widths', async ({
   page,
 }, testInfo) => {

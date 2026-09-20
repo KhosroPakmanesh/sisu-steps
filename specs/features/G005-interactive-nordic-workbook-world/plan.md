@@ -16,6 +16,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 - An Appearance control presented as one compact, unframed side-view mechanical toggle with Day, Automatic, and Night icons, a metal mounting base, and three lever positions while retaining the existing `automatic`, `light`, and `dark` preference values.
 - Route-specific physical scenes for the topic catalog, topic learning map, lessons, study, results, reports, and data management.
 - Immediate page-turn, tab-slide, paper-lift, stamp, pencil-circle, token-snap, answer-line, and light-change motion with a static reduced-motion mode.
+- Decorative pointer reactions for the desk pencil, ruler, and paperclip that communicate material without adding controls, state changes, or persistent motion.
 - Clearly labelled correction or eraser actions that affect only the current unsubmitted response.
 - Stronger selected-tab, selected-card, ruled-input, and stamped-completion feedback.
 - A custom confirmation sheet for destructive data actions with complete dialog semantics and deliberate confirmation.

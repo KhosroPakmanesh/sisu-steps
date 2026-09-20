@@ -83,6 +83,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Object-specific hover motion
 
+- Let decorative desk stationery react without becoming controls: the pencil may lift and sketch a short line, the ruler may nudge with a light sweep, and the paperclip may flex through shadow and shallow travel. Keep their cursor informational, exclude them from the focus order, and never attach application behavior or learner state to these reactions.
 - Preserve movement as part of the workbook's physical feedback, but let material and attachment determine its direction. Loose paper lifts and straightens, folder tabs slide along their horizontal track, taped sheets pivot around their taped edge, bound covers retain their individual resting angle, sticky notes move around their top tape, index cards advance along the learning path, and vocabulary cutouts lift before settling into the answer strip.
 - Use the strongest travel for directly operable objects. Reading surfaces move less, and informational rulers, summaries, headings, and ledger structures use a one- or two-pixel shuffle so they do not imply a click action. Disabled controls stay still.
 - Give compact navigation marks a local paper response while keeping their surrounding wordmark stable. For editable paper, keep the field under the pointer and move its label or ruled edge instead. When consequence text belongs to one explicit action, let that copy respond only while the owning action is hovered or focused so empty row space never implies a larger click target.
