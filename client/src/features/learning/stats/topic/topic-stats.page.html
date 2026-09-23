@@ -8,19 +8,17 @@
     </section>
   } @else if (pack(); as activePack) {
     <header class="stats-hero">
-      <div>
-        <a class="back-link" [routerLink]="paths.stats">← All stats</a>
+      <a class="back-link" [routerLink]="paths.stats">← All stats</a>
+      <div class="stats-hero-copy">
         <p class="eyebrow">Topic stats · Level: {{ activePack.level }}</p>
         <h1>{{ activePack.title }}</h1>
         <p>{{ activePack.summary }}</p>
         <p class="notebook-note" aria-hidden="true">progress, not perfection</p>
       </div>
 
-      <section class="at-a-glance" aria-labelledby="at-a-glance-heading">
-        <p class="card-kicker">Topic summary</p>
-        <h2 id="at-a-glance-heading">At a glance</h2>
-        <dl class="stats-overview assignment-sheet">
-          <div class="stats-overview-primary">
+      <section class="at-a-glance" aria-label="At a glance">
+        <dl class="stats-overview assignment-sheet assignment-summary">
+          <div>
             <dt>Completed attempts</dt>
             <dd>{{ attemptCount() }}</dd>
           </div>

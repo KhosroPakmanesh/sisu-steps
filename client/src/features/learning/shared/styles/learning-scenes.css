@@ -17,8 +17,7 @@
 }
 
 .continue-card,
-.topic-page .topic-overview {
-  clip-path: polygon(0.35rem 0, 100% 0.2rem, calc(100% - 0.2rem) 100%, 0 98%);
+main.page-shell .assignment-summary {
   transform: rotate(0.45deg);
   transition:
     transform var(--motion-standard) ease,
@@ -37,7 +36,7 @@ main.page-shell .continue-card:focus-within {
   transform: translateY(-0.3rem) rotate(0.16deg);
 }
 
-main.topic-page .topic-overview:hover {
+main.page-shell .assignment-summary:hover {
   z-index: 2;
   filter: drop-shadow(0.35rem 0.48rem 0 var(--paper-edge))
     drop-shadow(0.55rem 0.8rem 1rem var(--notebook-shadow));

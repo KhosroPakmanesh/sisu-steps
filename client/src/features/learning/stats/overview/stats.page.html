@@ -1,7 +1,7 @@
 <main class="page-shell stats-page">
   <header class="stats-hero">
+    <a class="back-link" [routerLink]="paths.home">← Back to Notebook</a>
     <div class="stats-hero-copy">
-      <a class="back-link" [routerLink]="paths.home">← Back to Notebook</a>
       <p class="eyebrow">Your progress and data</p>
       <h1>Statistics</h1>
       <p>
@@ -11,11 +11,7 @@
 
     <section class="cumulative-summary" aria-labelledby="cumulative-stats-heading">
       <h2 class="visually-hidden" id="cumulative-stats-heading">Cumulative statistics</h2>
-      <dl class="cumulative-overview assignment-sheet">
-        <div class="cumulative-overview-primary">
-          <dt>Cumulative statistics</dt>
-          <dd>All topics</dd>
-        </div>
+      <dl class="cumulative-overview assignment-sheet assignment-summary">
         <div>
           <dt>Completed attempts</dt>
           <dd>{{ cumulativeAttempts() }}</dd>
@@ -24,7 +20,7 @@
           <dt>Average score</dt>
           <dd>{{ cumulativeAverage() === null ? '—' : cumulativeAverage() + '%' }}</dd>
         </div>
-        <div class="cumulative-overview-wide">
+        <div>
           <dt>Unresolved mistakes</dt>
           <dd>{{ cumulativeMistakes() }}</dd>
         </div>

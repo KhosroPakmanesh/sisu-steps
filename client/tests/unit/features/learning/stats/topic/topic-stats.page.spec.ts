@@ -36,7 +36,7 @@ describe('TopicStatsPage', () => {
     const element = fixture.nativeElement as HTMLElement;
 
     expect(element.querySelector('h1')?.textContent?.trim()).toBe('Finnish foundations');
-    expect(element.querySelector('#at-a-glance-heading')?.textContent?.trim()).toBe('At a glance');
+    expect(element.querySelector('.at-a-glance')?.getAttribute('aria-label')).toBe('At a glance');
     expect(element.querySelectorAll('.stats-row')).toHaveLength(2);
     expect(element.querySelectorAll('.stats-clear-cell button')).toHaveLength(2);
     expect(element.querySelector('#manage-topic-heading')?.textContent?.trim()).toBe(
@@ -57,8 +57,12 @@ describe('TopicStatsPage', () => {
   it('uses semantic ledger headings and the established statistics hierarchy', () => {
     const element = fixture.nativeElement as HTMLElement;
 
-    expect(element.querySelector('.stats-hero .back-link + .eyebrow')).not.toBeNull();
+    expect(element.querySelector('.stats-hero > .back-link')).not.toBeNull();
+    expect(element.querySelector('.stats-hero-copy > .eyebrow')).not.toBeNull();
     expect(element.querySelector('.stats-overview.assignment-sheet')).not.toBeNull();
+    expect(element.querySelector('.stats-overview.assignment-summary')).not.toBeNull();
+    expect(element.querySelector('.at-a-glance > h2')).toBeNull();
+    expect(element.querySelector('.at-a-glance > .card-kicker')).toBeNull();
     expect(element.querySelectorAll('.stats-overview > div')).toHaveLength(5);
     expect(element.querySelector('#test-results-heading')?.textContent?.trim()).toBe(
       'Test results',

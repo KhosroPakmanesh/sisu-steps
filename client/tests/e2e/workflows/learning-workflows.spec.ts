@@ -12,6 +12,39 @@ function vowelHarmonyProgress(page: Page) {
   return page.locator('main.topic-stats-page');
 }
 
+async function expectBalancedSummaryGutters(summary: Locator) {
+  const gutters = await summary.evaluate((sheet) => {
+    const cells = [...sheet.querySelectorAll(':scope > div')];
+    const textBounds = (cell: Element) =>
+      [...cell.querySelectorAll('dt, dd')].map((text) => {
+        const range = document.createRange();
+        range.selectNodeContents(text);
+        return range.getBoundingClientRect();
+      });
+    const leftText = cells.filter((_, index) => index % 2 === 0).flatMap(textBounds);
+    const rightText = cells.filter((_, index) => index % 2 === 1).flatMap(textBounds);
+    const left = Math.min(...leftText.map((box) => box.left));
+    const right = Math.max(...rightText.map((box) => box.right));
+    const sheetBox = sheet.getBoundingClientRect();
+    return {
+      columns: getComputedStyle(sheet).gridTemplateColumns.split(' ').length,
+      left: left - sheetBox.left,
+      right: sheetBox.right - right,
+      center:
+        Math.min(...rightText.map((box) => box.left)) -
+        Math.max(...leftText.map((box) => box.right)),
+      wide: window.innerWidth >= 768,
+    };
+  });
+  if (gutters.columns === 2) {
+    expect(Math.abs(gutters.left - gutters.right)).toBeLessThanOrEqual(20);
+    if (gutters.wide) {
+      expect(gutters.center).toBeGreaterThan(0);
+      expect(gutters.center).toBeLessThanOrEqual(Math.max(gutters.left, gutters.right) + 20);
+    }
+  }
+}
+
 async function expectClippedPaper(locator: Locator) {
   await expect(locator).toBeVisible();
   expect(await locator.evaluate((element) => getComputedStyle(element).clipPath)).not.toBe('none');
@@ -551,8 +584,10 @@ test('keeps phone navigation in flow and study actions within reach without chan
   ).toHaveLength(4);
 
   await page.goto(`/stats/${TOPIC_SEGMENT}`);
-  await expect(page.locator('.stats-overview-primary')).toHaveCSS('grid-column-start', '1');
-  await expect(page.locator('.stats-overview-primary')).toHaveCSS('grid-column-end', '-1');
+  const summary = page.locator('.stats-overview');
+  await expect(summary).toHaveClass(/assignment-summary/);
+  await expect(summary.locator(':scope > div')).toHaveCount(5);
+  await expect(summary).toHaveCSS('grid-template-columns', /\S+\s+\S+/);
 });
 
 test('keeps the folder margin fixed between responsive breakpoints', async ({ page }, testInfo) => {
@@ -1164,7 +1199,6 @@ test('saves a private sticky note without leaving the workbook', async ({ page }
 
 test('uses dedicated notebook objects for repeated surfaces and return links', async ({ page }) => {
   await page.goto('/');
-  const compactHeroGap = (page.viewportSize()?.width ?? 1_440) < 768 ? '12px' : '20px';
   const continueCard = page.locator('.continue-card');
   const topicCard = page.locator('.topic-card').first();
   await expectClippedPaper(continueCard);
@@ -1246,12 +1280,10 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   const topicPageWidth = await page
     .locator('main.topic-page')
     .evaluate((element) => element.getBoundingClientRect().width);
-  await expect(page.locator('.topic-hero .back-link + .eyebrow')).toHaveCSS(
-    'margin-top',
-    compactHeroGap,
-  );
+  await expect(page.locator('.topic-hero > .back-link')).toBeVisible();
+  await expect(page.locator('.topic-hero-copy > .eyebrow')).toBeVisible();
   const topicOverview = page.locator('.topic-overview');
-  await expect(topicOverview).toHaveClass(/assignment-sheet/);
+  await expect(topicOverview).toHaveClass(/assignment-sheet assignment-summary/);
   expect(
     await topicOverview.evaluate((element) => {
       const style = getComputedStyle(element);
@@ -1282,19 +1314,61 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
     .locator('dt')
     .first()
     .evaluate((element) => {
-      const probe = document.createElement('span');
-      probe.style.color = 'var(--text-primary)';
-      document.body.append(probe);
-      const presentation = {
+      return {
         color: getComputedStyle(element).color,
-        expectedColor: getComputedStyle(probe).color,
+        expectedColor: getComputedStyle(document.querySelector('.topic-hero-copy > .eyebrow')!)
+          .color,
         weight: Number.parseInt(getComputedStyle(element).fontWeight, 10),
       };
-      probe.remove();
-      return presentation;
     });
   expect(labelPresentation.color).toBe(labelPresentation.expectedColor);
   expect(labelPresentation.weight).toBeGreaterThanOrEqual(700);
+  expect(
+    new Set(
+      await topicOverview
+        .locator('dt')
+        .evaluateAll((labels) => labels.map((label) => getComputedStyle(label).color)),
+    ),
+  ).toEqual(new Set([labelPresentation.color]));
+  const summaryLayout = await topicOverview.evaluate((element) => {
+    const style = getComputedStyle(element);
+    const metric = getComputedStyle(element.querySelector(':scope > div')!);
+    return {
+      columns: style.gridTemplateColumns.split(' ').length,
+      paddingSides: [style.paddingTop, style.paddingRight, style.paddingBottom, style.paddingLeft],
+      metricPaddingSides: [
+        metric.paddingTop,
+        metric.paddingRight,
+        metric.paddingBottom,
+        metric.paddingLeft,
+      ],
+      rowGap: style.rowGap,
+      gridAutoRows: style.gridAutoRows,
+      labelFont: getComputedStyle(element.querySelector('dt')!).fontSize,
+      valueFont: getComputedStyle(element.querySelector('dd')!).fontSize,
+    };
+  });
+  expect(new Set(summaryLayout.paddingSides).size).toBe(1);
+  expect(new Set(summaryLayout.metricPaddingSides).size).toBe(1);
+  expect(summaryLayout.rowGap).toBe(summaryLayout.metricPaddingSides[0]);
+  expect(summaryLayout.gridAutoRows).toBe('auto');
+  await expectBalancedSummaryGutters(topicOverview);
+  const topicHeroAlignment = await page.locator('.topic-hero').evaluate((hero) => {
+    const copy = hero.querySelector('.topic-hero-copy')!.getBoundingClientRect();
+    const sheet = hero.querySelector('.topic-overview')!.getBoundingClientRect();
+    return {
+      columns: getComputedStyle(hero).gridTemplateColumns.split(' ').length,
+      alignItems: getComputedStyle(hero).alignItems,
+      centerDelta: Math.abs((copy.top + copy.bottom - sheet.top - sheet.bottom) / 2),
+    };
+  });
+  if (topicHeroAlignment.columns > 1) {
+    expect(topicHeroAlignment.alignItems).toBe('center');
+    expect(topicHeroAlignment.centerDelta).toBeLessThanOrEqual(2);
+    expect(
+      await topicOverview.evaluate((element) => element.getBoundingClientRect().height),
+    ).toBeLessThan(200);
+  }
 
   const overviewRestingTransform = await topicOverview.evaluate(
     (element) => getComputedStyle(element).transform,
@@ -1393,28 +1467,75 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   ).toBeCloseTo(topicPageWidth, 1);
   const statsBackLink = page.getByRole('link', { name: 'All stats' });
   await expect(statsBackLink).toHaveClass(/back-link/);
-  await expect(page.locator('.stats-hero .back-link + .eyebrow')).toHaveCSS(
-    'margin-top',
-    compactHeroGap,
-  );
+  await expect(page.locator('.stats-hero > .back-link')).toBeVisible();
+  await expect(page.locator('.stats-hero-copy > .eyebrow')).toBeVisible();
   const statsOverview = page.locator('.stats-overview');
   const heroLayout = await page.locator('.stats-hero').evaluate((hero) => {
-    const content = hero.firstElementChild as HTMLElement | null;
+    const content = hero.querySelector('.stats-hero-copy') as HTMLElement | null;
     const overview = hero.querySelector('.at-a-glance') as HTMLElement | null;
     return {
       columns: getComputedStyle(hero).gridTemplateColumns.split(' ').length,
+      alignItems: getComputedStyle(hero).alignItems,
+      centerDelta: Math.abs(
+        ((content?.getBoundingClientRect().top ?? 0) +
+          (content?.getBoundingClientRect().bottom ?? 0) -
+          (overview?.getBoundingClientRect().top ?? 0) -
+          (overview?.getBoundingClientRect().bottom ?? 0)) /
+          2,
+      ),
       topDelta: Math.abs(
         (content?.getBoundingClientRect().top ?? 0) - (overview?.getBoundingClientRect().top ?? 0),
       ),
     };
   });
   if (heroLayout.columns > 1) {
-    expect(heroLayout.topDelta).toBeLessThanOrEqual(2);
+    expect(heroLayout.alignItems).toBe('center');
+    expect(heroLayout.centerDelta).toBeLessThanOrEqual(2);
   } else {
     expect(heroLayout.topDelta).toBeGreaterThan(0);
   }
-  await expect(statsOverview).toHaveClass(/assignment-sheet/);
+  await expect(statsOverview).toHaveClass(/assignment-sheet assignment-summary/);
   await expect(statsOverview.locator(':scope > div')).toHaveCount(5);
+  expect(
+    await statsOverview.evaluate((element) => {
+      const style = getComputedStyle(element);
+      const metric = getComputedStyle(element.querySelector(':scope > div')!);
+      return {
+        columns: style.gridTemplateColumns.split(' ').length,
+        paddingSides: [
+          style.paddingTop,
+          style.paddingRight,
+          style.paddingBottom,
+          style.paddingLeft,
+        ],
+        metricPaddingSides: [
+          metric.paddingTop,
+          metric.paddingRight,
+          metric.paddingBottom,
+          metric.paddingLeft,
+        ],
+        rowGap: style.rowGap,
+        gridAutoRows: style.gridAutoRows,
+        labelFont: getComputedStyle(element.querySelector('dt')!).fontSize,
+        valueFont: getComputedStyle(element.querySelector('dd')!).fontSize,
+      };
+    }),
+  ).toEqual(summaryLayout);
+  expect(
+    new Set(
+      await statsOverview
+        .locator('dt')
+        .evaluateAll((labels) => labels.map((label) => getComputedStyle(label).color)),
+    ),
+  ).toEqual(new Set([labelPresentation.color]));
+  await expectBalancedSummaryGutters(statsOverview);
+  if (heroLayout.columns > 1) {
+    expect(
+      await statsOverview.evaluate((element) => element.getBoundingClientRect().height),
+    ).toBeLessThan(280);
+  }
+  await expect(page.locator('.at-a-glance > .card-kicker')).toHaveCount(0);
+  await expect(page.locator('.at-a-glance')).toHaveAttribute('aria-label', 'At a glance');
   expect(
     await statsOverview.evaluate((element) => {
       const style = getComputedStyle(element);
@@ -1433,10 +1554,10 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
   await expect
     .poll(() =>
       statsOverview.evaluate(
-        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m42,
+        (element) => new DOMMatrixReadOnly(getComputedStyle(element).transform).m41,
       ),
     )
-    .toBeCloseTo(expectedLift, 2);
+    .toBeCloseTo(expectedInformationShift, 2);
   const statsTopic = vowelHarmonyProgress(page);
   await expect(statsTopic.locator('.stats-table > .stats-section-heading .eyebrow')).toHaveText(
     'Test history',
@@ -1531,6 +1652,58 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
 
   await page.goto('/stats');
   await expect(page.getByRole('link', { name: 'Back to Notebook' })).toHaveClass(/back-link/);
+  const cumulativeOverview = page.locator('.cumulative-overview');
+  await expect(cumulativeOverview).toHaveClass(/assignment-sheet assignment-summary/);
+  await expect(cumulativeOverview.locator(':scope > div')).toHaveCount(3);
+  expect(
+    await cumulativeOverview.evaluate((element) => {
+      const style = getComputedStyle(element);
+      const metric = getComputedStyle(element.querySelector(':scope > div')!);
+      return {
+        columns: style.gridTemplateColumns.split(' ').length,
+        paddingSides: [
+          style.paddingTop,
+          style.paddingRight,
+          style.paddingBottom,
+          style.paddingLeft,
+        ],
+        metricPaddingSides: [
+          metric.paddingTop,
+          metric.paddingRight,
+          metric.paddingBottom,
+          metric.paddingLeft,
+        ],
+        rowGap: style.rowGap,
+        gridAutoRows: style.gridAutoRows,
+        labelFont: getComputedStyle(element.querySelector('dt')!).fontSize,
+        valueFont: getComputedStyle(element.querySelector('dd')!).fontSize,
+      };
+    }),
+  ).toEqual(summaryLayout);
+  expect(
+    new Set(
+      await cumulativeOverview
+        .locator('dt')
+        .evaluateAll((labels) => labels.map((label) => getComputedStyle(label).color)),
+    ),
+  ).toEqual(new Set([labelPresentation.color]));
+  await expectBalancedSummaryGutters(cumulativeOverview);
+  const cumulativeHeroAlignment = await page.locator('.stats-hero').evaluate((hero) => {
+    const copy = hero.querySelector('.stats-hero-copy')!.getBoundingClientRect();
+    const sheet = hero.querySelector('.cumulative-overview')!.getBoundingClientRect();
+    return {
+      columns: getComputedStyle(hero).gridTemplateColumns.split(' ').length,
+      alignItems: getComputedStyle(hero).alignItems,
+      centerDelta: Math.abs((copy.top + copy.bottom - sheet.top - sheet.bottom) / 2),
+    };
+  });
+  if (cumulativeHeroAlignment.columns > 1) {
+    expect(cumulativeHeroAlignment.alignItems).toBe('center');
+    expect(cumulativeHeroAlignment.centerDelta).toBeLessThanOrEqual(2);
+    expect(
+      await cumulativeOverview.evaluate((element) => element.getBoundingClientRect().height),
+    ).toBeLessThan(200);
+  }
   const backupArchive = page.locator('.backup-archive');
   await expectClippedPaper(backupArchive);
   const backupPattern = await backupArchive.evaluate((element) => ({
@@ -1680,7 +1853,7 @@ test('keeps topic stats usable at the 320-pixel minimum width', async ({ page })
   ).toBeVisible();
   const statsTopic = vowelHarmonyProgress(page);
   await expect(statsTopic.getByRole('region', { name: /test results/i })).toBeVisible();
-  await expect(page.locator('.stats-hero .back-link + .eyebrow')).toBeVisible();
+  await expect(page.locator('.stats-hero-copy > .eyebrow')).toBeVisible();
   await expect(page.locator('.stats-overview')).toBeVisible();
   await expect(statsTopic.locator('.stats-ledger .semantic-ledger-head')).toHaveCSS(
     'clip-path',
@@ -1703,7 +1876,7 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   await page.goto('/stats');
 
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Statistics');
-  await expect(page.locator('.stats-hero .back-link + .eyebrow')).toBeVisible();
+  await expect(page.locator('.stats-hero-copy > .eyebrow')).toBeVisible();
   await expect(page.locator('.cumulative-overview.assignment-sheet')).toBeVisible();
   await expect(page.locator('.stats-hero .notebook-note')).toHaveText('progress, not perfection');
   const heroGeometry = await page.locator('.stats-hero').evaluate((hero) => {

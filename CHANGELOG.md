@@ -48,6 +48,10 @@
 
 ### Changed
 
+- Unified topic progress and both Stats hero summaries on one compact, content-sized assignment-sheet layout with consistent padding and row spacing; distributed spare width between the side gutters and metric columns instead of leaving a large empty side or middle band; matched all three sheets' metric-label ink to the level eyebrow; aligned the wide-screen introductions without stretching the sheets, removed the separate visible topic Stats summary heading, and replaced the cumulative sheet's static All topics cell with a three-metric presentation.
+
+- Removed the seven full-width dashed dividers from legal pages, statistics summaries, local and Drive backup actions, and confirmation sheets while retaining their spacing, ruled paper, and separate catalog-label underline.
+
 - Replaced temporary OAuth client-ID edits in tracked HTML with an ignored `.env.local`, a generated same-origin browser runtime configuration, and the existing GitHub Actions repository variable. Local Drive testing now works through the normal start command without changing source, while missing or malformed configuration still fails safely and no client secret is accepted.
 
 - Made the decorative desk pencil, ruler, and paperclip respond when noticed with restrained material-specific hover motion while keeping them non-operable, out of the focus order, hidden on phones, and static under reduced-motion preferences.

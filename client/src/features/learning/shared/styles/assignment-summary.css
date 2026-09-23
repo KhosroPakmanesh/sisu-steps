@@ -1,0 +1,62 @@
+/* Compact metric sheets shared by topic progress and both Stats heroes. */
+main.page-shell .assignment-summary {
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: var(--space-2) 0;
+  place-content: start space-evenly;
+  margin: 0;
+  padding: var(--space-4);
+}
+
+main.page-shell .assignment-summary > div {
+  display: grid;
+  align-content: center;
+  min-width: 0;
+  gap: var(--space-1);
+  padding: var(--space-2);
+}
+
+main.page-shell .assignment-summary > div:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
+main.page-shell .assignment-summary dt {
+  color: var(--text-brand);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-bold);
+}
+
+main.page-shell .assignment-summary dd {
+  margin: 0;
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: var(--text-summary);
+}
+
+@container workbook (width <= 26.25rem) {
+  main.page-shell .assignment-summary {
+    grid-template-columns: minmax(0, 1fr);
+    justify-content: normal;
+  }
+
+  main.page-shell .assignment-summary > div:last-child:nth-child(odd) {
+    grid-column: auto;
+  }
+}
+
+@media (width < 48rem) {
+  main.page-shell .assignment-summary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: normal;
+  }
+
+  @container workbook (width <= 20rem) {
+    main.page-shell .assignment-summary {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    main.page-shell .assignment-summary > div:last-child:nth-child(odd) {
+      grid-column: auto;
+    }
+  }
+}

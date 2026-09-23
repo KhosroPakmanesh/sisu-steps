@@ -5,8 +5,8 @@
 .topic-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(18rem, 0.6fr);
-  gap: clamp(2rem, 6vw, 6rem);
-  align-items: end;
+  gap: var(--space-5) clamp(2rem, 6vw, 6rem);
+  align-items: center;
   padding: 3rem 0 var(--space-8);
 }
 
@@ -14,49 +14,23 @@
   min-width: 0;
 }
 
+.topic-hero > .back-link {
+  grid-column: 1 / -1;
+  justify-self: start;
+}
+
 .topic-hero h1 {
   max-width: 16ch;
   margin: var(--space-2) 0;
 }
 
-.topic-hero > div > p:not(.eyebrow, .notebook-note) {
+.topic-hero-copy > p:not(.eyebrow, .notebook-note) {
   max-width: 58rem;
 }
 
 .topic-hero .notebook-note {
   width: fit-content;
   margin: var(--space-4) 0 0 auto;
-}
-
-.topic-hero .back-link + .eyebrow {
-  margin-top: var(--space-5);
-}
-
-.topic-overview {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0;
-  padding: var(--space-5);
-}
-
-.topic-overview div {
-  display: grid;
-  min-width: 0;
-  gap: var(--space-1);
-  padding: var(--space-3);
-}
-
-.topic-overview dt {
-  color: var(--text-primary);
-  font-size: var(--text-caption);
-  font-weight: var(--weight-bold);
-}
-
-.topic-overview dd {
-  margin: 0;
-  color: var(--text-secondary);
-  font-family: var(--font-display);
-  font-size: var(--text-summary);
 }
 
 .topic-actions {
@@ -218,6 +192,10 @@
     grid-template-columns: 1fr;
   }
 
+  .topic-hero > .back-link {
+    grid-column: 1;
+  }
+
   .section-heading {
     display: block;
   }
@@ -263,10 +241,6 @@
 }
 
 @container workbook (width <= 26.25rem) {
-  .topic-overview {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
   .test-card {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--space-3);
@@ -290,10 +264,6 @@
   .topic-hero {
     gap: var(--space-4);
     padding: var(--space-5) 0 var(--space-4);
-  }
-
-  .topic-hero .back-link + .eyebrow {
-    margin-top: var(--space-3);
   }
 
   .topic-hero .notebook-note {
@@ -323,15 +293,6 @@
     padding-top: var(--space-4);
   }
 
-  .topic-page .topic-overview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: var(--space-3) var(--space-2) var(--space-3) var(--space-5);
-  }
-
-  .topic-page .topic-overview div {
-    padding: var(--space-2);
-  }
-
   .test-title-row {
     display: flex;
     gap: var(--space-2);
@@ -356,10 +317,6 @@
   }
 
   @container workbook (width <= 20rem) {
-    .topic-page .topic-overview {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
     .test-title-row {
       display: block;
     }

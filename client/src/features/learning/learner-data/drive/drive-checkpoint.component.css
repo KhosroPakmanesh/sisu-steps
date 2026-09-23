@@ -48,6 +48,9 @@
   gap: var(--space-4);
   align-items: center;
   padding: var(--space-5) 0;
+}
+
+.drive-action-row:not(:last-child) {
   border-bottom: 1px solid var(--notebook-rule);
 }
 
@@ -68,11 +71,6 @@
 .drive-unchecked {
   color: var(--text-secondary);
   font-size: var(--text-small);
-}
-
-.drive-delete-row {
-  border-bottom-style: dashed;
-  border-bottom-color: var(--border-danger-subtle);
 }
 
 .drive-status {

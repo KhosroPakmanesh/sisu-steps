@@ -41,11 +41,11 @@ describe('StatsPage', () => {
     const catalog = element.querySelector('.stats-catalog') as HTMLElement;
 
     expect(element.querySelector('h1')?.textContent?.trim()).toBe('Statistics');
-    expect(element.querySelector('.cumulative-overview')?.textContent).toContain(
+    expect(element.querySelector('#cumulative-stats-heading')?.textContent?.trim()).toBe(
       'Cumulative statistics',
     );
-    expect(element.querySelector('.cumulative-overview')?.textContent).toContain('All topics');
-    expect(element.querySelectorAll('.cumulative-overview > div')).toHaveLength(4);
+    expect(element.querySelector('.cumulative-overview')?.textContent).not.toContain('All topics');
+    expect(element.querySelectorAll('.cumulative-overview > div')).toHaveLength(3);
     expect(localHost.parentElement).toBe(driveHost.parentElement);
     expect(localHost.nextElementSibling).toBe(driveHost);
     expect(localHost.querySelector('.drive-checkpoint-section')).toBeNull();

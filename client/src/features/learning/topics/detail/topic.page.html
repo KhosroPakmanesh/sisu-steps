@@ -9,15 +9,15 @@
   } @else if (pack(); as activePack) {
     @let topicSummary = summary();
     <header class="topic-hero">
-      <div>
-        <a class="back-link" [routerLink]="paths.home">← All topics</a>
+      <a class="back-link" [routerLink]="paths.home">← All topics</a>
+      <div class="topic-hero-copy">
         <p class="eyebrow">Level: {{ activePack.level }} · {{ activePack.tests.length }} tests</p>
         <h1>{{ activePack.title }}</h1>
         <p>{{ activePack.summary }}</p>
         <p class="notebook-note" aria-hidden="true">one clear idea at a time</p>
       </div>
       @if (topicSummary) {
-        <dl class="topic-overview assignment-sheet" aria-label="Topic progress">
+        <dl class="topic-overview assignment-sheet assignment-summary" aria-label="Topic progress">
           <div>
             <dt>Tests tried</dt>
             <dd>{{ topicSummary.attemptedTests }}/{{ activePack.tests.length }}</dd>

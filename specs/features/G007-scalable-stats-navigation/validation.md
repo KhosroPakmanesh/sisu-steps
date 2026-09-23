@@ -3,8 +3,8 @@
 ## Automated validation
 
 - **VAL-G007-001** (`REQ-G007-001`–`003`): Shell and routing tests verify the two Notebook/Stats destinations, new lazy Stats routes, centralized paths, and absence of legacy route definitions or redirects.
-- **VAL-G007-002** (`REQ-G007-004`–`007`): Stats overview component and browser tests verify the **Statistics** heading, cumulative all-topic assignment sheet, centered progress note, archive-before-catalog order, the external **Backup & restore** section heading, the complete ruled/clipped/bound actions container, balanced canonical inter-section spacing, one shared container-level range, unchanged global operations, one authored-order card per pack without repeated level labels, truthful compact metrics, pack-specific links, and the same labeled catalog-owned group and pack order as Notebook. Runtime catalog tests reject group declarations that could make the two lists diverge.
-- **VAL-G007-003** (`REQ-G007-008`, `009`): Topic Stats tests verify selected-pack-only summary and authored ledger order, complete existing progress fields, adjacent clear-test actions, and optional mistake practice.
+- **VAL-G007-002** (`REQ-G007-004`–`007`): Stats overview component and browser tests verify the **Statistics** heading, cumulative all-topic assignment sheet sharing the topic-progress layout and aligned with the introduction on wide screens, centered progress note, archive-before-catalog order, the external **Backup & restore** section heading, the complete ruled/clipped/bound actions container, balanced canonical inter-section spacing, one shared container-level range, unchanged global operations, one authored-order card per pack without repeated level labels, truthful compact metrics, pack-specific links, and the same labeled catalog-owned group and pack order as Notebook. Runtime catalog tests reject group declarations that could make the two lists diverge.
+- **VAL-G007-003** (`REQ-G007-008`, `009`): Topic Stats tests verify the selected-pack-only summary shares the topic-progress sheet layout and aligns with its introduction on wide screens, has an accessible **At a glance** name without a separate visible heading, and preserves authored ledger order, complete existing progress fields, adjacent clear-test actions, and optional mistake practice.
 - **VAL-G007-004** (`REQ-G007-010`, `011`): Component, service, and browser tests verify the compact warm-warning **This topic only** final ledger row before optional mistake practice, its coverage of the punched gutter, retained **Clear topic history** label, safe confirmation, cancellation, focused test clearing, complete topic clearing, visible statistic refresh, and isolation of unaffected lessons, notes, tests, and packs.
 - **VAL-G007-005** (`REQ-G007-012`): Topic Stats component tests verify recoverable unknown-topic presentation and an **All stats** link.
 - **VAL-G007-006** (`REQ-G007-013`): Lint, typechecks, build, unit tests, and Playwright verify semantic hierarchy, native controls, visible focus, static reduced motion, 320/768/1440-pixel reflow, no horizontal overflow, and reuse of established material and spacing recipes.
@@ -12,12 +12,21 @@
 ## Manual checks
 
 - Open `/stats` at 320, 768, and 1440 pixels in Day and Night and confirm the cumulative assignment sheet reflows beside/below the introduction, the progress note remains centered, the **Backup & restore** heading sits outside its complete ruled, clipped, left-bound, layered-edge actions container, the following gap has balanced section breathing room, and **Progress by topic** shows one shared level range above its cards.
+- Compare the topic-progress, cumulative Stats, and topic Stats assignment sheets at those widths. Confirm each sheet has equal top, right, bottom, and left padding, each metric has equal internal padding, content-sized rows remain compact with the same inter-row spacing despite differing metric counts, wide two-column layouts balance the visible left, middle, and right gaps, and all metric labels use the same brand ink as the level eyebrow.
 - Open a topic Stats page at each width and confirm every ledger value and clearing action remains readable and keyboard reachable.
 - Cancel and confirm one test clear, one topic clear, and clear-all; verify consequence wording, safe initial focus, focus return, live feedback, and unaffected data.
 - Enter an unknown Stats topic ID and confirm the error returns to **All stats**.
 - Confirm `/reports` and `/data` do not expose or redirect to legacy pages.
 
 ## Execution evidence
+
+### 2026-09-23 shared summary spacing
+
+- Shared metric-label color follow-up: the targeted notebook-surface browser test passed in mobile, tablet, and wide Chromium projects, comparing all three cards' rendered label colors with the topic level eyebrow. The first chained unit run lost a Vitest worker; an independent unit rerun and then a full `npm.cmd --prefix client run check` passed with 205 unit and 14 integration tests.
+- `npm.cmd --prefix client run check`: passed lint, formatting, application and test typechecks, content validation, production build, 205 unit tests, and 14 integration tests.
+- `npm.cmd --prefix client run test:e2e`: 253 passed and 35 intentionally viewport-skipped checks across mobile, tablet, and wide Chromium projects. The shared-summary workflow asserts equal outer and metric-cell padding, matching row gaps, automatic row sizing, and compact wide-screen heights on all three cards.
+- Inspected fresh wide-screen captures of the cumulative and topic Stats sheets; their metric rows have no oversized blank bands. Mobile and tablet geometry were checked by the browser assertions.
+- After balancing the visible left, middle, and right gaps, reran `npm.cmd --prefix client run check` successfully and the complete Playwright suite with 253 passed and 35 viewport-specific skips. The workflow now measures rendered text bounds on all three sheets and rejects an oversized middle gap; fresh 1440-pixel captures of all three sheets were inspected.
 
 ### 2026-09-19 pack grouping extension
 

@@ -6,12 +6,17 @@
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 0.75fr);
   gap: var(--space-5) clamp(2rem, 6vw, 6rem);
-  align-items: start;
+  align-items: center;
   padding: 3rem 0 var(--space-8);
 }
 
 .stats-hero > * {
   min-width: 0;
+}
+
+.stats-hero > .back-link {
+  grid-column: 1 / -1;
+  justify-self: start;
 }
 
 .stats-hero h1 {
@@ -22,8 +27,8 @@
   max-width: 62ch;
 }
 
-.stats-hero .back-link + .eyebrow {
-  margin-top: var(--space-5);
+.cumulative-summary {
+  align-self: center;
 }
 
 .stats-hero .notebook-note {
@@ -31,53 +36,6 @@
   justify-self: center;
   width: fit-content;
   margin: 0;
-}
-
-.cumulative-overview {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  margin: 0;
-  padding: var(--space-5);
-  padding-left: calc(var(--space-6) + 0.35rem);
-}
-
-.cumulative-overview div {
-  position: relative;
-  z-index: 1;
-  display: grid;
-  gap: var(--space-1);
-  min-width: 0;
-  padding: var(--space-3);
-}
-
-.cumulative-overview .cumulative-overview-primary {
-  grid-template-columns: 1fr auto;
-  grid-column: 1 / -1;
-  align-items: end;
-  padding-top: var(--space-4);
-  border-bottom: 1px dashed var(--border-control);
-}
-
-.cumulative-overview .cumulative-overview-wide {
-  grid-column: 1 / -1;
-  border-top: 1px dashed var(--border-control);
-}
-
-.cumulative-overview dt {
-  color: var(--text-primary);
-  font-size: var(--text-caption);
-  font-weight: var(--weight-bold);
-}
-
-.cumulative-overview dd {
-  margin: 0;
-  color: var(--text-secondary);
-  font-family: var(--font-display);
-  font-size: var(--text-title-compact);
-}
-
-.cumulative-overview-primary dd {
-  font-size: 1.7rem;
 }
 
 .topic-catalog.stats-catalog {
@@ -116,22 +74,8 @@
 }
 
 @container workbook (width <= 26.25rem) {
-  .cumulative-overview,
   .stats-card-metrics {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .cumulative-overview {
-    padding-right: var(--space-3);
-    padding-left: var(--space-5);
-  }
-
-  .cumulative-overview .cumulative-overview-primary {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .cumulative-overview div {
-    padding-inline: var(--space-2);
   }
 
   .stats-card-metrics div + div {
@@ -144,6 +88,10 @@
   .stats-hero {
     grid-template-columns: minmax(0, 1fr);
   }
+
+  .stats-hero > .back-link {
+    grid-column: 1;
+  }
 }
 
 @media (width < 48rem) {
@@ -152,29 +100,8 @@
     padding: var(--space-5) 0 var(--space-4);
   }
 
-  .stats-hero .back-link + .eyebrow {
-    margin-top: var(--space-3);
-  }
-
   .topic-catalog.stats-catalog {
     padding-top: var(--space-5);
-  }
-
-  .cumulative-overview {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    padding: var(--space-3) var(--space-2) var(--space-3) var(--space-5);
-  }
-
-  .cumulative-overview .cumulative-overview-primary,
-  .cumulative-overview .cumulative-overview-wide {
-    grid-template-columns: minmax(0, 1fr);
-    grid-column: auto;
-    padding-top: var(--space-2);
-    border: 0;
-  }
-
-  .cumulative-overview div {
-    padding: var(--space-2);
   }
 
   .stats-card-metrics {
@@ -196,7 +123,6 @@
   }
 
   @container workbook (width <= 20rem) {
-    .cumulative-overview,
     .stats-card-metrics {
       grid-template-columns: minmax(0, 1fr);
     }
