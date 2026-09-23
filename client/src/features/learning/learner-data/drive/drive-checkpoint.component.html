@@ -1,0 +1,95 @@
+<section class="drive-checkpoint-section" aria-labelledby="google-drive-checkpoint">
+  <header class="drive-section-heading">
+    <div>
+      <p class="eyebrow">Optional recovery</p>
+      <h2 id="google-drive-checkpoint" tabindex="-1">Google Drive checkpoint</h2>
+    </div>
+    <p>
+      Choose a Google account only when you use a Drive action. Sisu Steps does not read your
+      profile.
+    </p>
+  </header>
+
+  <div class="drive-checkpoint-archive topic-card">
+    <p class="drive-disclosure">The checkpoint includes private notes in hidden app storage.</p>
+
+    <div class="drive-actions">
+      <div class="drive-action-row">
+        <span class="archive-number sequence-marker" aria-hidden="true">01</span>
+        <div>
+          <h4>Save one checkpoint</h4>
+          <p>The previous checkpoint stays in place until its replacement succeeds.</p>
+        </div>
+        <button class="button primary" type="button" [disabled]="busy()" (click)="backUp()">
+          Back up to Google Drive
+        </button>
+      </div>
+
+      <div class="drive-action-row">
+        <span class="archive-number sequence-marker" aria-hidden="true">02</span>
+        <div>
+          <h4>Load the checkpoint</h4>
+          <p>Download and validate it before deciding whether to replace local progress.</p>
+        </div>
+        <button class="button secondary" type="button" [disabled]="busy()" (click)="restore()">
+          Restore from Google Drive
+        </button>
+      </div>
+
+      <div class="drive-action-row drive-delete-row">
+        <span class="archive-number sequence-marker" aria-hidden="true">03</span>
+        <div>
+          <h4>Remove the checkpoint</h4>
+          <p>Delete only the hidden Drive copy. Local progress stays on this device.</p>
+        </div>
+        <button class="button danger" type="button" [disabled]="busy()" (click)="deleteBackup()">
+          Delete Drive backup
+        </button>
+      </div>
+    </div>
+
+    <div class="drive-status" aria-label="Google Drive checkpoint status">
+      @if (activity()) {
+        <p class="notice" role="status">{{ activity() }}</p>
+      } @else if (inspection(); as state) {
+        @switch (state.kind) {
+          @case ('empty') {
+            <p class="notice" role="status">No Google Drive checkpoint was found.</p>
+          }
+          @case ('incompatible') {
+            <p class="notice failure" role="alert">
+              Checkpoint from {{ dateLabel(state.createdAt) }} cannot be restored. {{ state.issue }}
+            </p>
+          }
+          @case ('valid') {
+            <p class="notice success" role="status">
+              Checkpoint from {{ dateLabel(state.createdAt) }} · {{ summary(state) }}
+            </p>
+          }
+        }
+      } @else {
+        <p class="drive-unchecked">Drive has not been checked in this visit.</p>
+      }
+      @if (message()) {
+        <p class="notice success" role="status">{{ message() }}</p>
+      }
+      @if (error()) {
+        <p class="notice failure" role="alert">{{ error() }}</p>
+      }
+    </div>
+
+    <button
+      class="button text-button disconnect-button"
+      type="button"
+      [disabled]="busy()"
+      (click)="disconnect()"
+    >
+      Disconnect Google Drive
+    </button>
+  </div>
+</section>
+
+<app-confirmation-sheet
+  [request]="pending()?.request ?? null"
+  (resolved)="resolvePending($event)"
+/>

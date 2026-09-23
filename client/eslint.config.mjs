@@ -5,7 +5,13 @@ import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
   {
-    ignores: ['.angular/**', 'coverage/**', 'dist/**', 'node_modules/**'],
+    ignores: [
+      '.angular/**',
+      'coverage/**',
+      'dist/**',
+      'node_modules/**',
+      'public/runtime-config.js',
+    ],
   },
   {
     files: ['src/**/*.ts', 'tests/**/*.ts'],

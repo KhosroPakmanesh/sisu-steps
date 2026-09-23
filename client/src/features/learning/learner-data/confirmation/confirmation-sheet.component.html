@@ -3,7 +3,11 @@
   class="modal-sheet confirmation-sheet"
   tabindex="-1"
   aria-labelledby="confirmation-title"
-  aria-describedby="confirmation-message"
+  [attr.aria-describedby]="
+    request()?.details?.length
+      ? 'confirmation-message confirmation-details'
+      : 'confirmation-message'
+  "
   (cancel)="cancel($event)"
   (click)="dismissFromBackdrop($event)"
   (keydown.escape)="cancel($event)"
@@ -13,7 +17,7 @@
       #closeButton
       class="modal-sheet__close"
       type="button"
-      aria-label="Cancel clearing history"
+      [attr.aria-label]="details.closeLabel ?? 'Cancel clearing history'"
       autofocus
       (click)="cancel()"
     >
@@ -24,6 +28,13 @@
       <h2 id="confirmation-title">{{ details.title }}</h2>
     </header>
     <p id="confirmation-message">{{ details.message }}</p>
+    @if (details.details?.length) {
+      <ul id="confirmation-details" class="confirmation-details">
+        @for (detail of details.details; track detail) {
+          <li>{{ detail }}</li>
+        }
+      </ul>
+    }
     <div class="modal-sheet__actions confirmation-actions">
       <button class="button danger" type="button" (click)="confirm()">
         {{ details.confirmLabel }}

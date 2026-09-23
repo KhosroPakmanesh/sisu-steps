@@ -18,6 +18,38 @@
     <span><strong>Sisu Steps</strong><small>Finnish exercise book</small></span>
   </a>
   <div class="header-tools">
+    <button
+      class="drive-backup-control"
+      type="button"
+      [attr.aria-label]="driveBackupLabel()"
+      (click)="openDriveBackup()"
+    >
+      <small aria-hidden="true">{{ driveShortStatus() }}</small>
+      <svg
+        class="drive-checkpoint-icon"
+        viewBox="2 3 20 17"
+        preserveAspectRatio="xMidYMax meet"
+        aria-hidden="true"
+      >
+        <defs>
+          <linearGradient id="drive-metal-gradient" x1="0" y1="0" x2="1" y2="1">
+            <stop class="drive-metal-highlight" offset="0"></stop>
+            <stop class="drive-metal-light" offset="0.36"></stop>
+            <stop class="drive-metal-mid" offset="0.64"></stop>
+            <stop class="drive-metal-edge" offset="1"></stop>
+          </linearGradient>
+        </defs>
+        <path
+          class="drive-cloud-body"
+          d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"
+        ></path>
+        @if (driveSavedAt()) {
+          <path class="drive-cloud-status" d="m8.5 13 2.5 2.5 5-5"></path>
+        } @else {
+          <path class="drive-cloud-status" d="M12 16V9m-3 3 3-3 3 3"></path>
+        }
+      </svg>
+    </button>
     <fieldset class="appearance-control">
       <legend class="visually-hidden">Appearance</legend>
       <div
@@ -105,6 +137,10 @@
   </div>
 </div>
 <footer class="site-footer">
-  <p><strong>Sisu Steps</strong> · Your progress stays safely in this browser.</p>
-  <p>Quiet study · one step at a time</p>
+  <p><strong>Sisu Steps</strong> · Progress saves on this device; Drive recovery is optional.</p>
+  <p class="site-footer-links">
+    <span>Quiet study · one step at a time</span>
+    <a routerLink="/privacy">Privacy Policy</a>
+    <a routerLink="/terms">Terms of Service</a>
+  </p>
 </footer>

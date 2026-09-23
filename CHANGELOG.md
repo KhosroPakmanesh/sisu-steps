@@ -4,6 +4,10 @@
 
 ### Added
 
+- Added directly accessible Privacy Policy and Terms of Service pages for the public site, with footer links, an enquiry email, and a GitHub Issues contact path; the policy explains local progress, optional manual Drive checkpoints, and the separate deletion controls.
+
+- Added optional manual Google Drive recovery checkpoints without changing IndexedDB as the live source of truth. Learners can explicitly back up, inspect, restore, replace, delete, or disconnect through hidden `appDataFolder` storage with only the `drive.appdata` permission; access tokens stay in memory, no profile is read, no close-time/background synchronization occurs, and file/Drive restores share the same current-format compatibility checks and atomic local replacement.
+
 - Added a responsive, keyboard-accessible **Cheat mode** to scored Study, scheduled review, and mistake practice. It stays hidden by default, shows only the current question's lesson-authored Finnish vocabulary and English meanings, closes for each new question, and never changes scoring or learner progress.
 
 - Made scored tests, scheduled reviews, and mistake practice fully keyboard-completable without changing their visible interface: each exercise focuses its first answer control, Enter checks valid answers and advances from feedback, word-order tokens retain native keyboard activation, results focus their first action, and held Enter presses cannot duplicate an operation.
@@ -43,6 +47,8 @@
 - Safe choice, text, and word-order correction controls.
 
 ### Changed
+
+- Replaced temporary OAuth client-ID edits in tracked HTML with an ignored `.env.local`, a generated same-origin browser runtime configuration, and the existing GitHub Actions repository variable. Local Drive testing now works through the normal start command without changing source, while missing or malformed configuration still fails safely and no client secret is accepted.
 
 - Made the decorative desk pencil, ruler, and paperclip respond when noticed with restrained material-specific hover motion while keeping them non-operable, out of the focus order, hidden on phones, and static under reduced-motion preferences.
 
@@ -171,6 +177,8 @@
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 
 ### Fixed
+
+- Aligned the Drive backup header control's hover and keyboard-focus feedback with the Appearance switch: its status lifts and brightens while the metallic cloud remains steady.
 
 - Restarted mistake practice directly from its completed result so unresolved mistakes open in a fresh round instead of leaving the learner on the same result screen.
 

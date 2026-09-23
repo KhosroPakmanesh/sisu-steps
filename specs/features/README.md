@@ -7,5 +7,6 @@
 - `G005-interactive-nordic-workbook-world` extends that stable baseline into a fully custom-looking physical workbook world with accessible object controls, route scenes, motion, and system sheets while preserving learner behavior.
 - `../../client/specs/features/G006-pack-owned-content-sources` makes pure-JSON, same-named pack folders the sole source and deployed asset tree, with generic validation and in-memory runtime assembly separated from Angular presentation.
 - `G007-scalable-stats-navigation` replaces the separate Reports and Data & backup destinations with Notebook/Stats navigation, a backup-first Stats overview, and dedicated per-pack statistics and history-management pages.
+- `G008-manual-google-drive-recovery` adds one optional, manually managed hidden Google Drive recovery checkpoint while preserving IndexedDB as the authoritative live store and keeping synchronization, accounts, and background network behavior out of scope.
 
 G001 remains the primary product contract. Client technical specifications may reorganize implementation and improve validation but may not change root product behavior unless an explicitly approved root feature spec, such as G003, says so.

@@ -7,6 +7,8 @@ export interface ConfirmationSheetRequest {
   title: string;
   message: string;
   confirmLabel: string;
+  closeLabel?: string;
+  details?: string[];
 }
 
 @Component({

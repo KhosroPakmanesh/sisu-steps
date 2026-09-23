@@ -1,0 +1,88 @@
+<main class="page-shell legal-page">
+  <header class="legal-page-header">
+    <a class="back-link" routerLink="/">← Back to Notebook</a>
+    <p class="eyebrow">About your data</p>
+    <h1>Privacy Policy</h1>
+    <p class="legal-updated">Last updated 23 September 2026</p>
+    <p>
+      Sisu Steps is a free Finnish exercise book maintained by Khosro Pakmanesh. You can study
+      without creating an account or connecting Google Drive. This page explains what the app stores
+      and what happens if you choose to use its optional backup features.
+    </p>
+  </header>
+
+  <section aria-labelledby="on-device">
+    <h2 id="on-device">On this device</h2>
+    <p>
+      The app saves answers, attempts, unfinished sessions, mistakes, lesson completions, progress,
+      and private notes in your browser's IndexedDB. It also remembers your appearance choice and,
+      if you make a Drive checkpoint, the last successful backup date in browser storage. These
+      records stay in that browser unless you explicitly export a backup or use a Google Drive
+      action. Sisu Steps has no account or server that stores your learner progress.
+    </p>
+  </section>
+
+  <section aria-labelledby="drive">
+    <h2 id="drive">Optional Google Drive checkpoint</h2>
+    <p>
+      Google Drive is contacted only when you choose a Drive action. You select a Google account
+      through Google's authorization window. Sisu Steps requests only permission to manage its own
+      hidden application-data folder (<code>drive.appdata</code>); it does not request or read your
+      Google name, email address, profile picture, or other Drive files. Access tokens stay in
+      memory, not in browser storage or exported backups.
+    </p>
+    <p>
+      When you choose <strong>Back up to Google Drive</strong>, the app sends a versioned snapshot
+      of your learner data to that account's hidden app storage. The snapshot includes answers,
+      progress, unfinished work, and private notes. Backup is manual: there is no automatic sync at
+      startup or when you close the page. Sisu Steps adds no separate password or custom end-to-end
+      encryption to this snapshot. Google's storage and account protections apply.
+    </p>
+    <p>
+      The app uses Google data only to inspect, create, restore, or delete your requested
+      checkpoint. It does not sell that data, use it for advertising, or use it to train AI models.
+    </p>
+  </section>
+
+  <section aria-labelledby="copies">
+    <h2 id="copies">Copies, deletion, and retention</h2>
+    <p>
+      <strong>Download backup</strong> creates a JSON copy on your device under your control.
+      <strong>Clear all history</strong> removes local learner progress and notes, but does not
+      delete a Drive checkpoint or a downloaded file. <strong>Delete Drive backup</strong> removes
+      the app's current Drive checkpoint without clearing local data.
+      <strong>Disconnect Google Drive</strong>
+      ends the current authorization; it does not delete either copy. Clearing browser-site data may
+      also remove local progress and preferences.
+    </p>
+    <p>
+      Sisu Steps does not set a retention period for copies kept in your browser, downloaded files,
+      or your Google Drive. You manage those copies through the controls above and your device or
+      Google account. Google may remove hidden app data if you remove the app from your Drive
+      account. A downloaded JSON file is not protected by a Sisu Steps password, so keep it
+      somewhere you trust.
+    </p>
+  </section>
+
+  <section aria-labelledby="providers">
+    <h2 id="providers">Site and provider services</h2>
+    <p>
+      GitHub Pages serves the website and its lesson files. If you use Drive backup, Google's
+      identity and Drive services process that operation. Those providers may process technical
+      request data under their own privacy notices. Sisu Steps does not send your learner records to
+      its maintainer as part of normal study or a Drive action.
+    </p>
+  </section>
+
+  <section aria-labelledby="contact">
+    <h2 id="contact">Questions and issues</h2>
+    <p>
+      For privacy or other enquiries, email
+      <a href="mailto:khosro.pakmanesh@gmail.com">khosro.pakmanesh@gmail.com</a>. If you email, your
+      address and message are used to respond to your enquiry. To report a bug,
+      <a href="https://github.com/KhosroPakmanesh/sisu-steps/issues">open a GitHub issue</a>. GitHub
+      issues are public, so do not include private notes, answers, backups, or other personal
+      information in a report.
+    </p>
+  </section>
+</main>

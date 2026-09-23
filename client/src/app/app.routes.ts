@@ -56,5 +56,17 @@ export const routes: Routes = [
       import('@/features/learning/stats/overview/stats.page').then((module) => module.StatsPage),
     title: 'Stats · Sisu Steps',
   },
+  {
+    path: routeSegments.privacy,
+    loadComponent: () =>
+      import('@/features/legal/privacy/privacy.page').then((module) => module.PrivacyPage),
+    title: 'Privacy Policy · Sisu Steps',
+  },
+  {
+    path: routeSegments.terms,
+    loadComponent: () =>
+      import('@/features/legal/terms/terms.page').then((module) => module.TermsPage),
+    title: 'Terms of Service · Sisu Steps',
+  },
   { path: '**', redirectTo: '' },
 ];

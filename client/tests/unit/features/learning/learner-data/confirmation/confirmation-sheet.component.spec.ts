@@ -10,6 +10,8 @@ const request: ConfirmationSheetRequest = {
   title: 'Clear all learner history?',
   message: 'Every attempt will be removed.',
   confirmLabel: 'Clear all history',
+  closeLabel: 'Cancel clearing history',
+  details: ['A Drive checkpoint remains available.'],
 };
 
 describe('ConfirmationSheetComponent', () => {
@@ -32,6 +34,9 @@ describe('ConfirmationSheetComponent', () => {
     expect(close.getAttribute('aria-label')).toBe('Cancel clearing history');
     expect(document.activeElement).toBe(close);
     expect(element.textContent).not.toContain('Keep my history');
+    expect(element.querySelector('.confirmation-details')?.textContent).toContain(
+      'A Drive checkpoint remains available.',
+    );
   });
 
   it('cancels from the backdrop without activating the destructive action', () => {

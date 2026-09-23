@@ -105,12 +105,13 @@
 
 .header-tools {
   display: flex;
-  flex: 0 0 auto;
-  align-items: center;
+  flex: 0 1 auto;
+  align-items: flex-end;
+  max-width: 100%;
   min-width: 0;
   margin-left: auto;
-  gap: var(--space-4);
-  flex-wrap: nowrap;
+  gap: var(--space-2);
+  flex-wrap: wrap;
 }
 
 .site-footer {
@@ -141,6 +142,24 @@
   transform: rotate(0.3deg);
 }
 
+.site-footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+}
+
+.site-footer-links a {
+  color: var(--text-brand);
+  font-weight: var(--weight-bold);
+  text-underline-offset: 0.18em;
+}
+
+.site-footer-links a:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
 @container workbook (width <= 56.25rem) {
   .site-header {
     gap: var(--space-3);
@@ -157,8 +176,26 @@
     padding: 0.75rem;
   }
 
+  .brand {
+    gap: var(--space-2);
+  }
+
+  .brand-mark {
+    width: 2.55rem;
+    height: 2.55rem;
+  }
+
+  .brand strong {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
+
   .brand small {
     display: none;
+  }
+
+  .header-tools {
+    gap: var(--space-1);
   }
 
   .site-footer {
@@ -182,9 +219,9 @@
   .site-header {
     position: relative;
     min-height: 0;
-    gap: var(--space-2);
-    padding: var(--space-2) max(var(--space-3), env(safe-area-inset-right, 0px)) var(--space-2)
-      max(var(--space-3), env(safe-area-inset-left, 0px));
+    gap: var(--space-1);
+    padding: var(--space-2) max(var(--space-2), env(safe-area-inset-right, 0px)) var(--space-2)
+      max(var(--space-2), env(safe-area-inset-left, 0px));
   }
 
   .site-footer {

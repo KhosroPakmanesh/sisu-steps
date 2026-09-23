@@ -17,14 +17,14 @@ Keep progress statistics and learner-data controls usable as the installed langu
 - The same validated, catalog-owned group sections used by the topic catalog, preserving authored group and pack order.
 - A new lazy `/stats/:topicId` route with pack-scoped summary statistics, authored test rows, mistake practice, test-history clearing, and topic-history clearing.
 - Removal of the former `/reports` and `/data` routes without compatibility redirects.
-- Existing stationery components, semantic hierarchy, spacing tokens, confirmation sheets, responsive patterns, and the complete bound-sheet construction around the three global backup operations.
+- Existing stationery components, semantic hierarchy, spacing tokens, confirmation sheets, responsive patterns, and the complete bound-sheet construction around the three original learner-data operations. G008 adds a separate Drive container after it.
 
 ## Non-goals
 
 - Changes to progress calculations, scoring, grading, review scheduling, or mistake semantics.
 - Changes to IndexedDB records, backup shape, restore validation, or clearing consequences.
 - New Finnish lessons, tests, exercises, or changes to existing learning-content semantics.
-- Accounts, synchronization, backend behavior, analytics, or runtime network calls.
+- Accounts, synchronization, backend behavior, analytics, or runtime network calls other than G008's explicit manual Google Drive recovery actions.
 - Compatibility redirects for the removed Reports or Data & backup routes.
 
 ## Implementation steps

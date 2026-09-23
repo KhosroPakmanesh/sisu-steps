@@ -54,7 +54,8 @@ function isCompletedAttempt(value: unknown): boolean {
     isCount(value['incorrectCount']) &&
     isCount(value['skippedCount']) &&
     isCount(value['total']) &&
-    isFiniteNumber(value['percentage'])
+    isFiniteNumber(value['percentage']) &&
+    hasConsistentAttemptCounts(value)
   );
 }
 
@@ -71,7 +72,23 @@ function isStudySession(value: unknown): boolean {
     isCount(value['currentIndex']) &&
     isArrayOf(value['answers'], isSubmittedAnswer) &&
     isDate(value['startedAt']) &&
-    isDate(value['updatedAt'])
+    isDate(value['updatedAt']) &&
+    (value['currentIndex'] as number) <= (value['exerciseIds'] as unknown[]).length &&
+    (value['answers'] as unknown[]).length <= (value['exerciseIds'] as unknown[]).length
+  );
+}
+
+function hasConsistentAttemptCounts(value: Record<string, unknown>): boolean {
+  const answers = value['answers'] as Array<Record<string, unknown>>;
+  const correct = answers.filter((answer) => answer['correct'] === true).length;
+  const skipped = answers.filter((answer) => answer['skipped'] === true).length;
+  const incorrect = answers.length - correct - skipped;
+  return (
+    value['correctCount'] === correct &&
+    value['incorrectCount'] === incorrect &&
+    value['skippedCount'] === skipped &&
+    value['total'] === answers.length &&
+    value['percentage'] === (answers.length ? Math.round((correct / answers.length) * 100) : 0)
   );
 }
 

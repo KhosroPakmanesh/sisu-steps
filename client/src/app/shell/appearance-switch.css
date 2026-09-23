@@ -1,6 +1,11 @@
 .appearance-control {
   flex: 0 0 auto;
+  inline-size: 7.65rem;
+  min-inline-size: 0;
+  max-inline-size: 7.65rem;
+  width: 7.65rem;
   min-width: 0;
+  max-width: 7.65rem;
   margin: 0;
   padding: 0;
   border: 0;
@@ -19,6 +24,7 @@
 
   position: relative;
   isolation: isolate;
+  width: 7.65rem;
   height: var(--control-height-compact);
 }
 

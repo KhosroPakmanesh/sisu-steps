@@ -1,0 +1,126 @@
+:host {
+  display: block;
+}
+
+.drive-checkpoint-section {
+  margin-top: calc(var(--space-8) + var(--space-1));
+}
+
+.drive-checkpoint-archive {
+  position: relative;
+  margin-top: var(--space-5);
+  padding: var(--space-8);
+  padding-left: calc(var(--space-6) + 0.9rem);
+}
+
+.drive-checkpoint-archive > * {
+  position: relative;
+  z-index: 2;
+}
+
+.drive-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: var(--space-8);
+}
+
+.drive-section-heading h2 {
+  margin-top: var(--space-1);
+}
+
+.drive-section-heading > p {
+  max-width: 34rem;
+}
+
+.drive-disclosure {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-left: 0.2rem solid var(--border-control);
+  background: color-mix(in srgb, var(--surface-subtle) 72%, transparent);
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+}
+
+.drive-action-row {
+  display: grid;
+  grid-template-columns: 3.4rem minmax(0, 1fr) minmax(10rem, auto);
+  gap: var(--space-4);
+  align-items: center;
+  padding: var(--space-5) 0;
+  border-bottom: 1px solid var(--notebook-rule);
+}
+
+.drive-action-row > div {
+  min-width: 0;
+}
+
+.drive-action-row > .button {
+  justify-self: end;
+}
+
+.drive-action-row h4 {
+  margin: 0 0 var(--space-1);
+  font-size: 1.05rem;
+}
+
+.drive-action-row p,
+.drive-unchecked {
+  color: var(--text-secondary);
+  font-size: var(--text-small);
+}
+
+.drive-delete-row {
+  border-bottom-style: dashed;
+  border-bottom-color: var(--border-danger-subtle);
+}
+
+.drive-status {
+  display: grid;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.drive-status .notice {
+  margin: 0;
+  clip-path: none;
+}
+
+.disconnect-button {
+  margin-top: var(--space-3);
+}
+
+@container workbook (width <= 50rem) {
+  .drive-section-heading {
+    display: block;
+  }
+
+  .drive-section-heading > p {
+    margin-top: var(--space-3);
+  }
+}
+
+@container workbook (width <= 40.625rem) {
+  .drive-checkpoint-archive {
+    padding: var(--space-5);
+  }
+
+  .drive-action-row {
+    grid-template-columns: 3rem minmax(0, 1fr);
+  }
+
+  .drive-action-row > .button {
+    grid-column: 1 / -1;
+  }
+}
+
+@container workbook (width <= 26.25rem) {
+  .drive-action-row {
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .drive-action-row > .button {
+    grid-column: 1 / -1;
+  }
+}

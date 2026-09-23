@@ -44,7 +44,9 @@ jobs:
 
       - name: Build Angular
         working-directory: ./client
-        run: npx ng build --configuration production --base-href "/sisu-steps/"
+        env:
+          GOOGLE_OAUTH_CLIENT_ID: ${{ vars.GOOGLE_OAUTH_CLIENT_ID }}
+        run: npm run build -- --configuration production --base-href "/sisu-steps/"
 
       - name: Find Angular build output
         id: output
@@ -62,8 +64,10 @@ jobs:
           echo "Publishing: $SITE_DIR"
           echo "dir=$SITE_DIR" >> "$GITHUB_OUTPUT"
 
-          cp "$INDEX_FILE" "$SITE_DIR/404.html"
-          touch "$SITE_DIR/.nojekyll"
+      - name: Prepare single-page fallback
+        run: |
+          cp "${{ steps.output.outputs.dir }}/index.html" "${{ steps.output.outputs.dir }}/404.html"
+          touch "${{ steps.output.outputs.dir }}/.nojekyll"
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5

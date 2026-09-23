@@ -1,7 +1,7 @@
 import { inject, Injectable } from '@angular/core';
-import { LearnerBackup } from './backup.models';
+import { LearnerBackup, PreparedLearnerBackup } from './backup.models';
 import { LearningStateStore } from '../../shared/state/learning-state.store';
-import { validatedBackupState } from './backup-state-validation.policy';
+import { prepareBackupState } from './backup-state-validation.policy';
 import { parseLearnerBackup } from './learner-backup.validator';
 
 @Injectable({ providedIn: 'root' })
@@ -17,8 +17,27 @@ export class BackupService {
     };
   }
 
-  async restore(value: unknown): Promise<void> {
+  async prepare(value: unknown): Promise<PreparedLearnerBackup> {
     const backup = parseLearnerBackup(value);
-    await this.store.replace(validatedBackupState(backup, await this.store.loadAllPacks()));
+    const prepared = prepareBackupState(backup, await this.store.loadAllPacks());
+    return {
+      backup,
+      ...prepared,
+      summary: {
+        attempts: prepared.state.attempts.length,
+        unfinishedSessions: prepared.state.sessions.length,
+        unresolvedMistakes: prepared.state.unresolvedMistakeIds.length,
+        completedLessons: prepared.state.lessonCompletions.length,
+        privateNotes: prepared.state.learnerNotes.length,
+      },
+    };
+  }
+
+  async restore(value: unknown): Promise<void> {
+    await this.restorePrepared(await this.prepare(value));
+  }
+
+  async restorePrepared(prepared: PreparedLearnerBackup): Promise<void> {
+    await this.store.replace(prepared.state);
   }
 }

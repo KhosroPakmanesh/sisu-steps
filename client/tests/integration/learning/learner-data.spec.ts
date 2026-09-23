@@ -93,7 +93,7 @@ describe('learner-data workflow', () => {
     missingVersion.state.contentPackVersions = {};
     missingVersion.state.unresolvedMistakeIds = ['exercise-1'];
     await expect(context.backups.restore(missingVersion)).rejects.toThrowError(
-      'This backup belongs to a different exercise-pack version.',
+      'This backup contains progress for an exercise pack it does not record.',
     );
 
     const incompatible = context.backups.create();

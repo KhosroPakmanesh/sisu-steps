@@ -1,0 +1,100 @@
+.drive-backup-control {
+  --drive-metal-edge: #555956;
+  --drive-metal-mid: #8d918e;
+  --drive-metal-light: #d1d0c9;
+  --drive-metal-highlight: #f8f7f1;
+  --drive-metal-cast-shadow: rgb(18 18 17 / 36%);
+
+  position: relative;
+  display: grid;
+  place-items: start center;
+  width: 2.75rem;
+  min-width: 2.75rem;
+  height: var(--control-height-compact);
+  min-height: var(--control-height-compact);
+  padding: 0.08rem 0.2rem 1.2rem;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-on-ink);
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.drive-backup-control:focus-visible {
+  outline: 0.2rem solid var(--focus-ring);
+  outline-offset: -0.08rem;
+}
+
+.drive-backup-control svg {
+  position: absolute;
+  bottom: 0.08rem;
+  left: 50%;
+  width: 1.45rem;
+  height: 1.45rem;
+  overflow: visible;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: translateX(-50%);
+}
+
+.drive-cloud-body {
+  fill: url('#drive-metal-gradient');
+  stroke: var(--drive-metal-edge);
+  stroke-width: 1;
+  filter: drop-shadow(0 0.1rem 0.08rem var(--drive-metal-cast-shadow));
+}
+
+.drive-cloud-status {
+  fill: none;
+  stroke: var(--drive-metal-edge);
+  stroke-width: 2.35;
+}
+
+.drive-metal-highlight {
+  stop-color: var(--drive-metal-highlight);
+}
+
+.drive-metal-light {
+  stop-color: var(--drive-metal-light);
+}
+
+.drive-metal-mid {
+  stop-color: var(--drive-metal-mid);
+}
+
+.drive-metal-edge {
+  stop-color: var(--drive-metal-edge);
+}
+
+.drive-backup-control small {
+  display: grid;
+  place-items: center;
+  min-height: 0.9rem;
+  color: var(--text-on-ink-muted);
+  font-size: 0.55rem;
+  font-weight: var(--weight-heavy);
+  letter-spacing: 0.015em;
+  line-height: 1;
+  white-space: nowrap;
+  transition:
+    color var(--motion-fast) ease,
+    transform var(--motion-fast) ease;
+}
+
+.drive-backup-control:hover small,
+.drive-backup-control:focus-visible small {
+  color: var(--text-on-ink);
+  transform: translateY(-0.12rem) scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drive-backup-control small {
+    transition: none;
+  }
+
+  .drive-backup-control:hover small,
+  .drive-backup-control:focus-visible small {
+    transform: none;
+  }
+}

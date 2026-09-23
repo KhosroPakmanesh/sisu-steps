@@ -26,6 +26,10 @@ async function findResponseFile(pathname: string): Promise<string | undefined> {
   try {
     const file = await stat(candidate);
     if (file.isFile()) return candidate;
+    if (file.isDirectory()) {
+      const directoryEntry = resolve(candidate, 'index.html');
+      if ((await stat(directoryEntry)).isFile()) return directoryEntry;
+    }
   } catch {
     if (extname(candidate)) return undefined;
   }

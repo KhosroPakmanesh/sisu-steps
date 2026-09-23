@@ -4,6 +4,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { TextFileAdapter } from '@/shared/browser/text-file.adapter';
 import { BackupService } from '@/features/learning/learner-data/backup/backup.service';
 import { ClearHistoryService } from '@/features/learning/learner-data/clear-history.service';
+import { DriveCheckpointService } from '@/features/learning/learner-data/drive/drive-checkpoint.service';
 import { StatsPage } from '@/features/learning/stats/overview/stats.page';
 import { LearningStateStore } from '@/features/learning/shared/state/learning-state.store';
 import { FakeLearningStateStore } from '@testing/helpers/unit/fake-learning-state.store';
@@ -23,6 +24,7 @@ describe('StatsPage', () => {
         { provide: TextFileAdapter, useValue: { downloadJson: vi.fn(), readJson: vi.fn() } },
         { provide: BackupService, useValue: { create: vi.fn(), restore: vi.fn() } },
         { provide: ClearHistoryService, useValue: { clearAll: vi.fn() } },
+        { provide: DriveCheckpointService, useValue: {} },
       ],
     }).compileComponents();
     store = TestBed.inject(LearningStateStore) as unknown as FakeLearningStateStore;
@@ -30,9 +32,12 @@ describe('StatsPage', () => {
     fixture.detectChanges();
   });
 
-  it('places Backup & restore before the Progress by topic catalog', () => {
+  it('composes separate local and Drive archives before the topic catalog', () => {
     const element = fixture.nativeElement as HTMLElement;
+    const localHost = element.querySelector('app-backup-restore') as HTMLElement;
+    const driveHost = element.querySelector('app-drive-checkpoint') as HTMLElement;
     const archive = element.querySelector('.backup-archive') as HTMLElement;
+    const driveArchive = element.querySelector('.drive-checkpoint-archive') as HTMLElement;
     const catalog = element.querySelector('.stats-catalog') as HTMLElement;
 
     expect(element.querySelector('h1')?.textContent?.trim()).toBe('Statistics');
@@ -41,8 +46,14 @@ describe('StatsPage', () => {
     );
     expect(element.querySelector('.cumulative-overview')?.textContent).toContain('All topics');
     expect(element.querySelectorAll('.cumulative-overview > div')).toHaveLength(4);
+    expect(localHost.parentElement).toBe(driveHost.parentElement);
+    expect(localHost.nextElementSibling).toBe(driveHost);
+    expect(localHost.querySelector('.drive-checkpoint-section')).toBeNull();
+    expect(archive.querySelectorAll('.archive-action-row')).toHaveLength(3);
+    expect(driveArchive.querySelectorAll('.drive-action-row')).toHaveLength(3);
+    expect(driveHost.querySelector('#google-drive-checkpoint')?.tagName).toBe('H2');
     expect(
-      archive.compareDocumentPosition(catalog) & Node.DOCUMENT_POSITION_FOLLOWING,
+      driveArchive.compareDocumentPosition(catalog) & Node.DOCUMENT_POSITION_FOLLOWING,
     ).toBeTruthy();
     expect(catalog.querySelector('h2')?.textContent?.trim()).toBe('Progress by topic');
   });

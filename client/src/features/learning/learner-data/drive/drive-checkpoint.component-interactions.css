@@ -1,0 +1,23 @@
+.archive-number,
+.drive-action-row > div {
+  transition: transform var(--motion-fast) ease;
+}
+
+.drive-action-row:hover .archive-number,
+.drive-action-row:focus-within .archive-number {
+  transform: translateY(-0.18rem) rotate(0);
+}
+
+.drive-action-row:hover > div,
+.drive-action-row:focus-within > div {
+  transform: translateY(-0.12rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .drive-action-row:hover .archive-number,
+  .drive-action-row:focus-within .archive-number,
+  .drive-action-row:hover > div,
+  .drive-action-row:focus-within > div {
+    transform: none;
+  }
+}

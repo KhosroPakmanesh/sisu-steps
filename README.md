@@ -10,6 +10,8 @@ The production version is available here:
 
 **[Open Sisu Steps](https://khosropakmanesh.github.io/sisu-steps/)**
 
+The website also provides a [Privacy Policy](https://khosropakmanesh.github.io/sisu-steps/privacy/) and [Terms of Service](https://khosropakmanesh.github.io/sisu-steps/terms/).
+
 ## Why an exercise notebook
 
 I am someone who needs a lot of practice to learn—sometimes more practice than many other people. I wanted a notebook where I could repeat Finnish exercises, understand my mistakes immediately, return to difficult topics, and practise as much as I need without being limited to a small set of examples.
@@ -160,7 +162,9 @@ The layout uses container-based responsive rules that also react to enlarged tex
 
 IndexedDB is the application's only runtime database. It stores learner progress but never stores the authored Finnish content. When the app starts, it loads pack summaries and progress and checks that saved progress still matches the installed content versions. Changing an installed pack clears that pack's incompatible progress. An obsolete state shape or a version entry for a removed pack resets the complete learner state instead of migrating it.
 
-The learner can export and restore a versioned JSON backup. Before replacing existing progress, the app requires the complete current format and exact installed pack versions, then checks the export time, correction and note records, and references to installed topics, tests, exercises, and lessons. Unsupported backups are rejected without changing current progress.
+The learner can export and restore a versioned JSON backup or manually keep one optional recovery checkpoint in hidden Google Drive application storage. IndexedDB remains the live authority and no Google request occurs during startup, study, navigation, or browser close. Drive actions request only `drive.appdata`, keep access tokens in memory, and do not read a Google profile.
+
+Before replacing existing progress, file and Drive restore use the same complete parser and validator. New packs start empty, changed packs lose only the incompatible progress named in the confirmation while valid notes survive, and removed packs or unsupported schemas are rejected without changing current progress. The Drive copy is a recovery checkpoint rather than synchronization and has no additional Sisu Steps password encryption.
 
 ### Technology and automated checks
 

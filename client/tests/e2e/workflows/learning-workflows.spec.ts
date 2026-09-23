@@ -1573,14 +1573,15 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   const headerLayout = await page.locator('.header-tools').evaluate((header) => {
     const controls = [...header.querySelectorAll('.appearance-options label')];
     const appearance = header.querySelector('.appearance-switch')?.getBoundingClientRect();
+    const controlTops = controls.map((control) => control.getBoundingClientRect().top);
     return {
       controlCount: controls.length,
-      flexWrap: getComputedStyle(header).flexWrap,
+      controlsShareRow: controlTops.every((top) => Math.abs(top - controlTops[0]) <= 1),
       switchHeight: appearance?.height ?? 0,
     };
   });
   expect(headerLayout.controlCount).toBe(3);
-  expect(headerLayout.flexWrap).toBe('nowrap');
+  expect(headerLayout.controlsShareRow).toBe(true);
   expect(headerLayout.switchHeight).toBeGreaterThan(0);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
@@ -1763,14 +1764,24 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   const sectionSpacing = await Promise.all([
     backupHeading.boundingBox(),
     backupArchive.boundingBox(),
+    page.locator('.drive-section-heading').boundingBox(),
+    page.locator('.drive-checkpoint-archive').boundingBox(),
     page.getByRole('heading', { name: 'Progress by topic' }).boundingBox(),
   ]);
   expect(sectionSpacing.every(Boolean)).toBe(true);
   expect(sectionSpacing[1]!.y).toBeGreaterThan(sectionSpacing[0]!.y + sectionSpacing[0]!.height);
-  const archiveToProgressGap =
+  const localArchiveToDriveHeadingGap =
     sectionSpacing[2]!.y - (sectionSpacing[1]!.y + sectionSpacing[1]!.height);
-  expect(archiveToProgressGap).toBeGreaterThanOrEqual(24);
-  expect(archiveToProgressGap).toBeLessThanOrEqual(96);
+  const driveHeadingToArchiveGap =
+    sectionSpacing[3]!.y - (sectionSpacing[2]!.y + sectionSpacing[2]!.height);
+  const driveArchiveToProgressGap =
+    sectionSpacing[4]!.y - (sectionSpacing[3]!.y + sectionSpacing[3]!.height);
+  expect(localArchiveToDriveHeadingGap).toBeGreaterThanOrEqual(24);
+  expect(localArchiveToDriveHeadingGap).toBeLessThanOrEqual(96);
+  expect(driveHeadingToArchiveGap).toBeGreaterThanOrEqual(16);
+  expect(driveHeadingToArchiveGap).toBeLessThanOrEqual(96);
+  expect(driveArchiveToProgressGap).toBeGreaterThanOrEqual(24);
+  expect(driveArchiveToProgressGap).toBeLessThanOrEqual(96);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );

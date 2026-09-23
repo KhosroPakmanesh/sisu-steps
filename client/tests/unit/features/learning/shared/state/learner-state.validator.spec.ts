@@ -42,4 +42,26 @@ describe('learner-state contract', () => {
 
     expect(isCurrentLearnerState(obsolete)).toBe(false);
   });
+
+  it('rejects internally inconsistent scoring totals', () => {
+    const state = createEmptyLearnerState({ topic: '1.0.0' });
+    state.attempts = [
+      {
+        id: 'attempt',
+        mode: 'test',
+        topicId: 'topic',
+        title: 'Test',
+        startedAt: '2026-09-09T10:00:00.000Z',
+        completedAt: '2026-09-09T10:01:00.000Z',
+        answers: [],
+        correctCount: 1,
+        incorrectCount: 0,
+        skippedCount: 0,
+        total: 1,
+        percentage: 100,
+      },
+    ];
+
+    expect(isCurrentLearnerState(state)).toBe(false);
+  });
 });

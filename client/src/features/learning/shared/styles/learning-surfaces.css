@@ -74,8 +74,8 @@ main.page-shell .catalog-stats div + div {
   border-left-style: dashed;
 }
 
-/* Stats: one complete bound archive sheet around the global data operations. */
-main.stats-page .backup-archive {
+main.stats-page .backup-archive,
+main.stats-page .drive-checkpoint-archive {
   border: 0;
   border-radius: 0.12rem 0.58rem 0.58rem 0.1rem;
   background-color: var(--surface-stationery);
@@ -90,7 +90,8 @@ main.stats-page .backup-archive {
     drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));
 }
 
-main.stats-page .backup-archive::before {
+main.stats-page .backup-archive::before,
+main.stats-page .drive-checkpoint-archive::before {
   position: absolute;
   z-index: 1;
   top: 0.65rem;
@@ -107,7 +108,8 @@ main.stats-page .backup-archive::before {
   pointer-events: none;
 }
 
-main.stats-page .backup-archive::after {
+main.stats-page .backup-archive::after,
+main.stats-page .drive-checkpoint-archive::after {
   position: absolute;
   top: 0.45rem;
   right: 0.08rem;
@@ -328,6 +330,8 @@ main.lesson-page .key-points li {
 @container workbook (width <= 35rem) {
   main.stats-page .backup-archive::before,
   main.stats-page .backup-archive::after,
+  main.stats-page .drive-checkpoint-archive::before,
+  main.stats-page .drive-checkpoint-archive::after,
   main.topic-page .test-card::before {
     display: none;
   }

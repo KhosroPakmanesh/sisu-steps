@@ -14,7 +14,7 @@ export const appConfig: ApplicationConfig = {
     provideRouter(
       routes,
       withViewTransitions({ skipInitialTransition: true }),
-      withInMemoryScrolling({ scrollPositionRestoration: 'top' }),
+      withInMemoryScrolling({ scrollPositionRestoration: 'top', anchorScrolling: 'enabled' }),
     ),
     { provide: JSON_RESOURCE_LOADER, useClass: BrowserJsonResourceLoader },
     { provide: LEARNER_STATE_REPOSITORY, useClass: IndexedDbLearnerStateRepository },

@@ -5,8 +5,8 @@
       <h2 id="backup-heading">Backup &amp; restore</h2>
     </div>
     <p>
-      Save your attempts, unfinished sessions, mistakes, completed lessons, and private notes in one
-      backup file.
+      Progress saves automatically on this device. Make a portable copy or an optional Google Drive
+      recovery checkpoint when you want one.
     </p>
   </header>
 
@@ -43,7 +43,7 @@
           <div>
             <h3>Clear all history</h3>
             <p>
-              Remove progress and private notes from every topic. Bundled lessons and exercises
+              Remove local progress and private notes. Bundled lessons and any Drive checkpoint
               remain available.
             </p>
           </div>
@@ -64,6 +64,6 @@
 </section>
 
 <app-confirmation-sheet
-  [request]="pendingClear()?.request ?? null"
-  (resolved)="resolveClear($event)"
+  [request]="pendingAction()?.request ?? null"
+  (resolved)="resolveAction($event)"
 />
