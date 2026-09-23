@@ -182,6 +182,8 @@
 
 ### Fixed
 
+- Fixed GitHub Pages deployment after adding direct legal-page entry files: the workflow now uploads the deterministic Angular browser output root and rejects artifacts missing the application bundles, runtime configuration, or legal entry points instead of potentially publishing a one-file route directory.
+
 - Aligned the Drive backup header control's hover and keyboard-focus feedback with the Appearance switch: its status lifts and brightens while the metallic cloud remains steady.
 
 - Restarted mistake practice directly from its completed result so unresolved mistakes open in a fresh round instead of leaving the learner on the same result screen.

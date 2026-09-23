@@ -60,3 +60,15 @@ Runtime-configuration change recorded on 2026-09-23:
   metadata in the tracked HTML.
 - The focused Drive recovery browser file passed all 6 mobile, tablet, and wide cases, including
   verification that the ordinary test build remains deliberately unconfigured.
+
+GitHub Pages artifact correction recorded on 2026-09-23:
+
+- Live checks before the correction found that the site entry page returned HTTP 200 while its
+  generated runtime configuration, hashed application bundle, and direct Privacy Policy route
+  returned HTTP 404.
+- A deployment-like production build with the `/sisu-steps/` base path produced the application
+  entry page, generated runtime configuration, hashed root JavaScript and CSS bundles, and both
+  direct legal-page entry files under `client/dist/sisu-steps/browser`.
+- The deployment workflow now uploads that deterministic browser output root and rejects an
+  artifact that lacks any of those required root or legal-route files. Live recovery remains a
+  post-push deployment check.

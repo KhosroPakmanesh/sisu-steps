@@ -48,26 +48,20 @@ jobs:
           GOOGLE_OAUTH_CLIENT_ID: ${{ vars.GOOGLE_OAUTH_CLIENT_ID }}
         run: npm run build -- --configuration production --base-href "/sisu-steps/"
 
-      - name: Find Angular build output
-        id: output
-        shell: bash
+      - name: Validate GitHub Pages artifact
         run: |
-          INDEX_FILE="$(find client/dist -type f -name index.html -not -path '*/server/*' | head -n 1)"
-
-          if [ -z "$INDEX_FILE" ]; then
-            echo "Could not find Angular index.html"
-            exit 1
-          fi
-
-          SITE_DIR="$(dirname "$INDEX_FILE")"
-
-          echo "Publishing: $SITE_DIR"
-          echo "dir=$SITE_DIR" >> "$GITHUB_OUTPUT"
+          SITE_DIR="client/dist/sisu-steps/browser"
+          test -f "$SITE_DIR/index.html"
+          test -f "$SITE_DIR/runtime-config.js"
+          test -f "$SITE_DIR/privacy/index.html"
+          test -f "$SITE_DIR/terms/index.html"
+          test -n "$(find "$SITE_DIR" -maxdepth 1 -type f -name 'main-*.js' -print -quit)"
+          test -n "$(find "$SITE_DIR" -maxdepth 1 -type f -name 'styles-*.css' -print -quit)"
 
       - name: Prepare single-page fallback
         run: |
-          cp "${{ steps.output.outputs.dir }}/index.html" "${{ steps.output.outputs.dir }}/404.html"
-          touch "${{ steps.output.outputs.dir }}/.nojekyll"
+          cp client/dist/sisu-steps/browser/index.html client/dist/sisu-steps/browser/404.html
+          touch client/dist/sisu-steps/browser/.nojekyll
 
       - name: Setup GitHub Pages
         uses: actions/configure-pages@v5
@@ -75,7 +69,7 @@ jobs:
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ${{ steps.output.outputs.dir }}
+          path: client/dist/sisu-steps/browser
 
   deploy:
     environment:
