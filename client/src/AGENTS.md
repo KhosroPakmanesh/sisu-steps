@@ -5,7 +5,7 @@ These rules apply under `client/src/`.
 ## Ownership
 
 - Keep bootstrapping, providers, route metadata, route composition, and shell composition under `app/`.
-- Keep learner-facing UI and behavior under `features/learning/`.
+- Keep learning UI and behavior under `features/learning/`; keep public policy pages under `features/legal/`.
 - Inside Learning, choose topics, lessons, study, stats, or learner-data before a technical-role folder.
 - Keep cross-workflow Learning behavior, navigation, state contracts, and persistence under `features/learning/shared`; keep root `shared` for product-agnostic browser infrastructure.
 - Treat progress statistics as derived read models. Do not introduce a report entity, report workflow, or persisted report shape.

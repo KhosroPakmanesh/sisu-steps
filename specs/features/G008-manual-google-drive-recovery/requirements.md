@@ -37,7 +37,7 @@
 - **REQ-G008-024:** A backup containing a pack ID that is no longer installed shall be rejected completely.
 - **REQ-G008-025:** Stable exercise and lesson IDs from an incompatible pack shall not be reassigned to another pack in a way that could reinterpret old unscoped learner records.
 
-`REQ-G008-020`–`024` supersede the exact installed pack/version-set clause of `REQ-G001-121`. Its current-format-only, removed-pack rejection, and no-legacy-reader rules remain in force.
+`REQ-G008-020`–`024` supersede the exact installed pack/version-set clauses of `REQ-G001-121` and client `REQ-G009-009`/`REQ-G009-013`. Their current-format-only, removed-pack rejection, full content validation, and no-legacy-reader rules remain in force.
 
 ## Deletion and disconnection
 

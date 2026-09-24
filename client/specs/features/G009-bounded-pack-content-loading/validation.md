@@ -9,7 +9,7 @@
 - **VAL-G009-005 / REQ-G009-005:** A failure/retry test asserts a rejected load can succeed on a later request.
 - **VAL-G009-006 / REQ-G009-006, REQ-G009-007:** LRU tests assert a two-pack bound, recency refresh, and least-recently-used eviction.
 - **VAL-G009-007 / REQ-G009-008:** Repository tests assert lesson, test, and exercise maps resolve the assembled objects.
-- **VAL-G009-008 / REQ-G009-009, REQ-G009-013:** State, backup, integration, and browser tests assert complete current state is retained, unsupported stored state resets completely, and obsolete or pack-incompatible backups are rejected before replacement.
+- **VAL-G009-008 / REQ-G009-009, REQ-G009-013:** State, backup, integration, and browser tests assert complete current state is retained, unsupported stored state resets completely, and obsolete or removed-pack backups are rejected before replacement. Root `VAL-G008-004` covers the later new-pack and changed-pack compatibility policy that supersedes G009's original exact-set rule.
 - **VAL-G009-009 / REQ-G009-010:** IndexedDB repository tests persist and retrieve learner state after the redundant caller-side clone is removed.
 - **VAL-G009-010 / REQ-G009-011, REQ-G009-014:** Shell unit/browser checks assert the incomplete root stays hidden until its routed layout is ready, the full-viewport overlay prevents a visible startup shift, and final loaded-page markup remains unchanged.
 - **VAL-G009-011 / REQ-G009-012:** Existing learning unit, integration, and Playwright suites remain green.
@@ -29,6 +29,8 @@
 - Confirm later navigation to an uncached pack and catalog retry reuse the same full-viewport loader and that route templates contain no separate loading state.
 
 ## Completion evidence — 2026-09-09
+
+The dated results below record the G009 delivery before root G008 changed backup compatibility. Its original exact pack/version-set rejection evidence remains historical; current compatibility validation is recorded under root `VAL-G008-004`.
 
 - **Startup boundary and layout:** The Playwright loading check passed at 320, 768, and 1440 pixels. Each cold catalog load requested one index and six manifests, requested no lesson or test fragments, and loaded only the selected pack's fragments after navigation. Measured startup layout shift was 0.010, 0.0078, and 0.0016 respectively. Covers VAL-G009-001, VAL-G009-010, and VAL-G009-015.
 - **Pack lifecycle:** Unit tests cover validated assembly, lesson/test/exercise maps, concurrent-load deduplication, retry after failure, cache recency, and two-pack least-recently-used eviction. Covers VAL-G009-003 through VAL-G009-007.

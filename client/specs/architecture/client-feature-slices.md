@@ -1,6 +1,6 @@
 # Angular client feature-slice architecture
 
-Sisu Steps is organized around learner concepts and workflows. Shared code exists only for behavior genuinely used by more than one learning workflow or for product-agnostic browser infrastructure.
+Sisu Steps organizes learning code around learner concepts and workflows. Public policy pages have a separate Legal owner. Shared code exists only for behavior genuinely used by more than one learning workflow or for product-agnostic browser infrastructure.
 
 ## Target structure
 
@@ -15,6 +15,10 @@ client/
       shell/
     design-system/
     features/
+      legal/
+        privacy/
+        shared/
+        terms/
       learning/
         topics/
           catalog/
@@ -34,6 +38,7 @@ client/
           backup/
           backup-restore/
           confirmation/
+          drive/
         shared/
           answer-entry/
           content/
@@ -73,7 +78,8 @@ client/
 ## Rules
 
 - Keep `client/src/main.ts` small; compose providers, routes, and shell behavior under `client/src/app`.
-- Keep learner-facing behavior under `learning` and choose `topics`, `lessons`, `study`, `stats`, or `learner-data` before a technical role.
+- Keep learning behavior under `learning` and choose `topics`, `lessons`, `study`, `stats`, or `learner-data` before a technical role.
+- Keep public Privacy Policy and Terms of Service pages under `features/legal`. Keep optional manual Drive recovery under `features/learning/learner-data/drive`; Stats composes its controls without a separate learner-data route.
 - Keep topic catalog summaries, continue-learning selection, and topic details under `topics`; keep computed progress summaries and their presentation under learning-shared progress and `stats` respectively.
 - Keep backup, restore, and scoped history clearing under `learner-data`. Sisu Steps has no report entity or report workflow.
 - Keep modules used by several learning workflows under `features/learning/shared`; learner state, IndexedDB, learning navigation, notes, content, and progress contracts are product-specific and belong there.

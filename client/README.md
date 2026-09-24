@@ -43,6 +43,7 @@ npm --prefix client exec -- playwright install chromium
 
 - `src/app` owns bootstrapping, providers, route composition, and the application shell.
 - `src/features/learning` owns topics, lessons, study, progress statistics, learner data, and learning-shared behavior including learner state and IndexedDB persistence.
+- `src/features/legal` owns the public Privacy Policy and Terms of Service pages.
 - `src/design-system` owns canonical tokens, visual foundations, primitives, feedback, and sentence-explanation patterns.
 - `src/shared` owns only product-agnostic browser infrastructure.
 - `tests/unit` mirrors production ownership, `tests/integration` owns cross-workflow stateful operations, `tests/helpers` owns reusable test fixtures, and `tests/e2e` groups critical browser journeys by concern.

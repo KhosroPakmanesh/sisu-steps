@@ -48,6 +48,10 @@
 
 ### Changed
 
+- Refreshed the root README with the desktop and mobile learning journey, current feature ownership, local setup, documentation links, Finnish-correction guidance, deployment checks, and a general grammar reference. Removed changing syllabus, pack-count, and AI-model details while retaining the detailed technical architecture.
+
+- Corrected the README and client architecture guidance to show public Legal routes, Stats-owned learner-data controls, and optional manual Drive authorization and API access. Clarified that saved answers publish feedback and progress after persistence, and marked G009's former exact backup pack/version rule as superseded by the current root recovery requirements while preserving its dated evidence.
+
 - Unified topic progress and both Stats hero summaries on one compact, content-sized assignment-sheet layout with consistent padding and row spacing; distributed spare width between the side gutters and metric columns instead of leaving a large empty side or middle band; matched all three sheets' metric-label ink to the level eyebrow; aligned the wide-screen introductions without stretching the sheets, removed the separate visible topic Stats summary heading, and replaced the cumulative sheet's static All topics cell with a three-metric presentation.
 
 - Removed the seven full-width dashed dividers from legal pages, statistics summaries, local and Drive backup actions, and confirmation sheets while retaining their spacing, ruled paper, and separate catalog-label underline.

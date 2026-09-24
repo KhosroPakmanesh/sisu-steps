@@ -1,6 +1,6 @@
 # Browser-local persistence architecture
 
-Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exercises remain versioned static JSON; mutable learner data remains separate. Small presentation-only preferences may use browser key-value storage behind a purpose-named adapter.
+Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exercises remain versioned static JSON; mutable learner data remains separate. Presentation preferences and non-authoritative UI hints, such as the last locally observed Drive-backup date, may use browser key-value storage behind purpose-named adapters.
 
 ## Canonical contract
 
@@ -40,4 +40,4 @@ Native IndexedDB is Sisu Steps' only runtime database. Bundled lessons and exerc
 
 ## Recoverability and security boundary
 
-The current browser profile and origin are the privacy and ownership boundary. IndexedDB is not encrypted and can be removed by browser/profile cleanup. Versioned JSON export is the supported portable backup. There is no authentication, synchronization, or remote authorization. Any future remote boundary requires an explicit constitution and feature-spec change.
+The current browser profile and origin are the live learner-data boundary. IndexedDB is not encrypted and can be removed by browser/profile cleanup. Versioned JSON export is a portable backup. Optional manual recovery may store one checkpoint, including private notes, in hidden Google Drive application storage under root `specs/features/G008-manual-google-drive-recovery/`. Google authorization and Drive API requests occur only after an explicit learner action; access tokens remain in memory. Sisu Steps has no account system or automatic synchronization, and IndexedDB remains the live authority. Any further remote boundary requires an explicit product requirement and applicable technical specifications.
