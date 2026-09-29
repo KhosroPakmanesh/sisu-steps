@@ -191,7 +191,13 @@ export class StudyPage implements RouteReadiness {
   }
 
   private scheduleFocus(target: 'question' | 'continue' | 'result'): void {
-    afterNextRender(() => this.focusState(target), { injector: this.injector });
+    afterNextRender(
+      () => {
+        // NgModel updates disabled controls in a microtask after the view renders.
+        queueMicrotask(() => this.focusState(target));
+      },
+      { injector: this.injector },
+    );
   }
 
   private focusState(target: 'question' | 'continue' | 'result'): void {
