@@ -56,3 +56,9 @@ No unresolved high-impact issue remains before authoring.
 ## Final decision
 
 The count and split are approved for controlled `0 - A1.3` written question formation. General `mikä`/`mitä`/`mitkä` selection, the partitive system, short answers, spoken Finnish, listening, speaking, free interaction, calibrated difficulty, and overall CEFR ability remain outside scope.
+
+## Prompt-style revision — 2026-09-29
+
+**Pre-authoring disposition: approved with limitations.** The existing six-skill sequence, 160 scored questions, and 24 optional practice questions remain appropriate. The wording audit found irrelevant scene labels and repeated full-sentence instructions. Shorten all 184 prompts while preserving complete English target meanings, supplied supporting forms, and polarity, number, and classification cues. Keep answers, IDs, order, diagnostics, and mastery pairs stable. Final item-by-item audit and direct-source validation remain required.
+
+**Final disposition: approved with limitations.** All 184 prompts were shortened; median length is 17 words and maximum length is 25. The affirmative and negative question meanings, singular/plural references, and bounded classification frames remain explicit. An item-by-item source comparison found no changes outside prompts. Existing pack and lesson versions remain because meanings, answers, grading, and lesson targets did not change; prior learner progress remains valid. The family retains its earlier written-practice limitations. Direct-source validation and the complete client check passed; representative revised scored and optional-practice prompts rendered without horizontal overflow at 320, 768, and 1440 pixels.

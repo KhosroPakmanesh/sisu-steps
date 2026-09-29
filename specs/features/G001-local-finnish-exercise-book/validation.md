@@ -60,6 +60,7 @@
 - **VAL-G001-044** (`REQ-G001-079`): Content validation rejects focused lessons with more than ten introduced words and audits reuse of core vocabulary across recognition and production formats.
 - **VAL-G001-057** (`REQ-G001-097`, `098`): Review the current pack's saved pedagogy assessment for scope completeness, first-principles suitability, controlled lexical load, exercise progression, useful redundancy, feedback quality, review validity, and clearly stated limitations.
 - **VAL-G001-065** (`REQ-G001-107`): Review every transformed word or verb form for an accurate source meaning, an accurate target meaning, and explicit disclosure of every non-target ending, stem frame, or agreement choice.
+- **VAL-G001-090** (`REQ-G001-132`): Inventory every scored and optional-practice prompt across installed packs. Confirm Demonstratives prompts retain each answer-bearing reference, number, person, polarity, bounded-location, English-meaning, and supplied-form cue while omitting decorative scenes, duplicate target statements, and authoring notes. Runtime and standalone negative tests reject overlong or known boilerplate prompts, and direct-source validation enforces the same limit for future packs. Compare prompt lengths and render representative revised Study and lesson-practice questions.
 
 ## Manual validation
 

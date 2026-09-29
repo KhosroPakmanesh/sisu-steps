@@ -110,6 +110,19 @@ describe('standalone content-quality validation', () => {
     ).toEqual(['practice: repeats the optional-practice label']);
   });
 
+  it('keeps future prompts concise and free of authoring boilerplate', () => {
+    const longPrompt = Array.from({ length: 41 }, () => 'word').join(' ');
+    expect(
+      validateExerciseEditorialQuality([
+        { id: 'long', prompt: longPrompt },
+        { id: 'boilerplate', prompt: 'The identity-sentence frame is supplied.' },
+      ]),
+    ).toEqual([
+      'long: prompt exceeds the 40-word editorial limit',
+      'boilerplate: prompt repeats an instruction or exposes authoring notes',
+    ]);
+  });
+
   it('rejects number-neutral English you in Finnish-production prompts', () => {
     expect(
       validateExerciseEditorialQuality([

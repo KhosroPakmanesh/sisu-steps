@@ -65,7 +65,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
       (candidate) => candidate.type !== 'translation-en',
     );
     if (!exercise) throw new Error('The singular pack has no Finnish form-recall task.');
-    exercise.prompt = exercise.prompt.replace(/ Finnish frame: “[^”]+”/u, '');
+    exercise.prompt = exercise.prompt.replace(/ Frame: “[^”]+”/u, '');
 
     expect(validateDemonstrativePack(pack)).toContain(
       `${exercise.id}: initial form recall must visibly supply the Finnish sentence frame`,
@@ -135,7 +135,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
   it('rejects an independent inessive task without a matching container context', () => {
     const pack = structuredClone(requirePack(packs, 'inessive-demonstrative-forms'));
     const exercise = pack.tests[0].exercises[0];
-    exercise.prompt = exercise.prompt.replace(/^Context:.*?(?=Choose|Complete|Write|Build)/u, '');
+    exercise.prompt = exercise.prompt.replace(/^.*?(?=Choose|Write|Build)/u, '');
 
     expect(validateDemonstrativePack(pack)).toContain(
       `${exercise.id}: independent inessive task needs an explicit matching bounded-location context`,

@@ -54,3 +54,9 @@ No unresolved high-impact issue remains before authoring.
 ## Final decision
 
 The count and split are approved for controlled `0 - A1.3` written grammar practice. Other demonstrative cases, unsupplied noun inflection, broader location adverbs, listening, speaking, free interaction, calibrated difficulty, and overall CEFR ability remain outside scope.
+
+## Prompt-style revision — 2026-09-29
+
+**Pre-authoring disposition: approved with limitations.** The existing four-skill sequence, 120 scored questions, and 16 optional practice questions remain appropriate. The wording audit found duplicated scene descriptions and repeated full-sentence instructions. Shorten all 136 prompts while preserving each bounded container or area, nearby/farther/already-known reference cue, complete English target meaning, and supplied supporting forms. Keep answers, IDs, order, diagnostics, and mastery pairs stable. Final item-by-item audit and direct-source validation remain required.
+
+**Final disposition: approved with limitations.** All 136 prompts were shortened; median length is 21 words and maximum length is 34. Every independent inessive item still names its bounded compartment, garage, room, or district and states the near, far, or already-known reference relation; source forms and supporting nouns remain visible. An item-by-item source comparison found no changes outside prompts. Existing pack and lesson versions remain because meanings, answers, grading, and lesson targets did not change; prior learner progress remains valid. The family retains its earlier written-practice limitations. Direct-source validation and the complete client check passed; representative revised scored and optional-practice prompts rendered without horizontal overflow at 320, 768, and 1440 pixels.

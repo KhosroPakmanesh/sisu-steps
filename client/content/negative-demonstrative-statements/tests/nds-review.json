@@ -14,7 +14,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The previously identified book is not here.” Beside a noticeboard. Use the supplied subject se kirja (“the previously identified book”) and täällä (“here”).",
+      "prompt": "Choose the sentence that means “The previously identified book is not here.” Use se kirja (“the previously identified book”) and täällä (“here”).",
       "acceptedAnswers": ["Se kirja ei ole täällä."],
       "explanation": "Se kirja is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -81,7 +81,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “This car is not here.” During a picture exercise. Use the supplied subject tämä auto (“this car”) and täällä (“here”).",
+      "prompt": "Choose the sentence that means “This car is not here.” Use tämä auto (“this car”) and täällä (“here”).",
       "acceptedAnswers": ["Tämä auto ei ole täällä."],
       "explanation": "Tämä auto is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -148,7 +148,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “These books are not here.” At the kitchen table. Use the supplied subject nämä kirjat (“these books”) and täällä (“here”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “These books are not here.” in Finnish. Use nämä kirjat (“these books”) and täällä (“here”).",
       "acceptedAnswers": ["Nämä kirjat eivät ole täällä."],
       "explanation": "Nämä kirjat is plural and therefore takes eivät ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -203,7 +203,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Those houses are not here.” While comparing two photos. Use the supplied subject nuo talot (“those houses”) and täällä (“here”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “Those houses are not here.” in Finnish. Use nuo talot (“those houses”) and täällä (“here”).",
       "acceptedAnswers": ["Nuo talot eivät ole täällä."],
       "explanation": "Nuo talot is plural and therefore takes eivät ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -258,7 +258,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “That car is not here.” in Finnish. At a reception desk. Source: Tuo auto on täällä. (“That car is here.”) Target: “That car is not here.” Keep tuo and the supplied auto unchanged.",
+      "prompt": "Write “That car is not here.” in Finnish. Start from “Tuo auto on täällä.” (“That car is here.”). Keep tuo and auto unchanged.",
       "acceptedAnswers": ["Tuo auto ei ole täällä."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -313,7 +313,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “The previously identified cars are not here.” in Finnish. While checking a list. Source: Ne autot ovat täällä. (“The previously identified cars are here.”) Target: “The previously identified cars are not here.” Keep ne and the supplied autot unchanged.",
+      "prompt": "Write “The previously identified cars are not here.” in Finnish. Start from “Ne autot ovat täällä.” (“The previously identified cars are here.”). Keep ne and autot unchanged.",
       "acceptedAnswers": ["Ne autot eivät ole täällä."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -368,7 +368,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “That car is not here.” While unpacking a bag. Use the supplied subject tuo auto (“that car”) and täällä (“here”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “That car is not here.” in Finnish. Use tuo auto (“that car”) and täällä (“here”).",
       "acceptedAnswers": ["Tuo auto ei ole täällä."],
       "explanation": "Tuo auto is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -423,7 +423,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “The previously identified car is not here.” At a museum display. Use the supplied subject se auto (“the previously identified car”) and täällä (“here”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “The previously identified car is not here.” in Finnish. Use se auto (“the previously identified car”) and täällä (“here”).",
       "acceptedAnswers": ["Se auto ei ole täällä."],
       "explanation": "Se auto is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -478,7 +478,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “The previously identified books are not here.” in Finnish. During a vocabulary game. Use the supplied subject ne kirjat (“the previously identified books”) and täällä (“here”).",
+      "prompt": "Write “The previously identified books are not here.” in Finnish. Use ne kirjat (“the previously identified books”) and täällä (“here”).",
       "acceptedAnswers": ["Ne kirjat eivät ole täällä."],
       "explanation": "Ne kirjat is plural and therefore takes eivät ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -533,7 +533,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “These books are not here.” in Finnish. At a bus stop. Use the supplied subject nämä kirjat (“these books”) and täällä (“here”).",
+      "prompt": "Write “These books are not here.” in Finnish. Use nämä kirjat (“these books”) and täällä (“here”).",
       "acceptedAnswers": ["Nämä kirjat eivät ole täällä."],
       "explanation": "Nämä kirjat is plural and therefore takes eivät ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -588,7 +588,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a library table. Translate “Tämä talo ei ole täällä.” into English.",
+      "prompt": "Translate “Tämä talo ei ole täällä.” into English.",
       "acceptedAnswers": ["This house is not here."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -636,7 +636,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "In a shop window. Translate “Nuo talot eivät ole täällä.” into English.",
+      "prompt": "Translate “Nuo talot eivät ole täällä.” into English.",
       "acceptedAnswers": ["Those houses are not here."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -684,7 +684,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “This house is not here.” in Finnish. During a video call. Use the supplied subject tämä talo (“this house”) and täällä (“here”).",
+      "prompt": "Write “This house is not here.” in Finnish. Use tämä talo (“this house”) and täällä (“here”).",
       "acceptedAnswers": ["Tämä talo ei ole täällä."],
       "explanation": "Tämä talo is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -739,7 +739,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “That house is not here.” in Finnish. At the kitchen table. Use the supplied subject tuo talo (“that house”) and täällä (“here”).",
+      "prompt": "Write “That house is not here.” in Finnish. Use tuo talo (“that house”) and täällä (“here”).",
       "acceptedAnswers": ["Tuo talo ei ole täällä."],
       "explanation": "Tuo talo is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -794,7 +794,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Beside a noticeboard. Translate “Nuo talot eivät ole täällä.” into English.",
+      "prompt": "Translate “Nuo talot eivät ole täällä.” into English.",
       "acceptedAnswers": ["Those houses are not here."],
       "explanation": "Nuo talot is plural and therefore takes eivät ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -842,7 +842,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "During a picture exercise. Translate “Ne talot eivät ole täällä.” into English. The referents are already identifiable from the conversation.",
+      "prompt": "Translate “Ne talot eivät ole täällä.” into English.",
       "acceptedAnswers": [
         "The previously identified houses are not here.",
         "Those houses are not here."
@@ -893,7 +893,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The previously identified house is not here.” While arranging a shelf. Source: Se talo on täällä. (“The previously identified house is here.”) Target: “The previously identified house is not here.” Keep se and the supplied talo unchanged.",
+      "prompt": "Build “The previously identified house is not here.” Start from “Se talo on täällä.” (“The previously identified house is here.”). Keep se and talo unchanged.",
       "acceptedAnswers": ["Se talo ei ole täällä."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -949,7 +949,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “These books are not at home.” During a map activity. Source: Nämä kirjat ovat kotona. (“These books are at home.”) Target: “These books are not at home.” Keep nämä and the supplied kirjat unchanged.",
+      "prompt": "Build “These books are not at home.” Start from “Nämä kirjat ovat kotona.” (“These books are at home.”). Keep nämä and kirjat unchanged.",
       "acceptedAnswers": ["Nämä kirjat eivät ole kotona."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1005,7 +1005,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "While unpacking a bag. Translate “Se talo ei ole täällä.” into English. The referent is already identifiable from the conversation.",
+      "prompt": "Translate “Se talo ei ole täällä.” into English.",
       "acceptedAnswers": [
         "The previously identified house is not here.",
         "That house is not here."
@@ -1056,7 +1056,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a museum display. Translate “Tämä kirja ei ole kotona.” into English.",
+      "prompt": "Translate “Tämä kirja ei ole kotona.” into English.",
       "acceptedAnswers": ["This book is not at home."],
       "explanation": "Tämä kirja is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1104,7 +1104,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “These books are not at home.” While checking a list. Use the supplied subject nämä kirjat (“these books”) and kotona (“at home”).",
+      "prompt": "Build “These books are not at home.” Use nämä kirjat (“these books”) and kotona (“at home”).",
       "acceptedAnswers": ["Nämä kirjat eivät ole kotona."],
       "explanation": "Nämä kirjat is plural and therefore takes eivät ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1160,7 +1160,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Those books are not at home.” During a house tour. Use the supplied subject nuo kirjat (“those books”) and kotona (“at home”).",
+      "prompt": "Build “Those books are not at home.” Use nuo kirjat (“those books”) and kotona (“at home”).",
       "acceptedAnswers": ["Nuo kirjat eivät ole kotona."],
       "explanation": "Nuo kirjat is plural and therefore takes eivät ole.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1216,7 +1216,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “That book is not at home.” At a school entrance. Source: Tuo kirja on kotona. (“That book is at home.”) Target: “That book is not at home.” Keep tuo and the supplied kirja unchanged.",
+      "prompt": "Choose the sentence that means “That book is not at home.” Start from “Tuo kirja on kotona.” (“That book is at home.”). Keep tuo and kirja unchanged.",
       "acceptedAnswers": ["Tuo kirja ei ole kotona."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1283,7 +1283,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The previously identified books are not at home.” While sorting objects. Source: Ne kirjat ovat kotona. (“The previously identified books are at home.”) Target: “The previously identified books are not at home.” Keep ne and the supplied kirjat unchanged.",
+      "prompt": "Choose the sentence that means “The previously identified books are not at home.” Start from “Ne kirjat ovat kotona.” (“The previously identified books are at home.”). Keep ne and kirjat unchanged.",
       "acceptedAnswers": ["Ne kirjat eivät ole kotona."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],

@@ -55,3 +55,9 @@ No unresolved high-impact scope, prerequisite, sequence, vocabulary-load, or cou
 ## Final decision
 
 The count and split are approved for controlled `0 - A1.3` written grammar practice. General textual reference, colloquial person reference, non-nominative cases, listening, speaking, free interaction, calibrated difficulty, and overall CEFR ability remain outside scope.
+
+## Prompt-style revision — 2026-09-29
+
+**Pre-authoring disposition: approved with limitations.** The existing five-skill sequence, 120 scored questions, and 20 optional practice questions remain appropriate. The wording audit found irrelevant scene labels, repeated full-sentence instructions, and internal frame commentary. Shorten all 140 prompts while preserving complete English target meanings, supplied supporting forms and meanings, visible Finnish frames for first-form recall, and reference cues. Keep answers, IDs, order, diagnostics, and mastery pairs stable. Final item-by-item audit and direct-source validation remain required.
+
+**Final disposition: approved with limitations.** All 140 prompts were shortened; median length is 17 words and maximum length is 28. The first form test still shows each Finnish frame, ambiguous `that` prompts still identify the listener's known referent, and person-reference items still name the referent and written register. An item-by-item source comparison found no changes outside prompts. Existing pack and lesson versions remain because meanings, answers, grading, and lesson targets did not change; prior learner progress remains valid. The family retains its earlier written-practice limitations. Direct-source validation and the complete client check passed; representative revised scored and optional-practice prompts rendered without horizontal overflow at 320, 768, and 1440 pixels.

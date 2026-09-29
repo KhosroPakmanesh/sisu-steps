@@ -10,7 +10,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Several storage compartments are open. The speaker indicates the farther-away compartments, visible to both people. Complete “Books are in those over there.” During a picture exercise. Start from nuo (“those over there”). Use the supplied subject kirjat (“books”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to the farther compartments that both can see. Write “Books are in those over there.” in Finnish. Start from nuo (“those over there”). Use kirjat (“books”).",
       "acceptedAnswers": ["Kirjat ovat noissa."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -58,7 +58,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Several storage compartments are open. Both people refer to the compartments they identified earlier. Complete “Books are in them.” While unpacking a bag. Start from ne (“those or they, already identifiable”). Use the supplied subject kirjat (“books”). Write the complete Finnish sentence: ____",
+      "prompt": "Both people already know which compartments they mean. Write “Books are in them.” in Finnish. Start from ne (“those or they, already identifiable”). Use kirjat (“books”).",
       "acceptedAnswers": ["Kirjat ovat niissä."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -106,7 +106,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Several garages are visible. The speaker indicates the nearby garages. Write “Cars are in these.” in Finnish. At a museum display. Start from nämä (“these”). Use the supplied subject autot (“cars”).",
+      "prompt": "The speaker points to the nearby garages. Write “Cars are in these.” in Finnish. Start from nämä (“these”). Use autot (“cars”).",
       "acceptedAnswers": ["Autot ovat näissä."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -154,7 +154,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Several garages are visible. The speaker indicates the farther-away garages, visible to both people. Write “Cars are in those over there.” in Finnish. During a video call. Start from nuo (“those over there”). Use the supplied subject autot (“cars”).",
+      "prompt": "The speaker points to the farther garages that both can see. Write “Cars are in those over there.” in Finnish. Start from nuo (“those over there”). Use autot (“cars”).",
       "acceptedAnswers": ["Autot ovat noissa."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -202,7 +202,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: Several garages are visible. Both people refer to the garages they identified earlier. Beside a noticeboard. Translate “Autot ovat niissä.” into English.",
+      "prompt": "Both people already know which garages they mean. Translate “Autot ovat niissä.” into English.",
       "acceptedAnswers": ["Cars are in them.", "Cars are there."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -243,7 +243,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: A map shows several outlined districts. The speaker indicates the nearby districts. During a picture exercise. Translate “Talot ovat näissä.” into English.",
+      "prompt": "On a map, the speaker points to the nearby districts. Translate “Talot ovat näissä.” into English.",
       "acceptedAnswers": ["Houses are in these.", "Houses are here."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -284,7 +284,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: A map shows several outlined districts. The speaker indicates the farther-away districts, visible to both people. Build “Houses are in those over there.” During a vocabulary game. Start from nuo (“those over there”). Use the supplied subject talot (“houses”).",
+      "prompt": "On a map, the speaker points to the farther districts that both can see. Build “Houses are in those over there.” Start from nuo (“those over there”). Use talot (“houses”).",
       "acceptedAnswers": ["Talot ovat noissa."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -333,7 +333,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: A map shows several outlined districts. Both people refer to the districts they identified earlier. Build “Houses are in them.” At a bus stop. Start from ne (“those or they, already identifiable”). Use the supplied subject talot (“houses”).",
+      "prompt": "On a map, both people already know which districts they mean. Build “Houses are in them.” Start from ne (“those or they, already identifiable”). Use talot (“houses”).",
       "acceptedAnswers": ["Talot ovat niissä."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -382,7 +382,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Several storage compartments are open. The speaker indicates the nearby compartments. Choose the sentence that means “Bags are in these.” In an office. Start from nämä (“these”). Use the supplied subject laukut (“bags”).",
+      "prompt": "The speaker points to the nearby compartments. Choose the sentence that means “Bags are in these.” Start from nämä (“these”). Use laukut (“bags”).",
       "acceptedAnswers": ["Laukut ovat näissä."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -442,7 +442,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Several storage compartments are open. The speaker indicates the farther-away compartments, visible to both people. Choose the sentence that means “Bags are in those over there.” At a reception desk. Start from nuo (“those over there”). Use the supplied subject laukut (“bags”).",
+      "prompt": "The speaker points to the farther compartments that both can see. Choose the sentence that means “Bags are in those over there.” Start from nuo (“those over there”). Use laukut (“bags”).",
       "acceptedAnswers": ["Laukut ovat noissa."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -502,7 +502,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Several storage compartments are open. Both people refer to the compartments they identified earlier. Complete “Bags are in them.” While checking a list. Start from ne (“those or they, already identifiable”). Use the supplied subject laukut (“bags”). Write the complete Finnish sentence: ____",
+      "prompt": "Both people already know which compartments they mean. Write “Bags are in them.” in Finnish. Start from ne (“those or they, already identifiable”). Use laukut (“bags”).",
       "acceptedAnswers": ["Laukut ovat niissä."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -550,7 +550,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Several storage compartments are open. The speaker indicates the nearby compartments. Complete “Keys are in these.” During a house tour. Start from nämä (“these”). Use the supplied subject avaimet (“keys”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to the nearby compartments. Write “Keys are in these.” in Finnish. Start from nämä (“these”). Use avaimet (“keys”).",
       "acceptedAnswers": ["Avaimet ovat näissä."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -598,7 +598,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Several storage compartments are open. The speaker indicates the farther-away compartments, visible to both people. Write “Keys are in those over there.” in Finnish. At a market stall. Start from nuo (“those over there”). Use the supplied subject avaimet (“keys”).",
+      "prompt": "The speaker points to the farther compartments that both can see. Write “Keys are in those over there.” in Finnish. Start from nuo (“those over there”). Use avaimet (“keys”).",
       "acceptedAnswers": ["Avaimet ovat noissa."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -646,7 +646,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Several storage compartments are open. Both people refer to the compartments they identified earlier. Write “Keys are in them.” in Finnish. While arranging a shelf. Start from ne (“those or they, already identifiable”). Use the supplied subject avaimet (“keys”).",
+      "prompt": "Both people already know which compartments they mean. Write “Keys are in them.” in Finnish. Start from ne (“those or they, already identifiable”). Use avaimet (“keys”).",
       "acceptedAnswers": ["Avaimet ovat niissä."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -694,7 +694,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: Several rooms are visible. The speaker indicates the nearby rooms. At a reception desk. Translate “Tuolit ovat näissä.” into English.",
+      "prompt": "The speaker points to the nearby rooms. Translate “Tuolit ovat näissä.” into English.",
       "acceptedAnswers": ["Chairs are in these.", "Chairs are here."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -735,7 +735,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: Several rooms are visible. The speaker indicates the farther-away rooms, visible to both people. While checking a list. Translate “Tuolit ovat noissa.” into English.",
+      "prompt": "The speaker points to the farther rooms that both can see. Translate “Tuolit ovat noissa.” into English.",
       "acceptedAnswers": ["Chairs are in those over there.", "Chairs are over there."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -776,7 +776,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: Several rooms are visible. Both people refer to the rooms they identified earlier. Build “Chairs are in them.” While sorting objects. Start from ne (“those or they, already identifiable”). Use the supplied subject tuolit (“chairs”).",
+      "prompt": "Both people already know which rooms they mean. Build “Chairs are in them.” Start from ne (“those or they, already identifiable”). Use tuolit (“chairs”).",
       "acceptedAnswers": ["Tuolit ovat niissä."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -825,7 +825,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: Several storage compartments are open. The speaker indicates the nearby compartments. Build “Books are in these.” During a memory exercise. Start from nämä (“these”). Use the supplied subject kirjat (“books”).",
+      "prompt": "The speaker points to the nearby compartments. Build “Books are in these.” Start from nämä (“these”). Use kirjat (“books”).",
       "acceptedAnswers": ["Kirjat ovat näissä."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -874,7 +874,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Several storage compartments are open. The speaker indicates the farther-away compartments, visible to both people. Choose the sentence that means “Books are in those over there.” At a café table. Start from nuo (“those over there”). Use the supplied subject kirjat (“books”).",
+      "prompt": "The speaker points to the farther compartments that both can see. Choose the sentence that means “Books are in those over there.” Start from nuo (“those over there”). Use kirjat (“books”).",
       "acceptedAnswers": ["Kirjat ovat noissa."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -934,7 +934,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Several storage compartments are open. Both people refer to the compartments they identified earlier. Choose the sentence that means “Books are in them.” While looking through a window. Start from ne (“those or they, already identifiable”). Use the supplied subject kirjat (“books”).",
+      "prompt": "Both people already know which compartments they mean. Choose the sentence that means “Books are in them.” Start from ne (“those or they, already identifiable”). Use kirjat (“books”).",
       "acceptedAnswers": ["Kirjat ovat niissä."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -994,7 +994,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Several garages are visible. The speaker indicates the nearby garages. Complete “Cars are in these.” During a phone conversation. Start from nämä (“these”). Use the supplied subject autot (“cars”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to the nearby garages. Write “Cars are in these.” in Finnish. Start from nämä (“these”). Use autot (“cars”).",
       "acceptedAnswers": ["Autot ovat näissä."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1042,7 +1042,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Several garages are visible. The speaker indicates the farther-away garages, visible to both people. Complete “Cars are in those over there.” At a storage cupboard. Start from nuo (“those over there”). Use the supplied subject autot (“cars”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to the farther garages that both can see. Write “Cars are in those over there.” in Finnish. Start from nuo (“those over there”). Use autot (“cars”).",
       "acceptedAnswers": ["Autot ovat noissa."],
       "explanation": "Noissa is the inessive form of nuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1090,7 +1090,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Several garages are visible. Both people refer to the garages they identified earlier. Write “Cars are in them.” in Finnish. While labelling pictures. Start from ne (“those or they, already identifiable”). Use the supplied subject autot (“cars”).",
+      "prompt": "Both people already know which garages they mean. Write “Cars are in them.” in Finnish. Start from ne (“those or they, already identifiable”). Use autot (“cars”).",
       "acceptedAnswers": ["Autot ovat niissä."],
       "explanation": "Niissä is the inessive form of ne and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1138,7 +1138,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: A map shows several outlined districts. The speaker indicates the nearby districts. Write “Houses are in these.” in Finnish. During a pair exercise. Start from nämä (“these”). Use the supplied subject talot (“houses”).",
+      "prompt": "On a map, the speaker points to the nearby districts. Write “Houses are in these.” in Finnish. Start from nämä (“these”). Use talot (“houses”).",
       "acceptedAnswers": ["Talot ovat näissä."],
       "explanation": "Näissä is the inessive form of nämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],

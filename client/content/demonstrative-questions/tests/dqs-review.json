@@ -24,7 +24,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “What is the previously identified building?” Beside a noticeboard. Use se (“that or it, already identifiable”), rakennus (“building”), and on (“is”).",
+      "prompt": "Choose the sentence that means “What is the previously identified building?” Use se (“that or it, already identifiable”), rakennus (“building”), and on (“is”).",
       "acceptedAnswers": ["Mikä se rakennus on?"],
       "explanation": "The singular identity frame begins with Mikä and ends with on.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -84,7 +84,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “What is this word?” During a picture exercise. Use tämä (“this”), sana (“word”), and on (“is”).",
+      "prompt": "Choose the sentence that means “What is this word?” Use tämä (“this”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä tämä sana on?"],
       "explanation": "The singular identity frame begins with Mikä and ends with on.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -144,7 +144,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “What are these objects?” At the kitchen table. Use nämä (“these”), esineet (“objects”), and ovat (“are”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “What are these objects?” in Finnish. Use nämä (“these”), esineet (“objects”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nämä esineet ovat?"],
       "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -192,7 +192,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “What are those objects?” While comparing two photos. Use nuo (“those over there”), esineet (“objects”), and ovat (“are”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “What are those objects?” in Finnish. Use nuo (“those over there”), esineet (“objects”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nuo esineet ovat?"],
       "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -240,7 +240,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Is that car here?” in Finnish. At a reception desk. Use the supplied phrase tuo auto (“that car”) and täällä (“here”).",
+      "prompt": "Write “Is that car here?” in Finnish. Use tuo auto (“that car”) and täällä (“here”).",
       "acceptedAnswers": ["Onko tuo auto täällä?"],
       "explanation": "Onko is the singular olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -288,7 +288,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Is the previously identified car here?” in Finnish. While checking a list. Use the supplied phrase se auto (“the previously identified car”) and täällä (“here”).",
+      "prompt": "Write “Is the previously identified car here?” in Finnish. Use se auto (“the previously identified car”) and täällä (“here”).",
       "acceptedAnswers": ["Onko se auto täällä?"],
       "explanation": "Onko is the singular olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -336,7 +336,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a study desk. Translate “Ovatko ne laukut täällä?” into English.",
+      "prompt": "Translate “Ovatko ne laukut täällä?” into English.",
       "acceptedAnswers": ["Are the previously identified bags here?"],
       "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -377,7 +377,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "In a classroom. Translate “Ovatko nämä avaimet täällä?” into English.",
+      "prompt": "Translate “Ovatko nämä avaimet täällä?” into English.",
       "acceptedAnswers": ["Are these keys here?"],
       "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -418,7 +418,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Isn't this car at home?” While looking through a window. Use the supplied phrase tämä auto (“this car”) and kotona (“at home”).",
+      "prompt": "Build “Isn't this car at home?” Use tämä auto (“this car”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tämä auto ole kotona?"],
       "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -474,7 +474,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Isn't that car at home?” During a phone conversation. Use the supplied phrase tuo auto (“that car”) and kotona (“at home”).",
+      "prompt": "Build “Isn't that car at home?” Use tuo auto (“that car”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tuo auto ole kotona?"],
       "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -530,7 +530,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Aren't those cars at home?” At a lost-property desk. Use the supplied phrase nuo autot (“those cars”) and kotona (“at home”).",
+      "prompt": "Choose the sentence that means “Aren't those cars at home?” Use nuo autot (“those cars”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö nuo autot ole kotona?"],
       "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -597,7 +597,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Aren't the previously identified books at home?” While reading a short note. Use the supplied phrase ne kirjat (“the previously identified books”) and kotona (“at home”).",
+      "prompt": "Choose the sentence that means “Aren't the previously identified books at home?” Use ne kirjat (“the previously identified books”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö ne kirjat ole kotona?"],
       "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -664,7 +664,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “What is that word?” While unpacking a bag. Use tuo (“that over there”), sana (“word”), and on (“is”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “What is that word?” in Finnish. Use tuo (“that over there”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä tuo sana on?"],
       "explanation": "The singular identity frame begins with Mikä and ends with on.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -712,7 +712,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “What is the previously identified word?” At a museum display. Use se (“that or it, already identifiable”), sana (“word”), and on (“is”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “What is the previously identified word?” in Finnish. Use se (“that or it, already identifiable”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä se sana on?"],
       "explanation": "The singular identity frame begins with Mikä and ends with on.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -760,7 +760,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “What are the previously identified objects?” in Finnish. During a vocabulary game. Use ne (“those or they, already identifiable”), esineet (“objects”), and ovat (“are”).",
+      "prompt": "Write “What are the previously identified objects?” in Finnish. Use ne (“those or they, already identifiable”), esineet (“objects”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä ne esineet ovat?"],
       "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -808,7 +808,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “What are these buildings?” in Finnish. At a bus stop. Use nämä (“these”), rakennukset (“buildings”), and ovat (“are”).",
+      "prompt": "Write “What are these buildings?” in Finnish. Use nämä (“these”), rakennukset (“buildings”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nämä rakennukset ovat?"],
       "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -856,7 +856,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a library table. Translate “Onko tämä talo täällä?” into English.",
+      "prompt": "Translate “Onko tämä talo täällä?” into English.",
       "acceptedAnswers": ["Is this house here?"],
       "explanation": "Onko is the singular olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -897,7 +897,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "In a shop window. Translate “Onko tuo talo täällä?” into English.",
+      "prompt": "Translate “Onko tuo talo täällä?” into English.",
       "acceptedAnswers": ["Is that house here?"],
       "explanation": "Onko is the singular olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -938,7 +938,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Are those keys here?” While sorting objects. Use the supplied phrase nuo avaimet (“those keys”) and täällä (“here”).",
+      "prompt": "Build “Are those keys here?” Use nuo avaimet (“those keys”) and täällä (“here”).",
       "acceptedAnswers": ["Ovatko nuo avaimet täällä?"],
       "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -987,7 +987,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Are the previously identified keys here?” During a memory exercise. Use the supplied phrase ne avaimet (“the previously identified keys”) and täällä (“here”).",
+      "prompt": "Build “Are the previously identified keys here?” Use ne avaimet (“the previously identified keys”) and täällä (“here”).",
       "acceptedAnswers": ["Ovatko ne avaimet täällä?"],
       "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1036,7 +1036,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Isn't the previously identified car at home?” At a storage cupboard. Use the supplied phrase se auto (“the previously identified car”) and kotona (“at home”).",
+      "prompt": "Choose the sentence that means “Isn't the previously identified car at home?” Use se auto (“the previously identified car”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö se auto ole kotona?"],
       "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1103,7 +1103,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Isn't this bag at home?” While labelling pictures. Use the supplied phrase tämä laukku (“this bag”) and kotona (“at home”).",
+      "prompt": "Choose the sentence that means “Isn't this bag at home?” Use tämä laukku (“this bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tämä laukku ole kotona?"],
       "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1170,7 +1170,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Aren't these books at home?” During a guided tour. Use the supplied phrase nämä kirjat (“these books”) and kotona (“at home”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “Aren't these books at home?” in Finnish. Use nämä kirjat (“these books”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö nämä kirjat ole kotona?"],
       "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1225,7 +1225,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Aren't those books at home?” At a study desk. Use the supplied phrase nuo kirjat (“those books”) and kotona (“at home”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “Aren't those books at home?” in Finnish. Use nuo kirjat (“those books”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö nuo kirjat ole kotona?"],
       "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1280,7 +1280,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “What is this place?” in Finnish. During a video call. Use tämä (“this”), paikka (“place”), and on (“is”).",
+      "prompt": "Write “What is this place?” in Finnish. Use tämä (“this”), paikka (“place”), and on (“is”).",
       "acceptedAnswers": ["Mikä tämä paikka on?"],
       "explanation": "The singular identity frame begins with Mikä and ends with on.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1328,7 +1328,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “What is that place?” in Finnish. At the kitchen table. Use tuo (“that over there”), paikka (“place”), and on (“is”).",
+      "prompt": "Write “What is that place?” in Finnish. Use tuo (“that over there”), paikka (“place”), and on (“is”).",
       "acceptedAnswers": ["Mikä tuo paikka on?"],
       "explanation": "The singular identity frame begins with Mikä and ends with on.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1376,7 +1376,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Beside a noticeboard. Translate “Mitä nuo esineet ovat?” into English.",
+      "prompt": "Translate “Mitä nuo esineet ovat?” into English.",
       "acceptedAnswers": ["What are those objects?"],
       "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1417,7 +1417,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "During a picture exercise. Translate “Mitä ne esineet ovat?” into English.",
+      "prompt": "Translate “Mitä ne esineet ovat?” into English.",
       "acceptedAnswers": ["What are the previously identified objects?"],
       "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1458,7 +1458,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Isn't that bag at home?” During a pair exercise. Use the supplied phrase tuo laukku (“that bag”) and kotona (“at home”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “Isn't that bag at home?” in Finnish. Use tuo laukku (“that bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tuo laukku ole kotona?"],
       "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1513,7 +1513,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Isn't the previously identified bag at home?” At a lost-property desk. Use the supplied phrase se laukku (“the previously identified bag”) and kotona (“at home”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “Isn't the previously identified bag at home?” in Finnish. Use se laukku (“the previously identified bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö se laukku ole kotona?"],
       "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1568,7 +1568,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Aren't the previously identified keys at home?” in Finnish. In a classroom. Use the supplied phrase ne avaimet (“the previously identified keys”) and kotona (“at home”).",
+      "prompt": "Write “Aren't the previously identified keys at home?” in Finnish. Use ne avaimet (“the previously identified keys”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö ne avaimet ole kotona?"],
       "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1623,7 +1623,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Aren't these books here?” in Finnish. At a library table. Use the supplied phrase nämä kirjat (“these books”) and täällä (“here”).",
+      "prompt": "Write “Aren't these books here?” in Finnish. Use nämä kirjat (“these books”) and täällä (“here”).",
       "acceptedAnswers": ["Eivätkö nämä kirjat ole täällä?"],
       "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
       "tags": ["sentence", "standard-written-finnish"],

@@ -181,7 +181,7 @@ function validateInitialFormSupport(lessons, tests, config, errors) {
     if (exercise.type === 'translation-en') continue;
     const finnish = finnishAnswer(exercise);
     const expectedFrame = finnish.replace(/^\p{L}+/u, '___');
-    if (!(exercise.prompt ?? '').includes(`Finnish frame: “${expectedFrame}”`)) {
+    if (!(exercise.prompt ?? '').includes(`Frame: “${expectedFrame}”`)) {
       errors.push(
         `${exercise.id}: initial form recall must visibly supply the Finnish sentence frame`,
       );
@@ -431,9 +431,12 @@ function validateInessiveBoundary(pack, errors) {
       containsWord(finnish, 'tässä') || containsWord(finnish, 'näissä')
         ? /\bnearby\b/iu
         : containsWord(finnish, 'tuossa') || containsWord(finnish, 'noissa')
-          ? /\bfarther-away\b/iu
-          : /\bidentified earlier\b/iu;
-    if (!/^Context:/u.test(exercise.prompt ?? '') || !expectedCue.test(exercise.prompt ?? '')) {
+          ? /\bfarther\b/iu
+          : /\balready know which\b/iu;
+    if (
+      !/\b(?:compartment|garage|room|district)s?\b/iu.test(exercise.prompt ?? '') ||
+      !expectedCue.test(exercise.prompt ?? '')
+    ) {
       errors.push(
         `${exercise.id}: independent inessive task needs an explicit matching bounded-location context`,
       );

@@ -48,6 +48,8 @@
 
 ### Changed
 
+- Shortened all Demonstratives study and optional-practice prompts to match the concise style of Pronouns and olla while preserving answer cues. Added a shared 40-word prompt rule and validation for future packs, and updated the Finnish content creator skill to follow it; existing answers and learner progress remain valid.
+
 - Refreshed the root README with the desktop and mobile learning journey, current feature ownership, local setup, documentation links, Finnish-correction guidance, deployment checks, and a general grammar reference. Removed changing syllabus, pack-count, and AI-model details while retaining the detailed technical architecture.
 
 - Corrected the README and client architecture guidance to show public Legal routes, Stats-owned learner-data controls, and optional manual Drive authorization and API access. Clarified that saved answers publish feedback and progress after persistence, and marked G009's former exact backup pack/version rule as superseded by the current root recovery requirements while preserving its dated evidence.

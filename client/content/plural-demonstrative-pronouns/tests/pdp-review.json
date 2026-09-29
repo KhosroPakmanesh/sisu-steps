@@ -24,7 +24,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Those are the cars.” Beside a noticeboard. Use autot (“the cars”) and ovat (“are”). The referents are already identifiable from the conversation.",
+      "prompt": "Choose the sentence that means “Those are the cars.” Use autot (“the cars”) and ovat (“are”). The listener already knows which ones.",
       "acceptedAnswers": ["Ne ovat autot."],
       "explanation": "Ne is the plural demonstrative for a situation where the listener can identify the referents.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -78,7 +78,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “These are the houses.” During a picture exercise. Use talot (“the houses”) and ovat (“are”).",
+      "prompt": "Choose the sentence that means “These are the houses.” Use talot (“the houses”) and ovat (“are”).",
       "acceptedAnswers": ["Nämä ovat talot."],
       "explanation": "Nämä is the plural demonstrative for a situation where the referents are close to the speaker.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -132,7 +132,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “These are the books.” At the kitchen table. The referents are close to the speaker. Use kirjat (“the books”) and ovat (“are”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “These are the books.” in Finnish. The referents are close to the speaker. Use kirjat (“the books”) and ovat (“are”).",
       "acceptedAnswers": ["Nämä ovat kirjat."],
       "explanation": "Nämä is the plural demonstrative for a situation where the referents are close to the speaker.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -180,7 +180,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Those over there are the books.” While comparing two photos. The referents are farther away and visible. Use kirjat (“the books”) and ovat (“are”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “Those over there are the books.” in Finnish. The referents are farther away and visible. Use kirjat (“the books”) and ovat (“are”).",
       "acceptedAnswers": ["Nuo ovat kirjat."],
       "explanation": "Nuo is the plural demonstrative for a situation where the referents are farther away and visible.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -228,7 +228,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Those are here.” in Finnish. At a reception desk. No noun follows the demonstrative. Use täällä (“here”).",
+      "prompt": "Write “Those are here.” in Finnish. Use täällä (“here”).",
       "acceptedAnswers": ["Nuo ovat täällä."],
       "explanation": "Nuo stands independently and takes the plural verb ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -276,7 +276,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Those are at home.” in Finnish. While checking a list. No noun follows the demonstrative. Use kotona (“at home”). The referents are already identifiable from the conversation.",
+      "prompt": "Write “Those are at home.” in Finnish. Use kotona (“at home”). The listener already knows which ones.",
       "acceptedAnswers": ["Ne ovat kotona."],
       "explanation": "Ne stands independently and takes the plural verb ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -324,7 +324,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a study desk. Translate “Ne laukut ovat sisällä.” into English. The referents are already identifiable from the conversation.",
+      "prompt": "Translate “Ne laukut ovat sisällä.” into English.",
       "acceptedAnswers": ["The previously identified bags are inside.", "Those bags are inside."],
       "explanation": "Ne comes directly before the plural noun laukut.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -372,7 +372,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "In a classroom. Translate “Nämä avaimet ovat sisällä.” into English.",
+      "prompt": "Translate “Nämä avaimet ovat sisällä.” into English.",
       "acceptedAnswers": ["These keys are inside."],
       "explanation": "Nämä comes directly before the plural noun avaimet.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -420,7 +420,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “These books are inside.” While looking through a window. Use the supplied plural kirjat (“books”) and sisällä (“inside”).",
+      "prompt": "Build “These books are inside.” Use kirjat (“books”) and sisällä (“inside”).",
       "acceptedAnswers": ["Nämä kirjat ovat sisällä."],
       "explanation": "Nämä and kirjat are both plural, so the demonstrative and noun agree in number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -476,7 +476,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Those books over there are inside.” During a phone conversation. Use the supplied plural kirjat (“books”) and sisällä (“inside”).",
+      "prompt": "Build “Those books over there are inside.” Use kirjat (“books”) and sisällä (“inside”).",
       "acceptedAnswers": ["Nuo kirjat ovat sisällä."],
       "explanation": "Nuo and kirjat are both plural, so the demonstrative and noun agree in number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -532,7 +532,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “They (the non-human referents) are inside.” At a lost-property desk. The previously named referents are dogs. Use standard written Finnish.",
+      "prompt": "Choose the sentence that means “They (the non-human referents) are inside.” The previously named referents are dogs. Use standard written Finnish.",
       "acceptedAnswers": ["Ne ovat sisällä."],
       "explanation": "Standard written Finnish normally uses ne for non-human referents.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -585,7 +585,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “They (the people) are inside.” While reading a short note. The previously named referents are children. Use standard written Finnish.",
+      "prompt": "Choose the sentence that means “They (the people) are inside.” The previously named referents are children. Use standard written Finnish.",
       "acceptedAnswers": ["He ovat sisällä."],
       "explanation": "Standard written Finnish normally uses he for people.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -638,7 +638,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Those over there are the houses.” While unpacking a bag. Use talot (“the houses”) and ovat (“are”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “Those over there are the houses.” in Finnish. Use talot (“the houses”) and ovat (“are”).",
       "acceptedAnswers": ["Nuo ovat talot."],
       "explanation": "Nuo is the plural demonstrative for a situation where the referents are farther away and visible.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -686,7 +686,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “Those are the houses.” At a museum display. Use talot (“the houses”) and ovat (“are”). Write the complete Finnish sentence: ____ The referents are already identifiable from the conversation.",
+      "prompt": "Write “Those are the houses.” in Finnish. Use talot (“the houses”) and ovat (“are”). The listener already knows which ones.",
       "acceptedAnswers": ["Ne ovat talot."],
       "explanation": "Ne is the plural demonstrative for a situation where the listener can identify the referents.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -734,7 +734,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Those are the books.” in Finnish. During a vocabulary game. The listener can identify the referents. Use kirjat (“the books”) and ovat (“are”).",
+      "prompt": "Write “Those are the books.” in Finnish. The listener can identify the referents. Use kirjat (“the books”) and ovat (“are”).",
       "acceptedAnswers": ["Ne ovat kirjat."],
       "explanation": "Ne is the plural demonstrative for a situation where the listener can identify the referents.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -782,7 +782,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “These are the cars.” in Finnish. At a bus stop. The referents are close to the speaker. Use autot (“the cars”) and ovat (“are”).",
+      "prompt": "Write “These are the cars.” in Finnish. The referents are close to the speaker. Use autot (“the cars”) and ovat (“are”).",
       "acceptedAnswers": ["Nämä ovat autot."],
       "explanation": "Nämä is the plural demonstrative for a situation where the referents are close to the speaker.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -830,7 +830,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a library table. Translate “Nämä ovat täällä.” into English.",
+      "prompt": "Translate “Nämä ovat täällä.” into English.",
       "acceptedAnswers": ["These are here."],
       "explanation": "Nämä stands independently and takes the plural verb ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -871,7 +871,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "In a shop window. Translate “Nuo ovat sisällä.” into English.",
+      "prompt": "Translate “Nuo ovat sisällä.” into English.",
       "acceptedAnswers": ["Those over there are inside."],
       "explanation": "Nuo stands independently and takes the plural verb ovat.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -912,7 +912,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Those keys over there are inside.” While sorting objects. Use the supplied plural avaimet (“keys”) and sisällä (“inside”).",
+      "prompt": "Build “Those keys over there are inside.” Use avaimet (“keys”) and sisällä (“inside”).",
       "acceptedAnswers": ["Nuo avaimet ovat sisällä."],
       "explanation": "Nuo comes directly before the plural noun avaimet.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -968,7 +968,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The previously identified keys are inside.” During a memory exercise. Use the supplied plural avaimet (“keys”) and sisällä (“inside”).",
+      "prompt": "Build “The previously identified keys are inside.” Use avaimet (“keys”) and sisällä (“inside”).",
       "acceptedAnswers": ["Ne avaimet ovat sisällä."],
       "explanation": "Ne comes directly before the plural noun avaimet.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1024,7 +1024,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The previously identified books are inside.” At a storage cupboard. Use the supplied plural kirjat (“books”) and sisällä (“inside”).",
+      "prompt": "Choose the sentence that means “The previously identified books are inside.” Use kirjat (“books”) and sisällä (“inside”).",
       "acceptedAnswers": ["Ne kirjat ovat sisällä."],
       "explanation": "Ne and kirjat are both plural, so the demonstrative and noun agree in number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1085,7 +1085,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “These books are inside.” While labelling pictures. Use the supplied plural kirjat (“books”) and sisällä (“inside”).",
+      "prompt": "Choose the sentence that means “These books are inside.” Use kirjat (“books”) and sisällä (“inside”).",
       "acceptedAnswers": ["Nämä kirjat ovat sisällä."],
       "explanation": "Nämä and kirjat are both plural, so the demonstrative and noun agree in number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1150,7 +1150,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “They (the non-human referents) are inside.” During a guided tour. The previously named referents are cars. Use standard written Finnish. Write the complete Finnish sentence: ____",
+      "prompt": "Write “They (the non-human referents) are inside.” in Finnish. The previously named referents are cars. Use standard written Finnish.",
       "acceptedAnswers": ["Ne ovat sisällä."],
       "explanation": "Standard written Finnish normally uses ne for non-human referents.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1198,7 +1198,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “They (the people) are inside.” At a study desk. The previously named referents are teachers. Use standard written Finnish. Write the complete Finnish sentence: ____",
+      "prompt": "Write “They (the people) are inside.” in Finnish. The previously named referents are teachers. Use standard written Finnish.",
       "acceptedAnswers": ["He ovat sisällä."],
       "explanation": "Standard written Finnish normally uses he for people.",
       "tags": ["sentence", "standard-written-finnish"],

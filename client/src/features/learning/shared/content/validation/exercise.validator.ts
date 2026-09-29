@@ -41,8 +41,21 @@ export function validateExercise(exercise: unknown, seenIds: Set<string>): Exerc
 }
 
 function validateEditorialQuality(exercise: Record<string, unknown>): void {
+  const prompt = exercise['prompt'] as string;
+  if (prompt.trim().split(/\s+/u).length > 40) {
+    throw new Error(`Exercise ${exercise['id']} prompt exceeds the 40-word editorial limit.`);
+  }
   if (/(?:Optional practice:\s*){2,}/iu.test(exercise['prompt'] as string)) {
     throw new Error(`Exercise ${exercise['id']} repeats the optional-practice label.`);
+  }
+  if (
+    /Write the complete Finnish sentence: ____|The identity-sentence frame is supplied/iu.test(
+      prompt,
+    )
+  ) {
+    throw new Error(
+      `Exercise ${exercise['id']} prompt repeats an instruction or exposes authoring notes.`,
+    );
   }
   if (hasAmbiguousSecondPersonPrompt(exercise)) {
     throw new Error(

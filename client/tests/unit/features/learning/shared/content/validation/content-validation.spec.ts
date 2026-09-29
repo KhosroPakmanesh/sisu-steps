@@ -595,6 +595,24 @@ describe('content-pack validation', () => {
       'Exercise practice-1 repeats the optional-practice label.',
     );
   });
+  it('rejects an overlong learner prompt', () => {
+    const pack = validPack();
+    pack.lessons[0].practiceExercises[0].prompt = Array.from({ length: 41 }, () => 'word').join(
+      ' ',
+    );
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Exercise practice-1 prompt exceeds the 40-word editorial limit.',
+    );
+  });
+  it('rejects authoring notes in learner prompts', () => {
+    const pack = validPack();
+    pack.lessons[0].practiceExercises[0].prompt = 'The identity-sentence frame is supplied.';
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Exercise practice-1 prompt repeats an instruction or exposes authoring notes.',
+    );
+  });
   it('does not make supplied teaching vocabulary available for scored recall', () => {
     const pack = validPack();
     pack.lessons[0].suppliedVocabulary = [{ finnish: 'koulu', english: 'school', type: 'word' }];

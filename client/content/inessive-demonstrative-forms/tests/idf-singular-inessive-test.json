@@ -10,7 +10,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Choose the sentence that means “The book is in this one.” At a study desk. Start from tämä (“this”). Use the supplied subject kirja (“book”).",
+      "prompt": "The speaker points to a nearby compartment. Choose the sentence that means “The book is in this one.” Start from tämä (“this”). Use kirja (“book”).",
       "acceptedAnswers": ["Kirja on tässä."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -65,7 +65,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Choose the sentence that means “The book is in that one over there.” In a classroom. Start from tuo (“that over there”). Use the supplied subject kirja (“book”).",
+      "prompt": "The speaker points to a farther compartment that both can see. Choose the sentence that means “The book is in that one over there.” Start from tuo (“that over there”). Use kirja (“book”).",
       "acceptedAnswers": ["Kirja on tuossa."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -120,7 +120,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Complete “The book is in it.” At a library table. Start from se (“that or it, already identifiable”). Use the supplied subject kirja (“book”). Write the complete Finnish sentence: ____",
+      "prompt": "Both people already know which compartment they mean. Write “The book is in it.” in Finnish. Start from se (“that or it, already identifiable”). Use kirja (“book”).",
       "acceptedAnswers": ["Kirja on siinä."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -168,7 +168,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Three garages are visible. The speaker indicates the nearby garage. Complete “The car is in this one.” In a shop window. Start from tämä (“this”). Use the supplied subject auto (“car”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to a nearby garage. Write “The car is in this one.” in Finnish. Start from tämä (“this”). Use auto (“car”).",
       "acceptedAnswers": ["Auto on tässä."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -216,7 +216,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Three garages are visible. The speaker indicates the farther-away garage, visible to both people. Write “The car is in that one over there.” in Finnish. Beside a noticeboard. Start from tuo (“that over there”). Use the supplied subject auto (“car”).",
+      "prompt": "The speaker points to a farther garage that both can see. Write “The car is in that one over there.” in Finnish. Start from tuo (“that over there”). Use auto (“car”).",
       "acceptedAnswers": ["Auto on tuossa."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -264,7 +264,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Three garages are visible. Both people refer to the garage they identified earlier. Write “The car is in it.” in Finnish. During a picture exercise. Start from se (“that or it, already identifiable”). Use the supplied subject auto (“car”).",
+      "prompt": "Both people already know which garage they mean. Write “The car is in it.” in Finnish. Start from se (“that or it, already identifiable”). Use auto (“car”).",
       "acceptedAnswers": ["Auto on siinä."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -312,7 +312,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: A map shows three outlined districts. The speaker indicates the nearby district. While unpacking a bag. Translate “Talo on tässä.” into English.",
+      "prompt": "On a map, the speaker points to a nearby district. Translate “Talo on tässä.” into English.",
       "acceptedAnswers": ["The house is in this one.", "The house is here."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -353,7 +353,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: A map shows three outlined districts. The speaker indicates the farther-away district, visible to both people. At a museum display. Translate “Talo on tuossa.” into English.",
+      "prompt": "On a map, the speaker points to a farther district that both can see. Translate “Talo on tuossa.” into English.",
       "acceptedAnswers": ["The house is in that one over there.", "The house is over there."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -394,7 +394,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: A map shows three outlined districts. Both people refer to the district they identified earlier. Build “The house is in it.” During a video call. Start from se (“that or it, already identifiable”). Use the supplied subject talo (“house”).",
+      "prompt": "On a map, both people already know which district they mean. Build “The house is in it.” Start from se (“that or it, already identifiable”). Use talo (“house”).",
       "acceptedAnswers": ["Talo on siinä."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -443,7 +443,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Build “The bag is in this one.” At the kitchen table. Start from tämä (“this”). Use the supplied subject laukku (“bag”).",
+      "prompt": "The speaker points to a nearby compartment. Build “The bag is in this one.” Start from tämä (“this”). Use laukku (“bag”).",
       "acceptedAnswers": ["Laukku on tässä."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -492,7 +492,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Choose the sentence that means “The bag is in that one over there.” While comparing two photos. Start from tuo (“that over there”). Use the supplied subject laukku (“bag”).",
+      "prompt": "The speaker points to a farther compartment that both can see. Choose the sentence that means “The bag is in that one over there.” Start from tuo (“that over there”). Use laukku (“bag”).",
       "acceptedAnswers": ["Laukku on tuossa."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -547,7 +547,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Choose the sentence that means “The bag is in it.” During a vocabulary game. Start from se (“that or it, already identifiable”). Use the supplied subject laukku (“bag”).",
+      "prompt": "Both people already know which compartment they mean. Choose the sentence that means “The bag is in it.” Start from se (“that or it, already identifiable”). Use laukku (“bag”).",
       "acceptedAnswers": ["Laukku on siinä."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -602,7 +602,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Complete “The key is in this one.” At a bus stop. Start from tämä (“this”). Use the supplied subject avain (“key”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to a nearby compartment. Write “The key is in this one.” in Finnish. Start from tämä (“this”). Use avain (“key”).",
       "acceptedAnswers": ["Avain on tässä."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -650,7 +650,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Complete “The key is in that one over there.” In an office. Start from tuo (“that over there”). Use the supplied subject avain (“key”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to a farther compartment that both can see. Write “The key is in that one over there.” in Finnish. Start from tuo (“that over there”). Use avain (“key”).",
       "acceptedAnswers": ["Avain on tuossa."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -698,7 +698,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Write “The key is in it.” in Finnish. At a reception desk. Start from se (“that or it, already identifiable”). Use the supplied subject avain (“key”).",
+      "prompt": "Both people already know which compartment they mean. Write “The key is in it.” in Finnish. Start from se (“that or it, already identifiable”). Use avain (“key”).",
       "acceptedAnswers": ["Avain on siinä."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -746,7 +746,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Context: Three rooms are visible. The speaker indicates the nearby room. Write “The chair is in this one.” in Finnish. While checking a list. Start from tämä (“this”). Use the supplied subject tuoli (“chair”).",
+      "prompt": "The speaker points to a nearby room. Write “The chair is in this one.” in Finnish. Start from tämä (“this”). Use tuoli (“chair”).",
       "acceptedAnswers": ["Tuoli on tässä."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -794,7 +794,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: Three rooms are visible. The speaker indicates the farther-away room, visible to both people. During a house tour. Translate “Tuoli on tuossa.” into English.",
+      "prompt": "The speaker points to a farther room that both can see. Translate “Tuoli on tuossa.” into English.",
       "acceptedAnswers": ["The chair is in that one over there.", "The chair is over there."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -835,7 +835,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Context: Three rooms are visible. Both people refer to the room they identified earlier. At a market stall. Translate “Tuoli on siinä.” into English.",
+      "prompt": "Both people already know which room they mean. Translate “Tuoli on siinä.” into English.",
       "acceptedAnswers": ["The chair is in it.", "The chair is there."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -876,7 +876,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the nearby compartment. Build “The book is in this one.” While arranging a shelf. Start from tämä (“this”). Use the supplied subject kirja (“book”).",
+      "prompt": "The speaker points to a nearby compartment. Build “The book is in this one.” Start from tämä (“this”). Use kirja (“book”).",
       "acceptedAnswers": ["Kirja on tässä."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -925,7 +925,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Context: Three storage compartments are open. The speaker indicates the farther-away compartment, visible to both people. Build “The book is in that one over there.” During a map activity. Start from tuo (“that over there”). Use the supplied subject kirja (“book”).",
+      "prompt": "The speaker points to a farther compartment that both can see. Build “The book is in that one over there.” Start from tuo (“that over there”). Use kirja (“book”).",
       "acceptedAnswers": ["Kirja on tuossa."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -974,7 +974,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Three storage compartments are open. Both people refer to the compartment they identified earlier. Choose the sentence that means “The book is in it.” At a school entrance. Start from se (“that or it, already identifiable”). Use the supplied subject kirja (“book”).",
+      "prompt": "Both people already know which compartment they mean. Choose the sentence that means “The book is in it.” Start from se (“that or it, already identifiable”). Use kirja (“book”).",
       "acceptedAnswers": ["Kirja on siinä."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1029,7 +1029,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Context: Three garages are visible. The speaker indicates the nearby garage. Choose the sentence that means “The car is in this one.” While sorting objects. Start from tämä (“this”). Use the supplied subject auto (“car”).",
+      "prompt": "The speaker points to a nearby garage. Choose the sentence that means “The car is in this one.” Start from tämä (“this”). Use auto (“car”).",
       "acceptedAnswers": ["Auto on tässä."],
       "explanation": "Tässä is the inessive form of tämä and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1084,7 +1084,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Three garages are visible. The speaker indicates the farther-away garage, visible to both people. Complete “The car is in that one over there.” During a memory exercise. Start from tuo (“that over there”). Use the supplied subject auto (“car”). Write the complete Finnish sentence: ____",
+      "prompt": "The speaker points to a farther garage that both can see. Write “The car is in that one over there.” in Finnish. Start from tuo (“that over there”). Use auto (“car”).",
       "acceptedAnswers": ["Auto on tuossa."],
       "explanation": "Tuossa is the inessive form of tuo and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1132,7 +1132,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Context: Three garages are visible. Both people refer to the garage they identified earlier. Complete “The car is in it.” At a café table. Start from se (“that or it, already identifiable”). Use the supplied subject auto (“car”). Write the complete Finnish sentence: ____",
+      "prompt": "Both people already know which garage they mean. Write “The car is in it.” in Finnish. Start from se (“that or it, already identifiable”). Use auto (“car”).",
       "acceptedAnswers": ["Auto on siinä."],
       "explanation": "Siinä is the inessive form of se and expresses a bounded inside or immediately located relation.",
       "tags": ["sentence", "standard-written-finnish"],

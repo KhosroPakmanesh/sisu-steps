@@ -52,3 +52,9 @@ No unresolved high-impact issue remains before authoring.
 ## Final decision
 
 The 88-question count is approved because it covers three narrow negative-statement decisions with a separate mixed retrieval pass without padding. Other verbs, other tenses, questions, spoken Finnish, listening, speaking, free interaction, calibrated difficulty, and overall CEFR ability remain outside scope.
+
+## Prompt-style revision — 2026-09-29
+
+**Pre-authoring disposition: approved with limitations.** The existing three-skill sequence, 88 scored questions, and 12 optional practice questions remain appropriate. The wording audit found irrelevant scene labels, repeated full-sentence instructions, and duplicate target meanings in transformation prompts. Shorten all 100 prompts while preserving complete English target meanings, labelled source meanings, supplied supporting forms, and singular/plural negative decisions. Keep answers, IDs, order, diagnostics, and mastery pairs stable. Final item-by-item audit and direct-source validation remain required.
+
+**Final disposition: approved with limitations.** All 100 prompts were shortened; median length is 18 words and maximum length is 31. Transformations still show the Finnish source, source meaning, and complete negative target meaning once; supplied subjects and place words remain visible. An item-by-item source comparison found no changes outside prompts. Existing pack and lesson versions remain because meanings, answers, grading, and lesson targets did not change; prior learner progress remains valid. The family retains its earlier written-practice limitations. Direct-source validation and the complete client check passed; representative revised scored and optional-practice prompts rendered without horizontal overflow at 320, 768, and 1440 pixels.

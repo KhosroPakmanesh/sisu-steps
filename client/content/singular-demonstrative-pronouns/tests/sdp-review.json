@@ -22,7 +22,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “That is a car.” Beside a noticeboard. Use auto (“a car”) and on (“is”). The referent is already identifiable from the conversation.",
+      "prompt": "Choose the sentence that means “That is a car.” Use auto (“a car”) and on (“is”). The listener already knows which one.",
       "acceptedAnswers": ["Se on auto."],
       "explanation": "Se is the singular demonstrative for a situation where the listener can identify the referent.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -76,7 +76,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “This is a house.” During a picture exercise. Use talo (“a house”) and on (“is”).",
+      "prompt": "Choose the sentence that means “This is a house.” Use talo (“a house”) and on (“is”).",
       "acceptedAnswers": ["Tämä on talo."],
       "explanation": "Tämä is the singular demonstrative for a situation where the referent is close to the speaker.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -130,7 +130,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “This is a book.” At the kitchen table. The referent is close to the speaker. Use kirja (“a book”) and on (“is”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “This is a book.” in Finnish. The referent is close to the speaker. Use kirja (“a book”) and on (“is”).",
       "acceptedAnswers": ["Tämä on kirja."],
       "explanation": "Tämä is the singular demonstrative for a situation where the referent is close to the speaker.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -178,7 +178,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “That one over there is a book.” While comparing two photos. The referent is farther away and visible. Use kirja (“a book”) and on (“is”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “That one over there is a book.” in Finnish. The referent is farther away and visible. Use kirja (“a book”) and on (“is”).",
       "acceptedAnswers": ["Tuo on kirja."],
       "explanation": "Tuo is the singular demonstrative for a situation where the referent is farther away and visible.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -226,7 +226,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “That one over there is large.” in Finnish. At a reception desk. No noun follows the demonstrative. Use suuri (“large”).",
+      "prompt": "Write “That one over there is large.” in Finnish. Use suuri (“large”).",
       "acceptedAnswers": ["Tuo on suuri."],
       "explanation": "Tuo stands independently as the subject; no noun is needed after it.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -274,7 +274,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “That is large.” in Finnish. While checking a list. No noun follows the demonstrative. Use suuri (“large”). The referent is already identifiable from the conversation.",
+      "prompt": "Write “That is large.” in Finnish. Use suuri (“large”). The listener already knows which one.",
       "acceptedAnswers": ["Se on suuri."],
       "explanation": "Se stands independently as the subject; no noun is needed after it.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -322,7 +322,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a study desk. Translate “Se laukku on uusi.” into English. The referent is already identifiable from the conversation.",
+      "prompt": "Translate “Se laukku on uusi.” into English.",
       "acceptedAnswers": ["The previously identified bag is new.", "That bag is new."],
       "explanation": "Se comes before the singular noun laukku; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -370,7 +370,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "In a classroom. Translate “Tämä avain on uusi.” into English.",
+      "prompt": "Translate “Tämä avain on uusi.” into English.",
       "acceptedAnswers": ["This key is new."],
       "explanation": "Tämä comes before the singular noun avain; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -418,7 +418,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “He or she is inside.” While looking through a window. The previously named referent is a teacher. Use standard written Finnish.",
+      "prompt": "Build “He or she is inside.” The previously named referent is a teacher. Use standard written Finnish.",
       "acceptedAnswers": ["Hän on sisällä."],
       "explanation": "Standard written Finnish normally uses hän for a person.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -467,7 +467,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “It is inside.” During a phone conversation. The previously named referent is a dog. Use standard written Finnish.",
+      "prompt": "Build “It is inside.” The previously named referent is a dog. Use standard written Finnish.",
       "acceptedAnswers": ["Se on sisällä."],
       "explanation": "Standard written Finnish normally uses se for a non-human referent.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -516,7 +516,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “That one over there is a house.” While unpacking a bag. Use talo (“a house”) and on (“is”). Write the complete Finnish sentence: ____",
+      "prompt": "Write “That one over there is a house.” in Finnish. Use talo (“a house”) and on (“is”).",
       "acceptedAnswers": ["Tuo on talo."],
       "explanation": "Tuo is the singular demonstrative for a situation where the referent is farther away and visible.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -564,7 +564,7 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Complete “That is a house.” At a museum display. Use talo (“a house”) and on (“is”). Write the complete Finnish sentence: ____ The referent is already identifiable from the conversation.",
+      "prompt": "Write “That is a house.” in Finnish. Use talo (“a house”) and on (“is”). The listener already knows which one.",
       "acceptedAnswers": ["Se on talo."],
       "explanation": "Se is the singular demonstrative for a situation where the listener can identify the referent.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -612,7 +612,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “That is a book.” in Finnish. During a vocabulary game. The listener can identify the referent. Use kirja (“a book”) and on (“is”).",
+      "prompt": "Write “That is a book.” in Finnish. The listener can identify the referent. Use kirja (“a book”) and on (“is”).",
       "acceptedAnswers": ["Se on kirja."],
       "explanation": "Se is the singular demonstrative for a situation where the listener can identify the referent.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -660,7 +660,7 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “This is a car.” in Finnish. At a bus stop. The referent is close to the speaker. Use auto (“a car”) and on (“is”).",
+      "prompt": "Write “This is a car.” in Finnish. The referent is close to the speaker. Use auto (“a car”) and on (“is”).",
       "acceptedAnswers": ["Tämä on auto."],
       "explanation": "Tämä is the singular demonstrative for a situation where the referent is close to the speaker.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -708,7 +708,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "At a library table. Translate “Tämä on uusi.” into English.",
+      "prompt": "Translate “Tämä on uusi.” into English.",
       "acceptedAnswers": ["This is new."],
       "explanation": "Tämä stands independently as the subject; no noun is needed after it.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -749,7 +749,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "In a shop window. Translate “Tuo on uusi.” into English.",
+      "prompt": "Translate “Tuo on uusi.” into English.",
       "acceptedAnswers": ["That one over there is new."],
       "explanation": "Tuo stands independently as the subject; no noun is needed after it.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -790,7 +790,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “That key over there is new.” While sorting objects. Use avain (“key”) and uusi (“new”).",
+      "prompt": "Build “That key over there is new.” Use avain (“key”) and uusi (“new”).",
       "acceptedAnswers": ["Tuo avain on uusi."],
       "explanation": "Tuo comes before the singular noun avain; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -846,7 +846,7 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The previously identified key is new.” During a memory exercise. Use avain (“key”) and uusi (“new”).",
+      "prompt": "Build “The previously identified key is new.” Use avain (“key”) and uusi (“new”).",
       "acceptedAnswers": ["Se avain on uusi."],
       "explanation": "Se comes before the singular noun avain; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -902,7 +902,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “He or she is inside.” At a storage cupboard. The previously named referent is a child. Use standard written Finnish.",
+      "prompt": "Choose the sentence that means “He or she is inside.” The previously named referent is a child. Use standard written Finnish.",
       "acceptedAnswers": ["Hän on sisällä."],
       "explanation": "Standard written Finnish normally uses hän for a person.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -955,7 +955,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “It is inside.” While labelling pictures. The previously named referent is a car. Use standard written Finnish.",
+      "prompt": "Choose the sentence that means “It is inside.” The previously named referent is a car. Use standard written Finnish.",
       "acceptedAnswers": ["Se on sisällä."],
       "explanation": "Standard written Finnish normally uses se for a non-human referent.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1008,7 +1008,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Beside a noticeboard. Translate “Tuo on kirja.” into English.",
+      "prompt": "Translate “Tuo on kirja.” into English.",
       "acceptedAnswers": ["That one over there is a book."],
       "explanation": "Tuo is the singular demonstrative for a situation where the referent is farther away and visible.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1049,7 +1049,7 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "During a picture exercise. Translate “Se on kirja.” into English. The referent is already identifiable from the conversation.",
+      "prompt": "Translate “Se on kirja.” into English.",
       "acceptedAnswers": ["That is a book.", "It is a book."],
       "explanation": "Se is the singular demonstrative for a situation where the listener can identify the referent.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1090,7 +1090,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “This book is old.” At a café table. Use kirja (“book”) and vanha (“old”).",
+      "prompt": "Choose the sentence that means “This book is old.” Use kirja (“book”) and vanha (“old”).",
       "acceptedAnswers": ["Tämä kirja on vanha."],
       "explanation": "Tämä comes before the singular noun kirja; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1151,7 +1151,7 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “That book over there is old.” While looking through a window. Use kirja (“book”) and vanha (“old”).",
+      "prompt": "Choose the sentence that means “That book over there is old.” Use kirja (“book”) and vanha (“old”).",
       "acceptedAnswers": ["Tuo kirja on vanha."],
       "explanation": "Tuo comes before the singular noun kirja; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],

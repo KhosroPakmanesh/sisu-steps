@@ -85,3 +85,24 @@ test('keeps the demonstrative catalog cards and longest learning map responsive'
     );
   }
 });
+
+test('shows concise prompts in scored study and optional practice', async ({ page }) => {
+  await page.goto('/study/singular-demonstrative-pronouns/sdp-singular-forms-test');
+  for (let index = 0; index < 2; index += 1) {
+    await page.getByRole('button', { name: 'Show answer' }).click();
+    await page.getByRole('button', { name: 'Continue' }).click();
+  }
+
+  await expect(page.locator('.question-count')).toHaveText('3 / 20');
+  await expect(page.locator('.exercise-card h2')).toHaveText(
+    'Write “That is a book.” in Finnish. Use kirja (“a book”) and on (“is”). The listener already knows which one. Frame: “___ on kirja.”',
+  );
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+
+  await page.goto('/learn/singular-demonstrative-pronouns/sdp-singular-forms-test');
+  await page.getByRole('button', { name: 'Start optional practice' }).click();
+  await expect(page.locator('.practice-card h4')).toHaveText(
+    'Optional practice: Choose the sentence that means “That is a car.” Use auto (“a car”) and on (“is”). The listener already knows which one. Frame: “___ on auto.”',
+  );
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+});

@@ -96,11 +96,22 @@ export function validateVocabularyItemTypes(lessons) {
 export function validateExerciseEditorialQuality(exercises) {
   const errors = [];
   for (const exercise of exercises) {
+    if (typeof exercise?.prompt === 'string' && exercise.prompt.trim().split(/\s+/u).length > 40) {
+      errors.push(`${exercise.id}: prompt exceeds the 40-word editorial limit`);
+    }
     if (
       typeof exercise?.prompt === 'string' &&
       /(?:Optional practice:\s*){2,}/iu.test(exercise.prompt)
     ) {
       errors.push(`${exercise.id}: repeats the optional-practice label`);
+    }
+    if (
+      typeof exercise?.prompt === 'string' &&
+      /Write the complete Finnish sentence: ____|The identity-sentence frame is supplied/iu.test(
+        exercise.prompt,
+      )
+    ) {
+      errors.push(`${exercise.id}: prompt repeats an instruction or exposes authoring notes`);
     }
     if (hasAmbiguousSecondPersonPrompt(exercise)) {
       errors.push(
