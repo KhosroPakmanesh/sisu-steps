@@ -20,12 +20,12 @@
       <span class="teacher-stamp practice-stamp" aria-hidden="true">PRACTISED</span>
       <strong>Practice complete</strong>
       <p>You can repeat it, finish the lesson, or start the test.</p>
-      <button class="button secondary compact" type="button" (click)="start()">
+      <button #completeAction class="button secondary compact" type="button" (click)="start()">
         Practise again
       </button>
     </div>
   } @else if (exercise(); as currentExercise) {
-    <div class="practice-card">
+    <div #practiceCard class="practice-card">
       <div class="practice-count">
         Question {{ exerciseIndex() + 1 }} of {{ lesson.practiceExercises.length }}
       </div>
@@ -72,24 +72,35 @@
               <button
                 class="word-token selected-token"
                 type="button"
-                (click)="answer.removeToken(position)"
+                (click)="removeWordToken(position, tokenIndex, $event)"
               >
                 {{ currentExercise.tokens?.[tokenIndex] }}
               </button>
             }
           </div>
-          <div class="practice-token-bank" aria-label="Available words">
+          <div
+            #wordTokenBank
+            class="practice-token-bank"
+            role="group"
+            aria-label="Available words"
+            aria-describedby="practice-word-token-hint"
+          >
             @for (token of currentExercise.tokens; track $index; let index = $index) {
               <button
                 class="word-token"
                 type="button"
                 [disabled]="answer.selectedTokenIndexes().includes(index) || !!feedback()"
-                (click)="answer.chooseToken(index)"
+                (keydown)="moveWordToken($event, index)"
+                (click)="chooseWordToken(index, $event)"
               >
                 {{ token }}
               </button>
             }
           </div>
+          <p id="practice-word-token-hint" class="practice-word-token-hint">
+            Arrow keys move between words. Enter or Space adds a word. After the last word, press
+            Enter to check.
+          </p>
         </div>
         <div class="answer-tool-row" role="toolbar" aria-label="Sentence correction tools">
           <button
@@ -120,7 +131,6 @@
             [disabled]="!!feedback()"
             [ngModel]="answer.response()"
             (ngModelChange)="answer.response.set($event)"
-            (keydown.enter)="submit()"
           />
         </label>
         <div class="answer-tool-row" role="toolbar" aria-label="Answer correction tools">
@@ -137,7 +147,7 @@
 
       <div class="practice-actions">
         @if (feedback()) {
-          <button class="button primary" type="button" (click)="continue()">
+          <button #continueButton class="button primary" type="button" (click)="continue()">
             {{
               exerciseIndex() === lesson.practiceExercises.length - 1
                 ? 'Finish practice'
@@ -146,7 +156,8 @@
           </button>
         } @else {
           <button
-            class="button primary"
+            #checkAnswerButton
+            class="button primary submit-button"
             type="button"
             [disabled]="!answer.canSubmit()"
             (click)="submit()"

@@ -14,13 +14,17 @@ import { learningPaths } from '../../shared/navigation/learning.paths';
 import { RouteReadiness } from '../../shared/navigation/route-readiness';
 import { CompletedAttempt } from '../../shared/state/learner-state.models';
 import { AnswerDraft } from '../../shared/answer-entry/answer-draft';
+import { answerEnterAction } from '../../shared/answer-entry/answer-enter-key.policy';
+import {
+  nextAvailableWordIndex,
+  wordTokenArrowStep,
+} from '../../shared/answer-entry/word-token-navigation';
 import { LoadedTopicPack } from '../../shared/content/topic-pack.models';
 import { findSession } from '../../shared/progress/session.queries';
 import { LearningStateStore } from '../../shared/state/learning-state.store';
 import { SessionAnswerService } from '../session/session-answer.service';
 import { StudyResultComponent } from '../result/study-result.component';
 import { QuestionVocabularyDialogComponent } from '../vocabulary/question-vocabulary-dialog.component';
-import { studyEnterAction } from './study-enter-key.policy';
 import { EmptyStudySession, StudyRouteLoaderService } from './study-route-loader.service';
 @Component({
   selector: 'app-runner',
@@ -44,7 +48,11 @@ export class StudyPage implements RouteReadiness {
   protected readonly busy = signal(false);
   private readonly textAnswer = viewChild<ElementRef<HTMLInputElement>>('textAnswer');
   private readonly answerChoice = viewChild<ElementRef<HTMLInputElement>>('answerChoice');
+  private readonly questionCard = viewChild<ElementRef<HTMLElement>>('questionCard');
   private readonly availableWordToken = viewChild<ElementRef<HTMLButtonElement>>('wordToken');
+  private readonly wordTokenBank = viewChild<ElementRef<HTMLElement>>('wordTokenBank');
+  private readonly checkAnswerButton =
+    viewChild<ElementRef<HTMLButtonElement>>('checkAnswerButton');
   private readonly continueButton = viewChild<ElementRef<HTMLButtonElement>>('continueButton');
   private readonly result = viewChild(StudyResultComponent);
   protected readonly session = computed(() => {
@@ -156,7 +164,7 @@ export class StudyPage implements RouteReadiness {
 
   protected handleEnter(event: Event): void {
     if (!(event instanceof KeyboardEvent)) return;
-    const action = studyEnterAction(
+    const action = answerEnterAction(
       event,
       !!this.feedback(),
       this.answer.canSubmit() && !this.busy(),
@@ -165,6 +173,37 @@ export class StudyPage implements RouteReadiness {
     event.preventDefault();
     if (action === 'continue') void this.continue();
     if (action === 'submit') void this.submit();
+  }
+
+  protected moveWordToken(event: KeyboardEvent, index: number): void {
+    const step = wordTokenArrowStep(event);
+    if (step === null) return;
+    const next = nextAvailableWordIndex(
+      this.exercise()?.tokens?.length ?? 0,
+      this.answer.selectedTokenIndexes(),
+      index,
+      step,
+    );
+    if (next === null) return;
+    event.preventDefault();
+    this.focusWordToken(next);
+  }
+
+  protected chooseWordToken(index: number, event: MouseEvent): void {
+    this.answer.chooseToken(index);
+    if (event.detail !== 0) return;
+    const next = nextAvailableWordIndex(
+      this.exercise()?.tokens?.length ?? 0,
+      this.answer.selectedTokenIndexes(),
+      index,
+    );
+    if (next === null) this.scheduleWordTokenFocus(null);
+    else this.focusWordToken(next);
+  }
+
+  protected removeWordToken(position: number, tokenIndex: number, event: MouseEvent): void {
+    this.answer.removeToken(position);
+    if (event.detail === 0) this.scheduleWordTokenFocus(tokenIndex);
   }
 
   private async runOperation<T>(
@@ -194,10 +233,35 @@ export class StudyPage implements RouteReadiness {
     afterNextRender(
       () => {
         // NgModel updates disabled controls in a microtask after the view renders.
-        queueMicrotask(() => this.focusState(target));
+        queueMicrotask(() => {
+          this.focusState(target);
+          if (target === 'question') {
+            this.questionCard()?.nativeElement.scrollIntoView({
+              block: 'start',
+              behavior: 'instant',
+            });
+          }
+        });
       },
       { injector: this.injector },
     );
+  }
+
+  private scheduleWordTokenFocus(index: number | null): void {
+    afterNextRender(
+      () => {
+        queueMicrotask(() => {
+          if (index === null) this.checkAnswerButton()?.nativeElement.focus();
+          else this.focusWordToken(index);
+        });
+      },
+      { injector: this.injector },
+    );
+  }
+
+  private focusWordToken(index: number): void {
+    const button = this.wordTokenBank()?.nativeElement.querySelectorAll('button')[index];
+    if (button instanceof HTMLButtonElement && !button.disabled) button.focus();
   }
 
   private focusState(target: 'question' | 'continue' | 'result'): void {

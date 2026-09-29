@@ -30,6 +30,9 @@ Object.defineProperty(window, 'localStorage', {
   value: testLocalStorage,
 });
 
+// jsdom has no layout scrolling; Playwright verifies question positioning in the browser.
+Element.prototype.scrollIntoView = () => {};
+
 if (!HTMLDialogElement.prototype.showModal) {
   HTMLDialogElement.prototype.showModal = function showModal(): void {
     this.setAttribute('open', '');

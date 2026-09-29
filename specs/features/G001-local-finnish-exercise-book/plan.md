@@ -164,3 +164,15 @@ Strengthen the demonstrative-family validator so decorative scene labels cannot 
 ## 2026-09-29 consistent prompt style
 
 Implement `REQ-G001-132` by shortening every Demonstratives scored and optional-practice prompt in place. Preserve meaningful near/far/known reference cues, bounded inessive contexts, full English construction meanings, supplied non-target forms, and source meanings for transformations. Keep all grading and progress contracts stable. Add the same 40-word and boilerplate checks to runtime and standalone validators, update the shared authoring guide and five pedagogy records, then run direct-source validation, the complete client gate, and targeted browser checks of the revised study and lesson-practice prompts.
+
+## 2026-09-29 word-order keyboard navigation
+
+Extend `REQ-G001-045` and `129` so a learner can move among available word tokens with arrow keys, activate the focused token with native Enter or Space, and continue selecting without losing focus. Move focus to **Check answer** after the final token; keep the existing Enter-based check and feedback-to-Continue flow. Apply the same token behavior to scored Study and optional lesson practice, add a short visible keyboard hint, and validate focus and response behavior without changing content, grading, or learner-state formats.
+
+## 2026-09-29 lesson-practice keyboard parity
+
+Use one shared contextual Enter policy for scored Study and optional lesson practice. Preserve native Enter on word tokens and **Show answer**, submit valid multiple-choice and typed responses from their answer controls, advance from feedback with Enter, and suppress repeated Enter keydowns. Keep start and repeat-practice buttons native, preserve temporary unscored practice state, and verify the full optional-practice keyboard sequence in the browser.
+
+## 2026-09-29 question visibility after advancing
+
+After Study advances or optional lesson practice starts or advances, focus the first answer control and scroll the new question card into view. Account for the sticky desktop header and compact mobile layout, use immediate scrolling, and verify that the prompt remains visible after keyboard and pointer progression across supported widths.

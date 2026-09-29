@@ -75,7 +75,7 @@
         </aside>
       }
       <app-question-vocabulary-dialog [exercise]="currentExercise" [pack]="loadedPack()!.pack" />
-      <section class="exercise-card">
+      <section #questionCard class="exercise-card">
         <div class="exercise-context">
           <span class="type-label">{{ currentExercise.type.replace('-', ' ') }}</span>
           <p>{{ currentExercise.instruction }}</p>
@@ -123,25 +123,36 @@
                 <button
                   class="word-token selected-token"
                   type="button"
-                  (click)="answer.removeToken(position)"
+                  (click)="removeWordToken(position, tokenIndex, $event)"
                 >
                   {{ currentExercise.tokens?.[tokenIndex] }}
                 </button>
               }
             </div>
-            <div class="token-bank" aria-label="Available words">
+            <div
+              #wordTokenBank
+              class="token-bank"
+              role="group"
+              aria-label="Available words"
+              aria-describedby="word-token-hint"
+            >
               @for (token of currentExercise.tokens; track $index; let index = $index) {
                 <button
                   #wordToken
                   class="word-token"
                   type="button"
                   [disabled]="answer.selectedTokenIndexes().includes(index) || !!feedback()"
-                  (click)="answer.chooseToken(index)"
+                  (keydown)="moveWordToken($event, index)"
+                  (click)="chooseWordToken(index, $event)"
                 >
                   {{ token }}
                 </button>
               }
             </div>
+            <p id="word-token-hint" class="word-token-hint">
+              Arrow keys move between words. Enter or Space adds a word. After the last word, press
+              Enter to check.
+            </p>
           </div>
           <div class="answer-tool-row" role="toolbar" aria-label="Sentence correction tools">
             <button
@@ -206,6 +217,7 @@
               </button>
             } @else {
               <button
+                #checkAnswerButton
                 class="button primary submit-button"
                 type="button"
                 [disabled]="!answer.canSubmit() || busy()"

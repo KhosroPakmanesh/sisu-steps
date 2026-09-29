@@ -46,6 +46,7 @@
   display: grid;
   gap: var(--space-5);
   padding: calc(var(--space-6) + 0.9rem);
+  scroll-margin-top: calc(var(--header-height) + var(--space-4));
 }
 
 .exercise-card > * {
@@ -96,6 +97,12 @@
 .word-builder {
   display: grid;
   gap: 1rem;
+}
+
+.word-token-hint {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--text-caption);
 }
 
 .answer-zone,
@@ -209,6 +216,7 @@
   .exercise-card {
     gap: var(--space-3);
     padding: var(--space-3);
+    scroll-margin-top: var(--space-3);
   }
 
   .exercise-card h2 {

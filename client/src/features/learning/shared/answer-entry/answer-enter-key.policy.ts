@@ -1,10 +1,10 @@
-export type StudyEnterAction = 'block' | 'continue' | 'submit' | null;
+export type AnswerEnterAction = 'block' | 'continue' | 'submit' | null;
 
-export function studyEnterAction(
+export function answerEnterAction(
   event: KeyboardEvent,
   hasFeedback: boolean,
   canSubmit: boolean,
-): StudyEnterAction {
+): AnswerEnterAction {
   if (event.repeat) return 'block';
   if (hasFeedback) return 'continue';
   if (

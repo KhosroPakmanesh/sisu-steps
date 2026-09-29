@@ -343,6 +343,16 @@ test('keeps the page clip aligned with short paper at tall tablet sizes', async 
   await page.setViewportSize({ width: 1032, height: 1376 });
   await page.goto('/study/olla-questions-short-answers/ppo-singular-positive-questions-test');
 
+  await expect
+    .poll(async () => {
+      const [hardware, clip] = await Promise.all([
+        page.locator('.workbook-page-hardware').boundingBox(),
+        page.locator('.workbook-page-clip').boundingBox(),
+      ]);
+      return Math.abs((hardware?.height ?? 0) - (clip?.height ?? 0));
+    })
+    .toBeLessThan(0.5);
+
   const [paperBox, hardwareBox, clipBox] = await Promise.all([
     page.locator('.runner-shell').boundingBox(),
     page.locator('.workbook-page-hardware').boundingBox(),
@@ -1148,15 +1158,97 @@ test('completes each study response type with contextual Enter behavior', async 
 
   const availableWords = page.getByLabel('Available words');
   await expect(availableWords.getByRole('button', { name: 'ovat' })).toBeFocused();
-  for (const [index, word] of ['Koirat', 'ovat', 'ulkona.'].entries()) {
-    await availableWords.getByRole('button', { name: word }).press('Enter');
-    await expect(page.getByLabel('Your sentence').getByRole('button')).toHaveCount(index + 1);
-  }
+  await page.keyboard.press('ArrowLeft');
+  await expect(availableWords.getByRole('button', { name: 'Koirat' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(availableWords.getByRole('button', { name: 'ovat' })).toBeFocused();
+  await page.getByLabel('Your sentence').getByRole('button', { name: 'Koirat' }).press('Enter');
+  await expect(availableWords.getByRole('button', { name: 'Koirat' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(availableWords.getByRole('button', { name: 'ovat' })).toBeFocused();
+  await page.keyboard.press('ArrowLeft');
+  await expect(availableWords.getByRole('button', { name: 'ulkona.' })).toBeFocused();
+  await page.keyboard.press('ArrowRight');
+  await expect(availableWords.getByRole('button', { name: 'ovat' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(availableWords.getByRole('button', { name: 'ulkona.' })).toBeFocused();
+  await page.keyboard.press('Enter');
   await expect(page.locator('.exercise-card .feedback')).toHaveCount(0);
   const checkAnswer = page.getByRole('button', { name: 'Check answer' });
-  await checkAnswer.press('Enter');
+  await expect(checkAnswer).toBeFocused();
+  await page.keyboard.press('Enter');
   await expect(page.locator('.exercise-card .feedback')).toContainText('Correct');
   await expect(page.getByRole('button', { name: 'Continue' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('textbox', { name: 'Your answer' })).toBeFocused();
+});
+
+test('moves through optional word-order practice with arrows and Enter', async ({ page }) => {
+  await page.goto(`/learn/${PLURAL_TOPIC_SEGMENT}/plural-in-sentences`);
+  await page.getByRole('button', { name: 'Start optional practice' }).click();
+  const availableWords = page.locator('.practice-token-bank');
+  await expect(availableWords.getByRole('button', { name: 'kotona.' })).toBeFocused();
+  await page.keyboard.press('ArrowLeft');
+  await expect(availableWords.getByRole('button', { name: 'Kissat' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(availableWords.getByRole('button', { name: 'kotona.' })).toBeFocused();
+  await page.keyboard.press('ArrowRight');
+  await expect(availableWords.getByRole('button', { name: 'ovat' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(availableWords.getByRole('button', { name: 'kotona.' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(
+    page.locator('.practice-actions').getByRole('button', { name: 'Check answer' }),
+  ).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.lesson-practice .feedback')).toContainText('Correct');
+  await expect(
+    page.locator('.practice-actions').getByRole('button', { name: 'Continue' }),
+  ).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.practice-text-answer input')).toBeFocused();
+});
+
+test('uses the Study Enter flow throughout optional lesson practice', async ({ page }) => {
+  await page.goto('/learn/singular-demonstrative-pronouns/sdp-singular-forms-test');
+  await page.getByRole('button', { name: 'Start optional practice' }).click();
+  const practicePrompt = page.locator('.practice-card h4');
+  await expect(practicePrompt).toBeInViewport({ ratio: 0.8 });
+
+  const choice = page.getByRole('radio', { name: 'Se on auto.' });
+  await expect(choice).toBeFocused();
+  await expect(choice).toBeInViewport();
+  await page.keyboard.press('Space');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.lesson-practice .feedback')).toContainText('Correct');
+  await expect(page.getByRole('button', { name: 'Continue' })).toBeFocused();
+  await page.keyboard.press('Enter');
+
+  const typedAnswer = page.locator('.practice-text-answer input');
+  await expect(typedAnswer).toBeFocused();
+  await expect(typedAnswer).toBeInViewport();
+  await expect(practicePrompt).toBeInViewport({ ratio: 0.8 });
+  await page.keyboard.insertText('Tämä on talo.');
+  await page.keyboard.press('Enter');
+  await expect(page.locator('.lesson-practice .feedback')).toContainText('Correct');
+  await page.keyboard.press('Enter');
+  await expect(typedAnswer).toBeFocused();
+  await expect(practicePrompt).toBeInViewport({ ratio: 0.8 });
+
+  await page.getByRole('button', { name: 'Show answer' }).press('Enter');
+  await expect(page.locator('.lesson-practice .feedback')).toContainText('Answer revealed');
+  await page.keyboard.press('Enter');
+  await expect(typedAnswer).toBeFocused();
+  await expect(practicePrompt).toBeInViewport({ ratio: 0.8 });
+  await page.keyboard.insertText('That is a house.');
+  await page.keyboard.press('Enter');
+  await expect(page.getByRole('button', { name: 'Finish practice' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(page.getByText('Practice complete')).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Practise again' })).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(choice).toBeFocused();
+  await expect(practicePrompt).toBeInViewport({ ratio: 0.8 });
 });
 
 test('keeps study targets truthful and readable at every supported width', async ({ page }) => {

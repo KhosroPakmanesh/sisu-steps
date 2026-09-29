@@ -18,6 +18,7 @@ test('focuses the first answer control after every question change', async ({ pa
           : page.getByRole('textbox', { name: 'Your answer' });
 
     await expect(answerControl, `Question ${index} (${type})`).toBeFocused();
+    await expect(answerControl, `Question ${index} (${type})`).toBeInViewport();
     await page.getByRole('button', { name: 'Show answer' }).click();
     await expect(
       page.getByRole('button', { name: index === 16 ? 'See result' : 'Continue' }),
@@ -27,7 +28,10 @@ test('focuses the first answer control after every question change', async ({ pa
     } else {
       await page.keyboard.press('Enter');
     }
-    if (index < 16) await expect(questionCount).toContainText(`${index + 1} / 16`);
+    if (index < 16) {
+      await expect(questionCount).toContainText(`${index + 1} / 16`);
+      await expect(page.locator('.exercise-card h2')).toBeInViewport({ ratio: 0.8 });
+    }
   }
 
   expect(seenTypes).toEqual(

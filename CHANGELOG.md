@@ -48,6 +48,10 @@
 
 ### Changed
 
+- Word-order questions now let keyboard users move among available words with arrow keys. Enter or Space adds a word and moves focus to the next one; after the final word, focus moves to **Check answer** so Enter can check and then continue. Optional lesson practice now also matches Study's Enter behavior for selected choices, typed answers, checking, and continuing.
+
+- Opening the next question in Study or optional lesson practice now scrolls its prompt into view while keeping focus on the answer control.
+
 - Shortened all Demonstratives study and optional-practice prompts to match the concise style of Pronouns and olla while preserving answer cues. Added a shared 40-word prompt rule and validation for future packs, and updated the Finnish content creator skill to follow it; existing answers and learner progress remain valid.
 
 - Refreshed the root README with the desktop and mobile learning journey, current feature ownership, local setup, documentation links, Finnish-correction guidance, deployment checks, and a general grammar reference. Removed changing syllabus, pack-count, and AI-model details while retaining the detailed technical architecture.
@@ -187,6 +191,8 @@
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 
 ### Fixed
+
+- Made the tall-tablet page-clip browser check wait for the existing layout to settle before comparing its final dimensions.
 
 - Corrected Demonstratives vocabulary declarations by removing six irrelevant nouns and adding 19 missing location words, so Cheat mode covers scored questions that require lexical recall. Answers, scoring, and progress interpretation are unchanged.
 
