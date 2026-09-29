@@ -188,6 +188,8 @@
 
 ### Fixed
 
+- Corrected Demonstratives vocabulary declarations by removing six irrelevant nouns and adding 19 missing location words, so Cheat mode covers scored questions that require lexical recall. Answers, scoring, and progress interpretation are unchanged.
+
 - Kept keyboard focus on the first answer control after advancing to each new Study question, including when Angular Forms finishes enabling a previously disabled input after rendering.
 
 - Fixed GitHub Pages deployment after adding direct legal-page entry files: the workflow now uploads the deterministic Angular browser output root and rejects artifacts missing the application bundles, runtime configuration, or legal entry points instead of potentially publishing a one-file route directory.
