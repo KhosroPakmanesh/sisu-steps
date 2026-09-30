@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
+import { gradeAnswer } from '@/features/learning/shared/progress/grading.policy';
 import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
 import { validateDemonstrativePack } from '../../../../tools/content-validation/demonstratives/demonstrative-pack-family.mjs';
 
@@ -157,6 +158,30 @@ describe('demonstrative-pronoun pack-family validation', () => {
 
     expect(validateDemonstrativePack(pack)).toContainEqual(
       expect.stringContaining('learner-facing English contains malformed gloss'),
+    );
+  });
+
+  it('keeps natural English translations acceptable for se noun questions', () => {
+    const pack = requirePack(packs, 'demonstrative-questions');
+    const exercise = pack.tests
+      .flatMap((test) => test.exercises)
+      .find((candidate) => candidate.id === 'dqs-yesno-singular-test-e004');
+    if (!exercise) throw new Error('The book question is missing.');
+
+    expect(exercise.acceptedAnswers).toEqual(['Is the book at home?', 'Is that book at home?']);
+    expect(gradeAnswer(exercise, 'Is that book at home?').correct).toBe(true);
+    expect(gradeAnswer(exercise, 'It that book at home?').correct).toBe(false);
+    expect(gradeAnswer(exercise, 'It that book at home?').diagnosticExplanation).toBe(
+      'Questions such as this start with “Is.” “It” names a thing and cannot replace “Is.”',
+    );
+  });
+
+  it('rejects authoring shorthand in learner-facing English', () => {
+    const pack = structuredClone(requirePack(packs, 'demonstrative-questions'));
+    pack.lessons[0].summary = 'Ask about the previously identified object.';
+
+    expect(validateDemonstrativePack(pack)).toContain(
+      'demonstrative-questions: learner-facing English uses the authoring phrase “previously identified”',
     );
   });
 

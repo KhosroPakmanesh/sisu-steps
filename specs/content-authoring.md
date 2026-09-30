@@ -77,6 +77,10 @@ Scored exercises use fixed authored order and stable globally unique IDs. They d
 
 For free-text answers, inventory common standard Finnish replies that express the requested meaning before finalizing `acceptedAnswers`. In yes/no short answers, a conjugated negative reply may stand alone or follow the separate answer particle `Ei`: accept both `Emme ole.` and `Ei, emme ole.` when either fits the prompt. An affirmative verb echo may stand alone or follow `Kyllä`: accept both `Olemme.` and `Kyllä, olemme.`. Apply the same check to scored and optional-practice text entry. Keep one clear model answer first for feedback, list natural alternatives explicitly, and check that the prompt does not require an exact quoted form. Multiple-choice options and word-order tokens define the available response for those interaction types; review them for clarity rather than adding text-entry variants to their answer lists.
 
+Apply the same alternatives audit to English free-text translations. Put a natural, faithful model first and explicitly accept other idiomatic renderings supported by the Finnish sentence and visible context, including appropriate article or demonstrative choices. Do not turn a discourse relationship into an unnatural learner-facing gloss such as “previously identified book.” For Finnish `se` and `ne`, English `the`, `that`, or `those` may fit in different contexts; preserve the intended reference and keep any cue needed to choose among Finnish demonstratives visible outside the quoted English target. Do not accept an alternative merely because it is grammatical English if it changes the Finnish meaning or erases an assessed distinction.
+
+Write general explanations so they can stand alone when no authored diagnostic matches a typed answer. Add a specific diagnostic for a predictable learner error that merits a distinct correction, and verify it against that actual answer. Inspect the rendered feedback for both cases: a general explanation should appear once, and generic text should not be repeated or presented as if it diagnosed the learner's particular mistake.
+
 ### Prompt style across packs
 
 Use the same compact question style in every pack, including optional practice: lead with one direct action, then give only the reference cue and supporting Finnish forms or meanings needed to answer. Keep each prompt at 40 words or fewer. A scene belongs in the prompt only when it changes the grammatical decision; remove decorative locations and task wrappers. Do not repeat the English target meaning or the instruction in a second `Target:` clause, append `Write the complete Finnish sentence: ____`, or expose authoring notes such as “The identity-sentence frame is supplied.” For a full-sentence text answer, say “Write … in Finnish”; for a form-recall item, show the short Finnish frame. Keep distinct reference, number, person, polarity, and bounded-location cues visible before the answer. The sentence translation and supplied-form rules below still apply. If a future target genuinely needs more than 40 words, revise the content contract and validation together instead of silently exempting one pack.
@@ -99,8 +103,10 @@ Audit the finished pack rather than only its metadata:
 
 - verify Finnish prompts, answers, translations, and formation explanations;
 - identify common natural accepted alternatives and remove ambiguous grading;
+- check English translation models, context-supported alternatives, and visible reference cues without exposing internal reference labels in the translation;
 - verify distractors are plausible, diagnostic, and unambiguously wrong;
 - ensure explanations define terminology and expose every non-obvious construction step;
+- submit a plausible typed error and an unrecognized error to confirm that specific diagnostics and general fallback feedback display accurately without duplication;
 - verify focused exercises contain no hidden grammar or lexical recall burden;
 - inventory vocabulary from the rendered lesson body and exercises rather than metadata alone, and verify that every learner-relevant item is correctly classified as new, used again through a declared prerequisite, or visibly supplied;
 - check recognition-to-production progression and cumulative cognitive load;

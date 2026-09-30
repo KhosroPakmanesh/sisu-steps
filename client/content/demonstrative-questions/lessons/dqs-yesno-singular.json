@@ -1,6 +1,6 @@
 {
   "id": "dqs-yesno-singular",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Singular affirmative demonstrative questions"],
   "prerequisiteSkills": ["Plural demonstrative classification questions"],
@@ -110,7 +110,7 @@
     },
     {
       "finnish": "Onko se talo täällä?",
-      "english": "Is the previously identified house here?",
+      "english": "Is the house here?",
       "steps": [
         "Onko: on + -ko.",
         "se talo: the complete subject is supplied.",
@@ -127,13 +127,13 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Optional practice: Write “Is the previously identified bag at home?” in Finnish. Use se laukku (“the previously identified bag”) and kotona (“at home”).",
+      "prompt": "Optional practice: Write “Is the bag at home?” in Finnish. Use se laukku (“the bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko se laukku kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified bag at home?",
+        "translation": "Is the bag at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -145,7 +145,7 @@
           },
           {
             "finnish": "se laukku",
-            "meaning": "the previously identified bag",
+            "meaning": "the bag",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + laukku",
             "formation": "the complete subject is supplied"
@@ -167,7 +167,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Optional practice: Write “Is this key at home?” in Finnish. Use tämä avain (“this key”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tämä avain kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -205,7 +205,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Optional practice: Translate “Onko tuo avain kotona?” into English.",
       "acceptedAnswers": ["Is that key at home?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": ["avain", "kotona"],
       "sentenceExplanation": {
@@ -241,13 +241,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Build “Is the previously identified key at home?” Use se avain (“the previously identified key”) and kotona (“at home”).",
+      "prompt": "Optional practice: Build “Is the key at home?” Use se avain (“the key”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko se avain kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified key at home?",
+        "translation": "Is the key at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -259,7 +259,7 @@
           },
           {
             "finnish": "se avain",
-            "meaning": "the previously identified key",
+            "meaning": "the key",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + avain",
             "formation": "the complete subject is supplied"

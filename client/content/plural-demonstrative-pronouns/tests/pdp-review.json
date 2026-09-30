@@ -325,12 +325,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Ne laukut ovat sisällä.” into English.",
-      "acceptedAnswers": ["The previously identified bags are inside.", "Those bags are inside."],
+      "acceptedAnswers": ["The bags are inside.", "Those bags are inside."],
       "explanation": "Ne comes directly before the plural noun laukut.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["laukku", "sisällä"],
       "sentenceExplanation": {
-        "translation": "The previously identified bags are inside.",
+        "translation": "The bags are inside.",
         "pattern": "demonstrative modifier + plural noun + linking verb + location",
         "parts": [
           {
@@ -968,13 +968,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The previously identified keys are inside.” Use avaimet (“keys”) and sisällä (“inside”).",
+      "prompt": "Build “The keys are inside.” The keys were mentioned earlier. Use avaimet (“keys”) and sisällä (“inside”).",
       "acceptedAnswers": ["Ne avaimet ovat sisällä."],
       "explanation": "Ne comes directly before the plural noun avaimet.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified keys are inside.",
+        "translation": "The keys are inside.",
         "pattern": "demonstrative modifier + plural noun + linking verb + location",
         "parts": [
           {
@@ -1024,13 +1024,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The previously identified books are inside.” Use kirjat (“books”) and sisällä (“inside”).",
+      "prompt": "Choose the sentence that means “The books are inside.” The books were mentioned earlier. Use kirjat (“books”) and sisällä (“inside”).",
       "acceptedAnswers": ["Ne kirjat ovat sisällä."],
       "explanation": "Ne and kirjat are both plural, so the demonstrative and noun agree in number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified books are inside.",
+        "translation": "The books are inside.",
         "pattern": "plural demonstrative agreeing with the noun + plural noun + linking verb + location",
         "parts": [
           {

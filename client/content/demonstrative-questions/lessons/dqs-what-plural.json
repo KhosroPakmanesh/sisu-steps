@@ -1,6 +1,6 @@
 {
   "id": "dqs-what-plural",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Plural demonstrative classification questions"],
   "prerequisiteSkills": ["Singular demonstrative identity questions"],
@@ -105,7 +105,7 @@
     },
     {
       "finnish": "Mitä ne rakennukset ovat?",
-      "english": "What are the previously identified buildings?",
+      "english": "What are the buildings?",
       "steps": [
         "Mitä: the bounded plural classification form.",
         "ne rakennukset: the complete phrase is supplied.",
@@ -123,12 +123,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Optional practice: Translate “Mitä ne sanat ovat?” into English.",
-      "acceptedAnswers": ["What are the previously identified words?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "acceptedAnswers": ["What are the words?", "What are those words?"],
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": ["sana"],
       "sentenceExplanation": {
-        "translation": "What are the previously identified words?",
+        "translation": "What are the words?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -140,7 +140,7 @@
           },
           {
             "finnish": "ne sanat",
-            "meaning": "the previously identified words",
+            "meaning": "the words",
             "role": "demonstrative noun phrase",
             "baseForm": "ne + sana",
             "formation": "the complete phrase is supplied"
@@ -162,7 +162,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Optional practice: Build “What are these places?” Use nämä (“these”), paikat (“places”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nämä paikat ovat?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -201,7 +201,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Optional practice: Choose the sentence that means “What are those places?” Use nuo (“those over there”), paikat (“places”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nuo paikat ovat?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -249,13 +249,13 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Optional practice: Write “What are the previously identified places?” in Finnish. Use ne (“those or they, already identifiable”), paikat (“places”), and ovat (“are”).",
+      "prompt": "Optional practice: Write “What are the places?” in Finnish. Use ne (“those or they, already identifiable”), paikat (“places”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä ne paikat ovat?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "What are the previously identified places?",
+        "translation": "What are the places?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -267,7 +267,7 @@
           },
           {
             "finnish": "ne paikat",
-            "meaning": "the previously identified places",
+            "meaning": "the places",
             "role": "demonstrative noun phrase",
             "baseForm": "ne + paikka",
             "formation": "the complete phrase is supplied"

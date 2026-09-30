@@ -24,13 +24,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “What is the previously identified building?” Use se (“that or it, already identifiable”), rakennus (“building”), and on (“is”).",
+      "prompt": "Choose the sentence that means “What is the building?” Use se (“that or it, already identifiable”), rakennus (“building”), and on (“is”).",
       "acceptedAnswers": ["Mikä se rakennus on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "What is the previously identified building?",
+        "translation": "What is the building?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -42,7 +42,7 @@
           },
           {
             "finnish": "se rakennus",
-            "meaning": "the previously identified building",
+            "meaning": "the building",
             "role": "demonstrative noun phrase",
             "baseForm": "se + rakennus",
             "formation": "the complete phrase is supplied"
@@ -76,7 +76,7 @@
         {
           "answers": ["Mitä se rakennus on?"],
           "category": "Singular demonstrative identity questions: form not yet secure",
-          "explanation": "The singular identity frame begins with Mikä and ends with on."
+          "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e002"
@@ -86,7 +86,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Choose the sentence that means “What is this word?” Use tämä (“this”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä tämä sana on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -136,7 +136,7 @@
         {
           "answers": ["Mitä tämä sana on?"],
           "category": "Singular demonstrative identity questions: form not yet secure",
-          "explanation": "The singular identity frame begins with Mikä and ends with on."
+          "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e001"
@@ -146,7 +146,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “What are these objects?” in Finnish. Use nämä (“these”), esineet (“objects”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nämä esineet ovat?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -184,7 +184,7 @@
         {
           "answers": ["Mikä nämä esineet ovat?"],
           "category": "Plural demonstrative classification questions: form not yet secure",
-          "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat."
+          "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e004"
@@ -194,7 +194,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “What are those objects?” in Finnish. Use nuo (“those over there”), esineet (“objects”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nuo esineet ovat?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -232,7 +232,7 @@
         {
           "answers": ["Mikä nuo esineet ovat?"],
           "category": "Plural demonstrative classification questions: form not yet secure",
-          "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat."
+          "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e003"
@@ -242,7 +242,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “Is that car here?” in Finnish. Use tuo auto (“that car”) and täällä (“here”).",
       "acceptedAnswers": ["Onko tuo auto täällä?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -280,7 +280,7 @@
         {
           "answers": ["Ovatko tuo auto täällä?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e006"
@@ -288,13 +288,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Is the previously identified car here?” in Finnish. Use se auto (“the previously identified car”) and täällä (“here”).",
+      "prompt": "Write “Is the car here?” in Finnish. Use se auto (“the car”) and täällä (“here”).",
       "acceptedAnswers": ["Onko se auto täällä?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified car here?",
+        "translation": "Is the car here?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -306,7 +306,7 @@
           },
           {
             "finnish": "se auto",
-            "meaning": "the previously identified car",
+            "meaning": "the car",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + auto",
             "formation": "the complete subject is supplied"
@@ -328,7 +328,7 @@
         {
           "answers": ["Ovatko se auto täällä?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e005"
@@ -337,12 +337,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Ovatko ne laukut täällä?” into English.",
-      "acceptedAnswers": ["Are the previously identified bags here?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "acceptedAnswers": ["Are the bags here?", "Are those bags here?"],
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["laukku", "täällä"],
       "sentenceExplanation": {
-        "translation": "Are the previously identified bags here?",
+        "translation": "Are the bags here?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -354,7 +354,7 @@
           },
           {
             "finnish": "ne laukut",
-            "meaning": "the previously identified bags",
+            "meaning": "the bags",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + laukku",
             "formation": "the complete subject is supplied"
@@ -379,7 +379,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Ovatko nämä avaimet täällä?” into English.",
       "acceptedAnswers": ["Are these keys here?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["avain", "täällä"],
       "sentenceExplanation": {
@@ -420,7 +420,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Build “Isn't this car at home?” Use tämä auto (“this car”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tämä auto ole kotona?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -466,7 +466,7 @@
         {
           "answers": ["Eivätkö tämä auto ole kotona?"],
           "category": "Singular negative demonstrative questions: form not yet secure",
-          "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e010"
@@ -476,7 +476,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Build “Isn't that car at home?” Use tuo auto (“that car”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tuo auto ole kotona?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -522,7 +522,7 @@
         {
           "answers": ["Eivätkö tuo auto ole kotona?"],
           "category": "Singular negative demonstrative questions: form not yet secure",
-          "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e009"
@@ -532,7 +532,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Choose the sentence that means “Aren't those cars at home?” Use nuo autot (“those cars”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö nuo autot ole kotona?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -589,7 +589,7 @@
         {
           "answers": ["Eikö nuo autot ole kotona?"],
           "category": "Plural negative demonstrative questions: form not yet secure",
-          "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e012"
@@ -597,13 +597,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Aren't the previously identified books at home?” Use ne kirjat (“the previously identified books”) and kotona (“at home”).",
+      "prompt": "Choose the sentence that means “Aren't the books at home?” Use ne kirjat (“the books”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö ne kirjat ole kotona?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Aren't the previously identified books at home?",
+        "translation": "Aren't the books at home?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -615,7 +615,7 @@
           },
           {
             "finnish": "ne kirjat",
-            "meaning": "the previously identified books",
+            "meaning": "the books",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + kirja",
             "formation": "the complete subject is supplied"
@@ -656,7 +656,7 @@
         {
           "answers": ["Eikö ne kirjat ole kotona?"],
           "category": "Plural negative demonstrative questions: form not yet secure",
-          "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e011"
@@ -666,7 +666,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “What is that word?” in Finnish. Use tuo (“that over there”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä tuo sana on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -704,7 +704,7 @@
         {
           "answers": ["Mitä tuo sana on?"],
           "category": "Singular demonstrative identity questions: form not yet secure",
-          "explanation": "The singular identity frame begins with Mikä and ends with on."
+          "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e014"
@@ -712,13 +712,13 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Write “What is the previously identified word?” in Finnish. Use se (“that or it, already identifiable”), sana (“word”), and on (“is”).",
+      "prompt": "Write “What is the word?” in Finnish. Use se (“that or it, already identifiable”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä se sana on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "What is the previously identified word?",
+        "translation": "What is the word?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -730,7 +730,7 @@
           },
           {
             "finnish": "se sana",
-            "meaning": "the previously identified word",
+            "meaning": "the word",
             "role": "demonstrative noun phrase",
             "baseForm": "se + sana",
             "formation": "the complete phrase is supplied"
@@ -752,7 +752,7 @@
         {
           "answers": ["Mitä se sana on?"],
           "category": "Singular demonstrative identity questions: form not yet secure",
-          "explanation": "The singular identity frame begins with Mikä and ends with on."
+          "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e013"
@@ -760,13 +760,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “What are the previously identified objects?” in Finnish. Use ne (“those or they, already identifiable”), esineet (“objects”), and ovat (“are”).",
+      "prompt": "Write “What are the objects?” in Finnish. Use ne (“those or they, already identifiable”), esineet (“objects”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä ne esineet ovat?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "What are the previously identified objects?",
+        "translation": "What are the objects?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -778,7 +778,7 @@
           },
           {
             "finnish": "ne esineet",
-            "meaning": "the previously identified objects",
+            "meaning": "the objects",
             "role": "demonstrative noun phrase",
             "baseForm": "ne + esine",
             "formation": "the complete phrase is supplied"
@@ -800,7 +800,7 @@
         {
           "answers": ["Mikä ne esineet ovat?"],
           "category": "Plural demonstrative classification questions: form not yet secure",
-          "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat."
+          "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e016"
@@ -810,7 +810,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “What are these buildings?” in Finnish. Use nämä (“these”), rakennukset (“buildings”), and ovat (“are”).",
       "acceptedAnswers": ["Mitä nämä rakennukset ovat?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -848,7 +848,7 @@
         {
           "answers": ["Mikä nämä rakennukset ovat?"],
           "category": "Plural demonstrative classification questions: form not yet secure",
-          "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat."
+          "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e015"
@@ -858,7 +858,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Onko tämä talo täällä?” into English.",
       "acceptedAnswers": ["Is this house here?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["talo", "täällä"],
       "sentenceExplanation": {
@@ -899,7 +899,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Onko tuo talo täällä?” into English.",
       "acceptedAnswers": ["Is that house here?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["talo", "täällä"],
       "sentenceExplanation": {
@@ -940,7 +940,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Build “Are those keys here?” Use nuo avaimet (“those keys”) and täällä (“here”).",
       "acceptedAnswers": ["Ovatko nuo avaimet täällä?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -979,7 +979,7 @@
         {
           "answers": ["Onko nuo avaimet täällä?"],
           "category": "Plural affirmative demonstrative questions: form not yet secure",
-          "explanation": "Ovatko is the plural olla form with the question suffix -ko."
+          "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e020"
@@ -987,13 +987,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Are the previously identified keys here?” Use ne avaimet (“the previously identified keys”) and täällä (“here”).",
+      "prompt": "Build “Are the keys here?” Use ne avaimet (“the keys”) and täällä (“here”).",
       "acceptedAnswers": ["Ovatko ne avaimet täällä?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Are the previously identified keys here?",
+        "translation": "Are the keys here?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -1005,7 +1005,7 @@
           },
           {
             "finnish": "ne avaimet",
-            "meaning": "the previously identified keys",
+            "meaning": "the keys",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + avain",
             "formation": "the complete subject is supplied"
@@ -1028,7 +1028,7 @@
         {
           "answers": ["Onko ne avaimet täällä?"],
           "category": "Plural affirmative demonstrative questions: form not yet secure",
-          "explanation": "Ovatko is the plural olla form with the question suffix -ko."
+          "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e019"
@@ -1036,13 +1036,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Isn't the previously identified car at home?” Use se auto (“the previously identified car”) and kotona (“at home”).",
+      "prompt": "Choose the sentence that means “Isn't the car at home?” Use se auto (“the car”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö se auto ole kotona?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Isn't the previously identified car at home?",
+        "translation": "Isn't the car at home?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -1054,7 +1054,7 @@
           },
           {
             "finnish": "se auto",
-            "meaning": "the previously identified car",
+            "meaning": "the car",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + auto",
             "formation": "the complete subject is supplied"
@@ -1095,7 +1095,7 @@
         {
           "answers": ["Eivätkö se auto ole kotona?"],
           "category": "Singular negative demonstrative questions: form not yet secure",
-          "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e022"
@@ -1105,7 +1105,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Choose the sentence that means “Isn't this bag at home?” Use tämä laukku (“this bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tämä laukku ole kotona?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -1162,7 +1162,7 @@
         {
           "answers": ["Eivätkö tämä laukku ole kotona?"],
           "category": "Singular negative demonstrative questions: form not yet secure",
-          "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e021"
@@ -1172,7 +1172,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “Aren't these books at home?” in Finnish. Use nämä kirjat (“these books”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö nämä kirjat ole kotona?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -1217,7 +1217,7 @@
         {
           "answers": ["Eikö nämä kirjat ole kotona?"],
           "category": "Plural negative demonstrative questions: form not yet secure",
-          "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e024"
@@ -1227,7 +1227,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “Aren't those books at home?” in Finnish. Use nuo kirjat (“those books”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö nuo kirjat ole kotona?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -1272,7 +1272,7 @@
         {
           "answers": ["Eikö nuo kirjat ole kotona?"],
           "category": "Plural negative demonstrative questions: form not yet secure",
-          "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e023"
@@ -1282,7 +1282,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “What is this place?” in Finnish. Use tämä (“this”), paikka (“place”), and on (“is”).",
       "acceptedAnswers": ["Mikä tämä paikka on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -1320,7 +1320,7 @@
         {
           "answers": ["Mitä tämä paikka on?"],
           "category": "Singular demonstrative identity questions: form not yet secure",
-          "explanation": "The singular identity frame begins with Mikä and ends with on."
+          "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e026"
@@ -1330,7 +1330,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “What is that place?” in Finnish. Use tuo (“that over there”), paikka (“place”), and on (“is”).",
       "acceptedAnswers": ["Mikä tuo paikka on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -1368,7 +1368,7 @@
         {
           "answers": ["Mitä tuo paikka on?"],
           "category": "Singular demonstrative identity questions: form not yet secure",
-          "explanation": "The singular identity frame begins with Mikä and ends with on."
+          "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e025"
@@ -1378,7 +1378,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Mitä nuo esineet ovat?” into English.",
       "acceptedAnswers": ["What are those objects?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["esine"],
       "sentenceExplanation": {
@@ -1418,12 +1418,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Mitä ne esineet ovat?” into English.",
-      "acceptedAnswers": ["What are the previously identified objects?"],
-      "explanation": "The bounded plural classification frame begins with Mitä and ends with ovat.",
+      "acceptedAnswers": ["What are the objects?", "What are those objects?"],
+      "explanation": "Mitä ... ovat asks what several things are. In English, begin with “What are” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["esine"],
       "sentenceExplanation": {
-        "translation": "What are the previously identified objects?",
+        "translation": "What are the objects?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -1435,7 +1435,7 @@
           },
           {
             "finnish": "ne esineet",
-            "meaning": "the previously identified objects",
+            "meaning": "the objects",
             "role": "demonstrative noun phrase",
             "baseForm": "ne + esine",
             "formation": "the complete phrase is supplied"
@@ -1460,7 +1460,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “Isn't that bag at home?” in Finnish. Use tuo laukku (“that bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö tuo laukku ole kotona?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -1505,7 +1505,7 @@
         {
           "answers": ["Eivätkö tuo laukku ole kotona?"],
           "category": "Singular negative demonstrative questions: form not yet secure",
-          "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e030"
@@ -1513,13 +1513,13 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Write “Isn't the previously identified bag at home?” in Finnish. Use se laukku (“the previously identified bag”) and kotona (“at home”).",
+      "prompt": "Write “Isn't the bag at home?” in Finnish. Use se laukku (“the bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Eikö se laukku ole kotona?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Isn't the previously identified bag at home?",
+        "translation": "Isn't the bag at home?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -1531,7 +1531,7 @@
           },
           {
             "finnish": "se laukku",
-            "meaning": "the previously identified bag",
+            "meaning": "the bag",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + laukku",
             "formation": "the complete subject is supplied"
@@ -1560,7 +1560,7 @@
         {
           "answers": ["Eivätkö se laukku ole kotona?"],
           "category": "Singular negative demonstrative questions: form not yet secure",
-          "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e029"
@@ -1568,13 +1568,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Aren't the previously identified keys at home?” in Finnish. Use ne avaimet (“the previously identified keys”) and kotona (“at home”).",
+      "prompt": "Write “Aren't the keys at home?” in Finnish. Use ne avaimet (“the keys”) and kotona (“at home”).",
       "acceptedAnswers": ["Eivätkö ne avaimet ole kotona?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Aren't the previously identified keys at home?",
+        "translation": "Aren't the keys at home?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -1586,7 +1586,7 @@
           },
           {
             "finnish": "ne avaimet",
-            "meaning": "the previously identified keys",
+            "meaning": "the keys",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + avain",
             "formation": "the complete subject is supplied"
@@ -1615,7 +1615,7 @@
         {
           "answers": ["Eikö ne avaimet ole kotona?"],
           "category": "Plural negative demonstrative questions: form not yet secure",
-          "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e032"
@@ -1625,7 +1625,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “Aren't these books here?” in Finnish. Use nämä kirjat (“these books”) and täällä (“here”).",
       "acceptedAnswers": ["Eivätkö nämä kirjat ole täällä?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -1670,7 +1670,7 @@
         {
           "answers": ["Eikö nämä kirjat ole täällä?"],
           "category": "Plural negative demonstrative questions: form not yet secure",
-          "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question."
+          "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-review-e031"

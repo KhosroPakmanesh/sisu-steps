@@ -106,13 +106,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The previously identified house is large.” Use talo (“house”) and suuri (“large”).",
+      "prompt": "Build “The house is large.” The house was mentioned earlier. Use talo (“house”) and suuri (“large”).",
       "acceptedAnswers": ["Se talo on suuri."],
       "explanation": "Se comes before the singular noun talo; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified house is large.",
+        "translation": "The house is large.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {
@@ -279,13 +279,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The previously identified bag is large.” Use laukku (“bag”) and suuri (“large”).",
+      "prompt": "Choose the sentence that means “The bag is large.” The bag was mentioned earlier. Use laukku (“bag”) and suuri (“large”).",
       "acceptedAnswers": ["Se laukku on suuri."],
       "explanation": "Se comes before the singular noun laukku; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified bag is large.",
+        "translation": "The bag is large.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {
@@ -450,13 +450,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “The previously identified key is large.” in Finnish. Use avain (“key”) and suuri (“large”).",
+      "prompt": "Write “The key is large.” in Finnish. The key was mentioned earlier. Use avain (“key”) and suuri (“large”).",
       "acceptedAnswers": ["Se avain on suuri."],
       "explanation": "Se comes before the singular noun avain; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified key is large.",
+        "translation": "The key is large.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {
@@ -609,12 +609,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Se kirja on uusi.” into English.",
-      "acceptedAnswers": ["The previously identified book is new.", "That book is new."],
+      "acceptedAnswers": ["The book is new.", "That book is new."],
       "explanation": "Se comes before the singular noun kirja; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["kirja", "uusi"],
       "sentenceExplanation": {
-        "translation": "The previously identified book is new.",
+        "translation": "The book is new.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {
@@ -768,13 +768,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The previously identified car is new.” Use auto (“car”) and uusi (“new”).",
+      "prompt": "Choose the sentence that means “The car is new.” The car was mentioned earlier. Use auto (“car”) and uusi (“new”).",
       "acceptedAnswers": ["Se auto on uusi."],
       "explanation": "Se comes before the singular noun auto; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified car is new.",
+        "translation": "The car is new.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {
@@ -945,13 +945,13 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Write “The previously identified house is new.” in Finnish. Use talo (“house”) and uusi (“new”).",
+      "prompt": "Write “The house is new.” in Finnish. The house was mentioned earlier. Use talo (“house”) and uusi (“new”).",
       "acceptedAnswers": ["Se talo on uusi."],
       "explanation": "Se comes before the singular noun talo; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified house is new.",
+        "translation": "The house is new.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {

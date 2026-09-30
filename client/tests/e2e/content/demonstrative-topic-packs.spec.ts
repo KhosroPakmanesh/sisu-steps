@@ -106,3 +106,28 @@ test('shows concise prompts in scored study and optional practice', async ({ pag
   );
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });
+
+test('corrects the book question with natural English and a specific It versus Is hint', async ({
+  page,
+}) => {
+  await page.goto('/study/demonstrative-questions/dqs-yesno-singular-test');
+  for (let index = 0; index < 3; index += 1) {
+    await page.getByRole('button', { name: 'Show answer' }).click();
+    await page.getByRole('button', { name: 'Continue' }).click();
+  }
+
+  await expect(page.locator('.exercise-card h2')).toHaveText(
+    'Translate “Onko se kirja kotona?” into English.',
+  );
+  await page.locator('.text-answer input').fill('It that book at home?');
+  await page.getByRole('button', { name: 'Check answer' }).click();
+
+  const feedback = page.locator('.feedback');
+  await expect(feedback.locator('.diagnostic')).toContainText(
+    '“It” names a thing and cannot replace “Is.”',
+  );
+  await expect(feedback.locator('strong[lang="en"]')).toHaveText('Is the book at home?');
+  await expect(feedback.locator('.explanation')).toContainText(
+    'begin the question with “Is” before the subject',
+  );
+});

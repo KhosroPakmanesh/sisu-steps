@@ -277,13 +277,21 @@
                   mistakes.
                 </p>
               }
-              @if (!answer.correct && !answer.skipped && answer.diagnosticExplanation) {
+              @if (
+                !answer.correct &&
+                !answer.skipped &&
+                answer.diagnosticExplanation &&
+                answer.diagnosticExplanation !== currentExercise.explanation
+              ) {
                 <p class="diagnostic">
                   <strong>What happened:</strong> {{ answer.diagnosticExplanation }}
                 </p>
               }
               <p>
-                Correct answer: <strong lang="fi">{{ currentExercise.acceptedAnswers[0] }}</strong>
+                Correct answer:
+                <strong [attr.lang]="currentExercise.type === 'translation-en' ? 'en' : 'fi'">{{
+                  currentExercise.acceptedAnswers[0]
+                }}</strong>
               </p>
               <p class="explanation">
                 <strong>How the correct answer is built:</strong> {{ currentExercise.explanation }}

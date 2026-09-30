@@ -268,6 +268,11 @@ function validateDistinctTasks(scored, errors, prefix) {
 
 function validateNaturalEnglish(pack, errors) {
   const learnerFacing = JSON.stringify(pack);
+  if (/\bpreviously identified\b/iu.test(learnerFacing)) {
+    errors.push(
+      `${pack.id}: learner-facing English uses the authoring phrase “previously identified”`,
+    );
+  }
   const malformed = learnerFacing.match(
     /\b(?:childs|referent is (?:teacher|child|dog|car)|over there here|those are over there|it or that known one|they or those known ones|it or that identifiable one|they or those identifiable ones|that over there (?:book|car|house|bag|key|chair)|those over there (?:books|cars|houses|bags|keys|chairs))\b/iu,
   )?.[0];

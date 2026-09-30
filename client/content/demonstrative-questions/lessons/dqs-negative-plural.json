@@ -1,6 +1,6 @@
 {
   "id": "dqs-negative-plural",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Plural negative demonstrative questions"],
   "prerequisiteSkills": ["Singular negative demonstrative questions"],
@@ -117,7 +117,7 @@
     },
     {
       "finnish": "Eivätkö ne kirjat ole kotona?",
-      "english": "Aren't the previously identified books at home?",
+      "english": "Aren't the books at home?",
       "steps": [
         "Eivätkö: eivät + -kö.",
         "ne kirjat: the complete subject is supplied.",
@@ -135,13 +135,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Optional practice: Choose the sentence that means “Aren't the previously identified cars here?” Use ne autot (“the previously identified cars”) and täällä (“here”).",
+      "prompt": "Optional practice: Choose the sentence that means “Aren't the cars here?” Use ne autot (“the cars”) and täällä (“here”).",
       "acceptedAnswers": ["Eivätkö ne autot ole täällä?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Aren't the previously identified cars here?",
+        "translation": "Aren't the cars here?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -153,7 +153,7 @@
           },
           {
             "finnish": "ne autot",
-            "meaning": "the previously identified cars",
+            "meaning": "the cars",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + auto",
             "formation": "the complete subject is supplied"
@@ -194,7 +194,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Optional practice: Write “Aren't these houses here?” in Finnish. Use nämä talot (“these houses”) and täällä (“here”).",
       "acceptedAnswers": ["Eivätkö nämä talot ole täällä?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -239,7 +239,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Optional practice: Write “Aren't those houses here?” in Finnish. Use nuo talot (“those houses”) and täällä (“here”).",
       "acceptedAnswers": ["Eivätkö nuo talot ole täällä?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -283,12 +283,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Optional practice: Translate “Eivätkö ne talot ole täällä?” into English.",
-      "acceptedAnswers": ["Aren't the previously identified houses here?"],
-      "explanation": "Eivätkö carries plural negative agreement and -ko/-kö; ole follows later in the question.",
+      "acceptedAnswers": ["Aren't the houses here?", "Aren't those houses here?"],
+      "explanation": "Eivätkö is the plural negative question form, and ole follows the subject. In English, start with “Aren’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": ["talo", "täällä"],
       "sentenceExplanation": {
-        "translation": "Aren't the previously identified houses here?",
+        "translation": "Aren't the houses here?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -300,7 +300,7 @@
           },
           {
             "finnish": "ne talot",
-            "meaning": "the previously identified houses",
+            "meaning": "the houses",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + talo",
             "formation": "the complete subject is supplied"

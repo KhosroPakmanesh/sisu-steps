@@ -1,6 +1,6 @@
 {
   "id": "sdp-noun-modifier",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Singular demonstratives before nouns"],
   "prerequisiteSkills": ["Independent singular demonstratives"],
@@ -121,7 +121,7 @@
     },
     {
       "finnish": "Se laukku on uusi.",
-      "english": "The previously identified bag is new.",
+      "english": "The bag is new.",
       "steps": [
         "Se: basic singular form.",
         "laukku: basic singular form.",
@@ -139,13 +139,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Build “The previously identified key is old.” Use avain (“key”) and vanha (“old”).",
+      "prompt": "Optional practice: Build “The key is old.” The key was mentioned earlier. Use avain (“key”) and vanha (“old”).",
       "acceptedAnswers": ["Se avain on vanha."],
       "explanation": "Se comes before the singular noun avain; both remain in the basic nominative form.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified key is old.",
+        "translation": "The key is old.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {
@@ -281,13 +281,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Optional practice: Write “The previously identified book is small.” in Finnish. Use kirja (“book”) and pieni (“small”).",
+      "prompt": "Optional practice: Write “The book is small.” in Finnish. The book was mentioned earlier. Use kirja (“book”) and pieni (“small”).",
       "acceptedAnswers": ["Se kirja on pieni."],
       "explanation": "Se comes before the singular noun kirja; both remain in the basic nominative form.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified book is small.",
+        "translation": "The book is small.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {

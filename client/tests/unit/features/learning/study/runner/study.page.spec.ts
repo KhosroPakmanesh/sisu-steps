@@ -165,7 +165,7 @@ describe('StudyPage', () => {
     expect(storeSnapshot()).toEqual({ attempts: 0, answers: 0 });
   });
 
-  it('shows a diagnostic explanation for an incorrect answer', async () => {
+  it('shows an unmatched incorrect answer one general explanation', async () => {
     const input = fixture.nativeElement.querySelector('.text-answer input') as HTMLInputElement;
     input.value = 'talossä';
     input.dispatchEvent(new Event('input'));
@@ -174,9 +174,10 @@ describe('StudyPage', () => {
     await fixture.whenStable();
     fixture.detectChanges();
 
-    expect(fixture.nativeElement.querySelector('.feedback')?.textContent).toContain(
-      'The word talo has back vowels, so the ending is -ssa.',
-    );
+    const feedback = fixture.nativeElement.querySelector('.feedback') as HTMLElement;
+    expect(feedback.textContent).toContain('The word talo has back vowels, so the ending is -ssa.');
+    expect(feedback.querySelector('.diagnostic')).toBeNull();
+    expect(feedback.textContent?.match(/The word talo has back vowels/g)).toHaveLength(1);
     expect(fixture.nativeElement.querySelector('.feedback-stamp')?.textContent).toContain('CHECK');
   });
 

@@ -1,6 +1,6 @@
 {
   "id": "pdp-noun-modifier",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Plural demonstratives before nouns"],
   "prerequisiteSkills": ["Independent plural demonstratives"],
@@ -106,7 +106,7 @@
     },
     {
       "finnish": "Ne laukut ovat täällä.",
-      "english": "The previously identified bags are here.",
+      "english": "The bags are here.",
       "steps": [
         "Ne: basic plural form.",
         "laukut: the complete T-plural form is supplied.",
@@ -230,13 +230,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Optional practice: Write “The previously identified books are here.” in Finnish. Use kirjat (“books”) and täällä (“here”).",
+      "prompt": "Optional practice: Write “The books are here.” in Finnish. The books were mentioned earlier. Use kirjat (“books”) and täällä (“here”).",
       "acceptedAnswers": ["Ne kirjat ovat täällä."],
       "explanation": "Ne comes directly before the plural noun kirjat.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified books are here.",
+        "translation": "The books are here.",
         "pattern": "demonstrative modifier + plural noun + linking verb + location",
         "parts": [
           {

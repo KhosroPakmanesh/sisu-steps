@@ -1,6 +1,6 @@
 {
   "id": "nds-negative-transformation",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Demonstrative affirmative-to-negative transformation"],
   "prerequisiteSkills": ["Plural negative demonstrative statements"],
@@ -117,7 +117,7 @@
   "examples": [
     {
       "finnish": "Se talo ei ole täällä.",
-      "english": "The previously identified house is not here.",
+      "english": "The house is not here.",
       "steps": [
         "Se talo: the complete singular subject is supplied.",
         "ei: third-person singular form.",
@@ -200,18 +200,18 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Build “The previously identified cars are not at home.” Start from “Ne autot ovat kotona.” (“The previously identified cars are at home.”). Keep ne and autot unchanged.",
+      "prompt": "Optional practice: Build “The cars are not at home.” Start from “Ne autot ovat kotona.” (“The cars are at home.”). Keep ne and autot unchanged.",
       "acceptedAnswers": ["Ne autot eivät ole kotona."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified cars are not at home.",
+        "translation": "The cars are not at home.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Ne autot",
-            "meaning": "the previously identified cars",
+            "meaning": "the cars",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + auto",
             "formation": "the complete plural subject is supplied"

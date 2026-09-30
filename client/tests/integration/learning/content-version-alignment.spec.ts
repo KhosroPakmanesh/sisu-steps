@@ -60,6 +60,39 @@ describe('content-pack version alignment', () => {
     expect(aligned.unresolvedMistakeIds).toEqual(['topic-two-exercise-1']);
     expect(aligned.learnerNotes.map((note) => note.text)).toEqual(['Keep this topic note.']);
   });
+
+  it('clears the four revised demonstrative packs while keeping the unchanged pack and notes', () => {
+    const changedIds = [
+      'singular-demonstrative-pronouns',
+      'plural-demonstrative-pronouns',
+      'negative-demonstrative-statements',
+      'demonstrative-questions',
+    ];
+    const unchangedId = 'inessive-demonstrative-forms';
+    const packs = [
+      ...changedIds.map((id) => renamedPack(id, '1.1.0')),
+      renamedPack(unchangedId, '1.0.0'),
+    ];
+    const state = createEmptyLearnerState(
+      Object.fromEntries(packs.map((pack) => [pack.id, '1.0.0'])),
+    );
+    state.attempts = packs.map((pack) =>
+      completedAttempt(`${pack.id}-attempt`, pack.id, pack.tests[0].id),
+    );
+    state.learnerNotes = packs.map((pack) => ({
+      topicId: pack.id,
+      text: `${pack.id} note`,
+      updatedAt: '2026-09-30T00:00:00.000Z',
+    }));
+
+    const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
+
+    expect(aligned.attempts.map((attempt) => attempt.id)).toEqual([`${unchangedId}-attempt`]);
+    expect(aligned.learnerNotes).toHaveLength(5);
+    expect(aligned.contentPackVersions).toEqual(
+      Object.fromEntries(packs.map((pack) => [pack.id, pack.version])),
+    );
+  });
 });
 
 function renamedPack(id: string, version: string): TopicPack {

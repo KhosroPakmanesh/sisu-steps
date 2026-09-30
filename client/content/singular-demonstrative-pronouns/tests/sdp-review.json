@@ -323,12 +323,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Se laukku on uusi.” into English.",
-      "acceptedAnswers": ["The previously identified bag is new.", "That bag is new."],
+      "acceptedAnswers": ["The bag is new.", "That bag is new."],
       "explanation": "Se comes before the singular noun laukku; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["laukku", "uusi"],
       "sentenceExplanation": {
-        "translation": "The previously identified bag is new.",
+        "translation": "The bag is new.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {
@@ -846,13 +846,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The previously identified key is new.” Use avain (“key”) and uusi (“new”).",
+      "prompt": "Build “The key is new.” The key was mentioned earlier. Use avain (“key”) and uusi (“new”).",
       "acceptedAnswers": ["Se avain on uusi."],
       "explanation": "Se comes before the singular noun avain; both remain in the basic nominative form.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified key is new.",
+        "translation": "The key is new.",
         "pattern": "demonstrative modifier + singular noun being identified + linking verb + description",
         "parts": [
           {

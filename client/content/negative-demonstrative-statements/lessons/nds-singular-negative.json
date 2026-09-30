@@ -1,6 +1,6 @@
 {
   "id": "nds-singular-negative",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Singular negative demonstrative statements"],
   "prerequisiteSkills": [],
@@ -86,7 +86,7 @@
   "examples": [
     {
       "finnish": "Se kirja ei ole täällä.",
-      "english": "The previously identified book is not here.",
+      "english": "The book is not here.",
       "steps": [
         "Se kirja: the complete singular subject is supplied.",
         "ei: third-person singular form.",
@@ -170,20 +170,17 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Optional practice: Translate “Se kirja ei ole kotona.” into English.",
-      "acceptedAnswers": [
-        "The previously identified book is not at home.",
-        "That book is not at home."
-      ],
+      "acceptedAnswers": ["The book is not at home.", "That book is not at home."],
       "explanation": "Se kirja is singular and therefore takes ei ole.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": ["kirja", "kotona"],
       "sentenceExplanation": {
-        "translation": "The previously identified book is not at home.",
+        "translation": "The book is not at home.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Se kirja",
-            "meaning": "the previously identified book",
+            "meaning": "the book",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + kirja",
             "formation": "the complete singular subject is supplied"

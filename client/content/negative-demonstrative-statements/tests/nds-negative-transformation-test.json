@@ -10,18 +10,18 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “The previously identified book is not here.” in Finnish. Start from “Se kirja on täällä.” (“The previously identified book is here.”). Keep se and kirja unchanged.",
+      "prompt": "Write “The book is not here.” in Finnish. Start from “Se kirja on täällä.” (“The book is here.”). Keep se and kirja unchanged.",
       "acceptedAnswers": ["Se kirja ei ole täällä."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified book is not here.",
+        "translation": "The book is not here.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Se kirja",
-            "meaning": "the previously identified book",
+            "meaning": "the book",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + kirja",
             "formation": "the complete singular subject is supplied"
@@ -169,20 +169,17 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Ne autot eivät ole täällä.” into English.",
-      "acceptedAnswers": [
-        "The previously identified cars are not here.",
-        "Those cars are not here."
-      ],
+      "acceptedAnswers": ["The cars are not here.", "Those cars are not here."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "täällä"],
       "sentenceExplanation": {
-        "translation": "The previously identified cars are not here.",
+        "translation": "The cars are not here.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Ne autot",
-            "meaning": "the previously identified cars",
+            "meaning": "the cars",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + auto",
             "formation": "the complete plural subject is supplied"
@@ -331,18 +328,18 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The previously identified house is not here.” Start from “Se talo on täällä.” (“The previously identified house is here.”). Keep se and talo unchanged.",
+      "prompt": "Choose the sentence that means “The house is not here.” Start from “Se talo on täällä.” (“The house is here.”). Keep se and talo unchanged.",
       "acceptedAnswers": ["Se talo ei ole täällä."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified house is not here.",
+        "translation": "The house is not here.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Se talo",
-            "meaning": "the previously identified house",
+            "meaning": "the house",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + talo",
             "formation": "the complete singular subject is supplied"
@@ -520,18 +517,18 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Write “The previously identified books are not at home.” in Finnish. Start from “Ne kirjat ovat kotona.” (“The previously identified books are at home.”). Keep ne and kirjat unchanged.",
+      "prompt": "Write “The books are not at home.” in Finnish. Start from “Ne kirjat ovat kotona.” (“The books are at home.”). Keep ne and kirjat unchanged.",
       "acceptedAnswers": ["Ne kirjat eivät ole kotona."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified books are not at home.",
+        "translation": "The books are not at home.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Ne kirjat",
-            "meaning": "the previously identified books",
+            "meaning": "the books",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + kirja",
             "formation": "the complete plural subject is supplied"
@@ -686,20 +683,17 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Se auto ei ole kotona.” into English.",
-      "acceptedAnswers": [
-        "The previously identified car is not at home.",
-        "That car is not at home."
-      ],
+      "acceptedAnswers": ["The car is not at home.", "That car is not at home."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "kotona"],
       "sentenceExplanation": {
-        "translation": "The previously identified car is not at home.",
+        "translation": "The car is not at home.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Se auto",
-            "meaning": "the previously identified car",
+            "meaning": "the car",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + auto",
             "formation": "the complete singular subject is supplied"
@@ -840,18 +834,18 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The previously identified cars are not at home.” Start from “Ne autot ovat kotona.” (“The previously identified cars are at home.”). Keep ne and autot unchanged.",
+      "prompt": "Build “The cars are not at home.” Start from “Ne autot ovat kotona.” (“The cars are at home.”). Keep ne and autot unchanged.",
       "acceptedAnswers": ["Ne autot eivät ole kotona."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified cars are not at home.",
+        "translation": "The cars are not at home.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Ne autot",
-            "meaning": "the previously identified cars",
+            "meaning": "the cars",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + auto",
             "formation": "the complete plural subject is supplied"
@@ -1030,18 +1024,18 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Write “The previously identified book is not here.” in Finnish. Start from “Se kirja on täällä.” (“The previously identified book is here.”). Keep se and kirja unchanged.",
+      "prompt": "Write “The book is not here.” in Finnish. Start from “Se kirja on täällä.” (“The book is here.”). Keep se and kirja unchanged.",
       "acceptedAnswers": ["Se kirja ei ole täällä."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified book is not here.",
+        "translation": "The book is not here.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Se kirja",
-            "meaning": "the previously identified book",
+            "meaning": "the book",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + kirja",
             "formation": "the complete singular subject is supplied"

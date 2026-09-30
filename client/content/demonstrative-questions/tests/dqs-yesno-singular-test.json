@@ -10,13 +10,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Is the previously identified key here?” in Finnish. Use se avain (“the previously identified key”) and täällä (“here”).",
+      "prompt": "Write “Is the key here?” in Finnish. Use se avain (“the key”) and täällä (“here”).",
       "acceptedAnswers": ["Onko se avain täällä?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified key here?",
+        "translation": "Is the key here?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -28,7 +28,7 @@
           },
           {
             "finnish": "se avain",
-            "meaning": "the previously identified key",
+            "meaning": "the key",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + avain",
             "formation": "the complete subject is supplied"
@@ -50,7 +50,7 @@
         {
           "answers": ["Ovatko se avain täällä?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e002"
@@ -60,7 +60,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “Is this book at home?” in Finnish. Use tämä kirja (“this book”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tämä kirja kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -98,7 +98,7 @@
         {
           "answers": ["Ovatko tämä kirja kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e001"
@@ -108,7 +108,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Onko tuo kirja kotona?” into English.",
       "acceptedAnswers": ["Is that book at home?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["kirja", "kotona"],
       "sentenceExplanation": {
@@ -148,12 +148,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Onko se kirja kotona?” into English.",
-      "acceptedAnswers": ["Is the previously identified book at home?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "acceptedAnswers": ["Is the book at home?", "Is that book at home?"],
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["kirja", "kotona"],
       "sentenceExplanation": {
-        "translation": "Is the previously identified book at home?",
+        "translation": "Is the book at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -165,7 +165,7 @@
           },
           {
             "finnish": "se kirja",
-            "meaning": "the previously identified book",
+            "meaning": "the book",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + kirja",
             "formation": "the complete subject is supplied"
@@ -183,6 +183,13 @@
       "id": "dqs-yesno-singular-test-e004",
       "targetSkill": "Singular affirmative demonstrative questions",
       "misconceptionCategory": "Singular affirmative demonstrative questions: form not yet secure",
+      "answerDiagnostics": [
+        {
+          "answers": ["It that book at home?", "It the book at home?"],
+          "category": "Singular affirmative demonstrative questions: English question word order",
+          "explanation": "Questions such as this start with “Is.” “It” names a thing and cannot replace “Is.”"
+        }
+      ],
       "parallelExerciseId": "dqs-yesno-singular-test-e003"
     },
     {
@@ -190,7 +197,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Build “Is this car at home?” Use tämä auto (“this car”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tämä auto kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -229,7 +236,7 @@
         {
           "answers": ["Ovatko tämä auto kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e006"
@@ -239,7 +246,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Build “Is that car at home?” Use tuo auto (“that car”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tuo auto kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -278,7 +285,7 @@
         {
           "answers": ["Ovatko tuo auto kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e005"
@@ -286,13 +293,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “Is the previously identified car at home?” Use se auto (“the previously identified car”) and kotona (“at home”).",
+      "prompt": "Choose the sentence that means “Is the car at home?” Use se auto (“the car”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko se auto kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified car at home?",
+        "translation": "Is the car at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -304,7 +311,7 @@
           },
           {
             "finnish": "se auto",
-            "meaning": "the previously identified car",
+            "meaning": "the car",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + auto",
             "formation": "the complete subject is supplied"
@@ -338,7 +345,7 @@
         {
           "answers": ["Ovatko se auto kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e008"
@@ -348,7 +355,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Choose the sentence that means “Is this bag at home?” Use tämä laukku (“this bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tämä laukku kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -398,7 +405,7 @@
         {
           "answers": ["Ovatko tämä laukku kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e007"
@@ -408,7 +415,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “Is that bag at home?” in Finnish. Use tuo laukku (“that bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tuo laukku kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -446,7 +453,7 @@
         {
           "answers": ["Ovatko tuo laukku kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e010"
@@ -454,13 +461,13 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Write “Is the previously identified bag at home?” in Finnish. Use se laukku (“the previously identified bag”) and kotona (“at home”).",
+      "prompt": "Write “Is the bag at home?” in Finnish. Use se laukku (“the bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko se laukku kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified bag at home?",
+        "translation": "Is the bag at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -472,7 +479,7 @@
           },
           {
             "finnish": "se laukku",
-            "meaning": "the previously identified bag",
+            "meaning": "the bag",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + laukku",
             "formation": "the complete subject is supplied"
@@ -494,7 +501,7 @@
         {
           "answers": ["Ovatko se laukku kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e009"
@@ -504,7 +511,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “Is this bag at home?” in Finnish. Use tämä laukku (“this bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tämä laukku kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -542,7 +549,7 @@
         {
           "answers": ["Ovatko tämä laukku kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e012"
@@ -552,7 +559,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Write “Is that bag at home?” in Finnish. Use tuo laukku (“that bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tuo laukku kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -590,7 +597,7 @@
         {
           "answers": ["Ovatko tuo laukku kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e011"
@@ -599,12 +606,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Onko se laukku kotona?” into English.",
-      "acceptedAnswers": ["Is the previously identified bag at home?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "acceptedAnswers": ["Is the bag at home?", "Is that bag at home?"],
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["laukku", "kotona"],
       "sentenceExplanation": {
-        "translation": "Is the previously identified bag at home?",
+        "translation": "Is the bag at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -616,7 +623,7 @@
           },
           {
             "finnish": "se laukku",
-            "meaning": "the previously identified bag",
+            "meaning": "the bag",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + laukku",
             "formation": "the complete subject is supplied"
@@ -641,7 +648,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Onko tämä avain kotona?” into English.",
       "acceptedAnswers": ["Is this key at home?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["avain", "kotona"],
       "sentenceExplanation": {
@@ -682,7 +689,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Build “Is that key at home?” Use tuo avain (“that key”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tuo avain kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -721,7 +728,7 @@
         {
           "answers": ["Ovatko tuo avain kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e016"
@@ -729,13 +736,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “Is the previously identified key at home?” Use se avain (“the previously identified key”) and kotona (“at home”).",
+      "prompt": "Build “Is the key at home?” Use se avain (“the key”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko se avain kotona?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified key at home?",
+        "translation": "Is the key at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -747,7 +754,7 @@
           },
           {
             "finnish": "se avain",
-            "meaning": "the previously identified key",
+            "meaning": "the key",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + avain",
             "formation": "the complete subject is supplied"
@@ -770,7 +777,7 @@
         {
           "answers": ["Ovatko se avain kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e015"
@@ -780,7 +787,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Choose the sentence that means “Is this book here?” Use tämä kirja (“this book”) and täällä (“here”).",
       "acceptedAnswers": ["Onko tämä kirja täällä?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -830,7 +837,7 @@
         {
           "answers": ["Ovatko tämä kirja täällä?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e018"
@@ -840,7 +847,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Choose the sentence that means “Is that book here?” Use tuo kirja (“that book”) and täällä (“here”).",
       "acceptedAnswers": ["Onko tuo kirja täällä?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -890,7 +897,7 @@
         {
           "answers": ["Ovatko tuo kirja täällä?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e017"
@@ -898,13 +905,13 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Write “Is the previously identified book here?” in Finnish. Use se kirja (“the previously identified book”) and täällä (“here”).",
+      "prompt": "Write “Is the book here?” in Finnish. Use se kirja (“the book”) and täällä (“here”).",
       "acceptedAnswers": ["Onko se kirja täällä?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Is the previously identified book here?",
+        "translation": "Is the book here?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -916,7 +923,7 @@
           },
           {
             "finnish": "se kirja",
-            "meaning": "the previously identified book",
+            "meaning": "the book",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + kirja",
             "formation": "the complete subject is supplied"
@@ -938,7 +945,7 @@
         {
           "answers": ["Ovatko se kirja täällä?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e020"
@@ -948,7 +955,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Write “Is this car here?” in Finnish. Use tämä auto (“this car”) and täällä (“here”).",
       "acceptedAnswers": ["Onko tämä auto täällä?"],
-      "explanation": "Onko is the singular olla form with the question suffix -ko.",
+      "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -986,7 +993,7 @@
         {
           "answers": ["Ovatko tämä auto täällä?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
-          "explanation": "Onko is the singular olla form with the question suffix -ko."
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }
       ],
       "parallelExerciseId": "dqs-yesno-singular-test-e019"

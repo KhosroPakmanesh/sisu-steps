@@ -1,6 +1,6 @@
 {
   "id": "dqs-negative-singular",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Singular negative demonstrative questions"],
   "prerequisiteSkills": ["Plural affirmative demonstrative questions"],
@@ -117,7 +117,7 @@
     },
     {
       "finnish": "Eikö se avain ole täällä?",
-      "english": "Isn't the previously identified key here?",
+      "english": "Isn't the key here?",
       "steps": [
         "Eikö: ei + -kö.",
         "se avain: the complete subject is supplied.",
@@ -135,13 +135,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Optional practice: Write “Isn't the previously identified book here?” in Finnish. Use se kirja (“the previously identified book”) and täällä (“here”).",
+      "prompt": "Optional practice: Write “Isn't the book here?” in Finnish. Use se kirja (“the book”) and täällä (“here”).",
       "acceptedAnswers": ["Eikö se kirja ole täällä?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Isn't the previously identified book here?",
+        "translation": "Isn't the book here?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -153,7 +153,7 @@
           },
           {
             "finnish": "se kirja",
-            "meaning": "the previously identified book",
+            "meaning": "the book",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + kirja",
             "formation": "the complete subject is supplied"
@@ -182,7 +182,7 @@
       "instruction": "Write the complete English meaning.",
       "prompt": "Optional practice: Translate “Eikö tämä auto ole täällä?” into English.",
       "acceptedAnswers": ["Isn't this car here?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "täällä"],
       "sentenceExplanation": {
@@ -227,7 +227,7 @@
       "instruction": "Put the words in the correct order.",
       "prompt": "Optional practice: Build “Isn't that car here?” Use tuo auto (“that car”) and täällä (“here”).",
       "acceptedAnswers": ["Eikö tuo auto ole täällä?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -271,13 +271,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Optional practice: Choose the sentence that means “Isn't the previously identified car here?” Use se auto (“the previously identified car”) and täällä (“here”).",
+      "prompt": "Optional practice: Choose the sentence that means “Isn't the car here?” Use se auto (“the car”) and täällä (“here”).",
       "acceptedAnswers": ["Eikö se auto ole täällä?"],
-      "explanation": "Eikö carries singular negative agreement and -ko/-kö; ole follows later in the question.",
+      "explanation": "Eikö is the singular negative question form, and ole follows the subject. In English, start with “Isn’t” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Isn't the previously identified car here?",
+        "translation": "Isn't the car here?",
         "pattern": "negative question verb + demonstrative noun phrase subject + main verb after the negative question verb + location",
         "parts": [
           {
@@ -289,7 +289,7 @@
           },
           {
             "finnish": "se auto",
-            "meaning": "the previously identified car",
+            "meaning": "the car",
             "role": "demonstrative noun phrase subject",
             "baseForm": "se + auto",
             "formation": "the complete subject is supplied"

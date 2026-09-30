@@ -1,6 +1,6 @@
 {
   "id": "dqs-yesno-plural",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Plural affirmative demonstrative questions"],
   "prerequisiteSkills": ["Singular affirmative demonstrative questions"],
@@ -110,7 +110,7 @@
     },
     {
       "finnish": "Ovatko ne laukut täällä?",
-      "english": "Are the previously identified bags here?",
+      "english": "Are the bags here?",
       "steps": [
         "Ovatko: ovat + -ko.",
         "ne laukut: the complete subject is supplied.",
@@ -127,13 +127,13 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Build “Are the previously identified keys at home?” Use ne avaimet (“the previously identified keys”) and kotona (“at home”).",
+      "prompt": "Optional practice: Build “Are the keys at home?” Use ne avaimet (“the keys”) and kotona (“at home”).",
       "acceptedAnswers": ["Ovatko ne avaimet kotona?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Are the previously identified keys at home?",
+        "translation": "Are the keys at home?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -145,7 +145,7 @@
           },
           {
             "finnish": "ne avaimet",
-            "meaning": "the previously identified keys",
+            "meaning": "the keys",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + avain",
             "formation": "the complete subject is supplied"
@@ -168,7 +168,7 @@
       "instruction": "Choose the best answer.",
       "prompt": "Optional practice: Choose the sentence that means “Are these books here?” Use nämä kirjat (“these books”) and täällä (“here”).",
       "acceptedAnswers": ["Ovatko nämä kirjat täällä?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -218,7 +218,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Optional practice: Write “Are those books here?” in Finnish. Use nuo kirjat (“those books”) and täällä (“here”).",
       "acceptedAnswers": ["Ovatko nuo kirjat täällä?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -254,13 +254,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Optional practice: Write “Are the previously identified books here?” in Finnish. Use ne kirjat (“the previously identified books”) and täällä (“here”).",
+      "prompt": "Optional practice: Write “Are the books here?” in Finnish. Use ne kirjat (“the books”) and täällä (“here”).",
       "acceptedAnswers": ["Ovatko ne kirjat täällä?"],
-      "explanation": "Ovatko is the plural olla form with the question suffix -ko.",
+      "explanation": "Ovatko adds -ko to ovat, the olla form for several things. In English, begin the question with “Are” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "Are the previously identified books here?",
+        "translation": "Are the books here?",
         "pattern": "question verb + demonstrative noun phrase subject + location",
         "parts": [
           {
@@ -272,7 +272,7 @@
           },
           {
             "finnish": "ne kirjat",
-            "meaning": "the previously identified books",
+            "meaning": "the books",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + kirja",
             "formation": "the complete subject is supplied"

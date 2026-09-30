@@ -50,6 +50,8 @@
 
 ### Changed
 
+- Expanded the content-authoring guide and Finnish content creator skill to require natural English translation alternatives, visible demonstrative-reference cues, and accurate, nonduplicated learner feedback.
+
 - Moved the Study answer-reveal consequence beside the correction tools on wide workbooks while keeping it with the answer actions on narrower screens.
 
 - Word-order questions now let keyboard users move among available words with arrow keys. Enter or Space adds a word and moves focus to the next one; after the final word, focus moves to **Check answer** so Enter can check and then continue. Optional lesson practice now also matches Study's Enter behavior for selected choices, typed answers, checking, and continuing.
@@ -195,6 +197,8 @@
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 
 ### Fixed
+
+- Replaced “previously identified” in four Demonstratives packs with natural English model answers, glosses, and prompts while keeping the familiar-reference cue where learners choose `se` or `ne`. Twelve translations now accept natural `the` and `that`/`those` alternatives; the other twelve affected model answers now display a natural first answer. The observed “It that book at home?” response now has a specific `It` versus `Is` correction. Study and optional practice no longer repeat a fallback explanation as “What happened,” and English translation corrections have an English language tag. The four affected packs advance from `1.0.0` to `1.1.0`: on installation, their prior attempts, unfinished sessions, mistakes, correction records, and lesson completions are intentionally cleared. Other packs and still-owned notes remain intact.
 
 - Accepted both natural written forms of all 18 typed `olla` short answers: negative replies with or without `Ei,` and affirmative replies with or without `Kyllä,`. Added a content guard and authoring guidance for these alternatives. Existing progress is preserved; previously recorded attempts keep their original scores.
 

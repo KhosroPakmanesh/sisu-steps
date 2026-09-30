@@ -1,6 +1,6 @@
 {
   "id": "nds-plural-negative",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Plural negative demonstrative statements"],
   "prerequisiteSkills": ["Singular negative demonstrative statements"],
@@ -87,7 +87,7 @@
   "examples": [
     {
       "finnish": "Ne autot eivät ole täällä.",
-      "english": "The previously identified cars are not here.",
+      "english": "The cars are not here.",
       "steps": [
         "Ne autot: the complete plural subject is supplied.",
         "eivät: third-person plural form.",
@@ -182,18 +182,18 @@
     {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
-      "prompt": "Optional practice: Write “The previously identified cars are not at home.” in Finnish. Use ne autot (“the previously identified cars”) and kotona (“at home”).",
+      "prompt": "Optional practice: Write “The cars are not at home.” in Finnish. Use ne autot (“the cars”) and kotona (“at home”).",
       "acceptedAnswers": ["Ne autot eivät ole kotona."],
       "explanation": "Ne autot is plural and therefore takes eivät ole.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The previously identified cars are not at home.",
+        "translation": "The cars are not at home.",
         "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
             "finnish": "Ne autot",
-            "meaning": "the previously identified cars",
+            "meaning": "the cars",
             "role": "demonstrative noun phrase subject",
             "baseForm": "ne + auto",
             "formation": "the complete plural subject is supplied"

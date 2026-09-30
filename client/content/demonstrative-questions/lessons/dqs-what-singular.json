@@ -1,6 +1,6 @@
 {
   "id": "dqs-what-singular",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "stage": "focused",
   "targetSkills": ["Singular demonstrative identity questions"],
   "prerequisiteSkills": [],
@@ -104,7 +104,7 @@
     },
     {
       "finnish": "Mikä se esine on?",
-      "english": "What is the previously identified object?",
+      "english": "What is the object?",
       "steps": [
         "Mikä: basic singular form.",
         "se esine: the complete phrase is supplied.",
@@ -121,13 +121,13 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Optional practice: Choose the sentence that means “What is the previously identified building?” Use se (“that or it, already identifiable”), rakennus (“building”), and on (“is”).",
+      "prompt": "Optional practice: Choose the sentence that means “What is the building?” Use se (“that or it, already identifiable”), rakennus (“building”), and on (“is”).",
       "acceptedAnswers": ["Mikä se rakennus on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "What is the previously identified building?",
+        "translation": "What is the building?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -139,7 +139,7 @@
           },
           {
             "finnish": "se rakennus",
-            "meaning": "the previously identified building",
+            "meaning": "the building",
             "role": "demonstrative noun phrase",
             "baseForm": "se + rakennus",
             "formation": "the complete phrase is supplied"
@@ -173,7 +173,7 @@
       "instruction": "Fill in the blank.",
       "prompt": "Optional practice: Write “What is this word?” in Finnish. Use tämä (“this”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä tämä sana on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -211,7 +211,7 @@
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Optional practice: Write “What is that word?” in Finnish. Use tuo (“that over there”), sana (“word”), and on (“is”).",
       "acceptedAnswers": ["Mikä tuo sana on?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
@@ -248,12 +248,12 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Optional practice: Translate “Mikä se sana on?” into English.",
-      "acceptedAnswers": ["What is the previously identified word?"],
-      "explanation": "The singular identity frame begins with Mikä and ends with on.",
+      "acceptedAnswers": ["What is the word?", "What is that word?"],
+      "explanation": "Mikä ... on asks what one thing is. In English, begin with “What is” before the subject.",
       "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
       "vocabulary": ["sana"],
       "sentenceExplanation": {
-        "translation": "What is the previously identified word?",
+        "translation": "What is the word?",
         "pattern": "question word + demonstrative noun phrase + linking verb at the end of the question",
         "parts": [
           {
@@ -265,7 +265,7 @@
           },
           {
             "finnish": "se sana",
-            "meaning": "the previously identified word",
+            "meaning": "the word",
             "role": "demonstrative noun phrase",
             "baseForm": "se + sana",
             "formation": "the complete phrase is supplied"
