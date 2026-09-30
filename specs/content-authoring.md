@@ -55,6 +55,16 @@ Every vocabulary object must declare `type` as either `word` or `fixed-expressio
 
 An exercise's `vocabulary` array lists only the individual words or genuine fixed expressions the learner must retrieve lexically. Omit visibly translated Finnish context and Finnish word-order tokens when the answer tests only grammar rather than recall of that context. Splitting vocabulary metadata never requires splitting a natural phrase inside a prompt, answer, explanation, or word-order token.
 
+Derive each question's expected word list independently before setting its `vocabulary` array:
+
+1. Inventory the learner-visible Finnish in the prompt, choices, supplied tokens, and expected answer. Use the sentence explanation's parts to identify base words behind inflected forms, and split transparent combinations into lexical units.
+2. Classify each unit as assessed grammar, context visibly supplied with its meaning or complete Finnish form, or supporting vocabulary the learner must recall. Include every recall item under its canonical lesson form. In Finnish-to-English translation, supporting content words in the Finnish sentence require entries even when the question does not print their English meaning.
+3. Compare the expected list with the authored array in both directions: flag missing recall words and entries that the question never tests. Confirm every listed item is introduced by an available lesson and appears under **New words** or **Used again** in a lesson directly referenced by the owning test. A prerequisite lesson alone does not make the word visible in the current-question reference.
+
+Review inflected and compound forms by hand because exact text matching cannot establish their lexical identity or whether a word is genuinely supplied.
+
+Declare only assessed grammar base forms in each pack's `pack.json` `grammarBaseForms` array (use `[]` when there are none). The direct-source validator aligns each sentence explanation's Finnish words with its base forms and compares the resulting recall candidates with `vocabulary`. It checks the complete Finnish source for Finnish-to-English sentences, the complete Finnish answer for Finnish-production and word-order questions, and optional lesson practice. Do not add a supporting word to `grammarBaseForms` to silence a missing-word error; correct the question inventory or visibly supply the word instead. Non-sentence drills and semantic judgments about supplied forms still require the independent manual inventory above.
+
 Do not remove useful vocabulary merely to satisfy the ceiling. First reclassify previously taught vocabulary, visibly supply non-assessed context, or redistribute genuinely new vocabulary. Replace a word only when it is incidental, has little retrieval value, and its removal does not reduce naturalness, semantic range, or question variety.
 
 Repeated grammatical decisions are purposeful practice, but exercises must still vary meaningfully through context, grammatical person, polarity, response format, vocabulary combination, or production demand. Surface-only paraphrases are repetitive filler rather than meaningful variation.

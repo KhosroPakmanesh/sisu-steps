@@ -176,3 +176,11 @@ Use one shared contextual Enter policy for scored Study and optional lesson prac
 ## 2026-09-29 question visibility after advancing
 
 After Study advances or optional lesson practice starts or advances, focus the first answer control and scroll the new question card into view. Account for the sticky desktop header and compact mobile layout, use immediate scrolling, and verify that the prompt remains visible after keyboard and pointer progression across supported widths.
+
+## 2026-09-29 current-question vocabulary coverage
+
+Correct the plural-reference lesson's omitted reuse of `avain`, which is already introduced by its prerequisite and declared by a Finnish-to-English question. Keep lesson and pack versions because the lesson target, answers, grading, and stored progress semantics are unchanged. Extend runtime and direct-source validation so every scored exercise word must also appear under new or reused vocabulary in a lesson directly referenced by its test. Record the per-question lexical inventory method in the authoring guide and the pack assessment, then run the full client check.
+
+## 2026-09-29 independent question word inventory
+
+Implement `REQ-G001-133` as a direct-source authoring gate over scored and optional-practice sentence questions. Store each pack's grammar-only base forms in `pack.json`; align each explanation part's Finnish words with its base forms, compare non-grammar words against the question's vocabulary and visibly supplied forms, and verify that Finnish-to-English explanations cover the full source. Audit all installed packs, add a mutation test that removes `avain` from the sixth plural-reference question, update authoring guidance and the content-creator skill, and run the client quality gate. Keep learner scoring and persisted content versions unchanged.

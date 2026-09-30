@@ -105,6 +105,11 @@ function validateTestExercises(
       lesson.introducedVocabulary.map((item) => item.finnish),
     ),
   );
+  const displayedVocabulary = new Set(
+    referencedLessons.flatMap((lesson) =>
+      [...lesson.introducedVocabulary, ...lesson.reusedVocabulary].map((item) => item.finnish),
+    ),
+  );
 
   for (const candidate of test.exercises) {
     const exercise = validateExercise(candidate, seenIds);
@@ -127,6 +132,11 @@ function validateTestExercises(
     if (exercise.vocabulary.some((word) => !vocabulary.has(word))) {
       throw new Error(
         `Exercise ${exercise.id} uses vocabulary not introduced for test ${test.id}.`,
+      );
+    }
+    if (exercise.vocabulary.some((word) => !displayedVocabulary.has(word))) {
+      throw new Error(
+        `Exercise ${exercise.id} uses vocabulary not listed by a lesson for test ${test.id}.`,
       );
     }
   }

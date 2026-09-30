@@ -5,11 +5,14 @@ import {
 } from '@/features/learning/shared/content/catalog.models';
 import { Exercise } from '@/features/learning/shared/content/exercise.models';
 import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
+import { vocabularyForExercise } from '@/features/learning/shared/content/content.queries';
 import { validateContentCatalog } from '@/features/learning/shared/content/validation/content-catalog.validator';
 import { validateContentManifest } from '@/features/learning/shared/content/validation/content-manifest.validator';
 import { validateLessons } from '@/features/learning/shared/content/validation/lesson.validator';
 import { validatePackSummaryCollection } from '@/features/learning/shared/content/validation/pack-summary-collection.validator';
 import { validateTopicPack } from '@/features/learning/shared/content/validation/topic-pack.validator';
+import { loadContentSource } from '../../../../../../../tools/content-source-loader.mjs';
+import { validatePackContent } from '../../../../../../../tools/content-validation/shared/pack-content.validator.mjs';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 
 const scoredExercises = (count = 200): Exercise[] =>
@@ -368,6 +371,61 @@ describe('content-pack validation', () => {
     pack.tests[0].exercises[0].vocabulary = ['unknown'];
     expect(() => validateTopicPack(pack)).toThrowError(
       'Exercise exercise-1 uses vocabulary not introduced for test test.',
+    );
+  });
+  it('rejects a declared word missing from the referenced lesson even when a prerequisite introduced it', async () => {
+    const source = await loadContentSource('content');
+    const pack = structuredClone(
+      source.packs.find((candidate) => candidate['id'] === 'plural-demonstrative-pronouns'),
+    ) as unknown as TopicPack;
+    const lesson = pack.lessons.find((candidate) => candidate.id === 'pdp-reference-choice')!;
+    const question = pack.tests
+      .flatMap((test) => test.exercises)
+      .find((exercise) => exercise.id === 'pdp-reference-choice-test-e006')!;
+    expect(vocabularyForExercise(pack, question)).toContainEqual({
+      finnish: 'avain',
+      english: 'key',
+      type: 'word',
+    });
+    lesson.reusedVocabulary = lesson.reusedVocabulary.filter((item) => item.finnish !== 'avain');
+
+    expect(() => validateTopicPack(pack)).toThrowError(
+      'Exercise pdp-reference-choice-test-e006 uses vocabulary not listed by a lesson for test pdp-reference-choice-test.',
+    );
+    const result = await validatePackContent(pack);
+    expect(result.errors).toContain(
+      'pdp-reference-choice-test-e006: vocabulary avain is not listed by a lesson for pdp-reference-choice-test',
+    );
+  });
+  it('rejects a translation word omitted from vocabulary even when its lesson lists it', async () => {
+    const source = await loadContentSource('content');
+    const pack = structuredClone(
+      source.packs.find((candidate) => candidate['id'] === 'plural-demonstrative-pronouns'),
+    ) as unknown as TopicPack;
+    const question = pack.tests
+      .flatMap((test) => test.exercises)
+      .find((exercise) => exercise.id === 'pdp-reference-choice-test-e006')!;
+    question.vocabulary = [];
+
+    expect(() => validateTopicPack(pack)).not.toThrow();
+    const result = await validatePackContent(pack);
+    expect(result.errors).toContain(
+      'pdp-reference-choice-test-e006: recall word avain (avaimet) is missing from vocabulary',
+    );
+  });
+  it('rejects a missing sentence part that would conceal a recall word', async () => {
+    const source = await loadContentSource('content');
+    const pack = structuredClone(
+      source.packs.find((candidate) => candidate['id'] === 'plural-demonstrative-pronouns'),
+    ) as unknown as TopicPack;
+    const question = pack.tests
+      .flatMap((test) => test.exercises)
+      .find((exercise) => exercise.id === 'pdp-reference-choice-test-e006')!;
+    question.sentenceExplanation!.parts.pop();
+
+    const result = await validatePackContent(pack);
+    expect(result.errors).toContain(
+      'pdp-reference-choice-test-e006: Finnish translation source is not fully covered by sentence parts',
     );
   });
   it('rejects incomplete feedback for a multiple-choice option', () => {

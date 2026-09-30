@@ -28,7 +28,11 @@ describe('PackContentRepository', () => {
 
   beforeAll(async () => {
     const source = await loadContentSource('content');
-    installedPacks = source.packs as unknown as TopicPack[];
+    installedPacks = source.packs.map((pack) => {
+      const runtimePack = { ...pack };
+      delete runtimePack['grammarBaseForms'];
+      return runtimePack;
+    }) as unknown as TopicPack[];
   });
 
   it('loads, validates, and indexes one pack on demand', async () => {

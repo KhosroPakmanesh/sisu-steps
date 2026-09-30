@@ -11,6 +11,7 @@ const PACK_MANIFEST_KEYS = new Set([
   'summary',
   'objectives',
   'importantSkills',
+  'grammarBaseForms',
   'sources',
   'lessonIds',
   'testIds',

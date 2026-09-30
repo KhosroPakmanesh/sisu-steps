@@ -3,6 +3,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import {
   validateExerciseEditorialQuality,
+  validateExerciseVocabularyCoverage,
   validateLessonVocabularyVisibility,
   validateVocabularyItemTypes,
 } from './content-quality.mjs';
@@ -134,6 +135,7 @@ export async function validatePackContent(pack) {
   }
   errors.push(...validateVocabularyItemTypes(lessons));
   errors.push(...validateLessonVocabularyVisibility(lessons));
+  errors.push(...validateExerciseVocabularyCoverage(allExercises, pack.grammarBaseForms));
   const focusedCoveredSkills = new Set();
   const focusedReferencedLessonIds = new Set();
   let focusedTestCount = 0;
@@ -191,6 +193,13 @@ export async function validatePackContent(pack) {
         (lesson.introducedVocabulary ?? []).map((item) => item.finnish),
       ),
     );
+    const displayedWords = new Set(
+      referencedLessons.flatMap((lesson) =>
+        [...(lesson.introducedVocabulary ?? []), ...(lesson.reusedVocabulary ?? [])].map(
+          (item) => item.finnish,
+        ),
+      ),
+    );
     for (const exercise of test.exercises ?? []) {
       if (!exercise.targetSkill?.trim()) errors.push(`${exercise.id}: missing target skill`);
       if (!exercise.misconceptionCategory?.trim())
@@ -217,11 +226,16 @@ export async function validatePackContent(pack) {
         errors.push(`${exercise.id}: focused target is not required by the exercise`);
       if (!hasTextArray(exercise.vocabulary))
         errors.push(`${exercise.id}: invalid vocabulary declaration`);
-      for (const word of exercise.vocabulary ?? [])
+      for (const word of exercise.vocabulary ?? []) {
         if (!availableWords.has(word))
           errors.push(
             `${exercise.id}: vocabulary ${word} is not introduced by a referenced lesson`,
           );
+        else if (!displayedWords.has(word))
+          errors.push(
+            `${exercise.id}: vocabulary ${word} is not listed by a lesson for ${test.id}`,
+          );
+      }
     }
   }
   if (focusedTestCount === 0) errors.push('pack must contain at least one focused test');

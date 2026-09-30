@@ -93,6 +93,77 @@ export function validateVocabularyItemTypes(lessons) {
   return errors;
 }
 
+export function validateExerciseVocabularyCoverage(exercises, grammarBaseForms) {
+  const errors = [];
+  if (
+    !Array.isArray(grammarBaseForms) ||
+    grammarBaseForms.some((word) => typeof word !== 'string' || !word.trim()) ||
+    new Set(grammarBaseForms.map(normalizeFinnish)).size !== grammarBaseForms.length
+  ) {
+    return ['pack must declare unique grammar base forms for vocabulary coverage'];
+  }
+  const grammar = new Set(grammarBaseForms.map(normalizeFinnish));
+  for (const exercise of exercises) {
+    const parts = exercise.sentenceExplanation?.parts;
+    if (!Array.isArray(parts)) continue;
+    const declared = new Set((exercise.vocabulary ?? []).map(normalizeFinnish));
+    const explained = parts.map((part) => part.finnish).join(' ');
+    if (exercise.type === 'translation-en') {
+      const quotedSource = exercise.prompt?.match(/Translate\s+[“"]([^”"]+)[”"]/iu);
+      const source =
+        quotedSource?.[1] ?? (exercise.prompt ?? '').replace(/^Optional practice:\s*/iu, '');
+      if (normalizeWords(source) !== normalizeWords(explained)) {
+        errors.push(
+          `${exercise.id}: Finnish translation source is not fully covered by sentence parts`,
+        );
+      }
+    } else if (
+      (exercise.type === 'translation-fi' || exercise.type === 'word-order') &&
+      normalizeWords(exercise.acceptedAnswers?.[0] ?? '') !== normalizeWords(explained)
+    ) {
+      errors.push(`${exercise.id}: Finnish answer is not fully covered by sentence parts`);
+    }
+    for (const part of parts) {
+      const baseWords = splitBaseForms(part.baseForm);
+      const surfaceWords = splitSurfaceForms(part.finnish);
+      if (baseWords.length !== surfaceWords.length) {
+        errors.push(`${exercise.id}: sentence part ${part.finnish} has unaligned base forms`);
+        continue;
+      }
+      if (declared.has(normalizeFinnish(part.baseForm))) continue;
+      for (const [index, baseWord] of baseWords.entries()) {
+        if (grammar.has(baseWord) || declared.has(baseWord)) continue;
+        const surface = surfaceWords[index];
+        const visibleFinnish = [
+          exercise.prompt ?? '',
+          ...(exercise.options ?? []),
+          ...(exercise.tokens ?? []),
+        ].some((text) => containsItem(text, surface));
+        if (exercise.type !== 'translation-en' && visibleFinnish) continue;
+        errors.push(
+          `${exercise.id}: recall word ${baseWord} (${surface}) is missing from vocabulary`,
+        );
+      }
+    }
+  }
+  return errors;
+}
+
+function splitBaseForms(value) {
+  return (value ?? '')
+    .toLocaleLowerCase('fi-FI')
+    .split(/[\s+,;/]+/u)
+    .filter(Boolean);
+}
+
+function splitSurfaceForms(value) {
+  return (value ?? '').toLocaleLowerCase('fi-FI').match(/[\p{L}\p{N}]+/gu) ?? [];
+}
+
+function normalizeWords(value) {
+  return splitSurfaceForms(value).join(' ');
+}
+
 export function validateExerciseEditorialQuality(exercises) {
   const errors = [];
   for (const exercise of exercises) {

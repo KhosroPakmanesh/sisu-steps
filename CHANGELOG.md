@@ -4,6 +4,8 @@
 
 ### Added
 
+- Added an independent sentence-question vocabulary audit to direct-source validation. Pack-owned grammar base forms let it detect recall words omitted from an exercise's `vocabulary` array, including `avaimet` in Finnish-to-English translation, and verify that translation explanations cover the full Finnish source.
+
 - Added directly accessible Privacy Policy and Terms of Service pages for the public site, with footer links, an enquiry email, and a GitHub Issues contact path; the policy explains local progress, optional manual Drive checkpoints, and the separate deletion controls.
 
 - Added optional manual Google Drive recovery checkpoints without changing IndexedDB as the live source of truth. Learners can explicitly back up, inspect, restore, replace, delete, or disconnect through hidden `appDataFolder` storage with only the `drive.appdata` permission; access tokens stay in memory, no profile is read, no close-time/background synchronization occurs, and file/Drive restores share the same current-format compatibility checks and atomic local replacement.
@@ -191,6 +193,8 @@
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 
 ### Fixed
+
+- Restored `avain — key` to the plural-reference question's lesson vocabulary so Cheat mode shows it, added content validation that rejects declared words missing from the test's linked lessons, and updated the Finnish content creator skill to require an independent word inventory for each question and follow the current pack-size and JSON-source rules.
 
 - Made the tall-tablet page-clip browser check wait for the existing layout to settle before comparing its final dimensions.
 

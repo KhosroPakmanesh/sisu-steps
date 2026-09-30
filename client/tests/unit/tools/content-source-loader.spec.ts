@@ -22,6 +22,7 @@ const manifest = (id: string, lessonIds: string[], testIds: string[]): unknown =
   summary: `${id} summary`,
   objectives: [],
   importantSkills: ['Rule'],
+  grammarBaseForms: [],
   sources: [],
   lessonIds,
   testIds,

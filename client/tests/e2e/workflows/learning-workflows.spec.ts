@@ -1037,6 +1037,20 @@ test('shares responsive modal and vocabulary-card styling with safe dismissal', 
   await expect(page.getByRole('status')).toHaveCount(0);
 });
 
+test('shows the declared key vocabulary in the plural reference question', async ({ page }) => {
+  await page.goto('/study/plural-demonstrative-pronouns/pdp-reference-choice-test');
+  for (let question = 1; question < 6; question += 1) {
+    await page.getByRole('button', { name: 'Show answer' }).click();
+    await page.getByRole('button', { name: 'Continue' }).click();
+  }
+
+  await expect(page.locator('.exercise-card')).toContainText('Nämä ovat avaimet.');
+  await page.getByRole('button', { name: 'Cheat mode' }).click();
+  const dialog = page.getByRole('dialog', { name: 'Words for this question' });
+  await expect(dialog.getByText('avain', { exact: true })).toBeVisible();
+  await expect(dialog.getByText('key', { exact: true })).toBeVisible();
+});
+
 test('places compact action groups according to their page role', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
 
