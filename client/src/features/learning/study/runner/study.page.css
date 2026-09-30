@@ -167,6 +167,36 @@
   line-height: 1.45;
 }
 
+@container workbook (width > 55rem) {
+  .exercise-card {
+    grid-template-columns: max-content minmax(0, 1fr);
+    column-gap: var(--space-4);
+  }
+
+  .exercise-card > * {
+    grid-column: 1 / -1;
+  }
+
+  .exercise-card > .answer-tool-row {
+    grid-row: 4;
+    grid-column: 1;
+  }
+
+  .exercise-card .reveal-note {
+    grid-row: 4;
+    grid-column: 2;
+    place-self: center end;
+    max-width: 38rem;
+    margin: 0;
+    text-align: right;
+  }
+
+  .exercise-card .answer-actions {
+    grid-row: 5;
+    grid-column: 1 / -1;
+  }
+}
+
 @container workbook (width <= 35rem) {
   .runner-shell {
     width: calc(100% - 0.75rem);

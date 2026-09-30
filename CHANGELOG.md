@@ -50,6 +50,8 @@
 
 ### Changed
 
+- Moved the Study answer-reveal consequence beside the correction tools on wide workbooks while keeping it with the answer actions on narrower screens.
+
 - Word-order questions now let keyboard users move among available words with arrow keys. Enter or Space adds a word and moves focus to the next one; after the final word, focus moves to **Check answer** so Enter can check and then continue. Optional lesson practice now also matches Study's Enter behavior for selected choices, typed answers, checking, and continuing.
 
 - Opening the next question in Study or optional lesson practice now scrolls its prompt into view while keeping focus on the answer control.

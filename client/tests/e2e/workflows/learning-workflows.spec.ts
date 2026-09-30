@@ -970,6 +970,29 @@ test('keeps focus visible on clipped actions and note fields', async ({ page }, 
   expect(fieldFocus.color).toBe(fieldFocus.focusRing);
 });
 
+test('places the reveal consequence beside correction tools on wide workbooks', async ({
+  page,
+}, testInfo) => {
+  test.skip(testInfo.project.name !== 'chromium-wide');
+  await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
+
+  const correction = page.getByRole('button', { name: 'Erase choice' });
+  const note = page.locator('.exercise-card .reveal-note');
+  const actions = page.locator('.exercise-card .answer-actions');
+  const correctionBox = await correction.boundingBox();
+  const noteBox = await note.boundingBox();
+  const actionsBox = await actions.boundingBox();
+
+  expect(correctionBox).not.toBeNull();
+  expect(noteBox).not.toBeNull();
+  expect(actionsBox).not.toBeNull();
+  expect(noteBox!.x).toBeGreaterThan(correctionBox!.x + correctionBox!.width);
+  expect(
+    Math.abs(noteBox!.y + noteBox!.height / 2 - correctionBox!.y - correctionBox!.height / 2),
+  ).toBeLessThan(20);
+  expect(noteBox!.y + noteBox!.height).toBeLessThan(actionsBox!.y);
+});
+
 test('shares responsive modal and vocabulary-card styling with safe dismissal', async ({
   page,
 }) => {
