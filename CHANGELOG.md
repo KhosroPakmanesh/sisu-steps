@@ -196,6 +196,8 @@
 
 ### Fixed
 
+- Accepted both natural written forms of all 18 typed `olla` short answers: negative replies with or without `Ei,` and affirmative replies with or without `Kyllä,`. Added a content guard and authoring guidance for these alternatives. Existing progress is preserved; previously recorded attempts keep their original scores.
+
 - Restored `avain — key` to the plural-reference question's lesson vocabulary so Cheat mode shows it, added content validation that rejects declared words missing from the test's linked lessons, and updated the Finnish content creator skill to require an independent word inventory for each question and follow the current pack-size and JSON-source rules.
 
 - Made the tall-tablet page-clip browser check wait for the existing layout to settle before comparing its final dimensions.

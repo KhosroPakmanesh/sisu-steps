@@ -16,7 +16,7 @@ const lessonIds = [
 ];
 
 export function validatePack(pack) {
-  return validateOllaPack(pack, {
+  const errors = validateOllaPack(pack, {
     id: 'olla-questions-short-answers',
     summary:
       'Standard Finnish only: focused practice with affirmative and negative olla questions and short answers.',
@@ -38,4 +38,24 @@ export function validatePack(pack) {
     politeTeMinimum: 12,
     pluralTeMinimum: 8,
   });
+  for (const exercise of [
+    ...(pack.tests ?? []).flatMap((test) => test.exercises ?? []),
+    ...(pack.lessons ?? []).flatMap((lesson) => lesson.practiceExercises ?? []),
+  ]) {
+    if (
+      !exercise.tags?.includes('short-answer') ||
+      !['fill-blank', 'translation-fi'].includes(exercise.type)
+    )
+      continue;
+
+    const model = exercise.acceptedAnswers?.[0] ?? '';
+    const alternative = model.startsWith('Kyllä, ')
+      ? `${model[7]?.toLocaleUpperCase('fi-FI')}${model.slice(8)}`
+      : /^(?:En|Et|Ei|Emme|Ette|Eivät) ole\.$/u.test(model)
+        ? `Ei, ${model[0].toLocaleLowerCase('fi-FI')}${model.slice(1)}`
+        : undefined;
+    if (!alternative || !exercise.acceptedAnswers?.includes(alternative))
+      errors.push(`${exercise.id}: typed short answer is missing its natural reply alternative`);
+  }
+  return errors;
 }

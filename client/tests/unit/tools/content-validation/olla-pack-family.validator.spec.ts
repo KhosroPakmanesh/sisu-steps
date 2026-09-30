@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
+import { gradeAnswer } from '@/features/learning/shared/progress/grading.policy';
 import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
 import { validatePack as validateAffirmative } from '../../../../tools/content-validation/olla/personal-pronouns-affirmative-olla.mjs';
 import { validatePack as validateNegative } from '../../../../tools/content-validation/olla/negative-olla-statements.mjs';
@@ -83,6 +84,35 @@ describe('split personal-pronoun and olla content validation', () => {
       expect.stringContaining(
         'olla-questions-short-answers: learner-facing content repeats the pack-level register label',
       ),
+    );
+  });
+
+  it('accepts both natural forms of typed positive and negative short replies', () => {
+    const review = questions.tests.find((test) => test.id === 'ppo-question-transfer-review');
+    const positive = review?.exercises.find((exercise) => exercise.id === 'ppo-t19-e19');
+    const negative = review?.exercises.find((exercise) => exercise.id === 'ppo-t19-e39');
+    if (!positive || !negative) throw new Error('The final review is missing its paired replies.');
+
+    expect(gradeAnswer(positive, 'Olemme.').correct).toBe(true);
+    expect(gradeAnswer(positive, 'Kyllä, olemme.').correct).toBe(true);
+    expect(gradeAnswer(negative, 'Emme ole.').correct).toBe(true);
+    expect(gradeAnswer(negative, 'Ei, emme ole.').correct).toBe(true);
+  });
+
+  it('rejects a typed short reply when its natural alternative is omitted', () => {
+    const pack = structuredClone(questions);
+    const review = pack.tests.find((test) => test.id === 'ppo-question-transfer-review');
+    const positive = review?.exercises.find((exercise) => exercise.id === 'ppo-t19-e19');
+    const negative = review?.exercises.find((exercise) => exercise.id === 'ppo-t19-e39');
+    if (!positive || !negative) throw new Error('The final review is missing its paired replies.');
+    positive.acceptedAnswers = ['Kyllä, olemme.'];
+    negative.acceptedAnswers = ['Emme ole.'];
+
+    expect(validateQuestions(pack)).toEqual(
+      expect.arrayContaining([
+        'ppo-t19-e19: typed short answer is missing its natural reply alternative',
+        'ppo-t19-e39: typed short answer is missing its natural reply alternative',
+      ]),
     );
   });
 
