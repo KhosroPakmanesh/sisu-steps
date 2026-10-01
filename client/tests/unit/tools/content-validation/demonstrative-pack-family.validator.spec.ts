@@ -9,7 +9,6 @@ const PACK_IDS = [
   'plural-demonstrative-pronouns',
   'negative-demonstrative-statements',
   'demonstrative-questions',
-  'inessive-demonstrative-forms',
 ];
 
 describe('demonstrative-pronoun pack-family validation', () => {
@@ -24,15 +23,15 @@ describe('demonstrative-pronoun pack-family validation', () => {
     });
   });
 
-  it('accepts the five packs and preserves the approved family inventory', () => {
+  it('accepts the four packs and preserves the approved family inventory', () => {
     for (const pack of packs) expect(validateDemonstrativePack(pack)).toEqual([]);
 
-    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(632);
+    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(512);
     expect(
       packs.flatMap((pack) => pack.lessons).flatMap((lesson) => lesson.practiceExercises),
-    ).toHaveLength(96);
-    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(24);
-    expect(packs.filter((pack) => pack.tests.at(-1)?.stage === 'review')).toHaveLength(5);
+    ).toHaveLength(80);
+    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(20);
+    expect(packs.filter((pack) => pack.tests.at(-1)?.stage === 'review')).toHaveLength(4);
   });
 
   it('rejects changed topology, counts, or a Review that claims a new skill', () => {
@@ -114,32 +113,6 @@ describe('demonstrative-pronoun pack-family validation', () => {
 
     expect(validateDemonstrativePack(pack)).toContain(
       `${exercise.id}: answer leaves the approved beginner question frame`,
-    );
-  });
-
-  it('rejects loss of an inessive form from a Focused test', () => {
-    const pack = structuredClone(requirePack(packs, 'inessive-demonstrative-forms'));
-    for (const exercise of pack.tests[0].exercises) {
-      exercise.acceptedAnswers = exercise.acceptedAnswers.map((answer) =>
-        answer.replaceAll('tässä', 'tuossa').replaceAll('Tässä', 'Tuossa'),
-      );
-      for (const part of exercise.sentenceExplanation?.parts ?? []) {
-        part.finnish = part.finnish.replaceAll('tässä', 'tuossa').replaceAll('Tässä', 'Tuossa');
-      }
-    }
-
-    expect(validateDemonstrativePack(pack)).toContain(
-      'idf-singular-inessive-test: Focused answers must cover tässä',
-    );
-  });
-
-  it('rejects an independent inessive task without a matching container context', () => {
-    const pack = structuredClone(requirePack(packs, 'inessive-demonstrative-forms'));
-    const exercise = pack.tests[0].exercises[0];
-    exercise.prompt = exercise.prompt.replace(/^.*?(?=Choose|Write|Build)/u, '');
-
-    expect(validateDemonstrativePack(pack)).toContain(
-      `${exercise.id}: independent inessive task needs an explicit matching bounded-location context`,
     );
   });
 

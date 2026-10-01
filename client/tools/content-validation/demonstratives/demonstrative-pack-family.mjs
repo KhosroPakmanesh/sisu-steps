@@ -79,23 +79,6 @@ const PACKS = {
     reviewId: 'dqs-review',
     validateBoundary: validateQuestionBoundary,
   },
-  'inessive-demonstrative-forms': {
-    skills: [
-      'Singular inessive demonstratives',
-      'Plural inessive demonstratives',
-      'Singular inessive demonstrative-noun agreement',
-      'Plural inessive demonstrative-noun agreement',
-    ],
-    lessonIds: [
-      'idf-singular-inessive',
-      'idf-plural-inessive',
-      'idf-singular-modifier',
-      'idf-plural-modifier',
-    ],
-    testCounts: [24, 24, 20, 24, 28],
-    reviewId: 'idf-review',
-    validateBoundary: validateInessiveBoundary,
-  },
 };
 
 const normalize = (value) =>
@@ -398,58 +381,4 @@ function validateQuestionBoundary(pack, errors) {
   }
   if (containsWord(pack.tests.map(answerText).join(' '), 'mitkä'))
     errors.push(`${pack.id}: accepted answers must not introduce deferred mitkä`);
-}
-
-function validateInessiveBoundary(pack, errors) {
-  const requiredForms = [
-    ['tässä', 'tuossa', 'siinä'],
-    ['näissä', 'noissa', 'niissä'],
-    ['tässä', 'tuossa', 'siinä'],
-    ['näissä', 'noissa', 'niissä'],
-  ];
-  for (const [index, forms] of requiredForms.entries()) {
-    const text = answerText(pack.tests[index]);
-    for (const form of forms)
-      if (!containsWord(text, form))
-        errors.push(`${pack.tests[index]?.id}: Focused answers must cover ${form}`);
-  }
-  if (
-    ['täällä', 'tuolla', 'siellä'].some((form) =>
-      containsWord(pack.tests.map(answerText).join(' '), form),
-    )
-  )
-    errors.push(`${pack.id}: accepted answers must not substitute broader location adverbs`);
-
-  const independentSkills = new Set([
-    'Singular inessive demonstratives',
-    'Plural inessive demonstratives',
-  ]);
-  const exercises = [
-    ...pack.tests.flatMap((test) => test.exercises ?? []),
-    ...pack.lessons.flatMap((lesson) => lesson.practiceExercises ?? []),
-  ];
-  for (const exercise of exercises) {
-    const skills = new Set([exercise.targetSkill, ...(exercise.requiredSkills ?? [])]);
-    if (![...skills].some((skill) => independentSkills.has(skill))) continue;
-    const finnish = finnishAnswer(exercise);
-    const expectedCue =
-      containsWord(finnish, 'tässä') || containsWord(finnish, 'näissä')
-        ? /\bnearby\b/iu
-        : containsWord(finnish, 'tuossa') || containsWord(finnish, 'noissa')
-          ? /\bfarther\b/iu
-          : /\balready know which\b/iu;
-    if (
-      !/\b(?:compartment|garage|room|district)s?\b/iu.test(exercise.prompt ?? '') ||
-      !expectedCue.test(exercise.prompt ?? '')
-    ) {
-      errors.push(
-        `${exercise.id}: independent inessive task needs an explicit matching bounded-location context`,
-      );
-    }
-    if (exercise.type === 'translation-en' && (exercise.acceptedAnswers?.length ?? 0) < 2) {
-      errors.push(
-        `${exercise.id}: independent inessive translation needs a natural here/there alternative`,
-      );
-    }
-  }
 }

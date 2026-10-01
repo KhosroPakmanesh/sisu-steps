@@ -29,7 +29,6 @@ const expectedGroups: ExpectedGroup[] = [
       'plural-demonstrative-pronouns',
       'negative-demonstrative-statements',
       'demonstrative-questions',
-      'inessive-demonstrative-forms',
     ],
   },
 ];
@@ -52,7 +51,7 @@ test('groups catalog topic cards into labeled sections in pack order', async ({ 
     }
   }
 
-  await expect(page.locator('.topic-card')).toHaveCount(11);
+  await expect(page.locator('.topic-card')).toHaveCount(10);
 });
 
 test('mirrors the same grouping on the stats catalog', async ({ page }) => {

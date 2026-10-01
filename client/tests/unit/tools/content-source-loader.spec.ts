@@ -279,7 +279,6 @@ describe('pack-owned content source loader', () => {
           'plural-demonstrative-pronouns',
           'negative-demonstrative-statements',
           'demonstrative-questions',
-          'inessive-demonstrative-forms',
         ],
       },
     ]);

@@ -7,7 +7,10 @@ import { topicPackToSummary } from '@/features/learning/shared/content/pack-summ
 
 describe('content-pack version alignment', () => {
   it('resets all learner data when a stored pack is no longer supported', () => {
-    const oldState = createEmptyLearnerState({ topic: '1.0.0', 'removed-topic': '1.0.0' });
+    const oldState = createEmptyLearnerState({
+      topic: '1.0.0',
+      'removed-topic': '1.0.0',
+    });
     oldState.attempts = [completedAttempt('current-attempt', 'topic', 'test-1')];
     oldState.unresolvedMistakeIds = ['exercise-1'];
     oldState.learnerNotes = [
@@ -61,14 +64,14 @@ describe('content-pack version alignment', () => {
     expect(aligned.learnerNotes.map((note) => note.text)).toEqual(['Keep this topic note.']);
   });
 
-  it('clears the four revised demonstrative packs while keeping the unchanged pack and notes', () => {
+  it('clears the four revised demonstrative packs while keeping an unchanged pack and notes', () => {
     const changedIds = [
       'singular-demonstrative-pronouns',
       'plural-demonstrative-pronouns',
       'negative-demonstrative-statements',
       'demonstrative-questions',
     ];
-    const unchangedId = 'inessive-demonstrative-forms';
+    const unchangedId = 'personal-pronouns-affirmative-olla';
     const packs = [
       ...changedIds.map((id) => renamedPack(id, '1.1.0')),
       renamedPack(unchangedId, '1.0.0'),

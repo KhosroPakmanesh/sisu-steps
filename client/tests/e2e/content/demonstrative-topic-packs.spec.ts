@@ -29,21 +29,14 @@ const packs = [
     focused: 6,
     exercises: 160,
   },
-  {
-    id: 'inessive-demonstrative-forms',
-    title: 'Inessive demonstrative forms',
-    tests: 5,
-    focused: 4,
-    exercises: 120,
-  },
 ];
 
 test('opens every demonstrative pack with its approved Focused and Review topology', async ({
   page,
 }) => {
   await page.goto('/');
-  await expect(page.locator('.topic-card')).toHaveCount(11);
-  await expect(page.locator('.catalog-stats')).toContainText('1722');
+  await expect(page.locator('.topic-card')).toHaveCount(10);
+  await expect(page.locator('.catalog-stats')).toContainText('1602');
 
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);

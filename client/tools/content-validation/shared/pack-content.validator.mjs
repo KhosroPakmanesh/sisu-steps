@@ -409,7 +409,6 @@ export async function validatePackContent(pack) {
       ['plural-demonstrative-pronouns', 'demonstratives'],
       ['negative-demonstrative-statements', 'demonstratives'],
       ['demonstrative-questions', 'demonstratives'],
-      ['inessive-demonstrative-forms', 'demonstratives'],
     ]);
     const validatorFamily = validatorFamilies.get(pack.id);
     const specificValidatorPath = resolve(

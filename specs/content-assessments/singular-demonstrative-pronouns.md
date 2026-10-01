@@ -1,5 +1,7 @@
 # Finnish-teaching pedagogy assessment: singular-demonstrative-pronouns
 
+Historical family-wide counts below include the inessive pack removed on 2026-10-01. The current demonstrative family has four packs, 512 scored exercises, and 80 optional practice exercises; this pack's own counts and assessment remain valid.
+
 ## Pack identity and counts
 
 - Pack ID: `singular-demonstrative-pronouns`

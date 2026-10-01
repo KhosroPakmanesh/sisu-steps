@@ -16,7 +16,7 @@
 
 - Labeled topic-pack groups on the topic catalog and stats catalog. Catalog schema 2 makes `content/index.json` declare each group once with its stable ID, learner-facing title, and ordered pack IDs; grouped packs render together on a ruled, punched white-paper sheet inside the level sheet with a real heading, topic cards rest on the warm stationery paper in both appearances, and validation rejects invalid or duplicate group and pack registrations.
 
-- Added five source-grounded `0 - A1.3` demonstrative-pronoun packs for singular and plural reference, negative statements, questions, and bounded inessive forms, with 24 Focused lessons and tests, five Reviews, 632 scored exercises, 96 optional practice exercises, all five response formats, controlled vocabulary, complete sentence explanations, diagnostics, and mutual delayed-mastery pairs.
+- Added four source-grounded `0 - A1.3` demonstrative-pronoun packs for singular and plural reference, negative statements, and questions, with 20 Focused lessons and tests, four Reviews, 512 scored exercises, 80 optional practice exercises, all five response formats, controlled vocabulary, complete sentence explanations, diagnostics, and mutual delayed-mastery pairs.
 
 - Lesson preparation now always displays separate semantic containers for **New words**, **Used again**, and **Supplied in examples**, with validation that reused vocabulary comes from declared prerequisites and keeps its original meaning, known worked-example vocabulary is classified, and supplied forms and meanings are visible in teaching. Each vocabulary group exactly reuses the worked-example punched-paper surface and behavior, and sparse groups retain the same word-card sizing as **New words**.
 
@@ -80,7 +80,7 @@
 
 - Unified confirmation and Cheat mode dialogs on one responsive ruled-paper modal shell without clip decoration, replaced textual cancellation controls with compact accessible top-right × buttons with precisely centered marks, added safe backdrop dismissal, and matched Cheat mode word cards to lesson vocabulary cards.
 
-- Reworked the five pending demonstrative-pronoun packs with natural English glosses and translations, plausible noun/location combinations, form-only introductory support, explicit bounded contexts for all independent inessive tasks, natural English location alternatives, and distractor-specific feedback. Demonstrative validation now rejects malformed glosses, spoken `tää`/`toi`/`nää`/`noi`, scene-only sentence duplicates, untaught Review-exercise targets, hidden malformed Finnish question frames, missing inessive contexts, and repeated wrong-option feedback while preserving all 632 scored IDs and 96 practice IDs.
+- Reworked the four demonstrative-pronoun packs with natural English glosses and translations, plausible noun/location combinations, form-only introductory support, and distractor-specific feedback. Demonstrative validation now rejects malformed glosses, spoken `tää`/`toi`/`nää`/`noi`, scene-only sentence duplicates, untaught Review-exercise targets, hidden malformed Finnish question frames, and repeated wrong-option feedback while preserving all 512 scored IDs and 80 practice IDs.
 
 - Vocabulary declarations now store one Finnish lexical word per entry by default. Every entry is explicitly typed as a `word` or `fixed-expression`; transparent combinations such as `Suomessa huomenna` are split into reusable component words, while multiword entries are reserved for genuine fixed expressions. Exercise wording and behavior are unchanged; only lexical-recall metadata changes where context is already visibly supplied.
 
@@ -191,6 +191,7 @@
 
 ### Removed
 
+- Removed the inessive demonstrative pack, its four lessons, five tests, 120 scored and 16 practice exercises, validator, and pedagogy record. The catalog now has ten packs and 1,602 scored exercises. Existing local learner state that records the removed pack resets completely, including progress in other packs and notes; backups containing the removed pack are rejected before replacement.
 - The visible `Alt+A` badge and keyboard shortcut from scored study and optional lesson practice. Answer reveal remains available through the native **Show answer** button.
 - The experimental pencil-case toolbar and its `ä`/`ö` quick-insert buttons from scored answers and optional lesson practice.
 - The redundant Core/Extended test-set field, validation rules, labels, and badges. Tests are now grouped only as **Focused tests** and mixed **Reviews**.
