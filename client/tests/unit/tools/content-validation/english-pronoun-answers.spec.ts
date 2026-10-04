@@ -41,10 +41,13 @@ const cases = [
     'npq-eiko-test-e009',
     ['Doesn’t he have a pen?', 'Doesn’t she have a pen?', 'Doesn’t he or she have a pen?'],
   ],
-  ['ppe-owner-forms-test-e014', ['his', 'her', 'his or her']],
-  ['ppe-sentences-test-e009', ['This is his pen.', 'This is her pen.', 'This is his or her pen.']],
-  ['ppe-third-person-test-e014', ['his dog', 'her dog', 'his or her dog']],
-  ['ppe-third-person-test-e016', ['his apple', 'her apple', 'his or her apple']],
+  ['ppe-owner-forms-test-e015', ['his game', 'her game', 'his or her game']],
+  [
+    'ppe-sentences-test-e019',
+    ['This is his game.', 'This is her game.', 'This is his or her game.'],
+  ],
+  ['ppe-third-person-test-e018', ['his dog', 'her dog', 'his or her dog']],
+  ['ppe-third-person-test-e020', ['his apple', 'her apple', 'his or her apple']],
 ] as const;
 
 describe('English gender-neutral pronoun alternatives', () => {
@@ -66,7 +69,7 @@ describe('English gender-neutral pronoun alternatives', () => {
   });
 
   it('audits all installed packs and both optional-practice pronoun translations', async () => {
-    expect(packs).toHaveLength(15);
+    expect(packs).toHaveLength(16);
     for (const pack of packs) {
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);
@@ -134,7 +137,7 @@ describe('English gender-neutral pronoun alternatives', () => {
 
   it('rejects missing possessive alternatives in every accepted frame', () => {
     const exercise = structuredClone(
-      items.find((item) => item.id === 'ppe-third-person-test-e014')!,
+      items.find((item) => item.id === 'ppe-third-person-test-e018')!,
     );
     exercise.acceptedAnswers = ['his dog', 'her dog'];
     expect(() => validateExercise(exercise, new Set())).toThrow(
@@ -142,6 +145,24 @@ describe('English gender-neutral pronoun alternatives', () => {
     );
     expect(validateEnglishPronounAnswers([exercise]).join('\n')).toContain('his or her dog');
   });
+
+  it.each(['This game is his.', 'This game is hers.', 'This game is his or hers.'])(
+    'requires the natural predicative alternative %s without adjective substitutions',
+    (missing) => {
+      const exercise = structuredClone(
+        items.find((item) => item.id === 'ppe-sentences-test-e019')!,
+      );
+      expect(() => validateRuntime(exercise)).not.toThrow();
+      expect(validateEnglishPronounAnswers([exercise])).toEqual([]);
+      expect(gradeAnswer(exercise, missing).correct).toBe(true);
+      expect(gradeAnswer(exercise, 'This game is her.').correct).toBe(false);
+      exercise.acceptedAnswers = exercise.acceptedAnswers.filter((answer) => answer !== missing);
+      expect(() => validateRuntime(exercise)).toThrow('missing English pronoun alternative');
+      expect(validateEnglishPronounAnswers([exercise]).join('\n')).toContain(
+        missing.toLowerCase().replace(/\.$/u, ''),
+      );
+    },
+  );
 
   it.each(['Use he or she.', 'Owner: he or she.', 'Use his or her.'])(
     'rejects ambiguous wording: %s',

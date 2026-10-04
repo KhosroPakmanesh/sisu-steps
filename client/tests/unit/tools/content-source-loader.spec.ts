@@ -290,6 +290,7 @@ describe('pack-owned content source loader', () => {
           'possession-questions',
           'negative-possession-questions',
           'possessive-pronouns-endings',
+          'plural-ownership-possessive-endings',
         ],
       },
     ]);

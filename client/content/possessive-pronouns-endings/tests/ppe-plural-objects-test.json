@@ -1,0 +1,1411 @@
+{
+  "id": "ppe-plural-objects-test",
+  "title": "Several owned things: Nämä ovat …",
+  "focus": "Drop plural -t before the owner ending; use Nämä ovat for several things.",
+  "stage": "focused",
+  "targetSkills": ["Plural possessed nouns in ownership sentences"],
+  "prerequisiteSkills": ["Simple ownership identity sentences"],
+  "lessonIds": ["ppe-plural-objects"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “These are my games.” Nämä ovat minun ___. Use peli (“game”), pelit (“games”), and -ni.",
+      "acceptedAnswers": ["pelini"],
+      "explanation": "Remove plural -t before the owner ending: pelit + -ni gives pelini. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-peli",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my games.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "pelini.",
+            "meaning": "games",
+            "role": "possessed plural noun",
+            "baseForm": "peli",
+            "formation": "pelit (“games”) loses its plural -t before -ni: peli + -ni = pelini."
+          }
+        ]
+      },
+      "options": ["pelisi", "pelini", "pelitni", "pelit"],
+      "optionFeedback": {
+        "pelini": "Correct: drop plural -t and attach -ni.",
+        "pelitni": "The plural -t disappears before a possessive suffix; use pelini.",
+        "pelit": "This personal owner phrase needs its supplied ending -ni; use pelini.",
+        "pelisi": "Keep the supplied ending -ni for minun; use pelini."
+      },
+      "id": "ppe-plural-objects-test-e004",
+      "parallelExerciseId": "ppe-plural-objects-test-e003"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Repair “Nämä ovat minun talotni.” to mean “These are my houses.” Keep minun; use talo (“house”), talot (“houses”), and -ni.",
+      "acceptedAnswers": ["Nämä ovat minun taloni."],
+      "explanation": "Nämä ovat identifies several things. The ending -ni identifies my ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-talo",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my houses.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "taloni.",
+            "meaning": "houses",
+            "role": "possessed plural noun",
+            "baseForm": "talo",
+            "formation": "talot (“houses”) loses its plural -t before -ni: talo + -ni = taloni."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat minun talotni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use taloni."
+        },
+        {
+          "answers": ["Nämä ovat minun talot."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat minun talosi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on minun taloni."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e020",
+      "parallelExerciseId": "ppe-plural-objects-test-e019"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “These are his pillows.” Nämä ovat hänen ___. Use tyyny (“pillow”), tyynyt (“pillows”), and -nsä.",
+      "acceptedAnswers": ["tyynynsä"],
+      "explanation": "Remove plural -t before the owner ending: tyynyt + -nsä gives tyynynsä. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-tyyny",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his pillows.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsä."
+          },
+          {
+            "finnish": "tyynynsä.",
+            "meaning": "pillows",
+            "role": "possessed plural noun",
+            "baseForm": "tyyny",
+            "formation": "tyynyt (“pillows”) loses its plural -t before -nsä: tyyny + -nsä = tyynynsä."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["tyynytnsä"],
+          "category": "plural possessive formation",
+          "explanation": "The plural -t disappears before a possessive suffix; use tyynynsä."
+        },
+        {
+          "answers": ["tyynyt"],
+          "category": "plural possessive formation",
+          "explanation": "This personal owner phrase needs its supplied ending -nsä; use tyynynsä."
+        },
+        {
+          "answers": ["tyynyni"],
+          "category": "plural possessive formation",
+          "explanation": "Keep the supplied ending -nsä for hänen; use tyynynsä."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e009",
+      "parallelExerciseId": "ppe-plural-objects-test-e010"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “These are your pillows.” in Finnish. Begin with Nämä ovat. Address one person. Keep sinun (“your”). Use tyyny (“pillow”), tyynyt (“pillows”), and -si.",
+      "acceptedAnswers": ["Nämä ovat sinun tyynysi."],
+      "explanation": "Nämä ovat identifies several things. The ending -si identifies your ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-tyyny",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your pillows.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "tyynysi.",
+            "meaning": "pillows",
+            "role": "possessed plural noun",
+            "baseForm": "tyyny",
+            "formation": "tyynyt (“pillows”) loses its plural -t before -si: tyyny + -si = tyynysi."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat sinun tyynytsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use tyynysi."
+        },
+        {
+          "answers": ["Nämä ovat sinun tyynyt."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat sinun tyynyni."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on sinun tyynysi."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e014",
+      "parallelExerciseId": "ppe-plural-objects-test-e013"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “These are your cats.” Nämä ovat sinun ___. Use kissa (“cat”), kissat (“cats”), and -si. Address one person.",
+      "acceptedAnswers": ["kissasi"],
+      "explanation": "Remove plural -t before the owner ending: kissat + -si gives kissasi. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-kissa",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your cats.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "kissasi.",
+            "meaning": "cats",
+            "role": "possessed plural noun",
+            "baseForm": "kissa",
+            "formation": "kissat (“cats”) loses its plural -t before -si: kissa + -si = kissasi."
+          }
+        ]
+      },
+      "options": ["kissasi", "kissatsi", "kissat", "kissani"],
+      "optionFeedback": {
+        "kissasi": "Correct: drop plural -t and attach -si.",
+        "kissatsi": "The plural -t disappears before a possessive suffix; use kissasi.",
+        "kissat": "This personal owner phrase needs its supplied ending -si; use kissasi.",
+        "kissani": "Keep the supplied ending -si for sinun; use kissasi."
+      },
+      "id": "ppe-plural-objects-test-e005",
+      "parallelExerciseId": "ppe-plural-objects-test-e006"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Repair “Nämä ovat sinun kissatsi.” to mean “These are your cats.” Keep sinun; use kissa (“cat”), kissat (“cats”), and -si. Address one person.",
+      "acceptedAnswers": ["Nämä ovat sinun kissasi."],
+      "explanation": "Nämä ovat identifies several things. The ending -si identifies your ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-kissa",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your cats.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "kissasi.",
+            "meaning": "cats",
+            "role": "possessed plural noun",
+            "baseForm": "kissa",
+            "formation": "kissat (“cats”) loses its plural -t before -si: kissa + -si = kissasi."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat sinun kissatsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use kissasi."
+        },
+        {
+          "answers": ["Nämä ovat sinun kissat."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat sinun kissani."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on sinun kissasi."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e018",
+      "parallelExerciseId": "ppe-plural-objects-test-e017"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “These are his dogs.” Nämä ovat hänen ___. Use koira (“dog”), koirat (“dogs”), and -nsa.",
+      "acceptedAnswers": ["koiransa"],
+      "explanation": "Remove plural -t before the owner ending: koirat + -nsa gives koiransa. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-koira",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his dogs.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "koiransa.",
+            "meaning": "dogs",
+            "role": "possessed plural noun",
+            "baseForm": "koira",
+            "formation": "koirat (“dogs”) loses its plural -t before -nsa: koira + -nsa = koiransa."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["koiratnsa"],
+          "category": "plural possessive formation",
+          "explanation": "The plural -t disappears before a possessive suffix; use koiransa."
+        },
+        {
+          "answers": ["koirat"],
+          "category": "plural possessive formation",
+          "explanation": "This personal owner phrase needs its supplied ending -nsa; use koiransa."
+        },
+        {
+          "answers": ["koirani"],
+          "category": "plural possessive formation",
+          "explanation": "Keep the supplied ending -nsa for hänen; use koiransa."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e012",
+      "parallelExerciseId": "ppe-plural-objects-test-e011"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Repair “Nämä ovat hänen koiratnsa.” to mean “These are his dogs.” Keep hänen; use koira (“dog”), koirat (“dogs”), and -nsa.",
+      "acceptedAnswers": ["Nämä ovat hänen koiransa."],
+      "explanation": "Nämä ovat identifies several things. The ending -nsa identifies his ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-koira",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his dogs.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "koiransa.",
+            "meaning": "dogs",
+            "role": "possessed plural noun",
+            "baseForm": "koira",
+            "formation": "koirat (“dogs”) loses its plural -t before -nsa: koira + -nsa = koiransa."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat hänen koiratnsa."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -nsa: use koiransa."
+        },
+        {
+          "answers": ["Nämä ovat hänen koirat."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -nsa even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat hänen koirani."],
+          "category": "wrong personal owner",
+          "explanation": "Hänen needs -nsa; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on hänen koiransa."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e019",
+      "parallelExerciseId": "ppe-plural-objects-test-e020"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “These are my cars.” Nämä ovat minun ___. Use auto (“car”), autot (“cars”), and -ni.",
+      "acceptedAnswers": ["autoni"],
+      "explanation": "Remove plural -t before the owner ending: autot + -ni gives autoni. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-auto",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my cars.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "autoni.",
+            "meaning": "cars",
+            "role": "possessed plural noun",
+            "baseForm": "auto",
+            "formation": "autot (“cars”) loses its plural -t before -ni: auto + -ni = autoni."
+          }
+        ]
+      },
+      "options": ["autoni", "autotni", "autot", "autosi"],
+      "optionFeedback": {
+        "autoni": "Correct: drop plural -t and attach -ni.",
+        "autotni": "The plural -t disappears before a possessive suffix; use autoni.",
+        "autot": "This personal owner phrase needs its supplied ending -ni; use autoni.",
+        "autosi": "Keep the supplied ending -ni for minun; use autoni."
+      },
+      "id": "ppe-plural-objects-test-e001",
+      "parallelExerciseId": "ppe-plural-objects-test-e002"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “These are my cars.” Nämä ovat minun ___. Use auto (“car”), autot (“cars”), and -ni.",
+      "acceptedAnswers": ["autoni"],
+      "explanation": "Remove plural -t before the owner ending: autot + -ni gives autoni. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-auto",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my cars.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "autoni.",
+            "meaning": "cars",
+            "role": "possessed plural noun",
+            "baseForm": "auto",
+            "formation": "autot (“cars”) loses its plural -t before -ni: auto + -ni = autoni."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["autotni"],
+          "category": "plural possessive formation",
+          "explanation": "The plural -t disappears before a possessive suffix; use autoni."
+        },
+        {
+          "answers": ["autot"],
+          "category": "plural possessive formation",
+          "explanation": "This personal owner phrase needs its supplied ending -ni; use autoni."
+        },
+        {
+          "answers": ["autosi"],
+          "category": "plural possessive formation",
+          "explanation": "Keep the supplied ending -ni for minun; use autoni."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e007",
+      "parallelExerciseId": "ppe-plural-objects-test-e008"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Repair “Nämä ovat minun pelitni.” to mean “These are my games.” Keep minun; use peli (“game”), pelit (“games”), and -ni.",
+      "acceptedAnswers": ["Nämä ovat minun pelini."],
+      "explanation": "Nämä ovat identifies several things. The ending -ni identifies my ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-peli",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my games.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "pelini.",
+            "meaning": "games",
+            "role": "possessed plural noun",
+            "baseForm": "peli",
+            "formation": "pelit (“games”) loses its plural -t before -ni: peli + -ni = pelini."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat minun pelitni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use pelini."
+        },
+        {
+          "answers": ["Nämä ovat minun pelit."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat minun pelisi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on minun pelini."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e017",
+      "parallelExerciseId": "ppe-plural-objects-test-e018"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “These are his dogs.” Nämä ovat hänen ___. Use koira (“dog”), koirat (“dogs”), and -nsa.",
+      "acceptedAnswers": ["koiransa"],
+      "explanation": "Remove plural -t before the owner ending: koirat + -nsa gives koiransa. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-koira",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his dogs.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "koiransa.",
+            "meaning": "dogs",
+            "role": "possessed plural noun",
+            "baseForm": "koira",
+            "formation": "koirat (“dogs”) loses its plural -t before -nsa: koira + -nsa = koiransa."
+          }
+        ]
+      },
+      "options": ["koiratnsa", "koirat", "koirani", "koiransa"],
+      "optionFeedback": {
+        "koiransa": "Correct: drop plural -t and attach -nsa.",
+        "koiratnsa": "The plural -t disappears before a possessive suffix; use koiransa.",
+        "koirat": "This personal owner phrase needs its supplied ending -nsa; use koiransa.",
+        "koirani": "Keep the supplied ending -nsa for hänen; use koiransa."
+      },
+      "id": "ppe-plural-objects-test-e006",
+      "parallelExerciseId": "ppe-plural-objects-test-e005"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “These are your pens.” Nämä ovat sinun ___. Use kynä (“pen”), kynät (“pens”), and -si. Address one person.",
+      "acceptedAnswers": ["kynäsi"],
+      "explanation": "Remove plural -t before the owner ending: kynät + -si gives kynäsi. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-kynä",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your pens.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "kynäsi.",
+            "meaning": "pens",
+            "role": "possessed plural noun",
+            "baseForm": "kynä",
+            "formation": "kynät (“pens”) loses its plural -t before -si: kynä + -si = kynäsi."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["kynätsi"],
+          "category": "plural possessive formation",
+          "explanation": "The plural -t disappears before a possessive suffix; use kynäsi."
+        },
+        {
+          "answers": ["kynät"],
+          "category": "plural possessive formation",
+          "explanation": "This personal owner phrase needs its supplied ending -si; use kynäsi."
+        },
+        {
+          "answers": ["kynäni"],
+          "category": "plural possessive formation",
+          "explanation": "Keep the supplied ending -si for sinun; use kynäsi."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e008",
+      "parallelExerciseId": "ppe-plural-objects-test-e007"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “These are my pens.” in Finnish. Begin with Nämä ovat. Keep minun (“my”). Use kynä (“pen”), kynät (“pens”), and -ni.",
+      "acceptedAnswers": ["Nämä ovat minun kynäni."],
+      "explanation": "Nämä ovat identifies several things. The ending -ni identifies my ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-kynä",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my pens.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "kynäni.",
+            "meaning": "pens",
+            "role": "possessed plural noun",
+            "baseForm": "kynä",
+            "formation": "kynät (“pens”) loses its plural -t before -ni: kynä + -ni = kynäni."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat minun kynätni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use kynäni."
+        },
+        {
+          "answers": ["Nämä ovat minun kynät."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat minun kynäsi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on minun kynäni."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e013",
+      "parallelExerciseId": "ppe-plural-objects-test-e014"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “These are his pillows.” Nämä ovat hänen ___. Use tyyny (“pillow”), tyynyt (“pillows”), and -nsä.",
+      "acceptedAnswers": ["tyynynsä"],
+      "explanation": "Remove plural -t before the owner ending: tyynyt + -nsä gives tyynynsä. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-tyyny",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his pillows.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsä."
+          },
+          {
+            "finnish": "tyynynsä.",
+            "meaning": "pillows",
+            "role": "possessed plural noun",
+            "baseForm": "tyyny",
+            "formation": "tyynyt (“pillows”) loses its plural -t before -nsä: tyyny + -nsä = tyynynsä."
+          }
+        ]
+      },
+      "options": ["tyynyt", "tyynyni", "tyynynsä", "tyynytnsä"],
+      "optionFeedback": {
+        "tyynynsä": "Correct: drop plural -t and attach -nsä.",
+        "tyynytnsä": "The plural -t disappears before a possessive suffix; use tyynynsä.",
+        "tyynyt": "This personal owner phrase needs its supplied ending -nsä; use tyynynsä.",
+        "tyynyni": "Keep the supplied ending -nsä for hänen; use tyynynsä."
+      },
+      "id": "ppe-plural-objects-test-e003",
+      "parallelExerciseId": "ppe-plural-objects-test-e004"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “These are my cats.” in Finnish. Begin with Nämä ovat. Keep minun (“my”). Use kissa (“cat”), kissat (“cats”), and -ni.",
+      "acceptedAnswers": ["Nämä ovat minun kissani."],
+      "explanation": "Nämä ovat identifies several things. The ending -ni identifies my ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-kissa",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my cats.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "kissani.",
+            "meaning": "cats",
+            "role": "possessed plural noun",
+            "baseForm": "kissa",
+            "formation": "kissat (“cats”) loses its plural -t before -ni: kissa + -ni = kissani."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat minun kissatni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use kissani."
+        },
+        {
+          "answers": ["Nämä ovat minun kissat."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat minun kissasi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on minun kissani."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e016",
+      "parallelExerciseId": "ppe-plural-objects-test-e015"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “These are your cats.” Nämä ovat sinun ___. Use kissa (“cat”), kissat (“cats”), and -si. Address one person.",
+      "acceptedAnswers": ["kissasi"],
+      "explanation": "Remove plural -t before the owner ending: kissat + -si gives kissasi. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-kissa",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your cats.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "kissasi.",
+            "meaning": "cats",
+            "role": "possessed plural noun",
+            "baseForm": "kissa",
+            "formation": "kissat (“cats”) loses its plural -t before -si: kissa + -si = kissasi."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["kissatsi"],
+          "category": "plural possessive formation",
+          "explanation": "The plural -t disappears before a possessive suffix; use kissasi."
+        },
+        {
+          "answers": ["kissat"],
+          "category": "plural possessive formation",
+          "explanation": "This personal owner phrase needs its supplied ending -si; use kissasi."
+        },
+        {
+          "answers": ["kissani"],
+          "category": "plural possessive formation",
+          "explanation": "Keep the supplied ending -si for sinun; use kissasi."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e011",
+      "parallelExerciseId": "ppe-plural-objects-test-e012"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “These are your pens.” Nämä ovat sinun ___. Use kynä (“pen”), kynät (“pens”), and -si. Address one person.",
+      "acceptedAnswers": ["kynäsi"],
+      "explanation": "Remove plural -t before the owner ending: kynät + -si gives kynäsi. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-kynä",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your pens.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "kynäsi.",
+            "meaning": "pens",
+            "role": "possessed plural noun",
+            "baseForm": "kynä",
+            "formation": "kynät (“pens”) loses its plural -t before -si: kynä + -si = kynäsi."
+          }
+        ]
+      },
+      "options": ["kynätsi", "kynät", "kynäni", "kynäsi"],
+      "optionFeedback": {
+        "kynäsi": "Correct: drop plural -t and attach -si.",
+        "kynätsi": "The plural -t disappears before a possessive suffix; use kynäsi.",
+        "kynät": "This personal owner phrase needs its supplied ending -si; use kynäsi.",
+        "kynäni": "Keep the supplied ending -si for sinun; use kynäsi."
+      },
+      "id": "ppe-plural-objects-test-e002",
+      "parallelExerciseId": "ppe-plural-objects-test-e001"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “These are my games.” Nämä ovat minun ___. Use peli (“game”), pelit (“games”), and -ni.",
+      "acceptedAnswers": ["pelini"],
+      "explanation": "Remove plural -t before the owner ending: pelit + -ni gives pelini. Nämä ovat still shows several things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-peli",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my games.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "pelini.",
+            "meaning": "games",
+            "role": "possessed plural noun",
+            "baseForm": "peli",
+            "formation": "pelit (“games”) loses its plural -t before -ni: peli + -ni = pelini."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["pelitni"],
+          "category": "plural possessive formation",
+          "explanation": "The plural -t disappears before a possessive suffix; use pelini."
+        },
+        {
+          "answers": ["pelit"],
+          "category": "plural possessive formation",
+          "explanation": "This personal owner phrase needs its supplied ending -ni; use pelini."
+        },
+        {
+          "answers": ["pelisi"],
+          "category": "plural possessive formation",
+          "explanation": "Keep the supplied ending -ni for minun; use pelini."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e010",
+      "parallelExerciseId": "ppe-plural-objects-test-e009"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “These are his games.” in Finnish. Begin with Nämä ovat. Keep hänen (“his”). Use peli (“game”), pelit (“games”), and -nsä.",
+      "acceptedAnswers": ["Nämä ovat hänen pelinsä."],
+      "explanation": "Nämä ovat identifies several things. The ending -nsä identifies his ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-peli",
+        "objects-plural"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his games.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsä."
+          },
+          {
+            "finnish": "pelinsä.",
+            "meaning": "games",
+            "role": "possessed plural noun",
+            "baseForm": "peli",
+            "formation": "pelit (“games”) loses its plural -t before -nsä: peli + -nsä = pelinsä."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat hänen pelitnsä."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -nsä: use pelinsä."
+        },
+        {
+          "answers": ["Nämä ovat hänen pelit."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -nsä even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat hänen pelini."],
+          "category": "wrong personal owner",
+          "explanation": "Hänen needs -nsä; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on hänen pelinsä."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-plural-objects-test-e015",
+      "parallelExerciseId": "ppe-plural-objects-test-e016"
+    }
+  ]
+}

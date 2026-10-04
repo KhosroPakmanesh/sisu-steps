@@ -1,12 +1,13 @@
 {
   "id": "ppe-personal-endings",
-  "version": "1.1.2",
-  "title": "My, your, our: -ni, -si, -mme, -nne",
-  "summary": "A possessive ending is a short ending on the noun that tells us its owner. For these regular singular nouns, attach -ni, -si, -mme, or -nne to the complete basic noun.",
+  "version": "1.2.0",
+  "title": "My and your endings: -ni, -si",
+  "summary": "Attach -ni for my and -si for your one-person ownership.",
   "stage": "focused",
   "targetSkills": ["First- and second-person possessive endings"],
   "prerequisiteSkills": ["Genitive personal owner forms"],
-  "introducedVocabulary": [
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
     {
       "finnish": "pallo",
       "english": "ball",
@@ -23,208 +24,142 @@
       "type": "word"
     },
     {
-      "finnish": "kissa",
-      "english": "cat",
+      "finnish": "kynä",
+      "english": "pen",
       "type": "word"
     },
     {
-      "finnish": "koira",
-      "english": "dog",
+      "finnish": "tyyny",
+      "english": "pillow",
       "type": "word"
     },
     {
-      "finnish": "talo",
-      "english": "house",
-      "type": "word"
-    },
-    {
-      "finnish": "omena",
-      "english": "apple",
+      "finnish": "peli",
+      "english": "game",
       "type": "word"
     }
   ],
-  "reusedVocabulary": [],
-  "suppliedVocabulary": [
-    {
-      "finnish": "palloni",
-      "english": "my ball",
-      "type": "word"
-    },
-    {
-      "finnish": "pallonne",
-      "english": "your ball",
-      "type": "word"
-    }
-  ],
+  "suppliedVocabulary": [],
   "objectives": [
-    "Attach -ni, -si, -mme, or -nne to match the owner.",
-    "Recognise the pattern, then produce it with the supporting words shown."
+    "Attach -ni for my and -si for your one-person ownership.",
+    "Apply this rule with the supporting forms shown."
   ],
   "sections": [
     {
       "title": "How the pattern works",
       "paragraphs": [
-        "A possessive ending is a short ending on the noun that tells us its owner. For these regular singular nouns, attach -ni, -si, -mme, or -nne to the complete basic noun.",
-        "Minun pallo + -ni = minun palloni; sinun kirja + -si = sinun kirjasi; meidän auto + -mme = meidän automme; teidän pallo + -nne = teidän pallonne. Keep the consonant doubles in -mme and -nne. The noun names one thing even when several people own it."
+        "A possessive ending is attached to the noun and identifies the owner. minun uses -ni; sinun uses -si.",
+        "pallo (“ball”) + -ni = palloni (“my ball”). Keep the ending as shown.",
+        "These tasks name one thing. Add the ending to the supplied basic noun. Do not remove the ending just because the owner pronoun is present."
       ],
-      "keyPoints": [
-        "My, your, our: -ni, -si, -mme, -nne",
-        "Practise one singular possessed thing with the supporting forms shown."
-      ]
+      "keyPoints": ["Attach -ni for my and -si for your one-person ownership."]
     }
   ],
   "examples": [
     {
-      "finnish": "minun palloni",
-      "english": "my ball",
+      "finnish": "Tämä on minun palloni.",
+      "english": "This is my ball.",
       "steps": [
-        "Minun (“my”) chooses the ending -ni.",
-        "Attach it to the complete basic word pallo (“ball”): pallo + -ni = palloni."
+        "Tämä on (“This is”) identifies one thing.",
+        "pallo (“ball”) + -ni = palloni.",
+        "Minun (“my”) selects the owner ending -ni."
       ]
     },
     {
-      "finnish": "sinun kirjasi",
-      "english": "your book",
+      "finnish": "Tämä on sinun kirjasi.",
+      "english": "This is your book.",
       "steps": [
-        "Sinun (“your”, one person) chooses -si.",
-        "Kirja (“book”) + -si = kirjasi; keep the final a before the ending."
+        "Tämä on (“This is”) identifies one thing.",
+        "kirja (“book”) + -si = kirjasi.",
+        "Sinun (“your”) selects the owner ending -si."
       ]
     },
     {
-      "finnish": "meidän automme",
-      "english": "our car",
+      "finnish": "Tämä on minun kynäni.",
+      "english": "This is my pen.",
       "steps": [
-        "Meidän (“our”) chooses -mme. Several owners can own one car.",
-        "Auto (“car”) + -mme = automme; keep both m letters."
+        "Tämä on (“This is”) identifies one thing.",
+        "kynä (“pen”) + -ni = kynäni.",
+        "Minun (“my”) selects the owner ending -ni."
       ]
     },
     {
-      "finnish": "teidän pallonne",
-      "english": "your ball",
+      "finnish": "Tämä on sinun pelisi.",
+      "english": "This is your game.",
       "steps": [
-        "Teidän (“your”, a group) chooses -nne.",
-        "Pallo (“ball”) + -nne = pallonne; keep both n letters, distinct from -ni."
-      ]
-    },
-    {
-      "finnish": "minun kissani",
-      "english": "my cat",
-      "steps": [
-        "Minun again chooses -ni, independently of the noun.",
-        "Kissa (“cat”) + -ni = kissani; retain the complete basic word."
-      ]
-    },
-    {
-      "finnish": "sinun koirasi",
-      "english": "your dog",
-      "steps": [
-        "Sinun again chooses -si for one owner addressed as “you”.",
-        "Koira (“dog”) + -si = koirasi."
-      ]
-    },
-    {
-      "finnish": "meidän talomme; teidän omenanne",
-      "english": "our house; your apple",
-      "steps": [
-        "Meidän (“our”) chooses -mme: talo (“house”) + -mme = talomme.",
-        "Teidän (“your”, a group) chooses -nne: omena (“apple”) + -nne = omenanne. The owner determines the ending, not the noun."
+        "Tämä on (“This is”) identifies one thing.",
+        "peli (“game”) + -si = pelisi.",
+        "Sinun (“your”) selects the owner ending -si."
       ]
     }
   ],
   "commonMistakes": [
-    "In these standard-written personal-owner phrases, keep the noun ending as well as the owner pronoun: minun palloni, rather than minun pallo.",
-    "Match the ending to the owner: -ni for minun, -si for sinun, -mme for meidän, and -nne for teidän.",
-    "Keep both consonants in -mme and -nne; the noun can still name one thing with several owners."
+    "Keep the possessive ending when the owner pronoun is visible.",
+    "Changing the ending changes the owner, not the number of things."
   ],
   "practiceExercises": [
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Optional practice: Write the noun in “our ball”: meidän ___. Use pallo (“ball”).",
-      "acceptedAnswers": ["pallomme"],
-      "explanation": "pallo + -mme = pallomme. Choose the ending matching meidän.",
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Optional practice: Complete “your game”: sinun ___. Use peli (“game”). Address one person.",
+      "acceptedAnswers": ["pelisi"],
+      "explanation": "Sinun selects -si: peli + -si = pelisi.",
       "tags": [
         "standard-written-finnish",
-        "owner-meidän",
-        "possessive-noun-pallo",
+        "owner-sinun",
+        "possessive-noun-peli",
+        "objects-singular",
         "lesson-practice"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings"
-      ],
+      "requiredSkills": ["First- and second-person possessive endings"],
       "vocabulary": [],
       "targetSkill": "First- and second-person possessive endings",
       "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
       "answerDiagnostics": [
         {
-          "answers": ["pallo"],
-          "category": "First- and second-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
+          "answers": ["pelini"],
+          "category": "wrong possessive ending",
+          "explanation": "Sinun selects -si: peli + -si = pelisi."
         }
       ],
       "id": "ppe-personal-endings-practice-01"
     },
     {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Optional practice: Write the noun in “my car”: minun ___. Use auto (“car”).",
-      "acceptedAnswers": ["autoni"],
-      "explanation": "auto + -ni = autoni. Choose the ending matching minun.",
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “my book” as a Finnish noun phrase. Keep minun. Use kirja (“book”).",
+      "acceptedAnswers": ["minun kirjani"],
+      "explanation": "Minun + kirjani means “my book”. Keep the owner before the noun.",
       "tags": [
         "standard-written-finnish",
         "owner-minun",
-        "possessive-noun-auto",
+        "possessive-noun-kirja",
+        "objects-singular",
         "lesson-practice"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings"
-      ],
+      "requiredSkills": ["First- and second-person possessive endings"],
       "vocabulary": [],
       "targetSkill": "First- and second-person possessive endings",
       "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["auto"],
-          "category": "First- and second-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
       "id": "ppe-personal-endings-practice-02"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Optional practice: Choose the noun in “your book”: teidän ___. Use kirja (“book”). Address a group.",
-      "acceptedAnswers": ["kirjanne"],
-      "explanation": "kirja + -nne = kirjanne. Choose the ending matching teidän.",
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Optional practice: Translate “sinun autosi” into English.",
+      "acceptedAnswers": ["your car"],
+      "explanation": "Sinun identifies your ownership; auto means “car”.",
       "tags": [
         "standard-written-finnish",
-        "owner-teidän",
-        "possessive-noun-kirja",
+        "owner-sinun",
+        "possessive-noun-auto",
+        "objects-singular",
         "lesson-practice"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings"
-      ],
-      "vocabulary": [],
+      "requiredSkills": ["First- and second-person possessive endings"],
+      "vocabulary": ["auto"],
       "targetSkill": "First- and second-person possessive endings",
       "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
-      "options": ["kirjanne", "kirja", "kirjani"],
-      "optionFeedback": {
-        "kirjanne": "kirja + -nne = kirjanne. Choose the ending matching teidän.",
-        "kirja": "A personal owner phrase needs a matching noun ending in standard written Finnish.",
-        "kirjani": "This ending does not match the requested owner or the noun’s vowel harmony."
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["kirja"],
-          "category": "First- and second-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
       "id": "ppe-personal-endings-practice-03"
     }
   ]

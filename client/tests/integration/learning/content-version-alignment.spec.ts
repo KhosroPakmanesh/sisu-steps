@@ -4,8 +4,130 @@ import { alignLearnerStateWithPacks } from '@/features/learning/shared/state/ali
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
 import { learningPack } from '@testing/helpers/unit/learning-content.fixture';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
+import { loadContentSource } from '../../../tools/content-source-loader.mjs';
 
 describe('content-pack version alignment', () => {
+  it('resets the six revised ownership packs and preserves other progress and owned notes', async () => {
+    const source = await loadContentSource('content');
+    const packs = source.packs as unknown as TopicPack[];
+    const oldVersions: Record<string, string> = {
+      'affirmative-possession': '1.2.0',
+      'negative-possession': '1.2.0',
+      'possession-questions': '1.2.0',
+      'negative-possession-questions': '1.2.0',
+      'possessive-pronouns-endings': '1.3.0',
+      'plural-ownership-possessive-endings': '1.0.0',
+    };
+    const state = createEmptyLearnerState(
+      Object.fromEntries(packs.map((pack) => [pack.id, oldVersions[pack.id] ?? pack.version])),
+    );
+    for (const pack of packs) {
+      const exercise = pack.tests[0].exercises[0];
+      state.attempts.push(completedAttempt(`${pack.id}-attempt`, pack.id, pack.tests[0].id));
+      state.sessions.push({
+        id: `${pack.id}-session`,
+        mode: 'test',
+        topicId: pack.id,
+        testId: pack.tests[0].id,
+        title: pack.title,
+        exerciseIds: [exercise.id],
+        currentIndex: 0,
+        answers: [],
+        startedAt: '2026-10-04T00:00:00.000Z',
+        updatedAt: '2026-10-04T00:00:00.000Z',
+      });
+      state.unresolvedMistakeIds.push(exercise.id);
+      state.correctionRecords.push({
+        exerciseId: exercise.id,
+        parallelExerciseId: exercise.parallelExerciseId!,
+        targetSkill: exercise.targetSkill!,
+        correctedAt: '2026-10-04T00:00:00.000Z',
+        nextReviewAt: '2026-10-05T00:00:00.000Z',
+        reviewStage: 0,
+        reviewAttempts: 0,
+      });
+      state.lessonCompletions.push({
+        lessonId: pack.lessons[0].id,
+        lessonVersion: pack.lessons[0].version,
+        completedAt: '2026-10-04T00:00:00.000Z',
+      });
+      state.learnerNotes.push({
+        topicId: pack.id,
+        lessonId: pack.lessons[0].id,
+        text: `Keep ${pack.title}`,
+        updatedAt: '2026-10-04T00:00:00.000Z',
+      });
+    }
+    const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
+    const compatible = new Set(
+      packs.filter((pack) => !oldVersions[pack.id]).map((pack) => pack.id),
+    );
+    expect(aligned.attempts).toEqual(
+      state.attempts.filter((attempt) => compatible.has(attempt.topicId)),
+    );
+    expect(aligned.sessions).toEqual(
+      state.sessions.filter((session) => compatible.has(session.topicId)),
+    );
+    expect(aligned.unresolvedMistakeIds).toHaveLength(10);
+    expect(aligned.correctionRecords).toHaveLength(10);
+    expect(aligned.lessonCompletions).toHaveLength(10);
+    expect(aligned.learnerNotes).toEqual(state.learnerNotes);
+    expect(aligned.contentPackVersions).toEqual(
+      Object.fromEntries(packs.map((pack) => [pack.id, pack.version])),
+    );
+    expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
+  });
+
+  it('resets only the rewritten real owner pack and retains other progress and owned notes', async () => {
+    const source = await loadContentSource('content');
+    const packs = source.packs as unknown as TopicPack[];
+    const revised = packs.find((pack) => pack.id === 'possessive-pronouns-endings')!;
+    const unchanged = packs.find((pack) => pack.id === 'affirmative-possession')!;
+    const state = createEmptyLearnerState(
+      Object.fromEntries(
+        packs
+          .filter((pack) => pack.id !== 'plural-ownership-possessive-endings')
+          .map((pack) => [pack.id, pack.id === revised.id ? '1.2.0' : pack.version]),
+      ),
+    );
+    state.attempts = [
+      completedAttempt('old-ownership', revised.id, revised.tests[0].id),
+      completedAttempt('kept-possession', unchanged.id, unchanged.tests[0].id),
+    ];
+    state.unresolvedMistakeIds = [
+      revised.tests[0].exercises[0].id,
+      unchanged.tests[0].exercises[0].id,
+    ];
+    state.lessonCompletions = [
+      {
+        lessonId: revised.lessons[0].id,
+        lessonVersion: '1.1.2',
+        completedAt: '2026-10-04T00:00:00.000Z',
+      },
+      {
+        lessonId: unchanged.lessons[0].id,
+        lessonVersion: unchanged.lessons[0].version,
+        completedAt: '2026-10-04T00:00:00.000Z',
+      },
+    ];
+    state.learnerNotes = [
+      {
+        topicId: revised.id,
+        lessonId: revised.lessons[0].id,
+        text: 'Keep my owner-form note.',
+        updatedAt: '2026-10-04T00:00:00.000Z',
+      },
+    ];
+    const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
+    expect(revised.version).toBe('1.4.0');
+    expect(aligned.attempts).toEqual([state.attempts[1]]);
+    expect(aligned.unresolvedMistakeIds).toEqual([state.unresolvedMistakeIds[1]]);
+    expect(aligned.lessonCompletions).toEqual([state.lessonCompletions[1]]);
+    expect(aligned.learnerNotes).toEqual(state.learnerNotes);
+    expect(aligned.contentPackVersions['plural-ownership-possessive-endings']).toBe('1.1.0');
+    expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
+  });
+
   it('resets all learner data when a stored pack is no longer supported', () => {
     const oldState = createEmptyLearnerState({
       topic: '1.0.0',

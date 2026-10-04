@@ -1,7 +1,7 @@
 {
   "id": "ppe-owner-forms-test",
-  "title": "Owner forms: minun, sinun, hänen, meidän, teidän, heidän",
-  "focus": "Finnish uses an owner form called the genitive before a personal possessive noun. Learn the six owner forms from their basic pronouns.",
+  "title": "Singular owner forms: minun, sinun, hänen",
+  "focus": "Use minun, sinun, hänen before a supplied possessed noun.",
   "stage": "focused",
   "targetSkills": ["Genitive personal owner forms"],
   "prerequisiteSkills": [],
@@ -9,190 +9,60 @@
   "exercises": [
     {
       "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the Finnish owner form meaning “my”.",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “my ball”: ___ palloni. Start from minä (“I”); palloni (“my ball”) is supplied.",
       "acceptedAnswers": ["minun"],
-      "explanation": "The owner form of minä is minun. This genitive pronoun tells whose thing it is.",
+      "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
       "tags": ["standard-written-finnish", "owner-minun"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "options": ["minun", "sinun", "hänen", "meidän", "teidän", "heidän"],
+      "options": ["minun", "minä", "kuka", "kenen"],
       "optionFeedback": {
-        "minun": "The owner form of minä is minun. This genitive pronoun tells whose thing it is.",
-        "sinun": "sinun means your for one person.",
-        "hänen": "hänen means his.",
-        "meidän": "meidän means our.",
-        "teidän": "teidän means your for a group.",
-        "heidän": "heidän means their."
+        "minun": "Correct: Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+        "minä": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+        "kuka": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+        "kenen": "Minä (“I”) becomes minun (“my”) before the supplied noun form."
       },
-      "answerDiagnostics": [
-        {
-          "answers": ["minä"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
       "id": "ppe-owner-forms-test-e001",
       "parallelExerciseId": "ppe-owner-forms-test-e002"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the Finnish owner form meaning “your”. Address one person.",
-      "acceptedAnswers": ["sinun"],
-      "explanation": "The owner form of sinä is sinun. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-sinun"],
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build the noun phrase “his ball”. Keep the owner pronoun.",
+      "acceptedAnswers": ["hänen pallonsa"],
+      "explanation": "Hänen + pallonsa means “his ball”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-hänen", "supplied-possessive-noun-pallonsa"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "options": ["minun", "sinun", "hänen", "meidän", "teidän", "heidän"],
-      "optionFeedback": {
-        "minun": "minun means my.",
-        "sinun": "The owner form of sinä is sinun. This genitive pronoun tells whose thing it is.",
-        "hänen": "hänen means his.",
-        "meidän": "meidän means our.",
-        "teidän": "teidän means your for a group.",
-        "heidän": "heidän means their."
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["sinä"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-owner-forms-test-e002",
-      "parallelExerciseId": "ppe-owner-forms-test-e001"
+      "tokens": ["pallonsa", "hänen"],
+      "id": "ppe-owner-forms-test-e019",
+      "parallelExerciseId": "ppe-owner-forms-test-e020"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the Finnish owner form meaning “his”.",
-      "acceptedAnswers": ["hänen"],
-      "explanation": "The owner form of hän is hänen. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-hänen"],
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “your pen” as a Finnish noun phrase. Keep sinun. Use kynäsi (“your pen”). Address one person.",
+      "acceptedAnswers": ["sinun kynäsi"],
+      "explanation": "Sinun + kynäsi means “your pen”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-sinun", "supplied-possessive-noun-kynäsi"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "options": ["minun", "sinun", "hänen", "meidän", "teidän", "heidän"],
-      "optionFeedback": {
-        "minun": "minun means my.",
-        "sinun": "sinun means your for one person.",
-        "hänen": "The owner form of hän is hänen. This genitive pronoun tells whose thing it is.",
-        "meidän": "meidän means our.",
-        "teidän": "teidän means your for a group.",
-        "heidän": "heidän means their."
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["hän"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-owner-forms-test-e003",
-      "parallelExerciseId": "ppe-owner-forms-test-e004"
-    },
-    {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the Finnish owner form meaning “our”.",
-      "acceptedAnswers": ["meidän"],
-      "explanation": "The owner form of me is meidän. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-meidän"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "options": ["minun", "sinun", "hänen", "meidän", "teidän", "heidän"],
-      "optionFeedback": {
-        "minun": "minun means my.",
-        "sinun": "sinun means your for one person.",
-        "hänen": "hänen means his.",
-        "meidän": "The owner form of me is meidän. This genitive pronoun tells whose thing it is.",
-        "teidän": "teidän means your for a group.",
-        "heidän": "heidän means their."
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["me"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-owner-forms-test-e004",
-      "parallelExerciseId": "ppe-owner-forms-test-e003"
-    },
-    {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the Finnish owner form meaning “your”. Address a group.",
-      "acceptedAnswers": ["teidän"],
-      "explanation": "The owner form of te is teidän. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-teidän"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "options": ["minun", "sinun", "hänen", "meidän", "teidän", "heidän"],
-      "optionFeedback": {
-        "minun": "minun means my.",
-        "sinun": "sinun means your for one person.",
-        "hänen": "hänen means his.",
-        "meidän": "meidän means our.",
-        "teidän": "The owner form of te is teidän. This genitive pronoun tells whose thing it is.",
-        "heidän": "heidän means their."
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["te"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-owner-forms-test-e005",
-      "parallelExerciseId": "ppe-owner-forms-test-e006"
-    },
-    {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the Finnish owner form meaning “their”.",
-      "acceptedAnswers": ["heidän"],
-      "explanation": "The owner form of he is heidän. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-heidän"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "options": ["minun", "sinun", "hänen", "meidän", "teidän", "heidän"],
-      "optionFeedback": {
-        "minun": "minun means my.",
-        "sinun": "sinun means your for one person.",
-        "hänen": "hänen means his.",
-        "meidän": "meidän means our.",
-        "teidän": "teidän means your for a group.",
-        "heidän": "The owner form of he is heidän. This genitive pronoun tells whose thing it is."
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["he"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-owner-forms-test-e006",
-      "parallelExerciseId": "ppe-owner-forms-test-e005"
+      "id": "ppe-owner-forms-test-e010",
+      "parallelExerciseId": "ppe-owner-forms-test-e009"
     },
     {
       "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the Finnish owner form meaning “my”.",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “my pillow”: ___ tyynyni. Start from minä (“I”); tyynyni (“my pillow”) is supplied.",
       "acceptedAnswers": ["minun"],
-      "explanation": "The owner form of minä is minun. This genitive pronoun tells whose thing it is.",
+      "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
       "tags": ["standard-written-finnish", "owner-minun"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
@@ -201,40 +71,107 @@
       "answerDiagnostics": [
         {
           "answers": ["minä"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-owner-forms-test-e007",
-      "parallelExerciseId": "ppe-owner-forms-test-e008"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the Finnish owner form meaning “your”. Address one person.",
-      "acceptedAnswers": ["sinun"],
-      "explanation": "The owner form of sinä is sinun. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-sinun"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["sinä"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
+          "category": "basic instead of owner form",
+          "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form."
         }
       ],
       "id": "ppe-owner-forms-test-e008",
       "parallelExerciseId": "ppe-owner-forms-test-e007"
     },
     {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “minun kynäni” into English.",
+      "acceptedAnswers": ["my pen"],
+      "explanation": "Minun identifies my ownership; kynä means “pen”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-minun",
+        "possessive-noun-kynä",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": ["kynä"],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "id": "ppe-owner-forms-test-e013",
+      "parallelExerciseId": "ppe-owner-forms-test-e014"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build the noun phrase “my pillow”. Keep the owner pronoun.",
+      "acceptedAnswers": ["minun tyynyni"],
+      "explanation": "Minun + tyynyni means “my pillow”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-minun", "supplied-possessive-noun-tyynyni"],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": [],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "tokens": ["tyynyni", "minun"],
+      "id": "ppe-owner-forms-test-e017",
+      "parallelExerciseId": "ppe-owner-forms-test-e018"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “your book”: ___ kirjasi. Start from sinä (“you”); kirjasi (“your book”) is supplied. Address one person.",
+      "acceptedAnswers": ["sinun"],
+      "explanation": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form.",
+      "tags": ["standard-written-finnish", "owner-sinun"],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": [],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "options": ["sinä", "kuka", "kenen", "sinun"],
+      "optionFeedback": {
+        "sinun": "Correct: Sinä (“you”) becomes sinun (“your”) before the supplied noun form.",
+        "sinä": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form.",
+        "kuka": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form.",
+        "kenen": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form."
+      },
+      "id": "ppe-owner-forms-test-e002",
+      "parallelExerciseId": "ppe-owner-forms-test-e001"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “his pillow” as a Finnish noun phrase. Keep hänen. Use tyynynsä (“his pillow”).",
+      "acceptedAnswers": ["hänen tyynynsä"],
+      "explanation": "Hänen + tyynynsä means “his pillow”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-hänen", "supplied-possessive-noun-tyynynsä"],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": [],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "id": "ppe-owner-forms-test-e011",
+      "parallelExerciseId": "ppe-owner-forms-test-e012"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “sinun tyynysi” into English.",
+      "acceptedAnswers": ["your pillow"],
+      "explanation": "Sinun identifies your ownership; tyyny means “pillow”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-sinun",
+        "possessive-noun-tyyny",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": ["tyyny"],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "id": "ppe-owner-forms-test-e014",
+      "parallelExerciseId": "ppe-owner-forms-test-e013"
+    },
+    {
       "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the Finnish owner form meaning “his”.",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his pen”: ___ kynänsä. Start from hän (“he/she”); kynänsä (“his pen”) is supplied.",
       "acceptedAnswers": ["hänen"],
-      "explanation": "The owner form of hän is hänen. This genitive pronoun tells whose thing it is.",
+      "explanation": "Hän (“he/she”) becomes hänen (“his”) before the supplied noun form.",
       "tags": ["standard-written-finnish", "owner-hänen"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
@@ -243,191 +180,192 @@
       "answerDiagnostics": [
         {
           "answers": ["hän"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
+          "category": "basic instead of owner form",
+          "explanation": "Hän (“he/she”) becomes hänen (“his”) before the supplied noun form."
         }
       ],
+      "id": "ppe-owner-forms-test-e007",
+      "parallelExerciseId": "ppe-owner-forms-test-e008"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “my car” as a Finnish noun phrase. Keep minun. Use autoni (“my car”).",
+      "acceptedAnswers": ["minun autoni"],
+      "explanation": "Minun + autoni means “my car”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-minun", "supplied-possessive-noun-autoni"],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": [],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
       "id": "ppe-owner-forms-test-e009",
       "parallelExerciseId": "ppe-owner-forms-test-e010"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his car”: ___ autonsa. Start from hän (“he/she”); autonsa (“his car”) is supplied.",
+      "acceptedAnswers": ["hänen"],
+      "explanation": "Hän (“he/she”) becomes hänen (“his”) before the supplied noun form.",
+      "tags": ["standard-written-finnish", "owner-hänen"],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": [],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "options": ["kuka", "kenen", "hänen", "hän"],
+      "optionFeedback": {
+        "hänen": "Correct: Hän (“he/she”) becomes hänen (“his”) before the supplied noun form.",
+        "hän": "Hän (“he/she”) becomes hänen (“his”) before the supplied noun form.",
+        "kuka": "Hän (“he/she”) becomes hänen (“his”) before the supplied noun form.",
+        "kenen": "Hän (“he/she”) becomes hänen (“his”) before the supplied noun form."
+      },
+      "id": "ppe-owner-forms-test-e003",
+      "parallelExerciseId": "ppe-owner-forms-test-e004"
+    },
+    {
       "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the Finnish owner form meaning “our”.",
-      "acceptedAnswers": ["meidän"],
-      "explanation": "The owner form of me is meidän. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-meidän"],
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “your car”: ___ autosi. Start from sinä (“you”); autosi (“your car”) is supplied. Address one person.",
+      "acceptedAnswers": ["sinun"],
+      "explanation": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form.",
+      "tags": ["standard-written-finnish", "owner-sinun"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
       "answerDiagnostics": [
         {
-          "answers": ["me"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
+          "answers": ["sinä"],
+          "category": "basic instead of owner form",
+          "explanation": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form."
         }
       ],
-      "id": "ppe-owner-forms-test-e010",
-      "parallelExerciseId": "ppe-owner-forms-test-e009"
+      "id": "ppe-owner-forms-test-e006",
+      "parallelExerciseId": "ppe-owner-forms-test-e005"
     },
     {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the Finnish owner form meaning “your”. Address a group.",
-      "acceptedAnswers": ["teidän"],
-      "explanation": "The owner form of te is teidän. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-teidän"],
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build the noun phrase “my book”. Keep the owner pronoun.",
+      "acceptedAnswers": ["minun kirjani"],
+      "explanation": "Minun + kirjani means “my book”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-minun", "supplied-possessive-noun-kirjani"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["te"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
+      "tokens": ["kirjani", "minun"],
+      "id": "ppe-owner-forms-test-e020",
+      "parallelExerciseId": "ppe-owner-forms-test-e019"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “minun palloni” into English.",
+      "acceptedAnswers": ["my ball"],
+      "explanation": "Minun identifies my ownership; pallo means “ball”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-minun",
+        "possessive-noun-pallo",
+        "objects-singular"
       ],
-      "id": "ppe-owner-forms-test-e011",
-      "parallelExerciseId": "ppe-owner-forms-test-e012"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the Finnish owner form meaning “their”.",
-      "acceptedAnswers": ["heidän"],
-      "explanation": "The owner form of he is heidän. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-heidän"],
       "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["he"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-owner-forms-test-e012",
-      "parallelExerciseId": "ppe-owner-forms-test-e011"
-    },
-    {
-      "type": "translation-en",
-      "instruction": "Write in English.",
-      "prompt": "Translate the owner form “minun” into English.",
-      "acceptedAnswers": ["my"],
-      "explanation": "This genitive personal pronoun identifies whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-minun", "english-answer"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "id": "ppe-owner-forms-test-e013",
-      "parallelExerciseId": "ppe-owner-forms-test-e014"
-    },
-    {
-      "type": "translation-en",
-      "instruction": "Write in English.",
-      "prompt": "Translate the owner form “hänen” into English. You may use “his” or “her”.",
-      "acceptedAnswers": ["his", "her", "his or her"],
-      "explanation": "This genitive personal pronoun identifies whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-hänen", "english-answer"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "id": "ppe-owner-forms-test-e014",
-      "parallelExerciseId": "ppe-owner-forms-test-e013"
-    },
-    {
-      "type": "translation-en",
-      "instruction": "Write in English.",
-      "prompt": "Translate the owner form “meidän” into English.",
-      "acceptedAnswers": ["our"],
-      "explanation": "This genitive personal pronoun identifies whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-meidän", "english-answer"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "id": "ppe-owner-forms-test-e015",
-      "parallelExerciseId": "ppe-owner-forms-test-e016"
-    },
-    {
-      "type": "translation-en",
-      "instruction": "Write in English.",
-      "prompt": "Translate the owner form “heidän” into English.",
-      "acceptedAnswers": ["their"],
-      "explanation": "This genitive personal pronoun identifies whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-heidän", "english-answer"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
+      "vocabulary": ["pallo"],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
       "id": "ppe-owner-forms-test-e016",
       "parallelExerciseId": "ppe-owner-forms-test-e015"
     },
     {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
-      "prompt": "Build “my ball”. The noun palloni (“my ball”) is supplied complete; place its owner pronoun first.",
-      "acceptedAnswers": ["minun palloni"],
-      "explanation": "Place the genitive owner pronoun before the supplied complete noun.",
-      "tags": ["standard-written-finnish", "owner-minun", "supplied-possessive-noun-palloni"],
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “my book”: ___ kirjani. Start from minä (“I”); kirjani (“my book”) is supplied.",
+      "acceptedAnswers": ["minun"],
+      "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+      "tags": ["standard-written-finnish", "owner-minun"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "tokens": ["palloni", "minun"],
-      "id": "ppe-owner-forms-test-e017",
-      "parallelExerciseId": "ppe-owner-forms-test-e018"
+      "answerDiagnostics": [
+        {
+          "answers": ["minä"],
+          "category": "basic instead of owner form",
+          "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form."
+        }
+      ],
+      "id": "ppe-owner-forms-test-e005",
+      "parallelExerciseId": "ppe-owner-forms-test-e006"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “my game” as a Finnish noun phrase. Keep minun. Use pelini (“my game”).",
+      "acceptedAnswers": ["minun pelini"],
+      "explanation": "Minun + pelini means “my game”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-minun", "supplied-possessive-noun-pelini"],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": [],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "id": "ppe-owner-forms-test-e012",
+      "parallelExerciseId": "ppe-owner-forms-test-e011"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “my pen”: ___ kynäni. Start from minä (“I”); kynäni (“my pen”) is supplied.",
+      "acceptedAnswers": ["minun"],
+      "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+      "tags": ["standard-written-finnish", "owner-minun"],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": [],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "options": ["kenen", "minun", "minä", "kuka"],
+      "optionFeedback": {
+        "minun": "Correct: Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+        "minä": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+        "kuka": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
+        "kenen": "Minä (“I”) becomes minun (“my”) before the supplied noun form."
+      },
+      "id": "ppe-owner-forms-test-e004",
+      "parallelExerciseId": "ppe-owner-forms-test-e003"
     },
     {
       "type": "word-order",
       "instruction": "Put the words in order.",
-      "prompt": "Build “your ball”. The noun pallosi (“your ball”) is supplied complete; place its owner pronoun first. Address one person.",
-      "acceptedAnswers": ["sinun pallosi"],
-      "explanation": "Place the genitive owner pronoun before the supplied complete noun.",
-      "tags": ["standard-written-finnish", "owner-sinun", "supplied-possessive-noun-pallosi"],
+      "prompt": "Build the noun phrase “your game”. Keep the owner pronoun. Address one person.",
+      "acceptedAnswers": ["sinun pelisi"],
+      "explanation": "Sinun + pelisi means “your game”. Keep the owner before the noun.",
+      "tags": ["standard-written-finnish", "owner-sinun", "supplied-possessive-noun-pelisi"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "tokens": ["pallosi", "sinun"],
+      "tokens": ["pelisi", "sinun"],
       "id": "ppe-owner-forms-test-e018",
       "parallelExerciseId": "ppe-owner-forms-test-e017"
     },
     {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
-      "prompt": "Build “our ball”. The noun pallomme (“our ball”) is supplied complete; place its owner pronoun first.",
-      "acceptedAnswers": ["meidän pallomme"],
-      "explanation": "Place the genitive owner pronoun before the supplied complete noun.",
-      "tags": ["standard-written-finnish", "owner-meidän", "supplied-possessive-noun-pallomme"],
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “hänen pelinsä” into English. Use “his” or “her”.",
+      "acceptedAnswers": ["his game", "her game", "his or her game"],
+      "explanation": "Hänen identifies his ownership; peli means “game”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-peli",
+        "objects-singular"
+      ],
       "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
+      "vocabulary": ["peli"],
       "targetSkill": "Genitive personal owner forms",
       "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "tokens": ["pallomme", "meidän"],
-      "id": "ppe-owner-forms-test-e019",
-      "parallelExerciseId": "ppe-owner-forms-test-e020"
-    },
-    {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
-      "prompt": "Build “your ball”. The noun pallonne (“your ball”) is supplied complete; place its owner pronoun first. Address a group.",
-      "acceptedAnswers": ["teidän pallonne"],
-      "explanation": "Place the genitive owner pronoun before the supplied complete noun.",
-      "tags": ["standard-written-finnish", "owner-teidän", "supplied-possessive-noun-pallonne"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "tokens": ["pallonne", "teidän"],
-      "id": "ppe-owner-forms-test-e020",
-      "parallelExerciseId": "ppe-owner-forms-test-e019"
+      "id": "ppe-owner-forms-test-e015",
+      "parallelExerciseId": "ppe-owner-forms-test-e016"
     }
   ]
 }

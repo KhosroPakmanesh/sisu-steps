@@ -1,3 +1,5 @@
+import { validatePack as validateOwnerNumbers } from './plural-ownership-possessive-endings.mjs';
+
 const MODES = new Map([
   ['affirmative-possession', 'affirmative'],
   ['negative-possession', 'negative'],
@@ -21,10 +23,10 @@ const ENDINGS = new Map([
 export function validateOwnershipPack(pack) {
   const mode = MODES.get(pack.id);
   if (!mode) return [];
-  const errors = [];
-  const counts = mode === 'possessive' ? [20, 20, 20, 20, 20, 20, 20, 28] : [24, 24, 24, 24];
+  const errors = mode === 'possessive' ? validateOwnerNumbers(pack) : [];
+  const counts = mode === 'possessive' ? [20, 20, 20, 20, 20, 20, 20, 20, 32] : [24, 24, 24, 24];
   if (
-    pack.version !== '1.2.0' ||
+    pack.version !== (mode === 'possessive' ? '1.4.0' : '1.3.0') ||
     pack.level !== '0 - A1.3' ||
     pack.tests.length !== counts.length ||
     pack.tests.some((test, index) => test.exercises.length !== counts[index])
@@ -32,7 +34,7 @@ export function validateOwnershipPack(pack) {
     errors.push(
       `${pack.id}: expanded ownership topology, level, and version must match the contract`,
     );
-  const focusedCount = mode === 'possessive' ? 7 : 3;
+  const focusedCount = mode === 'possessive' ? 8 : 3;
   if (
     pack.tests.some((test, index) => test.stage !== (index < focusedCount ? 'focused' : 'review'))
   ) {
@@ -207,19 +209,25 @@ function validatePossessives(exercise, surfaces, errors) {
       }
     }
   }
-  if (exercise.targetSkill === 'Whose questions with kenen') {
+  if (exercise.tags.includes('whose-question')) {
     for (const surface of surfaces) {
       const words = normalize(surface).split(' ');
       if (words.length === 1 && words[0] === 'kenen') continue;
+      const plural = exercise.tags.includes('objects-plural');
+      const nounForms = plural ? NOUNS.map((noun) => `${noun}t`) : NOUNS;
+      if (words.length === 1 && exercise.type === 'fill-blank' && nounForms.includes(words[0]))
+        continue;
+      const demonstrative = plural ? 'nämä' : 'tämä';
+      const noun = words[1] === demonstrative ? words[2] : words[1];
       if (
         words[0] !== 'kenen' ||
-        !NOUNS.includes(words[1]) ||
-        words[2] !== 'tämä' ||
-        words[3] !== 'on' ||
+        !nounForms.includes(noun) ||
+        !words.slice(1, 3).includes(demonstrative) ||
+        words[3] !== (plural ? 'ovat' : 'on') ||
         words.length !== 4
       ) {
         errors.push(
-          `${exercise.id}: Whose questions must keep kenen + basic singular noun + tämä on`,
+          `${exercise.id}: Whose questions must keep kenen + basic singular noun or unsuffixed plural noun and matching agreement`,
         );
       }
     }

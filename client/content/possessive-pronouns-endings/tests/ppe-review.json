@@ -1,7 +1,7 @@
 {
   "id": "ppe-review",
-  "title": "Possessive pronouns and endings review",
-  "focus": "Mix the forms and sentence patterns already taught in this pack.",
+  "title": "Singular owners and possessive endings review",
+  "focus": "Retrieve the eight taught rules with one or several owned things.",
   "stage": "review",
   "targetSkills": [
     "Genitive personal owner forms",
@@ -9,26 +9,437 @@
     "Shared third-person possessive endings",
     "Third-person possessive vowel harmony",
     "Simple ownership identity sentences",
+    "Plural possessed nouns in ownership sentences",
     "Possessive pronoun omission and clear reference",
     "Whose questions with kenen"
   ],
-  "prerequisiteSkills": [],
+  "prerequisiteSkills": [
+    "Genitive personal owner forms",
+    "First- and second-person possessive endings",
+    "Shared third-person possessive endings",
+    "Third-person possessive vowel harmony",
+    "Simple ownership identity sentences",
+    "Plural possessed nouns in ownership sentences",
+    "Possessive pronoun omission and clear reference",
+    "Whose questions with kenen"
+  ],
   "lessonIds": [
     "ppe-owner-forms",
     "ppe-personal-endings",
     "ppe-third-person",
     "ppe-harmony",
     "ppe-sentences",
+    "ppe-plural-objects",
     "ppe-pronoun-omission",
     "ppe-whose"
   ],
   "exercises": [
     {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “minun kissani” into English.",
+      "acceptedAnswers": ["my cat"],
+      "explanation": "Minun identifies my ownership; kissa means “cat”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-minun",
+        "possessive-noun-kissa",
+        "objects-singular"
+      ],
+      "requiredSkills": ["First- and second-person possessive endings"],
+      "vocabulary": ["kissa"],
+      "targetSkill": "First- and second-person possessive endings",
+      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
+      "id": "ppe-review-e007",
+      "parallelExerciseId": "ppe-review-e008"
+    },
+    {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
-      "prompt": "Write the Finnish owner form meaning “my”.",
+      "prompt": "Write “This is your house.” in Finnish. Begin with Tämä on. Address one person. Use talo (“house”).",
+      "acceptedAnswers": ["Tämä on sinun talosi.", "Tämä on talosi."],
+      "explanation": "Tämä on identifies one thing. The ending -si identifies your ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-talo",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Simple ownership identity sentences"],
+      "vocabulary": [],
+      "targetSkill": "Simple ownership identity sentences",
+      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is your house.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "talosi.",
+            "meaning": "house",
+            "role": "possessed singular noun",
+            "baseForm": "talo",
+            "formation": "talo (“house”) + -si = talosi. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Tämä on sinun talotsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use talosi."
+        },
+        {
+          "answers": ["Tämä on sinun talo."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on sinun taloni."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        }
+      ],
+      "id": "ppe-review-e018",
+      "parallelExerciseId": "ppe-review-e017"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Tämä on hänen pallonsa.” into English. You may use “his” or “her”.",
+      "acceptedAnswers": [
+        "This is his ball.",
+        "This is her ball.",
+        "This is his or her ball.",
+        "This ball is his.",
+        "This ball is hers.",
+        "This ball is his or hers."
+      ],
+      "explanation": "Tämä on means “This is”. The noun ending marks the owner; the demonstrative and verb reveal the number of things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-pallo",
+        "objects-singular",
+        "object-number-contrast"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": ["pallo"],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is his ball.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "pallonsa.",
+            "meaning": "ball",
+            "role": "possessed singular noun",
+            "baseForm": "pallo",
+            "formation": "pallo (“ball”) + -nsa = pallonsa. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "id": "ppe-review-e023",
+      "parallelExerciseId": "ppe-review-e024"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “his game” as a Finnish noun phrase. Keep hänen. Use peli (“game”).",
+      "acceptedAnswers": ["hänen pelinsä"],
+      "explanation": "Hänen + pelinsä means “his game”. Keep the owner before the noun.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-peli",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "id": "ppe-review-e014",
+      "parallelExerciseId": "ppe-review-e013"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose “This is my book.” Begin with Tämä on. Leave out minun; keep the noun ending. Use kirja (“book”).",
+      "acceptedAnswers": ["Tämä on kirjani."],
+      "explanation": "Tämä on identifies one thing. The ending -ni identifies my ownership. Minun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-kirja",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is my book.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "kirjani.",
+            "meaning": "my book",
+            "role": "possessed singular noun",
+            "baseForm": "kirja",
+            "formation": "kirja (“book”) + -ni = kirjani. The same possessed form can name one or several things; this sentence names one. The ending identifies the owner, so minun can be left out."
+          }
+        ]
+      },
+      "id": "ppe-review-e025",
+      "parallelExerciseId": "ppe-review-e026",
+      "options": [
+        "Tämä on kirjani.",
+        "Tämä on minun kirjani.",
+        "Tämä on kirjasi.",
+        "Tämä on kirja."
+      ],
+      "optionFeedback": {
+        "Tämä on kirjani.": "Tämä on identifies one thing. The ending -ni identifies my ownership. Minun can be omitted because the ending identifies the owner; the suffix stays.",
+        "Tämä on minun kirjani.": "This keeps minun; the task asks you to leave that owner pronoun out.",
+        "Tämä on kirjasi.": "This changes the owner. Keep -ni for the requested owner.",
+        "Tämä on kirja.": "This removes the possessive suffix. The suffix must remain when the owner pronoun is omitted."
+      }
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “minun kirjani” into English.",
+      "acceptedAnswers": ["my book"],
+      "explanation": "Minun identifies my ownership; kirja means “book”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-minun",
+        "possessive-noun-kirja",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": ["kirja"],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "id": "ppe-review-e004",
+      "parallelExerciseId": "ppe-review-e003"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “his book”: “hänen ___.” Use kirja (“book”).",
+      "acceptedAnswers": ["kirjansa"],
+      "explanation": "Hänen + kirjansa means “his book”. Keep the owner before the noun.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kirja",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Shared third-person possessive endings"],
+      "vocabulary": [],
+      "targetSkill": "Shared third-person possessive endings",
+      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
+      "id": "ppe-review-e010",
+      "parallelExerciseId": "ppe-review-e009",
+      "answerDiagnostics": [
+        {
+          "answers": ["kirja"],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the taught third-person -nsa ending on this back-vowel noun."
+        }
+      ]
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Answer “Kenen omenat nämä ovat?” with “These are your apples.” Begin with Nämä ovat. Use omena (“apple”). Address one person.",
+      "acceptedAnswers": ["Nämä ovat sinun omenasi.", "Nämä ovat omenasi."],
+      "explanation": "Nämä ovat identifies several things. The ending -si identifies your ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-omena",
+        "objects-plural",
+        "question-answer-transfer"
+      ],
+      "requiredSkills": [
+        "Whose questions with kenen",
+        "Plural possessed nouns in ownership sentences"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your apples.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "omenasi.",
+            "meaning": "apples",
+            "role": "possessed plural noun",
+            "baseForm": "omena",
+            "formation": "omenat (“apples”) loses its plural -t before -si: omena + -si = omenasi."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat sinun omenatsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use omenasi."
+        },
+        {
+          "answers": ["Nämä ovat sinun omenat."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat sinun omenani."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on sinun omenasi."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-review-e032",
+      "parallelExerciseId": "ppe-review-e031"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “sinun koirasi” into English.",
+      "acceptedAnswers": ["your dog"],
+      "explanation": "Sinun identifies your ownership; koira means “dog”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-sinun",
+        "possessive-noun-koira",
+        "objects-singular"
+      ],
+      "requiredSkills": ["First- and second-person possessive endings"],
+      "vocabulary": ["koira"],
+      "targetSkill": "First- and second-person possessive endings",
+      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
+      "id": "ppe-review-e008",
+      "parallelExerciseId": "ppe-review-e007"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his house”: hänen ___. Use talo (“house”).",
+      "acceptedAnswers": ["talonsa"],
+      "explanation": "Hänen selects -nsa: talo + -nsa = talonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-talo",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["talotnsa", "talonsa", "talonsä", "talo"],
+      "optionFeedback": {
+        "talonsa": "Correct: Hänen selects -nsa: talo + -nsa = talonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "talonsä": "Hänen selects -nsa: talo + -nsa = talonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "talo": "Hänen selects -nsa: talo + -nsa = talonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "talotnsa": "Hänen selects -nsa: talo + -nsa = talonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-review-e016",
+      "parallelExerciseId": "ppe-review-e015"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “my car”: ___ autoni. Start from minä (“I”); autoni (“my car”) is supplied.",
       "acceptedAnswers": ["minun"],
-      "explanation": "The owner form of minä is minun. This genitive pronoun tells whose thing it is.",
+      "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form.",
       "tags": ["standard-written-finnish", "owner-minun"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
@@ -37,271 +448,632 @@
       "answerDiagnostics": [
         {
           "answers": ["minä"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
+          "category": "basic instead of owner form",
+          "explanation": "Minä (“I”) becomes minun (“my”) before the supplied noun form."
         }
       ],
       "id": "ppe-review-e001",
-      "parallelExerciseId": "ppe-review-e008"
+      "parallelExerciseId": "ppe-review-e002"
     },
     {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “my pen”: minun ___. Use kynä (“pen”).",
-      "acceptedAnswers": ["kynäni"],
-      "explanation": "kynä + -ni = kynäni. Choose the ending matching minun.",
-      "tags": ["standard-written-finnish", "owner-minun", "possessive-noun-kynä"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "First- and second-person possessive endings",
-      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["kynä"],
-          "category": "First- and second-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e002",
-      "parallelExerciseId": "ppe-review-e009"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “his book”: hänen ___. Use kirja (“book”).",
-      "acceptedAnswers": ["kirjansa"],
-      "explanation": "kirja + -nsa = kirjansa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-kirja"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Shared third-person possessive endings",
-      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["kirja"],
-          "category": "Shared third-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e003",
-      "parallelExerciseId": "ppe-review-e010"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “his pillow”: hänen ___. Use tyyny (“pillow”).",
-      "acceptedAnswers": ["tyynynsä"],
-      "explanation": "tyyny takes -nsä: the front vowels ä, ö, y require -nsä when there is no back vowel. The owner pronoun does not decide vowel harmony.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-tyyny"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["tyyny"],
-          "category": "Third-person possessive vowel harmony: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e004",
-      "parallelExerciseId": "ppe-review-e011"
-    },
-    {
-      "type": "translation-en",
-      "instruction": "Write in English.",
-      "prompt": "Translate “Tämä on minun tyynyni.” into English.",
-      "acceptedAnswers": ["This is my pillow."],
-      "explanation": "Tämä on identifies this singular thing. The owner pronoun and suffix together give its owner.",
+      "prompt": "Write “These are my dogs.” in Finnish. Begin with Nämä ovat. Use koira (“dog”).",
+      "acceptedAnswers": ["Nämä ovat minun koirani.", "Nämä ovat koirani."],
+      "explanation": "Nämä ovat identifies several things. The ending -ni identifies my ownership.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "english-answer",
         "owner-minun",
-        "possessive-noun-tyyny"
+        "possessive-noun-koira",
+        "objects-plural"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences"
-      ],
-      "vocabulary": ["tämä", "tyyny"],
-      "targetSkill": "Simple ownership identity sentences",
-      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "This is my pillow.",
-        "pattern": "tämä + on + genitive owner pronoun + noun with matching possessive ending",
+        "translation": "These are my dogs.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
         "parts": [
           {
-            "finnish": "Tämä",
-            "meaning": "this",
-            "role": "thing being identified",
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
             "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
+            "formation": "Nämä is the plural of tämä: several things."
           },
           {
-            "finnish": "on",
-            "meaning": "is",
+            "finnish": "ovat",
+            "meaning": "are",
             "role": "linking verb",
             "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
+            "formation": "Use ovat with several things, independently of how many people own them."
           },
           {
             "finnish": "minun",
             "meaning": "my",
             "role": "owner pronoun",
             "baseForm": "minä",
-            "formation": "Use the learned genitive form: minun. Genitive means the form naming whose thing it is."
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
           },
           {
-            "finnish": "tyynyni.",
-            "meaning": "pillow",
-            "role": "possessed singular noun",
-            "baseForm": "tyyny",
-            "formation": "tyyny + -ni = tyynyni. The ending marks the owner, not several things."
+            "finnish": "koirani.",
+            "meaning": "dogs",
+            "role": "possessed plural noun",
+            "baseForm": "koira",
+            "formation": "koirat (“dogs”) loses its plural -t before -ni: koira + -ni = koirani."
           }
         ]
       },
-      "id": "ppe-review-e005",
-      "parallelExerciseId": "ppe-review-e012"
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat minun koiratni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use koirani."
+        },
+        {
+          "answers": ["Nämä ovat minun koirat."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat minun koirasi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on minun koirani."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-review-e021",
+      "parallelExerciseId": "ppe-review-e022"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “his ball”: “hänen ___.” Use pallo (“ball”).",
+      "acceptedAnswers": ["pallonsa"],
+      "explanation": "Hänen + pallonsa means “his ball”. Keep the owner before the noun.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-pallo",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Shared third-person possessive endings"],
+      "vocabulary": [],
+      "targetSkill": "Shared third-person possessive endings",
+      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
+      "id": "ppe-review-e009",
+      "parallelExerciseId": "ppe-review-e010",
+      "answerDiagnostics": [
+        {
+          "answers": ["pallo"],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the taught third-person -nsa ending on this back-vowel noun."
+        }
+      ]
     },
     {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
-      "prompt": "Write “This is your ball.” in Finnish. Use tämä (“this”), on (“is”), and sinun pallosi (“your ball”). The owner pronoun is optional. Address one person.",
-      "acceptedAnswers": ["Tämä on pallosi.", "Tämä on sinun pallosi."],
-      "explanation": "The ending on pallosi already identifies the owner, so both the pronoun-free and explicit-pronoun sentences are natural.",
+      "prompt": "Write “This is my apple.” in Finnish. Begin with Tämä on. Use omena (“apple”).",
+      "acceptedAnswers": ["Tämä on minun omenani.", "Tämä on omenani."],
+      "explanation": "Tämä on identifies one thing. The ending -ni identifies my ownership.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "owner-sinun",
-        "possessive-noun-pallo",
-        "person-sina"
+        "owner-minun",
+        "possessive-noun-omena",
+        "objects-singular"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference"
-      ],
+      "requiredSkills": ["Simple ownership identity sentences"],
       "vocabulary": [],
-      "targetSkill": "Possessive pronoun omission and clear reference",
-      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "targetSkill": "Simple ownership identity sentences",
+      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "This is your ball.",
-        "pattern": "tämä + on + noun with possessive ending",
+        "translation": "This is my apple.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
         "parts": [
           {
             "finnish": "Tämä",
             "meaning": "this",
             "role": "thing being identified",
             "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
+            "formation": "Tämä identifies one thing."
           },
           {
             "finnish": "on",
             "meaning": "is",
             "role": "linking verb",
             "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
+            "formation": "Use on with one thing, independently of how many people own it."
           },
           {
-            "finnish": "pallosi.",
-            "meaning": "your ball",
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "omenani.",
+            "meaning": "apple",
             "role": "possessed singular noun",
-            "baseForm": "pallo",
-            "formation": "pallo + -si = pallosi. The ending marks the owner, not several things."
+            "baseForm": "omena",
+            "formation": "omena (“apple”) + -ni = omenani. The same possessed form can name one or several things; this sentence names one."
           }
         ]
       },
       "answerDiagnostics": [
         {
-          "answers": ["Tämä on sinun pallo."],
-          "category": "Possessive pronoun omission and clear reference: predictable form error",
-          "explanation": "In standard written Finnish, omitting the pronoun is possible here; omitting the possessive noun ending is not."
+          "answers": ["Tämä on minun omenatni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use omenani."
+        },
+        {
+          "answers": ["Tämä on minun omena."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on minun omenasi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
         }
       ],
-      "id": "ppe-review-e006",
-      "parallelExerciseId": "ppe-review-e013"
+      "id": "ppe-review-e017",
+      "parallelExerciseId": "ppe-review-e018"
     },
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write “Whose ball is this?” in Finnish. Use pallo (“ball”), tämä (“this”), and on (“is”). Put the noun immediately after the question word.",
-      "acceptedAnswers": ["Kenen pallo tämä on?"],
-      "explanation": "Recall kenen for “whose”, then place the basic noun before tämä on. Keep the noun free of a personal possessive ending.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference",
-        "Whose questions with kenen"
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose “These are your cars.” Begin with Nämä ovat. Address one person. Leave out sinun; keep the noun ending. Use auto (“car”).",
+      "acceptedAnswers": ["Nämä ovat autosi."],
+      "explanation": "Nämä ovat identifies several things. The ending -si identifies your ownership. Sinun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-auto",
+        "objects-plural"
       ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your cars.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "autosi.",
+            "meaning": "your cars",
+            "role": "possessed plural noun",
+            "baseForm": "auto",
+            "formation": "autot (“cars”) loses its plural -t before -si: auto + -si = autosi. The ending identifies the owner, so sinun can be left out."
+          }
+        ]
+      },
+      "id": "ppe-review-e026",
+      "parallelExerciseId": "ppe-review-e025",
+      "options": [
+        "Nämä ovat autosi.",
+        "Nämä ovat sinun autosi.",
+        "Nämä ovat autoni.",
+        "Nämä ovat autot."
+      ],
+      "optionFeedback": {
+        "Nämä ovat autosi.": "Nämä ovat identifies several things. The ending -si identifies your ownership. Sinun can be omitted because the ending identifies the owner; the suffix stays.",
+        "Nämä ovat sinun autosi.": "This keeps sinun; the task asks you to leave that owner pronoun out.",
+        "Nämä ovat autoni.": "This changes the owner. Keep -si for the requested owner.",
+        "Nämä ovat autot.": "This removes the possessive suffix. The suffix must remain when the owner pronoun is omitted."
+      }
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “Whose cat is this?” using the tokens. Begin with Kenen.",
+      "acceptedAnswers": ["Kenen kissa tämä on?", "Kenen tämä kissa on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-kissa",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
       "vocabulary": [],
       "targetSkill": "Whose questions with kenen",
       "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "Whose ball is this?",
-        "pattern": "kenen + basic singular noun + tämä + on",
+        "translation": "Whose cat is this?",
+        "pattern": "kenen + basic noun + tämä + on",
         "parts": [
           {
             "finnish": "Kenen",
             "meaning": "whose",
             "role": "question about the owner",
             "baseForm": "kuka",
-            "formation": "Kuka means “who”; its learned genitive form kenen asks whose thing it is."
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
           },
           {
-            "finnish": "pallo",
-            "meaning": "ball",
-            "role": "thing whose owner is asked",
-            "baseForm": "pallo",
-            "formation": "Keep the noun in its basic singular form. Kenen is not a personal owner pronoun, so do not add a personal suffix."
+            "finnish": "kissa",
+            "meaning": "cat",
+            "role": "things whose owner is asked",
+            "baseForm": "kissa",
+            "formation": "Keep the basic singular noun without a personal suffix."
           },
           {
             "finnish": "tämä",
             "meaning": "this",
-            "role": "thing being identified",
+            "role": "things being identified",
             "baseForm": "tämä",
-            "formation": "Basic singular form meaning “this”."
+            "formation": "Tämä identifies one thing."
           },
           {
             "finnish": "on?",
             "meaning": "is",
             "role": "linking verb",
             "baseForm": "olla",
-            "formation": "On identifies the singular thing; the question begins with kenen rather than onko."
+            "formation": "Use on with singular tämä; ask whose with kenen."
           }
         ]
       },
-      "id": "ppe-review-e007",
-      "parallelExerciseId": "ppe-review-e014"
+      "id": "ppe-review-e029",
+      "parallelExerciseId": "ppe-review-e030",
+      "tokens": ["kissa", "tämä", "on?", "Kenen"]
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Nämä ovat hänen pallonsa.” into English. You may use “his” or “her”.",
+      "acceptedAnswers": [
+        "These are his balls.",
+        "These are her balls.",
+        "These are his or her balls.",
+        "These balls are his.",
+        "These balls are hers.",
+        "These balls are his or hers."
+      ],
+      "explanation": "Nämä ovat means “These are”. The noun ending marks the owner; the demonstrative and verb reveal the number of things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-pallo",
+        "objects-plural",
+        "object-number-contrast"
+      ],
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": ["pallo"],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his balls.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "pallonsa.",
+            "meaning": "balls",
+            "role": "possessed plural noun",
+            "baseForm": "pallo",
+            "formation": "pallot (“balls”) loses its plural -t before -nsa: pallo + -nsa = pallonsa."
+          }
+        ]
+      },
+      "id": "ppe-review-e024",
+      "parallelExerciseId": "ppe-review-e023"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “your apple”: sinun ___. Use omena (“apple”). Address one person.",
+      "acceptedAnswers": ["omenasi"],
+      "explanation": "Sinun selects -si: omena + -si = omenasi.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-sinun",
+        "possessive-noun-omena",
+        "objects-singular"
+      ],
+      "requiredSkills": ["First- and second-person possessive endings"],
+      "vocabulary": [],
+      "targetSkill": "First- and second-person possessive endings",
+      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["omenani"],
+          "category": "wrong possessive ending",
+          "explanation": "Sinun selects -si: omena + -si = omenasi."
+        }
+      ],
+      "id": "ppe-review-e006",
+      "parallelExerciseId": "ppe-review-e005"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his cat”: hänen ___. Use kissa (“cat”).",
+      "acceptedAnswers": ["kissansa"],
+      "explanation": "Hänen selects -nsa: kissa + -nsa = kissansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kissa",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["kissa", "kissatnsa", "kissansa", "kissansä"],
+      "optionFeedback": {
+        "kissansa": "Correct: Hänen selects -nsa: kissa + -nsa = kissansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kissansä": "Hänen selects -nsa: kissa + -nsa = kissansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kissa": "Hänen selects -nsa: kissa + -nsa = kissansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kissatnsa": "Hänen selects -nsa: kissa + -nsa = kissansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-review-e015",
+      "parallelExerciseId": "ppe-review-e016"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “This is my cat.” Begin with Tämä on. Keep minun.",
+      "acceptedAnswers": ["Tämä on minun kissani."],
+      "explanation": "Tämä on identifies one thing. The ending -ni identifies my ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-kissa",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Simple ownership identity sentences"],
+      "vocabulary": [],
+      "targetSkill": "Simple ownership identity sentences",
+      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is my cat.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "kissani.",
+            "meaning": "cat",
+            "role": "possessed singular noun",
+            "baseForm": "kissa",
+            "formation": "kissa (“cat”) + -ni = kissani. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "tokens": ["kissani.", "minun", "on", "Tämä"],
+      "id": "ppe-review-e020",
+      "parallelExerciseId": "ppe-review-e019"
     },
     {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
-      "prompt": "Write the Finnish owner form meaning “your”. Address one person.",
+      "prompt": "Answer “Kenen talo tämä on?” with “This is my house.” Begin with Tämä on. Use talo (“house”).",
+      "acceptedAnswers": ["Tämä on minun taloni.", "Tämä on taloni."],
+      "explanation": "Tämä on identifies one thing. The ending -ni identifies my ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-talo",
+        "objects-singular",
+        "question-answer-transfer"
+      ],
+      "requiredSkills": ["Whose questions with kenen", "Simple ownership identity sentences"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is my house.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "taloni.",
+            "meaning": "house",
+            "role": "possessed singular noun",
+            "baseForm": "talo",
+            "formation": "talo (“house”) + -ni = taloni. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Tämä on minun talotni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use taloni."
+        },
+        {
+          "answers": ["Tämä on minun talo."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on minun talosi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        }
+      ],
+      "id": "ppe-review-e031",
+      "parallelExerciseId": "ppe-review-e032"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “hänen pallonsa” into English. Use “his” or “her”.",
+      "acceptedAnswers": ["his ball", "her ball", "his or her ball"],
+      "explanation": "Hänen identifies his ownership; pallo means “ball”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-pallo",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Shared third-person possessive endings"],
+      "vocabulary": ["pallo"],
+      "targetSkill": "Shared third-person possessive endings",
+      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
+      "id": "ppe-review-e011",
+      "parallelExerciseId": "ppe-review-e012"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose “These are his balls.” Keep the owner clear. Use pallo (“ball”).",
+      "acceptedAnswers": ["Nämä ovat hänen pallonsa."],
+      "explanation": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-pallo",
+        "objects-plural",
+        "owner-reference"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "options": [
+        "Nämä ovat minun palloni.",
+        "Nämä ovat hänen pallot.",
+        "Nämä ovat hänen pallonsa.",
+        "Nämä ovat pallonsa."
+      ],
+      "optionFeedback": {
+        "Nämä ovat hänen pallonsa.": "Correct: Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+        "Nämä ovat pallonsa.": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+        "Nämä ovat minun palloni.": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+        "Nämä ovat hänen pallot.": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner."
+      },
+      "sentenceExplanation": {
+        "translation": "These are his balls.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "pallonsa.",
+            "meaning": "balls",
+            "role": "possessed plural noun",
+            "baseForm": "pallo",
+            "formation": "pallot (“balls”) loses its plural -t before -nsa: pallo + -nsa = pallonsa."
+          }
+        ]
+      },
+      "id": "ppe-review-e027",
+      "parallelExerciseId": "ppe-review-e028"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “your ball”: ___ pallosi. Start from sinä (“you”); pallosi (“your ball”) is supplied. Address one person.",
       "acceptedAnswers": ["sinun"],
-      "explanation": "The owner form of sinä is sinun. This genitive pronoun tells whose thing it is.",
+      "explanation": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form.",
       "tags": ["standard-written-finnish", "owner-sinun"],
       "requiredSkills": ["Genitive personal owner forms"],
       "vocabulary": [],
@@ -310,795 +1082,347 @@
       "answerDiagnostics": [
         {
           "answers": ["sinä"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
+          "category": "basic instead of owner form",
+          "explanation": "Sinä (“you”) becomes sinun (“your”) before the supplied noun form."
         }
       ],
-      "id": "ppe-review-e008",
+      "id": "ppe-review-e002",
       "parallelExerciseId": "ppe-review-e001"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “your pillow”: sinun ___. Use tyyny (“pillow”). Address one person.",
-      "acceptedAnswers": ["tyynysi"],
-      "explanation": "tyyny + -si = tyynysi. Choose the ending matching sinun.",
-      "tags": ["standard-written-finnish", "owner-sinun", "possessive-noun-tyyny"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "First- and second-person possessive endings",
-      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["tyyny"],
-          "category": "First- and second-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e009",
-      "parallelExerciseId": "ppe-review-e002"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “their car”: heidän ___. Use auto (“car”).",
-      "acceptedAnswers": ["autonsa"],
-      "explanation": "auto + -nsa = autonsa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-auto"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Shared third-person possessive endings",
-      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["auto"],
-          "category": "Shared third-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e010",
-      "parallelExerciseId": "ppe-review-e003"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “their pen”: heidän ___. Use kynä (“pen”).",
-      "acceptedAnswers": ["kynänsä"],
-      "explanation": "kynä takes -nsä: the front vowels ä, ö, y require -nsä when there is no back vowel. The owner pronoun does not decide vowel harmony.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-kynä"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["kynä"],
-          "category": "Third-person possessive vowel harmony: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e011",
-      "parallelExerciseId": "ppe-review-e004"
     },
     {
       "type": "translation-en",
       "instruction": "Write in English.",
-      "prompt": "Translate “Tämä on sinun pelisi.” into English. Address one person.",
-      "acceptedAnswers": ["This is your game."],
-      "explanation": "Tämä on identifies this singular thing. The owner pronoun and suffix together give its owner.",
+      "prompt": "Translate “hänen kirjansa” into English. Use “his” or “her”.",
+      "acceptedAnswers": ["his book", "her book", "his or her book"],
+      "explanation": "Hänen identifies his ownership; kirja means “book”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kirja",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Shared third-person possessive endings"],
+      "vocabulary": ["kirja"],
+      "targetSkill": "Shared third-person possessive endings",
+      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
+      "id": "ppe-review-e012",
+      "parallelExerciseId": "ppe-review-e011"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “These are your cats.” in Finnish. Begin with Nämä ovat. Address one person. Use kissa (“cat”).",
+      "acceptedAnswers": ["Nämä ovat sinun kissasi.", "Nämä ovat kissasi."],
+      "explanation": "Nämä ovat identifies several things. The ending -si identifies your ownership.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "english-answer",
         "owner-sinun",
-        "possessive-noun-peli",
-        "person-sina"
+        "possessive-noun-kissa",
+        "objects-plural"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences"
-      ],
-      "vocabulary": ["tämä", "peli"],
-      "targetSkill": "Simple ownership identity sentences",
-      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
+      "requiredSkills": ["Plural possessed nouns in ownership sentences"],
+      "vocabulary": [],
+      "targetSkill": "Plural possessed nouns in ownership sentences",
+      "misconceptionCategory": "Plural possessed nouns in ownership sentences: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "This is your game.",
-        "pattern": "tämä + on + genitive owner pronoun + noun with matching possessive ending",
+        "translation": "These are your cats.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
         "parts": [
           {
-            "finnish": "Tämä",
-            "meaning": "this",
-            "role": "thing being identified",
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
             "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
+            "formation": "Nämä is the plural of tämä: several things."
           },
           {
-            "finnish": "on",
-            "meaning": "is",
+            "finnish": "ovat",
+            "meaning": "are",
             "role": "linking verb",
             "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
+            "formation": "Use ovat with several things, independently of how many people own them."
           },
           {
             "finnish": "sinun",
             "meaning": "your",
             "role": "owner pronoun",
             "baseForm": "sinä",
-            "formation": "Use the learned genitive form: sinun. Genitive means the form naming whose thing it is."
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
           },
           {
-            "finnish": "pelisi.",
-            "meaning": "game",
-            "role": "possessed singular noun",
-            "baseForm": "peli",
-            "formation": "peli + -si = pelisi. The ending marks the owner, not several things."
+            "finnish": "kissasi.",
+            "meaning": "cats",
+            "role": "possessed plural noun",
+            "baseForm": "kissa",
+            "formation": "kissat (“cats”) loses its plural -t before -si: kissa + -si = kissasi."
           }
         ]
       },
-      "id": "ppe-review-e012",
-      "parallelExerciseId": "ppe-review-e005"
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat sinun kissatsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use kissasi."
+        },
+        {
+          "answers": ["Nämä ovat sinun kissat."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat sinun kissani."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on sinun kissasi."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-review-e022",
+      "parallelExerciseId": "ppe-review-e021"
     },
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write “This is your book.” in Finnish. Use tämä (“this”), on (“is”), and teidän kirjanne (“your book”). The owner pronoun is optional. Address a group.",
-      "acceptedAnswers": ["Tämä on kirjanne.", "Tämä on teidän kirjanne."],
-      "explanation": "The ending on kirjanne already identifies the owner, so both the pronoun-free and explicit-pronoun sentences are natural.",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “This is his dog.” Begin with Tämä on. Keep hänen.",
+      "acceptedAnswers": ["Tämä on hänen koiransa."],
+      "explanation": "Tämä on identifies one thing. The ending -nsa identifies his ownership.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "owner-teidän",
-        "possessive-noun-kirja",
-        "person-te"
+        "owner-hänen",
+        "possessive-noun-koira",
+        "objects-singular"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference"
-      ],
+      "requiredSkills": ["Simple ownership identity sentences"],
       "vocabulary": [],
-      "targetSkill": "Possessive pronoun omission and clear reference",
-      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "targetSkill": "Simple ownership identity sentences",
+      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "This is your book.",
-        "pattern": "tämä + on + noun with possessive ending",
+        "translation": "This is his dog.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
         "parts": [
           {
             "finnish": "Tämä",
             "meaning": "this",
             "role": "thing being identified",
             "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
+            "formation": "Tämä identifies one thing."
           },
           {
             "finnish": "on",
             "meaning": "is",
             "role": "linking verb",
             "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
+            "formation": "Use on with one thing, independently of how many people own it."
           },
           {
-            "finnish": "kirjanne.",
-            "meaning": "your book",
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "koiransa.",
+            "meaning": "dog",
             "role": "possessed singular noun",
-            "baseForm": "kirja",
-            "formation": "kirja + -nne = kirjanne. The ending marks the owner, not several things."
+            "baseForm": "koira",
+            "formation": "koira (“dog”) + -nsa = koiransa. The same possessed form can name one or several things; this sentence names one."
           }
         ]
       },
+      "tokens": ["koiransa.", "hänen", "on", "Tämä"],
+      "id": "ppe-review-e019",
+      "parallelExerciseId": "ppe-review-e020"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose “These are his pens.” Keep the owner clear. Use kynä (“pen”).",
+      "acceptedAnswers": ["Nämä ovat hänen kynänsä."],
+      "explanation": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kynä",
+        "objects-plural",
+        "owner-reference"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "options": [
+        "Nämä ovat hänen kynät.",
+        "Nämä ovat hänen kynänsä.",
+        "Nämä ovat kynänsä.",
+        "Nämä ovat minun kynäni."
+      ],
+      "optionFeedback": {
+        "Nämä ovat hänen kynänsä.": "Correct: Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+        "Nämä ovat kynänsä.": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+        "Nämä ovat minun kynäni.": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner.",
+        "Nämä ovat hänen kynät.": "Retain hänen to identify the intended owner in this identification pattern; the shared third-person suffix alone does not identify that owner."
+      },
+      "sentenceExplanation": {
+        "translation": "These are his pens.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsä."
+          },
+          {
+            "finnish": "kynänsä.",
+            "meaning": "pens",
+            "role": "possessed plural noun",
+            "baseForm": "kynä",
+            "formation": "kynät (“pens”) loses its plural -t before -nsä: kynä + -nsä = kynänsä."
+          }
+        ]
+      },
+      "id": "ppe-review-e028",
+      "parallelExerciseId": "ppe-review-e027"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “hänen tyynynsä” into English. Use “his” or “her”.",
+      "acceptedAnswers": ["his pillow", "her pillow", "his or her pillow"],
+      "explanation": "Hänen identifies his ownership; tyyny means “pillow”.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-tyyny",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Genitive personal owner forms"],
+      "vocabulary": ["tyyny"],
+      "targetSkill": "Genitive personal owner forms",
+      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
+      "id": "ppe-review-e003",
+      "parallelExerciseId": "ppe-review-e004"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “Whose dogs are these?” using the tokens. Begin with Kenen.",
+      "acceptedAnswers": ["Kenen koirat nämä ovat?", "Kenen nämä koirat ovat?"],
+      "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-koira",
+        "objects-plural",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose dogs are these?",
+        "pattern": "kenen + unsuffixed plural noun + nämä + ovat",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "koirat",
+            "meaning": "dogs",
+            "role": "things whose owner is asked",
+            "baseForm": "koira",
+            "formation": "koira + -t = koirat. No personal owner is named, so keep -t and add no personal possessive suffix."
+          },
+          {
+            "finnish": "nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä and identifies several things."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with plural nämä; begin the owner question with kenen, without onko."
+          }
+        ]
+      },
+      "id": "ppe-review-e030",
+      "parallelExerciseId": "ppe-review-e029",
+      "tokens": ["koirat", "nämä", "ovat?", "Kenen"]
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “my house”: minun ___. Use talo (“house”).",
+      "acceptedAnswers": ["taloni"],
+      "explanation": "Minun selects -ni: talo + -ni = taloni.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-minun",
+        "possessive-noun-talo",
+        "objects-singular"
+      ],
+      "requiredSkills": ["First- and second-person possessive endings"],
+      "vocabulary": [],
+      "targetSkill": "First- and second-person possessive endings",
+      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
       "answerDiagnostics": [
         {
-          "answers": ["Tämä on teidän kirja."],
-          "category": "Possessive pronoun omission and clear reference: predictable form error",
-          "explanation": "In standard written Finnish, omitting the pronoun is possible here; omitting the possessive noun ending is not."
+          "answers": ["talosi"],
+          "category": "wrong possessive ending",
+          "explanation": "Minun selects -ni: talo + -ni = taloni."
         }
       ],
-      "id": "ppe-review-e013",
+      "id": "ppe-review-e005",
       "parallelExerciseId": "ppe-review-e006"
     },
     {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
-      "prompt": "Write “Whose book is this?” in Finnish. Use kirja (“book”), tämä (“this”), and on (“is”). Put the noun immediately after the question word.",
-      "acceptedAnswers": ["Kenen kirja tämä on?"],
-      "explanation": "Recall kenen for “whose”, then place the basic noun before tämä on. Keep the noun free of a personal possessive ending.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference",
-        "Whose questions with kenen"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Whose questions with kenen",
-      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "Whose book is this?",
-        "pattern": "kenen + basic singular noun + tämä + on",
-        "parts": [
-          {
-            "finnish": "Kenen",
-            "meaning": "whose",
-            "role": "question about the owner",
-            "baseForm": "kuka",
-            "formation": "Kuka means “who”; its learned genitive form kenen asks whose thing it is."
-          },
-          {
-            "finnish": "kirja",
-            "meaning": "book",
-            "role": "thing whose owner is asked",
-            "baseForm": "kirja",
-            "formation": "Keep the noun in its basic singular form. Kenen is not a personal owner pronoun, so do not add a personal suffix."
-          },
-          {
-            "finnish": "tämä",
-            "meaning": "this",
-            "role": "thing being identified",
-            "baseForm": "tämä",
-            "formation": "Basic singular form meaning “this”."
-          },
-          {
-            "finnish": "on?",
-            "meaning": "is",
-            "role": "linking verb",
-            "baseForm": "olla",
-            "formation": "On identifies the singular thing; the question begins with kenen rather than onko."
-          }
-        ]
-      },
-      "id": "ppe-review-e014",
-      "parallelExerciseId": "ppe-review-e007"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the Finnish owner form meaning “his”.",
-      "acceptedAnswers": ["hänen"],
-      "explanation": "The owner form of hän is hänen. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-hänen"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["hän"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-review-e015",
-      "parallelExerciseId": "ppe-review-e022"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “our pen”: meidän ___. Use kynä (“pen”).",
-      "acceptedAnswers": ["kynämme"],
-      "explanation": "kynä + -mme = kynämme. Choose the ending matching meidän.",
-      "tags": ["standard-written-finnish", "owner-meidän", "possessive-noun-kynä"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "First- and second-person possessive endings",
-      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["kynä"],
-          "category": "First- and second-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e016",
-      "parallelExerciseId": "ppe-review-e023"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “his ball”: hänen ___. Use pallo (“ball”).",
-      "acceptedAnswers": ["pallonsa"],
-      "explanation": "pallo + -nsa = pallonsa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-pallo"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Shared third-person possessive endings",
-      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["pallo"],
-          "category": "Shared third-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e017",
-      "parallelExerciseId": "ppe-review-e024"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “his car”: hänen ___. Use auto (“car”).",
-      "acceptedAnswers": ["autonsa"],
-      "explanation": "auto takes -nsa: a, o, or u requires the back-vowel -nsa ending. The owner pronoun does not decide vowel harmony.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-auto"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["auto"],
-          "category": "Third-person possessive vowel harmony: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e018",
-      "parallelExerciseId": "ppe-review-e025"
-    },
-    {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
-      "prompt": "Build “This is our pillow.” Keep the owner pronoun. Use meidän tyynymme (“our pillow”), tämä (“this”), and on (“is”).",
-      "acceptedAnswers": ["Tämä on meidän tyynymme."],
-      "explanation": "Place the complete owner phrase after Tämä on; keep its pronoun before the noun.",
-      "tags": ["standard-written-finnish", "sentence", "owner-meidän", "possessive-noun-tyyny"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Simple ownership identity sentences",
-      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
-      "tokens": ["meidän", "tyynymme.", "Tämä", "on"],
-      "sentenceExplanation": {
-        "translation": "This is our pillow.",
-        "pattern": "tämä + on + genitive owner pronoun + noun with matching possessive ending",
-        "parts": [
-          {
-            "finnish": "Tämä",
-            "meaning": "this",
-            "role": "thing being identified",
-            "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
-          },
-          {
-            "finnish": "on",
-            "meaning": "is",
-            "role": "linking verb",
-            "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
-          },
-          {
-            "finnish": "meidän",
-            "meaning": "our",
-            "role": "owner pronoun",
-            "baseForm": "me",
-            "formation": "Use the learned genitive form: meidän. Genitive means the form naming whose thing it is."
-          },
-          {
-            "finnish": "tyynymme.",
-            "meaning": "pillow",
-            "role": "possessed singular noun",
-            "baseForm": "tyyny",
-            "formation": "tyyny + -mme = tyynymme. The ending marks the owner, not several things."
-          }
-        ]
-      },
-      "id": "ppe-review-e019",
-      "parallelExerciseId": "ppe-review-e026"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write “This is my car.” in Finnish. Use tämä (“this”), on (“is”), and minun autoni (“my car”). The owner pronoun is optional.",
-      "acceptedAnswers": ["Tämä on autoni.", "Tämä on minun autoni."],
-      "explanation": "The ending on autoni already identifies the owner, so both the pronoun-free and explicit-pronoun sentences are natural.",
-      "tags": ["standard-written-finnish", "sentence", "owner-minun", "possessive-noun-auto"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Possessive pronoun omission and clear reference",
-      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "This is my car.",
-        "pattern": "tämä + on + noun with possessive ending",
-        "parts": [
-          {
-            "finnish": "Tämä",
-            "meaning": "this",
-            "role": "thing being identified",
-            "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
-          },
-          {
-            "finnish": "on",
-            "meaning": "is",
-            "role": "linking verb",
-            "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
-          },
-          {
-            "finnish": "autoni.",
-            "meaning": "my car",
-            "role": "possessed singular noun",
-            "baseForm": "auto",
-            "formation": "auto + -ni = autoni. The ending marks the owner, not several things."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Tämä on minun auto."],
-          "category": "Possessive pronoun omission and clear reference: predictable form error",
-          "explanation": "In standard written Finnish, omitting the pronoun is possible here; omitting the possessive noun ending is not."
-        }
-      ],
-      "id": "ppe-review-e020",
-      "parallelExerciseId": "ppe-review-e027"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write “Whose pen is this?” in Finnish. Use kynä (“pen”), tämä (“this”), and on (“is”). Put the noun immediately after the question word.",
-      "acceptedAnswers": ["Kenen kynä tämä on?"],
-      "explanation": "Recall kenen for “whose”, then place the basic noun before tämä on. Keep the noun free of a personal possessive ending.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference",
-        "Whose questions with kenen"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Whose questions with kenen",
-      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "Whose pen is this?",
-        "pattern": "kenen + basic singular noun + tämä + on",
-        "parts": [
-          {
-            "finnish": "Kenen",
-            "meaning": "whose",
-            "role": "question about the owner",
-            "baseForm": "kuka",
-            "formation": "Kuka means “who”; its learned genitive form kenen asks whose thing it is."
-          },
-          {
-            "finnish": "kynä",
-            "meaning": "pen",
-            "role": "thing whose owner is asked",
-            "baseForm": "kynä",
-            "formation": "Keep the noun in its basic singular form. Kenen is not a personal owner pronoun, so do not add a personal suffix."
-          },
-          {
-            "finnish": "tämä",
-            "meaning": "this",
-            "role": "thing being identified",
-            "baseForm": "tämä",
-            "formation": "Basic singular form meaning “this”."
-          },
-          {
-            "finnish": "on?",
-            "meaning": "is",
-            "role": "linking verb",
-            "baseForm": "olla",
-            "formation": "On identifies the singular thing; the question begins with kenen rather than onko."
-          }
-        ]
-      },
-      "id": "ppe-review-e021",
-      "parallelExerciseId": "ppe-review-e028"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the Finnish owner form meaning “their”.",
-      "acceptedAnswers": ["heidän"],
-      "explanation": "The owner form of he is heidän. This genitive pronoun tells whose thing it is.",
-      "tags": ["standard-written-finnish", "owner-heidän"],
-      "requiredSkills": ["Genitive personal owner forms"],
-      "vocabulary": [],
-      "targetSkill": "Genitive personal owner forms",
-      "misconceptionCategory": "Genitive personal owner forms: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["he"],
-          "category": "Genitive personal owner forms: predictable form error",
-          "explanation": "Use the genitive owner form, not the basic personal pronoun."
-        }
-      ],
-      "id": "ppe-review-e022",
-      "parallelExerciseId": "ppe-review-e015"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “your pillow”: teidän ___. Use tyyny (“pillow”). Address a group.",
-      "acceptedAnswers": ["tyynynne"],
-      "explanation": "tyyny + -nne = tyynynne. Choose the ending matching teidän.",
-      "tags": ["standard-written-finnish", "owner-teidän", "possessive-noun-tyyny"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "First- and second-person possessive endings",
-      "misconceptionCategory": "First- and second-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["tyyny"],
-          "category": "First- and second-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e023",
-      "parallelExerciseId": "ppe-review-e016"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “their book”: heidän ___. Use kirja (“book”).",
-      "acceptedAnswers": ["kirjansa"],
-      "explanation": "kirja + -nsa = kirjansa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-kirja"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Shared third-person possessive endings",
-      "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["kirja"],
-          "category": "Shared third-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e024",
-      "parallelExerciseId": "ppe-review-e017"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write the noun in “their game”: heidän ___. Use peli (“game”).",
-      "acceptedAnswers": ["pelinsä"],
-      "explanation": "peli takes -nsä: only neutral e and i take the front-vowel -nsä ending. The owner pronoun does not decide vowel harmony.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-peli"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["peli"],
-          "category": "Third-person possessive vowel harmony: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
-      "id": "ppe-review-e025",
-      "parallelExerciseId": "ppe-review-e018"
-    },
-    {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
-      "prompt": "Build “This is your pen.” Keep the owner pronoun. Use teidän kynänne (“your pen”), tämä (“this”), and on (“is”). Address a group.",
-      "acceptedAnswers": ["Tämä on teidän kynänne."],
-      "explanation": "Place the complete owner phrase after Tämä on; keep its pronoun before the noun.",
+      "prompt": "Write “his pen” as a Finnish noun phrase. Keep hänen. Use kynä (“pen”).",
+      "acceptedAnswers": ["hänen kynänsä"],
+      "explanation": "Hänen + kynänsä means “his pen”. Keep the owner before the noun.",
       "tags": [
         "standard-written-finnish",
-        "sentence",
-        "owner-teidän",
+        "owner-hänen",
         "possessive-noun-kynä",
-        "person-te"
+        "objects-singular"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences"
-      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
-      "targetSkill": "Simple ownership identity sentences",
-      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
-      "tokens": ["teidän", "kynänne.", "Tämä", "on"],
-      "sentenceExplanation": {
-        "translation": "This is your pen.",
-        "pattern": "tämä + on + genitive owner pronoun + noun with matching possessive ending",
-        "parts": [
-          {
-            "finnish": "Tämä",
-            "meaning": "this",
-            "role": "thing being identified",
-            "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
-          },
-          {
-            "finnish": "on",
-            "meaning": "is",
-            "role": "linking verb",
-            "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
-          },
-          {
-            "finnish": "teidän",
-            "meaning": "your",
-            "role": "owner pronoun",
-            "baseForm": "te",
-            "formation": "Use the learned genitive form: teidän. Genitive means the form naming whose thing it is."
-          },
-          {
-            "finnish": "kynänne.",
-            "meaning": "pen",
-            "role": "possessed singular noun",
-            "baseForm": "kynä",
-            "formation": "kynä + -nne = kynänne. The ending marks the owner, not several things."
-          }
-        ]
-      },
-      "id": "ppe-review-e026",
-      "parallelExerciseId": "ppe-review-e019"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write “This is our pillow.” in Finnish. Use tämä (“this”), on (“is”), and meidän tyynymme (“our pillow”). The owner pronoun is optional.",
-      "acceptedAnswers": ["Tämä on tyynymme.", "Tämä on meidän tyynymme."],
-      "explanation": "The ending on tyynymme already identifies the owner, so both the pronoun-free and explicit-pronoun sentences are natural.",
-      "tags": ["standard-written-finnish", "sentence", "owner-meidän", "possessive-noun-tyyny"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Possessive pronoun omission and clear reference",
-      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "This is our pillow.",
-        "pattern": "tämä + on + noun with possessive ending",
-        "parts": [
-          {
-            "finnish": "Tämä",
-            "meaning": "this",
-            "role": "thing being identified",
-            "baseForm": "tämä",
-            "formation": "Tämä is the supplied basic singular word for “this”."
-          },
-          {
-            "finnish": "on",
-            "meaning": "is",
-            "role": "linking verb",
-            "baseForm": "olla",
-            "formation": "Olla uses on because the thing being identified is singular; the owner can still be plural."
-          },
-          {
-            "finnish": "tyynymme.",
-            "meaning": "our pillow",
-            "role": "possessed singular noun",
-            "baseForm": "tyyny",
-            "formation": "tyyny + -mme = tyynymme. The ending marks the owner, not several things."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Tämä on meidän tyyny."],
-          "category": "Possessive pronoun omission and clear reference: predictable form error",
-          "explanation": "In standard written Finnish, omitting the pronoun is possible here; omitting the possessive noun ending is not."
-        }
-      ],
-      "id": "ppe-review-e027",
-      "parallelExerciseId": "ppe-review-e020"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Write “Whose game is this?” in Finnish. Use peli (“game”), tämä (“this”), and on (“is”). Put the noun immediately after the question word.",
-      "acceptedAnswers": ["Kenen peli tämä on?"],
-      "explanation": "Recall kenen for “whose”, then place the basic noun before tämä on. Keep the noun free of a personal possessive ending.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony",
-        "Simple ownership identity sentences",
-        "Possessive pronoun omission and clear reference",
-        "Whose questions with kenen"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Whose questions with kenen",
-      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "Whose game is this?",
-        "pattern": "kenen + basic singular noun + tämä + on",
-        "parts": [
-          {
-            "finnish": "Kenen",
-            "meaning": "whose",
-            "role": "question about the owner",
-            "baseForm": "kuka",
-            "formation": "Kuka means “who”; its learned genitive form kenen asks whose thing it is."
-          },
-          {
-            "finnish": "peli",
-            "meaning": "game",
-            "role": "thing whose owner is asked",
-            "baseForm": "peli",
-            "formation": "Keep the noun in its basic singular form. Kenen is not a personal owner pronoun, so do not add a personal suffix."
-          },
-          {
-            "finnish": "tämä",
-            "meaning": "this",
-            "role": "thing being identified",
-            "baseForm": "tämä",
-            "formation": "Basic singular form meaning “this”."
-          },
-          {
-            "finnish": "on?",
-            "meaning": "is",
-            "role": "linking verb",
-            "baseForm": "olla",
-            "formation": "On identifies the singular thing; the question begins with kenen rather than onko."
-          }
-        ]
-      },
-      "id": "ppe-review-e028",
-      "parallelExerciseId": "ppe-review-e021"
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "id": "ppe-review-e013",
+      "parallelExerciseId": "ppe-review-e014"
     }
   ]
 }

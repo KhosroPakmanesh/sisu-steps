@@ -10,6 +10,7 @@ import {
 import { validateLessonSectionResponsibilities } from './lesson-section-quality.mjs';
 import { validateOwnershipLessonExamples } from './ownership-lesson-examples.mjs';
 import { validateGrammarVocabulary } from './grammar-vocabulary.mjs';
+import { validateOwnershipQuestionVariety } from './ownership-question-variety.mjs';
 
 export async function validatePackContent(pack) {
   const allowedTypes = new Set([
@@ -35,6 +36,7 @@ export async function validatePackContent(pack) {
       .join('|')}`;
   const scoredFingerprints = new Set(exercises.map(exerciseFingerprint));
   const errors = [];
+  errors.push(...validateOwnershipQuestionVariety(pack));
   const hasTextArray = (value) =>
     Array.isArray(value) && value.every((item) => typeof item === 'string' && item.trim());
   const promptContainsMeaning = (prompt, meaning) => {
@@ -420,6 +422,7 @@ export async function validatePackContent(pack) {
       ['possession-questions', 'ownership'],
       ['negative-possession-questions', 'ownership'],
       ['possessive-pronouns-endings', 'ownership'],
+      ['plural-ownership-possessive-endings', 'ownership'],
     ]);
     const validatorFamily = validatorFamilies.get(pack.id);
     const specificValidatorPath = resolve(

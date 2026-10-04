@@ -1,31 +1,15 @@
 {
   "id": "ppe-third-person",
-  "version": "1.1.2",
-  "title": "His, her, their: the shared third-person ending",
-  "summary": "His, her, and their use the same third-person possessive ending. With the back-vowel nouns pallo, kirja, and auto, that ending is -nsa.",
+  "version": "1.2.0",
+  "title": "His and her ending: -nsa",
+  "summary": "Use hänen with -nsa on the supplied back-vowel nouns.",
   "stage": "focused",
   "targetSkills": ["Shared third-person possessive endings"],
   "prerequisiteSkills": [
     "Genitive personal owner forms",
     "First- and second-person possessive endings"
   ],
-  "introducedVocabulary": [],
-  "reusedVocabulary": [
-    {
-      "finnish": "pallo",
-      "english": "ball",
-      "type": "word"
-    },
-    {
-      "finnish": "kirja",
-      "english": "book",
-      "type": "word"
-    },
-    {
-      "finnish": "auto",
-      "english": "car",
-      "type": "word"
-    },
+  "introducedVocabulary": [
     {
       "finnish": "kissa",
       "english": "cat",
@@ -47,155 +31,150 @@
       "type": "word"
     }
   ],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    }
+  ],
   "suppliedVocabulary": [],
   "objectives": [
-    "Use the same noun ending for his, her, and their while keeping the owner clear.",
-    "Recognise the pattern, then produce it with the supporting words shown."
+    "Use hänen with -nsa on the supplied back-vowel nouns.",
+    "Apply this rule with the supporting forms shown."
   ],
   "sections": [
     {
       "title": "How the pattern works",
       "paragraphs": [
-        "His, her, and their use the same third-person possessive ending. With the back-vowel nouns pallo, kirja, and auto, that ending is -nsa.",
-        "Hänen pallonsa means “his ball” or “her ball”; heidän pallonsa means “their ball”. The owner pronoun distinguishes one third-person owner from several; the noun ending alone does not. Keep the owner pronoun in these basic phrases."
+        "Hänen means “his” or “her”. On nouns containing back vowels a, o, or u, add -nsa: hänen pallonsa (“his ball”).",
+        "This third-person ending is shared by one third-person owner and several third-person owners. The owner pronoun identifies which meaning is intended; the ending alone does not count owners.",
+        "Keep the owner pronoun in the identification phrases taught here. The next lesson teaches when -nsä replaces -nsa; this lesson uses back-vowel nouns only."
       ],
-      "keyPoints": [
-        "His, her, their: the shared third-person ending",
-        "Practise one singular possessed thing with the supporting forms shown."
-      ]
+      "keyPoints": ["Use hänen with -nsa on the supplied back-vowel nouns."]
     }
   ],
   "examples": [
     {
-      "finnish": "hänen pallonsa",
-      "english": "his or her ball",
+      "finnish": "Tämä on hänen pallonsa.",
+      "english": "This is his ball.",
       "steps": [
-        "Hänen names one owner: “his” or “her”.",
-        "Pallo (“ball”) + -nsa = pallonsa. Use this third-person ending for either gender."
+        "Tämä on (“This is”) identifies one thing.",
+        "pallo (“ball”) + -nsa = pallonsa.",
+        "Hänen (“his”) selects the owner ending -nsa."
       ]
     },
     {
-      "finnish": "heidän pallonsa",
-      "english": "their ball",
+      "finnish": "Tämä on hänen autonsa.",
+      "english": "This is his car.",
       "steps": [
-        "Heidän names several owners: “their”.",
-        "Pallo (“ball”) + -nsa = pallonsa, exactly the same noun form as with hänen. The pronoun distinguishes the owners."
+        "Tämä on (“This is”) identifies one thing.",
+        "auto (“car”) + -nsa = autonsa.",
+        "Hänen (“his”) selects the owner ending -nsa."
       ]
     },
     {
-      "finnish": "hänen autonsa",
-      "english": "his or her car",
+      "finnish": "Tämä on hänen kissansa.",
+      "english": "This is his cat.",
       "steps": [
-        "Choose hänen for a single third-person owner.",
-        "Auto (“car”) + -nsa = autonsa; changing the noun does not create a gender-specific ending."
-      ]
-    },
-    {
-      "finnish": "heidän kirjansa",
-      "english": "their book",
-      "steps": [
-        "Choose heidän for several third-person owners.",
-        "Kirja (“book”) + -nsa = kirjansa; keep the owner pronoun to express “their”."
+        "Tämä on (“This is”) identifies one thing.",
+        "kissa (“cat”) + -nsa = kissansa.",
+        "Hänen (“his”) selects the owner ending -nsa."
       ]
     }
   ],
   "commonMistakes": [
-    "Hänen and heidän use the same noun ending: hänen pallonsa and heidän pallonsa. The pronoun distinguishes one owner from several.",
-    "Keep the owner pronoun in these phrases; pallonsa alone does not distinguish his/her from their.",
-    "Do not replace the shared third-person ending with a first- or second-person ending."
+    "Retain hänen in the identification phrases taught here.",
+    "The shared third-person ending does not count owners."
   ],
   "practiceExercises": [
     {
       "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Optional practice: Write the noun in “their car”: heidän ___. Use auto (“car”).",
-      "acceptedAnswers": ["autonsa"],
-      "explanation": "auto + -nsa = autonsa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Optional practice: Complete “his ball”: hänen ___. Use pallo (“ball”).",
+      "acceptedAnswers": ["pallonsa"],
+      "explanation": "Hänen selects -nsa: pallo + -nsa = pallonsa.",
       "tags": [
         "standard-written-finnish",
-        "owner-heidän",
-        "possessive-noun-auto",
+        "owner-hänen",
+        "possessive-noun-pallo",
+        "objects-singular",
         "lesson-practice"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings"
-      ],
+      "requiredSkills": ["Shared third-person possessive endings"],
       "vocabulary": [],
       "targetSkill": "Shared third-person possessive endings",
       "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
       "answerDiagnostics": [
         {
-          "answers": ["auto"],
-          "category": "Shared third-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
+          "answers": ["palloni"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsa: pallo + -nsa = pallonsa."
         }
       ],
       "id": "ppe-third-person-practice-01"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Optional practice: Choose the noun in “his book”: hänen ___. Use kirja (“book”).",
-      "acceptedAnswers": ["kirjansa"],
-      "explanation": "kirja + -nsa = kirjansa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “his apple” as a Finnish noun phrase. Keep hänen. Use omena (“apple”).",
+      "acceptedAnswers": ["hänen omenansa"],
+      "explanation": "Hänen + omenansa means “his apple”. Keep the owner before the noun.",
       "tags": [
         "standard-written-finnish",
         "owner-hänen",
-        "possessive-noun-kirja",
+        "possessive-noun-omena",
+        "objects-singular",
         "lesson-practice"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings"
-      ],
+      "requiredSkills": ["Shared third-person possessive endings"],
       "vocabulary": [],
       "targetSkill": "Shared third-person possessive endings",
       "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
-      "options": ["kirjansa", "kirja", "kirjani"],
-      "optionFeedback": {
-        "kirjansa": "kirja + -nsa = kirjansa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
-        "kirja": "A personal owner phrase needs a matching noun ending in standard written Finnish.",
-        "kirjani": "This ending does not match the requested owner or the noun’s vowel harmony."
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["kirja"],
-          "category": "Shared third-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
       "id": "ppe-third-person-practice-02"
     },
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Optional practice: Write the noun in “their ball”: heidän ___. Use pallo (“ball”).",
-      "acceptedAnswers": ["pallonsa"],
-      "explanation": "pallo + -nsa = pallonsa. Hänen and heidän share the same noun ending; keep the owner pronoun to distinguish the owners.",
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Optional practice: Translate “hänen autonsa” into English. Use “his” or “her”.",
+      "acceptedAnswers": ["his car", "her car", "his or her car"],
+      "explanation": "Hänen identifies his ownership; auto means “car”.",
       "tags": [
         "standard-written-finnish",
-        "owner-heidän",
-        "possessive-noun-pallo",
+        "owner-hänen",
+        "possessive-noun-auto",
+        "objects-singular",
         "lesson-practice"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings"
-      ],
-      "vocabulary": [],
+      "requiredSkills": ["Shared third-person possessive endings"],
+      "vocabulary": ["auto"],
       "targetSkill": "Shared third-person possessive endings",
       "misconceptionCategory": "Shared third-person possessive endings: form or meaning confused",
-      "answerDiagnostics": [
-        {
-          "answers": ["pallo"],
-          "category": "Shared third-person possessive endings: predictable form error",
-          "explanation": "Keep the basic noun and add its possessive ending. The owner pronoun does not replace that ending."
-        }
-      ],
       "id": "ppe-third-person-practice-03"
     }
   ]

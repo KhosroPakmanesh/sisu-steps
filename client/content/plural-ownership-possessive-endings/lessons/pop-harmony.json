@@ -1,0 +1,213 @@
+{
+  "id": "pop-harmony",
+  "version": "1.0.0",
+  "title": "Their endings: choosing -nsa or -nsä",
+  "summary": "Choose the third-person suffix vowel from back, front, and neutral-only noun bases.",
+  "stage": "focused",
+  "targetSkills": ["Third-person possessive vowel harmony"],
+  "prerequisiteSkills": ["Shared third-person possessive endings"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Choose the third-person suffix vowel from back, front, and neutral-only noun bases.",
+    "Apply this rule with the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "How the pattern works",
+      "paragraphs": [
+        "Vowel harmony chooses the vowel in the third-person ending. A noun containing back a, o, or u uses -nsa: auto → autonsa, kirja → kirjansa.",
+        "A noun with front ä, ö, or y and no back vowel uses -nsä: kynä → kynänsä, tyyny → tyynynsä. Neutral e and i do not change an existing back/front choice.",
+        "A noun containing only neutral e/i uses the front ending: peli → pelinsä. Look at the noun, not the owner pronoun or the number of owners.",
+        "In each form retain heidän; it identifies the owner. Keep the noun base unchanged for these regular singular forms."
+      ],
+      "keyPoints": [
+        "Choose the third-person suffix vowel from back, front, and neutral-only noun bases."
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Tämä on heidän autonsa.",
+      "english": "This is their car.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "auto (“car”) + -nsa = autonsa.",
+        "Heidän (“their”) selects the owner ending -nsa."
+      ]
+    },
+    {
+      "finnish": "Tämä on heidän kynänsä.",
+      "english": "This is their pen.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "kynä (“pen”) + -nsä = kynänsä.",
+        "Heidän (“their”) selects the owner ending -nsä."
+      ]
+    },
+    {
+      "finnish": "Tämä on heidän kirjansa.",
+      "english": "This is their book.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "kirja (“book”) + -nsa = kirjansa.",
+        "Heidän (“their”) selects the owner ending -nsa."
+      ]
+    },
+    {
+      "finnish": "Tämä on heidän tyynynsä.",
+      "english": "This is their pillow.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "tyyny (“pillow”) + -nsä = tyynynsä.",
+        "Heidän (“their”) selects the owner ending -nsä."
+      ]
+    },
+    {
+      "finnish": "Tämä on heidän pelinsä.",
+      "english": "This is their game.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "peli (“game”) + -nsä = pelinsä.",
+        "Heidän (“their”) selects the owner ending -nsä."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Check the noun vowels, not the owner pronoun.",
+    "Neutral-only peli takes pelinsä, with ä."
+  ],
+  "practiceExercises": [
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Optional practice: Complete “their cat”: heidän kissans___. Write only a or ä. Use kissa (“cat”).",
+      "acceptedAnswers": ["a"],
+      "explanation": "Heidän selects -nsa: kissa + -nsa = kissansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-heidän",
+        "possessive-noun-kissa",
+        "objects-singular",
+        "possessive-ending-vowel",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["ä"],
+          "category": "wrong possessive ending",
+          "explanation": "Heidän selects -nsa: kissa + -nsa = kissansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "pop-harmony-practice-01"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Optional practice: Complete “their dog”: heidän ___. Use koira (“dog”).",
+      "acceptedAnswers": ["koiransa"],
+      "explanation": "Heidän selects -nsa: koira + -nsa = koiransa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-heidän",
+        "possessive-noun-koira",
+        "objects-singular",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["koiransä"],
+          "category": "wrong possessive ending",
+          "explanation": "Heidän selects -nsa: koira + -nsa = koiransa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "pop-harmony-practice-02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Optional practice: Choose the Finnish noun phrase “their dog”. Use heidän and koira (“dog”).",
+      "acceptedAnswers": ["heidän koiransa"],
+      "explanation": "Heidän selects -nsa: koira + -nsa = koiransa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-heidän",
+        "possessive-noun-koira",
+        "objects-singular",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["heidän koira", "heidän koiratnsa", "heidän koiransa", "heidän koiransä"],
+      "optionFeedback": {
+        "heidän koiransa": "Correct: Heidän selects -nsa: koira + -nsa = koiransa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "heidän koiransä": "Heidän selects -nsa: koira + -nsa = koiransa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "heidän koira": "Heidän selects -nsa: koira + -nsa = koiransa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "heidän koiratnsa": "Heidän selects -nsa: koira + -nsa = koiransa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "pop-harmony-practice-03"
+    }
+  ]
+}

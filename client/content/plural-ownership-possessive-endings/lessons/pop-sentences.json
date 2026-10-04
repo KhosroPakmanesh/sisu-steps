@@ -1,0 +1,297 @@
+{
+  "id": "pop-sentences",
+  "version": "1.0.0",
+  "title": "One owned thing: Tämä on …",
+  "summary": "Identify one owned thing with Tämä on and the already learned owner endings.",
+  "stage": "focused",
+  "targetSkills": ["Simple ownership identity sentences"],
+  "prerequisiteSkills": [
+    "First- and second-person possessive endings",
+    "Third-person possessive vowel harmony"
+  ],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Identify one owned thing with Tämä on and the already learned owner endings.",
+    "Apply this rule with the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "How the pattern works",
+      "paragraphs": [
+        "Tämä means “this”, on means “is”: Tämä on identifies one thing. Put the owner phrase after that frame.",
+        "Tämä on meidän pallomme means “This is our ball.” Use the endings already learned: meidän (“our”) selects -mme; teidän (“your”) selects -nne; heidän (“their”) selects -nsa.",
+        "The thing being identified determines on or ovat. Even when several people own one ball, the one-ball frame remains Tämä on. Tasks show whether one person or a group is addressed as “you”."
+      ],
+      "keyPoints": ["Identify one owned thing with Tämä on and the already learned owner endings."]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Tämä on meidän pallomme.",
+      "english": "This is our ball.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "pallo (“ball”) + -mme = pallomme.",
+        "Meidän (“our”) selects the owner ending -mme."
+      ]
+    },
+    {
+      "finnish": "Tämä on teidän kirjanne.",
+      "english": "This is your book.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "kirja (“book”) + -nne = kirjanne.",
+        "Teidän (“your”) selects the owner ending -nne."
+      ]
+    },
+    {
+      "finnish": "Tämä on heidän autonsa.",
+      "english": "This is their car.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "auto (“car”) + -nsa = autonsa.",
+        "Heidän (“their”) selects the owner ending -nsa."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Use on for one thing, regardless of owner number.",
+    "Keep the noun ending after the personal owner."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “This is your apple.” in Finnish. Begin with Tämä on. Address a group. Use omena (“apple”).",
+      "acceptedAnswers": ["Tämä on teidän omenanne.", "Tämä on omenanne."],
+      "explanation": "Tämä on identifies one thing. The ending -nne identifies your ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-teidän",
+        "possessive-noun-omena",
+        "objects-singular",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Simple ownership identity sentences"],
+      "vocabulary": [],
+      "targetSkill": "Simple ownership identity sentences",
+      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is your apple.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "teidän",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "te",
+            "formation": "Teidän is the personal owner form of te; it selects -nne."
+          },
+          {
+            "finnish": "omenanne.",
+            "meaning": "apple",
+            "role": "possessed singular noun",
+            "baseForm": "omena",
+            "formation": "omena (“apple”) + -nne = omenanne. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Tämä on teidän omenatnne."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -nne: use omenanne."
+        },
+        {
+          "answers": ["Tämä on teidän omena."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -nne even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on teidän omenani."],
+          "category": "wrong personal owner",
+          "explanation": "Teidän needs -nne; changing the ending changes the owner."
+        }
+      ],
+      "id": "pop-sentences-practice-01"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Optional practice: Build “This is their house.” Begin with Tämä on. Keep heidän.",
+      "acceptedAnswers": ["Tämä on heidän talonsa."],
+      "explanation": "Tämä on identifies one thing. The ending -nsa identifies their ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-heidän",
+        "possessive-noun-talo",
+        "objects-singular",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Simple ownership identity sentences"],
+      "vocabulary": [],
+      "targetSkill": "Simple ownership identity sentences",
+      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is their house.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "heidän",
+            "meaning": "their",
+            "role": "owner pronoun",
+            "baseForm": "he",
+            "formation": "Heidän is the personal owner form of he; it selects -nsa."
+          },
+          {
+            "finnish": "talonsa.",
+            "meaning": "house",
+            "role": "possessed singular noun",
+            "baseForm": "talo",
+            "formation": "talo (“house”) + -nsa = talonsa. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "tokens": ["talonsa.", "heidän", "on", "Tämä"],
+      "id": "pop-sentences-practice-02"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Optional practice: Translate “Tämä on meidän koiramme.” into English.",
+      "acceptedAnswers": ["This is our dog.", "This dog is ours."],
+      "explanation": "Tämä on means “This is”. The noun ending marks the owner; the demonstrative and verb reveal the number of things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-meidän",
+        "possessive-noun-koira",
+        "objects-singular",
+        "object-number-contrast",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Simple ownership identity sentences"],
+      "vocabulary": ["koira"],
+      "targetSkill": "Simple ownership identity sentences",
+      "misconceptionCategory": "Simple ownership identity sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is our dog.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "meidän",
+            "meaning": "our",
+            "role": "owner pronoun",
+            "baseForm": "me",
+            "formation": "Meidän is the personal owner form of me; it selects -mme."
+          },
+          {
+            "finnish": "koiramme.",
+            "meaning": "dog",
+            "role": "possessed singular noun",
+            "baseForm": "koira",
+            "formation": "koira (“dog”) + -mme = koiramme. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "id": "pop-sentences-practice-03"
+    }
+  ]
+}

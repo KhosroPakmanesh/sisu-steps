@@ -8,53 +8,9 @@
   "lessonIds": ["npq-short-answers"],
   "exercises": [
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö minulla ole palloa?” with “I do have it.” Use a verb reply; Kyllä or Ei is optional. pallo means “ball”.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "I do have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Kyllä,",
-            "meaning": "yes",
-            "role": "optional affirmative answer particle",
-            "baseForm": "kyllä",
-            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
-          },
-          {
-            "finnish": "on.",
-            "meaning": "does/do have it",
-            "role": "affirmative verb echo",
-            "baseForm": "olla",
-            "formation": "Echo fixed on: the owner and thing are understood from the question."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e001",
-      "parallelExerciseId": "npq-short-answers-test-e002"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö minulla ole palloa?” with “I do not have it.” Use a verb reply; Kyllä or Ei is optional. pallo means “ball”.",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Reply to “Eikö meillä ole peliä?” with “We do not have it.” Choose a verb reply. peli means “game”.",
       "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
       "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
       "tags": ["standard-written-finnish", "sentence"],
@@ -66,7 +22,7 @@
       "targetSkill": "Negative possession question short answers",
       "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "I do not have it.",
+        "translation": "We do not have it.",
         "pattern": "fixed possession verb reply; owner and thing understood from the question",
         "parts": [
           {
@@ -92,103 +48,21 @@
           "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
         }
       ],
-      "id": "npq-short-answers-test-e002",
-      "parallelExerciseId": "npq-short-answers-test-e001"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö sinulla ole kirjaa?” with “You do have it.” Use a verb reply; Kyllä or Ei is optional. kirja means “book”. Address one person.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence", "person-sina"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "You do have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Kyllä,",
-            "meaning": "yes",
-            "role": "optional affirmative answer particle",
-            "baseForm": "kyllä",
-            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
-          },
-          {
-            "finnish": "on.",
-            "meaning": "does/do have it",
-            "role": "affirmative verb echo",
-            "baseForm": "olla",
-            "formation": "Echo fixed on: the owner and thing are understood from the question."
-          }
-        ]
+      "options": ["Ei ole.", "Kyllä, on.", "En ole."],
+      "optionFeedback": {
+        "Ei ole.": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+        "Kyllä, on.": "This gives the opposite of the requested possession meaning.",
+        "En ole.": "This is a personal “I am” reply; possession echoes fixed on or ei ole."
       },
-      "answerDiagnostics": [
-        {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e003",
-      "parallelExerciseId": "npq-short-answers-test-e004"
+      "id": "npq-short-answers-test-e016",
+      "parallelExerciseId": "npq-short-answers-test-e015"
     },
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö sinulla ole kirjaa?” with “You do not have it.” Use a verb reply; Kyllä or Ei is optional. kirja means “book”. Address one person.",
-      "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence", "person-sina"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "You do not have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Ei",
-            "meaning": "not",
-            "role": "negative verb",
-            "baseForm": "ei",
-            "formation": "Keep fixed ei in the negative possession reply."
-          },
-          {
-            "finnish": "ole.",
-            "meaning": "have it",
-            "role": "negative verb echo",
-            "baseForm": "olla",
-            "formation": "Ei ole denies possession; it remains fixed for every owner."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["En ole."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e004",
-      "parallelExerciseId": "npq-short-answers-test-e003"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö hänellä ole autoa?” with “He does have it.” Use a verb reply; Kyllä or Ei is optional. auto means “car”.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “He does have it.” after “Eikö hänellä ole autoa?”: “Kyllä, ___.” auto means “car”.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Kyllä means “yes”. Fill the gap with fixed on (“do have it”); the possession reply stays the same for every owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": [
         "Fixed eikö ole in possession questions",
@@ -219,101 +93,13 @@
       },
       "answerDiagnostics": [
         {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+          "answers": ["olen", "olemme", "ovat"],
+          "category": "Negative possession question short answers: form or meaning confused",
+          "explanation": "Kyllä means “yes”. Fill the gap with fixed on (“do have it”); the possession reply stays the same for every owner."
         }
       ],
       "id": "npq-short-answers-test-e005",
       "parallelExerciseId": "npq-short-answers-test-e006"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö hänellä ole autoa?” with “He does not have it.” Use a verb reply; Kyllä or Ei is optional. auto means “car”.",
-      "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "He does not have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Ei",
-            "meaning": "not",
-            "role": "negative verb",
-            "baseForm": "ei",
-            "formation": "Keep fixed ei in the negative possession reply."
-          },
-          {
-            "finnish": "ole.",
-            "meaning": "have it",
-            "role": "negative verb echo",
-            "baseForm": "olla",
-            "formation": "Ei ole denies possession; it remains fixed for every owner."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["En ole."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e006",
-      "parallelExerciseId": "npq-short-answers-test-e005"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö meillä ole kynää?” with “We do have it.” Use a verb reply; Kyllä or Ei is optional. kynä means “pen”.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "We do have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Kyllä,",
-            "meaning": "yes",
-            "role": "optional affirmative answer particle",
-            "baseForm": "kyllä",
-            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
-          },
-          {
-            "finnish": "on.",
-            "meaning": "does/do have it",
-            "role": "affirmative verb echo",
-            "baseForm": "olla",
-            "formation": "Echo fixed on: the owner and thing are understood from the question."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e007",
-      "parallelExerciseId": "npq-short-answers-test-e008"
     },
     {
       "type": "translation-fi",
@@ -360,142 +146,10 @@
       "parallelExerciseId": "npq-short-answers-test-e007"
     },
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö teillä ole palloa?” with “You do have it.” Use a verb reply; Kyllä or Ei is optional. pallo means “ball”. Address a group.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence", "person-te"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "You do have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Kyllä,",
-            "meaning": "yes",
-            "role": "optional affirmative answer particle",
-            "baseForm": "kyllä",
-            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
-          },
-          {
-            "finnish": "on.",
-            "meaning": "does/do have it",
-            "role": "affirmative verb echo",
-            "baseForm": "olla",
-            "formation": "Echo fixed on: the owner and thing are understood from the question."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e009",
-      "parallelExerciseId": "npq-short-answers-test-e010"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö teillä ole palloa?” with “You do not have it.” Use a verb reply; Kyllä or Ei is optional. pallo means “ball”. Address a group.",
-      "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence", "person-te"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "You do not have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Ei",
-            "meaning": "not",
-            "role": "negative verb",
-            "baseForm": "ei",
-            "formation": "Keep fixed ei in the negative possession reply."
-          },
-          {
-            "finnish": "ole.",
-            "meaning": "have it",
-            "role": "negative verb echo",
-            "baseForm": "olla",
-            "formation": "Ei ole denies possession; it remains fixed for every owner."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["En ole."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e010",
-      "parallelExerciseId": "npq-short-answers-test-e009"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö heillä ole kirjaa?” with “They do have it.” Use a verb reply; Kyllä or Ei is optional. kirja means “book”.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "They do have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Kyllä,",
-            "meaning": "yes",
-            "role": "optional affirmative answer particle",
-            "baseForm": "kyllä",
-            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
-          },
-          {
-            "finnish": "on.",
-            "meaning": "does/do have it",
-            "role": "affirmative verb echo",
-            "baseForm": "olla",
-            "formation": "Echo fixed on: the owner and thing are understood from the question."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "id": "npq-short-answers-test-e011",
-      "parallelExerciseId": "npq-short-answers-test-e012"
-    },
-    {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Reply to “Eikö heillä ole kirjaa?” with “They do not have it.” Use a verb reply; Kyllä or Ei is optional. kirja means “book”.",
-      "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Reply to “Eikö heillä ole tyynyä?” with “They do not have it.” Use the tokens. tyyny means “pillow”.",
+      "acceptedAnswers": ["Ei ole."],
       "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": [
@@ -532,58 +186,9 @@
           "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
         }
       ],
-      "id": "npq-short-answers-test-e012",
-      "parallelExerciseId": "npq-short-answers-test-e011"
-    },
-    {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Reply to “Eikö minulla ole kissaa?” with “I do have it.” Choose a verb reply. kissa means “cat”.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "I do have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Kyllä,",
-            "meaning": "yes",
-            "role": "optional affirmative answer particle",
-            "baseForm": "kyllä",
-            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
-          },
-          {
-            "finnish": "on.",
-            "meaning": "does/do have it",
-            "role": "affirmative verb echo",
-            "baseForm": "olla",
-            "formation": "Echo fixed on: the owner and thing are understood from the question."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "options": ["Kyllä, on.", "Ei ole.", "Olen."],
-      "optionFeedback": {
-        "Kyllä, on.": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-        "Ei ole.": "This gives the opposite of the requested possession meaning.",
-        "Olen.": "This is a personal “I am” reply; possession echoes fixed on or ei ole."
-      },
-      "id": "npq-short-answers-test-e013",
-      "parallelExerciseId": "npq-short-answers-test-e014"
+      "tokens": ["ole.", "Ei"],
+      "id": "npq-short-answers-test-e024",
+      "parallelExerciseId": "npq-short-answers-test-e023"
     },
     {
       "type": "multiple-choice",
@@ -636,10 +241,10 @@
       "parallelExerciseId": "npq-short-answers-test-e013"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Reply to “Eikö hänellä ole tyynyä?” with “He does have it.” Choose a verb reply. tyyny means “pillow”.",
-      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Reply to “Eikö hänellä ole peliä?” with “He does have it.” Use the tokens. peli means “game”.",
+      "acceptedAnswers": ["Kyllä, on."],
       "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": [
@@ -676,20 +281,110 @@
           "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
         }
       ],
-      "options": ["Kyllä, on.", "Ei ole.", "Olen."],
-      "optionFeedback": {
-        "Kyllä, on.": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-        "Ei ole.": "This gives the opposite of the requested possession meaning.",
-        "Olen.": "This is a personal “I am” reply; possession echoes fixed on or ei ole."
-      },
-      "id": "npq-short-answers-test-e015",
-      "parallelExerciseId": "npq-short-answers-test-e016"
+      "tokens": ["on.", "Kyllä,"],
+      "id": "npq-short-answers-test-e021",
+      "parallelExerciseId": "npq-short-answers-test-e022"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Reply to “Eikö meillä ole peliä?” with “We do not have it.” Choose a verb reply. peli means “game”.",
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “I do not have it.” after “Eikö minulla ole palloa?”: “Ei, ___.” pallo means “ball”.",
+      "acceptedAnswers": ["ei ole"],
+      "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "I do not have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Ei,",
+            "meaning": "no",
+            "role": "supplied negative answer particle",
+            "baseForm": "ei",
+            "formation": "This separate Ei means “no” and introduces the negative verb reply ei ole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Keep fixed ei in the negative possession reply."
+          },
+          {
+            "finnish": "ole.",
+            "meaning": "have it",
+            "role": "negative verb echo",
+            "baseForm": "olla",
+            "formation": "Ei ole denies possession; it remains fixed for every owner."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["en ole", "emme ole", "eivät ole"],
+          "category": "Negative possession question short answers: form or meaning confused",
+          "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner."
+        }
+      ],
+      "id": "npq-short-answers-test-e002",
+      "parallelExerciseId": "npq-short-answers-test-e001"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Reply to “Eikö teillä ole palloa?” with “You do not have it.” Use a verb reply; Kyllä or Ei is optional. pallo means “ball”. Address a group.",
       "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
+      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "tags": ["standard-written-finnish", "sentence", "person-te"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "You do not have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Keep fixed ei in the negative possession reply."
+          },
+          {
+            "finnish": "ole.",
+            "meaning": "have it",
+            "role": "negative verb echo",
+            "baseForm": "olla",
+            "formation": "Ei ole denies possession; it remains fixed for every owner."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["En ole."],
+          "category": "Negative possession question short answers: predictable form error",
+          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+        }
+      ],
+      "id": "npq-short-answers-test-e010",
+      "parallelExerciseId": "npq-short-answers-test-e009"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Reply to “Eikö meillä ole kissaa?” with “We do not have it.” Use the tokens. kissa means “cat”.",
+      "acceptedAnswers": ["Ei ole."],
       "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": [
@@ -726,14 +421,9 @@
           "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
         }
       ],
-      "options": ["Ei ole.", "Kyllä, on.", "En ole."],
-      "optionFeedback": {
-        "Ei ole.": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-        "Kyllä, on.": "This gives the opposite of the requested possession meaning.",
-        "En ole.": "This is a personal “I am” reply; possession echoes fixed on or ei ole."
-      },
-      "id": "npq-short-answers-test-e016",
-      "parallelExerciseId": "npq-short-answers-test-e015"
+      "tokens": ["ole.", "Ei"],
+      "id": "npq-short-answers-test-e022",
+      "parallelExerciseId": "npq-short-answers-test-e021"
     },
     {
       "type": "multiple-choice",
@@ -784,6 +474,101 @@
       },
       "id": "npq-short-answers-test-e017",
       "parallelExerciseId": "npq-short-answers-test-e018"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “He does not have it.” after “Eikö hänellä ole autoa?”: “Ei, ___.” auto means “car”.",
+      "acceptedAnswers": ["ei ole"],
+      "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "He does not have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Ei,",
+            "meaning": "no",
+            "role": "supplied negative answer particle",
+            "baseForm": "ei",
+            "formation": "This separate Ei means “no” and introduces the negative verb reply ei ole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Keep fixed ei in the negative possession reply."
+          },
+          {
+            "finnish": "ole.",
+            "meaning": "have it",
+            "role": "negative verb echo",
+            "baseForm": "olla",
+            "formation": "Ei ole denies possession; it remains fixed for every owner."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["en ole", "emme ole", "eivät ole"],
+          "category": "Negative possession question short answers: form or meaning confused",
+          "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner."
+        }
+      ],
+      "id": "npq-short-answers-test-e006",
+      "parallelExerciseId": "npq-short-answers-test-e005"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Reply to “Eikö meillä ole kynää?” with “We do have it.” Use a verb reply; Kyllä or Ei is optional. kynä means “pen”.",
+      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
+      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "We do have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Kyllä,",
+            "meaning": "yes",
+            "role": "optional affirmative answer particle",
+            "baseForm": "kyllä",
+            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
+          },
+          {
+            "finnish": "on.",
+            "meaning": "does/do have it",
+            "role": "affirmative verb echo",
+            "baseForm": "olla",
+            "formation": "Echo fixed on: the owner and thing are understood from the question."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Olen."],
+          "category": "Negative possession question short answers: predictable form error",
+          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+        }
+      ],
+      "id": "npq-short-answers-test-e007",
+      "parallelExerciseId": "npq-short-answers-test-e008"
     },
     {
       "type": "multiple-choice",
@@ -838,51 +623,6 @@
     {
       "type": "word-order",
       "instruction": "Put the words in order.",
-      "prompt": "Reply to “Eikö minulla ole koiraa?” with “I do have it.” Use the tokens. koira means “dog”.",
-      "acceptedAnswers": ["Kyllä, on."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
-      "tags": ["standard-written-finnish", "sentence"],
-      "requiredSkills": [
-        "Fixed eikö ole in possession questions",
-        "Negative possession question short answers"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Negative possession question short answers",
-      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
-      "sentenceExplanation": {
-        "translation": "I do have it.",
-        "pattern": "fixed possession verb reply; owner and thing understood from the question",
-        "parts": [
-          {
-            "finnish": "Kyllä,",
-            "meaning": "yes",
-            "role": "optional affirmative answer particle",
-            "baseForm": "kyllä",
-            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
-          },
-          {
-            "finnish": "on.",
-            "meaning": "does/do have it",
-            "role": "affirmative verb echo",
-            "baseForm": "olla",
-            "formation": "Echo fixed on: the owner and thing are understood from the question."
-          }
-        ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Olen."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
-        }
-      ],
-      "tokens": ["on.", "Kyllä,"],
-      "id": "npq-short-answers-test-e019",
-      "parallelExerciseId": "npq-short-answers-test-e020"
-    },
-    {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
       "prompt": "Reply to “Eikö sinulla ole tyynyä?” with “You do not have it.” Use the tokens. tyyny means “pillow”. Address one person.",
       "acceptedAnswers": ["Ei ole."],
       "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
@@ -926,10 +666,288 @@
       "parallelExerciseId": "npq-short-answers-test-e019"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Reply to “Eikö heillä ole kirjaa?” with “They do not have it.” Use a verb reply; Kyllä or Ei is optional. kirja means “book”.",
+      "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
+      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "They do not have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Keep fixed ei in the negative possession reply."
+          },
+          {
+            "finnish": "ole.",
+            "meaning": "have it",
+            "role": "negative verb echo",
+            "baseForm": "olla",
+            "formation": "Ei ole denies possession; it remains fixed for every owner."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["En ole."],
+          "category": "Negative possession question short answers: predictable form error",
+          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+        }
+      ],
+      "id": "npq-short-answers-test-e012",
+      "parallelExerciseId": "npq-short-answers-test-e011"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “You do have it.” after “Eikö sinulla ole kirjaa?”: “Kyllä, ___.” kirja means “book”. Address one person.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Kyllä means “yes”. Fill the gap with fixed on (“do have it”); the possession reply stays the same for every owner.",
+      "tags": ["standard-written-finnish", "sentence", "person-sina"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "You do have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Kyllä,",
+            "meaning": "yes",
+            "role": "optional affirmative answer particle",
+            "baseForm": "kyllä",
+            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
+          },
+          {
+            "finnish": "on.",
+            "meaning": "does/do have it",
+            "role": "affirmative verb echo",
+            "baseForm": "olla",
+            "formation": "Echo fixed on: the owner and thing are understood from the question."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["olen", "olemme", "ovat"],
+          "category": "Negative possession question short answers: form or meaning confused",
+          "explanation": "Kyllä means “yes”. Fill the gap with fixed on (“do have it”); the possession reply stays the same for every owner."
+        }
+      ],
+      "id": "npq-short-answers-test-e003",
+      "parallelExerciseId": "npq-short-answers-test-e004"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Reply to “Eikö minulla ole kissaa?” with “I do have it.” Choose a verb reply. kissa means “cat”.",
+      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
+      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "I do have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Kyllä,",
+            "meaning": "yes",
+            "role": "optional affirmative answer particle",
+            "baseForm": "kyllä",
+            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
+          },
+          {
+            "finnish": "on.",
+            "meaning": "does/do have it",
+            "role": "affirmative verb echo",
+            "baseForm": "olla",
+            "formation": "Echo fixed on: the owner and thing are understood from the question."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Olen."],
+          "category": "Negative possession question short answers: predictable form error",
+          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+        }
+      ],
+      "options": ["Kyllä, on.", "Ei ole.", "Olen."],
+      "optionFeedback": {
+        "Kyllä, on.": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+        "Ei ole.": "This gives the opposite of the requested possession meaning.",
+        "Olen.": "This is a personal “I am” reply; possession echoes fixed on or ei ole."
+      },
+      "id": "npq-short-answers-test-e013",
+      "parallelExerciseId": "npq-short-answers-test-e014"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Reply to “Eikö teillä ole palloa?” with “You do have it.” Use a verb reply; Kyllä or Ei is optional. pallo means “ball”. Address a group.",
+      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
+      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "tags": ["standard-written-finnish", "sentence", "person-te"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "You do have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Kyllä,",
+            "meaning": "yes",
+            "role": "optional affirmative answer particle",
+            "baseForm": "kyllä",
+            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
+          },
+          {
+            "finnish": "on.",
+            "meaning": "does/do have it",
+            "role": "affirmative verb echo",
+            "baseForm": "olla",
+            "formation": "Echo fixed on: the owner and thing are understood from the question."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Olen."],
+          "category": "Negative possession question short answers: predictable form error",
+          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+        }
+      ],
+      "id": "npq-short-answers-test-e009",
+      "parallelExerciseId": "npq-short-answers-test-e010"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “You do not have it.” after “Eikö sinulla ole kirjaa?”: “Ei, ___.” kirja means “book”. Address one person.",
+      "acceptedAnswers": ["ei ole"],
+      "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner.",
+      "tags": ["standard-written-finnish", "sentence", "person-sina"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "You do not have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Ei,",
+            "meaning": "no",
+            "role": "supplied negative answer particle",
+            "baseForm": "ei",
+            "formation": "This separate Ei means “no” and introduces the negative verb reply ei ole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Keep fixed ei in the negative possession reply."
+          },
+          {
+            "finnish": "ole.",
+            "meaning": "have it",
+            "role": "negative verb echo",
+            "baseForm": "olla",
+            "formation": "Ei ole denies possession; it remains fixed for every owner."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["en ole", "emme ole", "eivät ole"],
+          "category": "Negative possession question short answers: form or meaning confused",
+          "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner."
+        }
+      ],
+      "id": "npq-short-answers-test-e004",
+      "parallelExerciseId": "npq-short-answers-test-e003"
+    },
+    {
       "type": "word-order",
       "instruction": "Put the words in order.",
-      "prompt": "Reply to “Eikö hänellä ole peliä?” with “He does have it.” Use the tokens. peli means “game”.",
+      "prompt": "Reply to “Eikö minulla ole koiraa?” with “I do have it.” Use the tokens. koira means “dog”.",
       "acceptedAnswers": ["Kyllä, on."],
+      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Fixed eikö ole in possession questions",
+        "Negative possession question short answers"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Negative possession question short answers",
+      "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "I do have it.",
+        "pattern": "fixed possession verb reply; owner and thing understood from the question",
+        "parts": [
+          {
+            "finnish": "Kyllä,",
+            "meaning": "yes",
+            "role": "optional affirmative answer particle",
+            "baseForm": "kyllä",
+            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
+          },
+          {
+            "finnish": "on.",
+            "meaning": "does/do have it",
+            "role": "affirmative verb echo",
+            "baseForm": "olla",
+            "formation": "Echo fixed on: the owner and thing are understood from the question."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Olen."],
+          "category": "Negative possession question short answers: predictable form error",
+          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+        }
+      ],
+      "tokens": ["on.", "Kyllä,"],
+      "id": "npq-short-answers-test-e019",
+      "parallelExerciseId": "npq-short-answers-test-e020"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Reply to “Eikö hänellä ole tyynyä?” with “He does have it.” Choose a verb reply. tyyny means “pillow”.",
+      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
       "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": [
@@ -966,15 +984,20 @@
           "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
         }
       ],
-      "tokens": ["on.", "Kyllä,"],
-      "id": "npq-short-answers-test-e021",
-      "parallelExerciseId": "npq-short-answers-test-e022"
+      "options": ["Kyllä, on.", "Ei ole.", "Olen."],
+      "optionFeedback": {
+        "Kyllä, on.": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+        "Ei ole.": "This gives the opposite of the requested possession meaning.",
+        "Olen.": "This is a personal “I am” reply; possession echoes fixed on or ei ole."
+      },
+      "id": "npq-short-answers-test-e015",
+      "parallelExerciseId": "npq-short-answers-test-e016"
     },
     {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
-      "prompt": "Reply to “Eikö meillä ole kissaa?” with “We do not have it.” Use the tokens. kissa means “cat”.",
-      "acceptedAnswers": ["Ei ole."],
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Reply to “Eikö heillä ole kirjaa?” with “They do have it.” Use a verb reply; Kyllä or Ei is optional. kirja means “book”.",
+      "acceptedAnswers": ["Kyllä, on.", "On.", "Kyllä on.", "On kyllä."],
       "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": [
@@ -985,35 +1008,34 @@
       "targetSkill": "Negative possession question short answers",
       "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "We do not have it.",
+        "translation": "They do have it.",
         "pattern": "fixed possession verb reply; owner and thing understood from the question",
         "parts": [
           {
-            "finnish": "Ei",
-            "meaning": "not",
-            "role": "negative verb",
-            "baseForm": "ei",
-            "formation": "Keep fixed ei in the negative possession reply."
+            "finnish": "Kyllä,",
+            "meaning": "yes",
+            "role": "optional affirmative answer particle",
+            "baseForm": "kyllä",
+            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
           },
           {
-            "finnish": "ole.",
-            "meaning": "have it",
-            "role": "negative verb echo",
+            "finnish": "on.",
+            "meaning": "does/do have it",
+            "role": "affirmative verb echo",
             "baseForm": "olla",
-            "formation": "Ei ole denies possession; it remains fixed for every owner."
+            "formation": "Echo fixed on: the owner and thing are understood from the question."
           }
         ]
       },
       "answerDiagnostics": [
         {
-          "answers": ["En ole."],
+          "answers": ["Olen."],
           "category": "Negative possession question short answers: predictable form error",
           "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
         }
       ],
-      "tokens": ["ole.", "Ei"],
-      "id": "npq-short-answers-test-e022",
-      "parallelExerciseId": "npq-short-answers-test-e021"
+      "id": "npq-short-answers-test-e011",
+      "parallelExerciseId": "npq-short-answers-test-e012"
     },
     {
       "type": "word-order",
@@ -1061,11 +1083,11 @@
       "parallelExerciseId": "npq-short-answers-test-e024"
     },
     {
-      "type": "word-order",
-      "instruction": "Put the words in order.",
-      "prompt": "Reply to “Eikö heillä ole tyynyä?” with “They do not have it.” Use the tokens. tyyny means “pillow”.",
-      "acceptedAnswers": ["Ei ole."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “I do have it.” after “Eikö minulla ole palloa?”: “Kyllä, ___.” pallo means “ball”.",
+      "acceptedAnswers": ["on"],
+      "explanation": "Kyllä means “yes”. Fill the gap with fixed on (“do have it”); the possession reply stays the same for every owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": [
         "Fixed eikö ole in possession questions",
@@ -1075,35 +1097,34 @@
       "targetSkill": "Negative possession question short answers",
       "misconceptionCategory": "Negative possession question short answers: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "They do not have it.",
+        "translation": "I do have it.",
         "pattern": "fixed possession verb reply; owner and thing understood from the question",
         "parts": [
           {
-            "finnish": "Ei",
-            "meaning": "not",
-            "role": "negative verb",
-            "baseForm": "ei",
-            "formation": "Keep fixed ei in the negative possession reply."
+            "finnish": "Kyllä,",
+            "meaning": "yes",
+            "role": "optional affirmative answer particle",
+            "baseForm": "kyllä",
+            "formation": "Kyllä means “yes”; it can introduce the affirmative verb reply."
           },
           {
-            "finnish": "ole.",
-            "meaning": "have it",
-            "role": "negative verb echo",
+            "finnish": "on.",
+            "meaning": "does/do have it",
+            "role": "affirmative verb echo",
             "baseForm": "olla",
-            "formation": "Ei ole denies possession; it remains fixed for every owner."
+            "formation": "Echo fixed on: the owner and thing are understood from the question."
           }
         ]
       },
       "answerDiagnostics": [
         {
-          "answers": ["En ole."],
-          "category": "Negative possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+          "answers": ["olen", "olemme", "ovat"],
+          "category": "Negative possession question short answers: form or meaning confused",
+          "explanation": "Kyllä means “yes”. Fill the gap with fixed on (“do have it”); the possession reply stays the same for every owner."
         }
       ],
-      "tokens": ["ole.", "Ei"],
-      "id": "npq-short-answers-test-e024",
-      "parallelExerciseId": "npq-short-answers-test-e023"
+      "id": "npq-short-answers-test-e001",
+      "parallelExerciseId": "npq-short-answers-test-e002"
     }
   ]
 }

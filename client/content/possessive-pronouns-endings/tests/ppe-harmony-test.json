@@ -1,491 +1,535 @@
 {
   "id": "ppe-harmony-test",
-  "title": "Choosing -nsa or -nsä",
-  "focus": "The third-person ending has two vowel-harmony forms, -nsa and -nsä. Choose it from the noun’s vowels, not from hänen or heidän.",
+  "title": "His and her endings: choosing -nsa or -nsä",
+  "focus": "Choose the third-person suffix vowel from back, front, and neutral-only noun bases.",
   "stage": "focused",
   "targetSkills": ["Third-person possessive vowel harmony"],
-  "prerequisiteSkills": [
-    "Genitive personal owner forms",
-    "First- and second-person possessive endings",
-    "Shared third-person possessive endings"
-  ],
+  "prerequisiteSkills": ["Shared third-person possessive endings"],
   "lessonIds": ["ppe-harmony"],
   "exercises": [
     {
       "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the final vowel in “his ball”: hänen pallons_. Use pallo (“ball”).",
-      "acceptedAnswers": ["a"],
-      "explanation": "Use a: pallo becomes pallonsa. A back vowel a, o, or u requires -nsa. Choose from the noun, not the owner pronoun.",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose the Finnish noun phrase “his car”. Use hänen and auto (“car”).",
+      "acceptedAnswers": ["hänen autonsa"],
+      "explanation": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
       "tags": [
         "standard-written-finnish",
         "owner-hänen",
-        "possessive-noun-pallo",
-        "possessive-ending-vowel"
+        "possessive-noun-auto",
+        "objects-singular"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["a", "ä"],
+      "options": ["hänen auto", "hänen autotnsa", "hänen autonsa", "hänen autonsä"],
       "optionFeedback": {
-        "a": "Use a: pallo becomes pallonsa. A back vowel a, o, or u requires -nsa. Choose from the noun, not the owner pronoun.",
-        "ä": "Use ä when there is no back vowel: front vowels or only neutral e and i take -nsä."
+        "hänen autonsa": "Correct: Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen autonsä": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen auto": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen autotnsa": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
       },
-      "id": "ppe-harmony-test-e001",
-      "parallelExerciseId": "ppe-harmony-test-e002"
+      "id": "ppe-harmony-test-e015",
+      "parallelExerciseId": "ppe-harmony-test-e016"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his pillow”: hänen tyynyns___. Write only a or ä. Use tyyny (“pillow”).",
+      "acceptedAnswers": ["ä"],
+      "explanation": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-tyyny",
+        "objects-singular",
+        "possessive-ending-vowel"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["a"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "ppe-harmony-test-e010",
+      "parallelExerciseId": "ppe-harmony-test-e009"
     },
     {
       "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the final vowel in “his pen”: hänen kynäns_. Use kynä (“pen”).",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his game”: hänen ___. Use peli (“game”).",
+      "acceptedAnswers": ["pelinsä"],
+      "explanation": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-peli",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["pelinsä", "pelinsa", "peli", "pelitnsä"],
+      "optionFeedback": {
+        "pelinsä": "Correct: Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "pelinsa": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "peli": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "pelitnsä": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-harmony-test-e005",
+      "parallelExerciseId": "ppe-harmony-test-e006"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his pen”: hänen kynäns___. Write only a or ä. Use kynä (“pen”).",
       "acceptedAnswers": ["ä"],
-      "explanation": "Use ä: kynä becomes kynänsä. With no back vowel, front vowels or only neutral e and i require -nsä. Choose from the noun, not the owner pronoun.",
+      "explanation": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
       "tags": [
         "standard-written-finnish",
         "owner-hänen",
         "possessive-noun-kynä",
+        "objects-singular",
         "possessive-ending-vowel"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["a", "ä"],
-      "optionFeedback": {
-        "a": "Use a only when the noun contains a back vowel a, o, or u.",
-        "ä": "Use ä: kynä becomes kynänsä. With no back vowel, front vowels or only neutral e and i require -nsä. Choose from the noun, not the owner pronoun."
-      },
-      "id": "ppe-harmony-test-e002",
-      "parallelExerciseId": "ppe-harmony-test-e001"
+      "answerDiagnostics": [
+        {
+          "answers": ["a"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "ppe-harmony-test-e008",
+      "parallelExerciseId": "ppe-harmony-test-e007"
     },
     {
       "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the final vowel in “their book”: heidän kirjans_. Use kirja (“book”).",
-      "acceptedAnswers": ["a"],
-      "explanation": "Use a: kirja becomes kirjansa. A back vowel a, o, or u requires -nsa. Choose from the noun, not the owner pronoun.",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his pillow”: hänen ___. Use tyyny (“pillow”).",
+      "acceptedAnswers": ["tyynynsä"],
+      "explanation": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
       "tags": [
         "standard-written-finnish",
-        "owner-heidän",
-        "possessive-noun-kirja",
-        "possessive-ending-vowel"
+        "owner-hänen",
+        "possessive-noun-tyyny",
+        "objects-singular"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["a", "ä"],
+      "options": ["tyynytnsä", "tyynynsä", "tyynynsa", "tyyny"],
       "optionFeedback": {
-        "a": "Use a: kirja becomes kirjansa. A back vowel a, o, or u requires -nsa. Choose from the noun, not the owner pronoun.",
-        "ä": "Use ä when there is no back vowel: front vowels or only neutral e and i take -nsä."
-      },
-      "id": "ppe-harmony-test-e003",
-      "parallelExerciseId": "ppe-harmony-test-e004"
-    },
-    {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Choose the final vowel in “their game”: heidän pelins_. Use peli (“game”).",
-      "acceptedAnswers": ["ä"],
-      "explanation": "Use ä: peli becomes pelinsä. With no back vowel, front vowels or only neutral e and i require -nsä. Choose from the noun, not the owner pronoun.",
-      "tags": [
-        "standard-written-finnish",
-        "owner-heidän",
-        "possessive-noun-peli",
-        "possessive-ending-vowel"
-      ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["a", "ä"],
-      "optionFeedback": {
-        "a": "Use a only when the noun contains a back vowel a, o, or u.",
-        "ä": "Use ä: peli becomes pelinsä. With no back vowel, front vowels or only neutral e and i require -nsä. Choose from the noun, not the owner pronoun."
+        "tyynynsä": "Correct: Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "tyynynsa": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "tyyny": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "tyynytnsä": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
       },
       "id": "ppe-harmony-test-e004",
       "parallelExerciseId": "ppe-harmony-test-e003"
     },
     {
       "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the final vowel in “his ball”: hänen pallons_. Use pallo (“ball”).",
-      "acceptedAnswers": ["a"],
-      "explanation": "Use a: pallo becomes pallonsa. A back vowel a, o, or u requires -nsa. Choose from the noun, not the owner pronoun.",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his book”: hänen ___. Use kirja (“book”).",
+      "acceptedAnswers": ["kirjansa"],
+      "explanation": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
       "tags": [
         "standard-written-finnish",
         "owner-hänen",
-        "possessive-noun-pallo",
-        "possessive-ending-vowel"
-      ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e005",
-      "parallelExerciseId": "ppe-harmony-test-e006"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the final vowel in “his pen”: hänen kynäns_. Use kynä (“pen”).",
-      "acceptedAnswers": ["ä"],
-      "explanation": "Use ä: kynä becomes kynänsä. With no back vowel, front vowels or only neutral e and i require -nsä. Choose from the noun, not the owner pronoun.",
-      "tags": [
-        "standard-written-finnish",
-        "owner-hänen",
-        "possessive-noun-kynä",
-        "possessive-ending-vowel"
-      ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e006",
-      "parallelExerciseId": "ppe-harmony-test-e005"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the final vowel in “their book”: heidän kirjans_. Use kirja (“book”).",
-      "acceptedAnswers": ["a"],
-      "explanation": "Use a: kirja becomes kirjansa. A back vowel a, o, or u requires -nsa. Choose from the noun, not the owner pronoun.",
-      "tags": [
-        "standard-written-finnish",
-        "owner-heidän",
         "possessive-noun-kirja",
-        "possessive-ending-vowel"
+        "objects-singular"
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e007",
-      "parallelExerciseId": "ppe-harmony-test-e008"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Write the final vowel in “their game”: heidän pelins_. Use peli (“game”).",
-      "acceptedAnswers": ["ä"],
-      "explanation": "Use ä: peli becomes pelinsä. With no back vowel, front vowels or only neutral e and i require -nsä. Choose from the noun, not the owner pronoun.",
-      "tags": [
-        "standard-written-finnish",
-        "owner-heidän",
-        "possessive-noun-peli",
-        "possessive-ending-vowel"
+      "answerDiagnostics": [
+        {
+          "answers": ["kirjansä"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
       ],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e008",
-      "parallelExerciseId": "ppe-harmony-test-e007"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Complete the noun for “his cat”: hänen kissans_. Write the whole noun. Use kissa (“cat”).",
-      "acceptedAnswers": ["kissansa"],
-      "explanation": "Choose -nsa from the noun vowels, then keep the whole noun stem.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-kissa"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e009",
-      "parallelExerciseId": "ppe-harmony-test-e010"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Complete the noun for “their dog”: heidän koirans_. Write the whole noun. Use koira (“dog”).",
-      "acceptedAnswers": ["koiransa"],
-      "explanation": "Choose -nsa from the noun vowels, then keep the whole noun stem.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-koira"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e010",
-      "parallelExerciseId": "ppe-harmony-test-e009"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Complete the noun for “his pillow”: hänen tyynyns_. Write the whole noun. Use tyyny (“pillow”).",
-      "acceptedAnswers": ["tyynynsä"],
-      "explanation": "Choose -nsä from the noun vowels, then keep the whole noun stem.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-tyyny"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e011",
-      "parallelExerciseId": "ppe-harmony-test-e012"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Complete the noun for “their pen”: heidän kynäns_. Write the whole noun. Use kynä (“pen”).",
-      "acceptedAnswers": ["kynänsä"],
-      "explanation": "Choose -nsä from the noun vowels, then keep the whole noun stem.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-kynä"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e012",
-      "parallelExerciseId": "ppe-harmony-test-e011"
-    },
-    {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Complete the noun for “his game”: hänen pelins_. Write the whole noun. Use peli (“game”).",
-      "acceptedAnswers": ["pelinsä"],
-      "explanation": "Choose -nsä from the noun vowels, then keep the whole noun stem.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-peli"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
       "id": "ppe-harmony-test-e013",
       "parallelExerciseId": "ppe-harmony-test-e014"
     },
     {
-      "type": "fill-blank",
-      "instruction": "Write the missing form.",
-      "prompt": "Complete the noun for “their ball”: heidän pallons_. Write the whole noun. Use pallo (“ball”).",
-      "acceptedAnswers": ["pallonsa"],
-      "explanation": "Choose -nsa from the noun vowels, then keep the whole noun stem.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-pallo"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "id": "ppe-harmony-test-e014",
-      "parallelExerciseId": "ppe-harmony-test-e013"
-    },
-    {
       "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Repair “heidän kissansä” for “their cat”. Choose harmony from kissa (“cat”), retaining the owner.",
-      "acceptedAnswers": ["heidän kissansa"],
-      "explanation": "heidän + kissa + -nsa gives heidän kissansa. Choose harmony from the noun’s vowels, not the owner pronoun.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-kissa"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose the Finnish noun phrase “his pen”. Use hänen and kynä (“pen”).",
+      "acceptedAnswers": ["hänen kynänsä"],
+      "explanation": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kynä",
+        "objects-singular"
       ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["heidän kissansa", "heidän kissansä", "heidän kissa"],
+      "options": ["hänen kynätnsä", "hänen kynänsä", "hänen kynänsa", "hänen kynä"],
       "optionFeedback": {
-        "heidän kissansa": "heidän + kissa + -nsa gives heidän kissansa. Choose harmony from the noun’s vowels, not the owner pronoun.",
-        "heidän kissansä": "This final vowel disagrees with the noun vowels; the owner pronoun does not decide harmony.",
-        "heidän kissa": "This omits the third-person possessive ending."
-      },
-      "id": "ppe-harmony-test-e015",
-      "parallelExerciseId": "ppe-harmony-test-e016"
-    },
-    {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Repair “hänen koiransä” for “his dog”. Choose harmony from koira (“dog”), retaining the owner.",
-      "acceptedAnswers": ["hänen koiransa"],
-      "explanation": "hänen + koira + -nsa gives hänen koiransa. Choose harmony from the noun’s vowels, not the owner pronoun.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-koira"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
-      ],
-      "vocabulary": [],
-      "targetSkill": "Third-person possessive vowel harmony",
-      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["hänen koiransa", "hänen koiransä", "hänen koira"],
-      "optionFeedback": {
-        "hänen koiransa": "hänen + koira + -nsa gives hänen koiransa. Choose harmony from the noun’s vowels, not the owner pronoun.",
-        "hänen koiransä": "This final vowel disagrees with the noun vowels; the owner pronoun does not decide harmony.",
-        "hänen koira": "This omits the third-person possessive ending."
+        "hänen kynänsä": "Correct: Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen kynänsa": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen kynä": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen kynätnsä": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
       },
       "id": "ppe-harmony-test-e016",
       "parallelExerciseId": "ppe-harmony-test-e015"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Repair “heidän tyynynsa” for “their pillow”. Choose harmony from tyyny (“pillow”), retaining the owner.",
-      "acceptedAnswers": ["heidän tyynynsä"],
-      "explanation": "heidän + tyyny + -nsä gives heidän tyynynsä. Choose harmony from the noun’s vowels, not the owner pronoun.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-tyyny"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his book”: hänen kirjans___. Write only a or ä. Use kirja (“book”).",
+      "acceptedAnswers": ["a"],
+      "explanation": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kirja",
+        "objects-singular",
+        "possessive-ending-vowel"
       ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["heidän tyynynsä", "heidän tyynynsa", "heidän tyyny"],
-      "optionFeedback": {
-        "heidän tyynynsä": "heidän + tyyny + -nsä gives heidän tyynynsä. Choose harmony from the noun’s vowels, not the owner pronoun.",
-        "heidän tyynynsa": "This final vowel disagrees with the noun vowels; the owner pronoun does not decide harmony.",
-        "heidän tyyny": "This omits the third-person possessive ending."
-      },
-      "id": "ppe-harmony-test-e017",
-      "parallelExerciseId": "ppe-harmony-test-e018"
+      "answerDiagnostics": [
+        {
+          "answers": ["ä"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "ppe-harmony-test-e009",
+      "parallelExerciseId": "ppe-harmony-test-e010"
     },
     {
       "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Repair “hänen kynänsa” for “his pen”. Choose harmony from kynä (“pen”), retaining the owner.",
-      "acceptedAnswers": ["hänen kynänsä"],
-      "explanation": "hänen + kynä + -nsä gives hänen kynänsä. Choose harmony from the noun’s vowels, not the owner pronoun.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-kynä"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his pen”: hänen ___. Use kynä (“pen”).",
+      "acceptedAnswers": ["kynänsä"],
+      "explanation": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kynä",
+        "objects-singular"
       ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["hänen kynänsä", "hänen kynänsa", "hänen kynä"],
+      "options": ["kynänsa", "kynä", "kynätnsä", "kynänsä"],
       "optionFeedback": {
-        "hänen kynänsä": "hänen + kynä + -nsä gives hänen kynänsä. Choose harmony from the noun’s vowels, not the owner pronoun.",
-        "hänen kynänsa": "This final vowel disagrees with the noun vowels; the owner pronoun does not decide harmony.",
-        "hänen kynä": "This omits the third-person possessive ending."
+        "kynänsä": "Correct: Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kynänsa": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kynä": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kynätnsä": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-harmony-test-e002",
+      "parallelExerciseId": "ppe-harmony-test-e001"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his pillow”: hänen ___. Use tyyny (“pillow”).",
+      "acceptedAnswers": ["tyynynsä"],
+      "explanation": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-tyyny",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["tyynynsa"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "ppe-harmony-test-e014",
+      "parallelExerciseId": "ppe-harmony-test-e013"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose the Finnish noun phrase “his pillow”. Use hänen and tyyny (“pillow”).",
+      "acceptedAnswers": ["hänen tyynynsä"],
+      "explanation": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-tyyny",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["hänen tyynynsa", "hänen tyyny", "hänen tyynytnsä", "hänen tyynynsä"],
+      "optionFeedback": {
+        "hänen tyynynsä": "Correct: Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen tyynynsa": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen tyyny": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen tyynytnsä": "Hänen selects -nsä: tyyny + -nsä = tyynynsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
       },
       "id": "ppe-harmony-test-e018",
       "parallelExerciseId": "ppe-harmony-test-e017"
     },
     {
-      "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Repair “heidän pelinsa” for “their game”. Choose harmony from peli (“game”), retaining the owner.",
-      "acceptedAnswers": ["heidän pelinsä"],
-      "explanation": "heidän + peli + -nsä gives heidän pelinsä. Choose harmony from the noun’s vowels, not the owner pronoun.",
-      "tags": ["standard-written-finnish", "owner-heidän", "possessive-noun-peli"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his car”: hänen autons___. Write only a or ä. Use auto (“car”).",
+      "acceptedAnswers": ["a"],
+      "explanation": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-auto",
+        "objects-singular",
+        "possessive-ending-vowel"
       ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["heidän pelinsä", "heidän pelinsa", "heidän peli"],
-      "optionFeedback": {
-        "heidän pelinsä": "heidän + peli + -nsä gives heidän pelinsä. Choose harmony from the noun’s vowels, not the owner pronoun.",
-        "heidän pelinsa": "This final vowel disagrees with the noun vowels; the owner pronoun does not decide harmony.",
-        "heidän peli": "This omits the third-person possessive ending."
-      },
-      "id": "ppe-harmony-test-e019",
-      "parallelExerciseId": "ppe-harmony-test-e020"
+      "answerDiagnostics": [
+        {
+          "answers": ["ä"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "ppe-harmony-test-e007",
+      "parallelExerciseId": "ppe-harmony-test-e008"
     },
     {
       "type": "multiple-choice",
-      "instruction": "Choose one answer.",
-      "prompt": "Repair “hänen omenansä” for “his apple”. Choose harmony from omena (“apple”), retaining the owner.",
-      "acceptedAnswers": ["hänen omenansa"],
-      "explanation": "hänen + omena + -nsa gives hänen omenansa. Choose harmony from the noun’s vowels, not the owner pronoun.",
-      "tags": ["standard-written-finnish", "owner-hänen", "possessive-noun-omena"],
-      "requiredSkills": [
-        "Genitive personal owner forms",
-        "First- and second-person possessive endings",
-        "Shared third-person possessive endings",
-        "Third-person possessive vowel harmony"
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his apple”: hänen ___. Use omena (“apple”).",
+      "acceptedAnswers": ["omenansa"],
+      "explanation": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-omena",
+        "objects-singular"
       ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
       "vocabulary": [],
       "targetSkill": "Third-person possessive vowel harmony",
       "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
-      "options": ["hänen omenansa", "hänen omenansä", "hänen omena"],
+      "options": ["omenansä", "omena", "omenatnsa", "omenansa"],
       "optionFeedback": {
-        "hänen omenansa": "hänen + omena + -nsa gives hänen omenansa. Choose harmony from the noun’s vowels, not the owner pronoun.",
-        "hänen omenansä": "This final vowel disagrees with the noun vowels; the owner pronoun does not decide harmony.",
-        "hänen omena": "This omits the third-person possessive ending."
+        "omenansa": "Correct: Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "omenansä": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "omena": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "omenatnsa": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-harmony-test-e006",
+      "parallelExerciseId": "ppe-harmony-test-e005"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his book”: hänen ___. Use kirja (“book”).",
+      "acceptedAnswers": ["kirjansa"],
+      "explanation": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kirja",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["kirja", "kirjatnsa", "kirjansa", "kirjansä"],
+      "optionFeedback": {
+        "kirjansa": "Correct: Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kirjansä": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kirja": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "kirjatnsa": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-harmony-test-e003",
+      "parallelExerciseId": "ppe-harmony-test-e004"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his game”: hänen ___. Use peli (“game”).",
+      "acceptedAnswers": ["pelinsä"],
+      "explanation": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-peli",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["pelinsa"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "ppe-harmony-test-e012",
+      "parallelExerciseId": "ppe-harmony-test-e011"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose the Finnish noun phrase “his apple”. Use hänen and omena (“apple”).",
+      "acceptedAnswers": ["hänen omenansa"],
+      "explanation": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-omena",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["hänen omenatnsa", "hänen omenansa", "hänen omenansä", "hänen omena"],
+      "optionFeedback": {
+        "hänen omenansa": "Correct: Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen omenansä": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen omena": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen omenatnsa": "Hänen selects -nsa: omena + -nsa = omenansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
       },
       "id": "ppe-harmony-test-e020",
       "parallelExerciseId": "ppe-harmony-test-e019"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose the Finnish noun phrase “his book”. Use hänen and kirja (“book”).",
+      "acceptedAnswers": ["hänen kirjansa"],
+      "explanation": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kirja",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["hänen kirjansa", "hänen kirjansä", "hänen kirja", "hänen kirjatnsa"],
+      "optionFeedback": {
+        "hänen kirjansa": "Correct: Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen kirjansä": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen kirja": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen kirjatnsa": "Hänen selects -nsa: kirja + -nsa = kirjansa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-harmony-test-e017",
+      "parallelExerciseId": "ppe-harmony-test-e018"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the missing word.",
+      "prompt": "Complete “his pen”: hänen ___. Use kynä (“pen”).",
+      "acceptedAnswers": ["kynänsä"],
+      "explanation": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-kynä",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["kynänsa"],
+          "category": "wrong possessive ending",
+          "explanation": "Hänen selects -nsä: kynä + -nsä = kynänsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+        }
+      ],
+      "id": "ppe-harmony-test-e011",
+      "parallelExerciseId": "ppe-harmony-test-e012"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Complete “his car”: hänen ___. Use auto (“car”).",
+      "acceptedAnswers": ["autonsa"],
+      "explanation": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-auto",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["autonsa", "autonsä", "auto", "autotnsa"],
+      "optionFeedback": {
+        "autonsa": "Correct: Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "autonsä": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "auto": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "autotnsa": "Hänen selects -nsa: auto + -nsa = autonsa. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-harmony-test-e001",
+      "parallelExerciseId": "ppe-harmony-test-e002"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose the Finnish noun phrase “his game”. Use hänen and peli (“game”).",
+      "acceptedAnswers": ["hänen pelinsä"],
+      "explanation": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+      "tags": [
+        "standard-written-finnish",
+        "owner-hänen",
+        "possessive-noun-peli",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Third-person possessive vowel harmony"],
+      "vocabulary": [],
+      "targetSkill": "Third-person possessive vowel harmony",
+      "misconceptionCategory": "Third-person possessive vowel harmony: form or meaning confused",
+      "options": ["hänen peli", "hänen pelitnsä", "hänen pelinsä", "hänen pelinsa"],
+      "optionFeedback": {
+        "hänen pelinsä": "Correct: Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen pelinsa": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen peli": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä.",
+        "hänen pelitnsä": "Hänen selects -nsä: peli + -nsä = pelinsä. Back a/o/u chooses -nsa; front vowels or only e/i choose -nsä."
+      },
+      "id": "ppe-harmony-test-e019",
+      "parallelExerciseId": "ppe-harmony-test-e020"
     }
   ]
 }

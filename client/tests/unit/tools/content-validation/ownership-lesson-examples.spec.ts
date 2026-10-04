@@ -21,8 +21,8 @@ describe('ownership worked-example coverage', () => {
   });
 
   it('accepts every authored lesson through both complete content boundaries', async () => {
-    expect(lessons).toHaveLength(19);
-    expect(lessons.flatMap((lesson) => lesson.examples)).toHaveLength(136);
+    expect(lessons).toHaveLength(28);
+    expect(lessons.flatMap((lesson) => lesson.examples)).toHaveLength(164);
     expect(validateSource(lessons)).toEqual([]);
     expect(() => validateRuntime(lessons)).not.toThrow();
     for (const pack of packs) {
@@ -70,14 +70,18 @@ describe('ownership worked-example coverage', () => {
   );
 
   it.each(['mme', 'nne'])('rejects missing omitted plural-owner ending -%s', (ending) => {
-    const lesson = copyLesson('ppe-pronoun-omission');
+    const lesson = copyLesson('pop-pronoun-omission');
     lesson.examples = lesson.examples.filter((example) => !example.finnish.includes(ending + '.'));
     reject([lesson], `missing worked omission of -${ending}`);
   });
 
   it('does not count an explicit pronoun as an omission example', () => {
-    const lesson = copyLesson('ppe-pronoun-omission');
-    lesson.examples[2].finnish = 'Tämä on meidän automme.';
+    const lesson = copyLesson('pop-pronoun-omission');
+    for (const example of lesson.examples) {
+      if (example.finnish.endsWith('mme.') && !example.finnish.includes('meidän')) {
+        example.finnish = example.finnish.replace(/(on|ovat) /u, '$1 meidän ');
+      }
+    }
     reject([lesson], 'missing worked omission of -mme');
   });
 

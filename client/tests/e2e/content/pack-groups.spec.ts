@@ -40,6 +40,7 @@ const expectedGroups: ExpectedGroup[] = [
       'possession-questions',
       'negative-possession-questions',
       'possessive-pronouns-endings',
+      'plural-ownership-possessive-endings',
     ],
   },
 ];
@@ -62,7 +63,7 @@ test('groups catalog topic cards into labeled sections in pack order', async ({ 
     }
   }
 
-  await expect(page.locator('.topic-card')).toHaveCount(15);
+  await expect(page.locator('.topic-card')).toHaveCount(16);
 });
 
 test('mirrors the same grouping on the stats catalog', async ({ page }) => {

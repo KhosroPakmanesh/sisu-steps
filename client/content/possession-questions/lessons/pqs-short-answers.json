@@ -1,6 +1,6 @@
 {
   "id": "pqs-short-answers",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "title": "Short answers: On and Ei ole",
   "summary": "A short affirmative possession reply echoes On. A short negative possession reply is Ei ole. The question already tells us the owner and thing.",
   "stage": "focused",
@@ -148,11 +148,11 @@
   ],
   "practiceExercises": [
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Optional practice: Reply to “Onko heillä pallo?” with “They do not have it.” Use a verb reply; Kyllä or Ei is optional. pallo means “ball”.",
-      "acceptedAnswers": ["Ei ole.", "Ei, ei ole."],
-      "explanation": "Answer the stated possession meaning: On confirms having it; Ei ole denies having it. Both remain fixed with every owner. An optional Kyllä or Ei can introduce the reply.",
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Optional practice: Complete “They do not have it.” after “Onko heillä pallo?”: “Ei, ___.” pallo means “ball”.",
+      "acceptedAnswers": ["ei ole"],
+      "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner.",
       "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
       "requiredSkills": ["Fixed onko in possession questions", "Possession question short answers"],
       "vocabulary": [],
@@ -163,7 +163,14 @@
         "pattern": "fixed possession verb reply; owner and thing understood from the question",
         "parts": [
           {
-            "finnish": "Ei",
+            "finnish": "Ei,",
+            "meaning": "no",
+            "role": "supplied negative answer particle",
+            "baseForm": "ei",
+            "formation": "This separate Ei means “no” and introduces the negative verb reply ei ole."
+          },
+          {
+            "finnish": "ei",
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
@@ -180,9 +187,9 @@
       },
       "answerDiagnostics": [
         {
-          "answers": ["En ole."],
-          "category": "Possession question short answers: predictable form error",
-          "explanation": "Olen and en ole describe “I am” and “I am not”. A possession reply echoes fixed on or ei ole."
+          "answers": ["en ole", "emme ole", "eivät ole"],
+          "category": "Possession question short answers: form or meaning confused",
+          "explanation": "The first Ei means “no”. Fill the gap with fixed ei ole (“do not have it”); the negative possession reply stays the same for every owner."
         }
       ],
       "id": "pqs-short-answers-practice-01"

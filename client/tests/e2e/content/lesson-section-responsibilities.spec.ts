@@ -85,7 +85,7 @@ test('keeps section responsibilities and vocabulary consistent in every installe
     }
   }
 
-  expect(audit).toHaveLength(72);
+  expect(audit).toHaveLength(81);
   await writeFile(
     testInfo.outputPath('rendered-lesson-audit.json'),
     JSON.stringify(audit, null, 2),

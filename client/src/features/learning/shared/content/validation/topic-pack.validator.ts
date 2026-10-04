@@ -2,6 +2,8 @@ import { TopicPack } from '../topic-pack.models';
 import { validateLessons } from './lesson.validator';
 import { validateTests } from './test.validator';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';
+import { validatePluralOwnership } from './plural-ownership.validator';
+import { validateOwnershipQuestionVariety } from './ownership-question-variety.validator';
 import {
   validateGrammarBaseForms,
   validateGrammarVocabulary,
@@ -54,6 +56,16 @@ export function validateTopicPack(value: unknown): TopicPack {
     ...validatedLessons.flatMap((lesson) => lesson.practiceExercises),
   ];
   validateGrammarVocabulary(validatedLessons, exercises, grammarBaseForms);
+  validateOwnershipQuestionVariety({
+    ...(value as unknown as TopicPack),
+    lessons: validatedLessons,
+    tests: validatedTests,
+  });
+  validatePluralOwnership({
+    ...(value as unknown as TopicPack),
+    lessons: validatedLessons,
+    tests: validatedTests,
+  });
   return {
     ...(value as unknown as TopicPack),
     grammarBaseForms,

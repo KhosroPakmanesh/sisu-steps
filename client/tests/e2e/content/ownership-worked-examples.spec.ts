@@ -40,6 +40,6 @@ test('renders every ownership worked example and construction step at each viewp
         .screenshot({ path: testInfo.outputPath(`${lesson.id}-examples.png`) });
     }
   }
-  expect(audit).toHaveLength(19);
+  expect(audit).toHaveLength(28);
   await writeFile(testInfo.outputPath('worked-example-audit.json'), JSON.stringify(audit, null, 2));
 });

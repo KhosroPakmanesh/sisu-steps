@@ -5,6 +5,11 @@ const PRONOUN_GROUPS = [
   { pattern: /\b(?:his or her|his|her)\b/gu, alternatives: ['his', 'her', 'his or her'] },
 ];
 
+const PREDICATIVE_GROUP = {
+  pattern: /\b(?:his or hers|his|hers)\b/gu,
+  alternatives: ['his', 'hers', 'his or hers'],
+};
+
 export function validateEnglishPronounAnswers(exercises) {
   const errors = [];
   for (const exercise of exercises) {
@@ -15,7 +20,9 @@ export function validateEnglishPronounAnswers(exercises) {
     }
     const answers = new Set((exercise.acceptedAnswers ?? []).map(normalizeAnswer));
     for (const answer of answers) {
-      for (const group of PRONOUN_GROUPS) {
+      for (const group of /\b(?:is|are) (?:his|hers|his or hers)$/u.test(answer)
+        ? [PRONOUN_GROUPS[0], PREDICATIVE_GROUP]
+        : PRONOUN_GROUPS) {
         for (const match of answer.matchAll(group.pattern)) {
           for (const alternative of group.alternatives) {
             const variant =

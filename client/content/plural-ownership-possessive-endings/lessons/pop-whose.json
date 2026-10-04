@@ -1,0 +1,298 @@
+{
+  "id": "pop-whose",
+  "version": "1.0.0",
+  "title": "Whose is this? Whose are these? Kenen …?",
+  "summary": "Ask whose one or several things are without adding a personal suffix.",
+  "stage": "focused",
+  "targetSkills": ["Whose questions with kenen"],
+  "prerequisiteSkills": ["Plural possessed nouns in ownership sentences"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Ask whose one or several things are without adding a personal suffix.",
+    "Apply this rule with the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "How the pattern works",
+      "paragraphs": [
+        "Kenen means “whose”, an owner-question form of kuka (“who”). The owner is unspecified, so add no personal possessive suffix to the question noun.",
+        "For one thing use Kenen + basic noun + tämä on?: Kenen pallo tämä on? (“Whose ball is this?”). For several things keep plural -t: Kenen pallot nämä ovat? (“Whose balls are these?”).",
+        "Kenen stays the same merely because several things are named. It does not by itself establish whether one person or several people own them. Explicit questions about several owners are outside this bounded pattern.",
+        "Kenen tämä pallo on? and Kenen nämä pallot ovat? are also ordinary word orders. Typed and token tasks accept both orders. An answer naming a personal owner uses that owner’s possessive ending; question-to-answer combination waits for Review."
+      ],
+      "keyPoints": ["Ask whose one or several things are without adding a personal suffix."]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Kenen kirja tämä on?",
+      "english": "Whose book is this?",
+      "steps": [
+        "Begin with Kenen (“whose”) to ask about an unspecified owner.",
+        "Use kirja (“book”) without a personal possessive suffix.",
+        "Use nämä ovat for several things or tämä on for one thing."
+      ]
+    },
+    {
+      "finnish": "Kenen autot nämä ovat?",
+      "english": "Whose cars are these?",
+      "steps": [
+        "Begin with Kenen (“whose”) to ask about an unspecified owner.",
+        "Use autot (“cars”) without a personal possessive suffix.",
+        "Use nämä ovat for several things or tämä on for one thing."
+      ]
+    },
+    {
+      "finnish": "Kenen kynä tämä on?",
+      "english": "Whose pen is this?",
+      "steps": [
+        "Begin with Kenen (“whose”) to ask about an unspecified owner.",
+        "Use kynä (“pen”) without a personal possessive suffix.",
+        "Use nämä ovat for several things or tämä on for one thing."
+      ]
+    },
+    {
+      "finnish": "Kenen tyynyt nämä ovat?",
+      "english": "Whose pillows are these?",
+      "steps": [
+        "Begin with Kenen (“whose”) to ask about an unspecified owner.",
+        "Use tyynyt (“pillows”) without a personal possessive suffix.",
+        "Use nämä ovat for several things or tämä on for one thing."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not add a personal suffix to the question noun.",
+    "The number of things does not determine the number of owners."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “Whose apple is this?” in Finnish. Begin with Kenen. Use omena (“apple”), tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen omena tämä on?", "Kenen tämä omena on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-omena",
+        "objects-singular",
+        "whose-question",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose apple is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "omena",
+            "meaning": "apple",
+            "role": "things whose owner is asked",
+            "baseForm": "omena",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "id": "pop-whose-practice-01"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Optional practice: Build “Whose houses are these?” Begin with Kenen.",
+      "acceptedAnswers": ["Kenen talot nämä ovat?", "Kenen nämä talot ovat?"],
+      "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-talo",
+        "objects-plural",
+        "whose-question",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose houses are these?",
+        "pattern": "kenen + unsuffixed plural noun + nämä + ovat",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "talot",
+            "meaning": "houses",
+            "role": "things whose owner is asked",
+            "baseForm": "talo",
+            "formation": "talo + -t = talot. No personal owner is named, so keep -t and add no personal possessive suffix."
+          },
+          {
+            "finnish": "nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä and identifies several things."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with plural nämä; begin the owner question with kenen, without onko."
+          }
+        ]
+      },
+      "tokens": ["talot", "ovat?", "Kenen", "nämä"],
+      "id": "pop-whose-practice-02"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Optional practice: Choose “Whose dogs are these?” in Finnish. Use koirat (“dogs”), nämä ovat (“these are”).",
+      "acceptedAnswers": ["Kenen koirat nämä ovat?"],
+      "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-koira",
+        "objects-plural",
+        "whose-question",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose dogs are these?",
+        "pattern": "kenen + unsuffixed plural noun + nämä + ovat",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "koirat",
+            "meaning": "dogs",
+            "role": "things whose owner is asked",
+            "baseForm": "koira",
+            "formation": "koira + -t = koirat. No personal owner is named, so keep -t and add no personal possessive suffix."
+          },
+          {
+            "finnish": "nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä and identifies several things."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with plural nämä; begin the owner question with kenen, without onko."
+          }
+        ]
+      },
+      "options": [
+        "Kenen koirat nämä on?",
+        "Kuka koirat nämä ovat?",
+        "Kenen koirat nämä ovat?",
+        "Kenen koiransa nämä ovat?"
+      ],
+      "optionFeedback": {
+        "Kenen koirat nämä ovat?": "Correct: Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
+        "Kenen koiransa nämä ovat?": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
+        "Kenen koirat nämä on?": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
+        "Kuka koirat nämä ovat?": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat."
+      },
+      "id": "pop-whose-practice-03"
+    }
+  ]
+}

@@ -109,8 +109,8 @@ test('audits every applicable scored and optional English pronoun and possession
       }
     }
   }
-  expect(new Set(audit.map((item) => item.id)).size).toBe(72);
-  expect(audit).toHaveLength(132);
+  expect(new Set(audit.map((item) => item.id)).size).toBe(81);
+  expect(audit).toHaveLength(159);
   await writeFile(
     testInfo.outputPath('pronoun-rendered-audit.json'),
     JSON.stringify(audit, null, 2),

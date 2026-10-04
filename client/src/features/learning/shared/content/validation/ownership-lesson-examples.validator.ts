@@ -15,12 +15,15 @@ const POSSESSION_TARGETS = new Set([
   'Negative possession question short answers',
 ]);
 const OWNERS = ['minulla', 'sinulla', 'hänellä', 'meillä', 'teillä', 'heillä'];
-const PERSONAL_ENDINGS = ['ni', 'si', 'mme', 'nne'];
 
 export function validateOwnershipLessonExamples(lessons: readonly Lesson[]): void {
   const sets = new Map<string, string>();
   for (const lesson of lessons) {
     const target = lesson.targetSkills[0];
+    const pluralOwners = lesson.id.startsWith('pop-');
+    const personalEndings = pluralOwners ? ['mme', 'nne'] : ['ni', 'si'];
+    const genitives = pluralOwners ? ['meidän', 'teidän', 'heidän'] : ['minun', 'sinun', 'hänen'];
+    const thirdOwners = pluralOwners ? ['heidän'] : ['hänen'];
     const finnish = lesson.examples.map((example) => example.finnish).join('\n');
     const errors: string[] = [];
     if (POSSESSION_TARGETS.has(target)) {
@@ -36,12 +39,12 @@ export function validateOwnershipLessonExamples(lessons: readonly Lesson[]): voi
       if (target.includes('short answers')) validateReplies(lesson, errors);
     }
     if (target === 'Genitive personal owner forms') {
-      for (const owner of ['minun', 'sinun', 'hänen', 'meidän', 'teidän', 'heidän']) {
+      for (const owner of genitives) {
         if (!containsWord(finnish, owner)) errors.push(`missing worked genitive ${owner}`);
       }
     }
     if (target === 'First- and second-person possessive endings') {
-      for (const ending of PERSONAL_ENDINGS) {
+      for (const ending of personalEndings) {
         if (!hasEnding(finnish, ending)) errors.push(`missing worked ending -${ending}`);
       }
     }
@@ -50,7 +53,7 @@ export function validateOwnershipLessonExamples(lessons: readonly Lesson[]): voi
         .filter((example) => !/\b(?:minun|sinun|meidän|teidän)\b/iu.test(example.finnish))
         .map((example) => example.finnish)
         .join('\n');
-      for (const ending of PERSONAL_ENDINGS) {
+      for (const ending of personalEndings) {
         if (!hasEnding(omitted, ending)) errors.push(`missing worked omission of -${ending}`);
       }
     }
@@ -61,7 +64,7 @@ export function validateOwnershipLessonExamples(lessons: readonly Lesson[]): voi
         'Simple ownership identity sentences',
       ].includes(target)
     ) {
-      for (const owner of ['hänen', 'heidän']) {
+      for (const owner of thirdOwners) {
         if (!containsWord(finnish, owner))
           errors.push(`missing worked third-person owner ${owner}`);
       }

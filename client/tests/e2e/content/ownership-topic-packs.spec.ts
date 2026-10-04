@@ -10,6 +10,7 @@ const packIds = [
   'possession-questions',
   'negative-possession-questions',
   'possessive-pronouns-endings',
+  'plural-ownership-possessive-endings',
 ];
 let packs: TopicPack[];
 
@@ -26,8 +27,8 @@ test('shows all ownership packs and target-specific preparation at every viewpor
   test.setTimeout(120_000);
   await page.goto('/');
   const group = page.locator('.pack-group').filter({ hasText: 'Ownership and possession' });
-  await expect(group.locator('.topic-card')).toHaveCount(5);
-  await expect(page.locator('.catalog-stats')).toContainText('2154');
+  await expect(group.locator('.topic-card')).toHaveCount(6);
+  await expect(page.locator('.catalog-stats')).toContainText('2370');
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(pack.title);
@@ -53,7 +54,12 @@ test('shows all ownership packs and target-specific preparation at every viewpor
     await page.screenshot({ path: testInfo.outputPath(`${pack.id}-lesson.png`), fullPage: true });
     const review = pack.tests.at(-1)!;
     await page.goto(`/learn/${pack.id}/${review.id}`);
-    await expect(page.locator('.lesson-list .subject-tab')).toHaveCount(pack.lessons.length);
+    await expect(page.locator('.lesson-list .subject-tab')).toHaveCount(
+      review.lessonIds.length > 1 ? review.lessonIds.length : 0,
+    );
+    await expect(page.locator('.lesson-reader h2').first()).toHaveText(
+      pack.lessons.find((lesson) => lesson.id === review.lessonIds[0])!.title,
+    );
   }
 });
 
@@ -130,16 +136,29 @@ for (const packId of packIds) {
 test('accepts natural short replies and renders a distinct Finnish mistake diagnostic', async ({
   page,
 }) => {
+  const authored = packs
+    .find((pack) => pack.id === 'possession-questions')!
+    .tests.find((item) => item.id === 'pqs-short-answers-test')!;
   await page.goto('/study/possession-questions/pqs-short-answers-test');
-  await page.getByRole('textbox', { name: 'Your answer' }).fill('On.');
-  await page.getByRole('button', { name: 'Check answer', exact: true }).click();
-  await expect(page.locator('.feedback')).toHaveClass(/correct/u);
-  await page.getByRole('button', { name: 'Continue', exact: true }).click();
-  await page.getByRole('textbox', { name: 'Your answer' }).fill('Ei, ei ole.');
-  await page.getByRole('button', { name: 'Check answer', exact: true }).click();
-  await expect(page.locator('.feedback')).toHaveClass(/correct/u);
-
+  const ids = ['pqs-short-answers-test-e007', 'pqs-short-answers-test-e008'];
+  const last = Math.max(
+    ...ids.map((id) => authored.exercises.findIndex((exercise) => exercise.id === id)),
+  );
+  for (const [index, exercise] of authored.exercises.slice(0, last + 1).entries()) {
+    if (ids.includes(exercise.id)) {
+      await page
+        .getByRole('textbox', { name: 'Your answer' })
+        .fill(exercise.id.endsWith('007') ? 'On.' : 'Ei, ei ole.');
+      await page.getByRole('button', { name: 'Check answer', exact: true }).click();
+    } else await submitAnswer(page, page.locator('.exercise-card'), exercise, false);
+    await expect(page.locator('.feedback')).toHaveClass(/correct/u);
+    if (index < last) await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  }
+  const negative = packs
+    .find((pack) => pack.id === 'negative-possession')!
+    .tests.find((item) => item.id === 'nps-fixed-negative-test')!;
   await page.goto('/study/negative-possession/nps-fixed-negative-test');
+  await advanceTo(page, negative.exercises, 'nps-fixed-negative-test-e001');
   await page.locator('.choice-list input').nth(1).check();
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
   await expect(page.locator('.feedback')).toHaveClass(/incorrect/u);
@@ -151,33 +170,56 @@ test('accepts natural short replies and renders a distinct Finnish mistake diagn
 test('keeps a typed possession diagnostic distinct from unmatched-error feedback', async ({
   page,
 }) => {
+  const authored = packs
+    .find((pack) => pack.id === 'possession-questions')!
+    .tests.find((item) => item.id === 'pqs-short-answers-test')!;
+  const typed = authored.exercises.filter((exercise) => exercise.type === 'translation-fi');
   await page.goto('/study/possession-questions/pqs-short-answers-test');
-  await page.getByRole('textbox', { name: 'Your answer' }).fill('Olen.');
+  const index = await advanceTo(page, authored.exercises, typed[0].id);
+  await page
+    .getByRole('textbox', { name: 'Your answer' })
+    .fill(typed[0].answerDiagnostics![0].answers[0]);
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
   await expect(page.locator('.diagnostic')).toContainText(
-    'A possession reply echoes fixed on or ei ole.',
+    typed[0].answerDiagnostics![0].explanation,
   );
   await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  await advanceTo(page, authored.exercises, typed[1].id, index + 1);
   await page.getByRole('textbox', { name: 'Your answer' }).fill('unmatched response');
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
   await expect(page.locator('.feedback')).toHaveClass(/incorrect/u);
   await expect(page.locator('.diagnostic')).toHaveCount(0);
   await expect(page.locator('.feedback .explanation')).toHaveCount(1);
-  const explanation = packs
-    .find((pack) => pack.id === 'possession-questions')!
-    .tests.find((item) => item.id === 'pqs-short-answers-test')!.exercises[1].explanation;
-  await expect(page.locator('.feedback .explanation')).toContainText(explanation);
+  await expect(page.locator('.feedback .explanation')).toContainText(typed[1].explanation);
 });
+
+for (const id of ['possession-questions', 'negative-possession-questions']) {
+  test(`completes a genuine short-reply gap by keyboard in ${id}`, async ({ page }, testInfo) => {
+    const pack = packs.find((candidate) => candidate.id === id)!;
+    const authored = pack.tests.find((item) => item.id.includes('short-answers'))!;
+    const gap = authored.exercises.find(
+      (exercise) => exercise.type === 'fill-blank' && exercise.acceptedAnswers[0] === 'ei ole',
+    )!;
+    await page.goto(`/study/${id}/${authored.id}`);
+    await advanceTo(page, authored.exercises, gap.id);
+    await expect(page.locator('.exercise-card')).toContainText('Ei, ___.');
+    await page.getByRole('textbox', { name: 'Your answer' }).fill('ei ole');
+    await page.getByRole('textbox', { name: 'Your answer' }).press('Enter');
+    await expect(page.locator('.feedback')).toHaveClass(/correct/u);
+    await expect(page.locator('.sentence-parts li')).toHaveCount(3);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+      true,
+    );
+    await page.screenshot({ path: testInfo.outputPath(`${id}-reply-gap.png`), fullPage: true });
+  });
+}
 
 test('explains the missing noun ending in a typed partitive answer', async ({ page }) => {
   const authored = packs
     .find((pack) => pack.id === 'negative-possession')!
     .tests.find((item) => item.id === 'nps-partitive-test')!;
   await page.goto('/study/negative-possession/nps-partitive-test');
-  for (const exercise of authored.exercises.slice(0, 12)) {
-    await submitAnswer(page, page.locator('.exercise-card'), exercise, false);
-    await page.getByRole('button', { name: 'Continue', exact: true }).click();
-  }
+  await advanceTo(page, authored.exercises, 'nps-partitive-test-e013');
   await page.getByRole('textbox', { name: 'Your answer' }).fill('Minulla ei ole kissa.');
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
   await expect(page.locator('.feedback')).toHaveClass(/incorrect/u);
@@ -195,10 +237,53 @@ async function submitAnswer(page: Page, card: Locator, exercise: Exercise, pract
     }
   } else {
     const answer =
-      exercise.id === 'ppe-sentences-test-e009' ? 'This is her pen.' : exercise.acceptedAnswers[0];
+      exercise.type === 'translation-en' && exercise.tags.includes('owner-hänen')
+        ? (exercise.acceptedAnswers.find((candidate) => candidate.includes(' her ')) ??
+          exercise.acceptedAnswers[0])
+        : exercise.acceptedAnswers[0];
     await card.getByRole('textbox', { name: 'Your answer' }).fill(answer);
   }
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
+}
+
+for (const id of ['affirmative-possession', 'negative-possession']) {
+  test(`explains token placement in the revised word-order Review of ${id}`, async ({ page }) => {
+    const pack = packs.find((candidate) => candidate.id === id)!;
+    const review = pack.tests.at(-1)!;
+    await page.goto(`/study/${id}/${review.id}`);
+    for (const [index, exercise] of review.exercises.entries()) {
+      const card = page.locator('.exercise-card');
+      await submitAnswer(page, card, exercise, false);
+      await expect(page.locator('.feedback')).toHaveClass(/correct/u);
+      if (/-e02[12]$/u.test(exercise.id)) {
+        await expect(card.locator('.feedback .explanation')).toContainText(exercise.explanation);
+        await expect(card.locator('.feedback .explanation')).toContainText('supplied owner first');
+      }
+      await card
+        .getByRole('button', {
+          name: index === review.exercises.length - 1 ? 'See result' : 'Continue',
+          exact: true,
+        })
+        .click();
+    }
+    await expect(page.locator('.result-card')).toContainText('100%');
+  });
+}
+
+for (const id of ['possession-questions', 'negative-possession-questions']) {
+  test(`explains the optional negative-reply gap in ${id}`, async ({ page }, testInfo) => {
+    const pack = packs.find((candidate) => candidate.id === id)!;
+    const focused = pack.tests.find((item) => item.id.includes('short-answers'))!;
+    await page.goto(`/learn/${id}/${focused.id}`);
+    await page.getByRole('button', { name: 'Start optional practice' }).click();
+    await page.getByRole('textbox', { name: 'Your answer' }).fill('ei ole');
+    await page.getByRole('textbox', { name: 'Your answer' }).press('Enter');
+    const card = page.locator('.practice-card');
+    await expect(card.locator('.feedback')).toHaveClass(/correct/u);
+    await expect(card.locator('.sentence-parts li')).toHaveCount(3);
+    await expect(card.locator('.sentence-parts li').nth(1)).toContainText('ei');
+    await page.screenshot({ path: testInfo.outputPath(`${id}-optional-gap.png`), fullPage: true });
+  });
 }
 
 async function verifyExplanation(card: Locator, exercise: Exercise) {
@@ -207,8 +292,26 @@ async function verifyExplanation(card: Locator, exercise: Exercise) {
     await expect(card.locator('.sentence-parts li')).toHaveCount(
       exercise.sentenceExplanation.parts.length,
     );
+    for (const [index, part] of exercise.sentenceExplanation.parts.entries()) {
+      await expect(card.locator('.sentence-parts li').nth(index)).toContainText(part.finnish);
+    }
     await expect(card.locator('.sentence-lesson')).toContainText(
       exercise.sentenceExplanation.translation,
     );
   }
+}
+
+async function advanceTo(
+  page: Page,
+  exercises: Exercise[],
+  id: string,
+  start = 0,
+): Promise<number> {
+  const index = exercises.findIndex((exercise) => exercise.id === id);
+  expect(index).toBeGreaterThanOrEqual(start);
+  for (const exercise of exercises.slice(start, index)) {
+    await submitAnswer(page, page.locator('.exercise-card'), exercise, false);
+    await page.getByRole('button', { name: 'Continue', exact: true }).click();
+  }
+  return index;
 }
