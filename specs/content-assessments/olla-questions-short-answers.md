@@ -1,5 +1,9 @@
 # Finnish-teaching pedagogy assessment: olla-questions-short-answers
 
+## Grammar vocabulary correction — 2026-10-04
+
+Under `REQ-G001-141`, removed 1 grammar-only vocabulary declarations from 1 lesson. The current lexical inventory is 22 introduced, 39 reused, and 9 supplied entries. Their grammatical meanings and all worked examples remain intact. Revised lesson patch versions and manifest summaries advance; pack versions and scored semantics remain unchanged, with only obsolete revised-lesson completion marks requiring renewal. Earlier inventories below describe their dated authoring stage. The [shared correction assessment](grammar-vocabulary-separation.md) records the scoped pedagogy gates, complete preservation comparison, and final validation evidence.
+
 ## Pack identity and counts
 
 - Pack ID: `olla-questions-short-answers`

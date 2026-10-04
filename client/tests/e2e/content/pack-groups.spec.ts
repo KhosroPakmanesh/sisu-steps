@@ -31,6 +31,17 @@ const expectedGroups: ExpectedGroup[] = [
       'demonstrative-questions',
     ],
   },
+  {
+    id: 'ownership-and-possession',
+    title: 'Ownership and possession',
+    packs: [
+      'affirmative-possession',
+      'negative-possession',
+      'possession-questions',
+      'negative-possession-questions',
+      'possessive-pronouns-endings',
+    ],
+  },
 ];
 
 test('groups catalog topic cards into labeled sections in pack order', async ({ page }) => {
@@ -51,7 +62,7 @@ test('groups catalog topic cards into labeled sections in pack order', async ({ 
     }
   }
 
-  await expect(page.locator('.topic-card')).toHaveCount(10);
+  await expect(page.locator('.topic-card')).toHaveCount(15);
 });
 
 test('mirrors the same grouping on the stats catalog', async ({ page }) => {

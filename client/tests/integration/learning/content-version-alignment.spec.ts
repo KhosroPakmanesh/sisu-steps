@@ -64,6 +64,75 @@ describe('content-pack version alignment', () => {
     expect(aligned.learnerNotes.map((note) => note.text)).toEqual(['Keep this topic note.']);
   });
 
+  it('discards outdated lesson marks while retaining scores, sessions, mistakes, mastery and notes', () => {
+    const revised = structuredClone(learningPack);
+    revised.lessons[0].version = '1.0.1';
+    const unchanged = renamedPack('topic-two', '2.0.0');
+    const state = createEmptyLearnerState({
+      topic: revised.version,
+      'topic-two': unchanged.version,
+    });
+    state.lessonCompletions = [
+      {
+        lessonId: revised.lessons[0].id,
+        lessonVersion: '1.0.0',
+        completedAt: '2026-10-01T00:00:00.000Z',
+      },
+      {
+        lessonId: unchanged.lessons[0].id,
+        lessonVersion: unchanged.lessons[0].version,
+        completedAt: '2026-10-01T00:00:00.000Z',
+      },
+    ];
+    state.attempts = [completedAttempt('retained-attempt', revised.id, revised.tests[0].id)];
+    state.unresolvedMistakeIds = [revised.tests[0].exercises[0].id];
+    state.sessions = [
+      {
+        id: 'retained-session',
+        mode: 'test',
+        topicId: revised.id,
+        testId: revised.tests[0].id,
+        title: 'Retained study',
+        exerciseIds: revised.tests[0].exercises.map((exercise) => exercise.id),
+        currentIndex: 0,
+        answers: [],
+        startedAt: '2026-10-01T00:00:00.000Z',
+        updatedAt: '2026-10-01T00:00:00.000Z',
+      },
+    ];
+    state.correctionRecords = [
+      {
+        exerciseId: revised.tests[0].exercises[0].id,
+        parallelExerciseId: revised.tests[0].exercises[0].parallelExerciseId!,
+        targetSkill: revised.tests[0].targetSkills[0],
+        correctedAt: '2026-10-01T00:00:00.000Z',
+        nextReviewAt: '2026-10-02T00:00:00.000Z',
+        reviewStage: 2,
+        reviewAttempts: 3,
+        masteredAt: '2026-10-03T00:00:00.000Z',
+      },
+    ];
+    state.learnerNotes = [
+      {
+        topicId: revised.id,
+        lessonId: revised.lessons[0].id,
+        text: 'Keep my lesson note.',
+        updatedAt: '2026-10-01T00:00:00.000Z',
+      },
+    ];
+    const aligned = alignLearnerStateWithPacks(state, [revised, unchanged].map(topicPackToSummary));
+    expect(aligned.lessonCompletions).toEqual([state.lessonCompletions[1]]);
+    expect(aligned.attempts).toEqual(state.attempts);
+    expect(aligned.sessions).toEqual(state.sessions);
+    expect(aligned.unresolvedMistakeIds).toEqual(state.unresolvedMistakeIds);
+    expect(aligned.correctionRecords).toEqual(state.correctionRecords);
+    expect(aligned.learnerNotes).toEqual(state.learnerNotes);
+    expect(aligned.contentPackVersions).toEqual(state.contentPackVersions);
+    expect(
+      alignLearnerStateWithPacks(aligned, [revised, unchanged].map(topicPackToSummary)),
+    ).toEqual(aligned);
+  });
+
   it('clears the four revised demonstrative packs while keeping an unchanged pack and notes', () => {
     const changedIds = [
       'singular-demonstrative-pronouns',

@@ -7,6 +7,9 @@ import {
   validateLessonVocabularyVisibility,
   validateVocabularyItemTypes,
 } from './content-quality.mjs';
+import { validateLessonSectionResponsibilities } from './lesson-section-quality.mjs';
+import { validateOwnershipLessonExamples } from './ownership-lesson-examples.mjs';
+import { validateGrammarVocabulary } from './grammar-vocabulary.mjs';
 
 export async function validatePackContent(pack) {
   const allowedTypes = new Set([
@@ -135,6 +138,9 @@ export async function validatePackContent(pack) {
   }
   errors.push(...validateVocabularyItemTypes(lessons));
   errors.push(...validateLessonVocabularyVisibility(lessons));
+  errors.push(...validateLessonSectionResponsibilities(lessons));
+  errors.push(...validateOwnershipLessonExamples(lessons));
+  errors.push(...validateGrammarVocabulary(lessons, allExercises, pack.grammarBaseForms));
   errors.push(...validateExerciseVocabularyCoverage(allExercises, pack.grammarBaseForms));
   const focusedCoveredSkills = new Set();
   const focusedReferencedLessonIds = new Set();
@@ -409,6 +415,11 @@ export async function validatePackContent(pack) {
       ['plural-demonstrative-pronouns', 'demonstratives'],
       ['negative-demonstrative-statements', 'demonstratives'],
       ['demonstrative-questions', 'demonstratives'],
+      ['affirmative-possession', 'ownership'],
+      ['negative-possession', 'ownership'],
+      ['possession-questions', 'ownership'],
+      ['negative-possession-questions', 'ownership'],
+      ['possessive-pronouns-endings', 'ownership'],
     ]);
     const validatorFamily = validatorFamilies.get(pack.id);
     const specificValidatorPath = resolve(

@@ -1,5 +1,7 @@
 import { Lesson, VocabularyItem } from '../lesson.models';
 import { validateExercise } from './exercise.validator';
+import { validateLessonSectionResponsibilities } from './lesson-section.validator';
+import { validateOwnershipLessonExamples } from './ownership-lesson-examples.validator';
 import {
   collectKnownVocabulary,
   validateVocabularyVisibility,
@@ -28,11 +30,13 @@ export function validateLessons(lessons: unknown[], seenIds: Set<string>): Lesso
     const prerequisiteVocabulary = vocabularyForSkills(lesson.prerequisiteSkills, validated);
     validateVocabulary(lesson, prerequisiteVocabulary);
     validateTeachingContent(lesson);
+    validateLessonSectionResponsibilities(lesson);
     validateVocabularyVisibility(lesson, knownVocabulary);
     validatePractice(lesson, seenIds);
     lesson.targetSkills.forEach((skill) => availableSkills.add(skill));
     validated.push(lesson);
   }
+  validateOwnershipLessonExamples(validated);
   return validated;
 }
 

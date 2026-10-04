@@ -9,6 +9,7 @@ export const learningPack: TopicPack = {
   summary: 'Practise one dependable pattern at a time.',
   objectives: ['Use vowel harmony.'],
   importantSkills: ['Vowel harmony'],
+  grammarBaseForms: [],
   sources: [],
   lessons: [
     {

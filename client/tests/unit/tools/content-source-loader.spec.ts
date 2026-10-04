@@ -281,6 +281,17 @@ describe('pack-owned content source loader', () => {
           'demonstrative-questions',
         ],
       },
+      {
+        id: 'ownership-and-possession',
+        title: 'Ownership and possession',
+        packs: [
+          'affirmative-possession',
+          'negative-possession',
+          'possession-questions',
+          'negative-possession-questions',
+          'possessive-pronouns-endings',
+        ],
+      },
     ]);
     expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
       '1.0.0',

@@ -44,6 +44,7 @@ const validPack = (): TopicPack => ({
   summary: 'Summary',
   objectives: [],
   importantSkills: ['Rule'],
+  grammarBaseForms: [],
   sources: [],
   lessons: [
     {
@@ -842,6 +843,7 @@ describe('content manifest validation', () => {
       summary: pack.summary,
       objectives: pack.objectives,
       importantSkills: pack.importantSkills,
+      grammarBaseForms: pack.grammarBaseForms,
       sources: pack.sources,
       lessonIds: pack.lessons.map((lesson) => lesson.id),
       testIds: pack.tests.map((test) => test.id),

@@ -28,20 +28,17 @@ describe('PackContentRepository', () => {
 
   beforeAll(async () => {
     const source = await loadContentSource('content');
-    installedPacks = source.packs.map((pack) => {
-      const runtimePack = { ...pack };
-      delete runtimePack['grammarBaseForms'];
-      return runtimePack;
-    }) as unknown as TopicPack[];
+    installedPacks = source.packs as unknown as TopicPack[];
   });
 
   it('loads, validates, and indexes one pack on demand', async () => {
-    const pack = installedPacks[0];
+    const pack = installedPacks.find((pack) => pack.id === 'negative-possession')!;
     const { repository, loader } = createRepository([pack]);
 
     const loaded = await repository.load(topicPackToSummary(pack));
 
     expect(loaded.pack).toEqual(pack);
+    expect(loaded.pack.grammarBaseForms).toContain('minä');
     expect(loaded.lessonById.get(pack.lessons[0].id)).toBe(loaded.pack.lessons[0]);
     expect(loaded.testById.get(pack.tests[0].id)).toBe(loaded.pack.tests[0]);
     expect(loaded.exerciseById.get(pack.tests[0].exercises[0].id)).toBe(

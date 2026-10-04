@@ -1,0 +1,269 @@
+{
+  "id": "pqs-word-order",
+  "version": "1.1.4",
+  "title": "Onko + owner + thing",
+  "summary": "Begin with Onko, place the owner immediately after it, and put the thing last: Onko sinulla pallo?",
+  "stage": "focused",
+  "targetSkills": ["Possession question word order"],
+  "prerequisiteSkills": ["Fixed onko in possession questions"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Arrange a question as onko + owner + thing.",
+    "Recognise the pattern, then produce it with the supporting words shown."
+  ],
+  "sections": [
+    {
+      "title": "How the pattern works",
+      "paragraphs": [
+        "Begin with Onko, place the owner immediately after it, and put the thing last: Onko sinulla pallo?"
+      ],
+      "keyPoints": ["Onko + owner + basic singular noun"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Onko minulla auto?",
+      "english": "Do I have a car?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put minulla next. minulla means “I as the owner”.",
+        "Put auto (“car”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    },
+    {
+      "finnish": "Onko sinulla pallo?",
+      "english": "Do you have a ball?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put sinulla next. sinulla means “you as the owner” for one person.",
+        "Put pallo (“ball”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    },
+    {
+      "finnish": "Onko hänellä kynä?",
+      "english": "Does she have a pen?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put hänellä next. hänellä means “he as the owner” or “she as the owner”; this example uses “she”.",
+        "Put kynä (“pen”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    },
+    {
+      "finnish": "Onko meillä koira?",
+      "english": "Do we have a dog?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put meillä next. meillä means “we as the owner”.",
+        "Put koira (“dog”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    },
+    {
+      "finnish": "Onko teillä kirja?",
+      "english": "Do you have a book?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put teillä next. teillä means “you as the owner” for a group.",
+        "Put kirja (“book”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    },
+    {
+      "finnish": "Onko heillä kissa?",
+      "english": "Do they have a cat?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put heillä next. heillä means “they as the owner”.",
+        "Put kissa (“cat”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    },
+    {
+      "finnish": "Onko minulla peli?",
+      "english": "Do I have a game?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put minulla next. minulla means “I as the owner”.",
+        "Put peli (“game”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    },
+    {
+      "finnish": "Onko teillä tyyny?",
+      "english": "Do you have a pillow?",
+      "steps": [
+        "Put Onko first to turn the possession pattern into a yes/no question.",
+        "Put teillä next. teillä means “you as the owner” for a group.",
+        "Put tyyny (“pillow”) last: Onko + owner + thing. Onko already contains on; do not add another on."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Keep Onko first and the owner immediately after it in the requested pattern: Onko sinulla pallo?",
+    "Reordering the words does not change fixed onko into a verb agreeing with the owner."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Optional practice: Build “Do they have a ball?” Put the owner immediately after the question word. Use heillä (“they as the owner”) and pallo (“a ball”).",
+      "acceptedAnswers": ["Onko heillä pallo?"],
+      "explanation": "Follow the pattern: onko + possessor + one thing in its basic singular form.",
+      "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
+      "requiredSkills": ["Fixed onko in possession questions", "Possession question word order"],
+      "vocabulary": [],
+      "targetSkill": "Possession question word order",
+      "misconceptionCategory": "Possession question word order: form or meaning confused",
+      "tokens": ["heillä", "pallo?", "Onko"],
+      "sentenceExplanation": {
+        "translation": "Do they have a ball?",
+        "pattern": "onko + possessor + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "do/does … have?",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "On + the yes/no question ending -ko = onko. It stays the same with every possessor."
+          },
+          {
+            "finnish": "heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "pallo?",
+            "meaning": "a ball",
+            "role": "thing possessed",
+            "baseForm": "pallo",
+            "formation": "pallo stays in its basic singular form: one ball."
+          }
+        ]
+      },
+      "id": "pqs-word-order-practice-01"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Optional practice: Build “Do I have a pen?” Put the owner immediately after the question word. Use minulla (“I as the owner”) and kynä (“a pen”).",
+      "acceptedAnswers": ["Onko minulla kynä?"],
+      "explanation": "Follow the pattern: onko + possessor + one thing in its basic singular form.",
+      "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
+      "requiredSkills": ["Fixed onko in possession questions", "Possession question word order"],
+      "vocabulary": [],
+      "targetSkill": "Possession question word order",
+      "misconceptionCategory": "Possession question word order: form or meaning confused",
+      "tokens": ["minulla", "kynä?", "Onko"],
+      "sentenceExplanation": {
+        "translation": "Do I have a pen?",
+        "pattern": "onko + possessor + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "do/does … have?",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "On + the yes/no question ending -ko = onko. It stays the same with every possessor."
+          },
+          {
+            "finnish": "minulla",
+            "meaning": "I as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "minä",
+            "formation": "minä has the learned possession form minulla; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "kynä?",
+            "meaning": "a pen",
+            "role": "thing possessed",
+            "baseForm": "kynä",
+            "formation": "kynä stays in its basic singular form: one pen."
+          }
+        ]
+      },
+      "id": "pqs-word-order-practice-02"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Optional practice: Build “Do we have a car?” Put the owner immediately after the question word. Use meillä (“we as the owner”) and auto (“a car”).",
+      "acceptedAnswers": ["Onko meillä auto?"],
+      "explanation": "Follow the pattern: onko + possessor + one thing in its basic singular form.",
+      "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
+      "requiredSkills": ["Fixed onko in possession questions", "Possession question word order"],
+      "vocabulary": [],
+      "targetSkill": "Possession question word order",
+      "misconceptionCategory": "Possession question word order: form or meaning confused",
+      "tokens": ["meillä", "auto?", "Onko"],
+      "sentenceExplanation": {
+        "translation": "Do we have a car?",
+        "pattern": "onko + possessor + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "do/does … have?",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "On + the yes/no question ending -ko = onko. It stays the same with every possessor."
+          },
+          {
+            "finnish": "meillä",
+            "meaning": "we as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "me",
+            "formation": "me has the learned possession form meillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "auto?",
+            "meaning": "a car",
+            "role": "thing possessed",
+            "baseForm": "auto",
+            "formation": "auto stays in its basic singular form: one car."
+          }
+        ]
+      },
+      "id": "pqs-word-order-practice-03"
+    }
+  ]
+}

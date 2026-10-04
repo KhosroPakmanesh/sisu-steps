@@ -88,6 +88,7 @@ export class PackContentRepository {
       summary: summary.summary,
       objectives: summary.objectives,
       importantSkills: summary.importantSkills,
+      grammarBaseForms: summary.grammarBaseForms,
       sources: summary.sources,
       lessons,
       tests,

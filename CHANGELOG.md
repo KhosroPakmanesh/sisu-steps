@@ -2,9 +2,26 @@
 
 ## Unreleased
 
+### Ownership pack consistency
+
+- Retained the four ownership sentence/word-order steps as Focused after the user reversed their pending Review conversion. Kept clearer question ordering, shorter explanations, all 19 tailored mistake lists, six new partitive diagnostics, accurate noun scope and completed assessments. All 552 scored and 57 optional exercises remain.
+- Cancelled the uncommitted 1.3.0 stage/skill conversion; all five ownership packs use their original 1.2.0 scoring interpretation. The four restored lessons advance their patch versions; obsolete completion marks require renewal. Existing strict alignment still applies to data saved against a different version. Other packs and still-owned notes remain intact; no storage format or migration changes.
+
+### Docs
+
+- Recorded a grammar/vocabulary separation assessment of all 15 packs and 72 lessons. Found 150 declared-grammar vocabulary entries across 36 lessons, plus a plural-verb lesson with missing grammar metadata; distinguished the lexical particle `kyllä` and supporting vocabulary. The assessment recommends correction in 36 lessons and a classification decision in one, without changing content or learner data.
+- Recorded a progression and repetition assessment of all 15 packs and 72 lessons, identifying nine lesson merges, six conversions to Review practice, and 23 pairs of equivalent scored tasks hidden by differing skill labels. The assessment records per-lesson recommendations and the contract, vocabulary, validation, and versioning work required before consolidation; content and learner data are unchanged.
+
+### Grammar vocabulary correction
+
+- Removed 155 grammar-only vocabulary entries from 37 lessons, including possessors, demonstratives, verb forms, and optional affirmative answer elements. Their meanings remain in grammar teaching and worked examples; supporting vocabulary and supplied noun forms remain available.
+- Corrected missing T-plural grammar metadata and removed 70 grammatical recall references from 35 exercises. Runtime loading now retains grammar metadata, and runtime/direct-source validation rejects grammar forms in lesson vocabulary or exercise recall lists. Scoring, questions, pack versions, and study history are preserved; revised lesson patch versions require only their completion marks to be renewed under existing alignment.
+
 ### Added
 
-- Added an independent sentence-question vocabulary audit to direct-source validation. Pack-owned grammar base forms let it detect recall words omitted from an exercise's `vocabulary` array, including `avaimet` in Finnish-to-English translation, and verify that translation explanations cover the full Finnish source.
+- Added five `0 - A1.3` Ownership and possession packs covering all six persons in affirmative and negative possession, positive and negative questions with short answers, and possessive pronouns and endings. Pack titles use grammar labels without appended example phrases, matching the existing catalog. The family adds 19 Focused lessons and tests, five Review tests, 552 scored exercises (96 in each of the first four packs; 168 in the possessive pack), and 57 optional-practice exercises, with explicit regular singular partitives, vowel harmony, “Whose?” questions, diagnostics, and separate pedagogy assessments. Added practice includes error repair, transformations, meaning interpretation, and independent sentence construction. The five packs and revised lessons advance to `1.1.0`; existing version alignment intentionally resets their prior study progress while preserving compatible progress in the other packs.
+
+- Added an independent sentence-question vocabulary audit to direct-source validation. Pack-owned grammar base forms let it detect recall words omitted from an exercise's `vocabulary` array, including `avaimet` in Finnish-to-English translation, verify that translation explanations cover the full Finnish source, and recognize visibly supplied noun bases when the assessed task forms their grammatical ending.
 
 - Added directly accessible Privacy Policy and Terms of Service pages for the public site, with footer links, an enquiry email, and a GitHub Issues contact path; the policy explains local progress, optional manual Drive checkpoints, and the separate deletion controls.
 
@@ -198,6 +215,14 @@
 - The **Guided combination** learning stage. Focused lessons and tests now have one target, prerequisite lessons are not repeated, and only Review may combine previously taught topics.
 
 ### Fixed
+
+- Revised worked examples in all 19 ownership lessons to demonstrate each lesson's target, cover all six possessors including `hänellä` and `teillä`, show both short replies, and explain all four personal possessive endings and their omission. Added construction and coverage checks. Only lesson patch versions advance; pack versions and scored history remain valid. Initialization deliberately discards outdated lesson-completion records, so revised lessons need marking complete again and new backups remain restorable. Older backups containing obsolete lesson-completion versions are rejected under the existing strict policy.
+
+- Removed `have/has got` English possession alternatives from 42 scored and six optional questions in affirmative possession, negative possession, and possession questions, following the requested simple `have/has` construction. The ten previous packs contained no such alternatives. Added content guards, grading regressions, and authoring/skill guidance. The three revised practice lessons advance to `1.2.0`; the already disclosed seven-pack reset covers this final correction.
+
+- Made English translations consistent across all packs: gender-neutral Finnish `hän` accepts `he`, `she`, and `he or she`; possessive translations accept `his`, `her`, and `his or her`, including every permitted sentence frame. Corrected 16 scored items across seven packs and clarified pronoun-choice instructions. Added runtime/direct-source guards and regression coverage, and updated content-authoring policy and the Finnish content creator skill. Personal pronouns and affirmative olla advances to `1.1.0`; singular demonstratives and the five ownership packs advance to `1.2.0`. Existing version alignment intentionally clears prior attempts, unfinished sessions, mistakes, mastery, and lesson completions in those seven packs; other packs and learner notes are preserved.
+
+- Removed duplicate vocabulary lists from 19 ownership lessons while retaining grammatical form teaching and contextual translations. Defined consistent lesson section responsibilities in the content contract and authoring assessments, updated content-creator guidance, and added runtime, direct-source, and rendered regression checks. This presentation correction preserves content versions and learner progress.
 
 - Replaced “previously identified” in four Demonstratives packs with natural English model answers, glosses, and prompts while keeping the familiar-reference cue where learners choose `se` or `ne`. Twelve translations now accept natural `the` and `that`/`those` alternatives; the other twelve affected model answers now display a natural first answer. The observed “It that book at home?” response now has a specific `It` versus `Is` correction. Study and optional practice no longer repeat a fallback explanation as “What happened,” and English translation corrections have an English language tag. The four affected packs advance from `1.0.0` to `1.1.0`: on installation, their prior attempts, unfinished sessions, mistakes, correction records, and lesson completions are intentionally cleared. Other packs and still-owned notes remain intact.
 

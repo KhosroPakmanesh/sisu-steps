@@ -1,20 +1,10 @@
 {
   "id": "plural-sentences",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "stage": "focused",
   "targetSkills": ["Plural subject + ovat"],
   "prerequisiteSkills": ["Regular T-plural"],
   "introducedVocabulary": [
-    {
-      "finnish": "olla",
-      "english": "to be",
-      "type": "word"
-    },
-    {
-      "finnish": "ovat",
-      "english": "are, for a plural subject",
-      "type": "word"
-    },
     {
       "finnish": "täällä",
       "english": "here",
@@ -38,11 +28,6 @@
     {
       "finnish": "auto",
       "english": "car",
-      "type": "word"
-    },
-    {
-      "finnish": "on",
-      "english": "is, for a singular subject",
       "type": "word"
     }
   ],
@@ -162,7 +147,7 @@
       "explanation": "Kissat is the plural subject, ovat means “are”, and kotona means “at home”.",
       "tags": ["lesson-practice", "t-plural", "sentence"],
       "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
-      "vocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+      "vocabulary": ["kissa", "pallo", "auto", "kotona", "täällä", "ulkona"],
       "tokens": ["kotona.", "ovat", "Kissat"],
       "sentenceExplanation": {
         "translation": "The cats are at home.",
@@ -201,7 +186,7 @@
       "explanation": "Pallot means “the balls”, ovat means “are”, and täällä means “here”.",
       "tags": ["lesson-practice", "t-plural", "sentence"],
       "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
-      "vocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+      "vocabulary": ["kissa", "pallo", "auto", "kotona", "täällä", "ulkona"],
       "sentenceExplanation": {
         "translation": "The balls are here.",
         "pattern": "Plural subject (more than one person or thing) + ovat (“are”) + place or state",
@@ -239,7 +224,7 @@
       "explanation": "Autot is already plural. A plural subject uses ovat; ulkona is supplied as the fixed word “outside”.",
       "tags": ["lesson-practice", "t-plural", "sentence"],
       "requiredSkills": ["Plural subject + ovat", "Regular T-plural"],
-      "vocabulary": ["kissa", "pallo", "auto", "olla", "ovat", "kotona", "täällä", "ulkona"],
+      "vocabulary": ["kissa", "pallo", "auto", "kotona", "täällä", "ulkona"],
       "sentenceExplanation": {
         "translation": "The cars are outside.",
         "pattern": "Plural subject (more than one person or thing) + ovat (“are”) + place or state",

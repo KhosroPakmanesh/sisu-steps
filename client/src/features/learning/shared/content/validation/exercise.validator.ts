@@ -1,5 +1,7 @@
 import { Exercise, ExerciseType } from '../exercise.models';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';
+import { validateEnglishPronounAnswers } from './english-pronoun.validator';
+import { validateEnglishPossessionAnswers } from './english-possession.validator';
 
 const EXERCISE_TYPES = new Set<ExerciseType>([
   'multiple-choice',
@@ -33,6 +35,8 @@ export function validateExercise(exercise: unknown, seenIds: Set<string>): Exerc
   validateSentenceExplanation(exercise);
   validateTransformationPrompt(exercise);
   validateEditorialQuality(exercise);
+  validateEnglishPronounAnswers(exercise as unknown as Exercise);
+  validateEnglishPossessionAnswers(exercise as unknown as Exercise);
   if (seenIds.has(exercise['id'])) {
     throw new Error(`Duplicate exercise id: ${exercise['id']}`);
   }

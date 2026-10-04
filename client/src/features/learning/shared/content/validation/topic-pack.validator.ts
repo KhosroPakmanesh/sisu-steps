@@ -2,6 +2,10 @@ import { TopicPack } from '../topic-pack.models';
 import { validateLessons } from './lesson.validator';
 import { validateTests } from './test.validator';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';
+import {
+  validateGrammarBaseForms,
+  validateGrammarVocabulary,
+} from './grammar-vocabulary.validator';
 
 const MAXIMUM_SCORED_EXERCISES = 1000;
 
@@ -42,10 +46,17 @@ export function validateTopicPack(value: unknown): TopicPack {
   }
 
   const seenIds = new Set<string>();
+  const grammarBaseForms = validateGrammarBaseForms(value['grammarBaseForms']);
   const validatedLessons = validateLessons(lessons, seenIds);
   const validatedTests = validateTests(tests, validatedLessons, importantSkills, seenIds);
+  const exercises = [
+    ...validatedTests.flatMap((test) => test.exercises),
+    ...validatedLessons.flatMap((lesson) => lesson.practiceExercises),
+  ];
+  validateGrammarVocabulary(validatedLessons, exercises, grammarBaseForms);
   return {
     ...(value as unknown as TopicPack),
+    grammarBaseForms,
     lessons: validatedLessons,
     tests: validatedTests,
   };

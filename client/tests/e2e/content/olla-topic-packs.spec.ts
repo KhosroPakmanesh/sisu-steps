@@ -32,8 +32,8 @@ test('opens each smaller pronoun and olla topic pack without reducing the conten
 }) => {
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(10);
-  await expect(page.locator('.catalog-stats')).toContainText('1602');
+  await expect(page.locator('.topic-card')).toHaveCount(15);
+  await expect(page.locator('.catalog-stats')).toContainText('2154');
 
   for (const pack of packs) {
     const topicCard = page.locator('.topic-card').filter({

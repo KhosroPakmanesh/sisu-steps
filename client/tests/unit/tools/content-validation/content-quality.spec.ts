@@ -1,11 +1,49 @@
 import { describe, expect, it } from 'vitest';
 import {
   validateExerciseEditorialQuality,
+  validateExerciseVocabularyCoverage,
   validateLessonVocabularyVisibility,
   validateVocabularyItemTypes,
 } from '../../../../tools/content-validation/shared/content-quality.mjs';
 
 describe('standalone content-quality validation', () => {
+  it('distinguishes a visibly supplied noun base from lexical recall in English translation', () => {
+    const exercise = {
+      id: 'partitive',
+      type: 'translation-fi',
+      prompt: 'Write “I do not have a cat.” Use kissa (“cat”).',
+      acceptedAnswers: ['Minulla ei ole kissaa.'],
+      vocabulary: [],
+      sentenceExplanation: {
+        parts: [
+          { finnish: 'Minulla', baseForm: 'minä' },
+          { finnish: 'ei', baseForm: 'ei' },
+          { finnish: 'ole', baseForm: 'olla' },
+          { finnish: 'kissaa.', baseForm: 'kissa' },
+        ],
+      },
+    };
+    const grammar = ['minä', 'ei', 'olla'];
+    expect(validateExerciseVocabularyCoverage([exercise], grammar)).toEqual([]);
+    expect(
+      validateExerciseVocabularyCoverage(
+        [{ ...exercise, prompt: 'Write “I do not have a cat.”' }],
+        grammar,
+      ).join('\n'),
+    ).toContain('recall word kissa');
+    expect(
+      validateExerciseVocabularyCoverage(
+        [
+          {
+            ...exercise,
+            type: 'translation-en',
+            prompt: 'Translate “Minulla ei ole kissaa.” into English.',
+          },
+        ],
+        grammar,
+      ).join('\n'),
+    ).toContain('recall word kissa');
+  });
   it('rejects known vocabulary hidden in a worked example', () => {
     const lessons = [
       lesson({

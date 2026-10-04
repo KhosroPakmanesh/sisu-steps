@@ -41,6 +41,7 @@
 - **REQ-G006-025:** The aggregate content-validation command shall validate every pack registered in the source catalog without generating output.
 - **REQ-G006-026:** Repository documentation and commands shall identify `client/content/` as both the sole authored source and the static deployment input and shall contain no instruction to generate a second runtime copy.
 - **REQ-G006-027:** Automated regression evidence shall compare the pre-refactor assembled pack and the directly loaded assembled pack as parsed JSON and fail on any semantic, identity, version, reference, or ordering difference.
+- **REQ-G006-028:** Under root `REQ-G001-141`, browser manifests, catalog summaries, and assembled packs shall retain existing `grammarBaseForms` metadata. Manifest and pack validation shall require unique non-empty single-word grammar bases, while permitting an explicitly empty array. Complete pack validation shall reject grammar-only lesson and exercise vocabulary using aligned authored sentence-part surfaces. This extends the historical assembled content contract without changing persisted learner or backup schemas.
 
 ## Acceptance criteria
 

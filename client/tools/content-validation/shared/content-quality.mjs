@@ -1,3 +1,6 @@
+import { validateEnglishPronounAnswers } from './english-pronoun.mjs';
+import { validateEnglishPossessionAnswers } from './english-possession.mjs';
+
 export function validateLessonVocabularyVisibility(lessons) {
   const errors = [];
   const knownVocabulary = new Set(
@@ -138,7 +141,7 @@ export function validateExerciseVocabularyCoverage(exercises, grammarBaseForms) 
           exercise.prompt ?? '',
           ...(exercise.options ?? []),
           ...(exercise.tokens ?? []),
-        ].some((text) => containsItem(text, surface));
+        ].some((text) => containsItem(text, surface) || containsItem(text, baseWord));
         if (exercise.type !== 'translation-en' && visibleFinnish) continue;
         errors.push(
           `${exercise.id}: recall word ${baseWord} (${surface}) is missing from vocabulary`,
@@ -165,7 +168,10 @@ function normalizeWords(value) {
 }
 
 export function validateExerciseEditorialQuality(exercises) {
-  const errors = [];
+  const errors = [
+    ...validateEnglishPronounAnswers(exercises),
+    ...validateEnglishPossessionAnswers(exercises),
+  ];
   for (const exercise of exercises) {
     if (typeof exercise?.prompt === 'string' && exercise.prompt.trim().split(/\s+/u).length > 40) {
       errors.push(`${exercise.id}: prompt exceeds the 40-word editorial limit`);

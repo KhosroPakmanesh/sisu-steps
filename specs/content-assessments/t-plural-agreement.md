@@ -1,5 +1,9 @@
 # T-plural and plural agreement — pedagogy assessment
 
+## Grammar vocabulary correction — 2026-10-04
+
+Under `REQ-G001-141`, removed 3 grammar-only vocabulary declarations from 1 lesson. The current lexical inventory is 43 introduced, 29 reused, and 1 supplied entries. Their grammatical meanings and all worked examples remain intact. Revised lesson patch versions and manifest summaries advance; pack versions and scored semantics remain unchanged, with only obsolete revised-lesson completion marks requiring renewal. Earlier inventories below describe their dated authoring stage. The [shared correction assessment](grammar-vocabulary-separation.md) records the scoped pedagogy gates, complete preservation comparison, and final validation evidence.
+
 ## Identity and proposed scope
 
 - **Pack ID:** `t-plural-agreement`

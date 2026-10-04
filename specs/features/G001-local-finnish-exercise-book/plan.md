@@ -4,7 +4,31 @@
 
 Deliver a browser-only Angular exercise book and a level `0 - A1.3` grammar-foundation pack family covering vowel harmony, KPT consonant gradation, the nominative T-plural, and related written agreement.
 
+## 2026-10-04 grammar and vocabulary separation
+
+Implement `REQ-G001-141` using the complete [72-lesson audit](../../content-assessments/grammar-vocabulary-separation.md). Remove grammar-only entries from authored lesson vocabulary, supply the omitted T-plural `olla` metadata, and classify `kyllä` consistently as a short-answer element. Preserve all grammar explanations and lexical context. Carry existing `grammarBaseForms` through runtime content loading and reject contradictory lesson/exercise declarations at both validation boundaries using aligned authored sentence parts. Advance lesson patch versions only; preserve pack versions and scoring history. Run the client gate, negative regressions, and the all-lesson rendered audit.
+
+## 2026-10-04 ownership Focused restoration
+
+Implement the user's selective reversal under REQ-G001-140: restore four sentence/word-order steps to Focused with their original titles and skill metadata, while preserving shorter teaching, specific mistake guidance, six partitive diagnostics, accurate noun scope and final assessments. Retain the question formation → short answers → word-order sequence and remove the later order skill from short-answer prerequisites. Keep all 552 scored and 57 optional exercises, vocabulary, examples, answers and mastery links.
+
+Use the pre-repair source snapshot to restore metadata, compare against the immediately preceding content to preserve the retained fixes, and validate all packs plus rendered Focused preparation. Cancel the pending 1.3.0 stage conversion; all five packs return to 1.2.0 scored semantics. Advance only the four restored lesson patch versions, synchronize manifest summaries and tests, and record the current decision in [the consistency assessment](../../content-assessments/ownership-consistency.md). Historical plan sections below describe dated implementation stages.
+
+## 2026-10-01 ownership and possession pack family
+
+Implement `REQ-G001-135` as five independent `1.0.0` packs in one **Ownership and possession** catalog group. Author three Focused lessons and tests plus one 12-question Review in each of the affirmative, negative, positive-question, and negative-question packs (48 scored questions per pack). Author seven Focused lessons and tests plus one 28-question Review in the possessive-pronoun pack (100 scored questions). Provide three distinct optional exercises per lesson, for 57 unscored items.
+
+Record each pre-authoring assessment before bulk authoring. Teach the invariant possession verb forms, all six possessors, explicitly bounded regular singular partitives, and affirmative/negative short answers. Isolate genitive pronouns, personal suffixes, third-person reference and harmony, sentence use, pronoun omission, and `kenen` in the possessive sequence. Keep supporting forms visible when they are not assessed. Deliver pack-owned JSON, catalog registration, semantic validation with negative tests, rendered content audits, final pedagogy records, and changelog and validation evidence. Run the aggregate client quality gate and browser suite. Preserve all existing pack IDs, versions, and learner data.
+
+## 2026-10-03 English pronoun consistency
+
+Implement `REQ-G001-137` across all installed packs and optional practice. Correct the 12 subject-pronoun and four possessive-pronoun scored items, make alternative wording explicit, and preserve existing natural answers and the first feedback model. Add equivalent runtime and direct-source guards, source-grounded grading and negative-validation tests, and browser checks of actual submission. Update authoring guidance, the Finnish content creator skill, assessment evidence, and the changelog. Version only the seven packs whose grading changes, using the existing scoped progress reset; preserve IDs, order, counts, skills, and mastery links.
+
+Also implement the user's `REQ-G001-138` restriction to simple English possession: remove the existing `have/has got` variants from all 48 applicable scored and optional items in the three affected ownership packs. Preserve permitted article and contraction frames, update the three revised lesson versions and summaries, and validate rejection of the excluded construction through both content boundaries and actual submission.
+
 ## Included capabilities
+
+The 2026-10-03 worked-example revision implements `REQ-G001-139`: use the existing five-pack, 19-lesson ownership sequence, author target-specific examples with explicit coverage of the taught contrasts, preserve every scored and optional exercise, and add equivalent runtime/direct-source guards plus rendered example/step checks. Advance only lesson patch versions and manifest summaries; preserve pack versions and scored history. Extend existing state alignment to discard outdated completion records so new exports remain restorable; retain compatible completions and all scored data. Record both assessment gates in [the scoped assessment](../../content-assessments/ownership-worked-examples.md) and link the five pack records.
 
 - Topic dashboard and ordered test selection
 - Authored grammar packs containing 200–1,000 scored exercises according to coverage needs
@@ -188,3 +212,11 @@ Correct the plural-reference lesson's omitted reuse of `avain`, which is already
 ## 2026-09-29 independent question word inventory
 
 Implement `REQ-G001-133` as a direct-source authoring gate over scored and optional-practice sentence questions. Store each pack's grammar-only base forms in `pack.json`; align each explanation part's Finnish words with its base forms, compare non-grammar words against the question's vocabulary and visibly supplied forms, and verify that Finnish-to-English explanations cover the full source. Audit all installed packs, add a mutation test that removes `avain` from the sixth plural-reference question, update authoring guidance and the content-creator skill, and run the client quality gate. Keep learner scoring and persisted content versions unchanged.
+
+## 2026-10-01 ownership practice expansion
+
+Expand `REQ-G001-135` from 292 to 552 scored questions: 96 each for the four sentence-pattern packs and 168 for possessive pronouns and endings. Preserve the 19 Focused targets, five Reviews, 57 optional items, existing IDs and pairs, grammar-label titles, and level `0 - A1.3`. Record approved pre-authoring gates before bulk writing. Add distinct recognition, repair, transformation, and construction demands, with at most ten new words per lesson and local prerequisites. Version the five packs and revised lessons at `1.1.0`; record their intentional scoped progress reset before source changes. Strengthen semantic duplicate and new-task guards, run the complete client gate and affected responsive/browser checks, inspect every rendered lesson and exercise, then record separate final dispositions and exact inventories.
+
+## 2026-10-03 lesson section responsibilities
+
+Implement REQ-G001-136 by defining the shared responsibilities in the authoring guide and routing the content-creator skill and both assessment gates to that contract. Inventory all 72 lessons, remove redundant lexical lists from 19 ownership lessons, and preserve grammatical transformations and visible contextual meanings. Add equivalent runtime and standalone checks for obvious duplicate vocabulary lists, regression cases for valid grammar teaching, and complete rendered lesson coverage. Record a scoped pedagogy assessment and validation evidence. Keep exercise definitions, vocabulary declarations, IDs, versions, and existing progress semantics.

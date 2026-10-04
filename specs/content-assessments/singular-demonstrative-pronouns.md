@@ -1,5 +1,9 @@
 # Finnish-teaching pedagogy assessment: singular-demonstrative-pronouns
 
+## Grammar vocabulary correction — 2026-10-04
+
+Under `REQ-G001-141`, removed 19 grammar-only vocabulary declarations from 5 lessons. The current lexical inventory is 15 introduced, 15 reused, and 0 supplied entries. Their grammatical meanings and all worked examples remain intact. Revised lesson patch versions and manifest summaries advance; pack versions and scored semantics remain unchanged, with only obsolete revised-lesson completion marks requiring renewal. Earlier inventories below describe their dated authoring stage. The [shared correction assessment](grammar-vocabulary-separation.md) records the scoped pedagogy gates, complete preservation comparison, and final validation evidence.
+
 Historical family-wide counts below include the inessive pack removed on 2026-10-01. The current demonstrative family has four packs, 512 scored exercises, and 80 optional practice exercises; this pack's own counts and assessment remain valid.
 
 ## Pack identity and counts
@@ -73,3 +77,7 @@ The count and split are approved for controlled `0 - A1.3` written grammar pract
 **Pre-authoring disposition: approved with limitations.** The source inventory found ten affected items: eight scored and two optional-practice. Two Finnish-to-English items put “previously identified” first in `acceptedAnswers`; the other eight used it as a Finnish-production cue. The five Focused targets, one Review, 120 scored items, 20 practice items, vocabulary, and stable IDs remain appropriate. Replace the unnatural model wording with plain “the,” keep the existing natural “that” alternative, and move the familiar-reference cue outside the quoted English target when `se` itself is assessed. The [Kielitoimiston demonstrative guidance](https://kielitoimistonohjepankki.fi/ohje/pronominit-demonstratiivipronominit-tama-tuo-se-nama-nuo-ne-yleispiirteet/) supports a referent known from the situation or earlier discourse. No scope or prerequisite issue blocks the correction.
 
 **Final disposition: approved with limitations.** All ten affected items were checked after revision. The two English model answers now begin with natural “The ...”; each retains its “That ...” alternative. Six scored and two practice production prompts name the earlier mention outside the complete quoted sentence, so `se` remains the assessed choice. The lesson example, sentence translations, and part meanings now use natural English. Finnish answers, Focused/Review order, vocabulary, misconception metadata, and mastery pairs are unchanged. The pack advances to `1.1.0`, and the revised noun-modifier lesson advances to `1.1.0`; the existing version-alignment policy intentionally clears this pack's attempts, sessions, mistakes, correction records, and lesson completion while retaining other packs and still-owned notes. Direct-source validation and the client gate pass. This remains controlled written practice; arbitrary English paraphrases beyond the authored alternatives are not automatically graded.
+
+## 2026-10-03 English pronoun alternatives
+
+The targeted [cross-pack assessment](english-pronoun-alternatives.md) records the source inventory, accepted alternatives, prompt corrections, validation, and scoped progress reset for `REQ-G001-137`. Finnish content, exercise counts, vocabulary, IDs, order, and mastery links remain unchanged.

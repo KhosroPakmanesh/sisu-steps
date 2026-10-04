@@ -1,5 +1,6 @@
 import { ContentLessonSummary, ContentPackManifest, ContentTestSummary } from '../catalog.models';
 import { hasText, hasTextArray, isRecord } from './validation-primitives';
+import { validateGrammarBaseForms } from './grammar-vocabulary.validator';
 
 const SAFE_ID = /^[a-z0-9][a-z0-9-]*$/;
 
@@ -53,6 +54,7 @@ export function validateContentManifest(
   }
   const lessonIds = value['lessonIds'];
   const testIds = value['testIds'];
+  validateGrammarBaseForms(value['grammarBaseForms']);
   if (
     !hasText(value['version']) ||
     !hasText(value['title']) ||

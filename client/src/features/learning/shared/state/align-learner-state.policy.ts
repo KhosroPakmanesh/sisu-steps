@@ -38,8 +38,8 @@ export function alignLearnerStateWithPacks(
   const installedExerciseIds = new Set(
     packs.flatMap((pack) => pack.tests.flatMap((test) => test.exerciseIds)),
   );
-  const installedLessonIds = new Set(
-    packs.flatMap((pack) => pack.lessons.map((lesson) => lesson.id)),
+  const installedLessonVersions = new Map(
+    packs.flatMap((pack) => pack.lessons.map((lesson) => [lesson.id, lesson.version] as const)),
   );
   return {
     ...next,
@@ -47,8 +47,8 @@ export function alignLearnerStateWithPacks(
     attempts: next.attempts.filter((attempt) => installedTopicIds.has(attempt.topicId)),
     sessions: next.sessions.filter((session) => installedTopicIds.has(session.topicId)),
     unresolvedMistakeIds: next.unresolvedMistakeIds.filter((id) => installedExerciseIds.has(id)),
-    lessonCompletions: next.lessonCompletions.filter((completion) =>
-      installedLessonIds.has(completion.lessonId),
+    lessonCompletions: next.lessonCompletions.filter(
+      (completion) => installedLessonVersions.get(completion.lessonId) === completion.lessonVersion,
     ),
     correctionRecords: next.correctionRecords.filter(
       (record) =>

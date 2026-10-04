@@ -80,6 +80,24 @@ describe('learner-data workflow', () => {
     );
   });
 
+  it('persists removal of obsolete lesson marks and exports a restorable backup', async () => {
+    await context.notes.save('topic', 'lesson-1', 'Keep this note after a lesson revision.');
+    const session = await context.sessions.getOrCreateTestSession('topic', 'test-1');
+    context.repository.state.lessonCompletions = [
+      { lessonId: 'lesson-1', lessonVersion: '0.9.0', completedAt: '2026-10-01T00:00:00.000Z' },
+    ];
+    await context.store.initialize();
+    expect(context.repository.state.lessonCompletions).toEqual([]);
+    expect(context.store.learnerState().sessions[0].id).toBe(session.id);
+    const backup = context.backups.create();
+    await context.backups.restore(backup);
+    expect(context.store.learnerState().lessonCompletions).toEqual([]);
+    expect(context.store.learnerState().learnerNotes[0].text).toBe(
+      'Keep this note after a lesson revision.',
+    );
+    expect(context.store.learnerState().sessions[0].id).toBe(session.id);
+  });
+
   it('rejects backup references to unavailable content or incompatible corrections', async () => {
     const missingLesson = context.backups.create();
     missingLesson.state.lessonCompletions = [

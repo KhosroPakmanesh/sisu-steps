@@ -1,6 +1,12 @@
 # G006 pack-owned content-source validation
 
+## 2026-10-04 grammar metadata retention
+
+`REQ-G006-028` / `VAL-G006-021` are validated by source-backed manifest, catalog, and pack-repository tests plus the root `REQ-G001-141` boundary regressions. Browser content loading and all 216 rendered lesson views pass across the three configured widths. The full client check passes with 315 unit and 17 integration tests. Metadata is retained explicitly; no default, fallback reader, generated source copy, persisted learner schema change, or additional resource request is introduced.
+
 ## Source-structure checks
+
+- **VAL-G006-021** (`REQ-G006-028`, root `REQ-G001-141`): Verify that manifest-to-summary mapping and pack assembly retain `grammarBaseForms`, with strict metadata validation and no inferred/default metadata. Source-backed repository tests load a non-empty pronoun grammar list; universal runtime/direct-source tests reject grammar-only vocabulary and retain supporting lexemes. Rendered content-loading and every-lesson checks confirm all installed packs still load.
 
 - **VAL-G006-001:** Verify `client/content/index.json` contains only ordered safe pack IDs and every registration resolves to exactly one same-named `client/content/<pack-id>/` folder. Covers REQ-G006-001 through REQ-G006-004 and REQ-G006-015.
 - **VAL-G006-002:** Verify each pack contains `pack.json`, `lessons/`, and `tests/`; every referenced lesson and learning-test file exists; every filename matches its contained stable ID; and no undeclared JSON source remains in either collection. Covers REQ-G006-004 through REQ-G006-007 and REQ-G006-015.

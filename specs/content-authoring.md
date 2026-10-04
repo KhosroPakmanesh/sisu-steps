@@ -28,6 +28,7 @@ Before bulk exercises are written, save an assessment record covering:
 - whether prerequisites are taught, supplied, or explicitly excluded;
 - whether each focused step asks for one new grammatical decision;
 - whether vocabulary load is controlled and meanings are supplied when vocabulary is not the target;
+- whether each planned lesson part follows the lesson section responsibilities, with vocabulary lists owned by the dedicated vocabulary area;
 - whether the sequence moves from noticing and recognition to controlled production, review retrieval, and transfer;
 - whether predicted misconceptions receive instruction and diagnostic practice;
 - whether the Focused/Review boundary and proposed question total are pedagogically justified;
@@ -38,6 +39,26 @@ Record a disposition of **approved**, **approved with limitations**, or **revisi
 ## 3. Author lessons and exercises
 
 Lessons teach from first principles, declare targets and prerequisites, introduce at most ten scored vocabulary entries when focused, contain worked examples and common mistakes, and provide two to five optional unscored practice items.
+
+### Lesson section responsibilities
+
+Follow `REQ-G001-136` in every pack. Use these responsibilities even when grammar subsection titles differ by topic:
+
+| Lesson part                   | Responsibility                                                                                                                                       |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objectives                    | State what the learner will be able to do.                                                                                                           |
+| Grammar sections (`sections`) | Explain meanings, patterns, formation rules, and relevant exceptions.                                                                                |
+| Key points                    | Summarize the grammar explained in their owning section.                                                                                             |
+| Lesson vocabulary             | Own the standalone lexical lists under **New words**, **Used again**, and **Supplied in examples**, rendered from the three vocabulary declarations. |
+| Worked examples               | Demonstrate the taught grammar with full meanings and step-by-step construction.                                                                     |
+| Common mistakes               | Explain predictable errors and their corrections.                                                                                                    |
+| Optional practice             | Apply already taught material without affecting scored progress.                                                                                     |
+
+Do not reproduce a vocabulary list in authored grammar paragraphs or key points, even under another heading or with supply annotations. Keep contextual translations beside the forms they explain. Grammatical paradigms and transformations, such as `minä → minulla` and `kissa → kissaa`, belong in grammar teaching; they are not duplicate lexical lists. Repeating a word in a meaningful example or exercise is appropriate. A repeated explanation must add a distinct learning purpose rather than restating another section.
+
+Map worked examples to the lesson's target and its meaningful contrasts before writing them. A form lesson demonstrates the taught forms; a verb lesson explains verb choice; a word-order lesson explains placement; a short-answer lesson includes actual replies; an ending/omission lesson demonstrates every taught ending. Reusing a sentence is appropriate when its construction notes teach the current target. Copying a complete example set and its notes between different targets does not serve that purpose. For the ownership family, follow the concrete coverage contract in `REQ-G001-139`, including all six owners before additional noun variants.
+
+Before authoring, assign each planned part its responsibility and identify any necessary contextual glosses or form tables. In the final assessment, inspect every rendered lesson, including the shared vocabulary area, for section-purpose consistency and duplicate lists. Record audited lesson counts, exceptions and their teaching purpose, corrections, and limitations. Automated matching catches obvious lists of declared Finnish-English entries; the rendered assessment remains responsible for semantic duplication and consistency.
 
 ### Vocabulary ownership and variety
 
@@ -53,7 +74,7 @@ Determine vocabulary ownership by the authored lexical item rather than treating
 
 Every vocabulary object must declare `type` as either `word` or `fixed-expression`. A `word` contains exactly one whitespace-free Finnish lexical word. Split transparent combinations into separate entries with their own stable meanings: for example, represent `Suomessa huomenna` as `Suomessa — in Finland` and `huomenna — tomorrow`. Use `fixed-expression` only for a genuine conventional or idiomatic unit learned as a whole, such as `hyvää huomenta — good morning`; it must contain more than one written word. Sentence fragments, convenient context bundles, and combinations created only to stay under the ten-item ceiling are not fixed expressions.
 
-An exercise's `vocabulary` array lists only the individual words or genuine fixed expressions the learner must retrieve lexically. Omit visibly translated Finnish context and Finnish word-order tokens when the answer tests only grammar rather than recall of that context. Splitting vocabulary metadata never requires splitting a natural phrase inside a prompt, answer, explanation, or word-order token.
+An exercise's `vocabulary` array lists only the individual words or genuine fixed expressions the learner must retrieve lexically. When a question supplies the noun’s basic Finnish form and meaning, deriving its assessed case or possessive ending tests grammar rather than lexical recall. Omit visibly translated Finnish context and Finnish word-order tokens when the answer tests only grammar rather than recall of that context. Splitting vocabulary metadata never requires splitting a natural phrase inside a prompt, answer, explanation, or word-order token.
 
 Derive each question's expected word list independently before setting its `vocabulary` array:
 
@@ -64,6 +85,8 @@ Derive each question's expected word list independently before setting its `voca
 Review inflected and compound forms by hand because exact text matching cannot establish their lexical identity or whether a word is genuinely supplied.
 
 Declare only assessed grammar base forms in each pack's `pack.json` `grammarBaseForms` array (use `[]` when there are none). The direct-source validator aligns each sentence explanation's Finnish words with its base forms and compares the resulting recall candidates with `vocabulary`. It checks the complete Finnish source for Finnish-to-English sentences, the complete Finnish answer for Finnish-production and word-order questions, and optional lesson practice. Do not add a supporting word to `grammarBaseForms` to silence a missing-word error; correct the question inventory or visibly supply the word instead. Non-sentence drills and semantic judgments about supplied forms still require the independent manual inventory above.
+
+Under `REQ-G001-141`, keep declared grammatical elements out of all three lesson vocabulary categories and exercise lexical-recall arrays, including their inflected forms identified by aligned authored sentence parts. Teach their meanings and patterns in grammar sections and examples instead. This applies to grammar-only pronouns, demonstratives, interrogatives, verb forms, and taught answer elements; it does not make every pronoun or verb in every pack grammar-only. Supporting lexical material and supplied noun forms still require classification. Runtime and direct-source guards reject overlapping declarations rather than hiding them in the UI. Manually review non-sentence grammar forms and missing base declarations.
 
 Do not remove useful vocabulary merely to satisfy the ceiling. First reclassify previously taught vocabulary, visibly supply non-assessed context, or redistribute genuinely new vocabulary. Replace a word only when it is incidental, has little retrieval value, and its removal does not reduce naturalness, semantic range, or question variety.
 
@@ -78,6 +101,12 @@ Scored exercises use fixed authored order and stable globally unique IDs. They d
 For free-text answers, inventory common standard Finnish replies that express the requested meaning before finalizing `acceptedAnswers`. In yes/no short answers, a conjugated negative reply may stand alone or follow the separate answer particle `Ei`: accept both `Emme ole.` and `Ei, emme ole.` when either fits the prompt. An affirmative verb echo may stand alone or follow `Kyllä`: accept both `Olemme.` and `Kyllä, olemme.`. Apply the same check to scored and optional-practice text entry. Keep one clear model answer first for feedback, list natural alternatives explicitly, and check that the prompt does not require an exact quoted form. Multiple-choice options and word-order tokens define the available response for those interaction types; review them for clarity rather than adding text-entry variants to their answer lists.
 
 Apply the same alternatives audit to English free-text translations. Put a natural, faithful model first and explicitly accept other idiomatic renderings supported by the Finnish sentence and visible context, including appropriate article or demonstrative choices. Do not turn a discourse relationship into an unnatural learner-facing gloss such as “previously identified book.” For Finnish `se` and `ne`, English `the`, `that`, or `those` may fit in different contexts; preserve the intended reference and keep any cue needed to choose among Finnish demonstratives visible outside the quoted English target. Do not accept an alternative merely because it is grammatical English if it changes the Finnish meaning or erases an assessed distinction.
+
+For gender-neutral Finnish `hän` and its possessive forms, explicitly accept equivalent English `he`, `she`, and `he or she`, or `his`, `her`, and `his or her` answers (`REQ-G001-137`). Apply the alternatives to every permitted sentence frame, including articles and contractions. For example, `Hänellä on tyyny.` accepts “He has a pillow.”, “She has a pillow.”, and “He or she has a pillow.”; `hänen koiransa` accepts `his dog`, `her dog`, and `his or her dog`. Isolated `hän` questions also accept either individual pronoun and the combined form, without requiring an unspecified-gender answer to spell out both. Preserve one natural first model and existing valid alternatives. Keep Finnish plural `he` distinct from English singular `he` and preserve number and polarity.
+
+Make the choice clear before submission: write `You may use “he” or “she”.` or `You may use “his” or “her”.` when a cue helps; avoid bare `Use he or she` / `Use his or her` and repeated `Owner: he or she` instructions. Audit all installed packs, including optional practice, for the same policy. Run the runtime and direct-source pronoun-alternative checks, submit each form through the actual grading function, and retain negative cases for wrong number, polarity, missing alternatives, and ambiguous prompts. Ordinary tests that submit only `acceptedAnswers[0]` do not prove alternative coverage. Update the affected pack version and record the scoped progress loss whenever the accepted-answer interpretation changes.
+
+English translations of Finnish possession use simple `have` / `has`, `do not have` / `does not have` (with natural contractions), and `do` / `does` questions (`REQ-G001-138`). Do not author or accept `have got`, `has got`, `have/has not got`, `haven’t/hasn’t got`, or `Have/Has … got?` variants in scored or optional possession practice. This product boundary keeps the English construction consistent; apply the pronoun alternatives above only to the permitted frames. Inventory all installed packs for this pattern, retain existing models and article choices, and add runtime/direct-source negative cases plus actual grading checks that reject the excluded construction.
 
 Write general explanations so they can stand alone when no authored diagnostic matches a typed answer. Add a specific diagnostic for a predictable learner error that merits a distinct correction, and verify it against that actual answer. Inspect the rendered feedback for both cases: a general explanation should appear once, and generic text should not be repeated or presented as if it diagnosed the learner's particular mistake.
 
@@ -95,6 +124,8 @@ Focused tests and Reviews remain immediately accessible in separate learning-map
 
 ## 4. Technical validation
 
+Runtime and standalone validation must also reject authored grammar sections containing an obvious duplicate list of declared vocabulary, independent of the section heading. Keep contextual sentence translations and grammatical transformations valid; add negative and positive regression cases for both boundaries.
+
 Assemble and validate every registered pack directly from its pack-owned JSON files, run automated tests, format changed files, and build the production app. Runtime and standalone validation must reject known vocabulary used without classification in worked examples, supplied vocabulary whose Finnish form and English meaning are not visible in teaching, and repeated optional-practice labels. A pack is not complete when source-structure checks, universal schema checks, pack-grouped topic-specific guards, cross-pack ID checks, direct deployment checks, or the production build fail.
 
 ## 5. Final Finnish-teaching pedagogy assessment
@@ -109,6 +140,7 @@ Audit the finished pack rather than only its metadata:
 - submit a plausible typed error and an unrecognized error to confirm that specific diagnostics and general fallback feedback display accurately without duplication;
 - verify focused exercises contain no hidden grammar or lexical recall burden;
 - inventory vocabulary from the rendered lesson body and exercises rather than metadata alone, and verify that every learner-relevant item is correctly classified as new, used again through a declared prerequisite, or visibly supplied;
+- audit every rendered lesson part against the section responsibilities, verify that the dedicated vocabulary area is the sole standalone lexical list, and justify contextual glosses, grammatical form tables, and any purposeful repetition;
 - check recognition-to-production progression and cumulative cognitive load;
 - distinguish purposeful retrieval from repetitive filler by comparing context, person, polarity, response format, vocabulary combination, and production demand;
 - confirm every important point has sufficient Focused evidence and Reviews introduce nothing new;

@@ -38,6 +38,7 @@ export interface ContentPackManifest {
   summary: string;
   objectives: string[];
   importantSkills: string[];
+  grammarBaseForms: string[];
   sources: ContentSource[];
   lessonIds: string[];
   testIds: string[];
@@ -54,6 +55,7 @@ export interface TopicPackSummary {
   summary: string;
   objectives: string[];
   importantSkills: string[];
+  grammarBaseForms: string[];
   sources: ContentSource[];
   lessons: ContentLessonSummary[];
   tests: ContentTestSummary[];
