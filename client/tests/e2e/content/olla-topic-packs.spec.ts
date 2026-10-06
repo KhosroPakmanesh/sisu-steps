@@ -4,24 +4,24 @@ const packs = [
   {
     id: 'personal-pronouns-affirmative-olla',
     title: 'Personal pronouns and affirmative olla',
-    tests: 9,
-    focused: 7,
+    tests: 12,
+    focused: 10,
     reviews: 2,
     exercises: 242,
   },
   {
     id: 'negative-olla-statements',
     title: 'Negative olla statements',
-    tests: 4,
-    focused: 3,
+    tests: 5,
+    focused: 4,
     reviews: 1,
     exercises: 100,
   },
   {
     id: 'olla-questions-short-answers',
     title: 'Olla questions and short answers',
-    tests: 7,
-    focused: 5,
+    tests: 8,
+    focused: 6,
     reviews: 2,
     exercises: 178,
   },
@@ -32,8 +32,8 @@ test('opens each smaller pronoun and olla topic pack without reducing the conten
 }) => {
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(16);
-  await expect(page.locator('.catalog-stats')).toContainText('2370');
+  await expect(page.locator('.topic-card')).toHaveCount(14);
+  await expect(page.locator('.catalog-stats')).toContainText('2386');
 
   for (const pack of packs) {
     const topicCard = page.locator('.topic-card').filter({

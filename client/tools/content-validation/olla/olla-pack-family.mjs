@@ -117,22 +117,22 @@ export function validateOllaPack(pack, config) {
 }
 
 function validateFocusedMappings(tests, lessons, config, errors) {
-  for (let index = 0; index < config.focusedCount; index += 1) {
-    const test = tests[index];
-    const lesson = lessons[index];
-    if (!test || !lesson) continue;
+  for (const test of tests.slice(0, config.focusedCount)) {
+    const lessonIndex = config.lessonIds.indexOf(test.lessonIds?.[0]);
+    const lesson = lessons[lessonIndex];
+    const skill = config.skills[lessonIndex];
     if (
+      !lesson ||
       test.targetSkills?.length !== 1 ||
-      test.targetSkills[0] !== config.skills[index] ||
+      test.targetSkills[0] !== skill ||
       lesson.targetSkills?.length !== 1 ||
-      lesson.targetSkills[0] !== config.skills[index] ||
+      lesson.targetSkills[0] !== skill ||
       test.lessonIds?.length !== 1 ||
-      test.lessonIds[0] !== config.lessonIds[index]
-    ) {
-      errors.push(`${test.id}: Focused test and lesson must share only the approved target`);
-    }
-    if (test.exercises?.some((exercise) => exercise.targetSkill !== config.skills[index]))
-      errors.push(`${test.id}: every Focused exercise must keep the test target`);
+      test.lessonIds[0] !== config.lessonIds[lessonIndex]
+    )
+      errors.push(test.id + ': Focused test and lesson must share only the approved target');
+    if (test.exercises?.some((exercise) => exercise.targetSkill !== skill))
+      errors.push(test.id + ': every Focused exercise must keep the test target');
   }
 }
 

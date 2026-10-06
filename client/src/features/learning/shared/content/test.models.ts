@@ -9,5 +9,6 @@ export interface ExerciseTest {
   targetSkills: string[];
   prerequisiteSkills: string[];
   lessonIds: string[];
+  numberScope?: { axis: 'person' | 'owner' | 'object'; number: 'singular' | 'plural' };
   exercises: Exercise[];
 }

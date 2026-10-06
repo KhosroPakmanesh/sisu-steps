@@ -25,8 +25,7 @@ const expectedGroups: ExpectedGroup[] = [
     id: 'demonstratives',
     title: 'Demonstratives',
     packs: [
-      'singular-demonstrative-pronouns',
-      'plural-demonstrative-pronouns',
+      'demonstrative-pronouns',
       'negative-demonstrative-statements',
       'demonstrative-questions',
     ],
@@ -40,7 +39,6 @@ const expectedGroups: ExpectedGroup[] = [
       'possession-questions',
       'negative-possession-questions',
       'possessive-pronouns-endings',
-      'plural-ownership-possessive-endings',
     ],
   },
 ];
@@ -63,7 +61,7 @@ test('groups catalog topic cards into labeled sections in pack order', async ({ 
     }
   }
 
-  await expect(page.locator('.topic-card')).toHaveCount(16);
+  await expect(page.locator('.topic-card')).toHaveCount(14);
 });
 
 test('mirrors the same grouping on the stats catalog', async ({ page }) => {

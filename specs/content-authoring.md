@@ -15,6 +15,16 @@ Create a stable list of important skills and subpoints. For each point, record i
 
 Give every non-review grammar topic its own focused test. Its **Learn first** preparation references only the lesson or lessons that teach that test's target skill. Declare earlier skills as prerequisites without adding their lessons to the preparation list. Only review material may combine multiple previously introduced topics.
 
+### Chunking lessons and Focused tests
+
+- **Distinct boundaries:** A pack groups related grammar, a lesson explains a coherent target, and a Focused test assesses one bounded grammatical decision. A coherent pack may cover singular and plural, and one lesson may support more than one Focused test.
+- **Shared teaching:** Singular and plural Focused tests assessing variants of the same target may reference one preparation lesson and the same optional practice. When separating existing tests under a content-preservation instruction, keep that teaching, its target/prerequisite declarations and optional practice unchanged; record any shared mixed-number teaching as an intentional limitation.
+- **Explicit number scope:** Distinguish grammatical person number, owner number and owned-object number independently. One owner can possess several objects, and several owners can possess one object. Declare each number-scoped Focused test's `numberScope` with a `person`, `owner` or `object` axis and a `singular` or `plural` number; verify every question against that scope. Polite `te` follows plural grammatical forms even when addressing one person.
+- **Paired progression:** Prefer corresponding singular then plural topics together, such as forms followed by their matching usage steps, with matching Focused tests ordered by lesson. Every prerequisite must appear earlier, and each number group's prerequisite chain must remain intact. Audit the complete affected lesson/test sequences and retain already coherent ordering; prerequisite dependencies govern placement when simple pairing would break them.
+- **Meaningful chunk sizes:** Separate distinct grammatical decisions and keep closely related explanations together when they serve the same decision. Choose practice quantities from recognition, controlled production, misconception coverage and purposeful retrieval, with varied response formats within the target. Singular and plural chunks may have different question counts; preserve the total question inventory during content-preserving structural edits and keep totals free of filler.
+
+During content-preserving restructuring, retain existing Review scope and cross-number mastery partners unless the user authorizes a content revision. Follow the existing Review placement, content-preservation and version/history rules.
+
 Choose a non-empty scored-question total, up to 1,000, from the number of distinct decisions, necessary response formats, retrieval spacing, common misconceptions, and transfer needs. Do not add paraphrased filler to reach a common pack size.
 
 Define the complete Focused sequence first. Focused tests must collectively assess every important skill, one target at a time. Put cumulative retrieval, mixed practice, and transfer only in Reviews, and do not add a second Core/Extended classification.

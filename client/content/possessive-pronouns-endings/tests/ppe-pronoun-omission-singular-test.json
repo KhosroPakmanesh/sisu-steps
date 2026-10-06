@@ -1,0 +1,631 @@
+{
+  "id": "ppe-pronoun-omission-singular-test",
+  "title": "One owned thing: omitting minun and sinun",
+  "focus": "Omit minun or sinun while retaining the ending; keep hänen in identification sentences.",
+  "stage": "focused",
+  "targetSkills": ["Possessive pronoun omission and clear reference"],
+  "prerequisiteSkills": ["Plural possessed nouns in ownership sentences"],
+  "lessonIds": ["ppe-pronoun-omission"],
+  "exercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Write “This is your book.” in Finnish. Begin with Tämä on. Address one person. Leave out sinun; keep the noun ending. Use kirja (“book”).",
+      "acceptedAnswers": ["Tämä on kirjasi."],
+      "explanation": "Tämä on identifies one thing. The ending -si identifies your ownership. Sinun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-kirja",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is your book.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "kirjasi.",
+            "meaning": "your book",
+            "role": "possessed singular noun",
+            "baseForm": "kirja",
+            "formation": "kirja (“book”) + -si = kirjasi. The same possessed form can name one or several things; this sentence names one. The ending identifies the owner, so sinun can be left out."
+          }
+        ]
+      },
+      "options": [
+        "Tämä on sinun kirjasi.",
+        "Tämä on kirja.",
+        "Tämä on kirjani.",
+        "Tämä on kirjasi."
+      ],
+      "optionFeedback": {
+        "Tämä on kirjasi.": "Correct: Tämä on identifies one thing. The ending -si identifies your ownership. Sinun can be omitted because the ending identifies the owner; the suffix stays.",
+        "Tämä on sinun kirjasi.": "Leave out the requested owner pronoun while keeping its matching possessive ending.",
+        "Tämä on kirja.": "Leave out the requested owner pronoun while keeping its matching possessive ending.",
+        "Tämä on kirjani.": "Leave out the requested owner pronoun while keeping its matching possessive ending."
+      },
+      "id": "ppe-pronoun-omission-test-e002",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e001"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “This is my pillow.” in Finnish. Begin with Tämä on. Leave out minun; keep the noun ending. Use tyyny (“pillow”).",
+      "acceptedAnswers": ["Tämä on tyynyni."],
+      "explanation": "Tämä on identifies one thing. The ending -ni identifies my ownership. Minun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-tyyny",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is my pillow.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "tyynyni.",
+            "meaning": "my pillow",
+            "role": "possessed singular noun",
+            "baseForm": "tyyny",
+            "formation": "tyyny (“pillow”) + -ni = tyynyni. The same possessed form can name one or several things; this sentence names one. The ending identifies the owner, so minun can be left out."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Tämä on tyynytni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use tyynyni."
+        },
+        {
+          "answers": ["Tämä on tyyny."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on tyynysi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        }
+      ],
+      "id": "ppe-pronoun-omission-test-e005",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e006"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “This is my cat.” in Finnish. Begin with Tämä on. Use kissa (“cat”).",
+      "acceptedAnswers": ["Tämä on minun kissani.", "Tämä on kissani."],
+      "explanation": "Tämä on identifies one thing. The ending -ni identifies my ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-kissa",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is my cat.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "minun",
+            "meaning": "my",
+            "role": "owner pronoun",
+            "baseForm": "minä",
+            "formation": "Minun is the personal owner form of minä; it selects -ni."
+          },
+          {
+            "finnish": "kissani.",
+            "meaning": "cat",
+            "role": "possessed singular noun",
+            "baseForm": "kissa",
+            "formation": "kissa (“cat”) + -ni = kissani. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Tämä on minun kissatni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use kissani."
+        },
+        {
+          "answers": ["Tämä on minun kissa."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on minun kissasi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        }
+      ],
+      "id": "ppe-pronoun-omission-test-e013",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e014"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Write “This is his cat.” in Finnish. Begin with Tämä on. Use kissa (“cat”).",
+      "acceptedAnswers": ["Tämä on hänen kissansa."],
+      "explanation": "Tämä on identifies one thing. The ending -nsa identifies his ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-kissa",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is his cat.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "kissansa.",
+            "meaning": "cat",
+            "role": "possessed singular noun",
+            "baseForm": "kissa",
+            "formation": "kissa (“cat”) + -nsa = kissansa. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "options": [
+        "Tämä on hänen kissansa.",
+        "Tämä on kissansa.",
+        "Tämä on minun kissani.",
+        "Tämä on hänen kissa."
+      ],
+      "optionFeedback": {
+        "Tämä on hänen kissansa.": "Correct: retain the third-person owner.",
+        "Tämä on kissansa.": "Retain hänen and its noun ending to identify the intended owner.",
+        "Tämä on minun kissani.": "Retain hänen and its noun ending to identify the intended owner.",
+        "Tämä on hänen kissa.": "Retain hänen and its noun ending to identify the intended owner."
+      },
+      "id": "ppe-pronoun-omission-test-e017",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e018"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Tämä on kissasi.” into English.",
+      "acceptedAnswers": ["This is your cat.", "This cat is yours."],
+      "explanation": "Tämä on means “This is”. The noun ending marks the owner; the demonstrative and verb reveal the number of things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-kissa",
+        "objects-singular",
+        "object-number-contrast"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": ["kissa"],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is your cat.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "kissasi.",
+            "meaning": "your cat",
+            "role": "possessed singular noun",
+            "baseForm": "kissa",
+            "formation": "kissa (“cat”) + -si = kissasi. The same possessed form can name one or several things; this sentence names one. The ending identifies the owner, so sinun can be left out."
+          }
+        ]
+      },
+      "id": "ppe-pronoun-omission-test-e010",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e009"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “This is your dog.” in Finnish. Begin with Tämä on. Address one person. Use koira (“dog”).",
+      "acceptedAnswers": ["Tämä on sinun koirasi.", "Tämä on koirasi."],
+      "explanation": "Tämä on identifies one thing. The ending -si identifies your ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-koira",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is your dog.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "sinun",
+            "meaning": "your",
+            "role": "owner pronoun",
+            "baseForm": "sinä",
+            "formation": "Sinun is the personal owner form of sinä; it selects -si."
+          },
+          {
+            "finnish": "koirasi.",
+            "meaning": "dog",
+            "role": "possessed singular noun",
+            "baseForm": "koira",
+            "formation": "koira (“dog”) + -si = koirasi. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Tämä on sinun koiratsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use koirasi."
+        },
+        {
+          "answers": ["Tämä on sinun koira."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on sinun koirani."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        }
+      ],
+      "id": "ppe-pronoun-omission-test-e014",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e013"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Write “This is his dog.” in Finnish. Begin with Tämä on. Use koira (“dog”).",
+      "acceptedAnswers": ["Tämä on hänen koiransa."],
+      "explanation": "Tämä on identifies one thing. The ending -nsa identifies his ownership.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-koira",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is his dog.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "koiransa.",
+            "meaning": "dog",
+            "role": "possessed singular noun",
+            "baseForm": "koira",
+            "formation": "koira (“dog”) + -nsa = koiransa. The same possessed form can name one or several things; this sentence names one."
+          }
+        ]
+      },
+      "options": [
+        "Tämä on koiransa.",
+        "Tämä on sinun koirasi.",
+        "Tämä on hänen koira.",
+        "Tämä on hänen koiransa."
+      ],
+      "optionFeedback": {
+        "Tämä on hänen koiransa.": "Correct: retain the third-person owner.",
+        "Tämä on koiransa.": "Retain hänen and its noun ending to identify the intended owner.",
+        "Tämä on sinun koirasi.": "Retain hänen and its noun ending to identify the intended owner.",
+        "Tämä on hänen koira.": "Retain hänen and its noun ending to identify the intended owner."
+      },
+      "id": "ppe-pronoun-omission-test-e018",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e017"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Write “This is my ball.” in Finnish. Begin with Tämä on. Leave out minun; keep the noun ending. Use pallo (“ball”).",
+      "acceptedAnswers": ["Tämä on palloni."],
+      "explanation": "Tämä on identifies one thing. The ending -ni identifies my ownership. Minun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-pallo",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is my ball.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "palloni.",
+            "meaning": "my ball",
+            "role": "possessed singular noun",
+            "baseForm": "pallo",
+            "formation": "pallo (“ball”) + -ni = palloni. The same possessed form can name one or several things; this sentence names one. The ending identifies the owner, so minun can be left out."
+          }
+        ]
+      },
+      "options": [
+        "Tämä on palloni.",
+        "Tämä on minun palloni.",
+        "Tämä on pallo.",
+        "Tämä on pallosi."
+      ],
+      "optionFeedback": {
+        "Tämä on palloni.": "Correct: Tämä on identifies one thing. The ending -ni identifies my ownership. Minun can be omitted because the ending identifies the owner; the suffix stays.",
+        "Tämä on minun palloni.": "Leave out the requested owner pronoun while keeping its matching possessive ending.",
+        "Tämä on pallo.": "Leave out the requested owner pronoun while keeping its matching possessive ending.",
+        "Tämä on pallosi.": "Leave out the requested owner pronoun while keeping its matching possessive ending."
+      },
+      "id": "ppe-pronoun-omission-test-e001",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e002"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “This is your game.” in Finnish. Begin with Tämä on. Address one person. Leave out sinun; keep the noun ending. Use peli (“game”).",
+      "acceptedAnswers": ["Tämä on pelisi."],
+      "explanation": "Tämä on identifies one thing. The ending -si identifies your ownership. Sinun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-peli",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is your game.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "pelisi.",
+            "meaning": "your game",
+            "role": "possessed singular noun",
+            "baseForm": "peli",
+            "formation": "peli (“game”) + -si = pelisi. The same possessed form can name one or several things; this sentence names one. The ending identifies the owner, so sinun can be left out."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Tämä on pelitsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use pelisi."
+        },
+        {
+          "answers": ["Tämä on peli."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Tämä on pelini."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        }
+      ],
+      "id": "ppe-pronoun-omission-test-e006",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e005"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Tämä on pelini.” into English.",
+      "acceptedAnswers": ["This is my game.", "This game is mine."],
+      "explanation": "Tämä on means “This is”. The noun ending marks the owner; the demonstrative and verb reveal the number of things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-peli",
+        "objects-singular",
+        "object-number-contrast"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": ["peli"],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is my game.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with one thing, independently of how many people own it."
+          },
+          {
+            "finnish": "pelini.",
+            "meaning": "my game",
+            "role": "possessed singular noun",
+            "baseForm": "peli",
+            "formation": "peli (“game”) + -ni = pelini. The same possessed form can name one or several things; this sentence names one. The ending identifies the owner, so minun can be left out."
+          }
+        ]
+      },
+      "id": "ppe-pronoun-omission-test-e009",
+      "parallelExerciseId": "ppe-pronoun-omission-test-e010"
+    }
+  ],
+  "numberScope": {
+    "axis": "object",
+    "number": "singular"
+  }
+}

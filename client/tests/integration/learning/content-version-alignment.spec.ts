@@ -4,79 +4,153 @@ import { alignLearnerStateWithPacks } from '@/features/learning/shared/state/ali
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
 import { learningPack } from '@testing/helpers/unit/learning-content.fixture';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
+import { prepareBackupState } from '@/features/learning/learner-data/backup/backup-state-validation.policy';
 import { loadContentSource } from '../../../tools/content-source-loader.mjs';
 
 describe('content-pack version alignment', () => {
-  it('resets the six revised ownership packs and preserves other progress and owned notes', async () => {
-    const source = await loadContentSource('content');
-    const packs = source.packs as unknown as TopicPack[];
-    const oldVersions: Record<string, string> = {
-      'affirmative-possession': '1.2.0',
-      'negative-possession': '1.2.0',
-      'possession-questions': '1.2.0',
-      'negative-possession-questions': '1.2.0',
-      'possessive-pronouns-endings': '1.3.0',
-      'plural-ownership-possessive-endings': '1.0.0',
-    };
-    const state = createEmptyLearnerState(
-      Object.fromEntries(packs.map((pack) => [pack.id, oldVersions[pack.id] ?? pack.version])),
-    );
-    for (const pack of packs) {
-      const exercise = pack.tests[0].exercises[0];
-      state.attempts.push(completedAttempt(`${pack.id}-attempt`, pack.id, pack.tests[0].id));
-      state.sessions.push({
-        id: `${pack.id}-session`,
-        mode: 'test',
-        topicId: pack.id,
-        testId: pack.tests[0].id,
-        title: pack.title,
-        exerciseIds: [exercise.id],
-        currentIndex: 0,
-        answers: [],
-        startedAt: '2026-10-04T00:00:00.000Z',
-        updatedAt: '2026-10-04T00:00:00.000Z',
-      });
-      state.unresolvedMistakeIds.push(exercise.id);
-      state.correctionRecords.push({
-        exerciseId: exercise.id,
-        parallelExerciseId: exercise.parallelExerciseId!,
-        targetSkill: exercise.targetSkill!,
-        correctedAt: '2026-10-04T00:00:00.000Z',
-        nextReviewAt: '2026-10-05T00:00:00.000Z',
-        reviewStage: 0,
-        reviewAttempts: 0,
-      });
-      state.lessonCompletions.push({
-        lessonId: pack.lessons[0].id,
-        lessonVersion: pack.lessons[0].version,
-        completedAt: '2026-10-04T00:00:00.000Z',
-      });
+  it.each([
+    'singular-demonstrative-pronouns',
+    'plural-demonstrative-pronouns',
+    'plural-ownership-possessive-endings',
+  ])(
+    'resets the real merged catalog and rejects a backup containing removed pack %s',
+    async (removedId) => {
+      const source = await loadContentSource('content');
+      const packs = source.packs as unknown as TopicPack[];
+      const versions = Object.fromEntries(packs.map((pack) => [pack.id, pack.version]));
+      const state = createEmptyLearnerState({ ...versions, [removedId]: '1.0.0' });
+      const unchanged = packs.find((pack) => pack.id === 'affirmative-possession')!;
+      state.attempts.push(
+        completedAttempt('unchanged-pack-history', unchanged.id, unchanged.tests[0].id),
+      );
       state.learnerNotes.push({
-        topicId: pack.id,
-        lessonId: pack.lessons[0].id,
-        text: `Keep ${pack.title}`,
-        updatedAt: '2026-10-04T00:00:00.000Z',
+        topicId: unchanged.id,
+        text: 'Reset under removed-ID policy.',
+        updatedAt: '2026-10-05T00:00:00.000Z',
       });
-    }
-    const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
-    const compatible = new Set(
-      packs.filter((pack) => !oldVersions[pack.id]).map((pack) => pack.id),
-    );
-    expect(aligned.attempts).toEqual(
-      state.attempts.filter((attempt) => compatible.has(attempt.topicId)),
-    );
-    expect(aligned.sessions).toEqual(
-      state.sessions.filter((session) => compatible.has(session.topicId)),
-    );
-    expect(aligned.unresolvedMistakeIds).toHaveLength(10);
-    expect(aligned.correctionRecords).toHaveLength(10);
-    expect(aligned.lessonCompletions).toHaveLength(10);
-    expect(aligned.learnerNotes).toEqual(state.learnerNotes);
-    expect(aligned.contentPackVersions).toEqual(
-      Object.fromEntries(packs.map((pack) => [pack.id, pack.version])),
-    );
-    expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
-  });
+      const original = structuredClone(state);
+      const empty = createEmptyLearnerState(versions);
+      expect(alignLearnerStateWithPacks(state, packs.map(topicPackToSummary))).toEqual(empty);
+      expect(alignLearnerStateWithPacks(empty, packs.map(topicPackToSummary))).toEqual(empty);
+      expect(() =>
+        prepareBackupState(
+          {
+            backupType: 'finnish-exercise-book',
+            backupVersion: 1,
+            exportedAt: '2026-10-05T00:00:00.000Z',
+            state,
+          },
+          packs,
+        ),
+      ).toThrow('no longer installed');
+      expect(state).toEqual(original);
+    },
+  );
+  it.each([
+    ['demonstrative practice expansion', { 'demonstrative-pronouns': '1.0.0' }],
+    [
+      'five earlier ownership revisions',
+      {
+        'affirmative-possession': '1.2.0',
+        'negative-possession': '1.2.0',
+        'possession-questions': '1.2.0',
+        'negative-possession-questions': '1.2.0',
+        'possessive-pronouns-endings': '1.3.0',
+      },
+    ],
+    [
+      'nine number-separated packs',
+      {
+        'personal-pronouns-affirmative-olla': '1.1.0',
+        'negative-olla-statements': '1.0.0',
+        'olla-questions-short-answers': '1.0.0',
+        'negative-demonstrative-statements': '1.1.0',
+        'affirmative-possession': '1.3.0',
+        'negative-possession': '1.3.0',
+        'possession-questions': '1.3.0',
+        'negative-possession-questions': '1.3.0',
+        'possessive-pronouns-endings': '2.0.0',
+      },
+    ],
+  ] as Array<[string, Record<string, string>]>)(
+    'resets only %s and preserves other progress and owned notes',
+    async (_label, oldVersions) => {
+      const source = await loadContentSource('content');
+      const packs = source.packs as unknown as TopicPack[];
+      const state = createEmptyLearnerState(
+        Object.fromEntries(packs.map((pack) => [pack.id, oldVersions[pack.id] ?? pack.version])),
+      );
+      for (const pack of packs) {
+        const exercise = pack.tests[0].exercises[0];
+        state.attempts.push(completedAttempt(`${pack.id}-attempt`, pack.id, pack.tests[0].id));
+        state.sessions.push({
+          id: `${pack.id}-session`,
+          mode: 'test',
+          topicId: pack.id,
+          testId: pack.tests[0].id,
+          title: pack.title,
+          exerciseIds: [exercise.id],
+          currentIndex: 0,
+          answers: [],
+          startedAt: '2026-10-04T00:00:00.000Z',
+          updatedAt: '2026-10-04T00:00:00.000Z',
+        });
+        state.unresolvedMistakeIds.push(exercise.id);
+        state.correctionRecords.push({
+          exerciseId: exercise.id,
+          parallelExerciseId: exercise.parallelExerciseId!,
+          targetSkill: exercise.targetSkill!,
+          correctedAt: '2026-10-04T00:00:00.000Z',
+          nextReviewAt: '2026-10-05T00:00:00.000Z',
+          reviewStage: 0,
+          reviewAttempts: 0,
+        });
+        state.lessonCompletions.push({
+          lessonId: pack.lessons[0].id,
+          lessonVersion: pack.lessons[0].version,
+          completedAt: '2026-10-04T00:00:00.000Z',
+        });
+        state.learnerNotes.push({
+          topicId: pack.id,
+          lessonId: pack.lessons[0].id,
+          text: `Keep ${pack.title}`,
+          updatedAt: '2026-10-04T00:00:00.000Z',
+        });
+      }
+      const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
+      const compatible = new Set(
+        packs.filter((pack) => !oldVersions[pack.id]).map((pack) => pack.id),
+      );
+      expect(aligned.attempts).toEqual(
+        state.attempts.filter((attempt) => compatible.has(attempt.topicId)),
+      );
+      expect(aligned.sessions).toEqual(
+        state.sessions.filter((session) => compatible.has(session.topicId)),
+      );
+      expect(aligned.unresolvedMistakeIds).toHaveLength(compatible.size);
+      expect(aligned.correctionRecords).toHaveLength(compatible.size);
+      expect(aligned.lessonCompletions).toHaveLength(compatible.size);
+      expect(aligned.learnerNotes).toEqual(state.learnerNotes);
+      expect(aligned.contentPackVersions).toEqual(
+        Object.fromEntries(packs.map((pack) => [pack.id, pack.version])),
+      );
+      expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
+      const beforeImport = structuredClone(state);
+      const backup = {
+        backupType: 'finnish-exercise-book' as const,
+        backupVersion: 1 as const,
+        exportedAt: '2026-10-05T00:00:00.000Z',
+        state,
+      };
+      const prepared = prepareBackupState(backup, packs);
+      expect(prepared.compatibility.changedPacks.map((pack) => pack.id).sort()).toEqual(
+        Object.keys(oldVersions).sort(),
+      );
+      expect(prepared.state).toEqual(aligned);
+      expect(state).toEqual(beforeImport);
+      expect(prepareBackupState({ ...backup, state: aligned }, packs).state).toEqual(aligned);
+    },
+  );
 
   it('resets only the rewritten real owner pack and retains other progress and owned notes', async () => {
     const source = await loadContentSource('content');
@@ -85,9 +159,7 @@ describe('content-pack version alignment', () => {
     const unchanged = packs.find((pack) => pack.id === 'affirmative-possession')!;
     const state = createEmptyLearnerState(
       Object.fromEntries(
-        packs
-          .filter((pack) => pack.id !== 'plural-ownership-possessive-endings')
-          .map((pack) => [pack.id, pack.id === revised.id ? '1.2.0' : pack.version]),
+        packs.map((pack) => [pack.id, pack.id === revised.id ? '1.2.0' : pack.version]),
       ),
     );
     state.attempts = [
@@ -119,12 +191,12 @@ describe('content-pack version alignment', () => {
       },
     ];
     const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
-    expect(revised.version).toBe('1.4.0');
+    expect(revised.version).toBe('2.1.0');
     expect(aligned.attempts).toEqual([state.attempts[1]]);
     expect(aligned.unresolvedMistakeIds).toEqual([state.unresolvedMistakeIds[1]]);
     expect(aligned.lessonCompletions).toEqual([state.lessonCompletions[1]]);
     expect(aligned.learnerNotes).toEqual(state.learnerNotes);
-    expect(aligned.contentPackVersions['plural-ownership-possessive-endings']).toBe('1.1.0');
+    expect(aligned.contentPackVersions[revised.id]).toBe('2.1.0');
     expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
   });
 
@@ -255,10 +327,9 @@ describe('content-pack version alignment', () => {
     ).toEqual(aligned);
   });
 
-  it('clears the four revised demonstrative packs while keeping an unchanged pack and notes', () => {
+  it('clears the three revised demonstrative packs while keeping an unchanged pack and notes', () => {
     const changedIds = [
-      'singular-demonstrative-pronouns',
-      'plural-demonstrative-pronouns',
+      'demonstrative-pronouns',
       'negative-demonstrative-statements',
       'demonstrative-questions',
     ];
@@ -282,7 +353,7 @@ describe('content-pack version alignment', () => {
     const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
 
     expect(aligned.attempts.map((attempt) => attempt.id)).toEqual([`${unchangedId}-attempt`]);
-    expect(aligned.learnerNotes).toHaveLength(5);
+    expect(aligned.learnerNotes).toHaveLength(4);
     expect(aligned.contentPackVersions).toEqual(
       Object.fromEntries(packs.map((pack) => [pack.id, pack.version])),
     );

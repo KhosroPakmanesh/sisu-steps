@@ -1,4 +1,4 @@
-import { validatePack as validateOwnerNumbers } from './plural-ownership-possessive-endings.mjs';
+import { validatePack as validateOwnerNumbers } from './possessive-owner-groups.mjs';
 
 const MODES = new Map([
   ['affirmative-possession', 'affirmative'],
@@ -24,9 +24,12 @@ export function validateOwnershipPack(pack) {
   const mode = MODES.get(pack.id);
   if (!mode) return [];
   const errors = mode === 'possessive' ? validateOwnerNumbers(pack) : [];
-  const counts = mode === 'possessive' ? [20, 20, 20, 20, 20, 20, 20, 20, 32] : [24, 24, 24, 24];
+  const counts =
+    mode === 'possessive'
+      ? [...Array(12).fill(20), ...Array(8).fill(10), 32, 32]
+      : [...Array(6).fill(12), 24];
   if (
-    pack.version !== (mode === 'possessive' ? '1.4.0' : '1.3.0') ||
+    pack.version !== (mode === 'possessive' ? '2.1.0' : '1.4.0') ||
     pack.level !== '0 - A1.3' ||
     pack.tests.length !== counts.length ||
     pack.tests.some((test, index) => test.exercises.length !== counts[index])
@@ -34,7 +37,7 @@ export function validateOwnershipPack(pack) {
     errors.push(
       `${pack.id}: expanded ownership topology, level, and version must match the contract`,
     );
-  const focusedCount = mode === 'possessive' ? 8 : 3;
+  const focusedCount = mode === 'possessive' ? 20 : 6;
   if (
     pack.tests.some((test, index) => test.stage !== (index < focusedCount ? 'focused' : 'review'))
   ) {
@@ -58,7 +61,13 @@ export function validateOwnershipPack(pack) {
     if (mode === 'possessive') validatePossessives(exercise, surfaces, errors);
     else validatePossession(exercise, surfaces, mode, errors, reviewIds.has(exercise.id));
   }
-  validateDistinctTasks(exercises, errors);
+  if (mode === 'possessive') {
+    for (const prefix of ['ppe-', 'pop-'])
+      validateDistinctTasks(
+        exercises.filter((exercise) => exercise.id.startsWith(prefix)),
+        errors,
+      );
+  } else validateDistinctTasks(exercises, errors);
   return errors;
 }
 

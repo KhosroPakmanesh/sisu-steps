@@ -1,3 +1,5 @@
+import { validateDemonstrativePractice } from './demonstrative-practice-expansion.mjs';
+
 const RESPONSE_TYPES = [
   'multiple-choice',
   'fill-blank',
@@ -6,46 +8,70 @@ const RESPONSE_TYPES = [
   'word-order',
 ];
 
+const SINGULAR = {
+  skills: [
+    'Singular demonstrative forms',
+    'Singular demonstrative reference',
+    'Independent singular demonstratives',
+    'Singular demonstratives before nouns',
+    'Standard singular person reference',
+  ],
+  lessonIds: [
+    'sdp-singular-forms',
+    'sdp-reference-choice',
+    'sdp-independent-use',
+    'sdp-noun-modifier',
+    'sdp-se-han',
+  ],
+  testCounts: [20, 24, 20, 20, 20, 24],
+  reviewId: 'sdp-review',
+  validateBoundary: validateSingularBoundary,
+};
+const PLURAL = {
+  skills: [
+    'Plural demonstrative forms',
+    'Plural demonstrative reference',
+    'Independent plural demonstratives',
+    'Plural demonstratives before nouns',
+    'Plural demonstrative-noun agreement',
+    'Standard plural person reference',
+  ],
+  lessonIds: [
+    'pdp-plural-forms',
+    'pdp-reference-choice',
+    'pdp-independent-use',
+    'pdp-noun-modifier',
+    'pdp-number-agreement',
+    'pdp-ne-he',
+  ],
+  testCounts: [20, 24, 20, 20, 24, 20, 24],
+  reviewId: 'pdp-review',
+  validateBoundary: validatePluralBoundary,
+};
+const PAIRED_LESSON_IDS = [
+  'sdp-singular-forms',
+  'pdp-plural-forms',
+  'sdp-reference-choice',
+  'pdp-reference-choice',
+  'sdp-independent-use',
+  'pdp-independent-use',
+  'sdp-noun-modifier',
+  'pdp-noun-modifier',
+  'pdp-number-agreement',
+  'sdp-se-han',
+  'pdp-ne-he',
+];
 const PACKS = {
-  'singular-demonstrative-pronouns': {
-    skills: [
-      'Singular demonstrative forms',
-      'Singular demonstrative reference',
-      'Independent singular demonstratives',
-      'Singular demonstratives before nouns',
-      'Standard singular person reference',
-    ],
-    lessonIds: [
-      'sdp-singular-forms',
-      'sdp-reference-choice',
-      'sdp-independent-use',
-      'sdp-noun-modifier',
-      'sdp-se-han',
-    ],
-    testCounts: [20, 24, 16, 20, 16, 24],
-    reviewId: 'sdp-review',
-    validateBoundary: validateSingularBoundary,
-  },
-  'plural-demonstrative-pronouns': {
-    skills: [
-      'Plural demonstrative forms',
-      'Plural demonstrative reference',
-      'Independent plural demonstratives',
-      'Plural demonstratives before nouns',
-      'Plural demonstrative-noun agreement',
-      'Standard plural person reference',
-    ],
-    lessonIds: [
-      'pdp-plural-forms',
-      'pdp-reference-choice',
-      'pdp-independent-use',
-      'pdp-noun-modifier',
-      'pdp-number-agreement',
-      'pdp-ne-he',
-    ],
-    testCounts: [20, 24, 16, 20, 24, 16, 24],
-    reviewId: 'pdp-review',
-    validateBoundary: validatePluralBoundary,
+  'demonstrative-pronouns': {
+    skills: [...SINGULAR.skills, ...PLURAL.skills],
+    lessonIds: PAIRED_LESSON_IDS,
+    focusedSkills: PAIRED_LESSON_IDS.map((id) => {
+      const scope = id.startsWith('sdp-') ? SINGULAR : PLURAL;
+      return scope.skills[scope.lessonIds.indexOf(id)];
+    }),
+    testCounts: [20, 20, 24, 24, 20, 20, 20, 20, 24, 20, 20, 24, 24],
+    reviewScopes: [SINGULAR, PLURAL],
+    validateBoundary: validateNumberBoundaries,
   },
   'negative-demonstrative-statements': {
     skills: [
@@ -54,7 +80,13 @@ const PACKS = {
       'Demonstrative affirmative-to-negative transformation',
     ],
     lessonIds: ['nds-singular-negative', 'nds-plural-negative', 'nds-negative-transformation'],
-    testCounts: [20, 24, 20, 24],
+    focusedTestIds: [
+      'nds-singular-negative-test',
+      'nds-plural-negative-test',
+      'nds-negative-transformation-singular-test',
+      'nds-negative-transformation-plural-test',
+    ],
+    testCounts: [20, 24, 10, 10, 24],
     reviewId: 'nds-review',
     validateBoundary: validateNegativeBoundary,
   },
@@ -103,14 +135,14 @@ export function validateDemonstrativePack(pack) {
   const config = PACKS[pack.id];
   if (!config) return [`${pack.id}: no demonstrative-pack validation contract exists`];
 
-  const errors = [];
+  const errors = validateDemonstrativePractice(pack);
   const lessons = pack.lessons ?? [];
   const tests = pack.tests ?? [];
   const scored = tests.flatMap((test) => test.exercises ?? []);
   const practice = lessons.flatMap((lesson) => lesson.practiceExercises ?? []);
   const expectedTestIds = [
-    ...config.lessonIds.map((lessonId) => `${lessonId}-test`),
-    config.reviewId,
+    ...(config.focusedTestIds ?? config.lessonIds.map((lessonId) => `${lessonId}-test`)),
+    ...(config.reviewScopes ?? [config]).map((scope) => scope.reviewId),
   ];
   const prefix = `${pack.id}:`;
 
@@ -146,7 +178,7 @@ export function validateDemonstrativePack(pack) {
     errors.push(`${prefix} optional practice total does not match the approved distribution`);
 
   validateTopology(lessons, tests, config, errors);
-  validateInitialFormSupport(lessons, tests, config, errors);
+  validateInitialFormSupport(lessons, tests, errors);
   validateResponseTypes(scored, errors, prefix);
   validateParallelPairs(scored, errors);
   validateDistinctTasks(scored, errors, prefix);
@@ -157,27 +189,30 @@ export function validateDemonstrativePack(pack) {
   return errors;
 }
 
-function validateInitialFormSupport(lessons, tests, config, errors) {
-  if (!/^(Singular|Plural) demonstrative forms$/u.test(config.skills[0])) return;
-  const exercises = [...(tests[0]?.exercises ?? []), ...(lessons[0]?.practiceExercises ?? [])];
-  for (const exercise of exercises) {
-    if (exercise.type === 'translation-en') continue;
-    const finnish = finnishAnswer(exercise);
-    const expectedFrame = finnish.replace(/^\p{L}+/u, '___');
-    if (!(exercise.prompt ?? '').includes(`Frame: “${expectedFrame}”`)) {
-      errors.push(
-        `${exercise.id}: initial form recall must visibly supply the Finnish sentence frame`,
-      );
+function validateInitialFormSupport(lessons, tests, errors) {
+  for (const lesson of lessons) {
+    if (!/^(Singular|Plural) demonstrative forms$/u.test(lesson.targetSkills[0])) continue;
+    const test = tests.find(
+      (item) => item.stage === 'focused' && item.lessonIds.includes(lesson.id),
+    );
+    for (const exercise of [...(test?.exercises ?? []), ...(lesson.practiceExercises ?? [])]) {
+      if (exercise.type === 'translation-en') continue;
+      const expectedFrame = finnishAnswer(exercise).replace(/^\p{L}+/u, '___');
+      if (!(exercise.prompt ?? '').includes(`Frame: “${expectedFrame}”`))
+        errors.push(
+          `${exercise.id}: initial form recall must visibly supply the Finnish sentence frame`,
+        );
     }
   }
 }
 
 function validateTopology(lessons, tests, config, errors) {
-  for (let index = 0; index < config.lessonIds.length; index += 1) {
-    const lesson = lessons[index];
-    const test = tests[index];
-    const skill = config.skills[index];
-    if (!lesson || !test) continue;
+  const focusedCount = (config.focusedTestIds ?? config.lessonIds).length;
+  for (const test of tests.slice(0, focusedCount)) {
+    const lessonIndex = config.lessonIds.indexOf(test.lessonIds?.[0]);
+    const lesson = lessons[lessonIndex];
+    const skill = (config.focusedSkills ?? config.skills)[lessonIndex];
+    if (!lesson) continue;
     if (
       lesson.stage !== 'focused' ||
       test.stage !== 'focused' ||
@@ -185,29 +220,39 @@ function validateTopology(lessons, tests, config, errors) {
       !sameList(test.targetSkills ?? [], [skill]) ||
       !sameList(test.lessonIds ?? [], [lesson.id]) ||
       test.exercises?.some((exercise) => exercise.targetSkill !== skill)
-    ) {
-      errors.push(`${test.id}: Focused lesson and test must teach only ${skill}`);
-    }
+    )
+      errors.push(test.id + ': Focused lesson and test must teach only ' + skill);
   }
-  const review = tests.at(-1);
-  if (
-    review &&
-    (review.stage !== 'review' ||
-      !sameList(review.lessonIds ?? [], config.lessonIds) ||
-      !sameList(review.targetSkills ?? [], config.skills))
-  ) {
-    errors.push(`${review.id}: Review must mix only the previously taught skills`);
-  }
-  for (const exercise of review?.exercises ?? []) {
+  for (const scope of config.reviewScopes ?? [config]) {
+    const review = tests.find((test) => test.id === scope.reviewId);
     if (
-      !config.skills.includes(exercise.targetSkill) ||
-      !(exercise.requiredSkills ?? []).includes(exercise.targetSkill)
-    ) {
-      errors.push(
-        `${exercise.id}: Review exercise must target and require a previously taught skill`,
-      );
+      review &&
+      (review.stage !== 'review' ||
+        !sameList(review.lessonIds ?? [], scope.lessonIds) ||
+        !sameList(review.targetSkills ?? [], scope.skills))
+    )
+      errors.push(`${review.id}: Review must mix only the previously taught skills`);
+    for (const exercise of review?.exercises ?? []) {
+      if (
+        !scope.skills.includes(exercise.targetSkill) ||
+        !(exercise.requiredSkills ?? []).includes(exercise.targetSkill)
+      )
+        errors.push(
+          `${exercise.id}: Review exercise must target and require a previously taught skill`,
+        );
     }
   }
+}
+
+function validateNumberBoundaries(pack, errors) {
+  validateSingularBoundary(
+    { ...pack, tests: pack.tests.filter((test) => test.id.startsWith('sdp-')) },
+    errors,
+  );
+  validatePluralBoundary(
+    { ...pack, tests: pack.tests.filter((test) => test.id.startsWith('pdp-')) },
+    errors,
+  );
 }
 
 function validateResponseTypes(scored, errors, prefix) {
@@ -328,14 +373,17 @@ function validatePluralBoundary(pack, errors) {
 }
 
 function validateNegativeBoundary(pack, errors) {
-  const [singular, plural, transformation] = pack.tests;
+  const [singular, plural] = pack.tests;
+  const transformations = pack.tests.filter(
+    (test) => test.stage === 'focused' && test.lessonIds?.includes('nds-negative-transformation'),
+  );
   if (singular?.exercises?.some((exercise) => !/\bei ole\b/iu.test(finnishAnswer(exercise))))
     errors.push(`${singular?.id}: every answer must keep singular ei ole`);
   if (plural?.exercises?.some((exercise) => !/\beivät ole\b/iu.test(finnishAnswer(exercise))))
     errors.push(`${plural?.id}: every answer must keep plural eivät ole`);
-  const transformed = answerText(transformation);
+  const transformed = transformations.map(answerText).join(' ');
   if (!/\bei ole\b/iu.test(transformed) || !/\beivät ole\b/iu.test(transformed))
-    errors.push(`${transformation?.id}: transformations must cover both negative agreement frames`);
+    errors.push(`${pack.id}: transformations must cover both negative agreement frames`);
   for (const test of pack.tests) {
     for (const exercise of test.exercises ?? []) {
       const finnish = finnishAnswer(exercise);

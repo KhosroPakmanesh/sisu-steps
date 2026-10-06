@@ -377,7 +377,7 @@ describe('content-pack validation', () => {
   it('rejects a declared word missing from the referenced lesson even when a prerequisite introduced it', async () => {
     const source = await loadContentSource('content');
     const pack = structuredClone(
-      source.packs.find((candidate) => candidate['id'] === 'plural-demonstrative-pronouns'),
+      source.packs.find((candidate) => candidate['id'] === 'demonstrative-pronouns'),
     ) as unknown as TopicPack;
     const lesson = pack.lessons.find((candidate) => candidate.id === 'pdp-reference-choice')!;
     const question = pack.tests
@@ -401,7 +401,7 @@ describe('content-pack validation', () => {
   it('rejects a translation word omitted from vocabulary even when its lesson lists it', async () => {
     const source = await loadContentSource('content');
     const pack = structuredClone(
-      source.packs.find((candidate) => candidate['id'] === 'plural-demonstrative-pronouns'),
+      source.packs.find((candidate) => candidate['id'] === 'demonstrative-pronouns'),
     ) as unknown as TopicPack;
     const question = pack.tests
       .flatMap((test) => test.exercises)
@@ -417,7 +417,7 @@ describe('content-pack validation', () => {
   it('rejects a missing sentence part that would conceal a recall word', async () => {
     const source = await loadContentSource('content');
     const pack = structuredClone(
-      source.packs.find((candidate) => candidate['id'] === 'plural-demonstrative-pronouns'),
+      source.packs.find((candidate) => candidate['id'] === 'demonstrative-pronouns'),
     ) as unknown as TopicPack;
     const question = pack.tests
       .flatMap((test) => test.exercises)

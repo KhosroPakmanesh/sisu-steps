@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "negative-possession",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "title": "Negative possession",
   "level": "0 - A1.3",
   "summary": "Learn the six owners and practise negative possession with one regular singular thing.",
@@ -27,7 +27,15 @@
     }
   ],
   "lessonIds": ["nps-fixed-negative", "nps-partitive", "nps-sentences"],
-  "testIds": ["nps-fixed-negative-test", "nps-partitive-test", "nps-sentences-test", "nps-review"],
+  "testIds": [
+    "nps-fixed-negative-singular-test",
+    "nps-fixed-negative-plural-test",
+    "nps-partitive-singular-test",
+    "nps-partitive-plural-test",
+    "nps-sentences-singular-test",
+    "nps-sentences-plural-test",
+    "nps-review"
+  ],
   "lessonSummaries": [
     {
       "id": "nps-fixed-negative",
@@ -44,8 +52,8 @@
   ],
   "testSummaries": [
     {
-      "id": "nps-fixed-negative-test",
-      "title": "Every owner uses ei ole",
+      "id": "nps-fixed-negative-singular-test",
+      "title": "Ei ole with singular owners",
       "stage": "focused",
       "lessonIds": ["nps-fixed-negative"],
       "exerciseIds": [
@@ -54,81 +62,85 @@
         "nps-fixed-negative-test-e015",
         "nps-fixed-negative-test-e020",
         "nps-fixed-negative-test-e001",
+        "nps-fixed-negative-test-e013",
+        "nps-fixed-negative-test-e019",
+        "nps-fixed-negative-test-e009",
+        "nps-fixed-negative-test-e014",
+        "nps-fixed-negative-test-e002",
+        "nps-fixed-negative-test-e021",
+        "nps-fixed-negative-test-e008"
+      ]
+    },
+    {
+      "id": "nps-fixed-negative-plural-test",
+      "title": "Ei ole with plural owners",
+      "stage": "focused",
+      "lessonIds": ["nps-fixed-negative"],
+      "exerciseIds": [
+        "nps-fixed-negative-test-e005",
         "nps-fixed-negative-test-e012",
         "nps-fixed-negative-test-e022",
         "nps-fixed-negative-test-e018",
-        "nps-fixed-negative-test-e005",
         "nps-fixed-negative-test-e010",
         "nps-fixed-negative-test-e024",
-        "nps-fixed-negative-test-e013",
         "nps-fixed-negative-test-e011",
         "nps-fixed-negative-test-e004",
-        "nps-fixed-negative-test-e014",
-        "nps-fixed-negative-test-e019",
-        "nps-fixed-negative-test-e009",
-        "nps-fixed-negative-test-e002",
         "nps-fixed-negative-test-e023",
         "nps-fixed-negative-test-e017",
         "nps-fixed-negative-test-e006",
-        "nps-fixed-negative-test-e021",
-        "nps-fixed-negative-test-e008",
         "nps-fixed-negative-test-e016"
       ]
     },
     {
-      "id": "nps-partitive-test",
-      "title": "Negative nouns: palloa, kirjaa, autoa, kynää",
+      "id": "nps-partitive-singular-test",
+      "title": "Negative nouns with singular owners",
+      "stage": "focused",
+      "lessonIds": ["nps-partitive"],
+      "exerciseIds": [
+        "nps-partitive-test-e001",
+        "nps-partitive-test-e015",
+        "nps-partitive-test-e009",
+        "nps-partitive-test-e014",
+        "nps-partitive-test-e008",
+        "nps-partitive-test-e021",
+        "nps-partitive-test-e002",
+        "nps-partitive-test-e007",
+        "nps-partitive-test-e020",
+        "nps-partitive-test-e013",
+        "nps-partitive-test-e003",
+        "nps-partitive-test-e019"
+      ]
+    },
+    {
+      "id": "nps-partitive-plural-test",
+      "title": "Negative nouns with plural owners",
       "stage": "focused",
       "lessonIds": ["nps-partitive"],
       "exerciseIds": [
         "nps-partitive-test-e004",
-        "nps-partitive-test-e015",
-        "nps-partitive-test-e001",
-        "nps-partitive-test-e009",
         "nps-partitive-test-e024",
-        "nps-partitive-test-e014",
-        "nps-partitive-test-e005",
-        "nps-partitive-test-e008",
-        "nps-partitive-test-e021",
         "nps-partitive-test-e012",
-        "nps-partitive-test-e006",
+        "nps-partitive-test-e005",
         "nps-partitive-test-e017",
         "nps-partitive-test-e023",
+        "nps-partitive-test-e006",
         "nps-partitive-test-e010",
-        "nps-partitive-test-e002",
         "nps-partitive-test-e016",
-        "nps-partitive-test-e020",
         "nps-partitive-test-e011",
         "nps-partitive-test-e022",
-        "nps-partitive-test-e018",
-        "nps-partitive-test-e019",
-        "nps-partitive-test-e007",
-        "nps-partitive-test-e013",
-        "nps-partitive-test-e003"
+        "nps-partitive-test-e018"
       ]
     },
     {
-      "id": "nps-sentences-test",
-      "title": "Saying who does not have something",
+      "id": "nps-sentences-singular-test",
+      "title": "Negative possession with singular owners",
       "stage": "focused",
       "lessonIds": ["nps-sentences"],
       "exerciseIds": [
-        "nps-sentences-test-e005",
         "nps-sentences-test-e021",
-        "nps-sentences-test-e017",
-        "nps-sentences-test-e010",
-        "nps-sentences-test-e004",
         "nps-sentences-test-e007",
-        "nps-sentences-test-e016",
-        "nps-sentences-test-e023",
         "nps-sentences-test-e014",
-        "nps-sentences-test-e022",
         "nps-sentences-test-e001",
-        "nps-sentences-test-e011",
-        "nps-sentences-test-e006",
-        "nps-sentences-test-e024",
-        "nps-sentences-test-e018",
-        "nps-sentences-test-e012",
         "nps-sentences-test-e015",
         "nps-sentences-test-e003",
         "nps-sentences-test-e009",
@@ -137,6 +149,26 @@
         "nps-sentences-test-e002",
         "nps-sentences-test-e020",
         "nps-sentences-test-e008"
+      ]
+    },
+    {
+      "id": "nps-sentences-plural-test",
+      "title": "Negative possession with plural owners",
+      "stage": "focused",
+      "lessonIds": ["nps-sentences"],
+      "exerciseIds": [
+        "nps-sentences-test-e005",
+        "nps-sentences-test-e017",
+        "nps-sentences-test-e010",
+        "nps-sentences-test-e004",
+        "nps-sentences-test-e016",
+        "nps-sentences-test-e023",
+        "nps-sentences-test-e022",
+        "nps-sentences-test-e011",
+        "nps-sentences-test-e006",
+        "nps-sentences-test-e024",
+        "nps-sentences-test-e018",
+        "nps-sentences-test-e012"
       ]
     },
     {

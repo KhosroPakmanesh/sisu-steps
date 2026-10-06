@@ -2,21 +2,21 @@ import { expect, test } from '@playwright/test';
 import { TopicPack } from '../../../src/features/learning/shared/content/topic-pack.models';
 import { loadContentSource } from '../../../tools/content-source-loader.mjs';
 
-test('separates owner groups and keeps object-number teaching in both at every viewport', async ({
+test('retains both owner lesson groups in the merged pack at every viewport', async ({
   page,
 }, testInfo) => {
   for (const [id, title, prefix, allowed, opposite, omitted] of [
     [
       'possessive-pronouns-endings',
-      'Singular owners and possessive endings',
+      'Possessive pronouns and endings',
       'ppe',
       ['minun', 'sinun', 'hänen'],
       ['meidän', 'teidän', 'heidän'],
       ['autoni', 'kynäsi'],
     ],
     [
-      'plural-ownership-possessive-endings',
-      'Plural owners and possessive endings',
+      'possessive-pronouns-endings',
+      'Possessive pronouns and endings',
       'pop',
       ['meidän', 'teidän', 'heidän'],
       ['minun', 'sinun', 'hänen'],
@@ -25,14 +25,14 @@ test('separates owner groups and keeps object-number teaching in both at every v
   ] as const) {
     await page.goto(`/topics/${id}`);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(title);
-    await expect(page.locator('.test-card:not(.review-test)')).toHaveCount(8);
-    await expect(page.locator('.review-test')).toHaveCount(1);
+    await expect(page.locator('.test-card:not(.review-test)')).toHaveCount(20);
+    await expect(page.locator('.review-test')).toHaveCount(2);
     await page.goto(`/learn/${id}/${prefix}-owner-forms-test`);
     for (const owner of allowed) await expect(page.locator('.lesson-reader')).toContainText(owner);
     await page.goto(`/learn/${id}/${prefix}-plural-objects-test`);
     await expect(page.locator('.lesson-reader')).toContainText('Nämä ovat');
     await expect(page.locator('.lesson-reader')).toContainText('plural -t');
-    await page.goto(`/learn/${id}/${prefix}-pronoun-omission-test`);
+    await page.goto(`/learn/${id}/${prefix}-pronoun-omission-singular-test`);
     const reader = page.locator('.lesson-reader');
     for (const form of omitted) await expect(reader).toContainText(`Nämä ovat ${form}.`);
     const rendered = await reader.innerText();
@@ -44,7 +44,7 @@ test('separates owner groups and keeps object-number teaching in both at every v
       path: testInfo.outputPath(`${prefix}-owner-omission.png`),
       fullPage: true,
     });
-    await page.goto(`/learn/${id}/${prefix}-whose-test`);
+    await page.goto(`/learn/${id}/${prefix}-whose-singular-test`);
     await expect(page.locator('.lesson-reader')).toContainText('Whose ball is this?');
     await expect(page.locator('.lesson-reader')).toContainText('Whose balls are these?');
   }
@@ -53,7 +53,7 @@ test('separates owner groups and keeps object-number teaching in both at every v
 test('distinguishes a retained plural ending from unmatched-error feedback', async ({ page }) => {
   const source = await loadContentSource('content');
   const pack = source.packs.find(
-    (item) => item['id'] === 'plural-ownership-possessive-endings',
+    (item) => item['id'] === 'possessive-pronouns-endings',
   ) as unknown as TopicPack;
   const authored = pack.tests.find((item) => item.id === 'pop-plural-objects-test')!;
   await page.goto(`/study/${pack.id}/${authored.id}`);

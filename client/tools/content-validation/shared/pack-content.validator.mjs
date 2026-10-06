@@ -1,3 +1,4 @@
+import { validateFocusedNumberScopes } from './focused-number-scopes.mjs';
 import { existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -36,6 +37,7 @@ export async function validatePackContent(pack) {
       .join('|')}`;
   const scoredFingerprints = new Set(exercises.map(exerciseFingerprint));
   const errors = [];
+  errors.push(...validateFocusedNumberScopes(pack));
   errors.push(...validateOwnershipQuestionVariety(pack));
   const hasTextArray = (value) =>
     Array.isArray(value) && value.every((item) => typeof item === 'string' && item.trim());
@@ -413,8 +415,7 @@ export async function validatePackContent(pack) {
       ['personal-pronouns-affirmative-olla', 'olla'],
       ['negative-olla-statements', 'olla'],
       ['olla-questions-short-answers', 'olla'],
-      ['singular-demonstrative-pronouns', 'demonstratives'],
-      ['plural-demonstrative-pronouns', 'demonstratives'],
+      ['demonstrative-pronouns', 'demonstratives'],
       ['negative-demonstrative-statements', 'demonstratives'],
       ['demonstrative-questions', 'demonstratives'],
       ['affirmative-possession', 'ownership'],
@@ -422,7 +423,6 @@ export async function validatePackContent(pack) {
       ['possession-questions', 'ownership'],
       ['negative-possession-questions', 'ownership'],
       ['possessive-pronouns-endings', 'ownership'],
-      ['plural-ownership-possessive-endings', 'ownership'],
     ]);
     const validatorFamily = validatorFamilies.get(pack.id);
     const specificValidatorPath = resolve(

@@ -1,31 +1,37 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
 import { validateTopicPack } from '@/features/learning/shared/content/validation/topic-pack.validator';
-import { validatePluralOwnership } from '@/features/learning/shared/content/validation/plural-ownership.validator';
+import { validatePossessiveOwnerGroups } from '@/features/learning/shared/content/validation/possessive-owner-groups.validator';
 import { gradeAnswer } from '@/features/learning/shared/progress/grading.policy';
 import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
-import { validatePack } from '../../../../tools/content-validation/ownership/plural-ownership-possessive-endings.mjs';
+import { validatePack } from '../../../../tools/content-validation/ownership/possessive-owner-groups.mjs';
 import { validatePackContent } from '../../../../tools/content-validation/shared/pack-content.validator.mjs';
 
-describe('ownership split by owner number', () => {
+describe('merged ownership pack with retained owner-number groups', () => {
+  let merged: TopicPack;
   let packs: TopicPack[];
   beforeAll(async () => {
     const source = await loadContentSource('content');
-    packs = ['possessive-pronouns-endings', 'plural-ownership-possessive-endings'].map(
-      (id) => source.packs.find((item) => item['id'] === id) as unknown as TopicPack,
-    );
+    merged = source.packs.find(
+      (item) => item['id'] === 'possessive-pronouns-endings',
+    ) as unknown as TopicPack;
+    packs = ['ppe-', 'pop-'].map((prefix) => ({
+      ...merged,
+      lessons: merged.lessons.filter((lesson) => lesson.id.startsWith(prefix)),
+      tests: merged.tests.filter((test) => test.id.startsWith(prefix)),
+    }));
   });
 
-  it('loads both authored packs through complete runtime and source boundaries', async () => {
+  it('loads the merged pack through complete runtime and source boundaries', async () => {
     for (const pack of packs) {
-      expect(validateTopicPack(pack).id).toBe(pack.id);
-      expect(validatePack(pack)).toEqual([]);
-      expect((await validatePackContent(pack)).errors).toEqual([]);
+      expect(validateTopicPack(merged).id).toBe(merged.id);
+      expect(validatePack(merged)).toEqual([]);
+      expect((await validatePackContent(merged)).errors).toEqual([]);
       expect(pack.tests.map((item) => item.stage)).toEqual([
-        ...Array<string>(8).fill('focused'),
+        ...Array<string>(10).fill('focused'),
         'review',
       ]);
-      for (const test of pack.tests.slice(0, 8)) {
+      for (const test of pack.tests.slice(0, 10)) {
         expect(test.lessonIds).toHaveLength(1);
         expect(
           pack.lessons.find((lesson) => lesson.id === test.lessonIds[0])!.targetSkills,
@@ -37,7 +43,8 @@ describe('ownership split by owner number', () => {
   it('keeps equal totals and matching test counts without reducing singular peers', () => {
     for (const pack of packs) {
       expect(pack.tests.map((item) => item.exercises.length)).toEqual([
-        ...Array<number>(8).fill(20),
+        ...Array<number>(6).fill(20),
+        ...Array<number>(4).fill(10),
         32,
       ]);
       expect(pack.tests.reduce((sum, item) => sum + item.exercises.length, 0)).toBe(192);
@@ -130,42 +137,68 @@ describe('ownership split by owner number', () => {
   ] as const)(
     'rejects incorrect owner grammar %s/%s/%s at both boundaries',
     (pack, test, index, answer, message) => {
-      const mutated = structuredClone(packs[pack]);
-      const id = `${mutated.tests[test].id}-e${String(index + 1).padStart(3, '0')}`;
-      mutated.tests[test].exercises.find((exercise) => exercise.id === id)!.acceptedAnswers = [
-        answer,
-      ];
+      const mutated = structuredClone(merged);
+      const lesson = packs[pack].lessons[test];
+      const id = `${lesson.id}-test-e${String(index + 1).padStart(3, '0')}`;
+      mutated.tests
+        .flatMap((item) => item.exercises)
+        .find((exercise) => exercise.id === id)!.acceptedAnswers = [answer];
       expect(validatePack(mutated).join('\n')).toContain(message);
-      expect(() => validatePluralOwnership(mutated)).toThrow(message);
+      expect(() => validatePossessiveOwnerGroups(mutated)).toThrow(message);
       expect(() => validateTopicPack(mutated)).toThrow();
+    },
+  );
+
+  it.each([
+    ['ppe-review', 'pop-owner-forms'],
+    ['pop-review', 'ppe-owner-forms'],
+  ])('rejects changed Review references in %s at both boundaries', (testId, foreignLessonId) => {
+    const pack = structuredClone(merged);
+    const review = pack.tests.find((test) => test.id === testId)!;
+    review.lessonIds.push(foreignLessonId);
+    const message = 'preserve the original owner-group Review lesson references';
+    expect(validatePack(pack).join('\n')).toContain(message);
+    expect(() => validatePossessiveOwnerGroups(pack)).toThrow(message);
+    expect(() => validateTopicPack(pack)).toThrow(message);
+  });
+
+  it.each(['lessons', 'tests'] as const)(
+    'rejects a reversed owner-number topic pair in %s at both boundaries',
+    (field) => {
+      const pack = structuredClone(merged);
+      [pack[field][0], pack[field][1]] = [pack[field][1], pack[field][0]];
+      const message = 'lessons and tests must follow paired singular/plural topics before Reviews';
+      expect(validatePack(pack).join('\n')).toContain(message);
+      expect(() => validatePossessiveOwnerGroups(pack)).toThrow(message);
+      expect(() => validateTopicPack(pack)).toThrow(message);
     },
   );
 
   it('rejects opposite-owner teaching and contracted counts', () => {
     for (const [index, source] of packs.entries()) {
-      const pack = structuredClone(source);
-      pack.lessons[0].sections[0].paragraphs.push(
-        index === 0 ? 'Teach meidän here.' : 'Teach minun here.',
-      );
+      const pack = structuredClone(merged);
+      pack.lessons
+        .find((lesson) => lesson.id === source.lessons[0].id)!
+        .sections[0].paragraphs.push(index === 0 ? 'Teach meidän here.' : 'Teach minun here.');
       expect(validatePack(pack).join('\n')).toContain('owner-number boundary');
-      expect(() => validatePluralOwnership(pack)).toThrow('owner-number boundary');
-      pack.tests[0].exercises.pop();
-      expect(validatePack(pack).join('\n')).toContain('equal owner-pack counts');
+      expect(() => validatePossessiveOwnerGroups(pack)).toThrow('owner-number boundary');
+      pack.tests.find((test) => test.id === source.tests[0].id)!.exercises.pop();
+      expect(validatePack(pack).join('\n')).toContain('equal owner-group counts');
     }
   });
 
   it('accepts both question orders and optional owners while rejecting wrong number', () => {
-    const question = packs[0].tests[7].exercises.find(
-      (exercise) => exercise.id === 'ppe-whose-test-e005',
-    )!;
+    const question = packs[0].tests
+      .flatMap((test) => test.exercises)
+      .find((exercise) => exercise.id === 'ppe-whose-test-e005')!;
     const model = question.acceptedAnswers[0];
     for (const answer of question.acceptedAnswers)
       expect(gradeAnswer(question, answer).correct).toBe(true);
     expect(question.acceptedAnswers).toHaveLength(2);
     expect(gradeAnswer(question, model.replace('on?', 'ovat?')).correct).toBe(false);
-    const statement = packs[1].tests[6].exercises.find(
-      (exercise) => exercise.id === 'pop-pronoun-omission-test-e013',
-    )!;
+    const statement = packs[1].tests
+      .flatMap((test) => test.exercises)
+      .find((exercise) => exercise.id === 'pop-pronoun-omission-test-e013')!;
     expect(statement.acceptedAnswers).toHaveLength(2);
     for (const answer of statement.acceptedAnswers)
       expect(gradeAnswer(statement, answer).correct).toBe(true);

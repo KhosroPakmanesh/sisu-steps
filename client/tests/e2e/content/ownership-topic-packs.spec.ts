@@ -10,7 +10,6 @@ const packIds = [
   'possession-questions',
   'negative-possession-questions',
   'possessive-pronouns-endings',
-  'plural-ownership-possessive-endings',
 ];
 let packs: TopicPack[];
 
@@ -27,8 +26,8 @@ test('shows all ownership packs and target-specific preparation at every viewpor
   test.setTimeout(120_000);
   await page.goto('/');
   const group = page.locator('.pack-group').filter({ hasText: 'Ownership and possession' });
-  await expect(group.locator('.topic-card')).toHaveCount(6);
-  await expect(page.locator('.catalog-stats')).toContainText('2370');
+  await expect(group.locator('.topic-card')).toHaveCount(5);
+  await expect(page.locator('.catalog-stats')).toContainText('2386');
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(pack.title);
@@ -41,7 +40,9 @@ test('shows all ownership packs and target-specific preparation at every viewpor
       await page.goto(`/learn/${pack.id}/${focused.id}`);
       await expect(page.locator('.lesson-reader')).toHaveCount(1);
       await expect(page.locator('.lesson-reader')).toContainText(/focused lesson/iu);
-      await expect(page.locator('.lesson-reader h2').first()).toHaveText(focused.title);
+      await expect(page.locator('.lesson-reader h2').first()).toHaveText(
+        pack.lessons.find((lesson) => lesson.id === focused.lessonIds[0])!.title,
+      );
       await expect(page.getByRole('heading', { name: 'New words', exact: true })).toBeVisible();
       await expect(page.getByRole('heading', { name: 'Used again', exact: true })).toBeVisible();
       await expect(
@@ -138,9 +139,10 @@ test('accepts natural short replies and renders a distinct Finnish mistake diagn
 }) => {
   const authored = packs
     .find((pack) => pack.id === 'possession-questions')!
-    .tests.find((item) => item.id === 'pqs-short-answers-test')!;
-  await page.goto('/study/possession-questions/pqs-short-answers-test');
+    .tests.find((item) => item.id === 'pqs-short-answers-plural-test')!;
+  await page.goto('/study/possession-questions/pqs-short-answers-plural-test');
   const ids = ['pqs-short-answers-test-e007', 'pqs-short-answers-test-e008'];
+  expect(ids.every((id) => authored.exercises.some((exercise) => exercise.id === id))).toBe(true);
   const last = Math.max(
     ...ids.map((id) => authored.exercises.findIndex((exercise) => exercise.id === id)),
   );
@@ -156,8 +158,8 @@ test('accepts natural short replies and renders a distinct Finnish mistake diagn
   }
   const negative = packs
     .find((pack) => pack.id === 'negative-possession')!
-    .tests.find((item) => item.id === 'nps-fixed-negative-test')!;
-  await page.goto('/study/negative-possession/nps-fixed-negative-test');
+    .tests.find((item) => item.id === 'nps-fixed-negative-singular-test')!;
+  await page.goto('/study/negative-possession/nps-fixed-negative-singular-test');
   await advanceTo(page, negative.exercises, 'nps-fixed-negative-test-e001');
   await page.locator('.choice-list input').nth(1).check();
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
@@ -172,9 +174,10 @@ test('keeps a typed possession diagnostic distinct from unmatched-error feedback
 }) => {
   const authored = packs
     .find((pack) => pack.id === 'possession-questions')!
-    .tests.find((item) => item.id === 'pqs-short-answers-test')!;
+    .tests.find((item) => item.id === 'pqs-short-answers-plural-test')!;
   const typed = authored.exercises.filter((exercise) => exercise.type === 'translation-fi');
-  await page.goto('/study/possession-questions/pqs-short-answers-test');
+  expect(typed.length).toBeGreaterThanOrEqual(2);
+  await page.goto('/study/possession-questions/pqs-short-answers-plural-test');
   const index = await advanceTo(page, authored.exercises, typed[0].id);
   await page
     .getByRole('textbox', { name: 'Your answer' })
@@ -217,8 +220,8 @@ for (const id of ['possession-questions', 'negative-possession-questions']) {
 test('explains the missing noun ending in a typed partitive answer', async ({ page }) => {
   const authored = packs
     .find((pack) => pack.id === 'negative-possession')!
-    .tests.find((item) => item.id === 'nps-partitive-test')!;
-  await page.goto('/study/negative-possession/nps-partitive-test');
+    .tests.find((item) => item.id === 'nps-partitive-singular-test')!;
+  await page.goto('/study/negative-possession/nps-partitive-singular-test');
   await advanceTo(page, authored.exercises, 'nps-partitive-test-e013');
   await page.getByRole('textbox', { name: 'Your answer' }).fill('Minulla ei ole kissa.');
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();

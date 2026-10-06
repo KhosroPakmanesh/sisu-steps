@@ -4,7 +4,6 @@ const PACK_IDS = new Set([
   'possession-questions',
   'negative-possession-questions',
   'possessive-pronouns-endings',
-  'plural-ownership-possessive-endings',
 ]);
 const FORMATS = ['multiple-choice', 'fill-blank', 'translation-fi', 'translation-en', 'word-order'];
 

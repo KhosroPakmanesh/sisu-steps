@@ -1,5 +1,23 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-06 existing-format demonstrative expansion
+
+Implement REQ-G001-147 / VAL-G001-104 using the content-creator skill and content-authoring.md. Snapshot the complete current corpus. Approve the sixteen-item coverage blueprint against all current scored/optional tasks, then author four new questions in each selected test using existing template structures, grammar and vocabulary. Preserve every existing object and relative order, interleave new mutual pairs, advance only this pack to 1.1.0 and update manifest/count checks. Validate novelty, balance and source/runtime equivalence; prove preservation, run the client gate, grade all new items/alternatives/diagnostics and inspect rendered routes/feedback at three widths. Record final evidence. Do not commit.
+
+## 2026-10-05 paired lesson ordering
+
+Implement REQ-G001-146 / VAL-G001-103 using the content-creator skill and content-authoring.md. Snapshot all current source files and record the pre-change pedagogy gate. Reorder only the two manifest lesson/test ID and summary arrays to the approved paired topic sequence, with both Reviews last. Update source/runtime topology guards and order-sensitive fixtures while retaining all content and current versions. Compare complete source hashes, run the client gate and all affected rendered routes at three widths, then record final assessments and evidence. Do not commit.
+
+## 2026-10-05 Focused test separation
+
+Implement REQ-G001-145 / VAL-G001-102 using the content-creator skill and content-authoring.md. Preserve the completed topic merges. Snapshot the current working corpus, partition the selected 508 questions into 44 number-scoped Focused tests, share the unchanged original lessons and optional practice, and retain all Reviews. Update only test wrappers/manifests, nine pack versions, explicit scope validation and affected fixtures/routes. Keep existing grammar and variety checks; reorder retained objects only where required by recognition/interleaving/spacing. Record inherited grammar evidence, polite-te handling, cross-number mastery-pair transfer and shared-lesson limitations. Run the complete client gate and rendered routes/all-item audits for the new tests. Do not commit.
+
+## 2026-10-05 content-preserving topic-pack merges
+
+Implement `REQ-G001-144` / `VAL-G001-101` using the content-creator skill and `specs/content-authoring.md`. Snapshot the current source hashes before any movement. Merge singular/plural demonstratives into `demonstrative-pronouns` (1.0.0, 264 scored / 44 optional) and owner groups into `possessive-pronouns-endings` (2.0.0, 384 scored / 48 optional). Move every lesson/test file unchanged, retaining stable IDs, lesson versions and complete authored definitions. Order the existing singular Focused steps, plural Focused steps and then the two original Reviews in each merged manifest. Do not write new mixed Reviews, remove overlap or edit teaching.
+
+Union only pack metadata, remove retired registrations/folders, and update runtime/direct-source topology guards and their tests. Keep semantic checks within the original lesson/test number scopes, including both original owner-group duplicate checks. Record the intentional full local-state reset for stored removed IDs and atomic old-backup rejection under existing policy; do not change persistence or introduce compatibility code. Record the two assessment gates, verify all 58 affected files and all twelve unaffected packs by hash, run the complete client gate and affected browser coverage, and report the 14-pack / 2,370-scored / 290-optional catalog. Do not commit.
+
 ## Goal
 
 Deliver a browser-only Angular exercise book and a level `0 - A1.3` grammar-foundation pack family covering vowel harmony, KPT consonant gradation, the nominative T-plural, and related written agreement.

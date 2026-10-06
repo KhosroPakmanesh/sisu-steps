@@ -2,6 +2,30 @@
 
 ## Unreleased
 
+### Existing-format demonstrative practice
+
+- Added four scored questions to each of the two independent-demonstrative and two standard person-reference tests. Each now has 20 questions, with four of each existing response format; no new grammar, vocabulary or activity style is introduced. All existing questions, lessons, optional practice, Reviews and other packs are preserved. Demonstrative pronouns now has 280 scored and 44 optional questions; the catalog has 2,386 scored and 290 optional questions.
+- Demonstrative pronouns advances to 1.1.0. Existing version alignment intentionally resets only this pack's progress, unfinished sessions, mistakes, mastery/correction records and lesson completions, retaining owned notes and compatible progress elsewhere. Older installed-version backups keep the existing changed-pack confirmation/scoped discard behavior; no storage change, migration or alias is added.
+
+### Content authoring guidance
+
+- Added consistent lesson/test chunking guidance to the authoring guide and Finnish content creator skill: distinct pack/lesson/test boundaries, shared preparation, explicit person/owner/object number scopes, prerequisite-aware paired progression and coverage-based chunk sizes. Existing Review, content-preservation and versioning safeguards remain in force; authored content and learner data are unchanged.
+
+### Paired lesson ordering
+
+- Paired singular and plural lessons by topic in **Demonstrative pronouns** and **Possessive pronouns and endings**, with matching Focused tests and the two original Reviews last. All lesson/question content, question order within tests, names, IDs and counts remain unchanged. The other twelve packs are untouched.
+- This order-only change retains pack/lesson versions and current learner progress, completions, sessions and notes. Earlier merge and number-test separation compatibility consequences remain unchanged.
+
+### Focused tests separated by number
+
+- Split 22 mixed Focused tests across nine packs into 44 singular/plural tests. Every existing question, lesson, optional-practice item and Review remains unchanged; preparation lessons remain shared. The catalog retains 14 packs and 2,370 scored / 290 optional questions, now in 125 tests. Polite te remains in the plural-form group; owner number and owned-object number are distinguished explicitly.
+- Advance only the nine affected pack versions. Existing alignment intentionally resets their study history, sessions, mistakes, mastery and lesson-completion records, while retaining owned notes and compatible progress in the other five packs. Earlier installed-version backups retain the existing changed-pack confirmation and discard only incompatible progress; backups with removed pack IDs remain atomically rejected. No migration, storage-format change or legacy test route was added.
+
+### Content-preserving pack merges
+
+- Merged singular and plural demonstrative packs into **Demonstrative pronouns** (264 scored / 44 optional questions), and the two owner-number packs into **Possessive pronouns and endings** (384 scored / 48 optional). Every existing lesson and test remains unchanged, including IDs, lesson versions, wording, answers, grading, exercise order and Review scope. The other twelve packs retain their complete source content. The catalog now has 14 packs with the same 2,370 scored and 290 optional questions.
+- The merged demonstrative pack uses `demonstrative-pronouns` version `1.0.0`; the retained possessive pack ID advances to `2.0.0`. Under the existing removed-pack policy, opening this catalog with a saved version entry for either former demonstrative pack or the removed plural-owner pack intentionally resets **all local learner data**, including history and notes in otherwise unchanged packs. Backups containing removed IDs remain atomically rejected. No migration, legacy alias, persistence-format change or backend dependency was added.
+
 ### Ownership question variety
 
 - Added genuine blanks to both possession-question packs, varied controlled possession tasks and balanced the singular/plural owner Reviews. Interleaved scored formats with at most two consecutive questions of one format and separated mutual mastery partners. Retained all six packs, 768 scored and 84 optional questions, stable IDs, grammar boundaries and the owner-number split.

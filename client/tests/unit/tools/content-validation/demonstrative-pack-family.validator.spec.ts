@@ -5,8 +5,7 @@ import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
 import { validateDemonstrativePack } from '../../../../tools/content-validation/demonstratives/demonstrative-pack-family.mjs';
 
 const PACK_IDS = [
-  'singular-demonstrative-pronouns',
-  'plural-demonstrative-pronouns',
+  'demonstrative-pronouns',
   'negative-demonstrative-statements',
   'demonstrative-questions',
 ];
@@ -23,34 +22,49 @@ describe('demonstrative-pronoun pack-family validation', () => {
     });
   });
 
-  it('accepts the four packs and preserves the approved family inventory', () => {
+  it('accepts the three packs and preserves the approved family inventory', () => {
     for (const pack of packs) expect(validateDemonstrativePack(pack)).toEqual([]);
 
-    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(512);
+    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(528);
     expect(
       packs.flatMap((pack) => pack.lessons).flatMap((lesson) => lesson.practiceExercises),
     ).toHaveLength(80);
     expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(20);
-    expect(packs.filter((pack) => pack.tests.at(-1)?.stage === 'review')).toHaveLength(4);
+    expect(
+      packs.flatMap((pack) => pack.tests.filter((test) => test.stage === 'review')),
+    ).toHaveLength(4);
   });
 
   it('rejects changed topology, counts, or a Review that claims a new skill', () => {
-    const pack = structuredClone(requirePack(packs, 'singular-demonstrative-pronouns'));
+    const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
     pack.tests[0].exercises.pop();
-    pack.tests.at(-1)?.targetSkills.push('Untaught demonstrative skill');
+    pack.tests
+      .find((test) => test.id === 'sdp-review')
+      ?.targetSkills.push('Untaught demonstrative skill');
 
     expect(validateDemonstrativePack(pack)).toEqual(
       expect.arrayContaining([
-        'singular-demonstrative-pronouns: test counts must remain 20, 24, 16, 20, 16, 24',
-        'singular-demonstrative-pronouns: scored exercise total does not match the approved distribution',
+        'demonstrative-pronouns: test counts must remain 20, 20, 24, 24, 20, 20, 20, 20, 24, 20, 20, 24, 24',
+        'demonstrative-pronouns: scored exercise total does not match the approved distribution',
         'sdp-review: Review must mix only the previously taught skills',
       ]),
     );
   });
 
+  it.each(['lessons', 'tests'] as const)(
+    'rejects a reversed singular/plural topic pair in %s',
+    (field) => {
+      const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
+      [pack[field][0], pack[field][1]] = [pack[field][1], pack[field][0]];
+      expect(validateDemonstrativePack(pack)).toContain(
+        `demonstrative-pronouns: ${field} are incomplete or reordered`,
+      );
+    },
+  );
+
   it('rejects a Review exercise that targets a Review-only skill', () => {
-    const pack = structuredClone(requirePack(packs, 'singular-demonstrative-pronouns'));
-    const exercise = pack.tests.at(-1)?.exercises[0];
+    const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
+    const exercise = pack.tests.find((test) => test.id === 'sdp-review')?.exercises[0];
     if (!exercise) throw new Error('The singular pack has no Review exercise.');
     exercise.targetSkill = 'Untaught review-only target';
 
@@ -59,16 +73,31 @@ describe('demonstrative-pronoun pack-family validation', () => {
     );
   });
 
-  it('rejects an initial form task that hides the surrounding Finnish frame', () => {
-    const pack = structuredClone(requirePack(packs, 'singular-demonstrative-pronouns'));
-    const exercise = pack.tests[0].exercises.find(
-      (candidate) => candidate.type !== 'translation-en',
-    );
-    if (!exercise) throw new Error('The singular pack has no Finnish form-recall task.');
-    exercise.prompt = exercise.prompt.replace(/ Frame: “[^”]+”/u, '');
+  it.each(['sdp-singular-forms-test', 'pdp-plural-forms-test'])(
+    'rejects an initial form task without its Finnish frame in %s',
+    (testId) => {
+      const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
+      const exercise = pack.tests
+        .find((test) => test.id === testId)
+        ?.exercises.find((candidate) => candidate.type !== 'translation-en');
+      if (!exercise) throw new Error(testId + ' has no Finnish form-recall task.');
+      exercise.prompt = exercise.prompt.replace(/ Frame: “[^”]+”/u, '');
+      expect(validateDemonstrativePack(pack)).toContain(
+        exercise.id + ': initial form recall must visibly supply the Finnish sentence frame',
+      );
+    },
+  );
 
+  it.each([
+    ['sdp-review', 'pdp-plural-forms'],
+    ['pdp-review', 'sdp-singular-forms'],
+  ])('rejects mixing the original Review scope in %s', (testId, foreignLessonId) => {
+    const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
+    const review = pack.tests.find((test) => test.id === testId);
+    if (!review) throw new Error('Missing ' + testId);
+    review.lessonIds.push(foreignLessonId);
     expect(validateDemonstrativePack(pack)).toContain(
-      `${exercise.id}: initial form recall must visibly supply the Finnish sentence frame`,
+      testId + ': Review must mix only the previously taught skills',
     );
   });
 
@@ -117,7 +146,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
   });
 
   it('rejects spoken Finnish anywhere in learner-facing content', () => {
-    const pack = structuredClone(requirePack(packs, 'plural-demonstrative-pronouns'));
+    const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
     pack.lessons[0].summary = 'Tää points to several things.';
 
     expect(validateDemonstrativePack(pack)).toContainEqual(
@@ -126,7 +155,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
   });
 
   it('rejects malformed English demonstrative glosses', () => {
-    const pack = structuredClone(requirePack(packs, 'plural-demonstrative-pronouns'));
+    const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
     pack.lessons[0].summary = 'Those over there cars are new.';
 
     expect(validateDemonstrativePack(pack)).toContainEqual(
@@ -159,7 +188,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
   });
 
   it('rejects scene-only duplicates and repeated wrong-option feedback', () => {
-    const pack = structuredClone(requirePack(packs, 'singular-demonstrative-pronouns'));
+    const pack = structuredClone(requirePack(packs, 'demonstrative-pronouns'));
     const first = pack.tests[0].exercises.find((exercise) => exercise.type === 'multiple-choice');
     const duplicate = pack.tests[0].exercises.find(
       (exercise) => exercise.type === 'multiple-choice' && exercise.id !== first?.id,

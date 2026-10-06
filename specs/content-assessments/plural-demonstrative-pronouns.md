@@ -1,5 +1,7 @@
 # Finnish-teaching pedagogy assessment: plural-demonstrative-pronouns
 
+Historical source-pack assessment. On 2026-10-05 this pack was merged without changing any lesson or question content. The current topology and merge assessment are recorded in [demonstrative-pronouns](demonstrative-pronouns.md). The dated authoring evidence below remains unchanged.
+
 ## Grammar vocabulary correction — 2026-10-04
 
 Under `REQ-G001-141`, removed 23 grammar-only vocabulary declarations from 6 lessons. The current lexical inventory is 12 introduced, 26 reused, and 0 supplied entries. Their grammatical meanings and all worked examples remain intact. Revised lesson patch versions and manifest summaries advance; pack versions and scored semantics remain unchanged, with only obsolete revised-lesson completion marks requiring renewal. Earlier inventories below describe their dated authoring stage. The [shared correction assessment](grammar-vocabulary-separation.md) records the scoped pedagogy gates, complete preservation comparison, and final validation evidence.

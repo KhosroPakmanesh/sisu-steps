@@ -1,5 +1,37 @@
 # Possessive pronouns and endings — pedagogy assessment
 
+## Paired topic ordering — 2026-10-05
+
+Under REQ-G001-146, apply the approved paired singular/plural topic order without changing any lesson or question content. Pre-change disposition: **approved with limitations**. The [shared ordering assessment](paired-lesson-order.md) defines the exact order, inherited counts and content-preservation boundary. Final disposition: **approved with limitations** after complete source preservation, the client gate and all affected routes/maps at three widths. Pack/lesson versions, names, counts and current learner data remain unchanged. Earlier records below retain their dated topology and compatibility evidence.
+
+## Focused test separation — 2026-10-05
+
+Under REQ-G001-145, split the approved mixed Focused tests by number while preserving every question object and all lesson, optional-practice and Review files. The original lessons remain shared at the user’s explicit request. Pre-change disposition: **approved with limitations**; **final disposition: approved with limitations** after complete preservation, number-boundary, grading and rendered checks. The [shared separation assessment](number-focused-test-separation.md) records the complete inventory, number axes, inherited grammar evidence and validation. Current version: `2.1.0`, with 22 tests, 384 scored questions and unchanged shared lessons/optional practice. Earlier records below describe their dated topologies.
+
+## Content-preserving owner-pack merge — 2026-10-05
+
+Requirement: `REQ-G001-144`; validation: `VAL-G001-101`. Merge this pack's 1.4.0 owner sequence and `plural-ownership-possessive-endings` 1.1.0 into **Possessive pronouns and endings**, retaining `possessive-pronouns-endings` at version 2.0.0 and level `0 - A1.3`. Preserve all source lesson/test bytes: 16 lessons, 16 Focused tests, two Reviews, 384 scored and 48 optional questions. The [plural-owner record](plural-ownership-possessive-endings.md) and dated records below retain their original authoring evidence; the merged manifest preserves all source URLs.
+
+### Pre-merge pedagogy gate
+
+**Disposition: approved with limitations.** The topic coherently contains singular and plural owners, with object number remaining independent. Eight unchanged `ppe` Focused steps precede eight unchanged `pop` steps; both unchanged Reviews follow. Shared target labels remain shared and the important-skill union contains eight skills; each still has both owner-specific Focused coverage. Local preparation references, prerequisites, word inventories and ending rules remain unchanged. No question authoring or vocabulary redistribution occurs. The quantity is inherited exactly: 192 + 192 scored and 24 + 24 optional, without padding or removing deliberate overlap.
+
+Intentional limitation: shared third-person, object-number and `kenen` teaching is repeated in the two source groups. Retain that overlap, the two original owner-specific Reviews and their references under the user's explicit no-content-change direction. Duplicate-task checks remain scoped to each source owner group. No cross-owner Review is authored. Existing standard-written, regular-noun and written-only CEFR limitations remain.
+
+### Final merge audit
+
+**Disposition: approved with limitations.** All 34 owner lesson/test files match the pre-merge SHA-256 hashes exactly. Manifest comparison preserves the original lesson-version and test summaries, exercise orders, eight shared skill labels, source objectives, grammar bases and source URLs. All 138 files in the twelve unaffected packs also match their baseline. No authored teaching, example, vocabulary entry, answer, diagnostic or mastery pair was changed.
+
+The complete client gate passes with 354 unit and 22 integration tests, and the aggregate direct-source validator accepts all 14 packs. Runtime and source negative checks retain both owner-number grammar boundaries and reject changed references in each original Review. Unit grading accepts every alternative and checks every authored diagnostic across all 432 owner items; mutual mastery pairs and within-group duplicate/format-variety checks remain valid. Integration coverage verifies the intentional complete reset and atomic backup rejection for all three removed pack IDs under the unchanged storage policies.
+
+All 16 preparation lessons and 18 study routes render at 320, 768 and 1440 pixels with their original teaching, examples, warnings, prompts and feedback. The complete wide-browser audit records 448 unique entries: 16 rendered lessons plus all 48 optional and 384 scored questions. Every scored test reaches 100%; sentence explanations are checked against the authored parts. Learning-map screenshots were inspected. The second targeted browser run passes 22 cases, including the affected catalog, vocabulary, optional-practice keyboard and clearing workflows at all three widths. Its two intentional skips limit the complete question audit to the wide project.
+
+Keep the pre-merge limitations: shared third-person, object-number and kenen material deliberately remains repeated across the two source groups, and the two original Reviews remain owner-specific. The source linguistic evidence remains the dated authoring records; this organizational audit does not claim a fresh independent grammar review. No high-impact merge finding remains unresolved. See [G001 validation](../features/G001-local-finnish-exercise-book/validation.md) for the combined preservation and execution evidence.
+
+## Historical source-pack assessments
+
+The dated records below describe the singular-owner source before the 2026-10-05 merge. Their original counts and versions remain historical evidence; the current pack boundary and version are recorded above.
+
 ## Grammar vocabulary correction — 2026-10-04
 
 Under `REQ-G001-141`, removed 3 grammar-only vocabulary declarations from 3 lessons. The current lexical inventory is 11 introduced, 46 reused, and 8 supplied entries. Their grammatical meanings and all worked examples remain intact. Revised lesson patch versions and manifest summaries advance; pack versions and scored semantics remain unchanged, with only obsolete revised-lesson completion marks requiring renewal. Earlier inventories below describe their dated authoring stage. The [shared correction assessment](grammar-vocabulary-separation.md) records the scoped pedagogy gates, complete preservation comparison, and final validation evidence.

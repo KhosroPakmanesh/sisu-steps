@@ -2,28 +2,24 @@ import { expect, test } from '@playwright/test';
 
 const packs = [
   {
-    id: 'singular-demonstrative-pronouns',
-    title: 'Singular demonstrative pronouns',
-    tests: 6,
-    focused: 5,
-    exercises: 120,
-  },
-  {
-    id: 'plural-demonstrative-pronouns',
-    title: 'Plural demonstrative pronouns',
-    tests: 7,
-    focused: 6,
-    exercises: 144,
+    id: 'demonstrative-pronouns',
+    title: 'Demonstrative pronouns',
+    tests: 13,
+    focused: 11,
+    reviews: 2,
+    exercises: 280,
   },
   {
     id: 'negative-demonstrative-statements',
+    reviews: 1,
     title: 'Negative demonstrative statements',
-    tests: 4,
-    focused: 3,
+    tests: 5,
+    focused: 4,
     exercises: 88,
   },
   {
     id: 'demonstrative-questions',
+    reviews: 1,
     title: 'Demonstrative questions',
     tests: 7,
     focused: 6,
@@ -35,8 +31,8 @@ test('opens every demonstrative pack with its approved Focused and Review topolo
   page,
 }) => {
   await page.goto('/');
-  await expect(page.locator('.topic-card')).toHaveCount(16);
-  await expect(page.locator('.catalog-stats')).toContainText('2370');
+  await expect(page.locator('.topic-card')).toHaveCount(14);
+  await expect(page.locator('.catalog-stats')).toContainText('2386');
 
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);
@@ -46,7 +42,7 @@ test('opens every demonstrative pack with its approved Focused and Review topolo
     await expect(page.locator('.topic-overview')).toContainText(String(pack.exercises));
     await expect(page.locator('.test-card')).toHaveCount(pack.tests);
     await expect(page.locator('.test-card:not(.review-test)')).toHaveCount(pack.focused);
-    await expect(page.locator('.review-test')).toHaveCount(1);
+    await expect(page.locator('.review-test')).toHaveCount(pack.reviews);
     await expect(page.getByRole('heading', { name: 'Focused tests' })).toBeVisible();
     await expect(page.getByRole('heading', { name: 'Reviews' })).toBeVisible();
     await expect(
@@ -80,7 +76,7 @@ test('keeps the demonstrative catalog cards and longest learning map responsive'
 });
 
 test('shows concise prompts in scored study and optional practice', async ({ page }) => {
-  await page.goto('/study/singular-demonstrative-pronouns/sdp-singular-forms-test');
+  await page.goto('/study/demonstrative-pronouns/sdp-singular-forms-test');
   for (let index = 0; index < 2; index += 1) {
     await page.getByRole('button', { name: 'Show answer' }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
@@ -92,7 +88,7 @@ test('shows concise prompts in scored study and optional practice', async ({ pag
   );
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 
-  await page.goto('/learn/singular-demonstrative-pronouns/sdp-singular-forms-test');
+  await page.goto('/learn/demonstrative-pronouns/sdp-singular-forms-test');
   await page.getByRole('button', { name: 'Start optional practice' }).click();
   await expect(page.locator('.practice-card h4')).toHaveText(
     'Optional practice: Choose the sentence that means “That is a car.” Use auto (“a car”) and on (“is”). The listener already knows which one. Frame: “___ on auto.”',

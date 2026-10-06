@@ -32,7 +32,7 @@ test('rejects got constructions in scored and optional possession answers', asyn
   const pack = packs.find((item) => item.id === 'affirmative-possession')!;
   const lesson = pack.lessons.find((item) => item.id === 'aps-sentences')!;
   const index = lesson.practiceExercises.findIndex((item) => item.type === 'translation-en');
-  await page.goto('/learn/affirmative-possession/aps-sentences-test');
+  await page.goto('/learn/affirmative-possession/aps-sentences-singular-test');
   await page.getByRole('button', { name: 'Start optional practice' }).click();
   for (let prior = 0; prior < index; prior += 1) {
     await page.getByRole('button', { name: 'Show answer', exact: true }).click();
@@ -51,7 +51,7 @@ test('accepts he, she, and the combined answer for the reported pillow question'
   page,
 }, testInfo) => {
   const pack = packs.find((item) => item.id === 'affirmative-possession')!;
-  const authoredTest = pack.tests.find((item) => item.id === 'aps-possessors-test')!;
+  const authoredTest = pack.tests.find((item) => item.id === 'aps-possessors-singular-test')!;
   const index = authoredTest.exercises.findIndex((item) => item.id === 'aps-possessors-test-e015');
   for (const answer of ['He has a pillow.', 'She has a pillow.', 'He or she has a pillow.']) {
     await positionSession(page, pack.id, authoredTest.id, index);
@@ -109,8 +109,8 @@ test('audits every applicable scored and optional English pronoun and possession
       }
     }
   }
-  expect(new Set(audit.map((item) => item.id)).size).toBe(81);
-  expect(audit).toHaveLength(159);
+  expect(new Set(audit.map((item) => item.id)).size).toBe(82);
+  expect(audit).toHaveLength(162);
   await writeFile(
     testInfo.outputPath('pronoun-rendered-audit.json'),
     JSON.stringify(audit, null, 2),

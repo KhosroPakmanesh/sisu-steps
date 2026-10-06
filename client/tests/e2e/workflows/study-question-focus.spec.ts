@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test('focuses the first answer control after every question change', async ({ page }) => {
-  await page.goto('/study/singular-demonstrative-pronouns/sdp-independent-use-test');
+  await page.goto('/study/demonstrative-pronouns/sdp-independent-use-test');
 
   const questionCount = page.locator('.question-count');
   await expect(questionCount).toContainText('1 / 16');

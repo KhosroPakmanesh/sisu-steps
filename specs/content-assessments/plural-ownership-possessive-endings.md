@@ -1,5 +1,7 @@
 # Plural owners and possessive endings — pedagogy assessment
 
+Historical source-pack assessment. On 2026-10-05 this pack was merged without changing any lesson or question content. The current topology and merge assessment are recorded in [possessive-pronouns-endings](possessive-pronouns-endings.md). The dated authoring evidence below remains unchanged.
+
 Pack: `plural-ownership-possessive-endings`, version `1.0.0`, level `0 - A1.3`. Contract: `REQ-G001-142` / `VAL-G001-099`. The current boundary is the user's explicit **owner-number split**, with eight Focused units and a final mixed Review. The earlier two-unit and possessed-object-number designs below are dated decisions superseded by the owner-number amendment.
 
 ## Sources

@@ -688,7 +688,7 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.goto('/');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
-  await expect(page.locator('.topic-card')).toHaveCount(16);
+  await expect(page.locator('.topic-card')).toHaveCount(14);
   await expect(page.locator('.test-card')).toHaveCount(0);
   await vowelHarmonyTopicLink(page).click();
 
@@ -1061,7 +1061,7 @@ test('shares responsive modal and vocabulary-card styling with safe dismissal', 
 });
 
 test('shows the declared key vocabulary in the plural reference question', async ({ page }) => {
-  await page.goto('/study/plural-demonstrative-pronouns/pdp-reference-choice-test');
+  await page.goto('/study/demonstrative-pronouns/pdp-reference-choice-test');
   for (let question = 1; question < 6; question += 1) {
     await page.getByRole('button', { name: 'Show answer' }).click();
     await page.getByRole('button', { name: 'Continue' }).click();
@@ -1247,7 +1247,7 @@ test('moves through optional word-order practice with arrows and Enter', async (
 });
 
 test('uses the Study Enter flow throughout optional lesson practice', async ({ page }) => {
-  await page.goto('/learn/singular-demonstrative-pronouns/sdp-singular-forms-test');
+  await page.goto('/learn/demonstrative-pronouns/sdp-singular-forms-test');
   await page.getByRole('button', { name: 'Start optional practice' }).click();
   const practicePrompt = page.locator('.practice-card h4');
   await expect(practicePrompt).toBeInViewport({ ratio: 0.8 });
@@ -1866,7 +1866,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(16);
+  await expect(page.locator('.topic-card')).toHaveCount(14);
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation).toContainText('Notebook');
   await expect(primaryNavigation).toContainText('Stats');
@@ -2037,7 +2037,7 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     'application/json,.json',
   );
   await expect(page.getByRole('heading', { name: 'Progress by topic' })).toBeVisible();
-  await expect(page.locator('.stats-topic-card')).toHaveCount(16);
+  await expect(page.locator('.stats-topic-card')).toHaveCount(14);
   await expect(page.locator('.backup-archive .clear-all-action-row')).toBeVisible();
   await expect(page.locator('.clear-all-slip')).toHaveCount(0);
   await expect(page.locator('.settings-card')).toHaveCount(0);

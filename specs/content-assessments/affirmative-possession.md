@@ -1,5 +1,9 @@
 # Affirmative possession — pedagogy assessment
 
+## Focused test separation — 2026-10-05
+
+Under REQ-G001-145, split the approved mixed Focused tests by number while preserving every question object and all lesson, optional-practice and Review files. The original lessons remain shared at the user’s explicit request. Pre-change disposition: **approved with limitations**; **final disposition: approved with limitations** after complete preservation, number-boundary, grading and rendered checks. The [shared separation assessment](number-focused-test-separation.md) records the complete inventory, number axes, inherited grammar evidence and validation. Current version: `1.4.0`, with 7 tests, 96 scored questions and unchanged shared lessons/optional practice. Earlier records below describe their dated topologies.
+
 ## Grammar vocabulary correction — 2026-10-04
 
 Under `REQ-G001-141`, removed 3 grammar-only vocabulary declarations from 3 lessons. The current lexical inventory is 8 introduced, 16 reused, and 0 supplied entries. Their grammatical meanings and all worked examples remain intact. Revised lesson patch versions and manifest summaries advance; pack versions and scored semantics remain unchanged, with only obsolete revised-lesson completion marks requiring renewal. Earlier inventories below describe their dated authoring stage. The [shared correction assessment](grammar-vocabulary-separation.md) records the scoped pedagogy gates, complete preservation comparison, and final validation evidence.

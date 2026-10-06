@@ -18,8 +18,8 @@ describe('beginner ownership and possession content', () => {
     packs = ids.map((id) => source.packs.find((pack) => pack['id'] === id) as unknown as TopicPack);
   });
 
-  it('loads all six packs through runtime and direct-source boundaries', async () => {
-    expect(packs).toHaveLength(6);
+  it('loads all five packs through runtime and direct-source boundaries', async () => {
+    expect(packs).toHaveLength(5);
     for (const pack of packs) {
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);
@@ -169,9 +169,9 @@ describe('beginner ownership and possession content', () => {
     expect(gradeAnswer(identity, 'This is his game.').correct).toBe(true);
     expect(gradeAnswer(identity, 'This is her game.').correct).toBe(true);
     expect(gradeAnswer(identity, 'Ther is her game.').correct).toBe(false);
-    const neutral = packs[4].tests[3].exercises.find((item) =>
-      item.acceptedAnswers.includes('pelinsä'),
-    )!;
+    const neutral = packs[4].tests
+      .find((item) => item.id === 'ppe-harmony-test')!
+      .exercises.find((item) => item.acceptedAnswers.includes('pelinsä'))!;
     expect(gradeAnswer(neutral, 'pelinsä').correct).toBe(true);
     expect(gradeAnswer(neutral, 'pelinsa').correct).toBe(false);
   });
@@ -179,14 +179,12 @@ describe('beginner ownership and possession content', () => {
   it('keeps the restored construction steps Focused before the cumulative Review', () => {
     for (const pack of packs.slice(0, 4)) {
       expect(pack.tests.map((item) => item.stage)).toEqual([
-        'focused',
-        'focused',
-        'focused',
+        ...Array<string>(6).fill('focused'),
         'review',
       ]);
       expect(pack.lessons.every((lesson) => lesson.stage === 'focused')).toBe(true);
-      const taught = new Set(pack.tests.slice(0, 3).flatMap((item) => item.targetSkills));
-      for (const review of pack.tests.slice(3)) {
+      const taught = new Set(pack.tests.slice(0, 6).flatMap((item) => item.targetSkills));
+      for (const review of pack.tests.slice(6)) {
         expect(review.targetSkills.every((skill) => taught.has(skill))).toBe(true);
       }
       const changed = structuredClone(pack);

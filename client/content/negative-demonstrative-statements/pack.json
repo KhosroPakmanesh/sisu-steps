@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "negative-demonstrative-statements",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "title": "Negative demonstrative statements",
   "level": "0 - A1.3",
   "summary": "Standard Finnish singular and plural negative olla statements with demonstrative subjects.",
@@ -34,7 +34,8 @@
   "testIds": [
     "nds-singular-negative-test",
     "nds-plural-negative-test",
-    "nds-negative-transformation-test",
+    "nds-negative-transformation-singular-test",
+    "nds-negative-transformation-plural-test",
     "nds-review"
   ],
   "lessonSummaries": [
@@ -113,30 +114,38 @@
       ]
     },
     {
-      "id": "nds-negative-transformation-test",
-      "title": "Changing demonstrative statements into negatives",
+      "id": "nds-negative-transformation-singular-test",
+      "title": "Singular statements into negatives",
       "stage": "focused",
       "lessonIds": ["nds-negative-transformation"],
       "exerciseIds": [
-        "nds-negative-transformation-test-e001",
-        "nds-negative-transformation-test-e002",
-        "nds-negative-transformation-test-e003",
-        "nds-negative-transformation-test-e004",
         "nds-negative-transformation-test-e005",
-        "nds-negative-transformation-test-e006",
+        "nds-negative-transformation-test-e001",
+        "nds-negative-transformation-test-e003",
         "nds-negative-transformation-test-e007",
-        "nds-negative-transformation-test-e008",
         "nds-negative-transformation-test-e009",
-        "nds-negative-transformation-test-e010",
         "nds-negative-transformation-test-e011",
-        "nds-negative-transformation-test-e012",
         "nds-negative-transformation-test-e013",
-        "nds-negative-transformation-test-e014",
         "nds-negative-transformation-test-e015",
-        "nds-negative-transformation-test-e016",
         "nds-negative-transformation-test-e017",
+        "nds-negative-transformation-test-e019"
+      ]
+    },
+    {
+      "id": "nds-negative-transformation-plural-test",
+      "title": "Plural statements into negatives",
+      "stage": "focused",
+      "lessonIds": ["nds-negative-transformation"],
+      "exerciseIds": [
+        "nds-negative-transformation-test-e006",
+        "nds-negative-transformation-test-e002",
+        "nds-negative-transformation-test-e004",
+        "nds-negative-transformation-test-e008",
+        "nds-negative-transformation-test-e010",
+        "nds-negative-transformation-test-e012",
+        "nds-negative-transformation-test-e014",
+        "nds-negative-transformation-test-e016",
         "nds-negative-transformation-test-e018",
-        "nds-negative-transformation-test-e019",
         "nds-negative-transformation-test-e020"
       ]
     },
