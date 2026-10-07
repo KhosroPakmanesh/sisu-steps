@@ -10,6 +10,64 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
+      "prompt": "Repair “Heillä ovat peli.” to mean “They have a game.” Use heillä (\"they as owner\") and peli (\"game\").",
+      "acceptedAnswers": ["Heillä on peli."],
+      "explanation": "The possessor does not conjugate the verb: every owner uses fixed on.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "options": ["Heillä ovat peli.", "Heillä ei ole peliä.", "Heillä on peli."],
+      "optionFeedback": {
+        "Heillä on peli.": "The possessor does not conjugate the verb: every owner uses fixed on.",
+        "Heillä ovat peli.": "This repeats the supplied error. The possessor does not conjugate the verb: every owner uses fixed on.",
+        "Heillä ei ole peliä.": "This changes possession to its opposite."
+      },
+      "sentenceExplanation": {
+        "translation": "They have a game.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "peli.",
+            "meaning": "a game",
+            "role": "thing possessed",
+            "baseForm": "peli",
+            "formation": "peli stays in its basic singular form: one game."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Heillä ovat peli."],
+          "category": "Affirmative possession sentences: predictable form error",
+          "explanation": "The possessor does not conjugate the verb: every owner uses fixed on."
+        }
+      ],
+      "id": "aps-sentences-plural-test-e101",
+      "parallelExerciseId": "aps-sentences-plural-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
       "prompt": "Repair “Heillä ovat tyyny.” to mean “They have a pillow.” Use heillä (\"they as owner\") and tyyny (\"pillow\").",
       "acceptedAnswers": ["Heillä on tyyny."],
       "explanation": "The possessor does not conjugate the verb: every owner uses fixed on.",
@@ -68,6 +126,52 @@
     {
       "type": "word-order",
       "instruction": "Put the words in order.",
+      "prompt": "Build “They have a car.” Start with the owner. Use heillä (“they as the owner”) and auto (“a car”).",
+      "acceptedAnswers": ["Heillä on auto."],
+      "explanation": "Follow the pattern: possessor + fixed on + one thing in its basic singular form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "tokens": ["on", "auto.", "Heillä"],
+      "sentenceExplanation": {
+        "translation": "They have a car.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "auto.",
+            "meaning": "a car",
+            "role": "thing possessed",
+            "baseForm": "auto",
+            "formation": "auto stays in its basic singular form: one car."
+          }
+        ]
+      },
+      "id": "aps-sentences-plural-test-e103",
+      "parallelExerciseId": "aps-sentences-plural-test-e104"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
       "prompt": "Build “They have a book.” Start with the owner. Use heillä (“they as the owner”) and kirja (“a book”).",
       "acceptedAnswers": ["Heillä on kirja."],
       "explanation": "Follow the pattern: possessor + fixed on + one thing in its basic singular form.",
@@ -110,6 +214,64 @@
       },
       "id": "aps-sentences-test-e006",
       "parallelExerciseId": "aps-sentences-test-e005"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Repair “Teillä olette tyyny.” to mean “You have a pillow.” Use teillä (\"you as owner\") and tyyny (\"pillow\"). Address a group.",
+      "acceptedAnswers": ["Teillä on tyyny."],
+      "explanation": "The possessor does not conjugate the verb: every owner uses fixed on.",
+      "tags": ["standard-written-finnish", "sentence", "person-te"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "options": ["Teillä ei ole tyynyä.", "Teillä on tyyny.", "Teillä olette tyyny."],
+      "optionFeedback": {
+        "Teillä on tyyny.": "The possessor does not conjugate the verb: every owner uses fixed on.",
+        "Teillä olette tyyny.": "This repeats the supplied error. The possessor does not conjugate the verb: every owner uses fixed on.",
+        "Teillä ei ole tyynyä.": "This changes possession to its opposite."
+      },
+      "sentenceExplanation": {
+        "translation": "You have a pillow.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Teillä",
+            "meaning": "you as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "te",
+            "formation": "te has the learned possession form teillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "tyyny.",
+            "meaning": "a pillow",
+            "role": "thing possessed",
+            "baseForm": "tyyny",
+            "formation": "tyyny stays in its basic singular form: one pillow."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Teillä olette tyyny."],
+          "category": "Affirmative possession sentences: predictable form error",
+          "explanation": "The possessor does not conjugate the verb: every owner uses fixed on."
+        }
+      ],
+      "id": "aps-sentences-plural-test-e102",
+      "parallelExerciseId": "aps-sentences-plural-test-e101"
     },
     {
       "type": "word-order",
@@ -201,6 +363,52 @@
       },
       "id": "aps-sentences-test-e016",
       "parallelExerciseId": "aps-sentences-test-e015"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “We have a cat.” Start with the owner. Use meillä (“we as the owner”) and kissa (“a cat”).",
+      "acceptedAnswers": ["Meillä on kissa."],
+      "explanation": "Follow the pattern: possessor + fixed on + one thing in its basic singular form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "tokens": ["on", "kissa.", "Meillä"],
+      "sentenceExplanation": {
+        "translation": "We have a cat.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Meillä",
+            "meaning": "we as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "me",
+            "formation": "me has the learned possession form meillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "kissa.",
+            "meaning": "a cat",
+            "role": "thing possessed",
+            "baseForm": "kissa",
+            "formation": "kissa stays in its basic singular form: one cat."
+          }
+        ]
+      },
+      "id": "aps-sentences-plural-test-e104",
+      "parallelExerciseId": "aps-sentences-plural-test-e103"
     },
     {
       "type": "translation-en",
@@ -308,6 +516,51 @@
     {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
+      "prompt": "Write the full sentence: “We have a ball.” Use meillä (\"we as owner\") and pallo (\"ball\"). Start with the owner.",
+      "acceptedAnswers": ["Meillä on pallo."],
+      "explanation": "Use possessor + fixed on + one thing in its basic singular form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "We have a ball.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Meillä",
+            "meaning": "we as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "me",
+            "formation": "me has the learned possession form meillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "pallo.",
+            "meaning": "a ball",
+            "role": "thing possessed",
+            "baseForm": "pallo",
+            "formation": "pallo stays in its basic singular form: one ball."
+          }
+        ]
+      },
+      "id": "aps-sentences-plural-test-e105",
+      "parallelExerciseId": "aps-sentences-plural-test-e106"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
       "prompt": "Write the full sentence: “They have a dog.” Use heillä (\"they as owner\") and koira (\"dog\"). Start with the owner.",
       "acceptedAnswers": ["Heillä on koira."],
       "explanation": "Use possessor + fixed on + one thing in its basic singular form.",
@@ -349,6 +602,51 @@
       },
       "id": "aps-sentences-test-e018",
       "parallelExerciseId": "aps-sentences-test-e017"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Teillä on auto.” into English. Address a group.",
+      "acceptedAnswers": ["You have a car.", "You have the car."],
+      "explanation": "The -lla/-llä phrase identifies the owner; on stays fixed in this possession pattern. ",
+      "tags": ["standard-written-finnish", "sentence", "english-answer", "person-te"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": ["auto"],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "You have a car.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Teillä",
+            "meaning": "you as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "te",
+            "formation": "te has the learned possession form teillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "auto.",
+            "meaning": "a car",
+            "role": "thing possessed",
+            "baseForm": "auto",
+            "formation": "auto stays in its basic singular form: one car."
+          }
+        ]
+      },
+      "id": "aps-sentences-plural-test-e107",
+      "parallelExerciseId": "aps-sentences-plural-test-e108"
     },
     {
       "type": "translation-en",
@@ -454,6 +752,51 @@
       "parallelExerciseId": "aps-sentences-test-e021"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write the full sentence: “They have a pillow.” Use heillä (\"they as owner\") and tyyny (\"pillow\"). Start with the owner.",
+      "acceptedAnswers": ["Heillä on tyyny."],
+      "explanation": "Use possessor + fixed on + one thing in its basic singular form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": [],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "They have a pillow.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "tyyny.",
+            "meaning": "a pillow",
+            "role": "thing possessed",
+            "baseForm": "tyyny",
+            "formation": "tyyny stays in its basic singular form: one pillow."
+          }
+        ]
+      },
+      "id": "aps-sentences-plural-test-e106",
+      "parallelExerciseId": "aps-sentences-plural-test-e105"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write in English.",
       "prompt": "Translate “Meillä on pallo.” into English.",
@@ -497,6 +840,51 @@
       },
       "id": "aps-sentences-test-e010",
       "parallelExerciseId": "aps-sentences-test-e009"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Meillä on kirja.” into English.",
+      "acceptedAnswers": ["We have a book.", "We have the book."],
+      "explanation": "The -lla/-llä phrase identifies the owner; on stays fixed in this possession pattern. ",
+      "tags": ["standard-written-finnish", "sentence", "english-answer"],
+      "requiredSkills": [
+        "Personal possessor forms",
+        "Fixed on in possession",
+        "Affirmative possession sentences"
+      ],
+      "vocabulary": ["kirja"],
+      "targetSkill": "Affirmative possession sentences",
+      "misconceptionCategory": "Affirmative possession sentences: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "We have a book.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Meillä",
+            "meaning": "we as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "me",
+            "formation": "me has the learned possession form meillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "kirja.",
+            "meaning": "a book",
+            "role": "thing possessed",
+            "baseForm": "kirja",
+            "formation": "kirja stays in its basic singular form: one book."
+          }
+        ]
+      },
+      "id": "aps-sentences-plural-test-e108",
+      "parallelExerciseId": "aps-sentences-plural-test-e107"
     },
     {
       "type": "word-order",

@@ -10,6 +10,53 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
+      "prompt": "Complete “You are there in the evening.” Te ____ siellä illalla. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["olette"],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "options": ["olette", "ovat", "olemme"],
+      "optionFeedback": {
+        "olemme": "“olemme” does not fit this subject or construction. Te takes olette, the matching present-tense form of olla.",
+        "olette": "Correct. Te takes olette, the matching present-tense form of olla.",
+        "ovat": "“ovat” does not fit this subject or construction. Te takes olette, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "You are there in the evening.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "siellä illalla",
+            "meaning": "there in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä illalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e101",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
       "prompt": "Build the form from the subject. Complete “You are at home in the evening.” Te ____ kotona illalla. Address one person politely with te; use the same plural agreement.",
       "acceptedAnswers": ["olette"],
       "explanation": "Te takes olette, the matching present-tense form of olla.",
@@ -53,6 +100,54 @@
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t06-e06",
       "parallelExerciseId": "ppo-t06-e18"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Write “We are still present.” Use the explicit subject me.",
+      "acceptedAnswers": ["Me olemme paikalla vielä.", "Me olemme vielä paikalla."],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["paikalla", "vielä"],
+      "sentenceExplanation": {
+        "translation": "We are still present.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "paikalla vielä",
+            "meaning": "still present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla vielä",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Me ollaan paikalla vielä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Me olemme paikalla vielä.”"
+        }
+      ],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e103",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e104"
     },
     {
       "type": "translation-fi",
@@ -152,6 +247,53 @@
       "parallelExerciseId": "ppo-t06-e21"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Complete “They are on time in the evening.” He ____ ajoissa illalla.",
+      "acceptedAnswers": ["ovat"],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "options": ["ovat", "olemme", "olette"],
+      "optionFeedback": {
+        "olemme": "“olemme” does not fit this subject or construction. He takes ovat, the matching present-tense form of olla.",
+        "olette": "“olette” does not fit this subject or construction. He takes ovat, the matching present-tense form of olla.",
+        "ovat": "Correct. He takes ovat, the matching present-tense form of olla."
+      },
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "They are on time in the evening.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "ajoissa illalla",
+            "meaning": "on time in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa illalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e102",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e101"
+    },
+    {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
       "prompt": "Build the form from the subject. Complete “You are present today.” Te ____ paikalla tänään. Address one person politely with te; use the same plural agreement.",
@@ -198,6 +340,47 @@
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t06-e12",
       "parallelExerciseId": "ppo-t06-e24"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence in Finnish.",
+      "prompt": "Write “They are on time in the morning.” Use the explicit subject he.",
+      "acceptedAnswers": ["He ovat ajoissa aamulla.", "He ovat aamulla ajoissa."],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": ["ajoissa", "aamulla"],
+      "sentenceExplanation": {
+        "translation": "They are on time in the morning.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "ajoissa aamulla",
+            "meaning": "on time in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa aamulla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e104",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e103"
     },
     {
       "type": "multiple-choice",
@@ -289,6 +472,55 @@
       "parallelExerciseId": "ppo-t06-e09"
     },
     {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “You are still there.” Address more than one person with te.",
+      "acceptedAnswers": ["Te olette siellä vielä."],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tokens": ["siellä vielä.", "Te", "olette"],
+      "tags": ["sentence", "te-plural", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "You are still there.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "siellä vielä",
+            "meaning": "still there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä vielä",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "answerDiagnostics": [
+        {
+          "answers": ["Te ootte siellä vielä."],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “Te olette siellä vielä.” there."
+        }
+      ],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e105",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e106"
+    },
+    {
       "type": "fill-blank",
       "instruction": "Fill in the blank.",
       "prompt": "Build the form from the subject. Complete “They are present today.” He ____ paikalla tänään.",
@@ -328,6 +560,54 @@
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t06-e24",
       "parallelExerciseId": "ppo-t06-e12"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “You are there today.” Te ____ siellä tänään. Address one person politely with te; use the same plural agreement.",
+      "acceptedAnswers": ["olette"],
+      "explanation": "Te takes olette, the matching present-tense form of olla.",
+      "tags": ["sentence", "te-polite", "person-te", "affirmative", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "You are there today.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "siellä tänään",
+            "meaning": "there today",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä tänään",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ootte"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olette” here."
+        }
+      ],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e107",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e108"
     },
     {
       "type": "translation-fi",
@@ -425,6 +705,48 @@
       "parallelExerciseId": "ppo-t06-e06"
     },
     {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “They are still present.”",
+      "acceptedAnswers": ["He ovat paikalla vielä."],
+      "explanation": "He takes ovat, the matching present-tense form of olla.",
+      "tokens": ["paikalla vielä.", "He", "ovat"],
+      "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "They are still present.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "paikalla vielä",
+            "meaning": "still present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla vielä",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e106",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e105"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Notice who the sentence is about. Translate “Me olemme kotona illalla.” into English.",
@@ -464,6 +786,54 @@
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t06-e17",
       "parallelExerciseId": "ppo-t06-e05"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Complete “We are on time in the morning.” Me ____ ajoissa aamulla.",
+      "acceptedAnswers": ["olemme"],
+      "explanation": "Me takes olemme, the matching present-tense form of olla.",
+      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "We are on time in the morning.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "ajoissa aamulla",
+            "meaning": "on time in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "ajoissa aamulla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative pronoun–verb agreement"],
+      "answerDiagnostics": [
+        {
+          "answers": ["ollaan"],
+          "category": "Spoken form",
+          "explanation": "That is a spoken form. Use “olemme” here."
+        }
+      ],
+      "targetSkill": "Affirmative pronoun–verb agreement",
+      "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
+      "id": "ppo-affirmative-agreement-plural-test-e108",
+      "parallelExerciseId": "ppo-affirmative-agreement-plural-test-e107"
     },
     {
       "type": "translation-fi",

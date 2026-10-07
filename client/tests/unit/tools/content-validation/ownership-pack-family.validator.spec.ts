@@ -24,7 +24,9 @@ describe('beginner ownership and possession content', () => {
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);
     }
-    expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(768);
+    expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(
+      1040,
+    );
   });
 
   it('rejects conjugating the possession verb to agree with plural owners', () => {

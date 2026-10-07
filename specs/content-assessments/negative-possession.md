@@ -1,5 +1,7 @@
 # Negative possession — pedagogy assessment
 
+2026-10-06 extension: [Focused test minimum assessment](focused-test-minimum.md) governs the question additions under REQ-G001-148; existing lessons, practice and Reviews remain unchanged. Earlier evidence below describes its stated baseline.
+
 ## Focused test separation — 2026-10-05
 
 Under REQ-G001-145, split the approved mixed Focused tests by number while preserving every question object and all lesson, optional-practice and Review files. The original lessons remain shared at the user’s explicit request. Pre-change disposition: **approved with limitations**; **final disposition: approved with limitations** after complete preservation, number-boundary, grading and rendered checks. The [shared separation assessment](number-focused-test-separation.md) records the complete inventory, number axes, inherited grammar evidence and validation. Current version: `1.4.0`, with 7 tests, 96 scored questions and unchanged shared lessons/optional practice. Earlier records below describe their dated topologies.

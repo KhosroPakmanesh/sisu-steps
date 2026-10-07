@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Revise selected added questions: require the whose-question word in eight blanks, contrast singular person reference with grammatical choices, state the negative-verb-plus-ole reply requirement, and correct tense, ownership and group-address feedback. Keep counts, IDs, authored order, original questions and lesson content intact. These revisions use the pending expansion versions and their already documented scoped progress reset.
+
+- Require at least 20 meaningful scored questions in each Focused test, including each number variant sharing a lesson. Add 372 questions across 44 tests in nine packs using their existing formats, retaining lessons, Reviews and all existing questions. The nine changed pack versions deliberately reset their incompatible progress under existing alignment; still-owned notes and compatible progress in the other five packs remain. Changed-version backups retain the existing confirmation and scoped-discard flow.
+
 ### Existing-format demonstrative practice
 
 - Added four scored questions to each of the two independent-demonstrative and two standard person-reference tests. Each now has 20 questions, with four of each existing response format; no new grammar, vocabulary or activity style is introduced. All existing questions, lessons, optional practice, Reviews and other packs are preserved. Demonstrative pronouns now has 280 scored and 44 optional questions; the catalog has 2,386 scored and 290 optional questions.

@@ -16,6 +16,9 @@ export function validateTests(
   for (const candidate of tests) {
     const test = validateTestShape(candidate, context.lessonIds);
     validateStage(candidate as Record<string, unknown>, `Test ${test.id}`);
+    if (test.stage === 'focused' && test.exercises.length < 20) {
+      throw new Error(`Focused test ${test.id} must contain at least 20 scored questions.`);
+    }
     if (test.stage === 'review') context.reviewsStarted = true;
     else if (context.reviewsStarted) {
       throw new Error('A focused test cannot appear after the review group has started.');

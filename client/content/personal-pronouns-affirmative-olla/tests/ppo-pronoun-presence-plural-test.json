@@ -10,6 +10,52 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the sentence requested.",
+      "prompt": "Which shorter sentence still means “You are there”? Address more than one person; omit te.",
+      "acceptedAnswers": ["Olette siellä."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "options": ["Te olette siellä.", "siellä.", "Olette siellä."],
+      "optionFeedback": {
+        "Olette siellä.": "Correct. Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+        "Te olette siellä.": "“Te olette siellä.” does not fit this subject or construction. Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+        "siellä.": "“siellä.” does not fit this subject or construction. Te can be omitted here because the ending in olette already identifies the subject in Finnish."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "You are there.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e101",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
       "prompt": "Build the form from the subject. Which shorter sentence still means “You are at home”? Address more than one person; omit te.",
       "acceptedAnswers": ["Olette kotona."],
       "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
@@ -52,6 +98,46 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e06",
       "parallelExerciseId": "ppo-t07-e18"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “We are present.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olemme paikalla."],
+      "explanation": "Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "We are present.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e103",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e104"
     },
     {
       "type": "translation-fi",
@@ -135,6 +221,52 @@
       "parallelExerciseId": "ppo-t07-e21"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "Which shorter sentence still means “We are present”?",
+      "acceptedAnswers": ["Olemme paikalla."],
+      "explanation": "Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+      "options": ["paikalla.", "Olemme paikalla.", "Me olemme paikalla."],
+      "optionFeedback": {
+        "Olemme paikalla.": "Correct. Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+        "Me olemme paikalla.": "“Me olemme paikalla.” does not fit this subject or construction. Me can be omitted here because the ending in olemme already identifies the subject in Finnish.",
+        "paikalla.": "“paikalla.” does not fit this subject or construction. Me can be omitted here because the ending in olemme already identifies the subject in Finnish."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-me",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "We are present.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olemme",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "me takes the present-tense form olemme"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e102",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e101"
+    },
+    {
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
       "prompt": "Build the form from the subject. Write “You are at work.” Address more than one person; omit the optional subject pronoun te.",
@@ -173,6 +305,46 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e12",
       "parallelExerciseId": "ppo-t07-e24"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “You are present.” Address more than one person; omit the optional subject pronoun te.",
+      "acceptedAnswers": ["Olette paikalla."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "You are present.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e104",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e103"
     },
     {
       "type": "multiple-choice",
@@ -269,6 +441,47 @@
       "parallelExerciseId": "ppo-t07-e09"
     },
     {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “You are there.” Address more than one person; omit the optional subject pronoun te.",
+      "acceptedAnswers": ["Olette siellä."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "tokens": ["siellä.", "Olette"],
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "You are there.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e105",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e106"
+    },
+    {
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
       "prompt": "Build the form from the subject. Write “They are at work.” with the third-person subject stated explicitly.",
@@ -314,6 +527,46 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e24",
       "parallelExerciseId": "ppo-t07-e12"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “You are there.” Address more than one person; omit the optional subject pronoun te.",
+      "acceptedAnswers": ["Olette siellä."],
+      "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-te",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä"],
+      "sentenceExplanation": {
+        "translation": "You are there.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olette",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "te takes the present-tense form olette"
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e107",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e108"
     },
     {
       "type": "translation-fi",
@@ -409,6 +662,54 @@
       "parallelExerciseId": "ppo-t07-e06"
     },
     {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “They are present.” and keep the third-person subject explicit.",
+      "acceptedAnswers": ["He ovat paikalla."],
+      "explanation": "He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tokens": ["paikalla.", "He", "ovat"],
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-he",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "They are present.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e106",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e105"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Notice who the sentence is about. Translate “Olemme kotona.” into English and recover the subject from the form.",
@@ -447,6 +748,53 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e17",
       "parallelExerciseId": "ppo-t07-e05"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “They are present.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["He ovat paikalla."],
+      "explanation": "He remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-he",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla"],
+      "sentenceExplanation": {
+        "translation": "They are present.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ovat",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "he takes the present-tense form ovat"
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-plural-test-e108",
+      "parallelExerciseId": "ppo-pronoun-presence-plural-test-e107"
     },
     {
       "type": "translation-fi",

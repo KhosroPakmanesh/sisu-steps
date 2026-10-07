@@ -86,7 +86,7 @@ const PACKS = {
       'nds-negative-transformation-singular-test',
       'nds-negative-transformation-plural-test',
     ],
-    testCounts: [20, 24, 10, 10, 24],
+    testCounts: [20, 24, 20, 20, 24],
     reviewId: 'nds-review',
     validateBoundary: validateNegativeBoundary,
   },

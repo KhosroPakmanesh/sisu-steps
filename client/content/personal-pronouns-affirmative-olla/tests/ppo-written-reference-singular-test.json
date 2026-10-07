@@ -10,6 +10,162 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
+      "prompt": "Choose “You are here.” in Finnish. Address one person informally. Use täällä (“here”).",
+      "acceptedAnswers": ["Sinä olet täällä."],
+      "explanation": "Sinä refers to one person being addressed informally: “you”.",
+      "tags": ["standard-written-finnish", "person-sina", "sentence"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "options": ["Minä olen täällä.", "Sinä olet täällä.", "Hän on täällä."],
+      "optionFeedback": {
+        "Minä olen täällä.": "Minä refers to the speaker: “I”. The requested meaning refers to the person being addressed.",
+        "Sinä olet täällä.": "Sinä refers to one person being addressed informally: “you”.",
+        "Hän on täällä.": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”. The requested meaning refers to the person being addressed."
+      },
+      "sentenceExplanation": {
+        "translation": "You are here.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described",
+            "baseForm": "sinä",
+            "formation": "Sinä refers to one person being addressed informally: “you”."
+          },
+          {
+            "finnish": "olet",
+            "meaning": "are",
+            "role": "linking verb supplied in the choices",
+            "baseForm": "olla",
+            "formation": "The choices supply complete verb forms; choose the sentence referring to the requested person."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "supplied location or state",
+            "baseForm": "täällä",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän on täällä."],
+          "category": "Person reference",
+          "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”. Sinä refers to one person being addressed informally: “you”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e101",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose “I am at school.” in Finnish. Use koulussa (“at school”).",
+      "acceptedAnswers": ["Minä olen koulussa."],
+      "explanation": "Minä refers to the speaker: “I”.",
+      "tags": ["standard-written-finnish", "person-mina", "sentence"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "options": ["Minä olen koulussa.", "Sinä olet koulussa.", "Hän on koulussa."],
+      "optionFeedback": {
+        "Minä olen koulussa.": "Minä refers to the speaker: “I”.",
+        "Sinä olet koulussa.": "Sinä refers to one person being addressed informally: “you”. The requested meaning refers to the speaker.",
+        "Hän on koulussa.": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”. The requested meaning refers to the speaker."
+      },
+      "sentenceExplanation": {
+        "translation": "I am at school.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described",
+            "baseForm": "minä",
+            "formation": "Minä refers to the speaker: “I”."
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "linking verb supplied in the choices",
+            "baseForm": "olla",
+            "formation": "The choices supply complete verb forms; choose the sentence referring to the requested person."
+          },
+          {
+            "finnish": "koulussa",
+            "meaning": "at school",
+            "role": "supplied location or state",
+            "baseForm": "koulussa",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän on koulussa."],
+          "category": "Person reference",
+          "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”. Minä refers to the speaker: “I”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e103",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e104"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the pronoun.",
+      "prompt": "Complete “He or she is there.”: ___ on siellä. Refer to one person without stating gender. Use on siellä (“is there”).",
+      "acceptedAnswers": ["hän"],
+      "explanation": "Hän refers to one person without marking gender. Use the same pronoun for “he”, “she” and “he or she”.",
+      "tags": ["standard-written-finnish", "person-han", "sentence", "gender-neutral-reference"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "He or she is there.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described",
+            "baseForm": "hän",
+            "formation": "Hän refers to one person without marking gender. Use the same pronoun for “he”, “she” and “he or she”."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "siellä",
+            "meaning": "there",
+            "role": "supplied location or state",
+            "baseForm": "siellä",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["he"],
+          "category": "Person reference",
+          "explanation": "Hän refers to one person without marking gender. Use the same pronoun for “he”, “she” and “he or she”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e105",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e106"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
       "prompt": "Which pronoun fits one person whose gender is not stated?",
       "acceptedAnswers": ["hän"],
       "explanation": "Hän refers to one person and does not mark that person as male or female.",
@@ -42,6 +198,114 @@
       "parallelExerciseId": "ppo-t03-e16"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose “He or she is at home.” in Finnish. Refer to one person without stating gender. Use kotona (“at home”).",
+      "acceptedAnswers": ["Hän on kotona."],
+      "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”.",
+      "tags": ["standard-written-finnish", "person-han", "sentence", "gender-neutral-reference"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "options": ["Minä olen kotona.", "Sinä olet kotona.", "Hän on kotona."],
+      "optionFeedback": {
+        "Minä olen kotona.": "Minä refers to the speaker: “I”. The requested meaning refers to someone being discussed.",
+        "Sinä olet kotona.": "Sinä refers to one person being addressed informally: “you”. The requested meaning refers to someone being discussed.",
+        "Hän on kotona.": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+      },
+      "sentenceExplanation": {
+        "translation": "He or she is at home.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described",
+            "baseForm": "hän",
+            "formation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb supplied in the choices",
+            "baseForm": "olla",
+            "formation": "The choices supply complete verb forms; choose the sentence referring to the requested person."
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "supplied location or state",
+            "baseForm": "kotona",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä olet kotona."],
+          "category": "Person reference",
+          "explanation": "Sinä refers to one person being addressed informally: “you”. Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e102",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e101"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose “She is at work.” in Finnish. Use työssä (“at work”).",
+      "acceptedAnswers": ["Hän on työssä."],
+      "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”.",
+      "tags": ["standard-written-finnish", "person-han", "sentence", "gender-neutral-reference"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "options": ["Minä olen työssä.", "Sinä olet työssä.", "Hän on työssä."],
+      "optionFeedback": {
+        "Minä olen työssä.": "Minä refers to the speaker: “I”. The requested meaning refers to someone being discussed.",
+        "Sinä olet työssä.": "Sinä refers to one person being addressed informally: “you”. The requested meaning refers to someone being discussed.",
+        "Hän on työssä.": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+      },
+      "sentenceExplanation": {
+        "translation": "She is at work.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "she",
+            "role": "subject: the person or people described",
+            "baseForm": "hän",
+            "formation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb supplied in the choices",
+            "baseForm": "olla",
+            "formation": "The choices supply complete verb forms; choose the sentence referring to the requested person."
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "supplied location or state",
+            "baseForm": "työssä",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä olet työssä."],
+          "category": "Person reference",
+          "explanation": "Sinä refers to one person being addressed informally: “you”. Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e104",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e103"
+    },
+    {
       "type": "translation-fi",
       "instruction": "Write the pronoun.",
       "prompt": "Which pronoun fits one person whose gender is not stated?",
@@ -58,6 +322,54 @@
     {
       "type": "fill-blank",
       "instruction": "Write the pronoun.",
+      "prompt": "Complete “You are present.”: ___ olet paikalla. Address one person informally. Use olet paikalla (“are present”).",
+      "acceptedAnswers": ["sinä"],
+      "explanation": "Sinä addresses one person informally. Te is used for a group or one person addressed politely.",
+      "tags": ["standard-written-finnish", "person-sina", "sentence"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "You are present.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described",
+            "baseForm": "sinä",
+            "formation": "Sinä addresses one person informally. Te is used for a group or one person addressed politely."
+          },
+          {
+            "finnish": "olet",
+            "meaning": "are",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "supplied location or state",
+            "baseForm": "paikalla",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["hän"],
+          "category": "Person reference",
+          "explanation": "Sinä addresses one person informally. Te is used for a group or one person addressed politely."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e106",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e105"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the pronoun.",
       "prompt": "Which pronoun fits one person whose gender is not stated?",
       "acceptedAnswers": ["hän"],
       "explanation": "Hän refers to one person and does not mark that person as male or female.",
@@ -68,6 +380,116 @@
       "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
       "id": "ppo-t03-e10",
       "parallelExerciseId": "ppo-t03-e22"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “She is at home now.” in Finnish. Use on kotona nyt (“is at home now”).",
+      "acceptedAnswers": ["Hän on kotona nyt.", "Hän on nyt kotona."],
+      "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”.",
+      "tags": ["standard-written-finnish", "person-han", "sentence", "gender-neutral-reference"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "She is at home now.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "she",
+            "role": "subject: the person or people described",
+            "baseForm": "hän",
+            "formation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "kotona nyt",
+            "meaning": "at home now",
+            "role": "supplied location or state",
+            "baseForm": "kotona nyt",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä olet kotona nyt."],
+          "category": "Person reference",
+          "explanation": "Sinä refers to one person being addressed informally: “you”. Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e107",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e108"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “You are there today.” in Finnish. Address one person informally. Keep the subject pronoun. Use olet siellä tänään (“are there today”).",
+      "acceptedAnswers": ["Sinä olet siellä tänään.", "Sinä olet tänään siellä."],
+      "explanation": "Sinä refers to one person being addressed informally: “you”.",
+      "tags": ["standard-written-finnish", "person-sina", "sentence"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "You are there today.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject: the person or people described",
+            "baseForm": "sinä",
+            "formation": "Sinä refers to one person being addressed informally: “you”."
+          },
+          {
+            "finnish": "olet",
+            "meaning": "are",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "siellä tänään",
+            "meaning": "there today",
+            "role": "supplied location or state",
+            "baseForm": "siellä tänään",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän on siellä tänään."],
+          "category": "Person reference",
+          "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”. Sinä refers to one person being addressed informally: “you”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e109",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e110"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the English reference.",
+      "prompt": "Translate only the pronoun in “Hän on kotona.” into English. The rest means “is at home”.",
+      "acceptedAnswers": ["he or she", "he", "she"],
+      "explanation": "Hän refers to one person without marking gender. Use the same pronoun for “he”, “she” and “he or she”.",
+      "tags": ["standard-written-finnish", "person-han", "gender-neutral-reference", "pronoun"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "id": "ppo-written-reference-singular-test-e111",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e112"
     },
     {
       "type": "translation-fi",
@@ -98,6 +520,102 @@
       "parallelExerciseId": "ppo-t03-e08"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “I am here tomorrow.” in Finnish. Keep the subject pronoun. Use olen täällä huomenna (“am here tomorrow”).",
+      "acceptedAnswers": ["Minä olen täällä huomenna.", "Minä olen huomenna täällä."],
+      "explanation": "Minä refers to the speaker: “I”.",
+      "tags": ["standard-written-finnish", "person-mina", "sentence"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "I am here tomorrow.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "role": "subject: the person or people described",
+            "baseForm": "minä",
+            "formation": "Minä refers to the speaker: “I”."
+          },
+          {
+            "finnish": "olen",
+            "meaning": "am",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "täällä huomenna",
+            "meaning": "here tomorrow",
+            "role": "supplied location or state",
+            "baseForm": "täällä huomenna",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän on täällä huomenna."],
+          "category": "Person reference",
+          "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”. Minä refers to the speaker: “I”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e108",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e107"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “He is at work tomorrow.” in Finnish. Use on työssä huomenna (“is at work tomorrow”).",
+      "acceptedAnswers": ["Hän on työssä huomenna.", "Hän on huomenna työssä."],
+      "explanation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”.",
+      "tags": ["standard-written-finnish", "person-han", "sentence", "gender-neutral-reference"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "He is at work tomorrow.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he",
+            "role": "subject: the person or people described",
+            "baseForm": "hän",
+            "formation": "Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "työssä huomenna",
+            "meaning": "at work tomorrow",
+            "role": "supplied location or state",
+            "baseForm": "työssä huomenna",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Sinä olet työssä huomenna."],
+          "category": "Person reference",
+          "explanation": "Sinä refers to one person being addressed informally: “you”. Hän refers to one person being discussed and does not mark gender. Use the same pronoun for “he”, “she” and “he or she”."
+        }
+      ],
+      "id": "ppo-written-reference-singular-test-e110",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e109"
+    },
+    {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
       "prompt": "Notice who the sentence is about. Which pronoun fits one person whose gender is not stated?",
@@ -116,6 +634,20 @@
       "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
       "id": "ppo-t03-e17",
       "parallelExerciseId": "ppo-t03-e05"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write the English reference.",
+      "prompt": "Translate only the pronoun in “Sinä olet paikalla.” into English. The rest means “are present”.",
+      "acceptedAnswers": ["you"],
+      "explanation": "Sinä addresses one person informally. Te is used for a group or one person addressed politely.",
+      "tags": ["standard-written-finnish", "person-sina", "pronoun"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "id": "ppo-written-reference-singular-test-e112",
+      "parallelExerciseId": "ppo-written-reference-singular-test-e111"
     },
     {
       "type": "fill-blank",

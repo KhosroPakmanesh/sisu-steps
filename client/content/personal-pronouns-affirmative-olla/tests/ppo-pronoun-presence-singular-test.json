@@ -10,6 +10,52 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the sentence requested.",
+      "prompt": "Which shorter sentence still means “I am there tomorrow”?",
+      "acceptedAnswers": ["Olen siellä huomenna."],
+      "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+      "options": ["Minä olen siellä huomenna.", "siellä huomenna.", "Olen siellä huomenna."],
+      "optionFeedback": {
+        "Olen siellä huomenna.": "Correct. Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+        "Minä olen siellä huomenna.": "“Minä olen siellä huomenna.” does not fit this subject or construction. Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+        "siellä huomenna.": "“siellä huomenna.” does not fit this subject or construction. Minä can be omitted here because the ending in olen already identifies the subject in Finnish."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "I am there tomorrow.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "siellä huomenna",
+            "meaning": "there tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä huomenna",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e101",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
       "prompt": "Which shorter sentence still means “I am in Finland tomorrow”?",
       "acceptedAnswers": ["Olen Suomessa huomenna."],
       "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
@@ -52,6 +98,53 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e01",
       "parallelExerciseId": "ppo-t07-e13"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “He or she is there tomorrow.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["Hän on siellä huomenna.", "Hän on huomenna siellä."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä", "huomenna"],
+      "sentenceExplanation": {
+        "translation": "He or she is there tomorrow.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "siellä huomenna",
+            "meaning": "there tomorrow",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä huomenna",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e103",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e104"
     },
     {
       "type": "fill-blank",
@@ -142,6 +235,59 @@
       "parallelExerciseId": "ppo-t07-e16"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose the sentence requested.",
+      "prompt": "No earlier sentence names the subject. Which sentence clearly means “He or she is present now”?",
+      "acceptedAnswers": ["Hän on paikalla nyt."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "options": ["paikalla nyt.", "Hän on paikalla nyt.", "On paikalla nyt."],
+      "optionFeedback": {
+        "Hän on paikalla nyt.": "Correct. Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "On paikalla nyt.": "“On paikalla nyt.” does not fit this subject or construction. Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+        "paikalla nyt.": "“paikalla nyt.” does not fit this subject or construction. Hän remains explicit because a third-person olla form does not identify a unique person or group by itself."
+      },
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "He or she is present now.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "paikalla nyt",
+            "meaning": "present now",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla nyt",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e102",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e101"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Notice who the sentence is about. Translate “Hän on kotona aamulla.” into English and recover the subject from the form.",
@@ -191,6 +337,46 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e05",
       "parallelExerciseId": "ppo-t07-e17"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “I am present in the evening.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olen paikalla illalla.", "Olen illalla paikalla."],
+      "explanation": "Minä can be omitted because the ending in olen already identifies the subject in Finnish.",
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla", "illalla"],
+      "sentenceExplanation": {
+        "translation": "I am present in the evening.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "paikalla illalla",
+            "meaning": "present in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla illalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e104",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e103"
     },
     {
       "type": "fill-blank",
@@ -280,6 +466,47 @@
       "parallelExerciseId": "ppo-t07-e20"
     },
     {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “I am there in the morning.” without the optional subject pronoun.",
+      "acceptedAnswers": ["Olen siellä aamulla."],
+      "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
+      "tokens": ["aamulla.", "Olen", "siellä"],
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-mina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "I am there in the morning.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "am",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "minä takes the present-tense form olen"
+          },
+          {
+            "finnish": "siellä aamulla",
+            "meaning": "there in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä aamulla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e105",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e106"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Olen turvassa nyt.” into English and recover the subject from the form.",
@@ -318,6 +545,53 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e10",
       "parallelExerciseId": "ppo-t07-e22"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “He or she is there in the evening.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["Hän on siellä illalla.", "Hän on illalla siellä."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["siellä", "illalla"],
+      "sentenceExplanation": {
+        "translation": "He or she is there in the evening.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "siellä illalla",
+            "meaning": "there in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "siellä illalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e107",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e108"
     },
     {
       "type": "multiple-choice",
@@ -413,6 +687,47 @@
       "parallelExerciseId": "ppo-t07-e07"
     },
     {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “You are present in the morning.” Address one person; omit the optional subject pronoun sinä.",
+      "acceptedAnswers": ["Olet paikalla aamulla."],
+      "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
+      "tokens": ["aamulla.", "Olet", "paikalla"],
+      "tags": [
+        "sentence",
+        "pronoun-omission",
+        "person-sina",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "You are present in the morning.",
+        "pattern": "present-tense olla + context (the verb ending identifies the subject)",
+        "parts": [
+          {
+            "finnish": "Olet",
+            "meaning": "are",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "sinä takes the present-tense form olet"
+          },
+          {
+            "finnish": "paikalla aamulla",
+            "meaning": "present in the morning",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla aamulla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e106",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e105"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Olet turvassa nyt.” into English and recover the subject from the form.",
@@ -451,6 +766,53 @@
       "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
       "id": "ppo-t07-e22",
       "parallelExerciseId": "ppo-t07-e10"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Write “He or she is present in the evening.” with the third-person subject stated explicitly.",
+      "acceptedAnswers": ["Hän on paikalla illalla.", "Hän on illalla paikalla."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["paikalla", "illalla"],
+      "sentenceExplanation": {
+        "translation": "He or she is present in the evening.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "paikalla illalla",
+            "meaning": "present in the evening",
+            "role": "context: tells the location or state",
+            "baseForm": "paikalla illalla",
+            "formation": "Use the complete taught form; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun presence: form not yet secure",
+      "id": "ppo-pronoun-presence-singular-test-e108",
+      "parallelExerciseId": "ppo-pronoun-presence-singular-test-e107"
     },
     {
       "type": "word-order",

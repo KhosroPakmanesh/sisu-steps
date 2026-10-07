@@ -10,6 +10,60 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
+      "prompt": "Choose “They are here.” in Finnish. Discuss several people. Use ovat täällä (“are here”).",
+      "acceptedAnswers": ["He ovat täällä."],
+      "explanation": "He refers to several people being discussed; it does not mark their gender.",
+      "tags": ["standard-written-finnish", "person-he", "sentence", "gender-neutral-reference"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "options": ["Hän ovat täällä.", "Te ovat täällä.", "He ovat täällä."],
+      "optionFeedback": {
+        "He ovat täällä.": "He refers to several people being discussed; it does not mark their gender.",
+        "Hän ovat täällä.": "This pronoun refers to the wrong person or people. He refers to several people being discussed; it does not mark their gender.",
+        "Te ovat täällä.": "This pronoun refers to the wrong person or people. He refers to several people being discussed; it does not mark their gender."
+      },
+      "sentenceExplanation": {
+        "translation": "They are here.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described",
+            "baseForm": "he",
+            "formation": "He refers to several people being discussed; it does not mark their gender."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "supplied location or state",
+            "baseForm": "täällä",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän ovat täällä."],
+          "category": "Person reference",
+          "explanation": "He refers to several people being discussed; it does not mark their gender."
+        }
+      ],
+      "id": "ppo-written-reference-plural-test-e101",
+      "parallelExerciseId": "ppo-written-reference-plural-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
       "prompt": "Notice who the sentence is about. Which pronoun fits two people being addressed directly?",
       "acceptedAnswers": ["te"],
       "explanation": "Te addresses more than one person in Finnish.",
@@ -68,6 +122,60 @@
       "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
       "id": "ppo-t03-e06",
       "parallelExerciseId": "ppo-t03-e18"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the best answer.",
+      "prompt": "Choose “You are at work.” in Finnish. Address a group. Use olette työssä (“are at work”).",
+      "acceptedAnswers": ["Te olette työssä."],
+      "explanation": "Te addresses a group or one person politely. Both uses keep plural verb agreement.",
+      "tags": ["standard-written-finnish", "person-te", "sentence", "te-plural"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "options": ["Sinä olette työssä.", "Te olette työssä.", "Minä olette työssä."],
+      "optionFeedback": {
+        "Te olette työssä.": "Te addresses a group or one person politely. Both uses keep plural verb agreement.",
+        "Minä olette työssä.": "This pronoun refers to the wrong person or people. Te addresses a group or one person politely. Both uses keep plural verb agreement.",
+        "Sinä olette työssä.": "This pronoun refers to the wrong person or people. Te addresses a group or one person politely. Both uses keep plural verb agreement."
+      },
+      "sentenceExplanation": {
+        "translation": "You are at work.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described",
+            "baseForm": "te",
+            "formation": "Te addresses a group or one person politely. Both uses keep plural verb agreement."
+          },
+          {
+            "finnish": "olette",
+            "meaning": "are",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "supplied location or state",
+            "baseForm": "työssä",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän olette työssä."],
+          "category": "Person reference",
+          "explanation": "Te addresses a group or one person politely. Both uses keep plural verb agreement."
+        }
+      ],
+      "id": "ppo-written-reference-plural-test-e102",
+      "parallelExerciseId": "ppo-written-reference-plural-test-e101"
     },
     {
       "type": "translation-en",
@@ -134,6 +242,54 @@
     {
       "type": "fill-blank",
       "instruction": "Write the pronoun.",
+      "prompt": "Complete “You are at home.”: ___ olette kotona. Address one person politely. Use olette kotona (“are at home”).",
+      "acceptedAnswers": ["te"],
+      "explanation": "Te addresses a group or one person politely. Both uses keep plural verb agreement.",
+      "tags": ["standard-written-finnish", "person-te", "sentence", "te-polite"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "You are at home.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described",
+            "baseForm": "te",
+            "formation": "Te addresses a group or one person politely. Both uses keep plural verb agreement."
+          },
+          {
+            "finnish": "olette",
+            "meaning": "are",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "supplied location or state",
+            "baseForm": "kotona",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["hän"],
+          "category": "Person reference",
+          "explanation": "Te addresses a group or one person politely. Both uses keep plural verb agreement."
+        }
+      ],
+      "id": "ppo-written-reference-plural-test-e103",
+      "parallelExerciseId": "ppo-written-reference-plural-test-e104"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the pronoun.",
       "prompt": "Which pronoun fits two or more people who are being discussed?",
       "acceptedAnswers": ["he"],
       "explanation": "He is the third-person plural pronoun for a group of people.",
@@ -192,6 +348,54 @@
       "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
       "id": "ppo-t03-e19",
       "parallelExerciseId": "ppo-t03-e07"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the pronoun.",
+      "prompt": "Complete “They are present.”: ___ ovat paikalla. Discuss several people. Use ovat paikalla (“are present”).",
+      "acceptedAnswers": ["he"],
+      "explanation": "He refers to several people being discussed; it does not mark their gender.",
+      "tags": ["standard-written-finnish", "person-he", "sentence", "gender-neutral-reference"],
+      "requiredSkills": ["Pronoun reference and polite te"],
+      "vocabulary": [],
+      "targetSkill": "Pronoun reference and polite te",
+      "misconceptionCategory": "Pronoun reference and polite te: form not yet secure",
+      "sentenceExplanation": {
+        "translation": "They are present.",
+        "pattern": "personal pronoun + supplied verb and context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described",
+            "baseForm": "he",
+            "formation": "He refers to several people being discussed; it does not mark their gender."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "supplied linking verb",
+            "baseForm": "olla",
+            "formation": "The complete verb form is supplied; keep it unchanged."
+          },
+          {
+            "finnish": "paikalla",
+            "meaning": "present",
+            "role": "supplied location or state",
+            "baseForm": "paikalla",
+            "formation": "The complete form and meaning are supplied; no change is required."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["hän"],
+          "category": "Person reference",
+          "explanation": "He refers to several people being discussed; it does not mark their gender."
+        }
+      ],
+      "id": "ppo-written-reference-plural-test-e104",
+      "parallelExerciseId": "ppo-written-reference-plural-test-e103"
     },
     {
       "type": "fill-blank",

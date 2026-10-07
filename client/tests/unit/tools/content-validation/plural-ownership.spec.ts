@@ -43,11 +43,10 @@ describe('merged ownership pack with retained owner-number groups', () => {
   it('keeps equal totals and matching test counts without reducing singular peers', () => {
     for (const pack of packs) {
       expect(pack.tests.map((item) => item.exercises.length)).toEqual([
-        ...Array<number>(6).fill(20),
-        ...Array<number>(4).fill(10),
+        ...Array<number>(10).fill(20),
         32,
       ]);
-      expect(pack.tests.reduce((sum, item) => sum + item.exercises.length, 0)).toBe(192);
+      expect(pack.tests.reduce((sum, item) => sum + item.exercises.length, 0)).toBe(232);
       expect(pack.lessons.reduce((sum, item) => sum + item.practiceExercises.length, 0)).toBe(24);
       expect(pack.tests.at(-1)!.exercises.length).toBeGreaterThanOrEqual(28);
     }
@@ -86,12 +85,12 @@ describe('merged ownership pack with retained owner-number groups', () => {
     }
   });
 
-  it('grades all 432 items, every natural answer and every authored diagnostic', () => {
+  it('grades all 512 items, every natural answer and every authored diagnostic', () => {
     const items = packs.flatMap((pack) => [
       ...pack.tests.flatMap((test) => test.exercises),
       ...pack.lessons.flatMap((lesson) => lesson.practiceExercises),
     ]);
-    expect(items).toHaveLength(432);
+    expect(items).toHaveLength(512);
     for (const item of items) {
       for (const answer of item.acceptedAnswers)
         expect(gradeAnswer(item, answer).correct, `${item.id}: ${answer}`).toBe(true);

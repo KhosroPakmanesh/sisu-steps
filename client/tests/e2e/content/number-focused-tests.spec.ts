@@ -1,8 +1,8 @@
 import { writeFile } from 'node:fs/promises';
-import { expect, Locator, Page, test } from '@playwright/test';
-import { Exercise } from '../../../src/features/learning/shared/content/exercise.models';
+import { expect, test } from '@playwright/test';
 import { TopicPack } from '../../../src/features/learning/shared/content/topic-pack.models';
 import { loadContentSource } from '../../../tools/content-source-loader.mjs';
+import { FOCUSED_EXPANSION_INVENTORY, submit } from '../support/focused-content-grading';
 
 let packs: TopicPack[];
 test.beforeAll(async () => {
@@ -49,20 +49,31 @@ test('opens all 44 number-specific tests with their unchanged shared lessons at 
   await writeFile(testInfo.outputPath('number-test-routes.json'), JSON.stringify(routes));
 });
 
-test('grades all 508 unchanged questions in the 44 separated tests', async ({ page }, testInfo) => {
-  test.skip(testInfo.project.name !== 'chromium-wide');
-  test.setTimeout(900_000);
-  const records: string[] = [];
-  for (const pack of packs)
+for (const inventory of FOCUSED_EXPANSION_INVENTORY) {
+  test(`grades every separated Focused test in ${inventory.id}`, async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'chromium-wide');
+    test.setTimeout(600_000);
+    const records: string[] = [];
+    const pack = packs.find((item) => item.id === inventory.id)!;
     for (const authored of pack.tests.filter((item) => item.numberScope)) {
       await page.goto('/study/' + pack.id + '/' + authored.id);
       for (const [index, exercise] of authored.exercises.entries()) {
         const card = page.locator('.exercise-card');
         await expect(card.locator('h2')).toHaveText(exercise.prompt);
-        await submit(page, card, exercise);
+        await submit(page, exercise, exercise.acceptedAnswers[0]);
         await expect(card.locator('.feedback')).toHaveClass(/correct/u);
         await expect(card.locator('.feedback')).toContainText(exercise.explanation);
+        if (exercise.id.startsWith(authored.id + '-e1')) {
+          for (const part of exercise.sentenceExplanation?.parts ?? []) {
+            await expect(page.locator('.sentence-lesson')).toContainText(part.finnish);
+            await expect(page.locator('.sentence-lesson')).toContainText(part.formation);
+          }
+          expect(
+            await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth),
+          ).toBe(true);
+        }
         records.push(exercise.id);
+        await page.mouse.move(0, 0);
         await page
           .getByRole('button', {
             name: index === authored.exercises.length - 1 ? 'See result' : 'Continue',
@@ -73,37 +84,17 @@ test('grades all 508 unchanged questions in the 44 separated tests', async ({ pa
       await expect(page.locator('.result-card')).toContainText('100%');
       await writeFile(
         testInfo.outputPath('grading-progress.json'),
-        JSON.stringify({ completedQuestions: records.length, testId: authored.id }),
+        JSON.stringify({
+          completedQuestions: records.length,
+          testId: authored.id,
+        }),
       );
     }
-  expect(records).toHaveLength(508);
-  expect(new Set(records).size).toBe(508);
-  await writeFile(testInfo.outputPath('number-separated-questions.json'), JSON.stringify(records));
-});
-
-async function submit(page: Page, card: Locator, exercise: Exercise) {
-  if (exercise.type === 'multiple-choice')
-    await card.getByRole('radio', { name: exercise.acceptedAnswers[0], exact: true }).check();
-  else if (exercise.type === 'word-order') {
-    let remaining = exercise.acceptedAnswers[0];
-    const tokens = [...exercise.tokens!];
-    while (tokens.length) {
-      const index = tokens.findIndex(
-        (token) => remaining === token || remaining.startsWith(token + ' '),
-      );
-      expect(
-        index,
-        exercise.id + ': use the authored whole word-order tiles',
-      ).toBeGreaterThanOrEqual(0);
-      const token = tokens.splice(index, 1)[0];
-      await card
-        .locator('.token-bank')
-        .getByRole('button', { name: token, exact: true })
-        .first()
-        .click();
-      remaining = remaining.slice(token.length).trimStart();
-    }
-    expect(remaining).toBe('');
-  } else await card.getByRole('textbox', { name: 'Your answer' }).fill(exercise.acceptedAnswers[0]);
-  await page.getByRole('button', { name: 'Check answer', exact: true }).click();
+    expect(records).toHaveLength(inventory.scored);
+    expect(new Set(records).size).toBe(inventory.scored);
+    await writeFile(
+      testInfo.outputPath('number-separated-questions.json'),
+      JSON.stringify(records),
+    );
+  });
 }

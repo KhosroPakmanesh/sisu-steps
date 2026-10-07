@@ -25,7 +25,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
   it('accepts the three packs and preserves the approved family inventory', () => {
     for (const pack of packs) expect(validateDemonstrativePack(pack)).toEqual([]);
 
-    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(528);
+    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(548);
     expect(
       packs.flatMap((pack) => pack.lessons).flatMap((lesson) => lesson.practiceExercises),
     ).toHaveLength(80);

@@ -10,6 +10,67 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
+      "prompt": "Choose “You do not have a book.” in Finnish. Use teillä (“you as the owner”) and kirjaa (“a book”). Frame: “Teillä ___ kirjaa”. Address a group.",
+      "acceptedAnswers": ["Teillä ei ole kirjaa."],
+      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "tags": ["standard-written-finnish", "sentence", "person-te"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "options": ["Teillä ette ole kirjaa.", "Teillä on kirja.", "Teillä ei ole kirjaa."],
+      "optionFeedback": {
+        "Teillä ei ole kirjaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+        "Teillä ette ole kirjaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät. This choice uses the wrong verb form.",
+        "Teillä on kirja.": "This choice changes the required polarity or leaves the required question pattern."
+      },
+      "sentenceExplanation": {
+        "translation": "You do not have a book.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Teillä",
+            "meaning": "you as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "te",
+            "formation": "te has the learned possession form teillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "kirjaa.",
+            "meaning": "a book",
+            "role": "thing possessed",
+            "baseForm": "kirja",
+            "formation": "kirja + -a = kirjaa. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Teillä ette ole kirjaa."],
+          "category": "Fixed ei ole in possession: predictable form error",
+          "explanation": "The -lla/-llä phrase is the possessor. In this possession pattern the verb stays fixed, so do not conjugate it to match the owner."
+        }
+      ],
+      "id": "nps-fixed-negative-plural-test-e101",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
       "prompt": "Choose “You do not have a ball.” in Finnish. Use teillä (“you as the owner”) and palloa (“a ball”). Frame: “Teillä ___ palloa”. Address a group.",
       "acceptedAnswers": ["Teillä ei ole palloa."],
       "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
@@ -67,6 +128,61 @@
       ],
       "id": "nps-fixed-negative-test-e005",
       "parallelExerciseId": "nps-fixed-negative-test-e006"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “They do not have a pen.”: “Heillä ___.” Use kynää (“a pen”).",
+      "acceptedAnswers": ["ei ole kynää"],
+      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "They do not have a pen.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "kynää.",
+            "meaning": "a pen",
+            "role": "thing possessed",
+            "baseForm": "kynä",
+            "formation": "kynä + -ä = kynää. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["eivät ole kynää."],
+          "category": "Fixed ei ole in possession: form or meaning confused",
+          "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät."
+        }
+      ],
+      "id": "nps-fixed-negative-plural-test-e103",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e104"
     },
     {
       "type": "fill-blank",
@@ -179,6 +295,67 @@
       "parallelExerciseId": "nps-fixed-negative-test-e021"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose “We do not have a cat.” in Finnish. Use meillä (“we as the owner”) and kissaa (“a cat”). Frame: “Meillä ___ kissaa”.",
+      "acceptedAnswers": ["Meillä ei ole kissaa."],
+      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "options": ["Meillä on kissa.", "Meillä ei ole kissaa.", "Meillä emme ole kissaa."],
+      "optionFeedback": {
+        "Meillä ei ole kissaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+        "Meillä emme ole kissaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät. This choice uses the wrong verb form.",
+        "Meillä on kissa.": "This choice changes the required polarity or leaves the required question pattern."
+      },
+      "sentenceExplanation": {
+        "translation": "We do not have a cat.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Meillä",
+            "meaning": "we as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "me",
+            "formation": "me has the learned possession form meillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "kissaa.",
+            "meaning": "a cat",
+            "role": "thing possessed",
+            "baseForm": "kissa",
+            "formation": "kissa + -a = kissaa. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Meillä emme ole kissaa."],
+          "category": "Fixed ei ole in possession: predictable form error",
+          "explanation": "The -lla/-llä phrase is the possessor. In this possession pattern the verb stays fixed, so do not conjugate it to match the owner."
+        }
+      ],
+      "id": "nps-fixed-negative-plural-test-e102",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e101"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write in English.",
       "prompt": "Translate “Heillä ei ole koiraa.” into English. Owner: they.",
@@ -232,6 +409,61 @@
       },
       "id": "nps-fixed-negative-test-e018",
       "parallelExerciseId": "nps-fixed-negative-test-e017"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the missing form.",
+      "prompt": "Complete “We do not have a book.”: “Meillä ___.” Use kirjaa (“a book”).",
+      "acceptedAnswers": ["ei ole kirjaa"],
+      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "We do not have a book.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Meillä",
+            "meaning": "we as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "me",
+            "formation": "me has the learned possession form meillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "kirjaa.",
+            "meaning": "a book",
+            "role": "thing possessed",
+            "baseForm": "kirja",
+            "formation": "kirja + -a = kirjaa. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["emme ole kirjaa."],
+          "category": "Fixed ei ole in possession: form or meaning confused",
+          "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät."
+        }
+      ],
+      "id": "nps-fixed-negative-plural-test-e104",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e103"
     },
     {
       "type": "fill-blank",
@@ -344,6 +576,61 @@
       "parallelExerciseId": "nps-fixed-negative-test-e023"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Repair “Heillä eivät ole peliä.” to mean “They do not have a game.” Use heillä (\"they as owner\") and peliä (\"game\").",
+      "acceptedAnswers": ["Heillä ei ole peliä."],
+      "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "They do not have a game.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "peliä.",
+            "meaning": "a game",
+            "role": "thing possessed",
+            "baseForm": "peli",
+            "formation": "peli + -ä = peliä. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Heillä eivät ole peliä."],
+          "category": "Fixed ei ole in possession: predictable form error",
+          "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement."
+        }
+      ],
+      "id": "nps-fixed-negative-plural-test-e105",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e106"
+    },
+    {
       "type": "fill-blank",
       "instruction": "Write the missing form.",
       "prompt": "Complete “You do not have a book.”: “Teillä ___.” Use kirjaa (“a book”). Address a group.",
@@ -397,6 +684,61 @@
       ],
       "id": "nps-fixed-negative-test-e011",
       "parallelExerciseId": "nps-fixed-negative-test-e012"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Heillä ei ole tyynyä.” into English. Owner: they.",
+      "acceptedAnswers": [
+        "They do not have a pillow.",
+        "They don’t have a pillow.",
+        "They don't have a pillow.",
+        "They do not have the pillow.",
+        "They don’t have the pillow.",
+        "They don't have the pillow."
+      ],
+      "explanation": "The -lla/-llä phrase identifies the owner; ei ole stays fixed in this possession pattern. ",
+      "tags": ["standard-written-finnish", "sentence", "english-answer"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": ["tyyny"],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "They do not have a pillow.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "tyynyä.",
+            "meaning": "a pillow",
+            "role": "thing possessed",
+            "baseForm": "tyyny",
+            "formation": "tyyny + -ä = tyynyä. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "nps-fixed-negative-plural-test-e107",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e108"
     },
     {
       "type": "multiple-choice",
@@ -515,6 +857,61 @@
       "parallelExerciseId": "nps-fixed-negative-test-e024"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Repair “Teillä ette ole tyynyä.” to mean “You do not have a pillow.” Use teillä (\"you as owner\") and tyynyä (\"pillow\"). Address a group.",
+      "acceptedAnswers": ["Teillä ei ole tyynyä."],
+      "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement.",
+      "tags": ["standard-written-finnish", "sentence", "person-te"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "You do not have a pillow.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Teillä",
+            "meaning": "you as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "te",
+            "formation": "te has the learned possession form teillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "tyynyä.",
+            "meaning": "a pillow",
+            "role": "thing possessed",
+            "baseForm": "tyyny",
+            "formation": "tyyny + -ä = tyynyä. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Teillä ette ole tyynyä."],
+          "category": "Fixed ei ole in possession: predictable form error",
+          "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement."
+        }
+      ],
+      "id": "nps-fixed-negative-plural-test-e106",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e105"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write in English.",
       "prompt": "Translate “Teillä ei ole kissaa.” into English. Address a group. Owner: you, group.",
@@ -568,6 +965,61 @@
       },
       "id": "nps-fixed-negative-test-e017",
       "parallelExerciseId": "nps-fixed-negative-test-e018"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Teillä ei ole koiraa.” into English. Address a group. Owner: you, group.",
+      "acceptedAnswers": [
+        "You do not have a dog.",
+        "You don’t have a dog.",
+        "You don't have a dog.",
+        "You do not have the dog.",
+        "You don’t have the dog.",
+        "You don't have the dog."
+      ],
+      "explanation": "The -lla/-llä phrase identifies the owner; ei ole stays fixed in this possession pattern. ",
+      "tags": ["standard-written-finnish", "sentence", "english-answer", "person-te"],
+      "requiredSkills": ["Fixed ei ole in possession"],
+      "vocabulary": ["koira"],
+      "targetSkill": "Fixed ei ole in possession",
+      "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "You do not have a dog.",
+        "pattern": "possessor + fixed ei ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Teillä",
+            "meaning": "you as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "te",
+            "formation": "te has the learned possession form teillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "After ei, olla uses ole. Together ei ole means “do not have” or “does not have” here."
+          },
+          {
+            "finnish": "koiraa.",
+            "meaning": "a dog",
+            "role": "thing possessed",
+            "baseForm": "koira",
+            "formation": "koira + -a = koiraa. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "nps-fixed-negative-plural-test-e108",
+      "parallelExerciseId": "nps-fixed-negative-plural-test-e107"
     },
     {
       "type": "multiple-choice",

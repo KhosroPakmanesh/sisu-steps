@@ -16,7 +16,7 @@ describe('simple English possession translations', () => {
     packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   });
 
-  it('keeps simple models and excludes got from all 48 scored and optional possession translations', () => {
+  it('keeps simple models and excludes got from all 74 scored and optional possession translations', () => {
     const ids = ['affirmative-possession', 'negative-possession', 'possession-questions'];
     const exercises = packs
       .filter((pack) => ids.includes(pack.id))
@@ -25,7 +25,7 @@ describe('simple English possession translations', () => {
         ...pack.lessons.flatMap((lesson) => lesson.practiceExercises),
       ])
       .filter((exercise) => exercise.type === 'translation-en');
-    expect(exercises).toHaveLength(48);
+    expect(exercises).toHaveLength(74);
     for (const exercise of exercises) {
       expect(
         exercise.acceptedAnswers.some((answer) => /\bgot\b/iu.test(answer)),

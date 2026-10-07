@@ -25,7 +25,9 @@ Give every non-review grammar topic its own focused test. Its **Learn first** pr
 
 During content-preserving restructuring, retain existing Review scope and cross-number mastery partners unless the user authorizes a content revision. Follow the existing Review placement, content-preservation and version/history rules.
 
-Choose a non-empty scored-question total, up to 1,000, from the number of distinct decisions, necessary response formats, retrieval spacing, common misconceptions, and transfer needs. Do not add paraphrased filler to reach a common pack size.
+Every Focused test must contain at least **20 meaningful, unique scored questions** (REQ-G001-148). For a lesson shared by singular and plural tests, each test independently needs 20, hence at least **40 scored questions per shared lesson**. Reviews and optional practice do not count toward this minimum. Reject duplicate tasks, cosmetic paraphrases and repetitive filler; use the existing suitable formats and meaningful recognition, controlled production, misconception coverage and spaced retrieval. Runtime and direct-source validation must reject a short Focused test even when its shared lesson has enough questions in total.
+
+Choose a scored-question total, up to 1,000, from the number of distinct decisions, necessary response formats, retrieval spacing, common misconceptions, and transfer needs. Do not add paraphrased filler to reach a common pack size.
 
 Define the complete Focused sequence first. Focused tests must collectively assess every important skill, one target at a time. Put cumulative retrieval, mixed practice, and transfer only in Reviews, and do not add a second Core/Extended classification.
 

@@ -18,7 +18,7 @@ describe('Focused tests separated by grammatical number', () => {
     expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(81);
     expect(packs.flatMap((pack) => pack.tests)).toHaveLength(125);
     expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(
-      2386,
+      2758,
     );
     expect(
       packs.flatMap((pack) => pack.lessons.flatMap((lesson) => lesson.practiceExercises)),
@@ -26,7 +26,7 @@ describe('Focused tests separated by grammatical number', () => {
     const groups = packs.flatMap((pack) => pack.tests.filter((test) => test.numberScope));
     expect(groups).toHaveLength(44);
     expect(new Set(groups.flatMap((test) => test.lessonIds)).size).toBe(22);
-    expect(new Set(groups.flatMap((test) => test.exercises.map((item) => item.id))).size).toBe(508);
+    expect(new Set(groups.flatMap((test) => test.exercises.map((item) => item.id))).size).toBe(880);
     for (const pack of packs) {
       expect(validateSource(pack)).toEqual([]);
       expect(() => validateRuntime(pack)).not.toThrow();
@@ -44,11 +44,11 @@ describe('Focused tests separated by grammatical number', () => {
     }
   });
 
-  it('grades all 508 repartitioned questions, alternatives, and authored diagnostics', () => {
+  it('grades all 880 repartitioned questions, alternatives, and authored diagnostics', () => {
     const items = packs.flatMap((pack) =>
       pack.tests.filter((test) => test.numberScope).flatMap((test) => test.exercises),
     );
-    expect(items).toHaveLength(508);
+    expect(items).toHaveLength(880);
     for (const item of items) {
       for (const answer of item.acceptedAnswers)
         expect(gradeAnswer(item, answer).correct, item.id).toBe(true);
@@ -113,7 +113,7 @@ describe('Focused tests separated by grammatical number', () => {
   it('places polite te with plural grammatical forms and retains cross-number mastery partners', () => {
     const pack = packs.find((item) => item.id === 'personal-pronouns-affirmative-olla')!;
     const reference = pack.tests.filter((test) => test.lessonIds[0] === 'ppo-written-reference');
-    expect(reference.map((test) => test.exercises.length)).toEqual([8, 16]);
+    expect(reference.map((test) => test.exercises.length)).toEqual([20, 20]);
     const polite = reference
       .flatMap((test) => test.exercises)
       .filter((item) => item.tags.includes('te-polite'));

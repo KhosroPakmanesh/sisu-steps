@@ -1,5 +1,7 @@
 # Possessive pronouns and endings — pedagogy assessment
 
+2026-10-06 extension: [Focused test minimum assessment](focused-test-minimum.md) governs the question additions under REQ-G001-148; existing lessons, practice and Reviews remain unchanged. Earlier evidence below describes its stated baseline.
+
 ## Paired topic ordering — 2026-10-05
 
 Under REQ-G001-146, apply the approved paired singular/plural topic order without changing any lesson or question content. Pre-change disposition: **approved with limitations**. The [shared ordering assessment](paired-lesson-order.md) defines the exact order, inherited counts and content-preservation boundary. Final disposition: **approved with limitations** after complete source preservation, the client gate and all affected routes/maps at three widths. Pack/lesson versions, names, counts and current learner data remain unchanged. Earlier records below retain their dated topology and compatibility evidence.

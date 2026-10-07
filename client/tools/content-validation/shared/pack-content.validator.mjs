@@ -152,6 +152,8 @@ export async function validatePackContent(pack) {
   let reviewsStarted = false;
   for (const [testIndex, test] of pack.tests.entries()) {
     checkFocus(test, test.id);
+    if (test.stage === 'focused' && (test.exercises?.length ?? 0) < 20)
+      errors.push(`${test.id}: Focused test must contain at least 20 scored questions`);
     if (Object.hasOwn(test, 'set')) errors.push(`${test.id}: removed set metadata is not allowed`);
     if (test.stage === 'review') reviewsStarted = true;
     else if (test.stage === 'focused') {

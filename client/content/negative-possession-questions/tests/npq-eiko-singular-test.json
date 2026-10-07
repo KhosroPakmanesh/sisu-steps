@@ -10,6 +10,71 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
+      "prompt": "Choose “Doesn’t he have a pen?” in Finnish. Use hänellä (“he as the owner”) and kynää (“a pen”). Frame: “___ hänellä ole kynää”.",
+      "acceptedAnswers": ["Eikö hänellä ole kynää?"],
+      "explanation": "Ei + -kö gives eikö. Possession keeps eikö and ole unchanged for every owner; the noun uses its supplied partitive form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "options": [
+        "Eivätkö hänellä ole kynää?",
+        "Eikö hänellä on kynää?",
+        "Eikö hänellä ole kynää?"
+      ],
+      "optionFeedback": {
+        "Eikö hänellä ole kynää?": "Ei + -kö gives eikö. Possession keeps eikö and ole unchanged for every owner; the noun uses its supplied partitive form.",
+        "Eivätkö hänellä ole kynää?": "Ei + -kö gives eikö. Possession keeps eikö and ole unchanged for every owner; the noun uses its supplied partitive form. This choice uses the wrong verb form.",
+        "Eikö hänellä on kynää?": "This choice changes the required polarity or leaves the required question pattern."
+      },
+      "sentenceExplanation": {
+        "translation": "Doesn’t he have a pen?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "hänellä",
+            "meaning": "he as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "hän",
+            "formation": "hän has the learned possession form hänellä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "kynää?",
+            "meaning": "a pen",
+            "role": "thing possessed",
+            "baseForm": "kynä",
+            "formation": "kynä + -ä = kynää. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Eivätkö hänellä ole kynää?"],
+          "category": "Fixed eikö ole in possession questions: predictable form error",
+          "explanation": "The -lla/-llä phrase is the possessor. In this possession pattern the verb stays fixed, so do not conjugate it to match the owner."
+        }
+      ],
+      "id": "npq-eiko-singular-test-e101",
+      "parallelExerciseId": "npq-eiko-singular-test-e102"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
       "prompt": "Choose “Doesn’t he have a car?” in Finnish. Use hänellä (“he as the owner”) and autoa (“a car”). Frame: “___ hänellä ole autoa”.",
       "acceptedAnswers": ["Eikö hänellä ole autoa?"],
       "explanation": "Ei + -kö gives eikö. Possession keeps eikö and ole unchanged for every owner; the noun uses its supplied partitive form.",
@@ -71,6 +136,54 @@
       ],
       "id": "npq-eiko-test-e003",
       "parallelExerciseId": "npq-eiko-test-e004"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Change “Minulla ei ole koiraa.” (“I do not have a dog.”) into “Don’t I have a dog?” Use minulla (\"I as owner\") and koiraa (\"dog\").",
+      "acceptedAnswers": ["Eikö minulla ole koiraa?"],
+      "explanation": "Change the opening to eikö; keep the supplied possessor and noun form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Don’t I have a dog?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "minulla",
+            "meaning": "I as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "minä",
+            "formation": "minä has the learned possession form minulla; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "koiraa?",
+            "meaning": "a dog",
+            "role": "thing possessed",
+            "baseForm": "koira",
+            "formation": "koira + -a = koiraa. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "npq-eiko-singular-test-e103",
+      "parallelExerciseId": "npq-eiko-singular-test-e104"
     },
     {
       "type": "multiple-choice",
@@ -188,6 +301,71 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
+      "prompt": "Repair “Eivätkö hänellä ole palloa?” to mean “Doesn’t he have a ball?” Use hänellä (\"he as owner\") and palloa (\"ball\").",
+      "acceptedAnswers": ["Eikö hänellä ole palloa?"],
+      "explanation": "Keep fixed eikö and ole; neither changes to agree with the possessor.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "options": [
+        "Eikö hänellä on palloa?",
+        "Eikö hänellä ole palloa?",
+        "Eivätkö hänellä ole palloa?"
+      ],
+      "optionFeedback": {
+        "Eikö hänellä ole palloa?": "Keep fixed eikö and ole; neither changes to agree with the possessor.",
+        "Eivätkö hänellä ole palloa?": "This repeats the supplied error. Keep fixed eikö and ole; neither changes to agree with the possessor.",
+        "Eikö hänellä on palloa?": "This leaves the required noun or question pattern. Keep fixed eikö and ole; neither changes to agree with the possessor."
+      },
+      "sentenceExplanation": {
+        "translation": "Doesn’t he have a ball?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "hänellä",
+            "meaning": "he as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "hän",
+            "formation": "hän has the learned possession form hänellä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "palloa?",
+            "meaning": "a ball",
+            "role": "thing possessed",
+            "baseForm": "pallo",
+            "formation": "pallo + -a = palloa. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Eivätkö hänellä ole palloa?"],
+          "category": "Fixed eikö ole in possession questions: predictable form error",
+          "explanation": "Keep fixed eikö and ole; neither changes to agree with the possessor."
+        }
+      ],
+      "id": "npq-eiko-singular-test-e102",
+      "parallelExerciseId": "npq-eiko-singular-test-e101"
+    },
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
       "prompt": "Choose “Don’t you have a book?” in Finnish. Use sinulla (“you as the owner”) and kirjaa (“a book”). Frame: “___ sinulla ole kirjaa”. Address one person.",
       "acceptedAnswers": ["Eikö sinulla ole kirjaa?"],
       "explanation": "Ei + -kö gives eikö. Possession keeps eikö and ole unchanged for every owner; the noun uses its supplied partitive form.",
@@ -249,6 +427,54 @@
       ],
       "id": "npq-eiko-test-e002",
       "parallelExerciseId": "npq-eiko-test-e001"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Change “Hänellä ei ole peliä.” (“He does not have a game.”) into “Doesn’t he have a game?” Use hänellä (\"he as owner\") and peliä (\"game\").",
+      "acceptedAnswers": ["Eikö hänellä ole peliä?"],
+      "explanation": "Change the opening to eikö; keep the supplied possessor and noun form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Doesn’t he have a game?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "hänellä",
+            "meaning": "he as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "hän",
+            "formation": "hän has the learned possession form hänellä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "peliä?",
+            "meaning": "a game",
+            "role": "thing possessed",
+            "baseForm": "peli",
+            "formation": "peli + -ä = peliä. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "npq-eiko-singular-test-e104",
+      "parallelExerciseId": "npq-eiko-singular-test-e103"
     },
     {
       "type": "translation-en",
@@ -354,6 +580,54 @@
       "parallelExerciseId": "npq-eiko-test-e013"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Change “Minulla ei ole tyynyä.” (“I do not have a pillow.”) into “Don’t I have a pillow?” Use minulla (\"I as owner\") and tyynyä (\"pillow\").",
+      "acceptedAnswers": ["Eikö minulla ole tyynyä?"],
+      "explanation": "Change the opening to eikö; keep the supplied possessor and noun form.",
+      "tags": ["standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Don’t I have a pillow?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "minulla",
+            "meaning": "I as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "minä",
+            "formation": "minä has the learned possession form minulla; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "tyynyä?",
+            "meaning": "a pillow",
+            "role": "thing possessed",
+            "baseForm": "tyyny",
+            "formation": "tyyny + -ä = tyynyä. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "npq-eiko-singular-test-e105",
+      "parallelExerciseId": "npq-eiko-singular-test-e106"
+    },
+    {
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
       "prompt": "Repair “Eivätkö sinulla ole tyynyä?” to mean “Don’t you have a pillow?” Use sinulla (\"you as owner\") and tyynyä (\"pillow\"). Address one person.",
@@ -417,6 +691,61 @@
       ],
       "id": "npq-eiko-test-e020",
       "parallelExerciseId": "npq-eiko-test-e019"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Eikö minulla ole autoa?” into English. Owner: I.",
+      "acceptedAnswers": [
+        "Don’t I have a car?",
+        "Don't I have a car?",
+        "Do I not have a car?",
+        "Don’t I have the car?",
+        "Don't I have the car?",
+        "Do I not have the car?"
+      ],
+      "explanation": "The -lla/-llä phrase identifies the owner; eikö … ole stays fixed in this possession pattern. ",
+      "tags": ["standard-written-finnish", "sentence", "english-answer"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": ["auto"],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Don’t I have a car?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "minulla",
+            "meaning": "I as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "minä",
+            "formation": "minä has the learned possession form minulla; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "autoa?",
+            "meaning": "a car",
+            "role": "thing possessed",
+            "baseForm": "auto",
+            "formation": "auto + -a = autoa. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "npq-eiko-singular-test-e107",
+      "parallelExerciseId": "npq-eiko-singular-test-e108"
     },
     {
       "type": "translation-en",
@@ -522,6 +851,54 @@
       "parallelExerciseId": "npq-eiko-test-e016"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Change “Sinulla ei ole peliä.” (“You do not have a game.”) into “Don’t you have a game?” Use sinulla (\"you as owner\") and peliä (\"game\"). Address one person.",
+      "acceptedAnswers": ["Eikö sinulla ole peliä?"],
+      "explanation": "Change the opening to eikö; keep the supplied possessor and noun form.",
+      "tags": ["standard-written-finnish", "sentence", "person-sina"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Don’t you have a game?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "sinulla",
+            "meaning": "you as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "sinä",
+            "formation": "sinä has the learned possession form sinulla; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "peliä?",
+            "meaning": "a game",
+            "role": "thing possessed",
+            "baseForm": "peli",
+            "formation": "peli + -ä = peliä. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "npq-eiko-singular-test-e106",
+      "parallelExerciseId": "npq-eiko-singular-test-e105"
+    },
+    {
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
       "prompt": "Choose “Don’t I have a ball?” in Finnish. Use minulla (“I as the owner”) and palloa (“a ball”). Frame: “___ minulla ole palloa”.",
@@ -585,6 +962,61 @@
       ],
       "id": "npq-eiko-test-e001",
       "parallelExerciseId": "npq-eiko-test-e002"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Eikö sinulla ole kynää?” into English. Address one person. Owner: you.",
+      "acceptedAnswers": [
+        "Don’t you have a pen?",
+        "Don't you have a pen?",
+        "Do you not have a pen?",
+        "Don’t you have the pen?",
+        "Don't you have the pen?",
+        "Do you not have the pen?"
+      ],
+      "explanation": "The -lla/-llä phrase identifies the owner; eikö … ole stays fixed in this possession pattern. ",
+      "tags": ["standard-written-finnish", "sentence", "english-answer", "person-sina"],
+      "requiredSkills": ["Fixed eikö ole in possession questions"],
+      "vocabulary": ["kynä"],
+      "targetSkill": "Fixed eikö ole in possession questions",
+      "misconceptionCategory": "Fixed eikö ole in possession questions: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Don’t you have a pen?",
+        "pattern": "eikö + possessor + fixed ole + singular partitive noun",
+        "parts": [
+          {
+            "finnish": "Eikö",
+            "meaning": "don’t/doesn’t …?",
+            "role": "negative question verb",
+            "baseForm": "ei",
+            "formation": "Ei + the question ending -kö = eikö. The front-vowel ending follows ei, independently of the noun."
+          },
+          {
+            "finnish": "sinulla",
+            "meaning": "you as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "sinä",
+            "formation": "sinä has the learned possession form sinulla; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "ole",
+            "meaning": "have",
+            "role": "negative form of olla",
+            "baseForm": "olla",
+            "formation": "Negative possession keeps ole after eikö, with every owner."
+          },
+          {
+            "finnish": "kynää?",
+            "meaning": "a pen",
+            "role": "thing possessed",
+            "baseForm": "kynä",
+            "formation": "kynä + -ä = kynää. This is the singular partitive, the noun form used when possession is denied."
+          }
+        ]
+      },
+      "id": "npq-eiko-singular-test-e108",
+      "parallelExerciseId": "npq-eiko-singular-test-e107"
     },
     {
       "type": "multiple-choice",

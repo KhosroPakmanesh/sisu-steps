@@ -10,6 +10,61 @@
     {
       "type": "word-order",
       "instruction": "Put the words in order.",
+      "prompt": "Build “Whose game is this?” Begin with Kenen.",
+      "acceptedAnswers": ["Kenen peli tämä on?", "Kenen tämä peli on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-peli",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose game is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "peli",
+            "meaning": "game",
+            "role": "things whose owner is asked",
+            "baseForm": "peli",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "tokens": ["peli", "on?", "Kenen", "tämä"],
+      "id": "pop-whose-singular-test-e101",
+      "parallelExerciseId": "pop-whose-singular-test-e102"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
       "prompt": "Build “Whose pillow is this?” Begin with Kenen.",
       "acceptedAnswers": ["Kenen tyyny tämä on?", "Kenen tämä tyyny on?"],
       "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
@@ -65,6 +120,60 @@
     {
       "type": "translation-en",
       "instruction": "Write in English.",
+      "prompt": "Translate “Kenen talo tämä on?” into English.",
+      "acceptedAnswers": ["Whose house is this?", "Whose is this house?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-talo",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": ["talo"],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose house is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "talo",
+            "meaning": "house",
+            "role": "things whose owner is asked",
+            "baseForm": "talo",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "id": "pop-whose-singular-test-e103",
+      "parallelExerciseId": "pop-whose-singular-test-e104"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
       "prompt": "Translate “Kenen peli tämä on?” into English.",
       "acceptedAnswers": ["Whose game is this?", "Whose is this game?"],
       "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
@@ -115,6 +224,61 @@
       },
       "id": "pop-whose-test-e017",
       "parallelExerciseId": "pop-whose-test-e018"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “Whose house is this?” Begin with Kenen.",
+      "acceptedAnswers": ["Kenen talo tämä on?", "Kenen tämä talo on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-talo",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose house is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "talo",
+            "meaning": "house",
+            "role": "things whose owner is asked",
+            "baseForm": "talo",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "tokens": ["talo", "on?", "Kenen", "tämä"],
+      "id": "pop-whose-singular-test-e102",
+      "parallelExerciseId": "pop-whose-singular-test-e101"
     },
     {
       "type": "multiple-choice",
@@ -183,6 +347,60 @@
       "parallelExerciseId": "pop-whose-test-e001"
     },
     {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Translate “Kenen koira tämä on?” into English.",
+      "acceptedAnswers": ["Whose dog is this?", "Whose is this dog?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-koira",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": ["koira"],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose dog is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "koira",
+            "meaning": "dog",
+            "role": "things whose owner is asked",
+            "baseForm": "koira",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "id": "pop-whose-singular-test-e104",
+      "parallelExerciseId": "pop-whose-singular-test-e103"
+    },
+    {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
       "prompt": "Write “Whose car is this?” in Finnish. Begin with Kenen. Use auto (“car”), tämä on (“this is”).",
@@ -237,6 +455,72 @@
       "parallelExerciseId": "pop-whose-test-e006"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose “Whose pen is this?” in Finnish. Use kynä (“pen”), tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen kynä tämä on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-kynä",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose pen is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "kynä",
+            "meaning": "pen",
+            "role": "things whose owner is asked",
+            "baseForm": "kynä",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "options": [
+        "Kenen kynä tämä ovat?",
+        "Kuka kynä tämä on?",
+        "Kenen kynä tämä on?",
+        "Kenen kynänsä tämä on?"
+      ],
+      "optionFeedback": {
+        "Kenen kynä tämä on?": "Correct: Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+        "Kenen kynänsä tämä on?": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+        "Kenen kynä tämä ovat?": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+        "Kuka kynä tämä on?": "Ask with kenen; keep the unsuffixed basic noun and tämä on."
+      },
+      "id": "pop-whose-singular-test-e105",
+      "parallelExerciseId": "pop-whose-singular-test-e106"
+    },
+    {
       "type": "fill-blank",
       "instruction": "Fill in the missing word.",
       "prompt": "Complete “Whose game is this?”: Kenen ___ tämä on? Use peli (“game”).",
@@ -289,6 +573,60 @@
       },
       "id": "pop-whose-test-e014",
       "parallelExerciseId": "pop-whose-test-e013"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “Whose cat is this?” in Finnish. Begin with Kenen. Use kissa (“cat”), tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen kissa tämä on?", "Kenen tämä kissa on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-kissa",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose cat is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "kissa",
+            "meaning": "cat",
+            "role": "things whose owner is asked",
+            "baseForm": "kissa",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "id": "pop-whose-singular-test-e107",
+      "parallelExerciseId": "pop-whose-singular-test-e108"
     },
     {
       "type": "word-order",
@@ -346,6 +684,72 @@
       "parallelExerciseId": "pop-whose-test-e010"
     },
     {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct answer.",
+      "prompt": "Choose “Whose cat is this?” in Finnish. Use kissa (“cat”), tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen kissa tämä on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-kissa",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose cat is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "kissa",
+            "meaning": "cat",
+            "role": "things whose owner is asked",
+            "baseForm": "kissa",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "options": [
+        "Kuka kissa tämä on?",
+        "Kenen kissa tämä on?",
+        "Kenen kissansa tämä on?",
+        "Kenen kissa tämä ovat?"
+      ],
+      "optionFeedback": {
+        "Kenen kissa tämä on?": "Correct: Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+        "Kenen kissansa tämä on?": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+        "Kenen kissa tämä ovat?": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+        "Kuka kissa tämä on?": "Ask with kenen; keep the unsuffixed basic noun and tämä on."
+      },
+      "id": "pop-whose-singular-test-e106",
+      "parallelExerciseId": "pop-whose-singular-test-e105"
+    },
+    {
       "type": "translation-en",
       "instruction": "Write in English.",
       "prompt": "Translate “Kenen kissa tämä on?” into English.",
@@ -400,6 +804,60 @@
       "parallelExerciseId": "pop-whose-test-e017"
     },
     {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Write “Whose dog is this?” in Finnish. Begin with Kenen. Use koira (“dog”), tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen koira tämä on?", "Kenen tämä koira on?"],
+      "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-koira",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose dog is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "koira",
+            "meaning": "dog",
+            "role": "things whose owner is asked",
+            "baseForm": "koira",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "id": "pop-whose-singular-test-e108",
+      "parallelExerciseId": "pop-whose-singular-test-e107"
+    },
+    {
       "type": "fill-blank",
       "instruction": "Fill in the missing word.",
       "prompt": "Complete “Whose pillow is this?”: Kenen ___ tämä on? Use tyyny (“pillow”).",
@@ -452,6 +910,60 @@
       },
       "id": "pop-whose-test-e013",
       "parallelExerciseId": "pop-whose-test-e014"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose house is this?”: ___ tämä on? Write the question word and noun. Use talo (“house”) and tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen talo"],
+      "explanation": "Write kenen (“whose”) before the supplied noun talo. Keep the noun without a personal possessive ending; tämä on is already given.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-talo",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose house is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "talo",
+            "meaning": "house",
+            "role": "things whose owner is asked",
+            "baseForm": "talo",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "id": "pop-whose-singular-test-e109",
+      "parallelExerciseId": "pop-whose-singular-test-e110"
     },
     {
       "type": "translation-fi",
@@ -572,6 +1084,60 @@
       },
       "id": "pop-whose-test-e001",
       "parallelExerciseId": "pop-whose-test-e002"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose apple is this?”: ___ tämä on? Write the question word and noun. Use omena (“apple”) and tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen omena"],
+      "explanation": "Write kenen (“whose”) before the supplied noun omena. Keep the noun without a personal possessive ending; tämä on is already given.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "possessive-noun-omena",
+        "objects-singular",
+        "whose-question"
+      ],
+      "requiredSkills": ["Whose questions with kenen"],
+      "vocabulary": [],
+      "targetSkill": "Whose questions with kenen",
+      "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "Whose apple is this?",
+        "pattern": "kenen + basic noun + tämä + on",
+        "parts": [
+          {
+            "finnish": "Kenen",
+            "meaning": "whose",
+            "role": "question about the owner",
+            "baseForm": "kuka",
+            "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
+          },
+          {
+            "finnish": "omena",
+            "meaning": "apple",
+            "role": "things whose owner is asked",
+            "baseForm": "omena",
+            "formation": "Keep the basic singular noun without a personal suffix."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Tämä identifies one thing."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use on with singular tämä; ask whose with kenen."
+          }
+        ]
+      },
+      "id": "pop-whose-singular-test-e110",
+      "parallelExerciseId": "pop-whose-singular-test-e109"
     }
   ],
   "numberScope": {

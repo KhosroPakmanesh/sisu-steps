@@ -49,6 +49,20 @@ describe('content-pack version alignment', () => {
   it.each([
     ['demonstrative practice expansion', { 'demonstrative-pronouns': '1.0.0' }],
     [
+      'nine Focused test expansions',
+      {
+        'personal-pronouns-affirmative-olla': '1.2.0',
+        'negative-olla-statements': '1.1.0',
+        'olla-questions-short-answers': '1.1.0',
+        'negative-demonstrative-statements': '1.2.0',
+        'affirmative-possession': '1.4.0',
+        'negative-possession': '1.4.0',
+        'possession-questions': '1.4.0',
+        'negative-possession-questions': '1.4.0',
+        'possessive-pronouns-endings': '2.1.0',
+      },
+    ],
+    [
       'five earlier ownership revisions',
       {
         'affirmative-possession': '1.2.0',
@@ -191,12 +205,12 @@ describe('content-pack version alignment', () => {
       },
     ];
     const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
-    expect(revised.version).toBe('2.1.0');
+    expect(revised.version).toBe('2.2.0');
     expect(aligned.attempts).toEqual([state.attempts[1]]);
     expect(aligned.unresolvedMistakeIds).toEqual([state.unresolvedMistakeIds[1]]);
     expect(aligned.lessonCompletions).toEqual([state.lessonCompletions[1]]);
     expect(aligned.learnerNotes).toEqual(state.learnerNotes);
-    expect(aligned.contentPackVersions[revised.id]).toBe('2.1.0');
+    expect(aligned.contentPackVersions[revised.id]).toBe('2.2.0');
     expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
   });
 

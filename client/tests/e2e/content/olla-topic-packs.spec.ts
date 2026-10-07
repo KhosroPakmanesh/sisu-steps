@@ -7,7 +7,7 @@ const packs = [
     tests: 12,
     focused: 10,
     reviews: 2,
-    exercises: 242,
+    exercises: 290,
   },
   {
     id: 'negative-olla-statements',
@@ -15,7 +15,7 @@ const packs = [
     tests: 5,
     focused: 4,
     reviews: 1,
-    exercises: 100,
+    exercises: 116,
   },
   {
     id: 'olla-questions-short-answers',
@@ -23,7 +23,7 @@ const packs = [
     tests: 8,
     focused: 6,
     reviews: 2,
-    exercises: 178,
+    exercises: 194,
   },
 ];
 
@@ -33,7 +33,7 @@ test('opens each smaller pronoun and olla topic pack without reducing the conten
   await page.goto('/');
 
   await expect(page.locator('.topic-card')).toHaveCount(14);
-  await expect(page.locator('.catalog-stats')).toContainText('2386');
+  await expect(page.locator('.catalog-stats')).toContainText('2758');
 
   for (const pack of packs) {
     const topicCard = page.locator('.topic-card').filter({

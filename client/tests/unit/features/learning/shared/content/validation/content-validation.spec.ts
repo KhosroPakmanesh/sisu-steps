@@ -686,6 +686,54 @@ describe('content-pack validation', () => {
       'Exercise exercise-1 uses vocabulary not introduced for test test.',
     );
   });
+  it('enforces 20 scored questions at runtime and in direct source validation', async () => {
+    const enough = validPack();
+    enough.tests[0].exercises = scoredExercises(20);
+    expect(() => validateTopicPack(enough)).not.toThrow();
+    expect((await validatePackContent(enough)).errors).toEqual([]);
+    const short = validPack();
+    const exercises = scoredExercises(40);
+    short.tests = [
+      { ...short.tests[0], exercises: exercises.slice(0, 19) },
+      { ...short.tests[0], id: 'review', stage: 'review', exercises: exercises.slice(19) },
+    ];
+    expect(() => validateTopicPack(short)).toThrow('at least 20 scored questions');
+    expect((await validatePackContent(short)).errors.join('\n')).toContain(
+      'at least 20 scored questions',
+    );
+  });
+
+  it('counts shared singular and plural Focused tests independently', async () => {
+    const pack = validPack();
+    const exercises = scoredExercises(40);
+    pack.tests = [
+      { ...pack.tests[0], id: 'singular', exercises: exercises.slice(0, 19) },
+      { ...pack.tests[0], id: 'plural', exercises: exercises.slice(19) },
+    ];
+    expect(() => validateTopicPack(pack)).toThrow(
+      'Focused test singular must contain at least 20 scored questions.',
+    );
+    expect((await validatePackContent(pack)).errors.join('\n')).toContain(
+      'singular: Focused test must contain at least 20 scored questions',
+    );
+    pack.tests[0].exercises = exercises.slice(0, 20);
+    pack.tests[1].exercises = exercises.slice(20);
+    expect(() => validateTopicPack(pack)).not.toThrow();
+    expect((await validatePackContent(pack)).errors).toEqual([]);
+  });
+
+  it('keeps small Reviews and optional practice outside the Focused minimum', async () => {
+    const pack = validPack();
+    const exercises = scoredExercises(22);
+    pack.tests = [
+      { ...pack.tests[0], exercises: exercises.slice(0, 20) },
+      { ...pack.tests[0], id: 'review', stage: 'review', exercises: exercises.slice(20) },
+    ];
+    expect(pack.lessons[0].practiceExercises).toHaveLength(2);
+    expect(() => validateTopicPack(pack)).not.toThrow();
+    expect((await validatePackContent(pack)).errors).toEqual([]);
+  });
+
   it('allows pedagogically sized packs and rejects empty or over-limit scored sets', () => {
     const compact = validPack();
     compact.tests[0].exercises = scoredExercises(100);
@@ -757,14 +805,14 @@ describe('content-pack validation', () => {
     const pack = validPack();
     const exercises = pack.tests[0].exercises;
     pack.tests = [
-      { ...pack.tests[0], id: 'first-focused-test', exercises: exercises.slice(0, 2) },
+      { ...pack.tests[0], id: 'first-focused-test', exercises: exercises.slice(0, 20) },
       {
         ...pack.tests[0],
         id: 'review-test',
         stage: 'review',
-        exercises: exercises.slice(2, 4),
+        exercises: exercises.slice(20, 22),
       },
-      { ...pack.tests[0], id: 'later-focused-test', exercises: exercises.slice(4) },
+      { ...pack.tests[0], id: 'later-focused-test', exercises: exercises.slice(22) },
     ];
     expect(() => validateTopicPack(pack)).toThrowError(
       'A focused test cannot appear after the review group has started.',

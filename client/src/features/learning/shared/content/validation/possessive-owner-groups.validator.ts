@@ -25,9 +25,7 @@ const TEST_IDS = [
   'ppe-review',
   'pop-review',
 ];
-const TEST_COUNTS = TEST_IDS.map((id) =>
-  id.endsWith('review') ? 32 : /-(singular|plural)-test$/u.test(id) ? 10 : 20,
-);
+const TEST_COUNTS = TEST_IDS.map((id) => (id.endsWith('review') ? 32 : 20));
 const NOUNS = [
   'pallo',
   'kirja',
@@ -46,7 +44,7 @@ export function validatePossessiveOwnerGroups(pack: TopicPack): void {
   if (pack.id !== 'possessive-pronouns-endings') return;
   const errors: string[] = [];
   if (
-    pack.version !== '2.1.0' ||
+    pack.version !== '2.2.0' ||
     pack.level !== '0 - A1.3' ||
     pack.lessons.length !== 16 ||
     pack.lessons.some(
@@ -60,7 +58,7 @@ export function validatePossessiveOwnerGroups(pack: TopicPack): void {
     )
   )
     errors.push(
-      `${pack.id}: preserve equal owner-group counts: twelve 20-question and eight 10-question Focused tests and two 32-question Reviews`,
+      `${pack.id}: preserve equal owner-group counts: twenty 20-question Focused tests and two 32-question Reviews`,
     );
   if (
     pack.lessons.some((lesson, index) => lesson.id !== LESSON_IDS[index]) ||
@@ -144,12 +142,20 @@ export function validatePossessiveOwnerGroups(pack: TopicPack): void {
 function validateQuestion(exercise: Exercise, words: string[], noun: string, errors: string[]) {
   const plural = exercise.tags.includes('objects-plural');
   const form = noun + (plural ? 't' : '');
+  const demonstrative = plural ? 'nämä' : 'tämä';
+  const prefixBlank = exercise.prompt.includes(`: ___ ${demonstrative} ${plural ? 'ovat' : 'on'}?`);
+  if (exercise.type === 'fill-blank' && (words.length === 2 || prefixBlank)) {
+    if (words.length !== 2 || words[0] !== 'kenen' || words[1] !== form || !prefixBlank)
+      errors.push(
+        `${exercise.id}: the two-word blank needs kenen and the unsuffixed noun before the supplied matching frame`,
+      );
+    return;
+  }
   if (words.length === 1 && exercise.type === 'fill-blank') {
     if (words[0] !== form)
       errors.push(`${exercise.id}: kenen needs an unsuffixed plural noun or basic singular noun`);
     return;
   }
-  const demonstrative = plural ? 'nämä' : 'tämä';
   if (
     words.length !== 4 ||
     words[0] !== 'kenen' ||

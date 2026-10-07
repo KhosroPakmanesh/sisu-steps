@@ -15,7 +15,7 @@ const packs = [
     title: 'Negative demonstrative statements',
     tests: 5,
     focused: 4,
-    exercises: 88,
+    exercises: 108,
   },
   {
     id: 'demonstrative-questions',
@@ -32,7 +32,7 @@ test('opens every demonstrative pack with its approved Focused and Review topolo
 }) => {
   await page.goto('/');
   await expect(page.locator('.topic-card')).toHaveCount(14);
-  await expect(page.locator('.catalog-stats')).toContainText('2386');
+  await expect(page.locator('.catalog-stats')).toContainText('2758');
 
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);

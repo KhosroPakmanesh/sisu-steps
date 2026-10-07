@@ -25,11 +25,9 @@ export function validateOwnershipPack(pack) {
   if (!mode) return [];
   const errors = mode === 'possessive' ? validateOwnerNumbers(pack) : [];
   const counts =
-    mode === 'possessive'
-      ? [...Array(12).fill(20), ...Array(8).fill(10), 32, 32]
-      : [...Array(6).fill(12), 24];
+    mode === 'possessive' ? [...Array(20).fill(20), 32, 32] : [...Array(6).fill(20), 24];
   if (
-    pack.version !== (mode === 'possessive' ? '2.1.0' : '1.4.0') ||
+    pack.version !== (mode === 'possessive' ? '2.2.0' : '1.5.0') ||
     pack.level !== '0 - A1.3' ||
     pack.tests.length !== counts.length ||
     pack.tests.some((test, index) => test.exercises.length !== counts[index])
@@ -224,9 +222,25 @@ function validatePossessives(exercise, surfaces, errors) {
       if (words.length === 1 && words[0] === 'kenen') continue;
       const plural = exercise.tags.includes('objects-plural');
       const nounForms = plural ? NOUNS.map((noun) => `${noun}t`) : NOUNS;
-      if (words.length === 1 && exercise.type === 'fill-blank' && nounForms.includes(words[0]))
-        continue;
       const demonstrative = plural ? 'nämä' : 'tämä';
+      const prefixBlank = exercise.prompt.includes(
+        `: ___ ${demonstrative} ${plural ? 'ovat' : 'on'}?`,
+      );
+      if (
+        words.length === 1 &&
+        exercise.type === 'fill-blank' &&
+        nounForms.includes(words[0]) &&
+        !prefixBlank
+      )
+        continue;
+      if (
+        exercise.type === 'fill-blank' &&
+        words.length === 2 &&
+        words[0] === 'kenen' &&
+        nounForms.includes(words[1]) &&
+        prefixBlank
+      )
+        continue;
       const noun = words[1] === demonstrative ? words[2] : words[1];
       if (
         words[0] !== 'kenen' ||
