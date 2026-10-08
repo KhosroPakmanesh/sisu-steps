@@ -1,5 +1,7 @@
 # G006 — Pack-owned content sources
 
+G006 retains the 2026-08-28 source-ownership migration and its compatibility baseline. [G009](../G009-bounded-pack-content-loading/requirements.md) supersedes eager complete-collection startup in REQ-G006-014/015/023: startup validates catalog/manifests; full packs validate on demand, with aggregate validation at authoring and full-restore boundaries. [Client G008](../G008-concept-aligned-client-structure/requirements.md) governs current validation-family and test ownership. Root G001's successor-pack requirements retired the original `vowel-harmony-kpt-tplural` pack; its dated identity/version equivalence below remains historical evidence.
+
 ## Goal
 
 Separate authored Finnish content completely from Angular presentation and content tooling by giving every topic pack one same-named folder of pure JSON files. The files under `client/content/` are both the only source of truth and the static assets deployed by Angular. A generic browser content service assembles the registered manifests, lessons, and learning tests in memory without generating or storing a second content tree.
@@ -70,7 +72,7 @@ client/
   tests/
     unit/
       features/learning/shared/content/
-      tools/content/
+      tools/content-validation/
 ```
 
 ## Responsibility boundaries

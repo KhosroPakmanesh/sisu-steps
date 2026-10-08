@@ -54,6 +54,7 @@ client/
     setup.ts
     helpers/
       unit/
+      integration/
     unit/
       app/
       features/
@@ -73,6 +74,7 @@ client/
       foundations/
       olla/
       demonstratives/
+      ownership/
 ```
 
 ## Rules

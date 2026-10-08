@@ -142,13 +142,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
-      "prompt": "Write “Whose cats are these?” in Finnish. Begin with Kenen. Use kissat (“cats”), nämä ovat (“these are”).",
-      "acceptedAnswers": ["Kenen kissat nämä ovat?", "Kenen nämä kissat ovat?"],
+      "prompt": "Write “Whose cars are these?” in Finnish. Begin with Kenen. Use autot (“cars”), nämä ovat (“these are”).",
+      "acceptedAnswers": ["Kenen autot nämä ovat?", "Kenen nämä autot ovat?"],
       "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "possessive-noun-kissa",
+        "possessive-noun-auto",
         "objects-plural",
         "whose-question"
       ],
@@ -157,7 +157,7 @@
       "targetSkill": "Whose questions with kenen",
       "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "Whose cats are these?",
+        "translation": "Whose cars are these?",
         "pattern": "kenen + unsuffixed plural noun + nämä + ovat",
         "parts": [
           {
@@ -168,11 +168,11 @@
             "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
           },
           {
-            "finnish": "kissat",
-            "meaning": "cats",
+            "finnish": "autot",
+            "meaning": "cars",
             "role": "things whose owner is asked",
-            "baseForm": "kissa",
-            "formation": "kissa + -t = kissat. No personal owner is named, so keep -t and add no personal possessive suffix."
+            "baseForm": "auto",
+            "formation": "auto + -t = autot. No personal owner is named, so keep -t and add no personal possessive suffix."
           },
           {
             "finnish": "nämä",
@@ -315,9 +315,9 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the missing word.",
-      "prompt": "Complete “Whose cats are these?”: Kenen ___ nämä ovat? Use kissa (“cat”) + plural -t.",
-      "acceptedAnswers": ["kissat"],
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose cats are these?”: ___ nämä ovat? Use kissat (“cats”).",
+      "acceptedAnswers": ["Kenen kissat"],
       "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
       "tags": [
         "standard-written-finnish",
@@ -639,9 +639,9 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the missing word.",
-      "prompt": "Complete “Whose games are these?”: Kenen ___ nämä ovat? Use peli (“game”) + plural -t.",
-      "acceptedAnswers": ["pelit"],
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose games are these?”: ___ nämä ovat? Use pelit (“games”).",
+      "acceptedAnswers": ["Kenen pelit"],
       "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
       "tags": [
         "standard-written-finnish",

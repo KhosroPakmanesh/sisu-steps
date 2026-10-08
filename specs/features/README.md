@@ -1,12 +1,14 @@
 # Feature specifications
 
-- `G001-local-finnish-exercise-book` defines the delivered learner behavior, content policy, persistence semantics, and validation evidence.
-- `../../client/specs/features/G002-technical-guidance-alignment` retains the completed behavior-preserving client architecture, governance, repository-layout, test-separation, design-system, and developer-workflow migration.
-- `G003-scalable-topic-navigation` separates the compact topic catalog from each pack's complete learning map while preserving direct lesson and study access.
-- `G004-nordic-notebook-experience` defines the immersive, eye-comfortable Nordic notebook presentation, automatic appearance behavior, and novice-friendly interaction hierarchy across the client.
-- `G005-interactive-nordic-workbook-world` extends that stable baseline into a fully custom-looking physical workbook world with accessible object controls, route scenes, motion, and system sheets while preserving learner behavior.
-- `../../client/specs/features/G006-pack-owned-content-sources` makes pure-JSON, same-named pack folders the sole source and deployed asset tree, with generic validation and in-memory runtime assembly separated from Angular presentation.
-- `G007-scalable-stats-navigation` replaces the separate Reports and Data & backup destinations with Notebook/Stats navigation, a backup-first Stats overview, and dedicated per-pack statistics and history-management pages.
-- `G008-manual-google-drive-recovery` adds one optional, manually managed hidden Google Drive recovery checkpoint while preserving IndexedDB as the authoritative live store and keeping synchronization, accounts, and background network behavior out of scope.
+- [G001-local-finnish-exercise-book](G001-local-finnish-exercise-book/plan.md) defines the delivered learner behavior, content policy, persistence semantics, and validation evidence.
+- [G002-technical-guidance-alignment](../../client/specs/features/G002-technical-guidance-alignment/plan.md) retains the completed behavior-preserving client architecture, governance, repository-layout, test-separation, design-system, and developer-workflow migration.
+- [G003-scalable-topic-navigation](G003-scalable-topic-navigation/plan.md) separates the compact topic catalog from each pack's complete learning map while preserving direct lesson and study access.
+- [G004-nordic-notebook-experience](G004-nordic-notebook-experience/plan.md) defines the immersive, eye-comfortable Nordic notebook presentation, automatic appearance behavior, and novice-friendly interaction hierarchy across the client.
+- [G005-interactive-nordic-workbook-world](G005-interactive-nordic-workbook-world/plan.md) extends that stable baseline into a fully custom-looking physical workbook world with accessible object controls, route scenes, motion, and system sheets while preserving learner behavior.
+- [G006-pack-owned-content-sources](../../client/specs/features/G006-pack-owned-content-sources/plan.md) makes pure-JSON, same-named pack folders the sole source and deployed asset tree, with generic validation and in-memory runtime assembly separated from Angular presentation.
+- [G007-scalable-stats-navigation](G007-scalable-stats-navigation/plan.md) replaces the separate Reports and Data & backup destinations with Notebook/Stats navigation, a backup-first Stats overview, and dedicated per-pack statistics and history-management pages.
+- [G008-manual-google-drive-recovery](G008-manual-google-drive-recovery/plan.md) adds one optional, manually managed hidden Google Drive recovery checkpoint while preserving IndexedDB as the authoritative live store and keeping synchronization, accounts, and background network behavior out of scope.
 
 G001 remains the primary product contract. Client technical specifications may reorganize implementation and improve validation but may not change root product behavior unless an explicitly approved root feature spec, such as G003, says so.
+
+The separate [client G008 structure](../../client/specs/features/G008-concept-aligned-client-structure/plan.md) and [G009 content loading](../../client/specs/features/G009-bounded-pack-content-loading/plan.md) govern current implementation. Root and client G008 retain their stable IDs; qualify cross-area references by owner. G001 current teaching-quality evidence and limitations are recorded in the [complete Focused quality follow-up](../content-assessments/focused-exercise-quality.md); earlier selected-revision evidence retains its dated scope.

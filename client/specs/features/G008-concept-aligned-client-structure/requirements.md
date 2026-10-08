@@ -3,7 +3,7 @@
 ## Product-language requirements
 
 - **REQ-G008-001:** Client production code, tests, and current technical guidance shall describe the learner-facing concepts as topics, lessons, study, progress statistics, and learner data; they shall not model a persisted or generated `Report` entity.
-- **REQ-G008-002:** The existing `/`, `/topics/:topicId`, `/lessons/:lessonId`, `/study/:testId`, `/stats`, and `/stats/:topicId` routes and their learner-visible behavior shall remain unchanged.
+- **REQ-G008-002:** The existing `/`, `/topics/:topicId`, `/learn/:topicId/:testId`, `/study/:topicId/:testId`, `/mistakes/:topicId`, `/review/:topicId`, `/stats`, and `/stats/:topicId` routes and their learner-visible behavior shall remain unchanged.
 - **REQ-G008-003:** The refactor shall preserve IndexedDB database names, object stores, keys, record shapes, schema versions, backup compatibility, stable content IDs, authored content, and content versions.
 
 ## Source-ownership requirements
@@ -20,7 +20,7 @@
 - **REQ-G008-010:** Unit tests shall live under `tests/unit` and mirror the production owner and module name. Reusable unit fakes and builders shall live under `tests/helpers/unit` rather than a fake production feature.
 - **REQ-G008-011:** Tests that exercise more than one learning workflow or a complete stateful operation shall live under `tests/integration/learning`; unit tests shall not act as catch-all workflow suites.
 - **REQ-G008-012:** Playwright tests shall be grouped by learner workflows and cross-cutting quality concerns under `tests/e2e`; shared browser setup and helpers shall not be mixed with test specifications.
-- **REQ-G008-013:** The regular unit command shall run unit tests only, a dedicated integration command shall run integration tests, and the aggregate check shall run both before the production build.
+- **REQ-G008-013:** The regular unit command shall run unit tests only, a dedicated integration command shall run integration tests, and the aggregate check shall retain the production build before both test stages, as explicitly selected by the user on 2026-10-08.
 
 ## Enforcement and compatibility requirements
 

@@ -727,8 +727,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Keep the person agreement exact. Write “I am there.” Use the explicit subject minä.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Minä on siellä.” to mean “I am there.” Use minä (“I”) and siellä (“there”).",
       "acceptedAnswers": ["Minä olen siellä."],
       "explanation": "Minä takes olen, the matching present-tense form of olla.",
       "tags": ["sentence", "person-mina", "affirmative", "standard-written-finnish"],
@@ -766,6 +766,11 @@
           "answers": ["Minä oon siellä."],
           "category": "Spoken form",
           "explanation": "That is a spoken form. Use “Minä olen siellä.” here."
+        },
+        {
+          "answers": ["Minä on siellä."],
+          "category": "Singular affirmative olla: form not yet secure",
+          "explanation": "Minä takes olen, the matching present-tense form of olla."
         }
       ],
       "targetSkill": "Singular affirmative olla",
@@ -960,8 +965,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Read the whole meaning before answering. Write “He or she is tired.” Use the explicit subject hän.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Hän olen väsynyt.” to mean “He or she is tired.” Use hän (“he or she”) and väsynyt (“tired”).",
       "acceptedAnswers": ["Hän on väsynyt."],
       "explanation": "Hän takes on, the matching present-tense form of olla.",
       "tags": ["sentence", "person-han", "affirmative", "standard-written-finnish"],
@@ -997,7 +1002,14 @@
       "targetSkill": "Singular affirmative olla",
       "misconceptionCategory": "Singular affirmative olla: form not yet secure",
       "id": "ppo-t04-e15",
-      "parallelExerciseId": "ppo-t04-e03"
+      "parallelExerciseId": "ppo-t04-e03",
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän olen väsynyt."],
+          "category": "Singular affirmative olla: form not yet secure",
+          "explanation": "Hän takes on, the matching present-tense form of olla."
+        }
+      ]
     },
     {
       "type": "fill-blank",

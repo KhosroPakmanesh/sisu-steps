@@ -1,5 +1,7 @@
 # Finnish foundations A1 — pedagogy assessment
 
+Historical assessment of the retired combined foundations pack. Root [G001 successor requirements](../features/G001-local-finnish-exercise-book/requirements.md#vowel-harmony-kpt-and-t-plural-successor-packs) replaced it with [vowel harmony](vowel-harmony-location-endings.md), [singular KPT](kpt-singular-forms.md) and [T-plural agreement](t-plural-agreement.md). Preserve the dated counts, versions and decisions below as source evidence.
+
 ## Version 6.1.0 complete sentence prompts
 
 ### Pre-authoring assessment — 2026-09-01

@@ -298,8 +298,8 @@
     {
       "id": "tpx-kpt-focused-004",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "pankki (“bank”) → ____ (“banks”) · use the supplied plural ending -t",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “pankkit” to give the requested Finnish form. Use pankki (“bank”) and supplied plural -t for “banks”.",
       "acceptedAnswers": ["pankit"],
       "explanation": "The plural ending -t is supplied. Apply kk → k to make panki-, then add -t: pankit (“banks”).",
       "tags": ["t-plural", "controlled-production"],
@@ -307,13 +307,20 @@
       "vocabulary": ["pankki"],
       "targetSkill": "T-plural with KPT",
       "misconceptionCategory": "T-plural with KPT: form not yet correct",
-      "parallelExerciseId": "tpx-kpt-focused-003"
+      "parallelExerciseId": "tpx-kpt-focused-003",
+      "answerDiagnostics": [
+        {
+          "answers": ["pankkit"],
+          "category": "T-plural with KPT: form not yet correct",
+          "explanation": "The plural ending -t is supplied. Apply kk → k to make panki-, then add -t: pankit (“banks”)."
+        }
+      ]
     },
     {
       "id": "tpx-kpt-focused-005",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “shops”. Use kauppa (“shop”); use the supplied plural ending -t.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “kauppat” to give the requested Finnish form. Use kauppa (“shop”) and supplied plural -t for “shops”.",
       "acceptedAnswers": ["kaupat"],
       "explanation": "The plural ending -t is supplied. Apply pp → p to make kaupa-, then add -t: kaupat (“shops”).",
       "tags": ["t-plural", "controlled-production"],
@@ -321,7 +328,14 @@
       "vocabulary": ["kauppa"],
       "targetSkill": "T-plural with KPT",
       "misconceptionCategory": "T-plural with KPT: form not yet correct",
-      "parallelExerciseId": "tpx-kpt-focused-006"
+      "parallelExerciseId": "tpx-kpt-focused-006",
+      "answerDiagnostics": [
+        {
+          "answers": ["kauppat"],
+          "category": "T-plural with KPT: form not yet correct",
+          "explanation": "The plural ending -t is supplied. Apply pp → p to make kaupa-, then add -t: kaupat (“shops”)."
+        }
+      ]
     },
     {
       "id": "tpx-kpt-focused-006",

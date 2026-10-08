@@ -808,8 +808,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Keep the person agreement exact. Write “I am not there in the morning.” Use the explicit subject minä.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Minä ei ole siellä aamulla.” to mean “I am not there in the morning.” Use minä (“I”), siellä (“there”), and aamulla (“in the morning”).",
       "acceptedAnswers": ["Minä en ole siellä aamulla."],
       "explanation": "Minä uses en ole: the negative verb marks the person and olla becomes ole.",
       "tags": ["sentence", "person-mina", "negative", "standard-written-finnish"],
@@ -852,7 +852,14 @@
       "targetSkill": "Singular negative olla",
       "misconceptionCategory": "Singular negative olla: form not yet secure",
       "id": "ppo-t08-e20",
-      "parallelExerciseId": "ppo-t08-e08"
+      "parallelExerciseId": "ppo-t08-e08",
+      "answerDiagnostics": [
+        {
+          "answers": ["Minä ei ole siellä aamulla."],
+          "category": "Singular negative olla: form not yet secure",
+          "explanation": "Minä uses en ole: the negative verb marks the person and olla becomes ole."
+        }
+      ]
     },
     {
       "type": "fill-blank",
@@ -1055,8 +1062,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Read the whole meaning before answering. Write “He or she is not at work tomorrow.” Use the explicit subject hän.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Hän en ole työssä huomenna.” to mean “He or she is not at work tomorrow.” Use hän (“he or she”), työssä (“at work”), and huomenna (“tomorrow”).",
       "acceptedAnswers": ["Hän ei ole työssä huomenna."],
       "explanation": "Hän uses ei ole: the negative verb marks the person and olla becomes ole.",
       "tags": ["sentence", "person-han", "negative", "standard-written-finnish"],
@@ -1099,7 +1106,14 @@
       "targetSkill": "Singular negative olla",
       "misconceptionCategory": "Singular negative olla: form not yet secure",
       "id": "ppo-t08-e15",
-      "parallelExerciseId": "ppo-t08-e03"
+      "parallelExerciseId": "ppo-t08-e03",
+      "answerDiagnostics": [
+        {
+          "answers": ["Hän en ole työssä huomenna."],
+          "category": "Singular negative olla: form not yet secure",
+          "explanation": "Hän uses ei ole: the negative verb marks the person and olla becomes ole."
+        }
+      ]
     },
     {
       "type": "fill-blank",

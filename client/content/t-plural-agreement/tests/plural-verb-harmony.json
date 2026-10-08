@@ -632,8 +632,8 @@
     {
       "id": "tpx-he-focused-003",
       "type": "multiple-choice",
-      "instruction": "Choose the agreeing verb.",
-      "prompt": "Complete “They buy.” He ____. Use the supplied stem osta-; choose and attach -vat or -vät.",
+      "instruction": "Choose the correction.",
+      "prompt": "Repair “He ostävät.” to mean “They buy.” Choose only the corrected word. Use supplied stem osta- (“buy”) and choose -vat or -vät.",
       "acceptedAnswers": ["ostavat"],
       "explanation": "The supplied stem is osta-. Add -vat to agree with he (“they”): ostavat.",
       "tags": ["verb", "plural", "sentence"],
@@ -710,8 +710,8 @@
     {
       "id": "tpx-he-focused-005",
       "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "Write “They watch.” Use the supplied stem katso-; choose and attach -vat or -vät.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “He katsovät.” to mean “They watch.” Use supplied stem katso- (“watch”) and choose -vat or -vät.",
       "acceptedAnswers": ["He katsovat.", "katsovat"],
       "explanation": "The supplied stem is katso-. Add -vat to agree with he (“they”): katsovat.",
       "tags": ["verb", "plural", "sentence"],
@@ -739,7 +739,14 @@
           }
         ]
       },
-      "parallelExerciseId": "tpx-he-focused-006"
+      "parallelExerciseId": "tpx-he-focused-006",
+      "answerDiagnostics": [
+        {
+          "answers": ["He katsovät."],
+          "category": "Third-person plural -vat/-vät: form not yet correct",
+          "explanation": "The supplied stem is katso-. Add -vat to agree with he (“they”): katsovat."
+        }
+      ]
     },
     {
       "id": "tpx-he-focused-006",

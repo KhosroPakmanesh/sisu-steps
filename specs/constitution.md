@@ -50,7 +50,7 @@ Accounts, cloud synchronization, in-app content authoring, audio, speech recogni
 ## Related guidance
 
 - `content-authoring.md` — content creation and pedagogy workflow.
-- `content-assessments/` — recorded Finnish-teaching assessments.
+- [Content assessment index](content-assessments/README.md) — dated Finnish-teaching decisions and evidence.
 - `features/README.md` — product feature index.
 - `../client/specs/README.md` — current client technical contract.
 - `../server/specs/README.md` — future server specification entrypoint.

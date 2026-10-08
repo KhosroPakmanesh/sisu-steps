@@ -332,8 +332,8 @@
     {
       "id": "kptx-kpt-clusters-focused-003",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "ranta (“beach”) → ____ (“of the beach”) · use the supplied genitive ending -n",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “rantan” to give the requested Finnish form. Use ranta (“beach”) and supplied genitive -n for “of the beach”.",
       "acceptedAnswers": ["rannan"],
       "explanation": "The genitive ending -n is supplied. Apply nt → nn to make ranna-, then add -n: rannan (“of the beach”).",
       "tags": ["kpt", "controlled-production"],
@@ -341,13 +341,20 @@
       "vocabulary": ["ranta"],
       "targetSkill": "KPT consonant clusters",
       "misconceptionCategory": "KPT consonant clusters: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-clusters-focused-004"
+      "parallelExerciseId": "kptx-kpt-clusters-focused-004",
+      "answerDiagnostics": [
+        {
+          "answers": ["rantan"],
+          "category": "KPT consonant clusters: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply nt → nn to make ranna-, then add -n: rannan (“of the beach”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-clusters-focused-004",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "silta (“bridge”) → ____ (“of the bridge”) · use the supplied genitive ending -n",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “siltan” to give the requested Finnish form. Use silta (“bridge”) and supplied genitive -n for “of the bridge”.",
       "acceptedAnswers": ["sillan"],
       "explanation": "The genitive ending -n is supplied. Apply lt → ll to make silla-, then add -n: sillan (“of the bridge”).",
       "tags": ["kpt", "controlled-production"],
@@ -355,13 +362,20 @@
       "vocabulary": ["silta"],
       "targetSkill": "KPT consonant clusters",
       "misconceptionCategory": "KPT consonant clusters: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-clusters-focused-003"
+      "parallelExerciseId": "kptx-kpt-clusters-focused-003",
+      "answerDiagnostics": [
+        {
+          "answers": ["siltan"],
+          "category": "KPT consonant clusters: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply lt → ll to make silla-, then add -n: sillan (“of the bridge”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-clusters-focused-005",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “of the city”. Use kaupunki (“city”); use the supplied genitive ending -n.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “kaupunkin” to give the requested Finnish form. Use kaupunki (“city”) and supplied genitive -n for “of the city”.",
       "acceptedAnswers": ["kaupungin"],
       "explanation": "The genitive ending -n is supplied. Apply nk → ng to make kaupungi-, then add -n: kaupungin (“of the city”).",
       "tags": ["kpt", "controlled-production"],
@@ -369,13 +383,20 @@
       "vocabulary": ["kaupunki"],
       "targetSkill": "KPT consonant clusters",
       "misconceptionCategory": "KPT consonant clusters: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-clusters-focused-006"
+      "parallelExerciseId": "kptx-kpt-clusters-focused-006",
+      "answerDiagnostics": [
+        {
+          "answers": ["kaupunkin"],
+          "category": "KPT consonant clusters: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply nk → ng to make kaupungi-, then add -n: kaupungin (“of the city”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-clusters-focused-006",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “of the shoe”. Use kenkä (“shoe”); use the supplied genitive ending -n.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “kenkän” to give the requested Finnish form. Use kenkä (“shoe”) and supplied genitive -n for “of the shoe”.",
       "acceptedAnswers": ["kengän"],
       "explanation": "The genitive ending -n is supplied. Apply nk → ng to make kengä-, then add -n: kengän (“of the shoe”).",
       "tags": ["kpt", "controlled-production"],
@@ -383,7 +404,14 @@
       "vocabulary": ["kenkä"],
       "targetSkill": "KPT consonant clusters",
       "misconceptionCategory": "KPT consonant clusters: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-clusters-focused-005"
+      "parallelExerciseId": "kptx-kpt-clusters-focused-005",
+      "answerDiagnostics": [
+        {
+          "answers": ["kenkän"],
+          "category": "KPT consonant clusters: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply nk → ng to make kengä-, then add -n: kengän (“of the shoe”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-clusters-focused-007",

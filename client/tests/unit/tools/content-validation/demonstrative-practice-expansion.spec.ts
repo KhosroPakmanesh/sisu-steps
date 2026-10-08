@@ -24,7 +24,7 @@ describe('existing-format demonstrative expansion', () => {
   it('loads balanced tests and grades every new alternative and diagnostic', () => {
     expect(validateSource(pack)).toEqual([]);
     expect(() => validateRuntime(pack)).not.toThrow();
-    expect(validateTopicPack(pack).version).toBe('1.1.0');
+    expect(validateTopicPack(pack).version).toBe('1.2.0');
     const added = pack.tests
       .flatMap((test) => test.exercises)
       .filter(
@@ -61,7 +61,7 @@ describe('existing-format demonstrative expansion', () => {
       if (kind === 'version') changed.version = '1.0.0';
       const message =
         kind === 'version'
-          ? 'expanded practice requires version 1.1.0'
+          ? 'expanded practice requires version 1.2.0'
           : 'keep 20 questions and four of each existing format';
       expect(validateSource(changed).join('\n')).toContain(message);
       expect(() => validateRuntime(changed)).toThrow(message);

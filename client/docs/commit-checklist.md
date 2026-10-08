@@ -1,6 +1,6 @@
 # Commit checklist
 
-Use this checklist before asking for or creating a commit.
+Use this checklist before client handoff or a requested commit. Root [repository guidance](../../AGENTS.md) and the [repository checklist](../../docs/commit-checklist.md) also apply; the same checks support refactor review.
 
 ## Scope
 
@@ -30,3 +30,13 @@ Use this checklist before asking for or creating a commit.
 - [ ] Specs or agent rules changed when behavior, architecture, validation, storage, or developer workflow changed.
 - [ ] The baseline comparison was reviewed for stale paths, hidden behavior changes, and generated artifacts.
 - [ ] Remaining risks and skipped checks are documented.
+
+## Refactor and affected-workflow review
+
+- [ ] Review source ownership and responsibility against [feature slices](../specs/architecture/client-feature-slices.md) and [purposeful modules](../specs/architecture/purposeful-modules.md), including lazy routes, dependency direction, mirrored unit tests and separate integration coverage.
+- [ ] Exercise the affected topic map, lesson reading/practice, saved-session reload, mistake correction and eligible parallel review. Optional practice stays unscored; button-operated answer reveal records a skip without creating or resolving mistakes.
+- [ ] Check changed screens at 320, 768 and 1440 pixels with a keyboard and reduced motion, following the [accessibility validation](../specs/design-system/accessibility.md#validation). Record any native zoom, assistive-technology or physical-device check not performed.
+- [ ] Export and restore when data operations change; verify malformed/incompatible imports preserve current data and test/topic/all clearing uses exact consequence wording. Follow [persistence](../specs/architecture/browser-local-persistence.md) and the governing compatibility requirements.
+- [ ] Review automatic bundled-resource requests and explicit download/restore/clear actions; any new external boundary requires the owning product contract. Optional Drive recovery follows root [G008](../../specs/features/G008-manual-google-drive-recovery/requirements.md).
+
+The original 2026-08-18 refactor results remain in [G002 completion evidence](../specs/features/G002-technical-guidance-alignment/validation.md#completion-evidence); this checklist replaces the separate manual refactor guide.

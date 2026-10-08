@@ -358,8 +358,8 @@
     {
       "id": "kptx-kpt-singles-focused-005",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “of the permission”. Use lupa (“permission”); use the supplied genitive ending -n.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “lupan” to give the requested Finnish form. Use lupa (“permission”) and supplied genitive -n for “of the permission”.",
       "acceptedAnswers": ["luvan"],
       "explanation": "The genitive ending -n is supplied. Apply p → v to make luva-, then add -n: luvan (“of the permission”).",
       "tags": ["kpt", "controlled-production"],
@@ -367,13 +367,20 @@
       "vocabulary": ["lupa"],
       "targetSkill": "KPT common single consonants",
       "misconceptionCategory": "KPT common single consonants: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-singles-focused-006"
+      "parallelExerciseId": "kptx-kpt-singles-focused-006",
+      "answerDiagnostics": [
+        {
+          "answers": ["lupan"],
+          "category": "KPT common single consonants: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply p → v to make luva-, then add -n: luvan (“of the permission”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-singles-focused-006",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “of the foot or leg”. Use jalka (“foot or leg”); use the supplied genitive ending -n.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “jalkan” to give the requested Finnish form. Use jalka (“foot or leg”) and supplied genitive -n for “of the foot or leg”.",
       "acceptedAnswers": ["jalan"],
       "explanation": "The genitive ending -n is supplied. Apply k disappears to make jala-, then add -n: jalan (“of the foot or leg”).",
       "tags": ["kpt", "controlled-production"],
@@ -381,7 +388,14 @@
       "vocabulary": ["jalka"],
       "targetSkill": "KPT common single consonants",
       "misconceptionCategory": "KPT common single consonants: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-singles-focused-005"
+      "parallelExerciseId": "kptx-kpt-singles-focused-005",
+      "answerDiagnostics": [
+        {
+          "answers": ["jalkan"],
+          "category": "KPT common single consonants: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply k disappears to make jala-, then add -n: jalan (“of the foot or leg”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-singles-focused-007",

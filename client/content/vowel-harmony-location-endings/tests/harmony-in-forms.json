@@ -168,8 +168,8 @@
     {
       "id": "ff-a1-t02-e11",
       "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "in the house — use the supplied base talo (“house”)",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “talossä” to give the requested Finnish form. Use talo (“house”) and choose -ssa or -ssä for “in the house”.",
       "acceptedAnswers": ["talossa"],
       "explanation": "talo means “house”; talossa means “in the house”. The back vowels a/o select -ssa.",
       "tags": ["vowel-harmony", "inessive"],
@@ -177,7 +177,14 @@
       "vocabulary": ["talo"],
       "targetSkill": "Inessive -ssa/-ssä",
       "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
-      "parallelExerciseId": "ff-a1-t02-e12"
+      "parallelExerciseId": "ff-a1-t02-e12",
+      "answerDiagnostics": [
+        {
+          "answers": ["talossä"],
+          "category": "Inessive -ssa/-ssä: form not yet correct",
+          "explanation": "talo means “house”; talossa means “in the house”. The back vowels a/o select -ssa."
+        }
+      ]
     },
     {
       "id": "ff-a1-t02-e12",
@@ -196,8 +203,8 @@
     {
       "id": "ff-a1-t02-e13",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "auto (“car”) + -ssa/-ssä → ____ (“in the car”)",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “autossä” to give the requested Finnish form. Use auto (“car”) and choose -ssa or -ssä for “in the car”.",
       "acceptedAnswers": ["autossa"],
       "explanation": "auto means “car”; autossa means “in the car”. The back vowels a/u select -ssa.",
       "tags": ["vowel-harmony", "inessive"],
@@ -205,7 +212,14 @@
       "vocabulary": ["auto"],
       "targetSkill": "Inessive -ssa/-ssä",
       "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
-      "parallelExerciseId": "ff-a1-t02-e14"
+      "parallelExerciseId": "ff-a1-t02-e14",
+      "answerDiagnostics": [
+        {
+          "answers": ["autossä"],
+          "category": "Inessive -ssa/-ssä: form not yet correct",
+          "explanation": "auto means “car”; autossa means “in the car”. The back vowels a/u select -ssa."
+        }
+      ]
     },
     {
       "id": "ff-a1-t02-e14",
@@ -230,8 +244,8 @@
     {
       "id": "ff-a1-t02-e15",
       "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "in the shop — use the supplied base myymälä (“shop”)",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “myymälassa” to give the requested Finnish form. Use myymälä (“shop”) and choose -ssa or -ssä for “in the shop”.",
       "acceptedAnswers": ["myymälässä"],
       "explanation": "myymälä means “shop”; myymälässä means “in the shop”. The front vowels y/ä select -ssä.",
       "tags": ["vowel-harmony", "inessive"],
@@ -239,7 +253,14 @@
       "vocabulary": ["myymälä"],
       "targetSkill": "Inessive -ssa/-ssä",
       "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
-      "parallelExerciseId": "ff-a1-t13-e03"
+      "parallelExerciseId": "ff-a1-t13-e03",
+      "answerDiagnostics": [
+        {
+          "answers": ["myymälassa"],
+          "category": "Inessive -ssa/-ssä: form not yet correct",
+          "explanation": "myymälä means “shop”; myymälässä means “in the shop”. The front vowels y/ä select -ssä."
+        }
+      ]
     },
     {
       "id": "vhx-inessive-focused-001",
@@ -284,8 +305,8 @@
     {
       "id": "vhx-inessive-focused-003",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "puisto (“park”) → ____ (“in the park”). The stem remains puisto; choose -ssa and attach it directly.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “puistossä” to give the requested Finnish form. Use puisto (“park”) and choose -ssa or -ssä for “in the park”.",
       "acceptedAnswers": ["puistossa"],
       "explanation": "puisto (“park”) takes -ssa. Attach it directly to the unchanged stem: puistossa (“in the park”).",
       "tags": ["inessive", "vowel-harmony", "controlled-production"],
@@ -293,7 +314,14 @@
       "vocabulary": ["puisto"],
       "targetSkill": "Inessive -ssa/-ssä",
       "misconceptionCategory": "Inessive -ssa/-ssä: form not yet correct",
-      "parallelExerciseId": "vhx-inessive-focused-004"
+      "parallelExerciseId": "vhx-inessive-focused-004",
+      "answerDiagnostics": [
+        {
+          "answers": ["puistossä"],
+          "category": "Inessive -ssa/-ssä: form not yet correct",
+          "explanation": "puisto (“park”) takes -ssa. Attach it directly to the unchanged stem: puistossa (“in the park”)."
+        }
+      ]
     },
     {
       "id": "vhx-inessive-focused-004",

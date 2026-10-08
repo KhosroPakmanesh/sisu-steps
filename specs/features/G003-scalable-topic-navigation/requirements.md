@@ -1,5 +1,7 @@
 # G003 requirements
 
+G003 establishes catalog/topic separation. Later [REQ-G005-012](../G005-interactive-nordic-workbook-world/requirements.md#page-scene-requirements) refines REQ-G003-001: compact home cards omit objectives and detailed statistics, which remain on the topic route. [G007](../G007-scalable-stats-navigation/requirements.md) supersedes the former Reports/Data presentation preserved by REQ-G003-008. Other navigation and learner-data boundaries remain in force.
+
 ## Functional requirements
 
 - **REQ-G003-001:** The home route shall present every installed topic pack once as a compact summary with its title, summary, objectives, test progress, lesson progress, overall topic average, and prominent optional review status. The encompassing topic-grid sheet shall visibly introduce its installed packs' unique level range or ranges once as `Level:` or `Levels:` rather than repeating the same metadata on every card. Packs registered together in one catalog-owned group shall render as one labeled group section inside that sheet, in authored group and pack order, with the group title as a real heading.

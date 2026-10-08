@@ -63,6 +63,20 @@ The following are mandatory review triggers:
 
 Crossing a size trigger requires decomposition unless the file is cohesive declarative data or generated code. Any exception must be documented beside the lint override. Dense formatting or a renamed catch-all is not a valid exception.
 
+### File-local module-size exceptions
+
+Only cohesive declarative data or generated code may exceed the ordinary module limit. Put one comment on the first nonblank line, with a reviewed reason and an explicit upper bound:
+
+```typescript
+// module-size-exception: declarative; max=450; reason=One ordered lookup table whose entries must be reviewed together.
+```
+
+```css
+/* module-size-exception: generated; max=500; reason=One generated token table owned by its generator. */
+```
+
+Use `declarative` or `generated`, an integer maximum above the normal TS/CSS limit, and a reason explaining the cohesive or generated ownership. The checker still rejects growth beyond that bound, malformed/duplicate/buried annotations, and stale annotations after the file fits the ordinary limit. Remove a stale annotation instead of retaining an unused bypass. Physical-line counts include comments and internal blank lines; a terminal newline does not create another line. The annotation has no effect on the 150-line function/component rule or architecture checks. No current production file needs an exception.
+
 ## Review checklist
 
 - Can the file's responsibility be stated without “and”?

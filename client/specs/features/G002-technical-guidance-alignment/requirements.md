@@ -1,5 +1,7 @@
 # G002 technical guidance alignment requirements
 
+The original G002 delivery is a dated behavior-preserving migration. [Client G008](../G008-concept-aligned-client-structure/requirements.md) supersedes its workflow roots, learner-specific shared ownership and test topology; [G006](../G006-pack-owned-content-sources/requirements.md) supersedes its former generated-content transport. Current operating guidance is indexed in [client specifications](../../README.md). Historical network, content and route-preservation claims apply to that delivery; later root product features govern their own changes.
+
 ## Documentation requirements
 
 - **REQ-G002-001:** The repository shall contain an adapted working agreement, architecture guidance, browser-local persistence guidance, design-system guidance, commit checklist, changelog entry, feature index, refactor review record, and source-adoption record.
@@ -55,3 +57,11 @@
 - **REQ-G002-033:** A maintainer shall be able to locate each workflow's route boundary, presentation, state orchestration, decisions, queries, operations, and styles under one immediately identifiable owner.
 - **REQ-G002-034:** The final comparison against the retained baseline shall show no content-pack change, persistence-contract change, route change, or unexplained generated artifact.
 - **REQ-G002-035:** The repository root shall own Git metadata, repository-wide ignore rules, shared editor configuration, the changelog, product guidance, and product specifications; client technical guidance and the Angular toolchain shall live under `client/`; and `server/` shall own only backend placeholder guidance until backend behavior is explicitly approved and specified.
+
+## Documentation maintenance
+
+- **REQ-G002-036:** Current guidance shall link to its canonical product, architecture, content-policy or review owner instead of copying a second rule set. Ongoing client refactor review shall live in `client/docs/commit-checklist.md`; its original dated results shall remain in this feature's validation evidence. Repository formatting shall include `.agents` and `.github` and exclude ignored temporary/generated output, using the explicit client Prettier configuration for the whole scope. Historical evidence, supersession relationships, stable IDs and unique provenance shall remain reviewable. The redundant server documentation placeholder may be removed after its future ownership instruction is retained in `server/README.md`. This supersedes only REQ-G002-001's separate refactor-guide location, not its evidence requirement.
+
+## Bounded module-size exceptions — 2026-10-08
+
+- **REQ-G002-037:** Implement REQ-G002-017's file-local exception for cohesive declarative or generated TypeScript/CSS only. Use one first-content-line comment declaring the kind, a safe integer maximum above the ordinary limit, and a nonempty reason explaining why decomposition would harm cohesion or generated ownership. Enforce the declared maximum; reject malformed, duplicate, buried, unbounded and stale annotations. Count physical lines without treating the final newline as an extra line, preserving internal blank/comment lines. Exceptions do not disable function/component linting or architecture rules. Gate the checker with isolated CLI regression cases. No current production file requires an exception; introduce no production override, runtime change or build/test reordering.

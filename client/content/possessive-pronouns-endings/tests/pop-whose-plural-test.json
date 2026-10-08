@@ -423,9 +423,9 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the missing word.",
-      "prompt": "Complete “Whose dogs are these?”: Kenen ___ nämä ovat? Use koira (“dog”) + plural -t.",
-      "acceptedAnswers": ["koirat"],
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose dogs are these?”: ___ nämä ovat? Use koirat (“dogs”).",
+      "acceptedAnswers": ["Kenen koirat"],
       "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
       "tags": [
         "standard-written-finnish",
@@ -587,13 +587,13 @@
     {
       "type": "fill-blank",
       "instruction": "Write the question word and noun.",
-      "prompt": "Complete “Whose pillows are these?”: ___ nämä ovat? Write the question word and noun. Use tyynyt (“pillows”) and nämä ovat (“these are”).",
-      "acceptedAnswers": ["Kenen tyynyt"],
-      "explanation": "Write kenen (“whose”) before the supplied noun tyynyt. Keep the noun without a personal possessive ending; nämä ovat is already given.",
+      "prompt": "Complete “Whose balls are these?”: ___ nämä ovat? Write the question word and noun. Use pallot (“balls”) and nämä ovat (“these are”).",
+      "acceptedAnswers": ["Kenen pallot"],
+      "explanation": "Write kenen (“whose”) before the supplied noun pallot. Keep the noun without a personal possessive ending; nämä ovat is already given.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "possessive-noun-tyyny",
+        "possessive-noun-pallo",
         "objects-plural",
         "whose-question"
       ],
@@ -602,7 +602,7 @@
       "targetSkill": "Whose questions with kenen",
       "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "Whose pillows are these?",
+        "translation": "Whose balls are these?",
         "pattern": "kenen + unsuffixed plural noun + nämä + ovat",
         "parts": [
           {
@@ -613,11 +613,11 @@
             "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
           },
           {
-            "finnish": "tyynyt",
-            "meaning": "pillows",
+            "finnish": "pallot",
+            "meaning": "balls",
             "role": "things whose owner is asked",
-            "baseForm": "tyyny",
-            "formation": "tyyny + -t = tyynyt. No personal owner is named, so keep -t and add no personal possessive suffix."
+            "baseForm": "pallo",
+            "formation": "pallo + -t = pallot. No personal owner is named, so keep -t and add no personal possessive suffix."
           },
           {
             "finnish": "nämä",
@@ -815,13 +815,13 @@
     {
       "type": "fill-blank",
       "instruction": "Write the question word and noun.",
-      "prompt": "Complete “Whose houses are these?”: ___ nämä ovat? Write the question word and noun. Use talot (“houses”) and nämä ovat (“these are”).",
-      "acceptedAnswers": ["Kenen talot"],
-      "explanation": "Write kenen (“whose”) before the supplied noun talot. Keep the noun without a personal possessive ending; nämä ovat is already given.",
+      "prompt": "Complete “Whose cars are these?”: ___ nämä ovat? Write the question word and noun. Use autot (“cars”) and nämä ovat (“these are”).",
+      "acceptedAnswers": ["Kenen autot"],
+      "explanation": "Write kenen (“whose”) before the supplied noun autot. Keep the noun without a personal possessive ending; nämä ovat is already given.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "possessive-noun-talo",
+        "possessive-noun-auto",
         "objects-plural",
         "whose-question"
       ],
@@ -830,7 +830,7 @@
       "targetSkill": "Whose questions with kenen",
       "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "Whose houses are these?",
+        "translation": "Whose cars are these?",
         "pattern": "kenen + unsuffixed plural noun + nämä + ovat",
         "parts": [
           {
@@ -841,11 +841,11 @@
             "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
           },
           {
-            "finnish": "talot",
-            "meaning": "houses",
+            "finnish": "autot",
+            "meaning": "cars",
             "role": "things whose owner is asked",
-            "baseForm": "talo",
-            "formation": "talo + -t = talot. No personal owner is named, so keep -t and add no personal possessive suffix."
+            "baseForm": "auto",
+            "formation": "auto + -t = autot. No personal owner is named, so keep -t and add no personal possessive suffix."
           },
           {
             "finnish": "nämä",
@@ -868,9 +868,9 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the missing word.",
-      "prompt": "Complete “Whose cats are these?”: Kenen ___ nämä ovat? Use kissa (“cat”) + plural -t.",
-      "acceptedAnswers": ["kissat"],
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose cats are these?”: ___ nämä ovat? Use kissat (“cats”).",
+      "acceptedAnswers": ["Kenen kissat"],
       "explanation": "Ask with kenen; keep the unsuffixed plural noun and nämä ovat.",
       "tags": [
         "standard-written-finnish",

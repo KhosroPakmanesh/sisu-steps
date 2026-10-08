@@ -17,7 +17,8 @@ Use this checklist before asking for or creating a commit that affects the repos
 
 ## Documentation and handoff
 
-- [ ] Root and area-specific indexes and links still resolve.
+- [ ] Root and area-specific indexes and links still resolve, including hidden skill and GitHub guidance.
+- [ ] Documentation-only changes pass `npm --prefix client run format:check`; skill maintenance also follows the metadata/link checks in [G001 validation](../specs/features/G001-local-finnish-exercise-book/validation.md). Configuration changes complete the affected area gate.
 - [ ] `CHANGELOG.md` was updated under `Unreleased`, or the handoff explains why not.
 - [ ] Remaining risks and skipped checks are documented.
 - [ ] No commit is created without explicit user approval.

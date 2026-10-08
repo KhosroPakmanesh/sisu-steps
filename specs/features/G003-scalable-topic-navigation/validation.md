@@ -1,5 +1,7 @@
 # G003 validation
 
+Execute current catalog/topic tests against the [G005 compact-card refinement](../G005-interactive-nordic-workbook-world/requirements.md#page-scene-requirements) and [G007 Stats navigation](../G007-scalable-stats-navigation/requirements.md). Older dashboard/report names in dated evidence refer to the delivered G003 baseline.
+
 ## Automated validation
 
 - **VAL-G003-001** (`REQ-G003-001`, `002`, `007`): Dashboard component and browser tests verify one summary per pack, one truthful encompassing-grid `Level:` or `Levels:` label, no repeated card-level labels, compact progress, topic links, absence of expanded test cards, and labeled catalog-owned groups in authored group and pack order. Content-catalog service tests reject invalid or duplicate group declarations before loading manifests.

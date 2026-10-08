@@ -9,7 +9,7 @@ const TYPES = ['multiple-choice', 'fill-blank', 'translation-fi', 'translation-e
 export function validateDemonstrativePractice(pack) {
   if (pack.id !== 'demonstrative-pronouns') return [];
   const errors = [];
-  if (pack.version !== '1.1.0') errors.push(pack.id + ': expanded practice requires version 1.1.0');
+  if (pack.version !== '1.2.0') errors.push(pack.id + ': expanded practice requires version 1.2.0');
   const entries = [
     ...pack.tests.flatMap((test) => test.exercises),
     ...pack.lessons.flatMap((lesson) => lesson.practiceExercises),

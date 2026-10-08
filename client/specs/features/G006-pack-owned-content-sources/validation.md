@@ -1,5 +1,7 @@
 # G006 pack-owned content-source validation
 
+G006 retains the 2026-08-28 source-ownership migration and its compatibility baseline. [G009](../G009-bounded-pack-content-loading/requirements.md) supersedes eager complete-collection startup in REQ-G006-014/015/023: startup validates catalog/manifests; full packs validate on demand, with aggregate validation at authoring and full-restore boundaries. [Client G008](../G008-concept-aligned-client-structure/requirements.md) governs current validation-family and test ownership. Root G001's successor-pack requirements retired the original `vowel-harmony-kpt-tplural` pack; its dated identity/version equivalence below remains historical evidence.
+
 ## 2026-10-04 grammar metadata retention
 
 `REQ-G006-028` / `VAL-G006-021` are validated by source-backed manifest, catalog, and pack-repository tests plus the root `REQ-G001-141` boundary regressions. Browser content loading and all 216 rendered lesson views pass across the three configured widths. The full client check passes with 315 unit and 17 integration tests. Metadata is retained explicitly; no default, fallback reader, generated source copy, persisted learner schema change, or additional resource request is introduced.

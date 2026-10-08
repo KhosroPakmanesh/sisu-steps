@@ -2,16 +2,30 @@
 
 ## Unreleased
 
+### Focused quality and module-size follow-up
+
+- Revise 172 questions across 37 Focused tests: replace repeated production/gloss tasks with taught reference contrasts and actual error repairs, retrieve kenen in sixteen whose-prefix blanks, correct sixteen copied noun/number diagnostics and ten dictionary-head explanations, use explicit English completion tasks for reference facts, remove two unreachable fixed-tile diagnostics, and accept faithful alternatives. Counts, IDs, lessons, Reviews and authored order remain intact. Record complete 103-test coverage and actual checks in `specs/content-assessments/focused-exercise-quality.md`.
+- Advance nine revised packs: three foundations to 1.1.0, demonstrative pronouns/questions to 1.2.0, personal-pronoun/affirmative olla and negative demonstratives to 1.4.0, negative olla to 1.3.0, and possessive endings to 2.3.0. Existing alignment intentionally discards incompatible progress, sessions, mistakes, mastery and completions for these packs, retaining owned notes and five compatible packs; backup confirmation/scoped discard is unchanged.
+- Support bounded declarative/generated module-size exceptions with explicit reasons and maxima. Reject malformed, misplaced, duplicate, stale and exceeded overrides; add 17 checker regressions. Retain the existing build-before-tests aggregate sequence as explicitly requested.
+
+### Repository guidance audit
+
+- Consolidated ongoing client refactor review in the client checklist and removed the redundant manual guide and empty server documentation placeholder. Retained dated adoption/module/content evidence, corrected stale route/mobile/storage descriptions and moved-lesson links, and clarified supersession, G008 ownership and incomplete whole-expansion teaching-quality status. Added explicit traceability mappings for retained content checks.
+- Expanded repository formatting to the project-local skill and GitHub guidance; excluded ignored temporary/generated output and removed the obsolete generated-content ignore. Recorded the inventory, validation and remaining discrepancies in `docs/guidance-audit-20261008.md`. Runtime, authored content, learner data and licensing terms are unchanged.
+
 - Revise selected added questions: require the whose-question word in eight blanks, contrast singular person reference with grammatical choices, state the negative-verb-plus-ole reply requirement, and correct tense, ownership and group-address feedback. Keep counts, IDs, authored order, original questions and lesson content intact. These revisions use the pending expansion versions and their already documented scoped progress reset.
 
 - Require at least 20 meaningful scored questions in each Focused test, including each number variant sharing a lesson. Add 372 questions across 44 tests in nine packs using their existing formats, retaining lessons, Reviews and all existing questions. The nine changed pack versions deliberately reset their incompatible progress under existing alignment; still-owned notes and compatible progress in the other five packs remain. Changed-version backups retain the existing confirmation and scoped-discard flow.
 
 ### Existing-format demonstrative practice
 
-- Added four scored questions to each of the two independent-demonstrative and two standard person-reference tests. Each now has 20 questions, with four of each existing response format; no new grammar, vocabulary or activity style is introduced. All existing questions, lessons, optional practice, Reviews and other packs are preserved. Demonstrative pronouns now has 280 scored and 44 optional questions; the catalog has 2,386 scored and 290 optional questions.
+- Added four scored questions to each of the two independent-demonstrative and two standard person-reference tests. Each now has 20 questions, with four of each existing response format; no new grammar, vocabulary or activity style is introduced. All existing questions, lessons, optional practice, Reviews and other packs are preserved. At this delivery slice, Demonstrative pronouns has 280 scored and 44 optional questions and the catalog has 2,386 scored and 290 optional questions; the later Focused-minimum expansion adds the separately recorded 372 questions.
 - Demonstrative pronouns advances to 1.1.0. Existing version alignment intentionally resets only this pack's progress, unfinished sessions, mistakes, mastery/correction records and lesson completions, retaining owned notes and compatible progress elsewhere. Older installed-version backups keep the existing changed-pack confirmation/scoped discard behavior; no storage change, migration or alias is added.
 
 ### Content authoring guidance
+
+- Moved the Finnish grammar content creator skill and all three references into `.agents/skills/finnish-grammar-content-creator/`, with repository-relative links and preserved invocation metadata. The validated project copy replaces the personal global installation.
+- Consolidated detailed content rules in `specs/content-authoring.md`; the skill now links to the policy and keeps its authoring workflow, practical examples, and assessment template. Clarified reused vocabulary type matching, version/history handling, complete assessment inventories, and non-target stem supply. Removed the obsolete 200-question pack minimum from the skill requirement in favor of the current count contract. This documentation change does not alter authored content or learner data.
 
 - Added consistent lesson/test chunking guidance to the authoring guide and Finnish content creator skill: distinct pack/lesson/test boundaries, shared preparation, explicit person/owner/object number scopes, prerequisite-aware paired progression and coverage-based chunk sizes. Existing Review, content-preservation and versioning safeguards remain in force; authored content and learner data are unchanged.
 

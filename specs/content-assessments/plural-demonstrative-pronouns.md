@@ -6,7 +6,7 @@ Historical source-pack assessment. On 2026-10-05 this pack was merged without ch
 
 Under `REQ-G001-141`, removed 23 grammar-only vocabulary declarations from 6 lessons. The current lexical inventory is 12 introduced, 26 reused, and 0 supplied entries. Their grammatical meanings and all worked examples remain intact. Revised lesson patch versions and manifest summaries advance; pack versions and scored semantics remain unchanged, with only obsolete revised-lesson completion marks requiring renewal. Earlier inventories below describe their dated authoring stage. The [shared correction assessment](grammar-vocabulary-separation.md) records the scoped pedagogy gates, complete preservation comparison, and final validation evidence.
 
-Historical family-wide counts below include the inessive pack removed on 2026-10-01. The current demonstrative family has four packs, 512 scored exercises, and 80 optional practice exercises; this pack's own counts and assessment remain valid.
+Historical family-wide counts below include the inessive pack removed on 2026-10-01. At the 2026-10-01 removal, the surviving demonstrative family had four packs, 512 scored exercises, and 80 optional practice exercises; the pack-specific counts and decisions below describe their dated baseline. Later changes are indexed in the [shared assessment records](README.md#shared-assessments-and-corrections).
 
 ## Pack identity and counts
 

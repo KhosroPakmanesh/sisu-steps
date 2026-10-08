@@ -556,8 +556,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Is that bag at home?” in Finnish. Use tuo laukku (“that bag”) and kotona (“at home”).",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “On tuo laukku kotona?” to mean “Is that bag at home?” Use tuo laukku (“that bag”) and kotona (“at home”).",
       "acceptedAnswers": ["Onko tuo laukku kotona?"],
       "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -596,6 +596,11 @@
       "answerDiagnostics": [
         {
           "answers": ["Ovatko tuo laukku kotona?"],
+          "category": "Singular affirmative demonstrative questions: form not yet secure",
+          "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
+        },
+        {
+          "answers": ["On tuo laukku kotona?"],
           "category": "Singular affirmative demonstrative questions: form not yet secure",
           "explanation": "Onko adds -ko to on, the olla form for one thing. In English, begin the question with “Is” before the subject."
         }

@@ -8,6 +8,7 @@
 - Do not introduce backward-compatibility shims, legacy aliases, fallback readers, transitional dual formats, or one-off migrations. When a breaking change makes stored client data incompatible, explicitly reset, discard, or reject it and remove the obsolete path; record the intentional data loss in the governing specification and `CHANGELOG.md`.
 - Keep cross-area contracts explicit. When a change affects both client and server, update the owning specifications and validate both sides before handoff.
 - Keep authored Finnish content policy and pedagogy records under root `specs/`; implementation-specific content tooling remains client-owned until another approved spec changes ownership.
+- For Finnish topic-pack authoring, audits, or material revisions, use the project-local [Finnish grammar content creator skill](.agents/skills/finnish-grammar-content-creator/SKILL.md). Keep its workflow and references in this repository and the detailed content policy in `specs/content-authoring.md`.
 - Use `docs/commit-checklist.md` for repository-wide review and the relevant area checklist for implementation-specific validation.
 - Update `CHANGELOG.md` under `Unreleased` for user-visible, storage, setup, specification, or developer-workflow changes.
 - Do not commit changes unless the user explicitly asks.

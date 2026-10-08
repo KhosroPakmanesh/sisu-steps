@@ -1,5 +1,7 @@
 # G004 validation
 
+Use current Notebook/Stats destinations and Day/Automatic/Night controls when executing the checks below. Their older route/control names describe the original G004 delivery; [G005](../G005-interactive-nordic-workbook-world/requirements.md) and [G007](../G007-scalable-stats-navigation/requirements.md) govern the refinements. Dated results are historical evidence, not a fresh accessibility certification.
+
 ## Automated validation
 
 - **VAL-G004-001** (`REQ-G004-007`–`010`): Appearance preference tests verify Automatic, Light, and Dark selection, device-preference changes, remembered overrides, invalid saved data, and unavailable storage.

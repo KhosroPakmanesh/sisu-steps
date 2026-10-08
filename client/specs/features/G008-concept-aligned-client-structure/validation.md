@@ -10,7 +10,7 @@
 ## Automated compatibility checks
 
 - **VAL-G008-005:** Run route tests for every configured path and verify route paths and lazy targets are unchanged. Covers REQ-G008-002.
-- **VAL-G008-006:** Run state migration, repository, backup compatibility, restore, clear-history, notes, sessions, grading, review, and progress-statistics tests. Covers REQ-G008-001 through REQ-G008-003 and REQ-G008-009.
+- **VAL-G008-006:** Run state alignment/reset, repository, backup compatibility, restore, clear-history, notes, sessions, grading, review, and progress-statistics tests. Covers REQ-G008-001 through REQ-G008-003 and REQ-G008-009.
 - **VAL-G008-007:** Verify unit, integration, and browser suites are independently discoverable and the aggregate check runs unit and integration tests. Covers REQ-G008-010 through REQ-G008-013.
 - **VAL-G008-008:** Verify Playwright launches the configured application server for the test run and its setup rejects an incompatible responding process. Covers REQ-G008-015.
 - **VAL-G008-009:** Inspect CI and confirm the aggregate client check precedes deployment packaging. Covers REQ-G008-016.

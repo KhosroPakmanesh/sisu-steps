@@ -871,26 +871,26 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “This car is not at home.” in Finnish. Use tämä auto (“this car”) and kotona (“at home”).",
-      "acceptedAnswers": ["Tämä auto ei ole kotona."],
-      "explanation": "Tämä auto is singular and therefore takes ei ole.",
+      "prompt": "Write “This book is not at home.” in Finnish. Use tämä kirja (“this book”) and kotona (“at home”).",
+      "acceptedAnswers": ["Tämä kirja ei ole kotona."],
+      "explanation": "Tämä kirja is singular and therefore takes ei ole.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "This car is not at home.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "This book is not at home.",
+        "pattern": "demonstrative noun phrase subject + negative verb bookrying number agreement + main verb after the negative verb + location",
         "parts": [
           {
-            "finnish": "Tämä auto",
-            "meaning": "this car",
+            "finnish": "Tämä kirja",
+            "meaning": "this book",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "tämä + auto",
+            "baseForm": "tämä + kirja",
             "formation": "the complete singular subject is supplied"
           },
           {
             "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb bookrying number agreement",
             "baseForm": "ei",
             "formation": "third-person singular form"
           },
@@ -916,9 +916,9 @@
       "misconceptionCategory": "Singular negative demonstrative statements: form not yet secure",
       "answerDiagnostics": [
         {
-          "answers": ["Tämä auto eivät ole kotona."],
+          "answers": ["Tämä kirja eivät ole kotona."],
           "category": "Singular negative demonstrative statements: form not yet secure",
-          "explanation": "Tämä auto is singular and therefore takes ei ole."
+          "explanation": "Tämä kirja is singular and therefore takes ei ole."
         }
       ],
       "parallelExerciseId": "nds-singular-negative-test-e015"

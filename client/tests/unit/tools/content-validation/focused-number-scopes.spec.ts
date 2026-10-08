@@ -44,6 +44,17 @@ describe('Focused tests separated by grammatical number', () => {
     }
   });
 
+  it('distinguishes explicitly English completion answers from Finnish person forms', () => {
+    const pack = structuredClone(packs.find((p) => p.id === 'personal-pronouns-affirmative-olla')!);
+    expect(validateSource(pack)).toEqual([]);
+    expect(() => validateRuntime(pack)).not.toThrow();
+    const exercise = pack.tests.flatMap((t) => t.exercises).find((e) => e.id === 'ppo-t03-e20')!;
+    expect(exercise.instruction).toBe('Complete in English.');
+    exercise.instruction = 'Complete in Finnish.';
+    expect(validateSource(pack).join(' ')).toContain('declared person singular group');
+    expect(() => validateRuntime(pack)).toThrow('declared person singular group');
+  });
+
   it('grades all 880 repartitioned questions, alternatives, and authored diagnostics', () => {
     const items = packs.flatMap((pack) =>
       pack.tests.filter((test) => test.numberScope).flatMap((test) => test.exercises),

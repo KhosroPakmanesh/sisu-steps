@@ -15,8 +15,8 @@
 - **VAL-G009-011 / REQ-G009-012:** Existing learning unit, integration, and Playwright suites remain green.
 - **VAL-G009-012 / REQ-G009-015:** Direct-source tooling tests and the aggregate content validator continue reading `content/` in place.
 - **VAL-G009-013 / REQ-G009-017:** Source-policy and module-limit checks remain green.
-- **VAL-G009-014:** Run `npm --prefix client run check` from the repository root.
-- **VAL-G009-015:** Run `npm --prefix client run test:e2e` from the repository root.
+- **VAL-G009-014:** Run `npm --prefix client run check` from the repository root. This aggregate regression gate supplements the requirement-specific checks; record failures and skipped layers separately.
+- **VAL-G009-015:** Run `npm --prefix client run test:e2e` from the repository root. This broad browser gate supplements the mapped loading/workflow checks; retain unrelated failures and deliberate skips in the execution evidence.
 - **VAL-G009-016 / REQ-G009-018:** Shell and browser-adapter unit tests shall assert that the initial overlay remains until route readiness settles, concurrent operations cannot hide it early, and revealing the root removes its hidden, inert, busy, and accessibility-hidden state. A browser test with application JavaScript blocked shall assert the self-styled loader remains visible and fills the viewport.
 - **VAL-G009-017 / REQ-G009-019:** Browser checks at phone, tablet, and wide widths shall delay catalog manifests, direct-route pack fragments, and an uncached pack opened after startup; assert that the same overlay remains or reappears while Angular is ready underneath; assert that no route or shell spinner exists; and assert that the complete routed page replaces the overlay.
 

@@ -1023,8 +1023,8 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the blank.",
-      "prompt": "Write “The book is not here.” in Finnish. Start from “Se kirja on täällä.” (“The book is here.”). Keep se and kirja unchanged.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Se kirja eivät ole täällä.” to mean “The book is not here.” Keep se kirja (“the book”) and täällä (“here”) unchanged.",
       "acceptedAnswers": ["Se kirja ei ole täällä."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],

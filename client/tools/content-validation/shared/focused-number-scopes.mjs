@@ -106,7 +106,9 @@ function exerciseNumber(exercise, axis) {
   if (tagged) {
     const finnish = [
       ...(exercise.sentenceExplanation?.parts.map((part) => part.finnish) ?? []),
-      ...(exercise.type === 'translation-en' ? [] : (exercise.acceptedAnswers ?? [])),
+      ...(exercise.type === 'translation-en' || exercise.instruction === 'Complete in English.'
+        ? []
+        : (exercise.acceptedAnswers ?? [])),
     ].join(' ');
     const expressed = wordNumber(finnish, ['minä', 'sinä', 'hän'], ['me', 'te', 'he']);
     return expressed && expressed !== tagged ? undefined : tagged;

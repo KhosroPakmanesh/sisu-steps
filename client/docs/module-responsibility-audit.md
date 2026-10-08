@@ -1,5 +1,9 @@
 # Module responsibility audit
 
+Historical G008 structural audit, recorded with [2026-09-07 completion evidence](../specs/features/G008-concept-aligned-client-structure/validation.md#completion-evidence--2026-09-07). Its then-current ownership/compatibility observations are retained below. Current ownership is maintained in [feature slices](../specs/architecture/client-feature-slices.md); later Legal and Drive additions are outside this snapshot.
+
+2026-10-08 route-list erratum: the original compatibility list below included `/lessons/:lessonId`, which is not a configured route. Lesson preparation uses `/learn/:topicId/:testId`; route definitions live in [typed route configuration](../src/app/routes.config.ts).
+
 ## Result
 
 The client tree now reflects the app's actual concepts. There is no stored or generated report concept: Stats derives progress summaries from learner history. Historical `dashboard`, `reports`, and `data-management` source roots have been replaced by `topics`, `stats`, and `learner-data`, and learning-specific state no longer appears product-agnostic at root.

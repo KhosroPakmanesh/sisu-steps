@@ -29,4 +29,5 @@ This contract governs the Angular browser client. Root product requirements rema
 - `design-system/`
 - `features/G002-technical-guidance-alignment/`
 - `features/G006-pack-owned-content-sources/`
-- `features/G008-concept-aligned-client-structure/`
+- [G008 concept-aligned structure](features/G008-concept-aligned-client-structure/plan.md)
+- [G009 bounded content loading](features/G009-bounded-pack-content-loading/plan.md)

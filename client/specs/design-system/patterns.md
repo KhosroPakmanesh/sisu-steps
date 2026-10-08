@@ -5,7 +5,7 @@
 Use a clearly labelled action for backup download, restore, answer reveal, lesson completion, and progress clearing.
 
 - State what will happen.
-- Do not imply cloud synchronization or remote storage.
+- Describe local actions accurately; describe optional Drive storage only under the [backup restore](#backup-restore) contract and never imply synchronization.
 - Preserve a cancel path for destructive confirmation.
 - Announce success or failure accessibly.
 
@@ -58,7 +58,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 ## Appearance choice
 
 - Offer **Day**, **Automatic**, and **Night**, in that left-to-right order, as a native labelled radio group presented through accessible sun, half-day/half-night, and moon icons around one compact side-view mechanical toggle. Show the metal mounting base and tilt the lever left for Day, keep it upright for Automatic, and tilt it right for Night. Do not enclose the switch in a colored panel or border. Day maps to the existing explicit Light value and Night maps to the existing explicit Dark value.
-- Retain **Appearance** as the radio group's accessible name, but do not show a redundant group heading. Keep the Appearance switch right-aligned opposite the brand in the same header row from 320 pixels upward, while primary navigation belongs to the left edge of the workbook folder.
+- Retain **Appearance** as the radio group's accessible name, but do not show a redundant group heading. Keep the Appearance switch right-aligned opposite the brand in the same header row from 320 pixels upward, while wide primary navigation belongs to the folder's left edge and phone navigation follows the [workbook reflow pattern](#interactive-workbook-world).
 - Let Automatic follow `prefers-color-scheme`, including changes made while the app is open.
 - Store only explicit Light or Dark overrides; removing an override returns to Automatic.
 - Treat missing, invalid, or unavailable browser storage as Automatic and never block learning because an appearance preference cannot be read or saved.
@@ -66,7 +66,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 
 ## Stationery controls
 
-- Present primary navigation as two elongated, unnumbered, visibly labelled blue/yellow **Notebook** and **Stats** subject-divider links on the folder's left edge. Tuck each tab's right edge beneath the paper, use a darker shade rather than a selected border for the active route, start the stack with visible breathing room below the paper top, slide it outward on hover and keyboard focus, and keep the stack sticky after the paper top scrolls away while constraining it to the folder.
+- At 48rem and above, present primary navigation as two elongated, unnumbered, visibly labelled blue/yellow **Notebook** and **Stats** subject-divider links on the folder's left edge. Tuck each tab's right edge beneath the paper, use a darker shade rather than a selected border for the active route, start the stack with visible breathing room below the paper top, slide it outward on hover and keyboard focus, and keep the stack sticky after the paper top scrolls away while constraining it to the folder.
 - Present every action as the same recognisable cut-paper piece. Primary, secondary, compact, text, review, file, dialog, disabled, and destructive variants keep one silhouette and physical behavior; vary only paper tint, ink, edge accent, internal marks, and explicit wording.
 - Present answer radios as pencil-marked circles, text answers as ruled fields, and word-order buttons as movable vocabulary cards while preserving native form behavior.
 - Put answer radios on perforated ruled slips, place selected word cards on a sentence-building strip, and keep available word cards in a labelled paper pocket. Operate answer reveal through its visible button without a separate shortcut badge or margin annotation.
@@ -84,7 +84,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - Place route content on the same desk-and-workbook stage, but give each route a distinct physical scene that reinforces its purpose.
 - Use one bound catalog sheet containing punched topic cards, an unbroken connected path for the topic map, the current available-width teaching sequence for lessons, a loose worksheet for study, a returned marked paper for results, a bound archive for global backup operations, and one ledger per topic for Stats. Do not introduce a new maximum lesson reading width.
 - Use immediate page-turn, tab-slide, lift, settle, stamp, pencil-circle, answer-line, and light motion only as confirmation of a state change; never wait for animation before navigation, content, or input becomes available.
-- At 800 pixels and below, replace a multi-lesson sidebar with its native lesson selector; teaching sections remain in semantic reading order at every width. Below 48rem, remove desk props, present the routed paper directly with compact decorative spacing, keep the same transparent-backed horizontal primary navigation row sticky at the top, center catalog, topic, and lesson hero notebook annotations, arrange suitable four-value summaries in a 2×2 grid and retain right-aligned test-card status marks while more than 20rem of workbook width remains, and keep the active Study action group together near the lower safe area. Let widths of 20rem or less and enlarged-text layouts reflow safely while keeping stacked status badges end-aligned. Do not duplicate controls, cover content, or apply these refinements at 48rem and above.
+- At 800 pixels and below, replace a multi-lesson sidebar with its native lesson selector; teaching sections remain in semantic reading order at every width. Below 48rem, remove desk props, present the routed paper directly with compact decorative spacing, keep the same transparent-backed horizontal primary navigation row in normal document flow so it scrolls away, center catalog, topic, and lesson hero notebook annotations, arrange suitable four-value summaries in a 2×2 grid and retain right-aligned test-card status marks while more than 20rem of workbook width remains, and keep the active Study action group together near the lower safe area. Let widths of 20rem or less and enlarged-text layouts reflow safely while keeping stacked status badges end-aligned. Do not duplicate controls, cover content, or apply these refinements at 48rem and above.
 - Those content thresholds describe the default 16px text scale; use the equivalent root-relative `workbook` container boundaries when text is enlarged. Keep the header Appearance group intact while allowing it to wrap below the brand. Below 20rem of available width, reduce decoration spacing, slim the paper clip, omit the decorative binding pattern and printed workbook stamp, and stack cramped controls without shrinking required text.
 - Treat the visual craft as atmosphere, not gamification: do not add locks, points, lives, currency, rewards, streak pressure, or leaderboards.
 

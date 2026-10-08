@@ -182,8 +182,8 @@
     {
       "id": "ff-a1-t09-e12",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "koira (“dog”) → ____ (“dogs”) · add plural -t",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “koiratt” to give the requested Finnish form. Use koira (“dog”) and plural -t for “dogs”.",
       "acceptedAnswers": ["koirat"],
       "explanation": "koira means “dog”; koirat means “dogs”. The nominative T-plural is formed here by adding -t: koira → koirat.",
       "tags": ["t-plural", "regular"],
@@ -191,7 +191,14 @@
       "vocabulary": ["koira"],
       "targetSkill": "Regular T-plural",
       "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "ff-a1-t09-e11"
+      "parallelExerciseId": "ff-a1-t09-e11",
+      "answerDiagnostics": [
+        {
+          "answers": ["koiratt"],
+          "category": "Regular T-plural: form not yet correct",
+          "explanation": "koira means “dog”; koirat means “dogs”. The nominative T-plural is formed here by adding -t: koira → koirat."
+        }
+      ]
     },
     {
       "id": "ff-a1-t09-e13",
@@ -210,8 +217,8 @@
     {
       "id": "ff-a1-t09-e14",
       "type": "translation-fi",
-      "instruction": "Translate into Finnish.",
-      "prompt": "apples — use the supplied base omena (“apple”)",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “omenatt” to give the requested Finnish form. Use omena (“apple”) and plural -t for “apples”.",
       "acceptedAnswers": ["omenat"],
       "explanation": "omena means “apple”; omenat means “apples”. The nominative T-plural is formed here by adding -t: omena → omenat.",
       "tags": ["t-plural", "regular"],
@@ -219,7 +226,14 @@
       "vocabulary": ["omena"],
       "targetSkill": "Regular T-plural",
       "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "ff-a1-t09-e13"
+      "parallelExerciseId": "ff-a1-t09-e13",
+      "answerDiagnostics": [
+        {
+          "answers": ["omenatt"],
+          "category": "Regular T-plural: form not yet correct",
+          "explanation": "omena means “apple”; omenat means “apples”. The nominative T-plural is formed here by adding -t: omena → omenat."
+        }
+      ]
     },
     {
       "id": "ff-a1-t09-e15",
@@ -244,8 +258,8 @@
     {
       "id": "tpx-regular-focused-001",
       "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "sana (“word”) → ? (“words”) · add the plural ending -t to the unchanged stem",
+      "instruction": "Choose the correction.",
+      "prompt": "Repair “sanatt” to give the requested Finnish form. Use sana (“word”) and plural -t for “words”.",
       "acceptedAnswers": ["sanat"],
       "explanation": "The stem stays unchanged. Add plural -t: sanat (“words”).",
       "tags": ["t-plural", "controlled-production"],
@@ -263,8 +277,8 @@
     {
       "id": "tpx-regular-focused-002",
       "type": "multiple-choice",
-      "instruction": "Choose the best answer.",
-      "prompt": "kuva (“picture”) → ? (“pictures”) · add the plural ending -t to the unchanged stem",
+      "instruction": "Choose the correction.",
+      "prompt": "Repair “kuvatt” to give the requested Finnish form. Use kuva (“picture”) and plural -t for “pictures”.",
       "acceptedAnswers": ["kuvat"],
       "explanation": "The stem stays unchanged. Add plural -t: kuvat (“pictures”).",
       "tags": ["t-plural", "controlled-production"],
@@ -296,8 +310,8 @@
     {
       "id": "tpx-regular-focused-004",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "kissa (“cat”) → ____ (“cats”) · add the plural ending -t to the unchanged stem",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “kissatt” to give the requested Finnish form. Use kissa (“cat”) and plural -t for “cats”.",
       "acceptedAnswers": ["kissat"],
       "explanation": "The stem stays unchanged. Add plural -t: kissat (“cats”).",
       "tags": ["t-plural", "controlled-production"],
@@ -305,13 +319,20 @@
       "vocabulary": ["kissa"],
       "targetSkill": "Regular T-plural",
       "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "tpx-regular-focused-003"
+      "parallelExerciseId": "tpx-regular-focused-003",
+      "answerDiagnostics": [
+        {
+          "answers": ["kissatt"],
+          "category": "Regular T-plural: form not yet correct",
+          "explanation": "The stem stays unchanged. Add plural -t: kissat (“cats”)."
+        }
+      ]
     },
     {
       "id": "tpx-regular-focused-005",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “balls”. Use pallo (“ball”); add the plural ending -t to the unchanged stem.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “pallott” to give the requested Finnish form. Use pallo (“ball”) and plural -t for “balls”.",
       "acceptedAnswers": ["pallot"],
       "explanation": "The stem stays unchanged. Add plural -t: pallot (“balls”).",
       "tags": ["t-plural", "controlled-production"],
@@ -319,13 +340,20 @@
       "vocabulary": ["pallo"],
       "targetSkill": "Regular T-plural",
       "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "tpx-regular-focused-006"
+      "parallelExerciseId": "tpx-regular-focused-006",
+      "answerDiagnostics": [
+        {
+          "answers": ["pallott"],
+          "category": "Regular T-plural: form not yet correct",
+          "explanation": "The stem stays unchanged. Add plural -t: pallot (“balls”)."
+        }
+      ]
     },
     {
       "id": "tpx-regular-focused-006",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “friends”. Use ystävä (“friend”); add the plural ending -t to the unchanged stem.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “ystävätt” to give the requested Finnish form. Use ystävä (“friend”) and plural -t for “friends”.",
       "acceptedAnswers": ["ystävät"],
       "explanation": "The stem stays unchanged. Add plural -t: ystävät (“friends”).",
       "tags": ["t-plural", "controlled-production"],
@@ -333,7 +361,14 @@
       "vocabulary": ["ystävä"],
       "targetSkill": "Regular T-plural",
       "misconceptionCategory": "Regular T-plural: form not yet correct",
-      "parallelExerciseId": "tpx-regular-focused-005"
+      "parallelExerciseId": "tpx-regular-focused-005",
+      "answerDiagnostics": [
+        {
+          "answers": ["ystävätt"],
+          "category": "Regular T-plural: form not yet correct",
+          "explanation": "The stem stays unchanged. Add plural -t: ystävät (“friends”)."
+        }
+      ]
     }
   ]
 }

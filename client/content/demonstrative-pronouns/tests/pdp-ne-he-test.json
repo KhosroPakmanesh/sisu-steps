@@ -212,13 +212,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “They (the non-human referents) are here.” in Finnish. The previously named referents are dogs. Use standard written Finnish.",
-      "acceptedAnswers": ["Ne ovat täällä."],
+      "prompt": "Write “They (the non-human referents) are inside.” in Finnish. The previously named referents are dogs. Use standard written Finnish.",
+      "acceptedAnswers": ["Ne ovat sisällä."],
       "explanation": "Standard written Finnish normally uses ne for non-human referents.",
       "tags": ["sentence", "standard-written-finnish"],
-      "vocabulary": ["täällä"],
+      "vocabulary": ["sisällä"],
       "sentenceExplanation": {
-        "translation": "They (the non-human referents) are here.",
+        "translation": "They (the non-human referents) are inside.",
         "pattern": "subject pronoun + linking verb + location",
         "parts": [
           {
@@ -236,10 +236,10 @@
             "formation": "plural present form"
           },
           {
-            "finnish": "täällä",
-            "meaning": "here",
+            "finnish": "sisällä",
+            "meaning": "inside",
             "role": "location",
-            "baseForm": "täällä",
+            "baseForm": "sisällä",
             "formation": "unchanged location word"
           }
         ]
@@ -250,7 +250,7 @@
       "misconceptionCategory": "Standard plural person reference: form not yet secure",
       "answerDiagnostics": [
         {
-          "answers": ["He ovat täällä."],
+          "answers": ["He ovat sisällä."],
           "category": "Standard plural person reference: form not yet secure",
           "explanation": "Standard written Finnish normally uses ne for non-human referents."
         }
@@ -260,13 +260,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “They (the people) are here.” in Finnish. The previously named referents are children. Use standard written Finnish.",
-      "acceptedAnswers": ["He ovat täällä."],
+      "prompt": "Write “They (the people) are inside.” in Finnish. The previously named referents are children. Use standard written Finnish.",
+      "acceptedAnswers": ["He ovat sisällä."],
       "explanation": "Standard written Finnish normally uses he for people.",
       "tags": ["sentence", "standard-written-finnish"],
-      "vocabulary": ["täällä"],
+      "vocabulary": ["sisällä"],
       "sentenceExplanation": {
-        "translation": "They (the people) are here.",
+        "translation": "They (the people) are inside.",
         "pattern": "subject pronoun + linking verb + location",
         "parts": [
           {
@@ -284,10 +284,10 @@
             "formation": "plural present form"
           },
           {
-            "finnish": "täällä",
-            "meaning": "here",
+            "finnish": "sisällä",
+            "meaning": "inside",
             "role": "location",
-            "baseForm": "täällä",
+            "baseForm": "sisällä",
             "formation": "unchanged location word"
           }
         ]
@@ -298,7 +298,7 @@
       "misconceptionCategory": "Standard plural person reference: form not yet secure",
       "answerDiagnostics": [
         {
-          "answers": ["Ne ovat täällä."],
+          "answers": ["Ne ovat sisällä."],
           "category": "Standard plural person reference: form not yet secure",
           "explanation": "Standard written Finnish normally uses he for people."
         }
@@ -790,8 +790,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “They (the non-human referents) are at home.” in Finnish. The previously named referents are cars. Use standard written Finnish.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “He ovat kotona.” to mean “They (the non-human referents) are at home.” The named referents are cars. Use standard written Finnish.",
       "acceptedAnswers": ["Ne ovat kotona."],
       "explanation": "Standard written Finnish normally uses ne for non-human referents.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -838,8 +838,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “They (the people) are at home.” in Finnish. The previously named referents are teachers. Use standard written Finnish.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Ne ovat kotona.” to mean “They (the people) are at home.” The named referents are teachers. Use standard written Finnish.",
       "acceptedAnswers": ["He ovat kotona."],
       "explanation": "Standard written Finnish normally uses he for people.",
       "tags": ["sentence", "standard-written-finnish"],

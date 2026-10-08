@@ -1054,8 +1054,8 @@
     },
     {
       "type": "translation-fi",
-      "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “Those bags over there are inside.” in Finnish. Use laukut (“bags”) and sisällä (“inside”).",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Nuo ovat laukut sisällä.” to mean “Those bags over there are inside.” Put nuo directly before laukut (“bags”); sisällä means “inside”.",
       "acceptedAnswers": ["Nuo laukut ovat sisällä."],
       "explanation": "Nuo comes directly before the plural noun laukut.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1101,6 +1101,11 @@
       "answerDiagnostics": [
         {
           "answers": ["Nuo ovat sisällä."],
+          "category": "Plural demonstratives before nouns: form not yet secure",
+          "explanation": "Nuo comes directly before the plural noun laukut."
+        },
+        {
+          "answers": ["Nuo ovat laukut sisällä."],
           "category": "Plural demonstratives before nouns: form not yet secure",
           "explanation": "Nuo comes directly before the plural noun laukut."
         }

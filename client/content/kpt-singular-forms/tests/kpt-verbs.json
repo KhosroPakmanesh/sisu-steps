@@ -655,8 +655,8 @@
     {
       "id": "kptx-verb-focused-001",
       "type": "multiple-choice",
-      "instruction": "Choose the verb that completes the sentence.",
-      "prompt": "Complete “I wait here.” Minä ____ täällä. Use the supplied subject Minä, stem odotta-, minä ending -n, and täällä (“here”).",
+      "instruction": "Choose the correction.",
+      "prompt": "Repair “Minä odottan täällä.” to mean “I wait here.” Choose only the corrected word. Use supplied stem odotta-, minä ending -n and täällä (“here”).",
       "acceptedAnswers": ["odotan"],
       "explanation": "Minä odotan täällä. means “I wait here”. The prompt supplies minä, odotta-, the minä ending -n, and täällä (“here”). Apply tt → t: odotan.",
       "tags": ["kpt", "verb", "sentence"],
@@ -749,8 +749,8 @@
     {
       "id": "kptx-verb-focused-003",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish sentence.",
-      "prompt": "Complete “I arrive soon.” Minä ____ pian. Use the supplied subject Minä, stem saapu-, minä ending -n, and pian (“soon”).",
+      "instruction": "Choose or write only the corrected word.",
+      "prompt": "Repair “Minä saapun pian.” to mean “I arrive soon.” Write only the corrected word. Use supplied stem saapu-, minä ending -n and pian (“soon”).",
       "acceptedAnswers": ["saavun"],
       "explanation": "Minä saavun pian. means “I arrive soon”. The prompt supplies minä, saapu-, the minä ending -n, and pian (“soon”). Apply p → v: saavun.",
       "tags": ["kpt", "verb", "sentence"],
@@ -785,7 +785,14 @@
           }
         ]
       },
-      "parallelExerciseId": "kptx-verb-focused-004"
+      "parallelExerciseId": "kptx-verb-focused-004",
+      "answerDiagnostics": [
+        {
+          "answers": ["saapun"],
+          "category": "Minä verb forms with KPT: form not yet correct",
+          "explanation": "Minä saavun pian. means “I arrive soon”. The prompt supplies minä, saapu-, the minä ending -n, and pian (“soon”). Apply p → v: saavun."
+        }
+      ]
     },
     {
       "id": "kptx-verb-focused-004",

@@ -1,3 +1,4 @@
+import { validateFocusedTaskQuality } from './focused-task-quality.mjs';
 import { validateFocusedNumberScopes } from './focused-number-scopes.mjs';
 import { existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -36,7 +37,7 @@ export async function validatePackContent(pack) {
       .sort()
       .join('|')}`;
   const scoredFingerprints = new Set(exercises.map(exerciseFingerprint));
-  const errors = [];
+  const errors = [...validateFocusedTaskQuality(pack)];
   errors.push(...validateFocusedNumberScopes(pack));
   errors.push(...validateOwnershipQuestionVariety(pack));
   const hasTextArray = (value) =>

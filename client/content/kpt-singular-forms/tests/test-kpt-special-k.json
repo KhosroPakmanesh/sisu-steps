@@ -242,8 +242,8 @@
     {
       "id": "kptx-kpt-special-k-focused-003",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "Retrieve the form without a family label. poika (“boy”) → ____ (“of the boy”) · use the supplied genitive ending -n",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “poikan” to give the requested Finnish form. Use poika (“boy”) and supplied genitive -n for “of the boy”.",
       "acceptedAnswers": ["pojan"],
       "explanation": "The genitive ending -n is supplied. Apply k disappears and i becomes j to make poja-, then add -n: pojan (“of the boy”).",
       "tags": ["kpt", "controlled-production"],
@@ -251,13 +251,20 @@
       "vocabulary": ["poika"],
       "targetSkill": "KPT special k changes",
       "misconceptionCategory": "KPT special k changes: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-special-k-focused-004"
+      "parallelExerciseId": "kptx-kpt-special-k-focused-004",
+      "answerDiagnostics": [
+        {
+          "answers": ["poikan"],
+          "category": "KPT special k changes: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply k disappears and i becomes j to make poja-, then add -n: pojan (“of the boy”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-special-k-focused-004",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "Retrieve the form without a family label. puku (“suit”) → ____ (“of the suit”) · use the supplied genitive ending -n",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “pukun” to give the requested Finnish form. Use puku (“suit”) and supplied genitive -n for “of the suit”.",
       "acceptedAnswers": ["puvun"],
       "explanation": "The genitive ending -n is supplied. Apply k → v to make puvu-, then add -n: puvun (“of the suit”).",
       "tags": ["kpt", "controlled-production"],
@@ -265,13 +272,20 @@
       "vocabulary": ["puku"],
       "targetSkill": "KPT special k changes",
       "misconceptionCategory": "KPT special k changes: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-special-k-focused-003"
+      "parallelExerciseId": "kptx-kpt-special-k-focused-003",
+      "answerDiagnostics": [
+        {
+          "answers": ["pukun"],
+          "category": "KPT special k changes: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply k → v to make puvu-, then add -n: puvun (“of the suit”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-special-k-focused-005",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “of the time”. Use aika (“time”); use the supplied genitive ending -n.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “aikan” to give the requested Finnish form. Use aika (“time”) and supplied genitive -n for “of the time”.",
       "acceptedAnswers": ["ajan"],
       "explanation": "The genitive ending -n is supplied. Apply k disappears and i becomes j to make aja-, then add -n: ajan (“of the time”).",
       "tags": ["kpt", "controlled-production"],
@@ -279,13 +293,20 @@
       "vocabulary": ["aika"],
       "targetSkill": "KPT special k changes",
       "misconceptionCategory": "KPT special k changes: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-special-k-focused-006"
+      "parallelExerciseId": "kptx-kpt-special-k-focused-006",
+      "answerDiagnostics": [
+        {
+          "answers": ["aikan"],
+          "category": "KPT special k changes: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply k disappears and i becomes j to make aja-, then add -n: ajan (“of the time”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-special-k-focused-006",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “of the number or chapter”. Use luku (“number or chapter”); use the supplied genitive ending -n.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “lukun” to give the requested Finnish form. Use luku (“number or chapter”) and supplied genitive -n for “of the number or chapter”.",
       "acceptedAnswers": ["luvun"],
       "explanation": "The genitive ending -n is supplied. Apply k → v to make luvu-, then add -n: luvun (“of the number or chapter”).",
       "tags": ["kpt", "controlled-production"],
@@ -293,7 +314,14 @@
       "vocabulary": ["luku"],
       "targetSkill": "KPT special k changes",
       "misconceptionCategory": "KPT special k changes: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-special-k-focused-005"
+      "parallelExerciseId": "kptx-kpt-special-k-focused-005",
+      "answerDiagnostics": [
+        {
+          "answers": ["lukun"],
+          "category": "KPT special k changes: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply k → v to make luvu-, then add -n: luvun (“of the number or chapter”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-special-k-focused-007",
@@ -325,11 +353,11 @@
     },
     {
       "id": "kptx-kpt-special-k-focused-009",
-      "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "aika (“time”) → ____ (“of the time”) · use the supplied genitive ending -n",
-      "acceptedAnswers": ["ajan"],
-      "explanation": "The genitive ending -n is supplied. Apply k disappears and i becomes j to make aja-, then add -n: ajan (“of the time”).",
+      "type": "translation-en",
+      "instruction": "Write the English meaning.",
+      "prompt": "Translate “ajan” into English.",
+      "acceptedAnswers": ["of the time"],
+      "explanation": "ajan means “of the time”. The genitive ending -n is supplied. Apply k disappears and i becomes j to make aja-, then add -n: ajan (“of the time”).",
       "tags": ["kpt", "controlled-production"],
       "requiredSkills": ["KPT special k changes"],
       "vocabulary": ["aika"],
@@ -339,11 +367,11 @@
     },
     {
       "id": "kptx-kpt-special-k-focused-010",
-      "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "luku (“number or chapter”) → ____ (“of the number or chapter”) · use the supplied genitive ending -n",
-      "acceptedAnswers": ["luvun"],
-      "explanation": "The genitive ending -n is supplied. Apply k → v to make luvu-, then add -n: luvun (“of the number or chapter”).",
+      "type": "translation-en",
+      "instruction": "Write the English meaning.",
+      "prompt": "Translate “luvun” into English.",
+      "acceptedAnswers": ["of the number or chapter"],
+      "explanation": "luvun means “of the number or chapter”. The genitive ending -n is supplied. Apply k → v to make luvu-, then add -n: luvun (“of the number or chapter”).",
       "tags": ["kpt", "controlled-production"],
       "requiredSkills": ["KPT special k changes"],
       "vocabulary": ["luku"],

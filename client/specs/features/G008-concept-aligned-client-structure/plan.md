@@ -18,7 +18,7 @@ Make the client tree explain the application in product language. Learning code 
 - No route, screen, copy, learning-content, grading, review-scheduling, or accessibility redesign.
 - No IndexedDB schema, backup format, stable-ID, or content-version change.
 - No backend, account, synchronization, analytics, runtime AI, or remote persistence.
-- No replacement of Angular, Vitest, Testing Library, Playwright, IndexedDB, or plain CSS.
+- No replacement of Angular, Vitest, Playwright, IndexedDB, or plain CSS.
 
 ## Target production structure
 

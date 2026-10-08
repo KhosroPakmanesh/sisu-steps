@@ -10,4 +10,4 @@ Before adding executable code:
 4. Record privacy, authorization, storage, migration, failure, and operational decisions.
 5. Add server-specific build, test, formatting, linting, and security guidance.
 
-See `AGENTS.md` and `specs/README.md` before working in this directory.
+See [server guidance](AGENTS.md) and the [specification entrypoint](specs/README.md) before working in this directory. Future architecture decisions, operational runbooks, deployment guidance and maintenance records belong in `server/docs/` after an owning server specification approves them; the empty documentation placeholder is unnecessary until such records exist.

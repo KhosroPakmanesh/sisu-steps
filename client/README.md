@@ -13,10 +13,10 @@ The client is the complete current Sisu Steps application. It provides the Angul
 
 ## Run locally
 
-Requirements: Node.js compatible with Angular 21 and npm. From the repository root:
+Use the Node.js and npm versions documented in the root [local setup](../README.md#run-locally). From the repository root:
 
 ```powershell
-npm --prefix client install
+npm --prefix client ci
 npm --prefix client start
 ```
 
@@ -48,7 +48,7 @@ npm --prefix client exec -- playwright install chromium
 - `src/shared` owns only product-agnostic browser infrastructure.
 - `tests/unit` mirrors production ownership, `tests/integration` owns cross-workflow stateful operations, `tests/helpers` owns reusable test fixtures, and `tests/e2e` groups critical browser journeys by concern.
 
-Start with `AGENTS.md`, `src/AGENTS.md`, and `specs/README.md`. Client review records live under `docs/`.
+Start with [client guidance](AGENTS.md), [source rules](src/AGENTS.md) and the [specification index](specs/README.md). Use the [client checklist](docs/commit-checklist.md) for handoff. The [adoption record](docs/guidance-adoption.md) and [module audit](docs/module-responsibility-audit.md) retain dated engineering evidence.
 
 ## Content workflow
 
@@ -60,11 +60,11 @@ Authored packs are registered in `content/index.json`. Each pack owns a same-nam
 npm --prefix client run content:validate
 ```
 
-Product-level content policy and pedagogy records remain under root `specs/`. The client owns pack sources, generic direct-source validation, runtime content assembly, and static deployment configuration.
+Use the root [content policy](../specs/content-authoring.md) and project-local [authoring skill](../.agents/skills/finnish-grammar-content-creator/SKILL.md); pedagogy records remain under root `specs/content-assessments/`. The client owns pack sources, generic direct-source validation, runtime content assembly, and static deployment configuration.
 
 ## Storage notes
 
-Progress is stored in IndexedDB under the browser origin serving the client. A different hostname, port, or deployment URL has separate browser storage. The client provides explicit JSON backup and restore, optional manual Google Drive recovery checkpoints, and scoped clearing controls. Drive is never required for study and is never contacted at startup or on browser close.
+Progress is stored in IndexedDB under the browser origin serving the client. Storage is shared by the same origin (scheme, hostname and port); changing only a deployment path does not create separate IndexedDB storage. The client provides explicit JSON backup and restore, optional manual Google Drive recovery checkpoints, and scoped clearing controls. Drive is never required for study and is never contacted at startup or on browser close.
 
 Adding a topic pack preserves current-format progress. A materially changed installed pack clears only that pack's incompatible local progress. A stored state containing an obsolete shape or removed pack resets completely. Restore accepts the complete current state format, initializes newly installed packs empty, discards explicitly disclosed progress from changed packs, and rejects removed packs or unsupported schemas.
 

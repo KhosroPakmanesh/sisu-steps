@@ -1,5 +1,6 @@
 # Focused test minimum expansion
 
+Current disposition: use the [2026-10-08 complete Focused quality follow-up](focused-exercise-quality.md) for the present corpus. The 2026-10-07 selected assessment and earlier dated approvals/results below retain their historical scope; they alone do not establish meaningful-task coverage.
 Date: 2026-10-06. REQ-G001-148 / VAL-G001-105. Existing levels and grammar boundaries remain unchanged.
 
 ## Pre-authoring gate

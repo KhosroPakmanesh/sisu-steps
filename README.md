@@ -24,7 +24,7 @@ The same learning journey is available at both sizes: choose a topic in **Notebo
 
 On wide screens, Notebook and Stats appear as tabs beside an open folder and workbook. On phones, the folder decoration gives way to a simpler paper layout with a horizontal, touch-friendly navigation row. During a phone study session, the answer and continue actions stay within reach without covering the exercise or feedback. Controls remain usable with a keyboard and with touch.
 
-Progress is stored for the browser profile and site address in use; it does not automatically move between devices. The JSON backup and restore controls let learners preserve or transfer it deliberately.
+Progress is stored for the browser profile and origin (scheme, hostname and port) in use; it does not automatically move between devices. The JSON backup and restore controls let learners preserve or transfer it deliberately.
 
 ## Content accuracy and contributing
 
@@ -211,7 +211,9 @@ Automated checks enforce the architecture as well as code quality. They detect i
 
 - [Product constitution](specs/constitution.md) and [feature specifications](specs/features/README.md) define learner behavior and content policy.
 - [Client specifications](client/specs/README.md) describe the current Angular architecture and design system.
-- [Content-authoring policy](specs/content-authoring.md) describes how Finnish lessons and exercises are prepared and assessed.
+- [Content-authoring policy](specs/content-authoring.md) describes how Finnish lessons and exercises are prepared and assessed; the [assessment index](specs/content-assessments/README.md) separates installed-pack records, shared corrections and retired source evidence.
+- [Repository checklist](docs/commit-checklist.md) and [client checklist](client/docs/commit-checklist.md) define review; the [2026-10-08 guidance audit](docs/guidance-audit-20261008.md) records this cleanup and its verification.
+- [Finnish grammar content creator skill](.agents/skills/finnish-grammar-content-creator/SKILL.md) provides the project-local authoring workflow, practical examples, and assessment template. Invoke it as `$finnish-grammar-content-creator` while working in this repository; it requires no global skill installation.
 
 ## Finnish grammar reference
 

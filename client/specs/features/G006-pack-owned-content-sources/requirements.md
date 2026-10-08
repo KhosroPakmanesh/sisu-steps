@@ -1,5 +1,7 @@
 # G006 pack-owned content-source requirements
 
+G006 retains the 2026-08-28 source-ownership migration and its compatibility baseline. [G009](../G009-bounded-pack-content-loading/requirements.md) supersedes eager complete-collection startup in REQ-G006-014/015/023: startup validates catalog/manifests; full packs validate on demand, with aggregate validation at authoring and full-restore boundaries. [Client G008](../G008-concept-aligned-client-structure/requirements.md) governs current validation-family and test ownership. Root G001's successor-pack requirements retired the original `vowel-harmony-kpt-tplural` pack; its dated identity/version equivalence below remains historical evidence.
+
 ## Source ownership requirements
 
 - **REQ-G006-001:** The client shall keep authored topic-pack content under `client/content/`, separate from Angular production source, generic tooling, generated build output, and mutable learner data.

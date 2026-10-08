@@ -1,6 +1,8 @@
 # Finnish grammar content authoring
 
-This guide is the reviewable workflow for every new or materially revised Sisu Steps topic pack. The product constitution and G001 requirements remain authoritative when this guide and implementation differ.
+This policy defines the detailed authoring rules and assessment criteria for every new or materially revised Sisu Steps topic pack. The product constitution and G001 requirements remain authoritative when this guide and implementation differ.
+
+The project-local [Finnish grammar content creator skill](../.agents/skills/finnish-grammar-content-creator/SKILL.md) applies this guide. Keep detailed content rules and assessment criteria here; keep the agent workflow, practical examples, and assessment-record template in the skill. Update the governing requirements first when an approved rule changes, then update this guide and the affected skill links or examples.
 
 ## Required inputs
 
@@ -40,7 +42,10 @@ Before bulk exercises are written, save an assessment record covering:
 - whether prerequisites are taught, supplied, or explicitly excluded;
 - whether each focused step asks for one new grammatical decision;
 - whether vocabulary load is controlled and meanings are supplied when vocabulary is not the target;
+- whether vocabulary entries have their planned lexical type and prerequisite provenance, and planned contexts and response formats preserve meaningful variation;
 - whether each planned lesson part follows the lesson section responsibilities, with vocabulary lists owned by the dedicated vocabulary area;
+- whether Finnish sentence-construction prompts will show their complete intended meaning before submission, while Finnish-to-English prompts continue to assess that meaning;
+- whether verb-usage examples use complete, level-appropriate sentences and any isolated-form tasks explicitly assess morphology;
 - whether the sequence moves from noticing and recognition to controlled production, review retrieval, and transfer;
 - whether predicted misconceptions receive instruction and diagnostic practice;
 - whether the Focused/Review boundary and proposed question total are pedagogically justified;
@@ -77,7 +82,7 @@ Before authoring, assign each planned part its responsibility and identify any n
 Classify every learner-relevant Finnish lexical item used in lesson explanations, worked examples, common mistakes, optional practice, and scored exercises as one of:
 
 - **New word:** first taught in the current lesson and expected to be recalled. Display it under **New words** and count it toward the focused lesson's ten-word ceiling.
-- **Used again:** introduced by the transitive chain for a declared prerequisite skill. Display it with the same English meaning under **Used again**, but do not count it as new.
+- **Used again:** introduced by the transitive chain for a declared prerequisite skill. Preserve the introduced Finnish item, English meaning, and lexical `type`, display it under **Used again**, and do not count it as new (`REQ-G001-122`).
 - **Supplied vocabulary:** used only as translated context and not assessed as lexical recall. Display its meaning where it appears and identify it under **Supplied in examples** when it occurs in lesson teaching.
 
 Do not count a personal pronoun as vocabulary when that pronoun is itself the lesson's declared grammar target. Supporting nouns, verbs, adjectives, adverbs, fixed expressions, and other lexical material still require one of the three classifications.
@@ -106,9 +111,13 @@ Repeated grammatical decisions are purposeful practice, but exercises must still
 
 Inventory response formats and their authored sequence before finalizing a pack. Choose formats that assess the lesson's own target, use the supported range across a pack, and mix recognition, completion, interpretation and production in cumulative Reviews. Interleave formats after guided recognition and separate mutual mastery partners so the second task requires retrieval. A narrow morphology target can justify fewer formats; record that exception rather than adding an unrelated sentence task. For the ownership family, apply the concrete coverage, Review-balance and spacing limits in `REQ-G001-143`.
 
+### Source files and catalog grouping
+
 Keep each pack's authored implementation under `client/content/<pack-id>/`: pack metadata and ordered references in `pack.json`, one pure-JSON lesson per stable ID under `lessons/`, and one pure-JSON learning test per stable ID under `tests/`. Store every pedagogical value and semantic relationship explicitly there. `client/content/` is the sole source and is deployed unchanged; do not author content in JavaScript or create a generated content copy.
 
 Declare catalog grouping once in schema-2 `content/index.json`. Each group has a stable lowercase-kebab `id`, a learner-facing `title`, and a non-empty ordered `packs` array. Group IDs and pack IDs are unique, and every registered pack appears in exactly one group; presentation code consumes this authored structure without hard-coding pack IDs or group membership.
+
+### Exercise definitions and accepted answers
 
 Scored exercises use fixed authored order and stable globally unique IDs. They declare required skills, controlled vocabulary, a target skill, misconception category, accepted answers, explanation, and a different mutual parallel exercise. Multiple-choice items explain every option. Sentence items explain the complete meaning, pattern, and construction of every part. When a learner must construct or complete a Finnish sentence, put its complete intended English meaning in the prompt before submission; Finnish-to-English translation items are exempt because discovering that meaning is the task.
 
@@ -124,6 +133,8 @@ English translations of Finnish possession use simple `have` / `has`, `do not ha
 
 Write general explanations so they can stand alone when no authored diagnostic matches a typed answer. Add a specific diagnostic for a predictable learner error that merits a distinct correction, and verify it against that actual answer. Inspect the rendered feedback for both cases: a general explanation should appear once, and generic text should not be repeated or presented as if it diagnosed the learner's particular mistake.
 
+Use `translation-en` for translating Finnish into English. An English grammar/reference fact is a `fill-blank` task with a visible completion gap and the exact instruction `Complete in English.`; convert its mastery counterpart to a comparable completion when needed. This explicit language declaration keeps English `he` separate from Finnish plural `he` in number validation. Keep the complete declared answer model and source/runtime guards aligned.
+
 ### Prompt style across packs
 
 Use the same compact question style in every pack, including optional practice: lead with one direct action, then give only the reference cue and supporting Finnish forms or meanings needed to answer. Keep each prompt at 40 words or fewer. A scene belongs in the prompt only when it changes the grammatical decision; remove decorative locations and task wrappers. Do not repeat the English target meaning or the instruction in a second `Target:` clause, append `Write the complete Finnish sentence: ____`, or expose authoring notes such as “The identity-sentence frame is supplied.” For a full-sentence text answer, say “Write … in Finnish”; for a form-recall item, show the short Finnish frame. Keep distinct reference, number, person, polarity, and bounded-location cues visible before the answer. The sentence translation and supplied-form rules below still apply. If a future target genuinely needs more than 40 words, revise the content contract and validation together instead of silently exempting one pack.
@@ -136,6 +147,14 @@ Whenever a prompt transforms one Finnish form into another, label both forms wit
 
 Focused tests and Reviews remain immediately accessible in separate learning-map sections without repeated classification badges on every card. Focused tests reference only their topic-specific preparation lessons; prerequisite skills remain visible but their earlier lessons are not repeated. Lessons are prominent but optional. Reveals are recorded as skipped. Corrected work becomes mastered only through a different eligible parallel exercise in later review.
 
+### Versions and learner history
+
+Assess the compatibility consequence before changing existing content. When grading, accepted answers, or the historical interpretation of scored work changes, advance only the affected pack versions and record the intentional scoped progress loss in the governing requirement and `CHANGELOG.md`. Follow the existing alignment and backup contracts; do not add migrations, aliases, or fallback readers. Pack removals and merges follow their explicitly approved compatibility boundary.
+
+Advance a materially revised lesson from its existing version and update the matching manifest summary. Never replace a higher historical lesson version with a lower number. A lesson-only revision uses the existing obsolete-completion handling and preserves compatible scored progress. Retain versions for a content-preserving structural or order-only change when the governing requirement explicitly preserves their interpretation.
+
+Preserve stable IDs, response types, scoring metadata, authored order, diagnostics, and mastery pairs during wording-only corrections unless the approved change requires them to change. Preserve unrelated packs, still-owned notes, and compatible learner progress under the owning requirements.
+
 ## 4. Technical validation
 
 Runtime and standalone validation must also reject authored grammar sections containing an obvious duplicate list of declared vocabulary, independent of the section heading. Keep contextual sentence translations and grammatical transformations valid; add negative and positive regression cases for both boundaries.
@@ -144,16 +163,21 @@ Assemble and validate every registered pack directly from its pack-owned JSON fi
 
 ## 5. Final Finnish-teaching pedagogy assessment
 
-Audit the finished pack rather than only its metadata:
+Audit the finished, rendered pack rather than only its metadata. For a systematic problem, inventory every applicable lesson or exercise, record totals and intentional exceptions, and audit the complete affected class. Automated metadata checks cannot establish that the declared important-skill list itself is pedagogically complete.
+
+Assess and record:
 
 - verify Finnish prompts, answers, translations, and formation explanations;
 - identify common natural accepted alternatives and remove ambiguous grading;
 - check English translation models, context-supported alternatives, and visible reference cues without exposing internal reference labels in the translation;
 - verify distractors are plausible, diagnostic, and unambiguously wrong;
 - ensure explanations define terminology and expose every non-obvious construction step;
+- check complete intended meanings before Finnish sentence construction, the Finnish-to-English exception, source/target meanings in transformations, and visible supply of every non-target construction step;
+- verify complete sentences when demonstrating verb usage, intentional morphology-only tasks, direct learner-facing wording, and truthful claims about supplied information;
 - submit a plausible typed error and an unrecognized error to confirm that specific diagnostics and general fallback feedback display accurately without duplication;
 - verify focused exercises contain no hidden grammar or lexical recall burden;
-- inventory vocabulary from the rendered lesson body and exercises rather than metadata alone, and verify that every learner-relevant item is correctly classified as new, used again through a declared prerequisite, or visibly supplied;
+- inventory vocabulary from the rendered lesson body and exercises rather than metadata alone; record new/reused/supplied and word/fixed-expression counts, verify prerequisite provenance and matching Finnish/English/type, justify every multiword fixed expression, and confirm classification corrections preserve meaningful variety;
+- compare each independently derived question recall list with its declared vocabulary and the words shown by its linked lesson; record missing or unnecessary entries and inflected-form judgments, including Finnish-to-English supporting words and manually reviewed non-sentence items;
 - audit every rendered lesson part against the section responsibilities, verify that the dedicated vocabulary area is the sole standalone lexical list, and justify contextual glosses, grammatical form tables, and any purposeful repetition;
 - check recognition-to-production progression and cumulative cognitive load;
 - distinguish purposeful retrieval from repetitive filler by comparing context, person, polarity, response format, vocabulary combination, and production demand;
@@ -165,4 +189,4 @@ Record the final disposition. An unresolved high-impact finding requires revisio
 
 ## Saved assessment record
 
-Store each assessment at `specs/content-assessments/<pack-id>.md`. Include topic and level, sources, coverage decision, proposed and final counts, both assessment dispositions, findings and resolutions, limitations, technical validation evidence, and the final approval decision.
+Store each assessment at `specs/content-assessments/<pack-id>.md` and register it in the [assessment index](content-assessments/README.md). For a cross-pack correction, use a purpose-named shared record and link the inherited pack decisions rather than copying their evidence. Include topic and level, sources, coverage decision, proposed and final counts, both assessment dispositions, findings and resolutions, limitations, technical validation evidence, and the final approval decision.

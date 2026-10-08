@@ -16,14 +16,14 @@ describe('whose-question word and noun blanks', () => {
     ) as unknown as TopicPack;
   });
 
-  it('accepts all eight prefixes and rejects copying only the supplied noun', () => {
+  it('accepts all sixteen prefixes and rejects copying only the supplied noun', () => {
     expect(validatePack(pack)).toEqual([]);
     expect(validateOwnershipPack(pack)).toEqual([]);
     expect(() => validatePossessiveOwnerGroups(pack)).not.toThrow();
     const blanks = pack.tests
       .flatMap((test) => test.exercises)
       .filter((exercise) => exercise.instruction === 'Write the question word and noun.');
-    expect(blanks).toHaveLength(8);
+    expect(blanks).toHaveLength(16);
     for (const exercise of blanks) {
       const answer = exercise.acceptedAnswers[0];
       expect(gradeAnswer(exercise, answer).correct).toBe(true);

@@ -291,8 +291,8 @@
     {
       "id": "kptx-recognition-focused-005",
       "type": "multiple-choice",
-      "instruction": "Choose the KPT change.",
-      "prompt": "Which learned change appears in leipä (“bread”) → leivän (“of the bread”)?",
+      "instruction": "Choose the KPT change that corrects the form.",
+      "prompt": "Repair “leipän” to give the requested Finnish form. Use leipä (“bread”) and supplied genitive -n. Choose the KPT change.",
       "acceptedAnswers": ["p → v"],
       "explanation": "leipä → leivän uses p → v. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],

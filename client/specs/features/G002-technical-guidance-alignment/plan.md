@@ -1,5 +1,15 @@
 # G002 — Technical guidance alignment
 
+The original G002 delivery is a dated behavior-preserving migration. [Client G008](../G008-concept-aligned-client-structure/requirements.md) supersedes its workflow roots, learner-specific shared ownership and test topology; [G006](../G006-pack-owned-content-sources/requirements.md) supersedes its former generated-content transport. Current operating guidance is indexed in [client specifications](../../README.md). Historical network, content and route-preservation claims apply to that delivery; later root product features govern their own changes.
+
+## Documentation maintenance — 2026-10-08
+
+Audit all repository-owned guidance, including the project-local skill and hidden GitHub files. Consolidate ongoing refactor review in the client checklist; retain unique adoption/module and dated feature evidence. Remove the empty server documentation placeholder after preserving its ownership guidance in the server entrypoint. Keep historical counts and stable IDs, qualify superseded decisions, repair moved-file links, and extend repository formatting to `.agents` and `.github` while excluding ignored temporary evidence. This amendment changes documentation and developer tooling only; runtime, authored content, learner data and license terms remain unchanged. `REQ-G002-036` / `VAL-G002-022` govern the cleanup.
+
+## Bounded module-size exceptions — 2026-10-08
+
+Implement REQ-G002-037 / VAL-G002-023 in the existing size checker, with first-line bounded declarative/generated annotations and isolated CLI cases under `tests/unit/scripts`. Keep limits, production source and aggregate build/test order unchanged; run the CLI cases through `lint:modules` and the complete client gate.
+
 ## Goal
 
 Adopt the applicable engineering governance from `D:\\Repositories\\unnamed-app-ui-prototype` while preserving Sisu Steps' Angular, strict TypeScript, plain-CSS, browser-only, local-first architecture and every G001 learner workflow.

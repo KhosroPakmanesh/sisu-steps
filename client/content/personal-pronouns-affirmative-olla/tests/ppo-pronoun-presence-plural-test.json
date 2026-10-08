@@ -531,8 +531,8 @@
     {
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
-      "prompt": "Write “You are there.” Address more than one person; omit the optional subject pronoun te.",
-      "acceptedAnswers": ["Olette siellä."],
+      "prompt": "Write “You are there in the evening.” Address more than one person; omit the optional subject pronoun te.",
+      "acceptedAnswers": ["Olette siellä illalla."],
       "explanation": "Te can be omitted here because the ending in olette already identifies the subject in Finnish.",
       "tags": [
         "sentence",
@@ -541,9 +541,9 @@
         "affirmative",
         "standard-written-finnish"
       ],
-      "vocabulary": ["siellä"],
+      "vocabulary": ["siellä", "illalla"],
       "sentenceExplanation": {
-        "translation": "You are there.",
+        "translation": "You are there in the evening.",
         "pattern": "present-tense olla + context (the verb ending identifies the subject)",
         "parts": [
           {
@@ -554,10 +554,10 @@
             "formation": "te takes the present-tense form olette"
           },
           {
-            "finnish": "siellä",
-            "meaning": "there",
+            "finnish": "siellä illalla",
+            "meaning": "there in the evening",
             "role": "context: tells the location or state",
-            "baseForm": "siellä",
+            "baseForm": "siellä illalla",
             "formation": "Use the complete taught form; no change is required"
           }
         ]

@@ -441,10 +441,10 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the blank.",
-      "prompt": "Write “Those are here.” in Finnish. Use täällä (“here”). The listener already knows which ones.",
+      "instruction": "Use the demonstrative without a noun.",
+      "prompt": "Repair the noun-bearing answer “Ne kirjat ovat täällä.” (“The books are here”) to mean “Those are here.” The listener knows which ones. Use the demonstrative alone.",
       "acceptedAnswers": ["Ne ovat täällä."],
-      "explanation": "Ne stands independently and takes the plural verb ovat.",
+      "explanation": "The intended answer refers to the known things without repeating kirjat: Ne ovat täällä. Ne stands independently and takes the plural verb ovat.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {

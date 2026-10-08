@@ -63,6 +63,20 @@ describe('content-pack version alignment', () => {
       },
     ],
     [
+      'nine Focused quality revisions',
+      {
+        'vowel-harmony-location-endings': '1.0.0',
+        'kpt-singular-forms': '1.0.0',
+        't-plural-agreement': '1.0.0',
+        'personal-pronouns-affirmative-olla': '1.3.0',
+        'negative-olla-statements': '1.2.0',
+        'demonstrative-pronouns': '1.1.0',
+        'negative-demonstrative-statements': '1.3.0',
+        'demonstrative-questions': '1.1.0',
+        'possessive-pronouns-endings': '2.2.0',
+      },
+    ],
+    [
       'five earlier ownership revisions',
       {
         'affirmative-possession': '1.2.0',
@@ -205,12 +219,12 @@ describe('content-pack version alignment', () => {
       },
     ];
     const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
-    expect(revised.version).toBe('2.2.0');
+    expect(revised.version).toBe('2.3.0');
     expect(aligned.attempts).toEqual([state.attempts[1]]);
     expect(aligned.unresolvedMistakeIds).toEqual([state.unresolvedMistakeIds[1]]);
     expect(aligned.lessonCompletions).toEqual([state.lessonCompletions[1]]);
     expect(aligned.learnerNotes).toEqual(state.learnerNotes);
-    expect(aligned.contentPackVersions[revised.id]).toBe('2.2.0');
+    expect(aligned.contentPackVersions[revised.id]).toBe(revised.version);
     expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
   });
 

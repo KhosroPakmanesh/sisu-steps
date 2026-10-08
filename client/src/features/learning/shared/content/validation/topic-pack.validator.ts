@@ -1,3 +1,4 @@
+import { validateFocusedTaskQuality } from './focused-task-quality.validator';
 import { validateDemonstrativePractice } from './demonstrative-practice-expansion.validator';
 import { validateFocusedNumberScopes } from './focused-number-scopes.validator';
 import { TopicPack } from '../topic-pack.models';
@@ -78,6 +79,12 @@ export function validateTopicPack(value: unknown): TopicPack {
     lessons: validatedLessons,
     tests: validatedTests,
   });
+  const qualityErrors = validateFocusedTaskQuality({
+    ...(value as unknown as TopicPack),
+    tests: validatedTests,
+    lessons: validatedLessons,
+  });
+  if (qualityErrors.length) throw new Error(qualityErrors.join('\n'));
   return {
     ...(value as unknown as TopicPack),
     grammarBaseForms,

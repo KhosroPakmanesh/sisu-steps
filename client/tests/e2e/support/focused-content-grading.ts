@@ -55,9 +55,9 @@ export const FOCUSED_EXPANSION_INVENTORY = [
     id: 'personal-pronouns-affirmative-olla',
     added: 48,
     scored: 120,
-    alternatives: 12,
+    alternatives: 14,
     wrong: 40,
-    formats: 5,
+    formats: 4,
   },
   {
     id: 'possession-questions',

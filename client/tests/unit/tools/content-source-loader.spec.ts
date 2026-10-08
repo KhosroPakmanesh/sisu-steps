@@ -293,9 +293,9 @@ describe('pack-owned content source loader', () => {
       },
     ]);
     expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
-      '1.0.0',
-      '1.0.0',
-      '1.0.0',
+      '1.1.0',
+      '1.1.0',
+      '1.1.0',
     ]);
     expect(source.packs.slice(0, 3).map((pack) => (pack['lessons'] as unknown[]).length)).toEqual([
       4, 8, 6,

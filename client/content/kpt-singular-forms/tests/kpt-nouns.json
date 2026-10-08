@@ -196,8 +196,8 @@
     {
       "id": "ff-a1-t07-e13",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "kauppa (“shop”) → ____ (“the shop's / of the shop”) · use the supplied weak stem kaupa- and add genitive -n",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “kauppan” to give the requested Finnish form. Use supplied weak stem kaupa- and genitive -n for “of the shop”.",
       "acceptedAnswers": ["kaupan"],
       "explanation": "kauppa means “shop”; kaupan means “the shop's / of the shop”. The genitive ends in -n. pp weakens to p.",
       "tags": ["kpt", "noun", "genitive"],
@@ -205,7 +205,14 @@
       "vocabulary": ["kauppa"],
       "targetSkill": "Genitive -n",
       "misconceptionCategory": "Genitive -n: form not yet correct",
-      "parallelExerciseId": "ff-a1-t07-e14"
+      "parallelExerciseId": "ff-a1-t07-e14",
+      "answerDiagnostics": [
+        {
+          "answers": ["kauppan"],
+          "category": "Genitive -n: form not yet correct",
+          "explanation": "kauppa means “shop”; kaupan means “the shop's / of the shop”. The genitive ends in -n. pp weakens to p."
+        }
+      ]
     },
     {
       "id": "ff-a1-t07-e14",

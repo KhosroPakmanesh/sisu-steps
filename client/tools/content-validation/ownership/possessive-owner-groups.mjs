@@ -41,7 +41,7 @@ export function validatePack(pack) {
   if (pack.id !== 'possessive-pronouns-endings') return [];
   const errors = [];
   if (
-    pack.version !== '2.2.0' ||
+    pack.version !== '2.3.0' ||
     pack.level !== '0 - A1.3' ||
     pack.lessons.length !== 16 ||
     pack.lessons.some(

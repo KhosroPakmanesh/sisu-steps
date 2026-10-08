@@ -426,9 +426,9 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the missing word.",
-      "prompt": "Complete “Whose pillow is this?”: Kenen ___ tämä on? Use tyyny (“pillow”).",
-      "acceptedAnswers": ["tyyny"],
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose pillow is this?”: ___ tämä on? Use tyyny (“pillow”).",
+      "acceptedAnswers": ["Kenen tyyny"],
       "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
       "tags": [
         "standard-written-finnish",
@@ -926,13 +926,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
-      "prompt": "Write “Whose pillow is this?” in Finnish. Begin with Kenen. Use tyyny (“pillow”), tämä on (“this is”).",
-      "acceptedAnswers": ["Kenen tyyny tämä on?", "Kenen tämä tyyny on?"],
+      "prompt": "Write “Whose ball is this?” in Finnish. Begin with Kenen. Use pallo (“ball”), tämä on (“this is”).",
+      "acceptedAnswers": ["Kenen pallo tämä on?", "Kenen tämä pallo on?"],
       "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
       "tags": [
         "standard-written-finnish",
         "sentence",
-        "possessive-noun-tyyny",
+        "possessive-noun-pallo",
         "objects-singular",
         "whose-question"
       ],
@@ -941,7 +941,7 @@
       "targetSkill": "Whose questions with kenen",
       "misconceptionCategory": "Whose questions with kenen: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "Whose pillow is this?",
+        "translation": "Whose ball is this?",
         "pattern": "kenen + basic noun + tämä + on",
         "parts": [
           {
@@ -952,10 +952,10 @@
             "formation": "Kenen is the owner-question form of kuka (“who”). Several things do not by themselves change kenen."
           },
           {
-            "finnish": "tyyny",
-            "meaning": "pillow",
+            "finnish": "pallo",
+            "meaning": "ball",
             "role": "things whose owner is asked",
-            "baseForm": "tyyny",
+            "baseForm": "pallo",
             "formation": "Keep the basic singular noun without a personal suffix."
           },
           {
@@ -979,9 +979,9 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the missing word.",
-      "prompt": "Complete “Whose pen is this?”: Kenen ___ tämä on? Use kynä (“pen”).",
-      "acceptedAnswers": ["kynä"],
+      "instruction": "Write the question word and noun.",
+      "prompt": "Complete “Whose pen is this?”: ___ tämä on? Use kynä (“pen”).",
+      "acceptedAnswers": ["Kenen kynä"],
       "explanation": "Ask with kenen; keep the unsuffixed basic noun and tämä on.",
       "tags": [
         "standard-written-finnish",

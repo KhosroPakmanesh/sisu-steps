@@ -1,5 +1,15 @@
 # G001 — Local Finnish exercise book
 
+This evolving product pack retains dated delivery slices. Use the [requirements](requirements.md), explicit supersession relationships and latest applicable [validation evidence](validation.md); old pack counts and preservation boundaries describe their own baseline. Supporting authoring guidance is canonical in [content policy](../../content-authoring.md). The [2026-10-08 complete Focused quality follow-up](../../content-assessments/focused-exercise-quality.md) records the present corpus review, revisions, actual validation and limitations; earlier selected-revision evidence remains historical.
+
+## 2026-10-08 Focused exercise quality
+
+Implement REQ-G001-149 / VAL-G001-108 through [the fresh scoped assessment](../../content-assessments/focused-exercise-quality.md). Inventory all 103 Focused tests and the existing minimum additions; preserve teaching, counts, IDs, boundaries and order while correcting confirmed repetitions, diagnostics, base forms and accepted-answer gaps. Keep meaningful reference/repair/recognition/production contrasts and complete comparable mastery pairs. Record exact changes and scoped version/reset consequences, strengthen aligned negative guards without weakening existing linguistic checks, run full client validation and affected rendered grading at three widths, then record the actual final gate. Preserve existing uncommitted work and do not commit.
+
+## 2026-10-08 project-local content authoring skill
+
+Update `REQ-G001-096` / `VAL-G001-056` to own the skill at `.agents/skills/finnish-grammar-content-creator/`. Retain the existing skill name and invocation metadata, move all three guide references into the repository, and replace repeated policy lists with relative links to `specs/content-authoring.md`. Preserve the latest chunking and minimum-count contract. Keep workflow-specific inventories, previews, integration guidance, useful examples, and a record template; qualify the stem example by its assessed target. Make vocabulary type matching and version/history guidance explicit in the policy. Update root guidance, README, and changelog without changing authored content, versions, runtime code, or learner data. Validate the bundle, links, requirement references, and formatting before removing the exact personal skill folder. Preserve dated earlier evidence and do not commit.
+
 ## 2026-10-06 existing-format demonstrative expansion
 
 Implement REQ-G001-147 / VAL-G001-104 using the content-creator skill and content-authoring.md. Snapshot the complete current corpus. Approve the sixteen-item coverage blueprint against all current scored/optional tasks, then author four new questions in each selected test using existing template structures, grammar and vocabulary. Preserve every existing object and relative order, interleave new mutual pairs, advance only this pack to 1.1.0 and update manifest/count checks. Validate novelty, balance and source/runtime equivalence; prove preservation, run the client gate, grade all new items/alternatives/diagnostics and inspect rendered routes/feedback at three widths. Record final evidence. Do not commit.

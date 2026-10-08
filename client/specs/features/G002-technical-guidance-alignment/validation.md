@@ -1,5 +1,7 @@
 # G002 technical guidance alignment validation
 
+The original G002 delivery is a dated behavior-preserving migration. [Client G008](../G008-concept-aligned-client-structure/requirements.md) supersedes its workflow roots, learner-specific shared ownership and test topology; [G006](../G006-pack-owned-content-sources/requirements.md) supersedes its former generated-content transport. Current operating guidance is indexed in [client specifications](../../README.md). Historical network, content and route-preservation claims apply to that delivery; later root product features govern their own changes.
+
 ## Automated checks
 
 - **VAL-G002-001:** Run `npm --prefix client run lint`; verify Angular TypeScript and templates pass recommended and accessibility rules and the 150-line function/component trigger. Covers REQ-G002-011 through REQ-G002-017 and REQ-G002-024.
@@ -16,7 +18,7 @@
 ## Structural checks
 
 - **VAL-G002-011:** Confirm `client/src` contains only the entrypoint plus app, design-system, feature, and shared owners and contains no unit-test file. Covers REQ-G002-005 through REQ-G002-008 and REQ-G002-026.
-- **VAL-G002-012:** Confirm route pages read as composition, services own complete mutations, policies/queries/validators remain pure, and browser APIs occur only in adapters. Covers REQ-G002-011 through REQ-G002-016.
+- **VAL-G002-012:** Confirm route pages read as composition, services own complete mutations, policies/queries/validators remain pure, and browser APIs occur only in adapters. Locate each workflow's route, presentation, state, decisions, queries, operations and styles under its current owner. Covers REQ-G002-011 through REQ-G002-016 and REQ-G002-033.
 - **VAL-G002-013:** Confirm every test path mirrors the production owner and every test file uses explicit Vitest imports. Covers REQ-G002-026.
 - **VAL-G002-014:** Compare database constants, persisted models, backup models, grading logic, review intervals, public paths, stable assembled-content semantics, and exact `client/content/` deployment copies against the applicable current feature baselines. G006 supersedes G002's former `client/public/content` hash path. Covers REQ-G002-010 and REQ-G002-018 through REQ-G002-021.
 - **VAL-G002-015:** Verify every prototype Markdown file has a disposition in `client/docs/guidance-adoption.md` and every current Markdown link resolves. Covers REQ-G002-001 through REQ-G002-004.
@@ -61,3 +63,19 @@ Completed 2026-08-18 in the isolated refactor copy before synchronization.
 - Compatibility review: public route patterns, IndexedDB database/version/store/key, learner/backup shapes, content schemas, and automatic same-origin network boundary are unchanged. The shell Mistakes link was corrected to include the current topic ID.
 - Toolchain used: Angular CLI 21.2.21, Angular core 21.2.20, TypeScript 5.9.3, Vitest 4.1.10, Playwright 1.62.1, angular-eslint 21.4.0, ESLint 9.39.5, Stylelint 17.14.1, and Prettier 3.9.6.
 - Manual review guide: `client/docs/manual-refactor-review-guide.md`. No validation exception or deferred implementation item remains for G002.
+
+## Documentation maintenance validation
+
+- **VAL-G002-022** (REQ-G002-036): Inventory tracked and repository-owned untracked Markdown, including hidden directories, and inspect guide consumers before deletion. Verify canonical ownership links, local paths/anchors, requirement/validation definitions and coverage in root and client feature packs; review scanner false positives. Confirm formatter coverage of `.agents`/`.github` and exclusion of ignored temporary evidence. Run skill frontmatter/invocation checks, repository formatting, whitespace checks and the full client gate for the formatter configuration change. Compare runtime/content/license hashes with the audit-start snapshot, and record actual results and remaining discrepancies in the [dated audit record](../../../../docs/guidance-audit-20261008.md).
+
+## Documentation maintenance evidence — 2026-10-08
+
+VAL-G002-022 passes the reviewed inventory, canonical-owner consolidation, skill metadata, local-link/anchor/case, traceability and preservation checks recorded in [the audit](../../../../docs/guidance-audit-20261008.md). Repository formatting passes with explicit client configuration across `.agents` and `.github` and ignored temporary output excluded. The full client gate passes with the documented process-local Node 26 `--no-experimental-webstorage` workaround: 391 unit tests and 25 integration tests. The preceding default Vitest worker-exit failure and the scanner's unstaged-deletion/parser limitations remain disclosed. Runtime, authored content, learner data and licensing terms are unchanged; original dated G002 evidence is retained. Browser/live-provider checks were not repeated, and no commit was created.
+
+## Module-size exception validation
+
+- **VAL-G002-023** (REQ-G002-017, REQ-G002-037): Verify ordinary TS/CSS boundary and over-limit files, LF/CRLF and final-newline counting, valid declarative/generated exceptions, explicit growth caps, BOM/leading blanks, and rejection of missing/blank reasons, unsupported kinds, unsafe/unbounded/ordinary maxima, duplicate/buried/wrong-syntax/stale annotations. Verify unrelated/declaration files remain excluded, current production sources need no annotation, and function/component linting and aggregate build/test order remain unchanged. Run `lint:modules` and the full client gate; record actual results below.
+
+## Module-size exception evidence — 2026-10-08
+
+VAL-G002-023 passes all 17 black-box Node regressions through `npm --prefix client run lint:modules`, followed by the current production-source scan. Ordinary limits, physical LF/CRLF/final-newline counting, bounded declarative/generated headers and all documented rejection cases pass. No production file requires an annotation. The complete `npm --prefix client run check` passes lint/style/source/architecture/format/type/content/build gates, 397 unit tests and 26 integration tests with the disclosed process-local Node 26 worker workaround. Function/component enforcement is unchanged. A comparison with Git HEAD confirms the aggregate check command retains exactly the user's chosen build-before-tests sequence; no build-order or performance improvement is claimed. Detailed content follow-up evidence and its separate scope are linked from [the audit record](../../../../docs/guidance-audit-20261008.md).

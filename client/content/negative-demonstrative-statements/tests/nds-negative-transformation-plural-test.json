@@ -23,8 +23,8 @@
             "finnish": "Nuo kirjat",
             "meaning": "those books",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nuo + kirja",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tuo + kirja",
+            "formation": "Nuo is the plural of tuo. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -53,13 +53,6 @@
       "tokens": ["eivät", "ole", "kotona.", "Nuo", "kirjat"],
       "targetSkill": "Demonstrative affirmative-to-negative transformation",
       "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-      "answerDiagnostics": [
-        {
-          "answers": ["Nuo kirjat ei ole kotona."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number."
-        }
-      ],
       "id": "nds-negative-transformation-plural-test-e101",
       "parallelExerciseId": "nds-negative-transformation-plural-test-e102"
     },
@@ -135,8 +128,8 @@
             "finnish": "Nämä autot",
             "meaning": "these cars",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nämä + auto",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tämä + auto",
+            "formation": "Nämä is the plural of tämä. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -245,8 +238,8 @@
             "finnish": "Ne autot",
             "meaning": "the cars",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "ne + auto",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "se + auto",
+            "formation": "Ne is the plural of se. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -275,13 +268,6 @@
       "tokens": ["täällä.", "Ne", "autot", "eivät", "ole"],
       "targetSkill": "Demonstrative affirmative-to-negative transformation",
       "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-      "answerDiagnostics": [
-        {
-          "answers": ["Ne autot ei ole täällä."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number."
-        }
-      ],
       "id": "nds-negative-transformation-plural-test-e102",
       "parallelExerciseId": "nds-negative-transformation-plural-test-e101"
     },
@@ -349,8 +335,8 @@
             "finnish": "Nuo autot",
             "meaning": "those cars",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nuo + auto",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tuo + auto",
+            "formation": "Nuo is the plural of tuo. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -471,8 +457,8 @@
             "finnish": "Ne autot",
             "meaning": "the cars",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "ne + auto",
-            "formation": "Keep the plural demonstrative and the noun’s plural -t unchanged."
+            "baseForm": "se + auto",
+            "formation": "Ne is the plural of se. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -574,8 +560,8 @@
             "finnish": "Nämä kirjat",
             "meaning": "these books",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nämä + kirja",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tämä + kirja",
+            "formation": "Nämä is the plural of tämä. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -696,8 +682,8 @@
             "finnish": "Nämä autot",
             "meaning": "these cars",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nämä + auto",
-            "formation": "Keep the plural demonstrative and the noun’s plural -t unchanged."
+            "baseForm": "tämä + auto",
+            "formation": "Nämä is the plural of tämä. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -792,8 +778,8 @@
             "finnish": "Nuo kirjat",
             "meaning": "those books",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nuo + kirja",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tuo + kirja",
+            "formation": "Nuo is the plural of tuo. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -915,8 +901,8 @@
             "finnish": "Ne kirjat",
             "meaning": "the books",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "ne + kirja",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "se + kirja",
+            "formation": "Ne is the plural of se. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",
@@ -1023,8 +1009,8 @@
     },
     {
       "type": "fill-blank",
-      "instruction": "Fill in the blank.",
-      "prompt": "Write “These cars are not here.” in Finnish. Start from “Nämä autot ovat täällä.” (“These cars are here.”). Keep nämä and autot unchanged.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “Nämä autot ei ole täällä.” to mean “These cars are not here.” Keep nämä autot (“these cars”) and täällä (“here”) unchanged.",
       "acceptedAnswers": ["Nämä autot eivät ole täällä."],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
@@ -1092,8 +1078,8 @@
             "finnish": "Nämä kirjat",
             "meaning": "these books",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nämä + kirja",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tämä + kirja",
+            "formation": "Nämä is the plural of tämä. The supplied noun has the regular nominative plural ending -t; keep the complete subject unchanged."
           },
           {
             "finnish": "eivät",

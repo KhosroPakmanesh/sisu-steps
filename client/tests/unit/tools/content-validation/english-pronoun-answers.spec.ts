@@ -12,8 +12,7 @@ import { validatePackContent } from '../../../../tools/content-validation/shared
 const cases = [
   ['ppo-t19-e24', ['he', 'she', 'he or she']],
   ['ppo-t16-e12', ['he', 'she', 'he or she']],
-  ['ppo-t03-e04', ['he', 'she', 'he or she']],
-  ['ppo-t03-e20', ['he', 'she', 'he or she']],
+  ['ppo-t03-e20', ['he / you', 'she / you', 'he or she / you']],
   ['sdp-se-han-test-e009', ['He is here.', 'She is here.', 'He or she is here.']],
   ['aps-fixed-on-test-e015', ['He has a pillow.', 'She has a pillow.', 'He or she has a pillow.']],
   [

@@ -346,8 +346,8 @@
     {
       "id": "kptx-kpt-doubles-focused-004",
       "type": "translation-fi",
-      "instruction": "Write the Finnish form.",
-      "prompt": "Write “of the ticket”. Use lippu (“ticket”); use the supplied genitive ending -n.",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “lippun” to give the requested Finnish form. Use lippu (“ticket”) and supplied genitive -n for “of the ticket”.",
       "acceptedAnswers": ["lipun"],
       "explanation": "The genitive ending -n is supplied. Apply pp → p to make lipu-, then add -n: lipun (“of the ticket”).",
       "tags": ["kpt", "controlled-production"],
@@ -355,13 +355,20 @@
       "vocabulary": ["lippu"],
       "targetSkill": "KPT double consonants",
       "misconceptionCategory": "KPT double consonants: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-doubles-focused-003"
+      "parallelExerciseId": "kptx-kpt-doubles-focused-003",
+      "answerDiagnostics": [
+        {
+          "answers": ["lippun"],
+          "category": "KPT double consonants: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply pp → p to make lipu-, then add -n: lipun (“of the ticket”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-doubles-focused-005",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "Retrieve the form without a family label. pankki (“bank”) → ____ (“of the bank”) · use the supplied genitive ending -n",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “pankkin” to give the requested Finnish form. Use pankki (“bank”) and supplied genitive -n for “of the bank”.",
       "acceptedAnswers": ["pankin"],
       "explanation": "The genitive ending -n is supplied. Apply kk → k to make panki-, then add -n: pankin (“of the bank”).",
       "tags": ["kpt", "controlled-production"],
@@ -369,13 +376,20 @@
       "vocabulary": ["pankki"],
       "targetSkill": "KPT double consonants",
       "misconceptionCategory": "KPT double consonants: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-doubles-focused-006"
+      "parallelExerciseId": "kptx-kpt-doubles-focused-006",
+      "answerDiagnostics": [
+        {
+          "answers": ["pankkin"],
+          "category": "KPT double consonants: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply kk → k to make panki-, then add -n: pankin (“of the bank”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-doubles-focused-006",
       "type": "fill-blank",
-      "instruction": "Complete the Finnish form.",
-      "prompt": "Retrieve the form without a family label. kauppa (“shop”) → ____ (“of the shop”) · use the supplied genitive ending -n",
+      "instruction": "Correct the Finnish answer.",
+      "prompt": "Repair “kauppan” to give the requested Finnish form. Use kauppa (“shop”) and supplied genitive -n for “of the shop”.",
       "acceptedAnswers": ["kaupan"],
       "explanation": "The genitive ending -n is supplied. Apply pp → p to make kaupa-, then add -n: kaupan (“of the shop”).",
       "tags": ["kpt", "controlled-production"],
@@ -383,7 +397,14 @@
       "vocabulary": ["kauppa"],
       "targetSkill": "KPT double consonants",
       "misconceptionCategory": "KPT double consonants: form not yet correct",
-      "parallelExerciseId": "kptx-kpt-doubles-focused-005"
+      "parallelExerciseId": "kptx-kpt-doubles-focused-005",
+      "answerDiagnostics": [
+        {
+          "answers": ["kauppan"],
+          "category": "KPT double consonants: form not yet correct",
+          "explanation": "The genitive ending -n is supplied. Apply pp → p to make kaupa-, then add -n: kaupan (“of the shop”)."
+        }
+      ]
     },
     {
       "id": "kptx-kpt-doubles-focused-007",

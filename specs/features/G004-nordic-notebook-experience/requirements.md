@@ -1,5 +1,7 @@
 # G004 requirements
 
+G004 establishes the notebook baseline. [G005](../G005-interactive-nordic-workbook-world/requirements.md) supersedes the original Appearance labels/swatches with Day/Automatic/Night mechanical controls, and [G007](../G007-scalable-stats-navigation/requirements.md) supersedes Reports/Data navigation with Notebook/Stats. Retain the stable baseline IDs and dated evidence; apply the later requirements for those refinements.
+
 ## Visual and interaction requirements
 
 - **REQ-G004-001:** Every learner-facing route shall use a coherent immersive Nordic school-notebook visual language while preserving the existing information and action hierarchy.
