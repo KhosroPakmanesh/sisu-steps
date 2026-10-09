@@ -1,12 +1,13 @@
 import { ContentCatalog } from '../catalog.models';
 import { hasText, isRecord } from './validation-primitives';
+import { validateCatalogPackSummary } from './catalog-pack-summary.validator';
 
 const SAFE_ID = /^[a-z0-9][a-z0-9-]*$/;
 
 export function validateContentCatalog(value: unknown): ContentCatalog {
   if (
     !isRecord(value) ||
-    value['schemaVersion'] !== 2 ||
+    value['schemaVersion'] !== 3 ||
     !Array.isArray(value['groups']) ||
     value['groups'].length === 0
   ) {
@@ -36,5 +37,9 @@ export function validateContentCatalog(value: unknown): ContentCatalog {
   ) {
     throw new Error('The content catalog contains an invalid or duplicate pack ID.');
   }
+  if (!Array.isArray(value['packs']) || value['packs'].length !== packIds.length) {
+    throw new Error('The content catalog is missing its startup pack summaries.');
+  }
+  value['packs'].forEach(validateCatalogPackSummary);
   return value as unknown as ContentCatalog;
 }

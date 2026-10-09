@@ -1,0 +1,66 @@
+:host(.topic-group),
+.topic-group {
+  display: block;
+  min-width: 0;
+  scroll-margin-top: var(--space-4);
+}
+
+:host(.topic-group) .pack-group,
+.topic-group .pack-group {
+  height: 100%;
+}
+
+:host(.topic-group.animating) .pack-group,
+.topic-group.animating .pack-group {
+  overflow: hidden;
+}
+
+.topic-group-disclosure {
+  min-width: 0;
+}
+
+.topic-group-toggle {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: var(--touch-target);
+  padding: var(--space-2);
+  color: var(--text-brand);
+  cursor: pointer;
+  list-style: none;
+}
+
+.topic-group-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.topic-group-toggle .card-kicker {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.topic-group-toggle:focus-visible {
+  outline: 0.2rem solid var(--focus-ring);
+  outline-offset: -0.2rem;
+}
+
+.topic-group-chevron {
+  flex-shrink: 0;
+  width: var(--space-6);
+  height: var(--space-6);
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.topic-group-disclosure[open] .topic-group-chevron {
+  transform: rotate(90deg);
+}
+
+.topic-group-disclosure .group-cards {
+  margin-top: var(--space-4);
+}

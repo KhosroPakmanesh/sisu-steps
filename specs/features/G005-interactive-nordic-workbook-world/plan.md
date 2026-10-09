@@ -30,7 +30,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 - Sound, audio feedback, remote fonts, remote images, analytics, accounts, cloud synchronization, or other runtime network dependencies.
 - Drag-only interactions or visual metaphors that replace visible labels, keyboard operation, or assistive-technology meaning.
 - Animation delays before content or navigation becomes available.
-- Binder-clip accordions, collapsible stationery tools, hidden tool drawers, or any new collapse/expand interaction.
+- Binder-clip accordions, collapsible stationery tools, and hidden tool drawers. Home-catalog and Stats-overview topic-group disclosures are owned separately by G003.
 - A Finnish-character quick-insert or pencil-case answer toolbar.
 
 ## Implementation steps
@@ -43,7 +43,7 @@ Transform the complete Sisu Steps client into an interactive Nordic school-workb
 6. Add focused unit and browser coverage for labels, keyboard use, dialog cancellation and confirmation, overflow, and reduced motion.
 7. Run the complete client quality gate and inspect representative routes at 320, 768, and 1440 pixels in Day and Night appearances.
 8. Update design guidance, validation evidence, and the changelog.
-9. Add stamped answer/completion feedback, safe response-edit actions, local topic/lesson sticky notes, and stronger existing tab/card/input reactions without adding collapse behavior.
+9. Add stamped answer/completion feedback, safe response-edit actions, local topic/lesson sticky notes, and stronger existing tab/card/input reactions while keeping tools and teaching sections directly visible.
 10. Differentiate hover and focus movement by physical object: slide tabs and informational strips, pivot attached paper, preserve bound-cover offsets, keep nested reading surfaces calm, and suppress travel for disabled and reduced-motion states.
 11. Derive local browser and saved-site icons from the visible paper **S** brand mark with scalable and compatibility formats.
 12. Let phone layouts show the routed paper without the navy folder, page clip, hardware, vertical dividers, or desk objects; reflow the existing navigation horizontally and preserve the complete workbook composition from 48rem upward.

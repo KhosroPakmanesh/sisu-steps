@@ -1,4 +1,5 @@
 import { expect, type Page, test } from '@playwright/test';
+import { expandTopicGroup } from '../support/topic-groups';
 
 async function scrollAwayFromTop(page: Page) {
   await page.evaluate(() => window.scrollTo({ top: 600, behavior: 'instant' }));
@@ -34,6 +35,7 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
     }
 
     await scrollAwayFromTop(page);
+    await expandTopicGroup(page, 'foundations');
     await page.locator('.topic-card a[href="/topics/vowel-harmony-location-endings"]').click();
     await expect(page).toHaveURL(/\/topics\/vowel-harmony-location-endings$/);
     await expectPageAtTop(page);

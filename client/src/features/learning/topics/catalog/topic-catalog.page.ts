@@ -1,5 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TopicGroupComponent } from './topic-group/topic-group.component';
 import { BlockingOverlayAdapter } from '@/shared/browser/blocking-overlay.adapter';
 import { getLearningLevelLabel } from '../../shared/content/content.queries';
 import { learningPaths } from '../../shared/navigation/learning.paths';
@@ -18,9 +19,12 @@ import {
 
 @Component({
   selector: 'app-home',
-  imports: [RouterLink],
+  imports: [RouterLink, TopicGroupComponent],
   templateUrl: './topic-catalog.page.html',
-  styleUrl: '../../shared/styles/topic-catalog-layout.css',
+  styleUrls: [
+    '../../shared/topic-group/topic-group-grid.css',
+    '../../shared/styles/topic-catalog-layout.css',
+  ],
 })
 export class TopicCatalogPage implements RouteReadiness {
   private readonly blockingOverlay = inject(BlockingOverlayAdapter);

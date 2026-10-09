@@ -1,4 +1,5 @@
 import { expect, type Locator, type Page, test } from '@playwright/test';
+import { expandTopicGroups } from '../support/topic-groups';
 
 const TOPIC = 'vowel-harmony-location-endings';
 const PLURAL_TOPIC = 't-plural-agreement';
@@ -12,6 +13,7 @@ const TOPIC_STATS = `/stats/${TOPIC}`;
 async function open(page: Page, path: string) {
   await page.goto(path);
   await expect(page.locator('main h1').first()).toBeVisible();
+  if (path === '/' || path === '/stats') await expandTopicGroups(page);
 }
 
 async function expectNoInternalOverflow(surface: Locator) {
@@ -894,6 +896,8 @@ for (const theme of ['Day', 'Night']) {
         page.locator('.file-button input'),
       );
       await expectVisibleInsetFocus(page, page.getByRole('link', { name: 'Stats', exact: true }));
+      await open(page, '/');
+      await expectVisibleInsetFocus(page, page.locator('.topic-group-toggle').first());
     });
 
     test('keeps paper and selected controls stationary under reduced motion', async ({ page }) => {

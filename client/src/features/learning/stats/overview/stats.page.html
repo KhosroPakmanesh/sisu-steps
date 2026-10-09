@@ -47,41 +47,55 @@
         <p class="card-kicker">{{ catalogLevelLabel() }}</p>
         <div class="pack-group-stack">
           @for (group of packGroups(); track group.id) {
-            <section class="pack-group" [attr.aria-labelledby]="'stats-group-heading-' + group.id">
-              <h3 class="card-kicker" [id]="'stats-group-heading-' + group.id">
-                {{ group.title }}
-              </h3>
-              <div class="group-cards">
-                @for (pack of group.packs; track pack.id) {
-                  <article class="topic-card stats-topic-card">
-                    <header>
-                      <h4>{{ pack.title }}</h4>
-                    </header>
+            <div appTopicGroupDisclosure #disclosure="topicGroupDisclosure">
+              <section
+                class="pack-group"
+                [attr.aria-labelledby]="'stats-group-heading-' + group.id"
+              >
+                <details class="topic-group-disclosure" [open]="disclosure.expanded()">
+                  <summary class="topic-group-toggle" (click)="disclosure.toggle($event)">
+                    <h3 class="card-kicker" [id]="'stats-group-heading-' + group.id">
+                      {{ group.title }}
+                    </h3>
+                    <svg class="topic-group-chevron" viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="m9 5 7 7-7 7" />
+                    </svg>
+                  </summary>
+                  <div class="group-cards">
+                    @if (disclosure.loaded()) {
+                      @for (pack of group.packs; track pack.id) {
+                        <article class="topic-card stats-topic-card">
+                          <header>
+                            <h4>{{ pack.title }}</h4>
+                          </header>
 
-                    <dl class="stats-card-metrics">
-                      <div>
-                        <dt>Completed attempts</dt>
-                        <dd>{{ completedAttempts(pack) }}</dd>
-                      </div>
-                      <div>
-                        <dt>Average score</dt>
-                        <dd>{{ average(pack) === null ? '—' : average(pack) + '%' }}</dd>
-                      </div>
-                      <div>
-                        <dt>Unresolved mistakes</dt>
-                        <dd>{{ unresolvedMistakes(pack) }}</dd>
-                      </div>
-                    </dl>
+                          <dl class="stats-card-metrics">
+                            <div>
+                              <dt>Completed attempts</dt>
+                              <dd>{{ completedAttempts(pack) }}</dd>
+                            </div>
+                            <div>
+                              <dt>Average score</dt>
+                              <dd>{{ average(pack) === null ? '—' : average(pack) + '%' }}</dd>
+                            </div>
+                            <div>
+                              <dt>Unresolved mistakes</dt>
+                              <dd>{{ unresolvedMistakes(pack) }}</dd>
+                            </div>
+                          </dl>
 
-                    <div class="topic-card-actions">
-                      <a class="button primary" [routerLink]="paths.topicStats(pack.id)">
-                        View stats
-                      </a>
-                    </div>
-                  </article>
-                }
-              </div>
-            </section>
+                          <div class="topic-card-actions">
+                            <a class="button primary" [routerLink]="paths.topicStats(pack.id)">
+                              View stats
+                            </a>
+                          </div>
+                        </article>
+                      }
+                    }
+                  </div>
+                </details>
+              </section>
+            </div>
           }
         </div>
       </div>

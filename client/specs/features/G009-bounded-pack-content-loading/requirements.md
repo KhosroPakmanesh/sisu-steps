@@ -1,9 +1,11 @@
 # G009 requirements — Bounded pack content loading
 
+The Notebook disclosures, responsive expansion, and viewport alignment follow [root G003](../../../../specs/features/G003-scalable-topic-navigation/requirements.md), REQ-G003-011–014. REQ-G009-012/014 preserve the loaded pack workflows and existing paper/card materials while permitting those requested catalog interactions.
+
 ## Functional requirements
 
-- **REQ-G009-001:** Application initialization shall fetch the content index and registered pack manifests, but shall not fetch lesson or test fragments.
-- **REQ-G009-002:** Pack manifests shall contain sufficient summary metadata to preserve catalog display, progress alignment, mistake and correction counts, note-scope validation, clear-history operations, and continue-session navigation without loading full packs.
+- **REQ-G009-001:** Application initialization shall fetch only the schema-3 content index and learner state. It shall not fetch pack manifests, lessons, or test fragments on the landing page. The index shall carry the summary and identifier/version inventory needed for exact overview totals, Continue learning, and unchanged saved-state alignment.
+- **REQ-G009-002:** The startup index shall contain each pack's schema, ID, version, title, level, short summary, ordered lesson IDs/versions, and ordered test IDs/titles/stages/lesson references/scored-exercise IDs. Detailed objectives, skills, grammar declarations, and sources shall remain in pack manifests. Index summaries shall preserve progress alignment, mistake and correction counts, note-scope validation, clearing, and continue-session navigation without fetching manifests or full packs.
 - **REQ-G009-003:** Opening a pack-owned workflow shall load that pack's declared lesson and test fragments from the canonical `content/` sources and validate the assembled pack before use.
 - **REQ-G009-004:** Concurrent requests for the same unloaded pack shall share one in-flight load.
 - **REQ-G009-005:** A failed pack load shall not be cached and shall be retryable.
@@ -15,6 +17,11 @@
 - **REQ-G009-011:** The startup transition shall keep the incomplete application shell hidden and shall reveal only its complete routed layout so shell construction does not create a visible layout shift.
 - **REQ-G009-018:** The initial HTML response shall show one complete, self-styled, full-viewport loading overlay outside the Angular root before bootstrap and retain that same DOM loader until the initial routed page reaches a renderable success, empty, or error state. While it remains, the Angular root shall be hidden, inert, and excluded from the accessibility tree.
 - **REQ-G009-019:** The application shall contain no route-specific or shell-specific loader. Removing the shared overlay shall reveal the complete routed page in one paint; direct pack-owned URLs shall retain it until their required pack fragments finish loading. Later in-app navigation to an uncached pack and catalog retry shall reuse that same full-viewport loader and keep the routed page hidden until the destination is renderable.
+
+- **REQ-G009-020:** Opening a catalog group for the first time shall fetch and validate only its packs' manifests, then render its topic cards. Successful manifests shall be reused for later expansions and pack-owned workflows in the same app session; duplicate concurrent requests shall share one load and failed requests shall remain retryable.
+- **REQ-G009-021:** A pack-owned workflow shall load and validate its manifest against the startup index before assembling that pack's lesson and test fragments. A mismatch shall fail safely without updating learner state. Full-pack cache size, eviction, and maps remain unchanged.
+- **REQ-G009-022:** Direct-source validation shall reject missing, malformed, duplicate, reordered, or stale startup summaries by comparing every index entry with its owning canonical pack manifest and fragments. Schema-2 catalogs shall be rejected without a fallback reader. Pack/lesson versions, persisted state, and backup schemas remain unchanged; this bundled-catalog format change causes no learner-data loss.
+- **REQ-G009-023:** Group activation shall give accessible loading or failure feedback while its first manifest load is pending, keep other groups operable, and permit retry. Retry shall return focus to the stable group header before removing the temporary failure control. Closing or repeated activation shall not let an obsolete request reopen a group. The existing full-viewport loader continues to own route navigation and global catalog retry.
 
 ## Current behavior and breaking-data policy
 

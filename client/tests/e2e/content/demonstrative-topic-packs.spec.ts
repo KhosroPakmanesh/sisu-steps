@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { expandTopicGroup } from '../support/topic-groups';
 
 const packs = [
   {
@@ -31,7 +32,7 @@ test('opens every demonstrative pack with its approved Focused and Review topolo
   page,
 }) => {
   await page.goto('/');
-  await expect(page.locator('.topic-card')).toHaveCount(14);
+  await expect(page.locator('.catalog-stats')).toContainText('14');
   await expect(page.locator('.catalog-stats')).toContainText('2758');
 
   for (const pack of packs) {
@@ -60,6 +61,7 @@ test('keeps the demonstrative catalog cards and longest learning map responsive'
   for (const width of [320, 768, 1440]) {
     await page.setViewportSize({ width, height: 900 });
     await page.goto('/');
+    await expandTopicGroup(page, 'demonstratives');
     for (const pack of packs) {
       await expect(page.locator(`a[href="/topics/${pack.id}"]`).first()).toBeVisible();
     }

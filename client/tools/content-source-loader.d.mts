@@ -1,6 +1,7 @@
 export interface LoadedContentSource {
   catalog: {
-    schemaVersion: 2;
+    schemaVersion: 3;
+    packs: Array<Record<string, unknown>>;
     groups: Array<{
       id: string;
       title: string;
@@ -11,3 +12,5 @@ export interface LoadedContentSource {
 }
 
 export function loadContentSource(sourceDirectory: string): Promise<LoadedContentSource>;
+
+export function catalogPackSummary(manifest: unknown): Record<string, unknown>;

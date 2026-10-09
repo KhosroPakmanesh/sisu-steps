@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from 'vitest';
-import { loadContentSource } from '../../../tools/content-source-loader.mjs';
+import { catalogPackSummary, loadContentSource } from '../../../tools/content-source-loader.mjs';
 import {
   ContentSourceFixtureDefinition,
   createContentSourceFixture,
@@ -9,7 +9,7 @@ import {
 const activeFixtures: TemporaryContentSourceFixture[] = [];
 
 const catalog = (packs: string[]): unknown => ({
-  schemaVersion: 2,
+  schemaVersion: 3,
   groups: [{ id: 'test-group', title: 'Test group', packs }],
 });
 
@@ -85,6 +85,12 @@ function singlePackFixture(
 }
 
 async function materialize(definition: ContentSourceFixtureDefinition): Promise<string> {
+  const index = definition.files['index.json'] as Record<string, unknown>;
+  if (index['schemaVersion'] === 3 && !('packs' in index)) {
+    index['packs'] = Object.entries(definition.files)
+      .filter(([path]) => path.endsWith('/pack.json'))
+      .map(([, manifest]) => catalogPackSummary(manifest));
+  }
   const fixture = await createContentSourceFixture(definition);
   activeFixtures.push(fixture);
   return fixture.directory;
@@ -95,6 +101,33 @@ afterEach(async () => {
 });
 
 describe('pack-owned content source loader', () => {
+  it.each(['missing', 'stale', 'reordered', 'duplicate'])(
+    'rejects %s startup summaries',
+    async (failure) => {
+      const definition = twoPackFixture();
+      const index = definition.files['index.json'] as Record<string, unknown>;
+      const packs = ['alpha-pack', 'beta-pack'].map((id) =>
+        catalogPackSummary(definition.files[id + '/pack.json']),
+      );
+      if (failure === 'missing') packs.pop();
+      if (failure === 'stale') packs[0]['title'] = 'Stale title';
+      if (failure === 'reordered') packs.reverse();
+      if (failure === 'duplicate') packs[1] = structuredClone(packs[0]);
+      index['packs'] = packs;
+      await expect(loadContentSource(await materialize(definition))).rejects.toThrow(
+        'The startup catalog summaries do not match their canonical manifests.',
+      );
+    },
+  );
+
+  it('rejects schema-2 catalogs without a fallback reader', async () => {
+    const definition = twoPackFixture();
+    definition.files['index.json'] = { schemaVersion: 2, groups: [], packs: [] };
+    await expect(loadContentSource(await materialize(definition))).rejects.toThrow(
+      'The source catalog must use schema 3.',
+    );
+  });
+
   it('assembles multiple packs and their learning tests in explicit authored order', async () => {
     const source = await loadContentSource(await materialize(twoPackFixture()));
 
@@ -201,7 +234,7 @@ describe('pack-owned content source loader', () => {
   it('rejects invalid groups and pack IDs registered in more than one group', async () => {
     const invalidGroup = await materialize({
       files: {
-        'index.json': { schemaVersion: 2, groups: [{ id: 'Bad ID', title: '', packs: ['pack'] }] },
+        'index.json': { schemaVersion: 3, groups: [{ id: 'Bad ID', title: '', packs: ['pack'] }] },
       },
     });
     await expect(loadContentSource(invalidGroup)).rejects.toThrow(
@@ -211,7 +244,7 @@ describe('pack-owned content source loader', () => {
     const duplicatePack = await materialize({
       files: {
         'index.json': {
-          schemaVersion: 2,
+          schemaVersion: 3,
           groups: [
             { id: 'first', title: 'First', packs: ['alpha-pack'] },
             { id: 'second', title: 'Second', packs: ['alpha-pack'] },

@@ -1,4 +1,5 @@
 import { expect, test } from '@playwright/test';
+import { expandTopicGroup } from '../support/topic-groups';
 
 const packs = [
   {
@@ -32,10 +33,11 @@ test('opens each smaller pronoun and olla topic pack without reducing the conten
 }) => {
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(14);
+  await expect(page.locator('.catalog-stats')).toContainText('14');
   await expect(page.locator('.catalog-stats')).toContainText('2758');
 
   for (const pack of packs) {
+    await expandTopicGroup(page, 'pronouns-and-olla');
     const topicCard = page.locator('.topic-card').filter({
       has: page.locator(`a[href="/topics/${pack.id}"]`),
     });
@@ -69,6 +71,7 @@ test('labels the shared level range everywhere pack metadata appears', async ({ 
   }
 
   await page.goto('/stats');
+  await expandTopicGroup(page, 'pronouns-and-olla');
   await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
   await expect(page.locator('.stats-topic-card .card-kicker')).toHaveCount(0);
 

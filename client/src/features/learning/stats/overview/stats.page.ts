@@ -12,12 +12,24 @@ import {
   overallAverage,
 } from '../../shared/progress/progress-statistics.queries';
 import { LearningStateStore } from '../../shared/state/learning-state.store';
+import { TopicGroupDisclosureDirective } from '../../shared/topic-group/topic-group-disclosure.directive';
 
 @Component({
   selector: 'app-stats',
-  imports: [RouterLink, BackupRestoreComponent, DriveCheckpointComponent],
+  imports: [
+    RouterLink,
+    BackupRestoreComponent,
+    DriveCheckpointComponent,
+    TopicGroupDisclosureDirective,
+  ],
   templateUrl: './stats.page.html',
-  styleUrls: ['./stats.page.css', '../../shared/styles/topic-catalog-layout.css'],
+  styleUrls: [
+    './stats.page.css',
+    '../../shared/styles/topic-catalog-layout.css',
+    '../../shared/styles/topic-card-layout.css',
+    '../../shared/topic-group/topic-group-disclosure.css',
+    '../../shared/topic-group/topic-group-grid.css',
+  ],
 })
 export class StatsPage implements RouteReadiness {
   protected readonly store = inject(LearningStateStore);

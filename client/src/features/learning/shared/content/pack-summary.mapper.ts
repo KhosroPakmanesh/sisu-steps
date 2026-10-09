@@ -9,10 +9,6 @@ export function manifestToPackSummary(manifest: ContentPackManifest): TopicPackS
     title: manifest.title,
     level: manifest.level,
     summary: manifest.summary,
-    objectives: manifest.objectives,
-    importantSkills: manifest.importantSkills,
-    grammarBaseForms: manifest.grammarBaseForms,
-    sources: manifest.sources,
     lessons: manifest.lessonSummaries,
     tests: manifest.testSummaries,
   };
@@ -26,10 +22,6 @@ export function topicPackToSummary(pack: TopicPack): TopicPackSummary {
     title: pack.title,
     level: pack.level,
     summary: pack.summary,
-    objectives: pack.objectives,
-    importantSkills: pack.importantSkills,
-    grammarBaseForms: pack.grammarBaseForms,
-    sources: pack.sources,
     lessons: pack.lessons.map(({ id, version }) => ({ id, version })),
     tests: pack.tests.map(testToSummary),
   };

@@ -12,8 +12,9 @@ export interface ContentSource {
 }
 
 export interface ContentCatalog {
-  schemaVersion: 2;
+  schemaVersion: 3;
   groups: ContentCatalogGroup[];
+  packs: TopicPackSummary[];
 }
 
 export interface ContentLessonSummary {
@@ -53,10 +54,6 @@ export interface TopicPackSummary {
   title: string;
   level: string;
   summary: string;
-  objectives: string[];
-  importantSkills: string[];
-  grammarBaseForms: string[];
-  sources: ContentSource[];
   lessons: ContentLessonSummary[];
   tests: ContentTestSummary[];
 }

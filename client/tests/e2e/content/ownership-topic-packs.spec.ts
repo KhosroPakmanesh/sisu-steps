@@ -2,6 +2,7 @@ import { writeFile } from 'node:fs/promises';
 import { expect, Locator, Page, test } from '@playwright/test';
 import { Exercise } from '../../../src/features/learning/shared/content/exercise.models';
 import { TopicPack } from '../../../src/features/learning/shared/content/topic-pack.models';
+import { expandTopicGroup } from '../support/topic-groups';
 import { loadContentSource } from '../../../tools/content-source-loader.mjs';
 
 const packIds = [
@@ -25,6 +26,7 @@ test('shows all ownership packs and target-specific preparation at every viewpor
 }, testInfo) => {
   test.setTimeout(120_000);
   await page.goto('/');
+  await expandTopicGroup(page, 'ownership-and-possession');
   const group = page.locator('.pack-group').filter({ hasText: 'Ownership and possession' });
   await expect(group.locator('.topic-card')).toHaveCount(5);
   await expect(page.locator('.catalog-stats')).toContainText('2758');

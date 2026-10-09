@@ -11,14 +11,42 @@ Execute current catalog/topic tests against the [G005 compact-card refinement](.
 - **VAL-G003-005** (`REQ-G003-008`): Existing learning, persistence, content, reports, and backup tests remain green without learner-state migration.
 - **VAL-G003-006** (`REQ-G003-009`, `010`): Lint, typecheck, production build, and Playwright verify semantic navigation, lazy routing, and 320-pixel catalog/topic usability.
 
+- **VAL-G003-007** (`REQ-G003-009`, `011`): Browser checks verify every group starts collapsed, headers retain real headings and right-aligned state chevrons, mouse and Enter/Space toggle groups independently, hidden topic actions leave the focus order, reload and route revisit reset expansion, and expanded cards remain usable at 320, 768, and 1440 pixels with enlarged text and reduced motion.
+
+- **VAL-G003-008** (`REQ-G003-009`, `012`): Browser checks verify four/two/one collapsed-group columns at workbook breakpoints, full-row expansion for every group, widening before card reveal, restored collapsed placement, cancellation on repeated activation, and immediate reduced-motion state.
+
+- **VAL-G003-009** (`REQ-G003-013`): Client G009 metadata lifecycle checks verify index-only startup, immediate exact totals/Continue learning, group-only first loads, caching, retry, and canceled activation.
+- **VAL-G003-010** (`REQ-G003-014`): Browser checks open groups near the viewport edge with normal/reduced motion, verify short groups fit and tall-group headers remain below the sticky header, preserve focus, avoid scrolling already-visible groups, and ignore canceled opening.
+
+- **VAL-G003-011** (`REQ-G003-015`): Stats unit and browser checks verify initially collapsed groups, authored metrics/links after expansion, matching responsive geometry, independent mouse/keyboard toggles, route reset, width-before-reveal animation and cancellation, normal/reduced-motion scrolling, enlarged text, and no pack-content requests. Existing cumulative-statistics, archive, and Drive checks verify their unchanged presentation and controls.
+
 ## Manual checks
 
-- Open home at 320, 768, and 1440 pixels and confirm topic cards do not clip or create horizontal scrolling.
+- Open home and the Stats overview at 320, 768, and 1440 pixels, expand their groups, and confirm headers, chevrons, focus indicators, and topic cards do not clip or create horizontal scrolling.
 - Open a topic at each width and confirm Focused/Review headings, test actions, and objectives remain readable.
 - Navigate home, a topic, Learn first, and a test using only the keyboard; confirm visible focus and logical order.
 - Create or resume a saved session and confirm the home continue action names and opens the correct workflow.
 
 ## Execution evidence
+
+### 2026-10-09 Stats topic-group extension
+
+- **REQ-G003-015 / VAL-G003-011:** Stats groups now share Notebook's independent native disclosures, default closed state, chevrons, responsive four/two/one columns, full-row animation, cancellation, reduced motion, and viewport alignment. Stats uses its available summaries without requesting manifests or lesson/test fragments. Shared interaction code and styles live under Learning shared ownership; Notebook retains its workflow-owned cards and metadata activation.
+- **Automated gates:** ESLint, Stylelint, module size, source reachability, architecture, application/test TypeScript, production build, and changed-file formatting passed. The required aggregate check stopped on the same 36 formatting failures in untouched files; those files remain unchanged. Template/CSS lint and the affected eight component tests passed again after the final wrapper correction.
+- **Unit/integration:** All 49 unit files / 434 tests and four integration files / 28 tests passed using the existing ignored one-thread Vitest configuration. No runner configuration or dependency was changed.
+- **Browser scope:** The final 84-case run passed 72 checks, with 12 intended viewport-specific skips. It covers both catalogs' default state, authored order, mouse/Enter/Space controls, hidden-action focus order, route reset, chevrons, workbook breakpoints, full-row width before card reveal, rapid toggles, normal/reduced-motion scrolling, and 150%/200% root text in Day and Night. Existing Stats metrics, level labels, visual roles, archive presentation, clearing confirmation, and reduced-motion behavior also passed. The earlier 33 startup/loading and Drive cases passed; the final focused Stats run separately passed 21 checks with six intended skips. An initial broad run exposed overbroad card selectors, paper-transition assumptions in tests, and a scroll offset caused by applying disclosure geometry to the transformed paper; scoped selectors and a stable outer wrapper corrected these before the final run.
+- **Scope and visual review:** The Stats card content, hero, archive composition, metric calculations, and operations match their previous implementation. The 1440px and 320px expanded Stats screenshots were inspected: fitting groups are completely visible and tall groups retain a visible header. This extension does not change the catalog index, authored content, learner data, storage, backup formats, or route definitions. The governing G003/G005/G007 guidance, design pattern, and Unreleased changelog record the Stats exception and shared ownership.
+- **Manual limitations:** Native browser zoom, screen-reader walkthroughs, and physical-device checks were not performed for this extension.
+
+### 2026-10-09 collapsible catalog, lazy metadata, and viewport alignment
+
+- **REQ-G003-011–014 / VAL-G003-007–010:** Notebook groups start closed on each route visit, use independent native disclosures and right-aligned chevrons, follow four/two/one workbook columns, and animate to a full row before revealing the existing three/two/one card grid. Completed openings scroll only when needed; fitting groups remain completely visible and taller groups align below the actual sticky header. Reduced motion applies layout and scrolling immediately. Stats retains its original visible, full-width groups.
+- **Automated gates:** ESLint, Stylelint, module-size, source-reachability, architecture, application/test TypeScript, direct-source validation for all 14 packs, production build, and formatting of all changed files passed. The required `npm --prefix client run check` stopped at 36 pre-existing formatting failures in untouched files; the later gates were run separately.
+- **Unit/integration:** All 49 unit files / 433 tests and four integration files / 28 tests passed using an ignored temporary Vitest configuration with one thread worker. The default fork worker timed out during startup on this Windows Node 26.8.1 environment; no permanent runner configuration or dependency changed. The final retry-focus change also passed the five affected catalog component tests.
+- **Browser scope:** The broad workflow/accessibility/visual/catalog run completed with 251 passes, 41 intended skips, and five initial failures. The Stats style regression and outdated group/card test setup were corrected, and the visual timeout was covered by a focused rerun. On the corrected implementation, 82 distinct selected browser cases passed across the final 90-case run and its one-case material rerun, with eight intended viewport-specific skips. These cover mouse/Enter/Space, hidden-action focus order, route reset, responsive/full-row geometry, width-before-reveal animation, rapid-toggle cancellation, 150%/200% root text, both appearances, metadata lifecycle, pack navigation, and normal/reduced-motion viewport alignment. The last retry-focus change additionally passed at all three viewports.
+- **Visual review:** The 1440px screenshot was inspected with the opened group entirely inside the viewport, with corresponding 320px evidence for a taller group's visible header. Startup and first-expansion request boundaries are detailed in client G009.
+- **Data review:** Authored pack manifests/fragments, stable IDs, pack/lesson versions, IndexedDB, learner-state and backup formats, scoring, and progress semantics are preserved. Catalog schema 3 replaces schema 2 without a fallback or learner-data loss. `CHANGELOG.md` records the user-visible behavior and format change.
+- **Manual limitations:** Native browser zoom, a screen-reader walkthrough, and physical-device checks were not performed. Root-text, viewport, keyboard, reduced-motion, and relevant automated visual checks are recorded above.
 
 ### 2026-09-19 pack grouping extension
 

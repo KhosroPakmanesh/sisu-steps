@@ -1,6 +1,6 @@
 # G003 requirements
 
-G003 establishes catalog/topic separation. Later [REQ-G005-012](../G005-interactive-nordic-workbook-world/requirements.md#page-scene-requirements) refines REQ-G003-001: compact home cards omit objectives and detailed statistics, which remain on the topic route. [G007](../G007-scalable-stats-navigation/requirements.md) supersedes the former Reports/Data presentation preserved by REQ-G003-008. Other navigation and learner-data boundaries remain in force.
+G003 establishes catalog/topic separation. Later [REQ-G005-012](../G005-interactive-nordic-workbook-world/requirements.md#page-scene-requirements) refines REQ-G003-001: compact home cards omit objectives and detailed statistics, which remain on the topic route. [G007](../G007-scalable-stats-navigation/requirements.md) supersedes the former Reports/Data presentation preserved by REQ-G003-008. REQ-G003-011–015 refine catalog availability through disclosures, index-first metadata loading, viewport alignment, and matching Stats topic groups; card requirements apply when their owning group is open. Other navigation and learner-data boundaries remain in force.
 
 ## Functional requirements
 
@@ -17,12 +17,28 @@ G003 establishes catalog/topic separation. Later [REQ-G005-012](../G005-interact
 
 - **REQ-G003-009:** Home and topic navigation shall use semantic landmarks and links, visible focus, non-color progress labels, and remain usable from 320 pixels upward.
 - **REQ-G003-010:** Secondary routes shall remain lazy-loaded and route metadata and path construction shall remain centralized in typed configuration.
+- **REQ-G003-011:** Every home-catalog topic group shall be independently collapsible and initially collapsed each time the catalog route opens. Its complete header shall be a native keyboard-operable disclosure with the group title as a real heading and a right-aligned chevron that distinguishes closed and expanded states. Expanding a group shall reveal its existing cards in authored order; collapsing it shall hide those cards and their controls from reading and keyboard navigation. Expansion shall remain transient and shall not change learner data. Stats topic groups follow REQ-G003-015.
+
+- **REQ-G003-012:** Collapsed home-catalog groups shall use the app's root-relative workbook breakpoints: four columns above 56.25rem, two columns at or below 56.25rem, and one column at or below 40.625rem. An expanded group shall span the complete grid row and retain the existing responsive three/two/one-column topic-card layout. Expansion shall first animate the header and paper to full-row width, then reveal the expanded cards through a height and opacity transition; compact layouts already spanning a row shall expand directly. Closing shall return the group to its collapsed grid placement. Repeated toggles shall cancel obsolete animation, and reduced motion shall apply the resulting layout immediately.
+
+- **REQ-G003-013:** Closed groups shall render only their headers until their first activation loads the group's metadata. Activation shall load only that group's packs, provide accessible pending/failure feedback, permit retry, and cache successful metadata for the app session. Initial exact totals, Continue learning, progress alignment, and the Stats catalog shall remain available from the compact startup index governed by client G009.
+
+- **REQ-G003-014:** After a group finishes opening, the catalog shall scroll only when needed to bring it into view. A group that fits the available viewport shall be shown completely; a taller group shall align its header below any sticky app header with the existing spacing token. Scrolling shall be smooth with motion enabled and immediate with reduced motion, preserve the focused control, and never run for failed, canceled, or obsolete openings.
+
+- **REQ-G003-015:** The Stats overview topic groups shall share the home catalog's initially collapsed native disclosures, right-aligned chevrons, independent keyboard controls, four/two/one-column collapsed layout, full-row expansion animation, cancellation, reduced motion, and viewport alignment. Open groups shall retain the existing Stats metrics, authored pack order, and View stats links. Expansion shall use the available startup summaries without requesting pack manifests or lesson/test fragments. Cumulative statistics, local backup/restore, and Drive controls shall remain directly visible and unchanged. Expansion shall reset on each Stats overview visit without changing learner data.
 
 ## Acceptance criteria
 
-- Given one installed pack, when home opens, then one topic card and no test cards or lesson bodies are present.
-- Given multiple installed packs, when home opens, then one topic card per pack is present and each opens only its own topic route.
+- Given one installed pack, when its home-catalog group is expanded, then one topic card and no test cards or lesson bodies are visible.
+- Given multiple installed packs, when their home-catalog groups are expanded, then one topic card per pack is visible and each opens only its own topic route.
+- Given home opens, when no group has been expanded, then every group heading and right-aligned chevron is visible and all topic cards are hidden.
+- Given a collapsed group, when its header is clicked or activated with Enter or Space, then only that group's expansion state changes and its chevron reflects the resulting state.
+- Given an expanded group, when home is reloaded or revisited after navigating away, then every group starts collapsed again.
+- Given four collapsed groups on a wide workbook, when any group is opened, then it grows to full-row width before revealing its topic cards; the other groups keep their authored order.
+- Given a medium or compact workbook, when groups are collapsed, then they follow the existing two/one-column breakpoints; an expanded group always spans the full row.
+- Given reduced motion, when a group is toggled, then its expanded or collapsed layout appears immediately without animation.
 - Given a saved test session, when home opens, then the continue-learning action resumes that session.
 - Given no saved session and an unattempted test, when home opens, then the continue-learning action starts the first unattempted test in catalog and authored order.
+- Given Stats opens, when groups are toggled or revisited, then they follow the home disclosure behavior while retaining Stats cards, requesting no pack content, and leaving cumulative statistics and data controls directly visible.
 - Given a valid topic ID, when its topic page opens, then all tests appear in authored order with separate lesson and study actions.
 - Given an invalid topic ID, when its topic page opens, then a recoverable error and topic-catalog link are visible.

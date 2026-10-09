@@ -41,6 +41,12 @@ export class LearningStateStore {
     }
   }
 
+  async loadGroupMetadata(groupId: string): Promise<void> {
+    const group = this.packGroups().find((candidate) => candidate.id === groupId);
+    if (!group) throw new Error('The topic group is not installed.');
+    await Promise.all(group.packs.map((pack) => this.contentCatalog.loadManifest(pack)));
+  }
+
   async loadPack(topicId: string): Promise<LoadedTopicPack> {
     const summary = findPackSummary(this.packSummaries(), topicId);
     if (!summary) throw new Error('The exercise pack has not loaded yet.');

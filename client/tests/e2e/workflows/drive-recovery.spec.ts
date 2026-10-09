@@ -12,7 +12,7 @@ test('keeps Google Drive recovery explicit, optional, and focused from the heade
   });
 
   await page.goto('/stats');
-  await expect(page.locator('.stats-topic-card').first()).toBeVisible();
+  await expect(page.locator('.topic-group-toggle').first()).toBeVisible();
   expect(
     await page.evaluate(
       () =>
@@ -63,7 +63,7 @@ test('keeps Google Drive recovery explicit, optional, and focused from the heade
 test('keeps the Drive shortcut and appearance controls usable at 320 pixels', async ({ page }) => {
   await page.setViewportSize({ width: 375, height: 720 });
   await page.goto('/stats');
-  await expect(page.locator('.stats-topic-card').first()).toBeVisible();
+  await expect(page.locator('.topic-group-toggle').first()).toBeVisible();
   await page.evaluate(() => document.fonts.ready);
   const mobileHeaderAlignment = await page.evaluate(() => {
     const brand = document.querySelector('.brand')?.getBoundingClientRect();

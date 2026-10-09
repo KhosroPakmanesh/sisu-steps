@@ -1,5 +1,7 @@
 # G007 requirements
 
+Stats overview topic groups follow [REQ-G003-015](../G003-scalable-topic-navigation/requirements.md). The card requirements below apply when their owning group is expanded; cumulative statistics and data controls remain directly visible.
+
 ## Navigation requirements
 
 - **REQ-G007-001:** Primary workbook navigation shall contain exactly two destinations in order: **Notebook**, which opens the existing topic catalog, and **Stats**, which opens `/stats`.
@@ -33,7 +35,7 @@
 - Given the Statistics hero, when learner state changes, then its cumulative completed attempts, average score, and unresolved mistakes truthfully summarize all installed topics; the handwritten progress note remains centered beneath the introduction and summary.
 - Given **Backup & restore**, when its visual structure is inspected, then its heading sits immediately above and outside one complete ruled, clipped, bound-paper container containing all three action rows.
 - Given the backup archive followed by **Progress by topic**, when their layout is inspected, then the inter-section gap uses balanced canonical section spacing rather than either crowding the heading or recreating the former large empty band.
-- Given multiple installed packs, when `/stats` opens, then one compact card per pack shows truthful attempts, average, and unresolved mistakes.
+- Given multiple installed packs, when their Stats groups are expanded, then one compact card per pack shows truthful attempts, average, and unresolved mistakes.
 - Given a selected pack, when **View stats** is activated, then only that pack's summary and authored test ledger appear.
 - Given confirmed test-history clearing, when the operation completes, then that test's progress values reset while shared lesson completions, private notes, other tests, and other packs remain unchanged.
 - Given confirmed topic-history clearing, when the operation completes, then the selected topic's learner records and notes are removed while other packs and bundled learning content remain unchanged.

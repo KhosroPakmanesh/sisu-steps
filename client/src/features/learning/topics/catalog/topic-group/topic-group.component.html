@@ -1,0 +1,79 @@
+<section class="pack-group" [attr.aria-labelledby]="'group-heading-' + group().id">
+  <details class="topic-group-disclosure" [open]="disclosure.expanded()">
+    <summary
+      class="topic-group-toggle"
+      [attr.aria-busy]="disclosure.loading()"
+      (click)="toggle($event)"
+    >
+      <h3 class="card-kicker" [id]="'group-heading-' + group().id">{{ group().title }}</h3>
+      <svg class="topic-group-chevron" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m9 5 7 7-7 7" />
+      </svg>
+    </summary>
+    <div class="group-cards">
+      @if (disclosure.loaded()) {
+        @for (summary of group().packs; track summary.pack.id) {
+          <article class="topic-card">
+            <header>
+              <h4>{{ summary.pack.title }}</h4>
+              <p>{{ summary.pack.summary }}</p>
+            </header>
+
+            <div class="topic-progress">
+              <div class="topic-progress-item">
+                <div>
+                  <span>Tests tried</span>
+                  <strong>{{ summary.attemptedTests }}/{{ summary.pack.tests.length }}</strong>
+                </div>
+                <div class="progress-ruler">
+                  <progress
+                    class="notebook-progress"
+                    [attr.aria-label]="summary.pack.title + ' tests tried'"
+                    [max]="summary.pack.tests.length"
+                    [value]="summary.attemptedTests"
+                  ></progress>
+                </div>
+              </div>
+              <div class="topic-progress-item">
+                <div>
+                  <span>Lessons read</span>
+                  <strong>{{ summary.completedLessons }}/{{ summary.totalLessons }}</strong>
+                </div>
+                <div class="progress-ruler">
+                  <progress
+                    class="notebook-progress"
+                    [attr.aria-label]="summary.pack.title + ' lessons read'"
+                    [max]="summary.totalLessons"
+                    [value]="summary.completedLessons"
+                  ></progress>
+                </div>
+              </div>
+            </div>
+
+            <div class="topic-card-actions">
+              @if (summary.reviewsDue > 0 || summary.reviewInProgress) {
+                <a class="button review-action" [routerLink]="paths.review(summary.pack.id)">
+                  {{
+                    summary.reviewInProgress
+                      ? 'Resume optional review'
+                      : 'Optional review due · ' + summary.reviewsDue
+                  }}
+                </a>
+              }
+              <a class="button primary" [routerLink]="paths.topic(summary.pack.id)"> Open topic </a>
+            </div>
+          </article>
+        }
+      }
+    </div>
+  </details>
+  @if (disclosure.loading()) {
+    <p role="status">Loading topics…</p>
+  }
+  @if (disclosure.loadError()) {
+    <div role="alert">
+      <p>This topic group could not load.</p>
+      <button class="button secondary" type="button" (click)="toggle($event)">Try again</button>
+    </div>
+  }
+</section>

@@ -822,8 +822,9 @@ describe('content-pack validation', () => {
 
 describe('content catalog validation', () => {
   const catalog = (packs = ['pack']): ContentCatalog => ({
-    schemaVersion: 2,
+    schemaVersion: 3,
     groups: [{ id: 'test-group', title: 'Test group', packs }],
+    packs: packs.map((id) => ({ ...topicPackToSummary(validPack()), id })),
   });
 
   it('accepts safe, unique catalog pack IDs', () => {

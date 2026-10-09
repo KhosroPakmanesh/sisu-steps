@@ -115,7 +115,7 @@ Inventory response formats and their authored sequence before finalizing a pack.
 
 Keep each pack's authored implementation under `client/content/<pack-id>/`: pack metadata and ordered references in `pack.json`, one pure-JSON lesson per stable ID under `lessons/`, and one pure-JSON learning test per stable ID under `tests/`. Store every pedagogical value and semantic relationship explicitly there. `client/content/` is the sole source and is deployed unchanged; do not author content in JavaScript or create a generated content copy.
 
-Declare catalog grouping once in schema-2 `content/index.json`. Each group has a stable lowercase-kebab `id`, a learner-facing `title`, and a non-empty ordered `packs` array. Group IDs and pack IDs are unique, and every registered pack appears in exactly one group; presentation code consumes this authored structure without hard-coding pack IDs or group membership.
+Declare catalog grouping once in schema-3 `content/index.json`. Each group has a stable lowercase-kebab `id`, a learner-facing `title`, and a non-empty ordered `packs` array. Group IDs and pack IDs are unique, and every registered pack appears in exactly one group; presentation code consumes this authored structure without hard-coding pack IDs or group membership. The index also declares the compact startup summaries governed by [client G009](../client/specs/features/G009-bounded-pack-content-loading/requirements.md). Whenever pack metadata or lesson/test inventories change, update that pack's index summary to match its canonical manifest; direct-source validation rejects drift.
 
 ### Exercise definitions and accepted answers
 

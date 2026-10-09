@@ -1,6 +1,7 @@
 import { inject, Injectable } from '@angular/core';
 import { JSON_RESOURCE_LOADER } from '@/shared/browser/json-resource.loader';
-import { TopicPackSummary } from './catalog.models';
+import { ContentPackManifest, TopicPackSummary } from './catalog.models';
+import { ContentCatalogService } from './content-catalog.service';
 import { LoadedTopicPack, TopicPack } from './topic-pack.models';
 import { validatePackMatchesSummary } from './validation/pack-summary-match.validator';
 import { validateTopicPack } from './validation/topic-pack.validator';
@@ -12,6 +13,7 @@ const CACHE_LIMIT = 2;
 @Injectable({ providedIn: 'root' })
 export class PackContentRepository {
   private readonly loader = inject(JSON_RESOURCE_LOADER);
+  private readonly catalog = inject(ContentCatalogService);
   private readonly cache = new Map<string, LoadedTopicPack>();
   private readonly inFlight = new Map<string, Promise<LoadedTopicPack>>();
 
@@ -36,6 +38,7 @@ export class PackContentRepository {
   }
 
   private async loadUncached(summary: TopicPackSummary): Promise<LoadedTopicPack> {
+    const manifest = await this.catalog.loadManifest(summary);
     const packDirectory = `${CONTENT_DIRECTORY}/${summary.id}`;
     const [lessons, tests] = await Promise.all([
       this.loadOwnedItems(
@@ -53,7 +56,7 @@ export class PackContentRepository {
     ]);
     const pack = validatePackMatchesSummary(
       summary,
-      validateTopicPack(this.assemblePack(summary, lessons, tests)),
+      validateTopicPack(this.assemblePack(manifest, lessons, tests)),
     );
     return this.index(pack);
   }
@@ -78,7 +81,11 @@ export class PackContentRepository {
     );
   }
 
-  private assemblePack(summary: TopicPackSummary, lessons: unknown[], tests: unknown[]): unknown {
+  private assemblePack(
+    summary: ContentPackManifest,
+    lessons: unknown[],
+    tests: unknown[],
+  ): unknown {
     return {
       schemaVersion: summary.schemaVersion,
       id: summary.id,

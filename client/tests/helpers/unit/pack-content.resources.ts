@@ -48,8 +48,9 @@ export function resourcesFor(packs: TopicPack[]): Map<string, unknown> {
     [
       `${CONTENT_DIRECTORY}/index.json`,
       {
-        schemaVersion: 2,
+        schemaVersion: 3,
         groups: [{ id: 'test-group', title: 'Test group', packs: packs.map(({ id }) => id) }],
+        packs: packs.map(topicPackToSummary),
       },
     ],
   ]);

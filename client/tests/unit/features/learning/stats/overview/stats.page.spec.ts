@@ -58,13 +58,30 @@ describe('StatsPage', () => {
     expect(catalog.querySelector('h2')?.textContent?.trim()).toBe('Progress by topic');
   });
 
-  it('shows one linked card per pack with compact topic metrics', () => {
+  it('starts groups collapsed while keeping cumulative statistics and archives outside disclosures', () => {
+    const element = fixture.nativeElement as HTMLElement;
+    const groups = element.querySelectorAll('details');
+    expect(groups.length).toBeGreaterThan(0);
+    expect([...groups].every((group) => !group.open)).toBe(true);
+    expect(element.querySelectorAll('.stats-topic-card')).toHaveLength(0);
+    expect(element.querySelector('.topic-group-toggle h3')?.textContent?.trim()).toBe(
+      'Foundations',
+    );
+    for (const selector of ['.cumulative-summary', 'app-backup-restore', 'app-drive-checkpoint']) {
+      expect(element.querySelector(selector)?.closest('details')).toBeNull();
+    }
+  });
+
+  it('shows one linked card per pack with compact topic metrics after expansion', async () => {
     const secondPack = structuredClone(learningPack);
     secondPack.id = 'second-topic';
     secondPack.title = 'A second topic';
     const summaries = [learningPack, secondPack].map(topicPackToSummary);
     store.packSummaries.set(summaries);
     store.packGroups.set([{ id: 'foundations', title: 'Foundations', packs: summaries }]);
+    fixture.detectChanges();
+    (fixture.nativeElement as HTMLElement).querySelector<HTMLElement>('summary')!.click();
+    await fixture.whenStable();
     fixture.detectChanges();
 
     const cards = [

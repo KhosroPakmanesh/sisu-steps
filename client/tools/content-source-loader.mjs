@@ -156,16 +156,30 @@ function requireCatalogGroups(value) {
   return packIds;
 }
 
+export function catalogPackSummary(manifest) {
+  return {
+    schemaVersion: manifest.schemaVersion,
+    id: manifest.id,
+    version: manifest.version,
+    title: manifest.title,
+    level: manifest.level,
+    summary: manifest.summary,
+    lessons: manifest.lessonSummaries,
+    tests: manifest.testSummaries,
+  };
+}
+
 export async function loadContentSource(sourceDirectory) {
   const sourceRoot = resolve(sourceDirectory);
   const catalog = await readJson(join(sourceRoot, 'index.json'), 'source catalog');
   if (!isRecord(catalog)) throw new Error('The source catalog must be a JSON object.');
-  requireExactKeys(catalog, new Set(['schemaVersion', 'groups']), 'The source catalog');
-  if (catalog.schemaVersion !== 2) throw new Error('The source catalog must use schema 2.');
+  requireExactKeys(catalog, new Set(['schemaVersion', 'groups', 'packs']), 'The source catalog');
+  if (catalog.schemaVersion !== 3) throw new Error('The source catalog must use schema 3.');
   const packIds = requireCatalogGroups(catalog.groups);
   await requireDirectoryShape(sourceRoot, ['index.json'], packIds, 'The content source root');
 
   const packs = [];
+  const summaries = [];
   for (const packId of packIds) {
     const packDirectory = join(sourceRoot, packId);
     await requireDirectoryShape(
@@ -185,6 +199,7 @@ export async function loadContentSource(sourceDirectory) {
     const lessons = await loadOwnedCollection(packDirectory, 'lessons', lessonIds, 'Lesson');
     const tests = await loadOwnedCollection(packDirectory, 'tests', testIds, 'Learning test');
     validateManifestSummaries(manifest, lessons, tests);
+    summaries.push(catalogPackSummary(manifest));
     const metadata = { ...manifest };
     delete metadata.lessonIds;
     delete metadata.testIds;
@@ -194,5 +209,11 @@ export async function loadContentSource(sourceDirectory) {
   }
 
   validateGlobalContentIds(packs);
-  return { catalog: { schemaVersion: 2, groups: structuredClone(catalog.groups) }, packs };
+  if (JSON.stringify(catalog.packs) !== JSON.stringify(summaries)) {
+    throw new Error('The startup catalog summaries do not match their canonical manifests.');
+  }
+  return {
+    catalog: { schemaVersion: 3, groups: structuredClone(catalog.groups), packs: summaries },
+    packs,
+  };
 }

@@ -2,6 +2,16 @@
 
 ## Unreleased
 
+### Collapsible topic groups
+
+- Start Notebook topic groups collapsed, with a right-aligned chevron and responsive four/two/one-column layout. Expanded groups animate to full-row width and scroll into view when needed; reduced motion applies immediately. Preserve existing topic cards and learning progress.
+
+- Load the landing page from one schema-3 catalog index, preserving immediate exact totals, Continue learning, and saved-progress validation. Load group manifests on first expansion, cache successful metadata, and support retry. Detailed teaching metadata stays in pack manifests; learner and backup formats remain unchanged, with no learner-data loss.
+
+- Group the Notebook topic-group component and template under `client/src/features/learning/topics/catalog/topic-group/`, with the disclosure directive, animation, viewport helpers, and styles shared by Notebook and Stats under `client/src/features/learning/shared/topic-group/`.
+
+- Match Stats topic groups to Notebook: collapsed by default, responsive four/two/one columns, right-aligned chevrons, full-row animated expansion, keyboard controls, and viewport alignment. Stats expansion uses available summaries without pack-content requests; metrics, View stats links, cumulative statistics, backup/restore, and Drive controls retain their existing behavior.
+
 ### Number-specific preparation
 
 - Replace 22 mixed preparation lessons with 44 independently authored singular/plural lessons for the existing Focused tests. Match headers, explanations, worked examples and optional practice to person, owner or possessed-object number. Add 23 distinct optional questions in existing formats, retaining the 20-question scored minimum for every affected test. Retain all 2,758 scored IDs, formats, order and mastery links, with the explicitly recorded audit-correction exceptions below; clarify fixed-verb/model feedback in 161 scored questions and nine existing optional questions. General number-neutral topics and cumulative Review question sets retain their scope.

@@ -44,7 +44,7 @@ describe('PackContentRepository', () => {
     expect(loaded.exerciseById.get(pack.tests[0].exercises[0].id)).toBe(
       loaded.pack.tests[0].exercises[0],
     );
-    expect(loader.requestedPaths).toHaveLength(pack.lessons.length + pack.tests.length);
+    expect(loader.requestedPaths).toHaveLength(1 + pack.lessons.length + pack.tests.length);
   });
 
   it('deduplicates concurrent loads', async () => {

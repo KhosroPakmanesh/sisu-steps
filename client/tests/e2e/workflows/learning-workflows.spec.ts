@@ -1,4 +1,5 @@
 import { expect, type Locator, type Page, test } from '@playwright/test';
+import { expandTopicGroup, expandTopicGroups } from '../support/topic-groups';
 
 const TOPIC_SEGMENT = 'vowel-harmony-location-endings';
 const KPT_TOPIC_SEGMENT = 'kpt-singular-forms';
@@ -688,8 +689,9 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.goto('/');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
-  await expect(page.locator('.topic-card')).toHaveCount(14);
+  await expect(page.locator('.catalog-stats')).toContainText('14');
   await expect(page.locator('.test-card')).toHaveCount(0);
+  await expandTopicGroup(page, 'foundations');
   await vowelHarmonyTopicLink(page).click();
 
   await expect(page).toHaveURL(new RegExp(`/topics/${TOPIC_SEGMENT}$`));
@@ -765,6 +767,7 @@ test('places focus on routed content after in-app navigation', async ({ page }) 
 
   const initialMain = page.locator('main');
   await expect(initialMain).not.toBeFocused();
+  await expandTopicGroup(page, 'foundations');
   await vowelHarmonyTopicLink(page).click();
 
   const routedMain = page.locator('main');
@@ -776,6 +779,7 @@ test('places focus on routed content after in-app navigation', async ({ page }) 
 test('uses a responsive three, two, and one-column topic-card grid', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
   await page.goto('/');
+  await expandTopicGroup(page, 'foundations');
 
   for (const [width, expectedColumns] of [
     [1440, 3],
@@ -834,6 +838,7 @@ test('reuses the worked-example treatment with notebook-paper topic cards', asyn
 }, testInfo) => {
   test.skip(testInfo.project.name !== 'chromium-wide');
   await page.goto('/');
+  await expandTopicGroup(page, 'foundations');
   const material = (element: Element) => {
     const styles = getComputedStyle(element);
     return {
@@ -891,6 +896,7 @@ test('sizes cut-paper actions to their labels across app routes', async ({ page 
     await page.setViewportSize({ width, height: 900 });
 
     await page.goto('/');
+    await expandTopicGroup(page, 'foundations');
     await expectLabelSizedAction(vowelHarmonyTopicLink(page));
 
     await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
@@ -1081,6 +1087,7 @@ test('places compact action groups according to their page role', async ({ page 
     await page.setViewportSize({ width, height: 900 });
 
     await page.goto('/');
+    await expandTopicGroup(page, 'foundations');
     await expectActionGroupPlacement(page.locator('.topic-card-actions').first(), 'center');
 
     await page.goto(`/topics/${TOPIC_SEGMENT}`);
@@ -1320,6 +1327,7 @@ test('saves a private sticky note without leaving the workbook', async ({ page }
   await expect(page.getByRole('status')).toContainText('Note saved locally');
 
   await page.getByRole('link', { name: 'All topics' }).click();
+  await expandTopicGroup(page, 'foundations');
   await vowelHarmonyTopicLink(page).click();
   await expect(page.getByRole('textbox', { name: 'Topic note' })).toHaveValue(
     'Practise front-vowel endings tomorrow.',
@@ -1329,6 +1337,7 @@ test('saves a private sticky note without leaving the workbook', async ({ page }
 test('uses dedicated notebook objects for repeated surfaces and return links', async ({ page }) => {
   await page.goto('/');
   const continueCard = page.locator('.continue-card');
+  await expandTopicGroup(page, 'foundations');
   const topicCard = page.locator('.topic-card').first();
   await expectClippedPaper(continueCard);
   await expectClippedPaper(topicCard);
@@ -1866,7 +1875,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto('/');
 
-  await expect(page.locator('.topic-card')).toHaveCount(14);
+  await expect(page.locator('.catalog-stats')).toContainText('14');
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation).toContainText('Notebook');
   await expect(primaryNavigation).toContainText('Stats');
@@ -1889,6 +1898,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
     true,
   );
 
+  await expandTopicGroup(page, 'foundations');
   await vowelHarmonyTopicLink(page).click();
   await expect(page.locator('.test-card').first()).toBeVisible();
   await expect(
@@ -2037,6 +2047,7 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     'application/json,.json',
   );
   await expect(page.getByRole('heading', { name: 'Progress by topic' })).toBeVisible();
+  await expandTopicGroups(page);
   await expect(page.locator('.stats-topic-card')).toHaveCount(14);
   await expect(page.locator('.backup-archive .clear-all-action-row')).toBeVisible();
   await expect(page.locator('.clear-all-slip')).toHaveCount(0);
@@ -2389,6 +2400,7 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     )
     .toBe('none');
 
+  await expandTopicGroup(page, 'foundations');
   await vowelHarmonyTopicLink(page).click();
   await expect(page.getByRole('heading', { name: 'Lessons and tests' })).toBeVisible();
   for (const surface of [
@@ -2408,6 +2420,7 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     .toBe('none');
 
   await page.goto('/stats');
+  await expandTopicGroup(page, 'foundations');
   for (const surface of [
     page.locator('.backup-archive'),
     page.locator('.stats-topic-card').first(),

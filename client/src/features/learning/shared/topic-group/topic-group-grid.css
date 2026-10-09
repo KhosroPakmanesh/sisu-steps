@@ -1,0 +1,20 @@
+.pack-group-stack {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: start;
+}
+
+.pack-group-stack > .topic-group.expanded {
+  grid-column: 1 / -1;
+}
+
+@container workbook (width <= 56.25rem) {
+  .pack-group-stack {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@container workbook (width <= 40.625rem) {
+  .pack-group-stack {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

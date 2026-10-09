@@ -22,6 +22,11 @@ describe('TopicCatalogPage', () => {
     store = TestBed.inject(LearningStateStore) as unknown as FakeLearningStateStore;
     fixture = TestBed.createComponent(TopicCatalogPage);
     fixture.detectChanges();
+    (fixture.nativeElement as HTMLElement)
+      .querySelector<HTMLElement>('.topic-group-toggle')!
+      .click();
+    await fixture.whenStable();
+    fixture.detectChanges();
   });
 
   it('shows a compact topic summary without expanding its tests or lesson content', () => {

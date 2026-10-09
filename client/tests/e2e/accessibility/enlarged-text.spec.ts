@@ -1,4 +1,5 @@
 import { expect, type Page, test } from '@playwright/test';
+import { expandTopicGroups } from '../support/topic-groups';
 
 const TOPIC = 'vowel-harmony-location-endings';
 const PLURAL_TOPIC = 't-plural-agreement';
@@ -18,9 +19,9 @@ async function resizeText(page: Page, pixels: number) {
   await page.reload();
   await page.locator('main h1').first().waitFor();
   const path = new URL(page.url()).pathname;
-  if (path === '/') await page.locator('.topic-card').first().waitFor();
-  if (path === '/stats') await page.locator('.stats-topic-card').first().waitFor();
+  if (path === '/' || path === '/stats') await expandTopicGroups(page);
   if (path.startsWith('/stats/')) await page.locator('.stats-ledger tbody tr').first().waitFor();
+  await page.evaluate(() => scrollTo({ top: 0, behavior: 'instant' }));
   await expect(page.locator('html')).toHaveCSS('font-size', `${pixels}px`);
   expect(
     await page.locator('.brand-mark').evaluate((element) => element.getBoundingClientRect().width),
@@ -86,7 +87,7 @@ for (const appearance of ['Day', 'Night']) {
       await page.emulateMedia({ reducedMotion: 'reduce' });
       await page.goto('/');
       await page.locator('main h1').waitFor();
-      await page.locator('.topic-card').first().waitFor();
+      await page.locator('.topic-group-toggle').first().waitFor();
       const radio = page.getByRole('radio', { name: appearance, exact: true });
       await page.locator('.appearance-options label').filter({ has: radio }).click();
       await expect(radio).toBeChecked();

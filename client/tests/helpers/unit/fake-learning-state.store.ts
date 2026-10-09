@@ -24,6 +24,10 @@ export class FakeLearningStateStore {
   readonly error = signal<string | null>(null);
   readonly ready = Promise.resolve();
 
+  loadGroupMetadata(): Promise<void> {
+    return Promise.resolve();
+  }
+
   initialize(): Promise<void> {
     return Promise.resolve();
   }
