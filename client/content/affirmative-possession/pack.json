@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "affirmative-possession",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "title": "Affirmative possession",
   "level": "0 - A1.3",
   "summary": "Learn the six owners and practise affirmative possession with one regular singular thing.",
@@ -26,7 +26,14 @@
       "url": "https://peda.net/yksityiskoulut/rovala-opisto/aipe/paattovaihe/s2-suomi-toisena-kielena-ja-kirjallisuus/s212-suomen-kielen-rakenteet-22/lausetyyppeja/suomen-kielen-lausetyyppeja%3Afile/download/224c91b0f3296fda3e3697996871e1f56d6b9af6/Lausetyyppej%C3%A4.pdf"
     }
   ],
-  "lessonIds": ["aps-possessors", "aps-fixed-on", "aps-sentences"],
+  "lessonIds": [
+    "aps-possessors-singular",
+    "aps-possessors-plural",
+    "aps-fixed-on-singular",
+    "aps-fixed-on-plural",
+    "aps-sentences-singular",
+    "aps-sentences-plural"
+  ],
   "testIds": [
     "aps-possessors-singular-test",
     "aps-possessors-plural-test",
@@ -38,16 +45,28 @@
   ],
   "lessonSummaries": [
     {
-      "id": "aps-possessors",
-      "version": "1.1.3"
+      "id": "aps-possessors-singular",
+      "version": "1.0.0"
     },
     {
-      "id": "aps-fixed-on",
-      "version": "1.1.3"
+      "id": "aps-possessors-plural",
+      "version": "1.0.0"
     },
     {
-      "id": "aps-sentences",
-      "version": "1.2.4"
+      "id": "aps-fixed-on-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "aps-fixed-on-plural",
+      "version": "1.0.0"
+    },
+    {
+      "id": "aps-sentences-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "aps-sentences-plural",
+      "version": "1.0.0"
     }
   ],
   "testSummaries": [
@@ -55,7 +74,7 @@
       "id": "aps-possessors-singular-test",
       "title": "Singular possessors: minulla, sinulla, hänellä",
       "stage": "focused",
-      "lessonIds": ["aps-possessors"],
+      "lessonIds": ["aps-possessors-singular"],
       "exerciseIds": [
         "aps-possessors-singular-test-e101",
         "aps-possessors-test-e001",
@@ -83,7 +102,7 @@
       "id": "aps-possessors-plural-test",
       "title": "Plural possessors: meillä, teillä, heillä",
       "stage": "focused",
-      "lessonIds": ["aps-possessors"],
+      "lessonIds": ["aps-possessors-plural"],
       "exerciseIds": [
         "aps-possessors-plural-test-e101",
         "aps-possessors-test-e005",
@@ -111,7 +130,7 @@
       "id": "aps-fixed-on-singular-test",
       "title": "On with singular owners",
       "stage": "focused",
-      "lessonIds": ["aps-fixed-on"],
+      "lessonIds": ["aps-fixed-on-singular"],
       "exerciseIds": [
         "aps-fixed-on-singular-test-e101",
         "aps-fixed-on-test-e001",
@@ -139,7 +158,7 @@
       "id": "aps-fixed-on-plural-test",
       "title": "On with plural owners",
       "stage": "focused",
-      "lessonIds": ["aps-fixed-on"],
+      "lessonIds": ["aps-fixed-on-plural"],
       "exerciseIds": [
         "aps-fixed-on-plural-test-e101",
         "aps-fixed-on-test-e005",
@@ -167,7 +186,7 @@
       "id": "aps-sentences-singular-test",
       "title": "Possession sentences with singular owners",
       "stage": "focused",
-      "lessonIds": ["aps-sentences"],
+      "lessonIds": ["aps-sentences-singular"],
       "exerciseIds": [
         "aps-sentences-singular-test-e101",
         "aps-sentences-test-e021",
@@ -195,7 +214,7 @@
       "id": "aps-sentences-plural-test",
       "title": "Possession sentences with plural owners",
       "stage": "focused",
-      "lessonIds": ["aps-sentences"],
+      "lessonIds": ["aps-sentences-plural"],
       "exerciseIds": [
         "aps-sentences-plural-test-e101",
         "aps-sentences-test-e024",
@@ -223,7 +242,14 @@
       "id": "aps-review",
       "title": "Affirmative possession review",
       "stage": "review",
-      "lessonIds": ["aps-possessors", "aps-fixed-on", "aps-sentences"],
+      "lessonIds": [
+        "aps-possessors-singular",
+        "aps-possessors-plural",
+        "aps-fixed-on-singular",
+        "aps-fixed-on-plural",
+        "aps-sentences-singular",
+        "aps-sentences-plural"
+      ],
       "exerciseIds": [
         "aps-review-e008",
         "aps-review-e023",

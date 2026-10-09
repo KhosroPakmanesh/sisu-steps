@@ -1,0 +1,214 @@
+{
+  "id": "ppe-pronoun-omission-singular",
+  "version": "1.0.0",
+  "title": "Omitting the owner pronoun with one thing",
+  "summary": "Leave out minun or sinun while keeping the noun ending; retain hänen with singular possessed nouns.",
+  "stage": "focused",
+  "targetSkills": ["Possessive pronoun omission and clear reference"],
+  "prerequisiteSkills": ["Simple ownership identity sentences"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Leave out minun or sinun while keeping the noun ending; retain hänen with singular possessed nouns.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "Keep the ending when omitting the pronoun",
+      "paragraphs": [
+        "Leave out minun or sinun while keeping the noun ending; retain hänen with singular possessed nouns.",
+        "Tämä on minun palloni. and Tämä on palloni. mean the same thing: “This is my ball”.",
+        "In these identification sentences retain hänen: its third-person ending does not identify the intended owner by itself. Omission in other sentence structures is outside this lesson.",
+        "Follow an explicit request to omit or retain the owner pronoun. Otherwise both ordinary first- and second-person forms are accepted."
+      ],
+      "keyPoints": ["Tämä on = one thing", "keep the -ni / -si ending", "retain hänen"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Tämä on palloni.",
+      "english": "This is my ball.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "pallo (“ball”) + -ni = palloni.",
+        "The ending identifies the owner, so omit minun while retaining the noun ending."
+      ]
+    },
+    {
+      "finnish": "Tämä on kirjasi.",
+      "english": "This is your book.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "kirja (“book”) + -si = kirjasi.",
+        "The ending identifies the owner, so omit sinun while retaining the noun ending."
+      ]
+    },
+    {
+      "finnish": "Tämä on hänen tyynynsä.",
+      "english": "This is his pillow.",
+      "steps": [
+        "Tämä on (“This is”) identifies one thing.",
+        "tyyny (“pillow”) + -nsä = tyynynsä.",
+        "Hänen (“his”) selects the owner ending -nsä.",
+        "Retain hänen in this identification pattern so the owner stays clear."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Omitting the owner pronoun does not remove its noun ending.",
+    "Retain hänen in this bounded identification pattern."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ppe-pronoun-omission-singular-practice-04",
+      "type": "word-order",
+      "instruction": "Build the shorter sentence.",
+      "prompt": "Optional practice: Build “This is my car.” Leave out minun; keep the noun ending. Use auto (“car”).",
+      "acceptedAnswers": ["Tämä on autoni."],
+      "explanation": "The ending -ni identifies the owner, so minun can be omitted. Keep the ending.",
+      "tags": [
+        "lesson-practice",
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-auto",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "tokens": ["autoni.", "Tämä", "on"],
+      "sentenceExplanation": {
+        "translation": "This is my car.",
+        "pattern": "tämä on + possessed noun; owner pronoun omitted",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing identified",
+            "baseForm": "tämä",
+            "formation": "one thing"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "tämä takes on"
+          },
+          {
+            "finnish": "autoni.",
+            "meaning": "my car.",
+            "role": "possessed singular noun",
+            "baseForm": "auto",
+            "formation": "auto + -ni = autoni; omit minun while retaining the ending."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ppe-pronoun-omission-singular-practice-05",
+      "type": "fill-blank",
+      "instruction": "Write the possessed noun.",
+      "prompt": "Optional practice: Complete “This is your pillow.”: Tämä on ___. Address one person. Leave out sinun; keep its ending. Use tyyny (“pillow”).",
+      "acceptedAnswers": ["tyynysi"],
+      "explanation": "Tyyny takes -si for this owner. Omit sinun while keeping the noun ending.",
+      "tags": [
+        "lesson-practice",
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-tyyny",
+        "objects-singular"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "This is your pillow.",
+        "pattern": "tämä on + possessed noun; owner pronoun omitted",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "role": "thing identified",
+            "baseForm": "tämä",
+            "formation": "one thing"
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "tämä takes on"
+          },
+          {
+            "finnish": "tyynysi.",
+            "meaning": "your pillow.",
+            "role": "possessed singular noun",
+            "baseForm": "tyyny",
+            "formation": "tyyny + -si = tyynysi; omit sinun while retaining the ending."
+          }
+        ]
+      }
+    }
+  ],
+  "numberScope": {
+    "axis": "object",
+    "number": "singular"
+  }
+}

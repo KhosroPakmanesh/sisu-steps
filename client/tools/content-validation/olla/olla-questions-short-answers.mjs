@@ -7,13 +7,27 @@ const skills = [
   'Plural negative olla questions',
   'Short answers with olla',
 ];
-const lessonIds = [
+const baseLessonIds = [
   'ppo-singular-positive-questions',
   'ppo-plural-positive-questions',
   'ppo-singular-negative-questions',
   'ppo-plural-negative-questions',
   'ppo-written-short-answers',
 ];
+
+const numberSplit = new Set([
+  'ppo-written-reference',
+  'ppo-affirmative-agreement',
+  'ppo-pronoun-presence',
+  'ppo-negative-transformations',
+  'ppo-written-short-answers',
+]);
+const lessonIds = baseLessonIds.flatMap((id) =>
+  numberSplit.has(id) ? [id + '-singular', id + '-plural'] : [id],
+);
+const lessonSkills = baseLessonIds.flatMap((id, index) =>
+  numberSplit.has(id) ? [skills[index], skills[index]] : [skills[index]],
+);
 
 export function validatePack(pack) {
   const errors = validateOllaPack(pack, {
@@ -22,6 +36,7 @@ export function validatePack(pack) {
       'Standard Finnish only: focused practice with affirmative and negative olla questions and short answers.',
     skills,
     lessonIds,
+    lessonSkills,
     testIds: [
       'ppo-singular-positive-questions-test',
       'ppo-plural-positive-questions-test',
@@ -35,7 +50,7 @@ export function validatePack(pack) {
     focusedCount: 6,
     exerciseCounts: [24, 24, 24, 24, 20, 20, 40, 18],
     scoredCount: 194,
-    practiceCount: 20,
+    practiceCount: 22,
     personMinimum: 20,
     coverage: { 'positive-question': 60, 'negative-question': 60, 'short-answer': 35 },
     allowedConstructionTags: ['positive-question', 'negative-question', 'short-answer'],

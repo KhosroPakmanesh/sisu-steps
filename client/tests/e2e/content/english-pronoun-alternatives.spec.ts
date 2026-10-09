@@ -9,6 +9,14 @@ let packs: TopicPack[];
 
 test.beforeAll(async () => {
   packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
+  const applicable = packs.flatMap((pack) =>
+    [
+      ...pack.tests.flatMap((item) => item.exercises),
+      ...pack.lessons.flatMap((item) => item.practiceExercises),
+    ].filter((item) => shouldAudit(pack, item)),
+  );
+  expect(applicable).toHaveLength(108);
+  expect(applicable.flatMap(pronounAlternatives)).toHaveLength(196);
 });
 
 test('rejects got constructions in scored and optional possession answers', async ({ page }) => {
@@ -30,7 +38,7 @@ test('rejects got constructions in scored and optional possession answers', asyn
     await expect(page.locator('.feedback')).toContainText(exercise.acceptedAnswers[0]);
   }
   const pack = packs.find((item) => item.id === 'affirmative-possession')!;
-  const lesson = pack.lessons.find((item) => item.id === 'aps-sentences')!;
+  const lesson = pack.lessons.find((item) => item.id === 'aps-sentences-singular')!;
   const index = lesson.practiceExercises.findIndex((item) => item.type === 'translation-en');
   await page.goto('/learn/affirmative-possession/aps-sentences-singular-test');
   await page.getByRole('button', { name: 'Start optional practice' }).click();
@@ -64,58 +72,75 @@ test('accepts he, she, and the combined answer for the reported pillow question'
   });
 });
 
-test('audits every applicable scored and optional English pronoun and possession translation', async ({
-  page,
-}, testInfo) => {
-  test.skip(testInfo.project.name !== 'chromium-wide');
-  test.setTimeout(480_000);
-  const audit: Array<{ id: string; answer: string; rendered: string }> = [];
-  for (const pack of packs) {
-    for (const authoredTest of pack.tests) {
-      for (const [index, exercise] of authoredTest.exercises.entries()) {
-        if (!shouldAudit(pack, exercise)) continue;
-        for (const answer of pronounAlternatives(exercise)) {
-          await positionSession(page, pack.id, authoredTest.id, index);
-          await expect(page.locator('.exercise-card h2')).toHaveText(exercise.prompt);
-          await submit(page, answer);
-          audit.push({
-            id: exercise.id,
-            answer,
-            rendered: await page.locator('.feedback').innerText(),
-          });
-        }
-      }
-    }
-    for (const lesson of pack.lessons) {
-      for (const [index, exercise] of lesson.practiceExercises.entries()) {
-        if (!shouldAudit(pack, exercise)) continue;
-        const authoredTest = pack.tests.find((item) => item.lessonIds.includes(lesson.id))!;
-        for (const answer of pronounAlternatives(exercise)) {
-          await page.goto(`/learn/${pack.id}/${authoredTest.id}`);
-          await page.reload();
-          await page.getByRole('button', { name: 'Start optional practice' }).click();
-          for (let prior = 0; prior < index; prior += 1) {
-            await page.getByRole('button', { name: 'Show answer', exact: true }).click();
-            await page.getByRole('button', { name: 'Continue', exact: true }).click();
+// Keep the exhaustive inventory, with independently bounded per-pack cases.
+for (const packId of [
+  'personal-pronouns-affirmative-olla',
+  'negative-olla-statements',
+  'olla-questions-short-answers',
+  'demonstrative-pronouns',
+  'affirmative-possession',
+  'negative-possession',
+  'possession-questions',
+  'negative-possession-questions',
+  'possessive-pronouns-endings',
+]) {
+  test('audits every applicable English translation in ' + packId, async ({ page }, testInfo) => {
+    test.skip(testInfo.project.name !== 'chromium-wide');
+    test.setTimeout(180_000);
+    const audit: Array<{ id: string; answer: string; rendered: string }> = [];
+    for (const pack of packs.filter((item) => item.id === packId)) {
+      for (const authoredTest of pack.tests) {
+        for (const [index, exercise] of authoredTest.exercises.entries()) {
+          if (!shouldAudit(pack, exercise)) continue;
+          for (const answer of pronounAlternatives(exercise)) {
+            await positionSession(page, pack.id, authoredTest.id, index);
+            await expect(page.locator('.exercise-card h2')).toHaveText(exercise.prompt);
+            await submit(page, answer);
+            audit.push({
+              id: exercise.id,
+              answer,
+              rendered: await page.locator('.feedback').innerText(),
+            });
           }
-          await expect(page.locator('.practice-card h4')).toHaveText(exercise.prompt);
-          await submit(page, answer);
-          audit.push({
-            id: exercise.id,
-            answer,
-            rendered: await page.locator('.feedback').innerText(),
-          });
+        }
+      }
+      for (const lesson of pack.lessons) {
+        for (const [index, exercise] of lesson.practiceExercises.entries()) {
+          if (!shouldAudit(pack, exercise)) continue;
+          const authoredTest = pack.tests.find((item) => item.lessonIds.includes(lesson.id))!;
+          for (const answer of pronounAlternatives(exercise)) {
+            const route = `/learn/${pack.id}/${authoredTest.id}`;
+            if (new URL(page.url()).pathname === route) await page.reload();
+            else await page.goto(route);
+            await page.getByRole('button', { name: 'Start optional practice' }).click();
+            for (let prior = 0; prior < index; prior += 1) {
+              await page.getByRole('button', { name: 'Show answer', exact: true }).click();
+              await page.getByRole('button', { name: 'Continue', exact: true }).click();
+            }
+            await expect(page.locator('.practice-card h4')).toHaveText(exercise.prompt);
+            await submit(page, answer);
+            audit.push({
+              id: exercise.id,
+              answer,
+              rendered: await page.locator('.feedback').innerText(),
+            });
+          }
         }
       }
     }
-  }
-  expect(new Set(audit.map((item) => item.id)).size).toBe(82);
-  expect(audit).toHaveLength(162);
-  await writeFile(
-    testInfo.outputPath('pronoun-rendered-audit.json'),
-    JSON.stringify(audit, null, 2),
-  );
-});
+    const pack = packs.find((item) => item.id === packId)!;
+    const expected = [
+      ...pack.tests.flatMap((item) => item.exercises),
+      ...pack.lessons.flatMap((item) => item.practiceExercises),
+    ].filter((item) => shouldAudit(pack, item));
+    expect(new Set(audit.map((item) => item.id)).size).toBe(expected.length);
+    expect(audit).toHaveLength(expected.flatMap(pronounAlternatives).length);
+    await writeFile(
+      testInfo.outputPath('pronoun-rendered-audit.json'),
+      JSON.stringify(audit, null, 2),
+    );
+  });
+}
 
 function hasEnglishPronoun(exercise: Exercise): boolean {
   return (
@@ -148,7 +173,7 @@ function pronounAlternatives(exercise: Exercise): string[] {
 async function submit(page: Page, answer: string): Promise<void> {
   await page.getByRole('textbox', { name: 'Your answer' }).fill(answer);
   await page.getByRole('button', { name: 'Check answer', exact: true }).click();
-  await expect(page.locator('.feedback')).toHaveClass(/correct/u);
+  await expect(page.locator('.feedback')).toHaveClass(/(?:^|\s)correct(?:\s|$)/u);
 }
 
 async function positionSession(
@@ -157,7 +182,8 @@ async function positionSession(
   testId: string,
   index: number,
 ): Promise<void> {
-  await page.goto(`/study/${topicId}/${testId}`);
+  const route = `/study/${topicId}/${testId}`;
+  if (new URL(page.url()).pathname !== route) await page.goto(route);
   await expect(page.locator('.exercise-card')).toBeVisible();
   await page.evaluate(
     ({ topicId, testId, index }) =>

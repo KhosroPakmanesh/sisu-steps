@@ -97,7 +97,7 @@ test('opens an affirmative Focused lesson and its fixed 24-question test', async
 
   await page.goto(`/study/${topic}/ppo-singular-pronouns-test`);
   await expect(page.locator('.question-count')).toHaveText('1 / 24');
-  await expect(page.locator('.exercise-card h2')).toContainText('Finnish subject pronoun');
+  await expect(page.locator('.exercise-card h2')).toHaveText('Which Finnish pronoun means “I”?');
   await page.getByRole('button', { name: 'Show answer' }).click();
   await expect(page.locator('.feedback')).toContainText('minä');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
@@ -291,7 +291,9 @@ test('shows new, reused, and supplied lesson vocabulary separately', async ({ pa
   expect(reducedReference.transitionDuration).toBe('0s');
 });
 
-test('opens the question transfer Review with only its five relevant lessons', async ({ page }) => {
+test('opens the question transfer Review with its six relevant preparation lessons', async ({
+  page,
+}) => {
   const topic = packs[2].id;
   await page.goto(`/topics/${topic}`);
   const finalReview = page.locator('.review-test').last();
@@ -305,9 +307,9 @@ test('opens the question transfer Review with only its five relevant lessons', a
     'Olla questions and short answers transfer review',
   );
   if ((page.viewportSize()?.width ?? 0) <= 800) {
-    await expect(page.locator('.lesson-picker option')).toHaveCount(5);
+    await expect(page.locator('.lesson-picker option')).toHaveCount(6);
   } else {
-    await expect(page.locator('.lesson-list button')).toHaveCount(5);
+    await expect(page.locator('.lesson-list button')).toHaveCount(6);
   }
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
 });

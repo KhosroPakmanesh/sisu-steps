@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "negative-demonstrative-statements",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "title": "Negative demonstrative statements",
   "level": "0 - A1.3",
   "summary": "Standard Finnish singular and plural negative olla statements with demonstrative subjects.",
@@ -30,7 +30,12 @@
       "url": "https://kielitoimistonohjepankki.fi/ohje/konjunktiot-eika-ei-eika-ja-ei/"
     }
   ],
-  "lessonIds": ["nds-singular-negative", "nds-plural-negative", "nds-negative-transformation"],
+  "lessonIds": [
+    "nds-singular-negative",
+    "nds-plural-negative",
+    "nds-negative-transformation-singular",
+    "nds-negative-transformation-plural"
+  ],
   "testIds": [
     "nds-singular-negative-test",
     "nds-plural-negative-test",
@@ -48,8 +53,12 @@
       "version": "1.1.1"
     },
     {
-      "id": "nds-negative-transformation",
-      "version": "1.1.1"
+      "id": "nds-negative-transformation-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "nds-negative-transformation-plural",
+      "version": "1.0.0"
     }
   ],
   "testSummaries": [
@@ -117,7 +126,7 @@
       "id": "nds-negative-transformation-singular-test",
       "title": "Singular statements into negatives",
       "stage": "focused",
-      "lessonIds": ["nds-negative-transformation"],
+      "lessonIds": ["nds-negative-transformation-singular"],
       "exerciseIds": [
         "nds-negative-transformation-singular-test-e101",
         "nds-negative-transformation-test-e005",
@@ -145,7 +154,7 @@
       "id": "nds-negative-transformation-plural-test",
       "title": "Plural statements into negatives",
       "stage": "focused",
-      "lessonIds": ["nds-negative-transformation"],
+      "lessonIds": ["nds-negative-transformation-plural"],
       "exerciseIds": [
         "nds-negative-transformation-plural-test-e101",
         "nds-negative-transformation-test-e006",
@@ -173,7 +182,12 @@
       "id": "nds-review",
       "title": "Negative demonstrative statements review",
       "stage": "review",
-      "lessonIds": ["nds-singular-negative", "nds-plural-negative", "nds-negative-transformation"],
+      "lessonIds": [
+        "nds-singular-negative",
+        "nds-plural-negative",
+        "nds-negative-transformation-singular",
+        "nds-negative-transformation-plural"
+      ],
       "exerciseIds": [
         "nds-review-e001",
         "nds-review-e002",

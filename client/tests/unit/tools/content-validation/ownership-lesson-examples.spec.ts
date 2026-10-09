@@ -21,8 +21,8 @@ describe('ownership worked-example coverage', () => {
   });
 
   it('accepts every authored lesson through both complete content boundaries', async () => {
-    expect(lessons).toHaveLength(28);
-    expect(lessons.flatMap((lesson) => lesson.examples)).toHaveLength(164);
+    expect(lessons).toHaveLength(44);
+    expect(lessons.flatMap((lesson) => lesson.examples)).toHaveLength(203);
     expect(validateSource(lessons)).toEqual([]);
     expect(() => validateRuntime(lessons)).not.toThrow();
     for (const pack of packs) {
@@ -42,13 +42,13 @@ describe('ownership worked-example coverage', () => {
     );
   });
 
-  it('rejects burying a missing owner after repeated first-six owners', () => {
-    const lesson = copyLesson('nps-partitive');
+  it('rejects burying a missing owner after repeated first-three owners', () => {
+    const lesson = copyLesson('nps-partitive-singular');
     lesson.examples.push(lesson.examples.splice(2, 1)[0]);
-    reject([lesson], 'first six worked examples');
+    reject([lesson], 'first worked examples');
   });
 
-  it.each(['pqs-short-answers', 'npq-short-answers'])(
+  it.each(['pqs-short-answers-singular', 'npq-short-answers-singular'])(
     'rejects question-only filler in %s',
     (id) => {
       const lesson = copyLesson(id);
@@ -60,7 +60,7 @@ describe('ownership worked-example coverage', () => {
   it.each(['On.', 'Ei ole.', 'Kyllä, on.', 'Ei, ei ole.'])(
     'rejects omitting taught reply %s',
     (reply) => {
-      const lesson = copyLesson('pqs-short-answers');
+      const lesson = copyLesson('pqs-short-answers-singular');
       for (const example of lesson.examples) {
         if (example.finnish.endsWith(` — ${reply}`))
           example.finnish = example.finnish.split(' — ')[0] + ' — Olen.';
@@ -70,13 +70,13 @@ describe('ownership worked-example coverage', () => {
   );
 
   it.each(['mme', 'nne'])('rejects missing omitted plural-owner ending -%s', (ending) => {
-    const lesson = copyLesson('pop-pronoun-omission');
+    const lesson = copyLesson('pop-pronoun-omission-singular');
     lesson.examples = lesson.examples.filter((example) => !example.finnish.includes(ending + '.'));
     reject([lesson], `missing worked omission of -${ending}`);
   });
 
   it('does not count an explicit pronoun as an omission example', () => {
-    const lesson = copyLesson('pop-pronoun-omission');
+    const lesson = copyLesson('pop-pronoun-omission-singular');
     for (const example of lesson.examples) {
       if (example.finnish.endsWith('mme.') && !example.finnish.includes('meidän')) {
         example.finnish = example.finnish.replace(/(on|ovat) /u, '$1 meidän ');
@@ -86,8 +86,8 @@ describe('ownership worked-example coverage', () => {
   });
 
   it('rejects missing neutral-only partitive and possessive harmony examples', () => {
-    const partitive = copyLesson('nps-partitive');
-    partitive.examples[4].finnish = 'Teillä ei ole autoa.';
+    const partitive = copyLesson('nps-partitive-singular');
+    partitive.examples = partitive.examples.filter((example) => !example.finnish.includes('peliä'));
     reject([partitive], 'missing worked partitive contrast peliä');
     const harmony = copyLesson('ppe-harmony');
     harmony.examples.pop();
@@ -95,15 +95,15 @@ describe('ownership worked-example coverage', () => {
   });
 
   it('rejects complete example sets copied between targets', () => {
-    const first = copyLesson('aps-possessors');
-    const second = copyLesson('aps-fixed-on');
+    const first = copyLesson('aps-possessors-singular');
+    const second = copyLesson('aps-fixed-on-singular');
     second.examples = structuredClone(first.examples);
     reject([first, second], 'copies the complete worked-example set');
   });
 
   it('allows a reused sentence with steps for a distinct target', () => {
-    const first = copyLesson('aps-possessors');
-    const second = copyLesson('aps-fixed-on');
+    const first = copyLesson('aps-possessors-singular');
+    const second = copyLesson('aps-fixed-on-singular');
     second.examples[0].finnish = first.examples[0].finnish;
     expect(validateSource([first, second])).toEqual([]);
     expect(() => validateRuntime([first, second])).not.toThrow();

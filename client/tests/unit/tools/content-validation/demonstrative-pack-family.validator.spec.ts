@@ -29,7 +29,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
     expect(
       packs.flatMap((pack) => pack.lessons).flatMap((lesson) => lesson.practiceExercises),
     ).toHaveLength(80);
-    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(20);
+    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(21);
     expect(
       packs.flatMap((pack) => pack.tests.filter((test) => test.stage === 'review')),
     ).toHaveLength(4);

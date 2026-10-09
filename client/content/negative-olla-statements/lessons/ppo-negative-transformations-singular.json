@@ -1,0 +1,186 @@
+{
+  "id": "ppo-negative-transformations-singular",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Affirmative-to-negative olla transformation"],
+  "prerequisiteSkills": ["Singular negative olla"],
+  "introducedVocabulary": [
+    { "finnish": "opiskelija", "english": "a student", "type": "word" },
+    { "finnish": "rauhallinen", "english": "calm", "type": "word" },
+    { "finnish": "valmis", "english": "ready", "type": "word" },
+    { "finnish": "väsynyt", "english": "tired", "type": "word" },
+    { "finnish": "vielä", "english": "still", "type": "word" },
+    { "finnish": "lääkäri", "english": "a doctor", "type": "word" },
+    { "finnish": "ajoissa", "english": "on time", "type": "word" },
+    { "finnish": "täällä", "english": "here", "type": "word" }
+  ],
+  "reusedVocabulary": [
+    { "finnish": "nyt", "english": "now", "type": "word" },
+    { "finnish": "kotona", "english": "at home", "type": "word" },
+    { "finnish": "paikalla", "english": "present", "type": "word" },
+    { "finnish": "siellä", "english": "there", "type": "word" },
+    { "finnish": "tänään", "english": "today", "type": "word" }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Change singular olla statements into negatives",
+  "summary": "Change olen, olet, or on into en ole, et ole, or ei ole while keeping the subject and context.",
+  "objectives": [
+    "Change olen, olet, or on into en ole, et ole, or ei ole while keeping the subject and context.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "Replace the affirmative verb",
+      "paragraphs": [
+        "Change olen, olet, or on into en ole, et ole, or ei ole while keeping the subject and context.",
+        "The negative verb carries person agreement. Put the fixed form ole after it."
+      ],
+      "keyPoints": ["olen → en ole", "olet → et ole", "on → ei ole"]
+    },
+    {
+      "title": "Change the polarity only",
+      "paragraphs": [
+        "Read the source and target meanings. Keep the subject and supplied context unchanged.",
+        "Choose the negative verb from the original subject, then add ole."
+      ],
+      "keyPoints": ["same subject", "same context", "negative verb + ole"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Minä olen täällä. → Minä en ole täällä.",
+      "english": "I am here. → I am not here.",
+      "steps": ["Keep minä and täällä.", "Replace olen with en ole."]
+    },
+    {
+      "finnish": "Hän on valmis. → Hän ei ole valmis.",
+      "english": "He or she is ready. → He or she is not ready.",
+      "steps": ["Keep hän and valmis.", "Replace on with ei ole."]
+    },
+    {
+      "finnish": "Sinä olet kotona. → Sinä et ole kotona.",
+      "english": "You are at home. → You are not at home.",
+      "steps": ["Keep sinä and kotona.", "Replace olet with et ole."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not change the subject or the supplied context.",
+    "Keep ole after the person-marked negative verb."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Optional practice: Notice who the sentence is about. Change Hän on rauhallinen. “He or she is calm.” → ____ “He or she is not calm.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Hän ei ole rauhallinen."],
+      "explanation": "Hän changes from on to ei ole. The negative verb carries the person ending.",
+      "options": ["Hän ei ole rauhallinen.", "Me emme ole rauhallinen.", "Hän ei on rauhallinen."],
+      "optionFeedback": {
+        "Hän ei ole rauhallinen.": "Correct. Hän changes from on to ei ole. The negative verb carries the person ending.",
+        "Me emme ole rauhallinen.": "“Me emme ole rauhallinen.” does not fit this subject or construction. Hän changes from on to ei ole. The negative verb carries the person ending.",
+        "Hän ei on rauhallinen.": "“Hän ei on rauhallinen.” does not fit this subject or construction. Hän changes from on to ei ole. The negative verb carries the person ending."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "transformation",
+        "person-han",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["rauhallinen"],
+      "sentenceExplanation": {
+        "translation": "He or she is not calm.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ei",
+            "meaning": "does not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "hän takes the negative-verb form ei"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "rauhallinen",
+            "meaning": "calm",
+            "role": "context: tells the location or state",
+            "baseForm": "rauhallinen",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "id": "ppo-l10-p01"
+    },
+    {
+      "id": "ppo-negative-transformations-singular-practice-04",
+      "type": "word-order",
+      "instruction": "Build the negative sentence.",
+      "prompt": "Optional practice: Change Sinä olet lääkäri. “You are a doctor.” → ____ “You are not a doctor.” Keep sinä and lääkäri unchanged.",
+      "acceptedAnswers": ["Sinä et ole lääkäri."],
+      "explanation": "Sinä takes et; add ole and keep the subject and description unchanged.",
+      "tags": [
+        "lesson-practice",
+        "standard-written-finnish",
+        "sentence",
+        "person-sina",
+        "negative",
+        "transformation"
+      ],
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "vocabulary": [],
+      "targetSkill": "Affirmative-to-negative olla transformation",
+      "misconceptionCategory": "Affirmative-to-negative olla transformation: form or meaning confused",
+      "tokens": ["lääkäri.", "ole", "Sinä", "et"],
+      "sentenceExplanation": {
+        "translation": "You are not a doctor.",
+        "pattern": "subject + negative verb + ole + unchanged context",
+        "parts": [
+          {
+            "finnish": "Sinä",
+            "meaning": "you",
+            "role": "subject",
+            "baseForm": "sinä",
+            "formation": "one informal listener"
+          },
+          {
+            "finnish": "et",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "sinä takes et"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed ole after et"
+          },
+          {
+            "finnish": "lääkäri.",
+            "meaning": "a doctor",
+            "role": "description",
+            "baseForm": "lääkäri",
+            "formation": "unchanged description"
+          }
+        ]
+      }
+    }
+  ],
+  "numberScope": { "axis": "person", "number": "singular" }
+}

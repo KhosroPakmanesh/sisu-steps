@@ -1,0 +1,212 @@
+{
+  "id": "aps-fixed-on-plural",
+  "version": "1.0.0",
+  "title": "Fixed on with plural owners",
+  "summary": "Use fixed on with meillä, teillä, and heillä to say what the owner has.",
+  "stage": "focused",
+  "targetSkills": ["Fixed on in possession"],
+  "prerequisiteSkills": ["Personal possessor forms"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Use fixed on with meillä, teillä, and heillä to say what the owner has.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "How the pattern works",
+      "paragraphs": [
+        "Use fixed on with meillä, teillä, and heillä to say what the owner has.",
+        "Meillä on pallo means “We have a ball”. Keep on even though meillä names several owners; olemme belongs to “We are …”."
+      ],
+      "keyPoints": [
+        "Use fixed on with meillä, teillä, and heillä to say what the owner has.",
+        "meillä, teillä, and heillä"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Meillä on pallo.",
+      "english": "We have a ball.",
+      "steps": [
+        "meillä means “we as the owner”.",
+        "Meillä names several owners, but the possession verb stays on, not olemme.",
+        "pallo (“ball”) stays in its basic singular form: one thing."
+      ]
+    },
+    {
+      "finnish": "Teillä on kynä.",
+      "english": "You have a pen.",
+      "steps": [
+        "teillä means “you as the owner” for a group.",
+        "Teillä addresses a group here; use on, not olette.",
+        "kynä (“pen”) stays in its basic singular form: one thing."
+      ]
+    },
+    {
+      "finnish": "Heillä on peli.",
+      "english": "They have a game.",
+      "steps": [
+        "heillä means “they as the owner”.",
+        "Heillä names several owners; use on, not ovat.",
+        "peli (“game”) stays in its basic singular form: one thing."
+      ]
+    },
+    {
+      "finnish": "Heillä on tyyny.",
+      "english": "They have a pillow.",
+      "steps": [
+        "heillä means “they as the owner”.",
+        "A front-vowel noun such as tyyny changes neither the owners nor fixed on.",
+        "tyyny (“pillow”) stays in its basic singular form: one thing."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Possession uses on with every owner: meillä on, not meillä olemme; heillä on, not heillä ovat.",
+    "Several owners can have one thing. A plural owner does not turn pallo into a plural noun."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “They have a ball.” in Finnish. Use heillä (“they as the owner”) and pallo (“a ball”). Frame: “Heillä ___ pallo”.",
+      "acceptedAnswers": ["Heillä on pallo."],
+      "explanation": "Possession uses on with every owner. Plural owners still take on; ovat belongs to a different sentence pattern.",
+      "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
+      "requiredSkills": ["Personal possessor forms", "Fixed on in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed on in possession",
+      "misconceptionCategory": "Fixed on in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "They have a ball.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Heillä",
+            "meaning": "they as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "he",
+            "formation": "he has the learned possession form heillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "pallo.",
+            "meaning": "a ball",
+            "role": "thing possessed",
+            "baseForm": "pallo",
+            "formation": "pallo stays in its basic singular form: one ball."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Heillä ovat pallo."],
+          "category": "Fixed on in possession: predictable form error",
+          "explanation": "The -lla/-llä phrase is the possessor. In this possession pattern the verb stays fixed, so do not conjugate it to match the owner."
+        }
+      ],
+      "id": "aps-fixed-on-practice-01"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “We have a car.” in Finnish. Use meillä (“we as the owner”) and auto (“a car”). Frame: “Meillä ___ auto”.",
+      "acceptedAnswers": ["Meillä on auto."],
+      "explanation": "Possession uses on with every owner. Plural owners still take on; ovat belongs to a different sentence pattern.",
+      "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
+      "requiredSkills": ["Personal possessor forms", "Fixed on in possession"],
+      "vocabulary": [],
+      "targetSkill": "Fixed on in possession",
+      "misconceptionCategory": "Fixed on in possession: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "We have a car.",
+        "pattern": "possessor + fixed on + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Meillä",
+            "meaning": "we as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "me",
+            "formation": "me has the learned possession form meillä; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "on",
+            "meaning": "have or has",
+            "role": "possession verb",
+            "baseForm": "olla",
+            "formation": "Olla means “to be”; possession uses its fixed on form with every owner, including we and they."
+          },
+          {
+            "finnish": "auto.",
+            "meaning": "a car",
+            "role": "thing possessed",
+            "baseForm": "auto",
+            "formation": "auto stays in its basic singular form: one car."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Meillä olemme auto."],
+          "category": "Fixed on in possession: predictable form error",
+          "explanation": "The -lla/-llä phrase is the possessor. In this possession pattern the verb stays fixed, so do not conjugate it to match the owner."
+        }
+      ],
+      "id": "aps-fixed-on-practice-03"
+    }
+  ],
+  "numberScope": {
+    "axis": "owner",
+    "number": "plural"
+  }
+}

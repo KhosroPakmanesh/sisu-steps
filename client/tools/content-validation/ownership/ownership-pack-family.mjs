@@ -27,7 +27,7 @@ export function validateOwnershipPack(pack) {
   const counts =
     mode === 'possessive' ? [...Array(20).fill(20), 32, 32] : [...Array(6).fill(20), 24];
   if (
-    pack.version !== (mode === 'possessive' ? '2.3.0' : '1.5.0') ||
+    pack.version !== (mode === 'possessive' ? '2.4.0' : '1.6.0') ||
     pack.level !== '0 - A1.3' ||
     pack.tests.length !== counts.length ||
     pack.tests.some((test, index) => test.exercises.length !== counts[index])

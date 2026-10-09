@@ -3,7 +3,7 @@ import { TopicPack } from '../topic-pack.models';
 
 const OWNERS = ['minun', 'sinun', 'hänen', 'meidän', 'teidän', 'heidän'];
 const ENDINGS = ['ni', 'si', 'nsa', 'mme', 'nne', 'nsa'];
-const LESSON_SUFFIXES = [
+const BASE_LESSON_SUFFIXES = [
   'owner-forms',
   'personal-endings',
   'third-person',
@@ -13,18 +13,19 @@ const LESSON_SUFFIXES = [
   'pronoun-omission',
   'whose',
 ];
-const LESSON_IDS = LESSON_SUFFIXES.flatMap((suffix) =>
-  ['ppe', 'pop'].map((prefix) => `${prefix}-${suffix}`),
+const LESSON_SUFFIXES = BASE_LESSON_SUFFIXES.flatMap((suffix) =>
+  /^(pronoun-omission|whose)$/u.test(suffix)
+    ? [suffix + '-singular', suffix + '-plural']
+    : [suffix],
 );
-const TEST_IDS = [
-  ...LESSON_IDS.flatMap((id) =>
-    /(?:pronoun-omission|whose)$/u.test(id)
-      ? [id + '-singular-test', id + '-plural-test']
-      : [id + '-test'],
+const LESSON_IDS = BASE_LESSON_SUFFIXES.flatMap((suffix) =>
+  ['ppe', 'pop'].flatMap((prefix) =>
+    /^(pronoun-omission|whose)$/u.test(suffix)
+      ? [prefix + '-' + suffix + '-singular', prefix + '-' + suffix + '-plural']
+      : [prefix + '-' + suffix],
   ),
-  'ppe-review',
-  'pop-review',
-];
+);
+const TEST_IDS = [...LESSON_IDS.map((id) => id + '-test'), 'ppe-review', 'pop-review'];
 const TEST_COUNTS = TEST_IDS.map((id) => (id.endsWith('review') ? 32 : 20));
 const NOUNS = [
   'pallo',
@@ -44,11 +45,15 @@ export function validatePossessiveOwnerGroups(pack: TopicPack): void {
   if (pack.id !== 'possessive-pronouns-endings') return;
   const errors: string[] = [];
   if (
-    pack.version !== '2.3.0' ||
+    pack.version !== '2.4.0' ||
     pack.level !== '0 - A1.3' ||
-    pack.lessons.length !== 16 ||
+    pack.lessons.length !== 20 ||
     pack.lessons.some(
-      (lesson) => lesson.stage !== 'focused' || lesson.practiceExercises.length !== 3,
+      (lesson) =>
+        lesson.stage !== 'focused' ||
+        (lesson.numberScope
+          ? lesson.practiceExercises.length < 2 || lesson.practiceExercises.length > 5
+          : lesson.practiceExercises.length !== 3),
     ) ||
     pack.tests.length !== 22 ||
     pack.tests.some(
@@ -75,7 +80,9 @@ export function validatePossessiveOwnerGroups(pack: TopicPack): void {
       (review.lessonIds.length !== lessonIds.length ||
         review.lessonIds.some((id, index) => id !== lessonIds[index]))
     )
-      errors.push(`${review.id}: preserve the original owner-group Review lesson references`);
+      errors.push(
+        `${review.id}: preserve the owner-group Review references with separate number-specific preparation`,
+      );
   }
   for (const lesson of pack.lessons) {
     const allowed = OWNERS.slice(

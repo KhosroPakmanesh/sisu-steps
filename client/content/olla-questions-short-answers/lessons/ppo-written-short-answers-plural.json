@@ -1,0 +1,160 @@
+{
+  "id": "ppo-written-short-answers-plural",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Short answers with olla"],
+  "prerequisiteSkills": ["Plural negative olla questions"],
+  "introducedVocabulary": [{ "finnish": "aamulla", "english": "in the morning", "type": "word" }],
+  "reusedVocabulary": [
+    { "finnish": "kotona", "english": "at home", "type": "word" },
+    { "finnish": "illalla", "english": "in the evening", "type": "word" },
+    { "finnish": "tänään", "english": "today", "type": "word" },
+    { "finnish": "siellä", "english": "there", "type": "word" },
+    { "finnish": "täällä", "english": "here", "type": "word" },
+    { "finnish": "nyt", "english": "now", "type": "word" },
+    { "finnish": "ajoissa", "english": "on time", "type": "word" },
+    { "finnish": "huomenna", "english": "tomorrow", "type": "word" },
+    { "finnish": "koulussa", "english": "at school", "type": "word" },
+    { "finnish": "myöhässä", "english": "late", "type": "word" },
+    { "finnish": "paikalla", "english": "present", "type": "word" },
+    { "finnish": "turvassa", "english": "safe", "type": "word" },
+    { "finnish": "työssä", "english": "at work", "type": "word" },
+    { "finnish": "valmis", "english": "ready", "type": "word" },
+    { "finnish": "opiskelija", "english": "a student", "type": "word" },
+    { "finnish": "väsynyt", "english": "tired", "type": "word" }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Short answers about plural persons",
+  "summary": "Answer about a group with olemme, olette, or ovat, or the matching negative verb plus ole.",
+  "objectives": [
+    "Answer about a group with olemme, olette, or ovat, or the matching negative verb plus ole.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "Choose the answer viewpoint",
+      "paragraphs": [
+        "When a group answers Oletteko te kotona?, its reply is about me: Kyllä, olemme. If the fact is negative, answer Emme ole.",
+        "When answering about someone else, keep that person’s viewpoint. A positive reply can omit kyllä; a negative reply may begin with Ei."
+      ],
+      "keyPoints": ["me: olemme / emme ole", "te: olette / ette ole", "he: ovat / eivät ole"]
+    },
+    {
+      "title": "Answer the fact",
+      "paragraphs": [
+        "Ettekö te ole kotona? asks “Are you not at home?” If the group is at home, answer Kyllä, olemme. If it is not at home, answer Emme ole.",
+        "Read the stated fact before choosing yes or no."
+      ],
+      "keyPoints": ["positive fact → affirmative reply", "negative fact → negative verb + ole"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Oletteko te kotona? — Kyllä, olemme.",
+      "english": "Are you at home? — Yes, we are.",
+      "steps": ["A group of listeners answers as me.", "Use olemme in the reply."]
+    },
+    {
+      "finnish": "Ovatko he täällä? — Kyllä, ovat.",
+      "english": "Are they here? — Yes, they are.",
+      "steps": ["The reply is about he.", "Use ovat after kyllä."]
+    },
+    {
+      "finnish": "Ettekö te ole kotona? — Emme ole.",
+      "english": "Are you not at home? — No, we are not.",
+      "steps": ["The group is not at home.", "Answer the negative fact with emme ole."]
+    }
+  ],
+  "commonMistakes": [
+    "Choose the person from the answer viewpoint.",
+    "A negative question does not reverse the stated fact.",
+    "Keep ole after a negative answer verb."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ppo-written-short-answers-plural-practice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose the reply that matches the stated fact.",
+      "prompt": "Optional practice: The question is “Oletteko te työssä?” (“Are you at work?”). A group answers about itself. The group is at work. Give the reply “Yes, we are.”",
+      "acceptedAnswers": ["Kyllä, olemme."],
+      "explanation": "The listeners reply as me; the positive fact takes olemme.",
+      "tags": [
+        "lesson-practice",
+        "standard-written-finnish",
+        "sentence",
+        "person-me",
+        "short-answer"
+      ],
+      "requiredSkills": ["Short answers with olla"],
+      "vocabulary": [],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form or meaning confused",
+      "options": ["Kyllä, olemme.", "Emme ole.", "Kyllä, olette."],
+      "sentenceExplanation": {
+        "translation": "Yes, we are.",
+        "pattern": "kyllä + matching affirmative olla",
+        "parts": [
+          {
+            "finnish": "Kyllä",
+            "meaning": "yes",
+            "role": "answer word",
+            "baseForm": "kyllä",
+            "formation": "fixed answer word"
+          },
+          {
+            "finnish": "olemme.",
+            "meaning": "we are",
+            "role": "answer verb",
+            "baseForm": "olla",
+            "formation": "the group replies as me, which takes olemme"
+          }
+        ]
+      },
+      "optionFeedback": {
+        "Kyllä, olemme.": "Correct. The listeners reply as me; the positive fact takes olemme.",
+        "Emme ole.": "Emme ole denies the positive fact. The group is at work.",
+        "Kyllä, olette.": "Olette addresses the listeners; their own reply is about me, so use olemme."
+      }
+    },
+    {
+      "id": "ppo-written-short-answers-plural-practice-05",
+      "type": "fill-blank",
+      "instruction": "Write the complete short answer in Finnish.",
+      "prompt": "Optional practice: The question is “Eivätkö he ole koulussa?” (“Are they not at school?”). They are not at school. Give the reply “No, they are not.”",
+      "acceptedAnswers": ["Eivät ole.", "Ei, eivät ole."],
+      "explanation": "The negative fact about he takes eivät ole. The optional answer word Ei does not change the verb.",
+      "tags": [
+        "lesson-practice",
+        "standard-written-finnish",
+        "sentence",
+        "person-he",
+        "short-answer"
+      ],
+      "requiredSkills": ["Short answers with olla"],
+      "vocabulary": [],
+      "targetSkill": "Short answers with olla",
+      "misconceptionCategory": "Short answers with olla: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "No, they are not.",
+        "pattern": "matching negative verb + ole",
+        "parts": [
+          {
+            "finnish": "Eivät",
+            "meaning": "they are not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "he takes eivät"
+          },
+          {
+            "finnish": "ole.",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed ole after eivät"
+          }
+        ]
+      }
+    }
+  ],
+  "numberScope": { "axis": "person", "number": "plural" }
+}

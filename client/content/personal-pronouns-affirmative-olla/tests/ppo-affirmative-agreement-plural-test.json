@@ -1,8 +1,8 @@
 {
   "id": "ppo-affirmative-agreement-plural-test",
   "title": "Plural affirmative agreement",
-  "focus": "Choose the correct affirmative olla form from the complete paradigm.",
-  "lessonIds": ["ppo-affirmative-agreement"],
+  "focus": "Match me, te, and he with olemme, olette, and ovat.",
+  "lessonIds": ["ppo-affirmative-agreement-plural"],
   "stage": "focused",
   "targetSkills": ["Affirmative pronoun–verb agreement"],
   "prerequisiteSkills": ["Plural affirmative olla"],
@@ -153,7 +153,7 @@
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Read the whole meaning before answering. Write “You are there in the morning.” Use the explicit subject te. Address more than one person with te.",
-      "acceptedAnswers": ["Te olette siellä aamulla."],
+      "acceptedAnswers": ["Te olette siellä aamulla.", "Te olette aamulla siellä."],
       "explanation": "Te takes olette, the matching present-tense form of olla.",
       "tags": ["sentence", "te-plural", "person-te", "affirmative", "standard-written-finnish"],
       "vocabulary": ["siellä", "aamulla"],
@@ -180,7 +180,7 @@
             "meaning": "there in the morning",
             "role": "context: tells the location or state",
             "baseForm": "siellä aamulla",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Use the words taught in the lesson in their learned forms; no additional ending is required here."
           }
         ]
       },
@@ -640,7 +640,7 @@
             "meaning": "still here",
             "role": "context: tells the location or state",
             "baseForm": "täällä vielä",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Use the words taught in the lesson in their learned forms; no additional ending is required here."
           }
         ]
       },
@@ -839,7 +839,7 @@
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
       "prompt": "Read the whole meaning before answering. Write “They are there in the morning.” Use the explicit subject he.",
-      "acceptedAnswers": ["He ovat siellä aamulla."],
+      "acceptedAnswers": ["He ovat siellä aamulla.", "He ovat aamulla siellä."],
       "explanation": "He takes ovat, the matching present-tense form of olla.",
       "tags": ["sentence", "person-he", "affirmative", "standard-written-finnish"],
       "vocabulary": ["siellä", "aamulla"],
@@ -866,7 +866,7 @@
             "meaning": "there in the morning",
             "role": "context: tells the location or state",
             "baseForm": "siellä aamulla",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Use the words taught in the lesson in their learned forms; no additional ending is required here."
           }
         ]
       },

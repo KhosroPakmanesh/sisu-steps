@@ -1,0 +1,319 @@
+{
+  "id": "ppe-pronoun-omission-plural",
+  "version": "1.0.0",
+  "title": "Omitting the owner pronoun with several things",
+  "summary": "Leave out minun or sinun while keeping the noun ending; retain hänen with plural possessed nouns.",
+  "stage": "focused",
+  "targetSkills": ["Possessive pronoun omission and clear reference"],
+  "prerequisiteSkills": ["Plural possessed nouns in ownership sentences"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "pallo",
+      "english": "ball",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kynä",
+      "english": "pen",
+      "type": "word"
+    },
+    {
+      "finnish": "tyyny",
+      "english": "pillow",
+      "type": "word"
+    },
+    {
+      "finnish": "peli",
+      "english": "game",
+      "type": "word"
+    },
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Leave out minun or sinun while keeping the noun ending; retain hänen with plural possessed nouns.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "Keep the ending when omitting the pronoun",
+      "paragraphs": [
+        "Leave out minun or sinun while keeping the noun ending; retain hänen with plural possessed nouns.",
+        "Nämä ovat sinun kirjasi. and Nämä ovat kirjasi. mean the same thing: “These are your books”. Plural -t drops before the possessive ending.",
+        "In these identification sentences retain hänen: its third-person ending does not identify the intended owner by itself. Omission in other sentence structures is outside this lesson.",
+        "Follow an explicit request to omit or retain the owner pronoun. Otherwise both ordinary first- and second-person forms are accepted."
+      ],
+      "keyPoints": ["Nämä ovat = several things", "keep the -ni / -si ending", "retain hänen"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Nämä ovat autoni.",
+      "english": "These are my cars.",
+      "steps": [
+        "Nämä ovat (“These are”) identifies several things.",
+        "autot (“cars”) drops plural -t before -ni: autoni.",
+        "The ending identifies the owner, so omit minun while retaining the noun ending."
+      ]
+    },
+    {
+      "finnish": "Nämä ovat kynäsi.",
+      "english": "These are your pens.",
+      "steps": [
+        "Nämä ovat (“These are”) identifies several things.",
+        "kynät (“pens”) drops plural -t before -si: kynäsi.",
+        "The ending identifies the owner, so omit sinun while retaining the noun ending."
+      ]
+    },
+    {
+      "finnish": "Nämä ovat hänen pelinsä.",
+      "english": "These are his games.",
+      "steps": [
+        "Nämä ovat (“These are”) identifies several things.",
+        "pelit (“games”) drops plural -t before -nsä: pelinsä.",
+        "Hänen (“his”) selects the owner ending -nsä.",
+        "Retain hänen in this identification pattern so the owner stays clear."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Omitting the owner pronoun does not remove its noun ending.",
+    "Retain hänen in this bounded identification pattern."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “These are my pillows.” in Finnish. Begin with Nämä ovat. Leave out minun; keep the noun ending. Use tyyny (“pillow”).",
+      "acceptedAnswers": ["Nämä ovat tyynyni."],
+      "explanation": "Nämä ovat identifies several things. The ending -ni identifies my ownership. Minun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-minun",
+        "possessive-noun-tyyny",
+        "objects-plural",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are my pillows.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "tyynyni.",
+            "meaning": "my pillows",
+            "role": "possessed plural noun",
+            "baseForm": "tyyny",
+            "formation": "tyynyt (“pillows”) loses its plural -t before -ni: tyyny + -ni = tyynyni. The ending identifies the owner, so minun can be left out."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat tyynytni."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -ni: use tyynyni."
+        },
+        {
+          "answers": ["Nämä ovat tyynyt."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -ni even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat tyynysi."],
+          "category": "wrong personal owner",
+          "explanation": "Minun needs -ni; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on tyynyni."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-pronoun-omission-practice-01"
+    },
+    {
+      "type": "translation-en",
+      "instruction": "Write in English.",
+      "prompt": "Optional practice: Translate “Nämä ovat hänen kissansa.” into English. You may use “his” or “her”.",
+      "acceptedAnswers": [
+        "These are his cats.",
+        "These are her cats.",
+        "These are his or her cats.",
+        "These cats are his.",
+        "These cats are hers.",
+        "These cats are his or hers."
+      ],
+      "explanation": "Nämä ovat means “These are”. The noun ending marks the owner; the demonstrative and verb reveal the number of things.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-hänen",
+        "possessive-noun-kissa",
+        "objects-plural",
+        "object-number-contrast",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": ["kissa"],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are his cats.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "hänen",
+            "meaning": "his",
+            "role": "owner pronoun",
+            "baseForm": "hän",
+            "formation": "Hänen is the personal owner form of hän; it selects -nsa."
+          },
+          {
+            "finnish": "kissansa.",
+            "meaning": "cats",
+            "role": "possessed plural noun",
+            "baseForm": "kissa",
+            "formation": "kissat (“cats”) loses its plural -t before -nsa: kissa + -nsa = kissansa."
+          }
+        ]
+      },
+      "id": "ppe-pronoun-omission-practice-03"
+    },
+    {
+      "type": "translation-fi",
+      "instruction": "Write in Finnish.",
+      "prompt": "Optional practice: Write “These are your apples.” in Finnish. Begin with Nämä ovat. Address one person. Leave out sinun; keep the noun ending. Use omena (“apple”).",
+      "acceptedAnswers": ["Nämä ovat omenasi."],
+      "explanation": "Nämä ovat identifies several things. The ending -si identifies your ownership. Sinun can be omitted because the ending identifies the owner; the suffix stays.",
+      "tags": [
+        "standard-written-finnish",
+        "sentence",
+        "owner-sinun",
+        "possessive-noun-omena",
+        "objects-plural",
+        "lesson-practice"
+      ],
+      "requiredSkills": ["Possessive pronoun omission and clear reference"],
+      "vocabulary": [],
+      "targetSkill": "Possessive pronoun omission and clear reference",
+      "misconceptionCategory": "Possessive pronoun omission and clear reference: form or meaning confused",
+      "sentenceExplanation": {
+        "translation": "These are your apples.",
+        "pattern": "demonstrative + agreeing olla + optional owner pronoun + possessed noun",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "role": "things being identified",
+            "baseForm": "tämä",
+            "formation": "Nämä is the plural of tämä: several things."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "linking verb",
+            "baseForm": "olla",
+            "formation": "Use ovat with several things, independently of how many people own them."
+          },
+          {
+            "finnish": "omenasi.",
+            "meaning": "your apples",
+            "role": "possessed plural noun",
+            "baseForm": "omena",
+            "formation": "omenat (“apples”) loses its plural -t before -si: omena + -si = omenasi. The ending identifies the owner, so sinun can be left out."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Nämä ovat omenatsi."],
+          "category": "plural -t before possessive suffix",
+          "explanation": "Drop the noun’s plural -t before -si: use omenasi."
+        },
+        {
+          "answers": ["Nämä ovat omenat."],
+          "category": "missing possessive suffix",
+          "explanation": "Keep the possessive ending -si even when the owner pronoun is present or omitted."
+        },
+        {
+          "answers": ["Nämä ovat omenani."],
+          "category": "wrong personal owner",
+          "explanation": "Sinun needs -si; changing the ending changes the owner."
+        },
+        {
+          "answers": ["Nämä on omenasi."],
+          "category": "object-number agreement",
+          "explanation": "These are several things: Nämä needs ovat, regardless of the number of owners."
+        }
+      ],
+      "id": "ppe-pronoun-omission-practice-02"
+    }
+  ],
+  "numberScope": {
+    "axis": "object",
+    "number": "plural"
+  }
+}

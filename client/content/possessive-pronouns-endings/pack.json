@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "possessive-pronouns-endings",
-  "version": "2.3.0",
+  "version": "2.4.0",
   "title": "Possessive pronouns and endings",
   "level": "0 - A1.3",
   "summary": "Standard written Finnish possessive forms for singular and plural owners, each covering one or several owned things.",
@@ -65,10 +65,14 @@
     "pop-sentences",
     "ppe-plural-objects",
     "pop-plural-objects",
-    "ppe-pronoun-omission",
-    "pop-pronoun-omission",
-    "ppe-whose",
-    "pop-whose"
+    "ppe-pronoun-omission-singular",
+    "ppe-pronoun-omission-plural",
+    "pop-pronoun-omission-singular",
+    "pop-pronoun-omission-plural",
+    "ppe-whose-singular",
+    "ppe-whose-plural",
+    "pop-whose-singular",
+    "pop-whose-plural"
   ],
   "testIds": [
     "ppe-owner-forms-test",
@@ -144,19 +148,35 @@
       "version": "1.0.0"
     },
     {
-      "id": "ppe-pronoun-omission",
-      "version": "1.2.0"
-    },
-    {
-      "id": "pop-pronoun-omission",
+      "id": "ppe-pronoun-omission-singular",
       "version": "1.0.0"
     },
     {
-      "id": "ppe-whose",
-      "version": "1.2.0"
+      "id": "ppe-pronoun-omission-plural",
+      "version": "1.0.0"
     },
     {
-      "id": "pop-whose",
+      "id": "pop-pronoun-omission-singular",
+      "version": "1.0.0"
+    },
+    {
+      "id": "pop-pronoun-omission-plural",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ppe-whose-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "ppe-whose-plural",
+      "version": "1.0.0"
+    },
+    {
+      "id": "pop-whose-singular",
+      "version": "1.0.0"
+    },
+    {
+      "id": "pop-whose-plural",
       "version": "1.0.0"
     }
   ],
@@ -501,7 +521,7 @@
       "id": "ppe-pronoun-omission-singular-test",
       "title": "One owned thing: omitting minun and sinun",
       "stage": "focused",
-      "lessonIds": ["ppe-pronoun-omission"],
+      "lessonIds": ["ppe-pronoun-omission-singular"],
       "exerciseIds": [
         "ppe-pronoun-omission-singular-test-e101",
         "ppe-pronoun-omission-test-e002",
@@ -529,7 +549,7 @@
       "id": "ppe-pronoun-omission-plural-test",
       "title": "Several owned things: omitting minun and sinun",
       "stage": "focused",
-      "lessonIds": ["ppe-pronoun-omission"],
+      "lessonIds": ["ppe-pronoun-omission-plural"],
       "exerciseIds": [
         "ppe-pronoun-omission-plural-test-e101",
         "ppe-pronoun-omission-test-e004",
@@ -557,7 +577,7 @@
       "id": "pop-pronoun-omission-singular-test",
       "title": "One owned thing: omitting meidän and teidän",
       "stage": "focused",
-      "lessonIds": ["pop-pronoun-omission"],
+      "lessonIds": ["pop-pronoun-omission-singular"],
       "exerciseIds": [
         "pop-pronoun-omission-singular-test-e101",
         "pop-pronoun-omission-test-e002",
@@ -585,7 +605,7 @@
       "id": "pop-pronoun-omission-plural-test",
       "title": "Several owned things: omitting meidän and teidän",
       "stage": "focused",
-      "lessonIds": ["pop-pronoun-omission"],
+      "lessonIds": ["pop-pronoun-omission-plural"],
       "exerciseIds": [
         "pop-pronoun-omission-plural-test-e101",
         "pop-pronoun-omission-test-e020",
@@ -613,7 +633,7 @@
       "id": "ppe-whose-singular-test",
       "title": "Whose is this? Kenen …?",
       "stage": "focused",
-      "lessonIds": ["ppe-whose"],
+      "lessonIds": ["ppe-whose-singular"],
       "exerciseIds": [
         "ppe-whose-singular-test-e101",
         "ppe-whose-test-e002",
@@ -641,7 +661,7 @@
       "id": "ppe-whose-plural-test",
       "title": "Whose are these? Kenen …?",
       "stage": "focused",
-      "lessonIds": ["ppe-whose"],
+      "lessonIds": ["ppe-whose-plural"],
       "exerciseIds": [
         "ppe-whose-plural-test-e101",
         "ppe-whose-test-e003",
@@ -669,7 +689,7 @@
       "id": "pop-whose-singular-test",
       "title": "Whose is this? Kenen …?",
       "stage": "focused",
-      "lessonIds": ["pop-whose"],
+      "lessonIds": ["pop-whose-singular"],
       "exerciseIds": [
         "pop-whose-singular-test-e101",
         "pop-whose-test-e010",
@@ -697,7 +717,7 @@
       "id": "pop-whose-plural-test",
       "title": "Whose are these? Kenen …?",
       "stage": "focused",
-      "lessonIds": ["pop-whose"],
+      "lessonIds": ["pop-whose-plural"],
       "exerciseIds": [
         "pop-whose-plural-test-e101",
         "pop-whose-test-e004",
@@ -732,8 +752,10 @@
         "ppe-harmony",
         "ppe-sentences",
         "ppe-plural-objects",
-        "ppe-pronoun-omission",
-        "ppe-whose"
+        "ppe-pronoun-omission-singular",
+        "ppe-pronoun-omission-plural",
+        "ppe-whose-singular",
+        "ppe-whose-plural"
       ],
       "exerciseIds": [
         "ppe-review-e007",
@@ -781,8 +803,10 @@
         "pop-harmony",
         "pop-sentences",
         "pop-plural-objects",
-        "pop-pronoun-omission",
-        "pop-whose"
+        "pop-pronoun-omission-singular",
+        "pop-pronoun-omission-plural",
+        "pop-whose-singular",
+        "pop-whose-plural"
       ],
       "exerciseIds": [
         "pop-review-e013",

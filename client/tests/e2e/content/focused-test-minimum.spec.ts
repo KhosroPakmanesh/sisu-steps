@@ -202,7 +202,7 @@ test('checks all eight final editorial corrections and alternatives at every vie
       }
     }
   expect(new Set(records.map((r) => r.id)).size).toBe(8);
-  expect(records.filter((r) => r.correct)).toHaveLength(15);
+  expect(records.filter((r) => r.correct)).toHaveLength(17);
   expect(records.filter((r) => !r.correct)).toHaveLength(4);
   await writeFile(testInfo.outputPath('final-editorial-grading.json'), JSON.stringify(records));
 });

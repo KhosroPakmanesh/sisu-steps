@@ -1,8 +1,8 @@
 {
   "id": "ppo-pronoun-presence-singular-test",
   "title": "Singular subject-pronoun use",
-  "focus": "Learn when a olla sentence can omit a subject pronoun and when it should remain explicit.",
-  "lessonIds": ["ppo-pronoun-presence"],
+  "focus": "Omit minä or sinä when olen or olet makes the subject clear; keep hän in independent sentences.",
+  "lessonIds": ["ppo-pronoun-presence-singular"],
   "stage": "focused",
   "targetSkills": ["Subject-pronoun use"],
   "prerequisiteSkills": ["Affirmative pronoun–verb agreement"],
@@ -150,7 +150,7 @@
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
       "prompt": "Keep the person agreement exact. Write “He or she is in Finland tomorrow.” with the third-person subject stated explicitly.",
-      "acceptedAnswers": ["Hän on Suomessa huomenna."],
+      "acceptedAnswers": ["Hän on Suomessa huomenna.", "Hän on huomenna Suomessa."],
       "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
       "tags": [
         "sentence",
@@ -183,7 +183,7 @@
             "meaning": "in Finland tomorrow",
             "role": "context: tells the location or state",
             "baseForm": "Suomessa huomenna",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Use the words taught in the lesson in their learned forms; no additional ending is required here."
           }
         ]
       },
@@ -382,7 +382,7 @@
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
       "prompt": "Write “I am here in the evening.” without the optional subject pronoun.",
-      "acceptedAnswers": ["Olen täällä illalla."],
+      "acceptedAnswers": ["Olen täällä illalla.", "Olen illalla täällä."],
       "explanation": "Minä can be omitted here because the ending in olen already identifies the subject in Finnish.",
       "tags": [
         "sentence",
@@ -408,7 +408,7 @@
             "meaning": "here in the evening",
             "role": "context: tells the location or state",
             "baseForm": "täällä illalla",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Use the words taught in the lesson in their learned forms; no additional ending is required here."
           }
         ]
       },
@@ -422,7 +422,7 @@
       "type": "translation-fi",
       "instruction": "Write the complete sentence.",
       "prompt": "Keep the person agreement exact. Write “He or she is here in the evening.” with the third-person subject stated explicitly.",
-      "acceptedAnswers": ["Hän on täällä illalla."],
+      "acceptedAnswers": ["Hän on täällä illalla.", "Hän on illalla täällä."],
       "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
       "tags": [
         "sentence",
@@ -455,7 +455,7 @@
             "meaning": "here in the evening",
             "role": "context: tells the location or state",
             "baseForm": "täällä illalla",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Use the words taught in the lesson in their learned forms; no additional ending is required here."
           }
         ]
       },
@@ -650,7 +650,7 @@
       "type": "fill-blank",
       "instruction": "Write the complete sentence.",
       "prompt": "Write “You are here in the evening.” Address one person; omit the optional subject pronoun sinä.",
-      "acceptedAnswers": ["Olet täällä illalla."],
+      "acceptedAnswers": ["Olet täällä illalla.", "Olet illalla täällä."],
       "explanation": "Sinä can be omitted here because the ending in olet already identifies the subject in Finnish.",
       "tags": [
         "sentence",
@@ -676,7 +676,7 @@
             "meaning": "here in the evening",
             "role": "context: tells the location or state",
             "baseForm": "täällä illalla",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Use the words taught in the lesson in their learned forms; no additional ending is required here."
           }
         ]
       },

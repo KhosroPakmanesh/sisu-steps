@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "possession-questions",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "title": "Possession questions",
   "level": "0 - A1.3",
   "summary": "Learn the six owners and practise possession questions with one regular singular thing.",
@@ -26,7 +26,14 @@
       "url": "https://peda.net/yksityiskoulut/rovala-opisto/aipe/paattovaihe/s2-suomi-toisena-kielena-ja-kirjallisuus/s212-suomen-kielen-rakenteet-22/lausetyyppeja/suomen-kielen-lausetyyppeja%3Afile/download/224c91b0f3296fda3e3697996871e1f56d6b9af6/Lausetyyppej%C3%A4.pdf"
     }
   ],
-  "lessonIds": ["pqs-onko", "pqs-short-answers", "pqs-word-order"],
+  "lessonIds": [
+    "pqs-onko-singular",
+    "pqs-onko-plural",
+    "pqs-short-answers-singular",
+    "pqs-short-answers-plural",
+    "pqs-word-order-singular",
+    "pqs-word-order-plural"
+  ],
   "testIds": [
     "pqs-onko-singular-test",
     "pqs-onko-plural-test",
@@ -38,16 +45,28 @@
   ],
   "lessonSummaries": [
     {
-      "id": "pqs-onko",
-      "version": "1.2.3"
+      "id": "pqs-onko-singular",
+      "version": "1.0.0"
     },
     {
-      "id": "pqs-short-answers",
-      "version": "1.1.4"
+      "id": "pqs-onko-plural",
+      "version": "1.0.0"
     },
     {
-      "id": "pqs-word-order",
-      "version": "1.1.4"
+      "id": "pqs-short-answers-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "pqs-short-answers-plural",
+      "version": "1.0.0"
+    },
+    {
+      "id": "pqs-word-order-singular",
+      "version": "1.0.0"
+    },
+    {
+      "id": "pqs-word-order-plural",
+      "version": "1.0.0"
     }
   ],
   "testSummaries": [
@@ -55,7 +74,7 @@
       "id": "pqs-onko-singular-test",
       "title": "Onko with singular owners",
       "stage": "focused",
-      "lessonIds": ["pqs-onko"],
+      "lessonIds": ["pqs-onko-singular"],
       "exerciseIds": [
         "pqs-onko-singular-test-e101",
         "pqs-onko-test-e003",
@@ -83,7 +102,7 @@
       "id": "pqs-onko-plural-test",
       "title": "Onko with plural owners",
       "stage": "focused",
-      "lessonIds": ["pqs-onko"],
+      "lessonIds": ["pqs-onko-plural"],
       "exerciseIds": [
         "pqs-onko-plural-test-e101",
         "pqs-onko-test-e006",
@@ -111,7 +130,7 @@
       "id": "pqs-short-answers-singular-test",
       "title": "Short answers with singular owners",
       "stage": "focused",
-      "lessonIds": ["pqs-short-answers"],
+      "lessonIds": ["pqs-short-answers-singular"],
       "exerciseIds": [
         "pqs-short-answers-singular-test-e101",
         "pqs-short-answers-test-e014",
@@ -139,7 +158,7 @@
       "id": "pqs-short-answers-plural-test",
       "title": "Short answers with plural owners",
       "stage": "focused",
-      "lessonIds": ["pqs-short-answers"],
+      "lessonIds": ["pqs-short-answers-plural"],
       "exerciseIds": [
         "pqs-short-answers-plural-test-e101",
         "pqs-short-answers-test-e023",
@@ -167,7 +186,7 @@
       "id": "pqs-word-order-singular-test",
       "title": "Question order with singular owners",
       "stage": "focused",
-      "lessonIds": ["pqs-word-order"],
+      "lessonIds": ["pqs-word-order-singular"],
       "exerciseIds": [
         "pqs-word-order-singular-test-e101",
         "pqs-word-order-test-e001",
@@ -195,7 +214,7 @@
       "id": "pqs-word-order-plural-test",
       "title": "Question order with plural owners",
       "stage": "focused",
-      "lessonIds": ["pqs-word-order"],
+      "lessonIds": ["pqs-word-order-plural"],
       "exerciseIds": [
         "pqs-word-order-plural-test-e101",
         "pqs-word-order-test-e022",
@@ -223,7 +242,14 @@
       "id": "pqs-review",
       "title": "Possession questions review",
       "stage": "review",
-      "lessonIds": ["pqs-onko", "pqs-word-order", "pqs-short-answers"],
+      "lessonIds": [
+        "pqs-onko-singular",
+        "pqs-onko-plural",
+        "pqs-word-order-singular",
+        "pqs-word-order-plural",
+        "pqs-short-answers-singular",
+        "pqs-short-answers-plural"
+      ],
       "exerciseIds": [
         "pqs-review-e021",
         "pqs-review-e002",

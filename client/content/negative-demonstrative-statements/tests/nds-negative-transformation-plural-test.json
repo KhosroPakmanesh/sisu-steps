@@ -1,8 +1,8 @@
 {
   "id": "nds-negative-transformation-plural-test",
   "title": "Plural statements into negatives",
-  "focus": "Replace on or ovat with the matching negative olla construction.",
-  "lessonIds": ["nds-negative-transformation"],
+  "focus": "Replace ovat with eivät ole and keep the supplied plural demonstrative subject and context.",
+  "lessonIds": ["nds-negative-transformation-plural"],
   "stage": "focused",
   "targetSkills": ["Demonstrative affirmative-to-negative transformation"],
   "prerequisiteSkills": ["Plural negative demonstrative statements"],
@@ -275,7 +275,14 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Ne autot eivät ole täällä.” into English.",
-      "acceptedAnswers": ["The cars are not here.", "Those cars are not here."],
+      "acceptedAnswers": [
+        "The cars are not here.",
+        "Those cars are not here.",
+        "The cars aren't here.",
+        "Those cars aren't here.",
+        "The cars aren’t here.",
+        "Those cars aren’t here."
+      ],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "täällä"],
@@ -445,7 +452,14 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Ne autot eivät ole kotona.” into English.",
-      "acceptedAnswers": ["The cars are not at home.", "Those cars are not at home."],
+      "acceptedAnswers": [
+        "The cars are not at home.",
+        "Those cars are not at home.",
+        "The cars aren't at home.",
+        "Those cars aren't at home.",
+        "The cars aren’t at home.",
+        "Those cars aren’t at home."
+      ],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "kotona"],
@@ -670,7 +684,11 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Nämä autot eivät ole täällä.” into English.",
-      "acceptedAnswers": ["These cars are not here."],
+      "acceptedAnswers": [
+        "These cars are not here.",
+        "These cars aren't here.",
+        "These cars aren’t here."
+      ],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "täällä"],
@@ -718,7 +736,11 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Nämä autot eivät ole kotona.” into English.",
-      "acceptedAnswers": ["These cars are not at home."],
+      "acceptedAnswers": [
+        "These cars are not at home.",
+        "These cars aren't at home.",
+        "These cars aren’t at home."
+      ],
       "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "kotona"],

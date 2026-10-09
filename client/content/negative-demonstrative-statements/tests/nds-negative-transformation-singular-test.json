@@ -1,11 +1,11 @@
 {
   "id": "nds-negative-transformation-singular-test",
   "title": "Singular statements into negatives",
-  "focus": "Replace on or ovat with the matching negative olla construction.",
-  "lessonIds": ["nds-negative-transformation"],
+  "focus": "Replace on with ei ole and keep the supplied singular demonstrative subject and context.",
+  "lessonIds": ["nds-negative-transformation-singular"],
   "stage": "focused",
   "targetSkills": ["Demonstrative affirmative-to-negative transformation"],
-  "prerequisiteSkills": ["Plural negative demonstrative statements"],
+  "prerequisiteSkills": ["Singular negative demonstrative statements"],
   "exercises": [
     {
       "type": "word-order",
@@ -289,7 +289,7 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Tuo auto ei ole täällä.” into English.",
-      "acceptedAnswers": ["That car is not here."],
+      "acceptedAnswers": ["That car is not here.", "That car isn't here.", "That car isn’t here."],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "täällä"],
@@ -459,7 +459,11 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Tuo kirja ei ole kotona.” into English.",
-      "acceptedAnswers": ["That book is not at home."],
+      "acceptedAnswers": [
+        "That book is not at home.",
+        "That book isn't at home.",
+        "That book isn’t at home."
+      ],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["kirja", "kotona"],
@@ -684,7 +688,14 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Se auto ei ole täällä.” into English.",
-      "acceptedAnswers": ["The car is not here.", "That car is not here."],
+      "acceptedAnswers": [
+        "The car is not here.",
+        "That car is not here.",
+        "The car isn't here.",
+        "That car isn't here.",
+        "The car isn’t here.",
+        "That car isn’t here."
+      ],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "täällä"],
@@ -732,7 +743,14 @@
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
       "prompt": "Translate “Se auto ei ole kotona.” into English.",
-      "acceptedAnswers": ["The car is not at home.", "That car is not at home."],
+      "acceptedAnswers": [
+        "The car is not at home.",
+        "That car is not at home.",
+        "The car isn't at home.",
+        "That car isn't at home.",
+        "The car isn’t at home.",
+        "That car isn’t at home."
+      ],
       "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": ["auto", "kotona"],

@@ -95,8 +95,16 @@ export function validateOllaPack(pack, config) {
     errors.push(`${prefix} authored test counts must remain ${config.exerciseCounts.join(', ')}`);
   if (scored.length !== config.scoredCount)
     errors.push(`${prefix} pack needs exactly ${config.scoredCount} scored exercises`);
-  if (lessons.some((lesson) => lesson.practiceExercises?.length !== 4))
-    errors.push(`${prefix} every lesson needs exactly four optional practice items`);
+  if (
+    lessons.some((lesson) =>
+      lesson.numberScope
+        ? lesson.practiceExercises?.length < 2 || lesson.practiceExercises?.length > 5
+        : lesson.practiceExercises?.length !== 4,
+    )
+  )
+    errors.push(
+      `${prefix} number-specific lessons need two to five practice items; other lessons keep four`,
+    );
   if (practice.length !== config.practiceCount)
     errors.push(`${prefix} pack needs exactly ${config.practiceCount} optional practice exercises`);
 
@@ -120,7 +128,7 @@ function validateFocusedMappings(tests, lessons, config, errors) {
   for (const test of tests.slice(0, config.focusedCount)) {
     const lessonIndex = config.lessonIds.indexOf(test.lessonIds?.[0]);
     const lesson = lessons[lessonIndex];
-    const skill = config.skills[lessonIndex];
+    const skill = config.lessonSkills[lessonIndex];
     if (
       !lesson ||
       test.targetSkills?.length !== 1 ||

@@ -9,7 +9,7 @@ const skills = [
   'Affirmative pronoun–verb agreement',
   'Subject-pronoun use',
 ];
-const lessonIds = [
+const baseLessonIds = [
   'ppo-singular-pronouns',
   'ppo-plural-pronouns',
   'ppo-written-reference',
@@ -19,6 +19,20 @@ const lessonIds = [
   'ppo-pronoun-presence',
 ];
 
+const numberSplit = new Set([
+  'ppo-written-reference',
+  'ppo-affirmative-agreement',
+  'ppo-pronoun-presence',
+  'ppo-negative-transformations',
+  'ppo-written-short-answers',
+]);
+const lessonIds = baseLessonIds.flatMap((id) =>
+  numberSplit.has(id) ? [id + '-singular', id + '-plural'] : [id],
+);
+const lessonSkills = baseLessonIds.flatMap((id, index) =>
+  numberSplit.has(id) ? [skills[index], skills[index]] : [skills[index]],
+);
+
 export function validatePack(pack) {
   return validateOllaPack(pack, {
     id: 'personal-pronouns-affirmative-olla',
@@ -26,6 +40,7 @@ export function validatePack(pack) {
       'Standard Finnish only: focused practice with personal pronouns and affirmative present-tense olla statements.',
     skills,
     lessonIds,
+    lessonSkills,
     testIds: [
       'ppo-singular-pronouns-test',
       'ppo-plural-pronouns-test',
@@ -43,7 +58,7 @@ export function validatePack(pack) {
     focusedCount: 10,
     exerciseCounts: [24, 24, 20, 20, 24, 24, 20, 20, 20, 20, 40, 34],
     scoredCount: 290,
-    practiceCount: 28,
+    practiceCount: 30,
     personMinimum: 30,
     coverage: { pronoun: 90, affirmative: 140 },
     allowedConstructionTags: ['pronoun', 'affirmative'],

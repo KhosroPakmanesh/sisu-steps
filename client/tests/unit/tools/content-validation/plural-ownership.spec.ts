@@ -47,7 +47,7 @@ describe('merged ownership pack with retained owner-number groups', () => {
         32,
       ]);
       expect(pack.tests.reduce((sum, item) => sum + item.exercises.length, 0)).toBe(232);
-      expect(pack.lessons.reduce((sum, item) => sum + item.practiceExercises.length, 0)).toBe(24);
+      expect(pack.lessons.reduce((sum, item) => sum + item.practiceExercises.length, 0)).toBe(27);
       expect(pack.tests.at(-1)!.exercises.length).toBeGreaterThanOrEqual(28);
     }
   });
@@ -85,12 +85,12 @@ describe('merged ownership pack with retained owner-number groups', () => {
     }
   });
 
-  it('grades all 512 items, every natural answer and every authored diagnostic', () => {
+  it('grades all 518 items, every natural answer and every authored diagnostic', () => {
     const items = packs.flatMap((pack) => [
       ...pack.tests.flatMap((test) => test.exercises),
       ...pack.lessons.flatMap((lesson) => lesson.practiceExercises),
     ]);
-    expect(items).toHaveLength(512);
+    expect(items).toHaveLength(518);
     for (const item of items) {
       for (const answer of item.acceptedAnswers)
         expect(gradeAnswer(item, answer).correct, `${item.id}: ${answer}`).toBe(true);
@@ -137,8 +137,18 @@ describe('merged ownership pack with retained owner-number groups', () => {
     'rejects incorrect owner grammar %s/%s/%s at both boundaries',
     (pack, test, index, answer, message) => {
       const mutated = structuredClone(merged);
-      const lesson = packs[pack].lessons[test];
-      const id = `${lesson.id}-test-e${String(index + 1).padStart(3, '0')}`;
+      const prefix = pack === 0 ? 'ppe' : 'pop';
+      const suffix = [
+        'owner-forms',
+        'personal-endings',
+        'third-person',
+        'harmony',
+        'sentences',
+        'plural-objects',
+        'pronoun-omission',
+        'whose',
+      ][test];
+      const id = `${prefix}-${suffix}-test-e${String(index + 1).padStart(3, '0')}`;
       mutated.tests
         .flatMap((item) => item.exercises)
         .find((exercise) => exercise.id === id)!.acceptedAnswers = [answer];
@@ -155,7 +165,8 @@ describe('merged ownership pack with retained owner-number groups', () => {
     const pack = structuredClone(merged);
     const review = pack.tests.find((test) => test.id === testId)!;
     review.lessonIds.push(foreignLessonId);
-    const message = 'preserve the original owner-group Review lesson references';
+    const message =
+      'preserve the owner-group Review references with separate number-specific preparation';
     expect(validatePack(pack).join('\n')).toContain(message);
     expect(() => validatePossessiveOwnerGroups(pack)).toThrow(message);
     expect(() => validateTopicPack(pack)).toThrow(message);

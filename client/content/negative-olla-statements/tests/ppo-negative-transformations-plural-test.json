@@ -1,8 +1,8 @@
 {
   "id": "ppo-negative-transformations-plural-test",
   "title": "Plural affirmative-to-negative transformations",
-  "focus": "Keep the subject and context while changing only the polarity pattern.",
-  "lessonIds": ["ppo-negative-transformations"],
+  "focus": "Change olemme, olette, or ovat into emme ole, ette ole, or eivät ole while keeping the subject and context.",
+  "lessonIds": ["ppo-negative-transformations-plural"],
   "stage": "focused",
   "targetSkills": ["Affirmative-to-negative olla transformation"],
   "prerequisiteSkills": ["Plural negative olla"],
@@ -174,13 +174,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete negative sentence.",
-      "prompt": "Read the whole meaning before answering. Change Te olette täällä vielä. “You are still here.” → ____ “You are not still here.” Keep the subject and context unchanged.",
+      "prompt": "Read the whole meaning before answering. Change Te olette täällä vielä. “You are still here.” → ____ “You are not here yet.” Keep the subject and context unchanged.",
       "acceptedAnswers": ["Te ette ole täällä vielä."],
-      "explanation": "Te changes from olette to ette ole. The negative verb carries the person ending.",
+      "explanation": "Te changes from olette to ette ole. The negative verb carries the person ending. In this negative sentence, vielä means “yet”.",
       "tags": ["sentence", "transformation", "person-te", "negative", "standard-written-finnish"],
       "vocabulary": ["täällä", "vielä"],
       "sentenceExplanation": {
-        "translation": "You are not still here.",
+        "translation": "You are not here yet.",
         "pattern": "subject + person-marked negative verb + ole + context",
         "parts": [
           {
@@ -206,10 +206,10 @@
           },
           {
             "finnish": "täällä vielä",
-            "meaning": "still here",
+            "meaning": "here yet",
             "role": "context: tells the location or state",
             "baseForm": "täällä vielä",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Keep täällä and vielä from the source sentence. Täällä means “here”; in this negative sentence vielä means “yet”."
           }
         ]
       },
@@ -929,13 +929,13 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete negative sentence.",
-      "prompt": "Read the whole meaning before answering. Change He ovat täällä vielä. “They are still here.” → ____ “They are not still here.” Keep the subject and context unchanged.",
+      "prompt": "Read the whole meaning before answering. Change He ovat täällä vielä. “They are still here.” → ____ “They are not here yet.” Keep the subject and context unchanged.",
       "acceptedAnswers": ["He eivät ole täällä vielä."],
-      "explanation": "He changes from ovat to eivät ole. The negative verb carries the person ending.",
+      "explanation": "He changes from ovat to eivät ole. The negative verb carries the person ending. In this negative sentence, vielä means “yet”.",
       "tags": ["sentence", "transformation", "person-he", "negative", "standard-written-finnish"],
       "vocabulary": ["täällä", "vielä"],
       "sentenceExplanation": {
-        "translation": "They are not still here.",
+        "translation": "They are not here yet.",
         "pattern": "subject + person-marked negative verb + ole + context",
         "parts": [
           {
@@ -961,10 +961,10 @@
           },
           {
             "finnish": "täällä vielä",
-            "meaning": "still here",
+            "meaning": "here yet",
             "role": "context: tells the location or state",
             "baseForm": "täällä vielä",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Keep täällä and vielä from the source sentence. Täällä means “here”; in this negative sentence vielä means “yet”."
           }
         ]
       },
@@ -977,13 +977,13 @@
     {
       "type": "fill-blank",
       "instruction": "Write the complete negative sentence.",
-      "prompt": "Keep the person agreement exact. Change Me olemme täällä vielä. “We are still here.” → ____ “We are not still here.” Keep the subject and context unchanged.",
+      "prompt": "Keep the person agreement exact. Change Me olemme täällä vielä. “We are still here.” → ____ “We are not here yet.” Keep the subject and context unchanged.",
       "acceptedAnswers": ["Me emme ole täällä vielä."],
-      "explanation": "Me changes from olemme to emme ole. The negative verb carries the person ending.",
+      "explanation": "Me changes from olemme to emme ole. The negative verb carries the person ending. In this negative sentence, vielä means “yet”.",
       "tags": ["sentence", "transformation", "person-me", "negative", "standard-written-finnish"],
       "vocabulary": ["täällä", "vielä"],
       "sentenceExplanation": {
-        "translation": "We are not still here.",
+        "translation": "We are not here yet.",
         "pattern": "subject + person-marked negative verb + ole + context",
         "parts": [
           {
@@ -1009,10 +1009,10 @@
           },
           {
             "finnish": "täällä vielä",
-            "meaning": "still here",
+            "meaning": "here yet",
             "role": "context: tells the location or state",
             "baseForm": "täällä vielä",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "Keep täällä and vielä from the source sentence. Täällä means “here”; in this negative sentence vielä means “yet”."
           }
         ]
       },

@@ -34,7 +34,7 @@ describe('split personal-pronoun and olla content validation', () => {
       .flatMap((pack) => pack.lessons)
       .flatMap((lesson) => lesson.practiceExercises).length;
     expect(scoredCount).toBe(600);
-    expect(practiceCount).toBe(60);
+    expect(practiceCount).toBe(65);
   });
 
   it('rejects changed counts and Focused/Review order', () => {

@@ -3,6 +3,7 @@ export interface OllaPackValidationConfig {
   summary: string;
   skills: string[];
   lessonIds: string[];
+  lessonSkills: string[];
   testIds: string[];
   focusedCount: number;
   exerciseCounts: number[];

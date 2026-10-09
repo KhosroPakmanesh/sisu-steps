@@ -65,7 +65,7 @@ describe('grammar and lexical vocabulary separation', () => {
 
   it('wires the reported supplied-possessor regression into full pack validation', async () => {
     const pack = structuredClone(packs.find((pack) => pack.id === 'negative-possession')!);
-    for (const lesson of pack.lessons) {
+    for (const lesson of pack.lessons.filter((item) => item.numberScope?.number === 'singular')) {
       lesson.suppliedVocabulary.push({
         finnish: 'minulla',
         english: 'I as the owner',

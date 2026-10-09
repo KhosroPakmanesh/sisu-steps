@@ -139,9 +139,9 @@ test('resets stored learner data that references an unsupported pack', async ({ 
 
   const reset = await learnerState(page);
   expect(reset.contentPackVersions).toMatchObject({
-    'vowel-harmony-location-endings': '1.0.0',
-    'kpt-singular-forms': '1.0.0',
-    't-plural-agreement': '1.0.0',
+    'vowel-harmony-location-endings': '1.1.0',
+    'kpt-singular-forms': '1.1.0',
+    't-plural-agreement': '1.1.0',
   });
   expect(reset.contentPackVersions).not.toHaveProperty('vowel-harmony-kpt-tplural');
   expect(reset.attempts).toEqual([]);

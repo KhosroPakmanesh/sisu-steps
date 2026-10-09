@@ -1,0 +1,178 @@
+{
+  "id": "pqs-onko-singular",
+  "version": "1.0.0",
+  "title": "Asking with onko with singular owners",
+  "summary": "Ask with onko and minulla, sinulla, and hänellä.",
+  "stage": "focused",
+  "targetSkills": ["Fixed onko in possession questions"],
+  "prerequisiteSkills": [],
+  "introducedVocabulary": [
+    { "finnish": "pallo", "english": "ball", "type": "word" },
+    { "finnish": "kirja", "english": "book", "type": "word" },
+    { "finnish": "auto", "english": "car", "type": "word" },
+    { "finnish": "kynä", "english": "pen", "type": "word" },
+    { "finnish": "kissa", "english": "cat", "type": "word" },
+    { "finnish": "koira", "english": "dog", "type": "word" },
+    { "finnish": "tyyny", "english": "pillow", "type": "word" },
+    { "finnish": "peli", "english": "game", "type": "word" }
+  ],
+  "reusedVocabulary": [],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Ask with onko and minulla, sinulla, and hänellä.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "How the pattern works",
+      "paragraphs": [
+        "Ask with onko and minulla, sinulla, and hänellä.",
+        "Add the yes/no question ending -ko to on: on + -ko = onko. Put onko first, then the owner, then one thing in its basic singular form."
+      ],
+      "keyPoints": [
+        "Ask with onko and minulla, sinulla, and hänellä.",
+        "minulla, sinulla, and hänellä"
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Onko minulla kirja?",
+      "english": "Do I have a book?",
+      "steps": [
+        "Start with on (“have” here) and add the yes/no question ending -ko: on + -ko = onko.",
+        "minulla means “I as the owner”. Put the owner after onko.",
+        "kirja (“book”) stays in its basic singular form at the end."
+      ]
+    },
+    {
+      "finnish": "Onko sinulla koira?",
+      "english": "Do you have a dog?",
+      "steps": [
+        "The question word remains onko with sinulla; do not use oletko from an “Are you …?” sentence.",
+        "sinulla means “you as the owner” for one person. Put the owner after onko.",
+        "koira (“dog”) stays in its basic singular form at the end."
+      ]
+    },
+    {
+      "finnish": "Onko hänellä auto?",
+      "english": "Does she have a car?",
+      "steps": [
+        "Onko stays the same whether hänellä is translated with “he” or “she”.",
+        "hänellä means “he as the owner” or “she as the owner”; this example uses “she”. Put the owner after onko.",
+        "auto (“car”) stays in its basic singular form at the end."
+      ]
+    },
+    {
+      "finnish": "Onko sinulla kissa?",
+      "english": "Do you have a cat?",
+      "steps": [
+        "Changing the noun changes what is asked about, not onko.",
+        "sinulla means “you as the owner” for one person. Put the owner after onko.",
+        "kissa (“cat”) stays in its basic singular form at the end."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Add -ko to fixed on to form onko with minulla, sinulla and hänellä.",
+    "Put Onko before the owner: Onko sinulla pallo? The statement Sinulla on pallo is not the requested question.",
+    "Keep the noun form shown in the task. This pack models basic singular nouns; partitive questions are also natural in other contexts."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Optional practice: Choose “Do I have a pen?” in Finnish. Use minulla (“I as the owner”) and kynä (“a pen”). Frame: “___ minulla kynä”.",
+      "acceptedAnswers": ["Onko minulla kynä?"],
+      "explanation": "On + the yes/no question ending -ko gives onko. Put onko first and keep it fixed for every owner.",
+      "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
+      "requiredSkills": ["Fixed onko in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed onko in possession questions",
+      "misconceptionCategory": "Fixed onko in possession questions: form or meaning confused",
+      "options": ["Onko minulla kynä?", "Ovatko minulla kynä?", "Minulla on kynä."],
+      "optionFeedback": {
+        "Onko minulla kynä?": "On + the yes/no question ending -ko gives onko. Put onko first and keep it fixed for every owner.",
+        "Ovatko minulla kynä?": "On + the yes/no question ending -ko gives onko. Put onko first and keep it fixed for every owner. This choice uses the wrong verb form.",
+        "Minulla on kynä.": "This choice changes the required polarity or leaves the required question pattern."
+      },
+      "sentenceExplanation": {
+        "translation": "Do I have a pen?",
+        "pattern": "onko + possessor + one thing in its basic singular form",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "do/does … have?",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "On + the yes/no question ending -ko = onko. It stays the same with every possessor."
+          },
+          {
+            "finnish": "minulla",
+            "meaning": "I as the owner",
+            "role": "possessor: the person who has the thing",
+            "baseForm": "minä",
+            "formation": "minä has the learned possession form minulla; its -lla/-llä ending marks the possessor. Learn this pronoun form as a whole."
+          },
+          {
+            "finnish": "kynä?",
+            "meaning": "a pen",
+            "role": "thing possessed",
+            "baseForm": "kynä",
+            "formation": "kynä stays in its basic singular form: one pen."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Ovatko minulla kynä?"],
+          "category": "Fixed onko in possession questions: predictable form error",
+          "explanation": "The -lla/-llä phrase is the possessor. In this possession pattern the verb stays fixed, so do not conjugate it to match the owner."
+        }
+      ],
+      "id": "pqs-onko-practice-02"
+    },
+    {
+      "id": "pqs-onko-singular-practice-04",
+      "type": "word-order",
+      "instruction": "Build the question.",
+      "prompt": "Optional practice: Build “Do you have a dog?” Address one person. Use sinulla (“you as the owner”) and koira (“a dog”).",
+      "acceptedAnswers": ["Onko sinulla koira?"],
+      "explanation": "On + -ko gives onko. Put onko first, then sinulla and the basic noun koira.",
+      "tags": ["lesson-practice", "standard-written-finnish", "sentence"],
+      "requiredSkills": ["Fixed onko in possession questions"],
+      "vocabulary": [],
+      "targetSkill": "Fixed onko in possession questions",
+      "misconceptionCategory": "Fixed onko in possession questions: form or meaning confused",
+      "tokens": ["koira?", "sinulla", "Onko"],
+      "sentenceExplanation": {
+        "translation": "Do you have a dog?",
+        "pattern": "onko + possessor + basic singular noun",
+        "parts": [
+          {
+            "finnish": "Onko",
+            "meaning": "do/does … have?",
+            "role": "question verb",
+            "baseForm": "olla",
+            "formation": "on + -ko = onko; fixed possession question"
+          },
+          {
+            "finnish": "sinulla",
+            "meaning": "you as the owner",
+            "role": "possessor",
+            "baseForm": "sinä",
+            "formation": "sinä has the learned possessor form sinulla."
+          },
+          {
+            "finnish": "koira?",
+            "meaning": "a dog",
+            "role": "thing possessed",
+            "baseForm": "koira",
+            "formation": "koira stays in its basic singular form."
+          }
+        ]
+      }
+    }
+  ],
+  "numberScope": { "axis": "owner", "number": "singular" }
+}

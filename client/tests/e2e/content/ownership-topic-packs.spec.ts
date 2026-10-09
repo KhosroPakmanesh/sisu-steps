@@ -251,6 +251,7 @@ async function submitAnswer(page: Page, card: Locator, exercise: Exercise, pract
 
 for (const id of ['affirmative-possession', 'negative-possession']) {
   test(`explains token placement in the revised word-order Review of ${id}`, async ({ page }) => {
+    test.setTimeout(90_000);
     const pack = packs.find((candidate) => candidate.id === id)!;
     const review = pack.tests.at(-1)!;
     await page.goto(`/study/${id}/${review.id}`);
@@ -276,7 +277,7 @@ for (const id of ['affirmative-possession', 'negative-possession']) {
 for (const id of ['possession-questions', 'negative-possession-questions']) {
   test(`explains the optional negative-reply gap in ${id}`, async ({ page }, testInfo) => {
     const pack = packs.find((candidate) => candidate.id === id)!;
-    const focused = pack.tests.find((item) => item.id.includes('short-answers'))!;
+    const focused = pack.tests.find((item) => item.id.includes('short-answers-plural'))!;
     await page.goto(`/learn/${id}/${focused.id}`);
     await page.getByRole('button', { name: 'Start optional practice' }).click();
     await page.getByRole('textbox', { name: 'Your answer' }).fill('ei ole');

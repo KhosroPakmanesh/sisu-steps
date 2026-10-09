@@ -1,3 +1,4 @@
+import { NumberScope } from './number-scope.models';
 import { Exercise } from './exercise.models';
 import { LearningStage } from './learning-stage.models';
 
@@ -36,5 +37,6 @@ export interface Lesson {
   sections: LessonSection[];
   examples: LessonExample[];
   commonMistakes: string[];
+  numberScope?: NumberScope;
   practiceExercises: Exercise[];
 }

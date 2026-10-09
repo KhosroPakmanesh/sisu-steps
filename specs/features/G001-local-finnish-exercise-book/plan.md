@@ -260,3 +260,9 @@ Implement `REQ-G001-143` / `VAL-G001-100` against the refreshed six-pack, 768-sc
 ## Focused test minimum expansion
 
 Apply REQ-G001-148 / VAL-G001-105 through [the recorded assessment](../../content-assessments/focused-test-minimum.md): add 372 questions to 44 tests while preserving lessons and existing questions; require 20 scored questions in each Focused test, including each shared-lesson number variant. Use existing formats and taught or supplied context, reject filler, validate complete rendered additions and advance only the nine affected pack versions under existing scoped reset behavior.
+
+## Number-specific preparation implementation slice
+
+Implement REQ-G001-150 by inventorying all 22 shared preparations, recording the pre-authoring gate, authoring 44 scoped JSON lessons, partitioning existing optional work and filling audited deficits, aligning test summaries/references and prerequisite chains, retaining scored question interleaving, then validating scope at both content boundaries and rendering all affected preparations/practice. Record final counts, sources, grading, preservation and scoped history consequences in the assessment.
+
+The 2026-10-09 audit correction replaces five duplicate optional additions, scopes all feedback channels, corrects owner contrasts and editorial references, accepts the explicitly inventoried natural alternatives and repairs three negative vielä meanings under the REQ-G001-150 preservation exception. Keep scored IDs/order/mastery, all Review tasks and the nine pending reset versions. Check new-practice novelty across target labels and both owner contexts, exercise actual answer/diagnostic behavior at all three widths, and record every executed result. Partition the exhaustive English browser inventory into bounded per-pack cases without dropping answers. Use the documented Node 22 environment for the client gate.

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "negative-possession-questions",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "title": "Negative possession questions",
   "level": "0 - A1.3",
   "summary": "Learn the six owners and practise negative possession questions with one regular singular thing.",
@@ -26,7 +26,14 @@
       "url": "https://peda.net/yksityiskoulut/rovala-opisto/aipe/paattovaihe/s2-suomi-toisena-kielena-ja-kirjallisuus/s212-suomen-kielen-rakenteet-22/lausetyyppeja/suomen-kielen-lausetyyppeja%3Afile/download/224c91b0f3296fda3e3697996871e1f56d6b9af6/Lausetyyppej%C3%A4.pdf"
     }
   ],
-  "lessonIds": ["npq-eiko", "npq-short-answers", "npq-word-order"],
+  "lessonIds": [
+    "npq-eiko-singular",
+    "npq-eiko-plural",
+    "npq-short-answers-singular",
+    "npq-short-answers-plural",
+    "npq-word-order-singular",
+    "npq-word-order-plural"
+  ],
   "testIds": [
     "npq-eiko-singular-test",
     "npq-eiko-plural-test",
@@ -38,16 +45,28 @@
   ],
   "lessonSummaries": [
     {
-      "id": "npq-eiko",
-      "version": "1.1.3"
+      "id": "npq-eiko-singular",
+      "version": "1.0.0"
     },
     {
-      "id": "npq-short-answers",
-      "version": "1.1.4"
+      "id": "npq-eiko-plural",
+      "version": "1.0.0"
     },
     {
-      "id": "npq-word-order",
-      "version": "1.1.4"
+      "id": "npq-short-answers-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "npq-short-answers-plural",
+      "version": "1.0.0"
+    },
+    {
+      "id": "npq-word-order-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "npq-word-order-plural",
+      "version": "1.0.0"
     }
   ],
   "testSummaries": [
@@ -55,7 +74,7 @@
       "id": "npq-eiko-singular-test",
       "title": "Eikö … ole with singular owners",
       "stage": "focused",
-      "lessonIds": ["npq-eiko"],
+      "lessonIds": ["npq-eiko-singular"],
       "exerciseIds": [
         "npq-eiko-singular-test-e101",
         "npq-eiko-test-e003",
@@ -83,7 +102,7 @@
       "id": "npq-eiko-plural-test",
       "title": "Eikö … ole with plural owners",
       "stage": "focused",
-      "lessonIds": ["npq-eiko"],
+      "lessonIds": ["npq-eiko-plural"],
       "exerciseIds": [
         "npq-eiko-plural-test-e101",
         "npq-eiko-test-e024",
@@ -111,7 +130,7 @@
       "id": "npq-short-answers-singular-test",
       "title": "Negative-question replies with singular owners",
       "stage": "focused",
-      "lessonIds": ["npq-short-answers"],
+      "lessonIds": ["npq-short-answers-singular"],
       "exerciseIds": [
         "npq-short-answers-singular-test-e101",
         "npq-short-answers-test-e014",
@@ -139,7 +158,7 @@
       "id": "npq-short-answers-plural-test",
       "title": "Negative-question replies with plural owners",
       "stage": "focused",
-      "lessonIds": ["npq-short-answers"],
+      "lessonIds": ["npq-short-answers-plural"],
       "exerciseIds": [
         "npq-short-answers-plural-test-e101",
         "npq-short-answers-test-e016",
@@ -167,7 +186,7 @@
       "id": "npq-word-order-singular-test",
       "title": "Negative-question order with singular owners",
       "stage": "focused",
-      "lessonIds": ["npq-word-order"],
+      "lessonIds": ["npq-word-order-singular"],
       "exerciseIds": [
         "npq-word-order-singular-test-e101",
         "npq-word-order-test-e002",
@@ -195,7 +214,7 @@
       "id": "npq-word-order-plural-test",
       "title": "Negative-question order with plural owners",
       "stage": "focused",
-      "lessonIds": ["npq-word-order"],
+      "lessonIds": ["npq-word-order-plural"],
       "exerciseIds": [
         "npq-word-order-plural-test-e101",
         "npq-word-order-test-e010",
@@ -223,7 +242,14 @@
       "id": "npq-review",
       "title": "Negative possession questions review",
       "stage": "review",
-      "lessonIds": ["npq-eiko", "npq-word-order", "npq-short-answers"],
+      "lessonIds": [
+        "npq-eiko-singular",
+        "npq-eiko-plural",
+        "npq-word-order-singular",
+        "npq-word-order-plural",
+        "npq-short-answers-singular",
+        "npq-short-answers-plural"
+      ],
       "exerciseIds": [
         "npq-review-e016",
         "npq-review-e019",

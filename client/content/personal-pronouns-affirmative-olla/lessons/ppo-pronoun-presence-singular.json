@@ -1,0 +1,233 @@
+{
+  "id": "ppo-pronoun-presence-singular",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Subject-pronoun use"],
+  "prerequisiteSkills": ["Affirmative pronoun–verb agreement"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
+    },
+    {
+      "finnish": "koulussa",
+      "english": "at school",
+      "type": "word"
+    },
+    {
+      "finnish": "huomenna",
+      "english": "tomorrow",
+      "type": "word"
+    },
+    {
+      "finnish": "työssä",
+      "english": "at work",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "Suomessa",
+      "english": "in Finland",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "aamulla",
+      "english": "in the morning",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "illalla",
+      "english": "in the evening",
+      "type": "word"
+    },
+    {
+      "finnish": "turvassa",
+      "english": "safe",
+      "type": "word"
+    },
+    {
+      "finnish": "myöhässä",
+      "english": "late",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Subject pronouns with singular olla forms",
+  "summary": "Omit minä or sinä when olen or olet makes the subject clear; keep hän in independent sentences.",
+  "objectives": [
+    "Omit minä or sinä when olen or olet makes the subject clear; keep hän in independent sentences.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "The ending can identify the subject",
+      "paragraphs": [
+        "Olen identifies minä and olet identifies sinä. Olen täällä still means “I am here”.",
+        "Keeping these pronouns is grammatical. When a task requests omission, practise the shorter sentence."
+      ],
+      "keyPoints": ["olen → minä may be omitted", "olet → sinä may be omitted"]
+    },
+    {
+      "title": "Keep a clear third-person subject",
+      "paragraphs": [
+        "On does not identify who the person is. Keep hän when no earlier context names that person.",
+        "This lesson uses independent beginner sentences with explicit third-person subjects."
+      ],
+      "keyPoints": ["hän on"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Olen täällä.",
+      "english": "I am here.",
+      "steps": ["The ending in olen identifies first-person singular.", "Minä may be omitted."]
+    },
+    {
+      "finnish": "Hän on koulussa.",
+      "english": "He or she is at school.",
+      "steps": [
+        "On is third person but does not identify who.",
+        "Keep hän because no earlier context names the person."
+      ]
+    },
+    {
+      "finnish": "Olet kotona.",
+      "english": "You are at home.",
+      "steps": ["Olet identifies sinä.", "The pronoun can be omitted when the listener is clear."]
+    }
+  ],
+  "commonMistakes": [
+    "Follow an explicit instruction to omit the optional pronoun.",
+    "Keep the third-person subject clear in an independent sentence."
+  ],
+  "practiceExercises": [
+    {
+      "type": "translation-en",
+      "instruction": "Write the complete English meaning.",
+      "prompt": "Optional practice: Notice who the sentence is about. Translate “Hän on turvassa nyt.” into English and recover the subject from the form.",
+      "acceptedAnswers": ["He or she is safe now.", "He is safe now.", "She is safe now."],
+      "explanation": "Hän remains explicit because a third-person olla form does not identify a unique person or group by itself.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "pronoun-required",
+        "person-han",
+        "affirmative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["turvassa", "nyt"],
+      "sentenceExplanation": {
+        "translation": "He or she is safe now.",
+        "pattern": "subject + present-tense olla + context",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "hän",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "On",
+            "meaning": "is",
+            "role": "verb: links the subject to the context",
+            "baseForm": "olla",
+            "formation": "hän takes the present-tense form on"
+          },
+          {
+            "finnish": "turvassa nyt",
+            "meaning": "safe now",
+            "role": "context: tells the location or state",
+            "baseForm": "turvassa nyt",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Subject-pronoun use"],
+      "id": "ppo-l07-p01"
+    },
+    {
+      "id": "ppo-pronoun-presence-singular-practice-04",
+      "type": "word-order",
+      "instruction": "Build the shorter sentence.",
+      "prompt": "Optional practice: Build “You are at work today.” Address one person; leave out sinä.",
+      "acceptedAnswers": ["Olet työssä tänään."],
+      "explanation": "Olet identifies the one listener, so sinä may be omitted.",
+      "tags": [
+        "lesson-practice",
+        "standard-written-finnish",
+        "sentence",
+        "person-sina",
+        "affirmative",
+        "pronoun-omission"
+      ],
+      "requiredSkills": ["Subject-pronoun use"],
+      "vocabulary": ["työssä", "tänään"],
+      "targetSkill": "Subject-pronoun use",
+      "misconceptionCategory": "Subject-pronoun use: form or meaning confused",
+      "tokens": ["tänään.", "Olet", "työssä"],
+      "sentenceExplanation": {
+        "translation": "You are at work today.",
+        "pattern": "agreeing olla + context; optional subject omitted",
+        "parts": [
+          {
+            "finnish": "Olet",
+            "meaning": "you are",
+            "role": "verb identifying the subject",
+            "baseForm": "olla",
+            "formation": "sinä takes olet; the pronoun can be omitted"
+          },
+          {
+            "finnish": "työssä",
+            "meaning": "at work",
+            "role": "location word",
+            "baseForm": "työssä",
+            "formation": "fixed location word"
+          },
+          {
+            "finnish": "tänään.",
+            "meaning": "today",
+            "role": "time word",
+            "baseForm": "tänään",
+            "formation": "fixed time word"
+          }
+        ]
+      }
+    }
+  ],
+  "numberScope": {
+    "axis": "person",
+    "number": "singular"
+  }
+}

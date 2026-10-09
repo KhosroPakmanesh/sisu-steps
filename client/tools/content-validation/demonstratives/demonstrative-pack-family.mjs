@@ -79,7 +79,19 @@ const PACKS = {
       'Plural negative demonstrative statements',
       'Demonstrative affirmative-to-negative transformation',
     ],
-    lessonIds: ['nds-singular-negative', 'nds-plural-negative', 'nds-negative-transformation'],
+    lessonIds: [
+      'nds-singular-negative',
+      'nds-plural-negative',
+      'nds-negative-transformation-singular',
+      'nds-negative-transformation-plural',
+    ],
+    focusedSkills: [
+      'Singular negative demonstrative statements',
+      'Plural negative demonstrative statements',
+      'Demonstrative affirmative-to-negative transformation',
+      'Demonstrative affirmative-to-negative transformation',
+    ],
+    practiceCount: 12,
     focusedTestIds: [
       'nds-singular-negative-test',
       'nds-plural-negative-test',
@@ -170,11 +182,19 @@ export function validateDemonstrativePack(pack) {
     )
   )
     errors.push(`${prefix} test counts must remain ${config.testCounts.join(', ')}`);
-  if (lessons.some((lesson) => lesson.practiceExercises?.length !== 4))
-    errors.push(`${prefix} every Focused lesson must keep four optional practice exercises`);
+  if (
+    lessons.some((lesson) =>
+      lesson.numberScope
+        ? lesson.practiceExercises?.length < 2 || lesson.practiceExercises?.length > 5
+        : lesson.practiceExercises?.length !== 4,
+    )
+  )
+    errors.push(
+      `${prefix} number-specific lessons need two to five optional items; other lessons keep four`,
+    );
   if (scored.length !== config.testCounts.reduce((total, count) => total + count, 0))
     errors.push(`${prefix} scored exercise total does not match the approved distribution`);
-  if (practice.length !== config.lessonIds.length * 4)
+  if (practice.length !== (config.practiceCount ?? config.lessonIds.length * 4))
     errors.push(`${prefix} optional practice total does not match the approved distribution`);
 
   validateTopology(lessons, tests, config, errors);
@@ -375,7 +395,9 @@ function validatePluralBoundary(pack, errors) {
 function validateNegativeBoundary(pack, errors) {
   const [singular, plural] = pack.tests;
   const transformations = pack.tests.filter(
-    (test) => test.stage === 'focused' && test.lessonIds?.includes('nds-negative-transformation'),
+    (test) =>
+      test.stage === 'focused' &&
+      test.targetSkills?.includes('Demonstrative affirmative-to-negative transformation'),
   );
   if (singular?.exercises?.some((exercise) => !/\bei ole\b/iu.test(finnishAnswer(exercise))))
     errors.push(`${singular?.id}: every answer must keep singular ei ole`);

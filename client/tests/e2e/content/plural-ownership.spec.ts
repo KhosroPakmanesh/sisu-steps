@@ -32,7 +32,7 @@ test('retains both owner lesson groups in the merged pack at every viewport', as
     await page.goto(`/learn/${id}/${prefix}-plural-objects-test`);
     await expect(page.locator('.lesson-reader')).toContainText('Nämä ovat');
     await expect(page.locator('.lesson-reader')).toContainText('plural -t');
-    await page.goto(`/learn/${id}/${prefix}-pronoun-omission-singular-test`);
+    await page.goto(`/learn/${id}/${prefix}-pronoun-omission-plural-test`);
     const reader = page.locator('.lesson-reader');
     for (const form of omitted) await expect(reader).toContainText(`Nämä ovat ${form}.`);
     const rendered = await reader.innerText();
@@ -44,9 +44,19 @@ test('retains both owner lesson groups in the merged pack at every viewport', as
       path: testInfo.outputPath(`${prefix}-owner-omission.png`),
       fullPage: true,
     });
+    await page.goto(`/learn/${id}/${prefix}-pronoun-omission-singular-test`);
+    const singularReader = page.locator('.lesson-reader');
+    await expect(singularReader).toContainText(
+      prefix === 'ppe' ? 'Tämä on palloni.' : 'Tämä on pallomme.',
+    );
+    for (const form of omitted)
+      await expect(singularReader).not.toContainText(`Nämä ovat ${form}.`);
     await page.goto(`/learn/${id}/${prefix}-whose-singular-test`);
     await expect(page.locator('.lesson-reader')).toContainText('Whose ball is this?');
+    await expect(page.locator('.lesson-reader')).not.toContainText('Whose balls are these?');
+    await page.goto(`/learn/${id}/${prefix}-whose-plural-test`);
     await expect(page.locator('.lesson-reader')).toContainText('Whose balls are these?');
+    await expect(page.locator('.lesson-reader')).not.toContainText('Whose ball is this?');
   }
 });
 

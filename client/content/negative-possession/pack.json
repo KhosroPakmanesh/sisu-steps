@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "negative-possession",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "title": "Negative possession",
   "level": "0 - A1.3",
   "summary": "Learn the six owners and practise negative possession with one regular singular thing.",
@@ -26,7 +26,14 @@
       "url": "https://peda.net/yksityiskoulut/rovala-opisto/aipe/paattovaihe/s2-suomi-toisena-kielena-ja-kirjallisuus/s212-suomen-kielen-rakenteet-22/lausetyyppeja/suomen-kielen-lausetyyppeja%3Afile/download/224c91b0f3296fda3e3697996871e1f56d6b9af6/Lausetyyppej%C3%A4.pdf"
     }
   ],
-  "lessonIds": ["nps-fixed-negative", "nps-partitive", "nps-sentences"],
+  "lessonIds": [
+    "nps-fixed-negative-singular",
+    "nps-fixed-negative-plural",
+    "nps-partitive-singular",
+    "nps-partitive-plural",
+    "nps-sentences-singular",
+    "nps-sentences-plural"
+  ],
   "testIds": [
     "nps-fixed-negative-singular-test",
     "nps-fixed-negative-plural-test",
@@ -38,16 +45,28 @@
   ],
   "lessonSummaries": [
     {
-      "id": "nps-fixed-negative",
-      "version": "1.1.3"
+      "id": "nps-fixed-negative-singular",
+      "version": "1.1.0"
     },
     {
-      "id": "nps-partitive",
-      "version": "1.1.3"
+      "id": "nps-fixed-negative-plural",
+      "version": "1.1.0"
     },
     {
-      "id": "nps-sentences",
-      "version": "1.2.4"
+      "id": "nps-partitive-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "nps-partitive-plural",
+      "version": "1.0.0"
+    },
+    {
+      "id": "nps-sentences-singular",
+      "version": "1.1.0"
+    },
+    {
+      "id": "nps-sentences-plural",
+      "version": "1.0.0"
     }
   ],
   "testSummaries": [
@@ -55,7 +74,7 @@
       "id": "nps-fixed-negative-singular-test",
       "title": "Ei ole with singular owners",
       "stage": "focused",
-      "lessonIds": ["nps-fixed-negative"],
+      "lessonIds": ["nps-fixed-negative-singular"],
       "exerciseIds": [
         "nps-fixed-negative-singular-test-e101",
         "nps-fixed-negative-test-e003",
@@ -83,7 +102,7 @@
       "id": "nps-fixed-negative-plural-test",
       "title": "Ei ole with plural owners",
       "stage": "focused",
-      "lessonIds": ["nps-fixed-negative"],
+      "lessonIds": ["nps-fixed-negative-plural"],
       "exerciseIds": [
         "nps-fixed-negative-plural-test-e101",
         "nps-fixed-negative-test-e005",
@@ -111,7 +130,7 @@
       "id": "nps-partitive-singular-test",
       "title": "Negative nouns with singular owners",
       "stage": "focused",
-      "lessonIds": ["nps-partitive"],
+      "lessonIds": ["nps-partitive-singular"],
       "exerciseIds": [
         "nps-partitive-singular-test-e101",
         "nps-partitive-test-e001",
@@ -139,7 +158,7 @@
       "id": "nps-partitive-plural-test",
       "title": "Negative nouns with plural owners",
       "stage": "focused",
-      "lessonIds": ["nps-partitive"],
+      "lessonIds": ["nps-partitive-plural"],
       "exerciseIds": [
         "nps-partitive-plural-test-e101",
         "nps-partitive-test-e004",
@@ -167,7 +186,7 @@
       "id": "nps-sentences-singular-test",
       "title": "Negative possession with singular owners",
       "stage": "focused",
-      "lessonIds": ["nps-sentences"],
+      "lessonIds": ["nps-sentences-singular"],
       "exerciseIds": [
         "nps-sentences-singular-test-e101",
         "nps-sentences-test-e021",
@@ -195,7 +214,7 @@
       "id": "nps-sentences-plural-test",
       "title": "Negative possession with plural owners",
       "stage": "focused",
-      "lessonIds": ["nps-sentences"],
+      "lessonIds": ["nps-sentences-plural"],
       "exerciseIds": [
         "nps-sentences-plural-test-e101",
         "nps-sentences-test-e005",
@@ -223,7 +242,14 @@
       "id": "nps-review",
       "title": "Negative possession review",
       "stage": "review",
-      "lessonIds": ["nps-fixed-negative", "nps-partitive", "nps-sentences"],
+      "lessonIds": [
+        "nps-fixed-negative-singular",
+        "nps-fixed-negative-plural",
+        "nps-partitive-singular",
+        "nps-partitive-plural",
+        "nps-sentences-singular",
+        "nps-sentences-plural"
+      ],
       "exerciseIds": [
         "nps-review-e019",
         "nps-review-e013",

@@ -1,3 +1,4 @@
+import { NumberScope } from './number-scope.models';
 import { Exercise } from './exercise.models';
 import { LearningStage } from './learning-stage.models';
 
@@ -9,6 +10,6 @@ export interface ExerciseTest {
   targetSkills: string[];
   prerequisiteSkills: string[];
   lessonIds: string[];
-  numberScope?: { axis: 'person' | 'owner' | 'object'; number: 'singular' | 'plural' };
+  numberScope?: NumberScope;
   exercises: Exercise[];
 }

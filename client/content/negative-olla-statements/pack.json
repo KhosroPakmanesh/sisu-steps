@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "negative-olla-statements",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "title": "Negative olla statements",
   "level": "0 - A1.3",
   "summary": "Standard Finnish only: focused practice with negative present-tense olla statements and person agreement.",
@@ -26,7 +26,12 @@
       "url": "https://kielitoimistonohjepankki.fi/ohje/konjunktiot-eika-ei-eika-ja-ei/"
     }
   ],
-  "lessonIds": ["ppo-singular-negative", "ppo-plural-negative", "ppo-negative-transformations"],
+  "lessonIds": [
+    "ppo-singular-negative",
+    "ppo-plural-negative",
+    "ppo-negative-transformations-singular",
+    "ppo-negative-transformations-plural"
+  ],
   "testIds": [
     "ppo-singular-negative-test",
     "ppo-plural-negative-test",
@@ -44,8 +49,12 @@
       "version": "1.2.0"
     },
     {
-      "id": "ppo-negative-transformations",
-      "version": "1.2.0"
+      "id": "ppo-negative-transformations-singular",
+      "version": "1.0.0"
+    },
+    {
+      "id": "ppo-negative-transformations-plural",
+      "version": "1.1.0"
     }
   ],
   "testSummaries": [
@@ -117,7 +126,7 @@
       "id": "ppo-negative-transformations-singular-test",
       "title": "Singular affirmative-to-negative transformations",
       "stage": "focused",
-      "lessonIds": ["ppo-negative-transformations"],
+      "lessonIds": ["ppo-negative-transformations-singular"],
       "exerciseIds": [
         "ppo-negative-transformations-singular-test-e101",
         "ppo-t10-e01",
@@ -145,7 +154,7 @@
       "id": "ppo-negative-transformations-plural-test",
       "title": "Plural affirmative-to-negative transformations",
       "stage": "focused",
-      "lessonIds": ["ppo-negative-transformations"],
+      "lessonIds": ["ppo-negative-transformations-plural"],
       "exerciseIds": [
         "ppo-negative-transformations-plural-test-e101",
         "ppo-t10-e09",
@@ -173,7 +182,12 @@
       "id": "ppo-negative-statements-review",
       "title": "Negative olla statements review",
       "stage": "review",
-      "lessonIds": ["ppo-singular-negative", "ppo-plural-negative", "ppo-negative-transformations"],
+      "lessonIds": [
+        "ppo-singular-negative",
+        "ppo-plural-negative",
+        "ppo-negative-transformations-singular",
+        "ppo-negative-transformations-plural"
+      ],
       "exerciseIds": [
         "ppo-t17-e02",
         "ppo-t17-e04",

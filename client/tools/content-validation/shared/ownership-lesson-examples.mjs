@@ -27,14 +27,23 @@ export function validateOwnershipLessonExamples(lessons) {
     const finnish = examples.map((example) => example.finnish ?? '').join('\n');
     const findings = [];
     if (POSSESSION_TARGETS.has(target)) {
-      for (const owner of OWNERS) {
+      const owners =
+        lesson.numberScope?.axis === 'owner'
+          ? OWNERS.slice(
+              lesson.numberScope.number === 'singular' ? 0 : 3,
+              lesson.numberScope.number === 'singular' ? 3 : 6,
+            )
+          : OWNERS;
+      for (const owner of owners) {
         if (!containsWord(finnish, owner)) findings.push(`missing worked possessor ${owner}`);
       }
       const firstOwners = examples
-        .slice(0, 6)
-        .map((example) => OWNERS.find((owner) => containsWord(example.finnish ?? '', owner)));
-      if (new Set(firstOwners.filter(Boolean)).size !== OWNERS.length) {
-        findings.push('the first six worked examples must demonstrate all six possessors');
+        .slice(0, owners.length)
+        .map((example) => owners.find((owner) => containsWord(example.finnish ?? '', owner)));
+      if (new Set(firstOwners.filter(Boolean)).size !== owners.length) {
+        findings.push(
+          'the first worked examples must demonstrate every possessor in the lesson scope',
+        );
       }
       if (target.includes('short answers')) validateReplies(examples, findings);
     }

@@ -31,6 +31,7 @@ The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records 
 - [lesson-progression-redundancy](lesson-progression-redundancy.md)
 - [lesson-section-responsibilities](lesson-section-responsibilities.md)
 - [number-focused-test-separation](number-focused-test-separation.md)
+- [number-specific-preparation](number-specific-preparation.md)
 - [ownership-consistency](ownership-consistency.md)
 - [ownership-question-variety](ownership-question-variety.md)
 - [ownership-worked-examples](ownership-worked-examples.md)

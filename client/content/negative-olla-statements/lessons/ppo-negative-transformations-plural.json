@@ -1,0 +1,291 @@
+{
+  "id": "ppo-negative-transformations-plural",
+  "version": "1.1.0",
+  "stage": "focused",
+  "targetSkills": ["Affirmative-to-negative olla transformation"],
+  "prerequisiteSkills": ["Plural negative olla"],
+  "introducedVocabulary": [
+    {
+      "finnish": "opiskelija",
+      "english": "a student",
+      "type": "word"
+    },
+    {
+      "finnish": "rauhallinen",
+      "english": "calm",
+      "type": "word"
+    },
+    {
+      "finnish": "valmis",
+      "english": "ready",
+      "type": "word"
+    },
+    {
+      "finnish": "väsynyt",
+      "english": "tired",
+      "type": "word"
+    },
+    {
+      "finnish": "vielä",
+      "english": "still; yet in a negative sentence",
+      "type": "word"
+    },
+    {
+      "finnish": "lääkäri",
+      "english": "a doctor",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "ajoissa",
+      "english": "on time",
+      "type": "word"
+    },
+    {
+      "finnish": "nyt",
+      "english": "now",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "paikalla",
+      "english": "present",
+      "type": "word"
+    },
+    {
+      "finnish": "siellä",
+      "english": "there",
+      "type": "word"
+    },
+    {
+      "finnish": "tänään",
+      "english": "today",
+      "type": "word"
+    },
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Change plural olla statements into negatives",
+  "summary": "Change olemme, olette, or ovat into emme ole, ette ole, or eivät ole while keeping the subject and context.",
+  "objectives": [
+    "Change olemme, olette, or ovat into emme ole, ette ole, or eivät ole while keeping the subject and context.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "Replace the affirmative verb",
+      "paragraphs": [
+        "Change olemme, olette, or ovat into emme ole, ette ole, or eivät ole while keeping the subject and context.",
+        "The negative verb carries person agreement. Put the fixed form ole after it."
+      ],
+      "keyPoints": ["olemme → emme ole", "olette → ette ole", "ovat → eivät ole"]
+    },
+    {
+      "title": "Change the polarity only",
+      "paragraphs": [
+        "Read the source and target meanings. Keep the subject and supplied context unchanged.",
+        "Choose the negative verb from the original subject, then add ole.",
+        "Vielä can mean “still” in an affirmative statement and “yet” in a negative one. He eivät ole täällä vielä means “They are not here yet”; keep vielä while choosing the negative verb."
+      ],
+      "keyPoints": ["same subject", "same context", "negative verb + ole"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Me olemme täällä. → Me emme ole täällä.",
+      "english": "We are here. → We are not here.",
+      "steps": ["Keep me and täällä.", "Replace olemme with emme ole."]
+    },
+    {
+      "finnish": "Te olette paikalla. → Te ette ole paikalla.",
+      "english": "You are present. → You are not present.",
+      "steps": ["Keep te and paikalla.", "Replace olette with ette ole."]
+    },
+    {
+      "finnish": "He ovat kotona. → He eivät ole kotona.",
+      "english": "They are at home. → They are not at home.",
+      "steps": ["Keep he and kotona.", "Replace ovat with eivät ole."]
+    }
+  ],
+  "commonMistakes": [
+    "Do not change the subject or the supplied context.",
+    "Keep ole after the person-marked negative verb."
+  ],
+  "practiceExercises": [
+    {
+      "type": "multiple-choice",
+      "instruction": "Choose the correct transformation.",
+      "prompt": "Optional practice: Notice who the sentence is about. Change Me olemme kotona. “We are at home.” → ____ “We are not at home.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Me emme ole kotona."],
+      "explanation": "Me changes from olemme to emme ole. The negative verb carries the person ending.",
+      "options": ["Me emme ole kotona.", "Te ette ole kotona.", "Me ei olemme kotona."],
+      "optionFeedback": {
+        "Me emme ole kotona.": "Correct. Me changes from olemme to emme ole. The negative verb carries the person ending.",
+        "Te ette ole kotona.": "“Te ette ole kotona.” does not fit this subject or construction. Me changes from olemme to emme ole. The negative verb carries the person ending.",
+        "Me ei olemme kotona.": "“Me ei olemme kotona.” does not fit this subject or construction. Me changes from olemme to emme ole. The negative verb carries the person ending."
+      },
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "transformation",
+        "person-me",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "We are not at home.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "me",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Emme",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "me takes the negative-verb form emme"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "id": "ppo-l10-p02"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Optional practice: Build the form from the subject. Change Te olette kotona. “You are at home.” → ____ “You are not at home.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["Te ette ole kotona."],
+      "explanation": "Te changes from olette to ette ole. The negative verb carries the person ending.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "transformation",
+        "person-te",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "You are not at home.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "te",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Ette",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "te takes the negative-verb form ette"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "id": "ppo-l10-p03"
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Write the complete negative sentence.",
+      "prompt": "Optional practice: Build the form from the subject. Change He ovat kotona. “They are at home.” → ____ “They are not at home.” Keep the subject and context unchanged.",
+      "acceptedAnswers": ["He eivät ole kotona."],
+      "explanation": "He changes from ovat to eivät ole. The negative verb carries the person ending.",
+      "tags": [
+        "lesson-practice",
+        "sentence",
+        "transformation",
+        "person-he",
+        "negative",
+        "standard-written-finnish"
+      ],
+      "vocabulary": ["kotona"],
+      "sentenceExplanation": {
+        "translation": "They are not at home.",
+        "pattern": "subject + person-marked negative verb + ole + context",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "role": "subject: the person or people described by the sentence",
+            "baseForm": "he",
+            "formation": "subject pronoun; no ending is added"
+          },
+          {
+            "finnish": "Eivät",
+            "meaning": "do not",
+            "role": "negative verb: carries the person agreement",
+            "baseForm": "ei",
+            "formation": "he takes the negative-verb form eivät"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "olla uses the fixed form ole after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "context: tells the location or state",
+            "baseForm": "kotona",
+            "formation": "supplied as a complete fixed expression; no change is required"
+          }
+        ]
+      },
+      "requiredSkills": ["Affirmative-to-negative olla transformation"],
+      "id": "ppo-l10-p04"
+    }
+  ],
+  "numberScope": {
+    "axis": "person",
+    "number": "plural"
+  }
+}

@@ -5,7 +5,25 @@ const skills = [
   'Plural negative olla',
   'Affirmative-to-negative olla transformation',
 ];
-const lessonIds = ['ppo-singular-negative', 'ppo-plural-negative', 'ppo-negative-transformations'];
+const baseLessonIds = [
+  'ppo-singular-negative',
+  'ppo-plural-negative',
+  'ppo-negative-transformations',
+];
+
+const numberSplit = new Set([
+  'ppo-written-reference',
+  'ppo-affirmative-agreement',
+  'ppo-pronoun-presence',
+  'ppo-negative-transformations',
+  'ppo-written-short-answers',
+]);
+const lessonIds = baseLessonIds.flatMap((id) =>
+  numberSplit.has(id) ? [id + '-singular', id + '-plural'] : [id],
+);
+const lessonSkills = baseLessonIds.flatMap((id, index) =>
+  numberSplit.has(id) ? [skills[index], skills[index]] : [skills[index]],
+);
 
 export function validatePack(pack) {
   return validateOllaPack(pack, {
@@ -14,6 +32,7 @@ export function validatePack(pack) {
       'Standard Finnish only: focused practice with negative present-tense olla statements and person agreement.',
     skills,
     lessonIds,
+    lessonSkills,
     testIds: [
       'ppo-singular-negative-test',
       'ppo-plural-negative-test',
@@ -24,7 +43,7 @@ export function validatePack(pack) {
     focusedCount: 4,
     exerciseCounts: [24, 24, 20, 20, 28],
     scoredCount: 116,
-    practiceCount: 12,
+    practiceCount: 13,
     personMinimum: 12,
     coverage: { negative: 90 },
     allowedConstructionTags: ['negative'],

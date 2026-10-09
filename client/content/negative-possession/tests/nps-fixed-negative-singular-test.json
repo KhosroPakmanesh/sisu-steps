@@ -1,18 +1,18 @@
 {
   "id": "nps-fixed-negative-singular-test",
   "title": "Ei ole with singular owners",
-  "focus": "Negative possession uses the same ei ole with every owner: minulla ei ole, sinulla ei ole, hänellä ei ole, meillä ei ole, teillä ei ole, heillä ei ole.",
+  "focus": "Use fixed ei ole with minulla, sinulla, and hänellä when possession is denied.",
   "stage": "focused",
   "targetSkills": ["Fixed ei ole in possession"],
   "prerequisiteSkills": [],
-  "lessonIds": ["nps-fixed-negative"],
+  "lessonIds": ["nps-fixed-negative-singular"],
   "exercises": [
     {
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
       "prompt": "Choose “He does not have a pen.” in Finnish. Use hänellä (“he as the owner”) and kynää (“a pen”). Frame: “Hänellä ___ kynää”.",
       "acceptedAnswers": ["Hänellä ei ole kynää."],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -20,8 +20,8 @@
       "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
       "options": ["Hänellä eivät ole kynää.", "Hänellä on kynä.", "Hänellä ei ole kynää."],
       "optionFeedback": {
-        "Hänellä ei ole kynää.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
-        "Hänellä eivät ole kynää.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät. This choice uses the wrong verb form.",
+        "Hänellä ei ole kynää.": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
+        "Hänellä eivät ole kynää.": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner. This choice uses the wrong verb form.",
         "Hänellä on kynä.": "This choice changes the required polarity or leaves the required question pattern."
       },
       "sentenceExplanation": {
@@ -40,7 +40,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -73,7 +73,7 @@
       "instruction": "Choose one answer.",
       "prompt": "Choose “He does not have a car.” in Finnish. Use hänellä (“he as the owner”) and autoa (“a car”). Frame: “Hänellä ___ autoa”.",
       "acceptedAnswers": ["Hänellä ei ole autoa."],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -81,8 +81,8 @@
       "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
       "options": ["Hänellä ei ole autoa.", "Hänellä eivät ole autoa.", "Hänellä on auto."],
       "optionFeedback": {
-        "Hänellä ei ole autoa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
-        "Hänellä eivät ole autoa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät. This choice uses the wrong verb form.",
+        "Hänellä ei ole autoa.": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
+        "Hänellä eivät ole autoa.": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner. This choice uses the wrong verb form.",
         "Hänellä on auto.": "This choice changes the required polarity or leaves the required question pattern."
       },
       "sentenceExplanation": {
@@ -101,7 +101,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -134,7 +134,7 @@
       "instruction": "Write the missing form.",
       "prompt": "Complete “I do not have a car.”: “Minulla ___.” Use autoa (“a car”).",
       "acceptedAnswers": ["ei ole autoa"],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -156,7 +156,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -189,7 +189,7 @@
       "instruction": "Write the missing form.",
       "prompt": "Complete “I do not have a book.”: “Minulla ___.” Use kirjaa (“a book”).",
       "acceptedAnswers": ["ei ole kirjaa"],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -211,7 +211,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -263,7 +263,7 @@
         "He or she doesn’t have the pillow.",
         "He or she doesn't have the pillow."
       ],
-      "explanation": "The -lla/-llä phrase identifies the owner; ei ole stays fixed in this possession pattern. Hänellä can refer to a man or a woman.",
+      "explanation": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "english-answer"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": ["tyyny"],
@@ -285,7 +285,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -311,7 +311,7 @@
       "instruction": "Choose one answer.",
       "prompt": "Choose “I do not have a book.” in Finnish. Use minulla (“I as the owner”) and kirjaa (“a book”). Frame: “Minulla ___ kirjaa”.",
       "acceptedAnswers": ["Minulla ei ole kirjaa."],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -319,8 +319,8 @@
       "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
       "options": ["Minulla on kirja.", "Minulla ei ole kirjaa.", "Minulla en ole kirjaa."],
       "optionFeedback": {
-        "Minulla ei ole kirjaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
-        "Minulla en ole kirjaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät. This choice uses the wrong verb form.",
+        "Minulla ei ole kirjaa.": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
+        "Minulla en ole kirjaa.": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner. This choice uses the wrong verb form.",
         "Minulla on kirja.": "This choice changes the required polarity or leaves the required question pattern."
       },
       "sentenceExplanation": {
@@ -339,7 +339,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -372,7 +372,7 @@
       "instruction": "Write in Finnish.",
       "prompt": "Repair “Sinulla et ole tyynyä.” to mean “You do not have a pillow.” Use sinulla (\"you as owner\") and tyynyä (\"pillow\"). Address one person.",
       "acceptedAnswers": ["Sinulla ei ole tyynyä."],
-      "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement.",
+      "explanation": "Sinulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "person-sina"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -394,7 +394,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -427,7 +427,7 @@
       "instruction": "Write the missing form.",
       "prompt": "Complete “He does not have a cat.”: “Hänellä ___.” Use kissaa (“a cat”).",
       "acceptedAnswers": ["ei ole kissaa"],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -449,7 +449,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -482,7 +482,7 @@
       "instruction": "Choose one answer.",
       "prompt": "Choose “I do not have a ball.” in Finnish. Use minulla (“I as the owner”) and palloa (“a ball”). Frame: “Minulla ___ palloa”.",
       "acceptedAnswers": ["Minulla ei ole palloa."],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -490,8 +490,8 @@
       "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
       "options": ["Minulla ei ole palloa.", "Minulla en ole palloa.", "Minulla on pallo."],
       "optionFeedback": {
-        "Minulla ei ole palloa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
-        "Minulla en ole palloa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät. This choice uses the wrong verb form.",
+        "Minulla ei ole palloa.": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
+        "Minulla en ole palloa.": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner. This choice uses the wrong verb form.",
         "Minulla on pallo.": "This choice changes the required polarity or leaves the required question pattern."
       },
       "sentenceExplanation": {
@@ -510,7 +510,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -550,7 +550,7 @@
         "I don’t have the cat.",
         "I don't have the cat."
       ],
-      "explanation": "The -lla/-llä phrase identifies the owner; ei ole stays fixed in this possession pattern. ",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "english-answer"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": ["kissa"],
@@ -572,7 +572,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -617,7 +617,7 @@
         "He or she doesn’t have the game.",
         "He or she doesn't have the game."
       ],
-      "explanation": "The -lla/-llä phrase identifies the owner; ei ole stays fixed in this possession pattern. Hänellä can refer to a man or a woman.",
+      "explanation": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "english-answer"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": ["peli"],
@@ -639,7 +639,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -665,7 +665,7 @@
       "instruction": "Write in Finnish.",
       "prompt": "Repair “Minulla en ole koiraa.” to mean “I do not have a dog.” Use minulla (\"I as owner\") and koiraa (\"dog\").",
       "acceptedAnswers": ["Minulla ei ole koiraa."],
-      "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement.",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -687,7 +687,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -720,7 +720,7 @@
       "instruction": "Write in Finnish.",
       "prompt": "Repair “Sinulla et ole peliä.” to mean “You do not have a game.” Use sinulla (\"you as owner\") and peliä (\"game\"). Address one person.",
       "acceptedAnswers": ["Sinulla ei ole peliä."],
-      "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement.",
+      "explanation": "Sinulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "person-sina"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -742,7 +742,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -775,7 +775,7 @@
       "instruction": "Write the missing form.",
       "prompt": "Complete “He does not have a pen.”: “Hänellä ___.” Use kynää (“a pen”).",
       "acceptedAnswers": ["ei ole kynää"],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -797,7 +797,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -837,7 +837,7 @@
         "You don’t have the dog.",
         "You don't have the dog."
       ],
-      "explanation": "The -lla/-llä phrase identifies the owner; ei ole stays fixed in this possession pattern. ",
+      "explanation": "Sinulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "english-answer", "person-sina"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": ["koira"],
@@ -859,7 +859,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -892,7 +892,7 @@
         "I don’t have the dog.",
         "I don't have the dog."
       ],
-      "explanation": "The -lla/-llä phrase identifies the owner; ei ole stays fixed in this possession pattern. ",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "english-answer"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": ["koira"],
@@ -914,7 +914,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -940,7 +940,7 @@
       "instruction": "Choose one answer.",
       "prompt": "Choose “You do not have a book.” in Finnish. Use sinulla (“you as the owner”) and kirjaa (“a book”). Frame: “Sinulla ___ kirjaa”. Address one person.",
       "acceptedAnswers": ["Sinulla ei ole kirjaa."],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "Sinulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "person-sina"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -948,8 +948,8 @@
       "misconceptionCategory": "Fixed ei ole in possession: form or meaning confused",
       "options": ["Sinulla ei ole kirjaa.", "Sinulla et ole kirjaa.", "Sinulla on kirja."],
       "optionFeedback": {
-        "Sinulla ei ole kirjaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
-        "Sinulla et ole kirjaa.": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät. This choice uses the wrong verb form.",
+        "Sinulla ei ole kirjaa.": "Sinulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
+        "Sinulla et ole kirjaa.": "Sinulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner. This choice uses the wrong verb form.",
         "Sinulla on kirja.": "This choice changes the required polarity or leaves the required question pattern."
       },
       "sentenceExplanation": {
@@ -968,7 +968,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -1001,7 +1001,7 @@
       "instruction": "Write in Finnish.",
       "prompt": "Repair “Minulla en ole tyynyä.” to mean “I do not have a pillow.” Use minulla (\"I as owner\") and tyynyä (\"pillow\").",
       "acceptedAnswers": ["Minulla ei ole tyynyä."],
-      "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement.",
+      "explanation": "Minulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -1023,7 +1023,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -1056,7 +1056,7 @@
       "instruction": "Write in Finnish.",
       "prompt": "Repair “Hänellä eivät ole peliä.” to mean “He does not have a game.” Use hänellä (\"he as owner\") and peliä (\"game\").",
       "acceptedAnswers": ["Hänellä ei ole peliä."],
-      "explanation": "Possession uses fixed ei ole with every owner, not personal negative-verb agreement.",
+      "explanation": "The owner phrase names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -1078,7 +1078,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -1111,7 +1111,7 @@
       "instruction": "Write the missing form.",
       "prompt": "Complete “You do not have a car.”: “Sinulla ___.” Use autoa (“a car”). Address one person.",
       "acceptedAnswers": ["ei ole autoa"],
-      "explanation": "Use fixed ei ole with every possessor. The owner does not change the negative verb to en, emme, or eivät.",
+      "explanation": "Sinulla names the owner. Negative possession keeps fixed ei ole; it does not conjugate the negative verb to match the owner.",
       "tags": ["standard-written-finnish", "sentence", "person-sina"],
       "requiredSkills": ["Fixed ei ole in possession"],
       "vocabulary": [],
@@ -1133,7 +1133,7 @@
             "meaning": "not",
             "role": "negative verb",
             "baseForm": "ei",
-            "formation": "Possession uses fixed ei with every owner; do not change it to en, emme, or eivät."
+            "formation": "Possession uses fixed ei with minulla, sinulla and hänellä; do not change it to en or et."
           },
           {
             "finnish": "ole",
@@ -1162,8 +1162,5 @@
       "parallelExerciseId": "nps-fixed-negative-test-e007"
     }
   ],
-  "numberScope": {
-    "axis": "owner",
-    "number": "singular"
-  }
+  "numberScope": { "axis": "owner", "number": "singular" }
 }

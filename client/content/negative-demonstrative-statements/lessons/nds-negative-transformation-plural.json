@@ -1,0 +1,172 @@
+{
+  "id": "nds-negative-transformation-plural",
+  "version": "1.0.0",
+  "stage": "focused",
+  "targetSkills": ["Demonstrative affirmative-to-negative transformation"],
+  "prerequisiteSkills": ["Plural negative demonstrative statements"],
+  "introducedVocabulary": [
+    {
+      "finnish": "ovat",
+      "english": "are",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "täällä",
+      "english": "here",
+      "type": "word"
+    },
+    {
+      "finnish": "kotona",
+      "english": "at home",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "title": "Change plural demonstrative statements into negatives",
+  "summary": "Replace ovat with eivät ole and keep the supplied plural demonstrative subject and context.",
+  "objectives": [
+    "Replace ovat with eivät ole and keep the supplied plural demonstrative subject and context.",
+    "Apply the pattern using the supporting forms shown."
+  ],
+  "sections": [
+    {
+      "title": "Change the polarity only",
+      "paragraphs": [
+        "Replace ovat with eivät ole and keep the supplied plural demonstrative subject and context.",
+        "Read both meanings. Keep the complete subject, including the noun, unchanged."
+      ],
+      "keyPoints": ["ovat → eivät ole", "same subject", "same context"]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Nämä kirjat ovat kotona. → Nämä kirjat eivät ole kotona.",
+      "english": "These books are at home. → These books are not at home.",
+      "steps": [
+        "Nämä kirjat: the complete plural subject is supplied.",
+        "eivät: third-person plural form.",
+        "ole: fixed form after the negative verb.",
+        "kotona: unchanged location word.",
+        "Replace ovat with eivät ole."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Do not change the supplied demonstrative or noun.",
+    "Keep ole after the negative verb."
+  ],
+  "practiceExercises": [
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “The cars are not at home.” Start from “Ne autot ovat kotona.” (“The cars are at home.”). Keep ne and autot unchanged.",
+      "acceptedAnswers": ["Ne autot eivät ole kotona."],
+      "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The cars are not at home.",
+        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "parts": [
+          {
+            "finnish": "Ne autot",
+            "meaning": "the cars",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "ne + auto",
+            "formation": "the complete plural subject is supplied"
+          },
+          {
+            "finnish": "eivät",
+            "meaning": "not",
+            "role": "negative verb carrying number agreement",
+            "baseForm": "ei",
+            "formation": "third-person plural form"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed form after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "id": "nds-negative-transformation-p02",
+      "tokens": ["eivät", "ole", "kotona.", "Ne", "autot"]
+    },
+    {
+      "type": "fill-blank",
+      "instruction": "Fill in the blank.",
+      "prompt": "Optional practice: Write “Those books are not here.” in Finnish. Start from “Nuo kirjat ovat täällä.” (“Those books are here.”). Keep nuo and kirjat unchanged.",
+      "acceptedAnswers": ["Nuo kirjat eivät ole täällä."],
+      "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
+      "tags": ["lesson-practice", "sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "Those books are not here.",
+        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "parts": [
+          {
+            "finnish": "Nuo kirjat",
+            "meaning": "those books",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "nuo + kirja",
+            "formation": "the complete plural subject is supplied"
+          },
+          {
+            "finnish": "eivät",
+            "meaning": "not",
+            "role": "negative verb carrying number agreement",
+            "baseForm": "ei",
+            "formation": "third-person plural form"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after the negative verb",
+            "baseForm": "olla",
+            "formation": "fixed form after the negative verb"
+          },
+          {
+            "finnish": "täällä",
+            "meaning": "here",
+            "role": "location",
+            "baseForm": "täällä",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "id": "nds-negative-transformation-p04"
+    }
+  ],
+  "numberScope": {
+    "axis": "person",
+    "number": "plural"
+  }
+}
