@@ -23,44 +23,12 @@
   transform: translateY(-0.2rem) rotate(0.3deg);
 }
 
-.example-grid {
-  display: grid;
-  gap: var(--space-3);
-}
-
-.example-grid article,
 .vocabulary-group {
   padding: var(--space-4);
   border: 1px dashed var(--border-brand);
   border-radius: 0.08rem;
   background-color: color-mix(in srgb, var(--surface-brand-subtle) 48%, var(--surface-stationery));
-}
-
-.example-grid article > p {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1rem;
-  align-items: baseline;
-}
-
-.example-grid article > p strong {
-  color: var(--text-brand);
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-}
-
-.example-grid article > p span,
-.lesson-vocabulary dd {
-  color: var(--text-secondary);
-}
-
-.example-grid ol {
-  display: grid;
-  gap: 0.35rem;
-  margin-top: var(--space-3);
-  padding-left: 1.3rem;
-  font-size: var(--text-body);
-  line-height: var(--line-body);
+  margin-top: var(--space-5);
 }
 
 .lesson-vocabulary {
@@ -75,10 +43,6 @@
 
 .lesson-vocabulary > p {
   max-width: 62ch;
-}
-
-.vocabulary-group {
-  margin-top: var(--space-5);
 }
 
 .vocabulary-group h4 {
@@ -120,6 +84,7 @@
 }
 
 .lesson-vocabulary dd {
+  color: var(--text-secondary);
   margin: var(--space-1) 0 0;
   font-size: 0.85rem;
 }

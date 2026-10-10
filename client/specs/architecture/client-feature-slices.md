@@ -88,7 +88,8 @@ client/
 - Keep root `shared` limited to product-agnostic browser adapters and identifier mechanics.
 - Keep reusable visual foundations and canonical tokens under `client/src/design-system`; keep the workbook shell's global CSS under `client/src/app/shell` and workflow-only CSS with its markup owner.
 - Keep siblings at approximately the same abstraction level. Do not create vague `core`, `lib`, `utils`, `helpers`, or `common` production owners.
-- Keep single-responsibility leaf slices flat. When a workflow contains distinct routes, operations, or independently reusable interaction areas, group them in purpose-named subfolders that clarify ownership.
+- Give every Angular component its own dedicated, purpose-named folder, containing its implementation, template, styles and component-only supporting files. Do not place component files loose in a parent workflow folder. Mirror the component folder under `tests/unit/`.
+- Keep non-component modules in single-responsibility leaf slices flat. When a workflow contains distinct routes, operations, or independently reusable interaction areas, group them in purpose-named subfolders that clarify ownership. Shared grammar-reference models and lesson-loading repository remain at their common owner; its modal and examples components each have a separate folder.
 - Keep generic content validation orchestration under `tools/content-validation/shared` and group topic-specific rules by their content family; the CLI entry point must only parse input, report the result, and select an exit status.
 - Preserve lazy loading for every secondary route.
 - Keep isolated tests under the mirrored `client/tests/unit` owner, cross-workflow stateful tests under `client/tests/integration`, and browser journeys under a purpose-named `client/tests/e2e` group.

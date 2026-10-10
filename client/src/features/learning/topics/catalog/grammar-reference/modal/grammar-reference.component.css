@@ -1,0 +1,87 @@
+:host {
+  display: block;
+}
+
+.grammar-reference-trigger {
+  display: grid;
+  place-items: center;
+  width: var(--space-6);
+  min-height: var(--touch-target);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-brand);
+  font: inherit;
+  cursor: pointer;
+}
+
+:host(.pack-reference) .grammar-reference-trigger {
+  min-height: var(--space-6);
+}
+
+.grammar-reference-trigger svg {
+  width: var(--space-6);
+  height: var(--space-6);
+  fill: none;
+  stroke: currentcolor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+}
+
+.grammar-reference-trigger:focus-visible {
+  outline: 0.2rem solid var(--focus-ring);
+  outline-offset: var(--space-1);
+}
+
+.grammar-reference {
+  overflow-wrap: anywhere;
+}
+
+.reference-pack {
+  margin-top: var(--space-6);
+}
+
+.reference-pack h3 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-heading-small);
+}
+
+:host .grammar-reference .reference-lesson {
+  background-color: var(--surface-paper);
+}
+
+.reference-lesson .reference-lesson-title {
+  margin: 0 0 var(--space-2);
+  color: var(--text-brand);
+  font-size: var(--text-body);
+}
+
+.reference-lesson .lesson-summary {
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+@container workbook (width <= 20rem) {
+  .grammar-reference {
+    padding: var(--space-reflow-inline);
+  }
+
+  :host .grammar-reference .reference-lesson {
+    padding: var(--space-reflow-inline);
+  }
+
+  .modal-sheet__header {
+    padding-top: calc(var(--control-height-compact) + var(--space-4));
+    padding-right: 0;
+  }
+
+  .modal-sheet__header h2,
+  .reference-pack h3 {
+    font-size: var(--text-title-compact);
+  }
+
+  .reference-pack {
+    margin-top: var(--space-4);
+  }
+}

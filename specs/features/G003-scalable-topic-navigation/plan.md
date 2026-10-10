@@ -6,18 +6,22 @@ Separate catalog-level discovery from pack-level study navigation so additional 
 
 ## Requirement slice
 
-- `REQ-G003-001`–`REQ-G003-015`
+- `REQ-G003-001`–`REQ-G003-018`
 - Refines the presentation location described by `REQ-G001-001`, `REQ-G001-002`, `REQ-G001-085`, and `REQ-G001-088` without changing content, scoring, or learner-data semantics.
 
 ## Included
 
 - Compact topic cards and one continue-learning summary on home.
 - Catalog-owned group metadata, runtime structure validation, and labeled grouped topic-card sections.
-- Independent native group disclosures on home, initially closed on each catalog visit, with right-aligned state chevrons and transient component-owned expansion.
+- Independent native group disclosures on home, initially closed on each catalog visit, with right-aligned state chevrons and transient component-owned expansion. Share the topic map's Focused tests bold, normally spaced, authored-case primary-ink text style across Notebook, Stats and grammar-reference example headings, with the existing body font size used by grammar-reference lesson names.
 - Responsive four/two/one-column collapsed groups, full-row expanded groups, and cancellable width-then-content animation with an immediate reduced-motion result.
 - Group-first metadata loading with accessible pending/failure feedback and session caching, while the startup index preserves exact totals and Continue learning.
 - Viewport alignment after expansion, respecting the real sticky-header height, tall groups, focus, and reduced motion.
 - Matching disclosures on the Stats overview, using its existing summaries and preserving metrics, links, cumulative statistics, and data controls. Share disclosure state, animation, viewport helpers, and styles under Learning shared ownership.
+- A pack-owned Grammar icon beside each card title, reusing the group reference component for one-pack scope, with a single pack heading and unique scope-owned DOM IDs.
+- A group-owned Grammar action and existing modal sheet listing compact lesson references under authored pack headings. Keep the action independent of disclosure state and reuse existing associated Focused-test headings and authored summaries, all translated worked examples in default-collapsed disclosures sharing the landing-page/Stats behavior, and existing worked-example card styles.
+- Validated lesson-only on-demand loading, bounded compact-reference caching, retry, cancellation of obsolete presentation results, and no learner-state writes.
+- Dedicated `modal/` and `examples/` component folders inside the grammar-reference owner, with co-located templates/styles and mirrored modal unit tests. Keep shared reference models and repository at their common owner.
 - A lazy `/topics/:topicId` route containing the existing ordered test map and pack objectives.
 - Topic-aware back-navigation from lessons and study sessions.
 - Focused unit and browser coverage for catalog-to-topic navigation.
@@ -27,7 +31,7 @@ Separate catalog-level discovery from pack-level study navigation so additional 
 
 - New Finnish lessons, tests, packs, or changes to existing learning-content semantics.
 - Changes to grading, attempts, mistakes, reviews, reports, backups, IndexedDB, or content-version alignment.
-- Accounts, cloud synchronization, runtime content generation, or an in-app content browser/editor.
+- Accounts, cloud synchronization, runtime content generation, or an in-app content authoring/editor workflow. The read-only compact grammar reference is included.
 - Locking tests behind lesson completion or test-order progression.
 
 ## Implementation steps

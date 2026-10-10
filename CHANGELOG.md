@@ -2,7 +2,28 @@
 
 ## Unreleased
 
+### Grammar reference
+
+- Keep long Notebook pack titles clear of their grammar-reference icons at enlarged text. On narrow cards, place the icon at the right of its own row so the title can use the full width without shrinking text.
+
+- Make the modal’s existing example cards more compact with reduced vertical padding, tighter card and wrapped-text spacing, and zero paragraph margins. Preserve all Finnish/English content, fonts, colors and disclosure behavior.
+
+- Use each lesson’s associated Focused-test heading from Learn first in grammar summaries. Include every authored Finnish example and English translation, omitting numbered formation explanations, in independent default-collapsed Worked examples sections, sharing Notebook/Stats disclosure styles, keyboard behavior, chevrons, animation, reduced motion, and viewport alignment within the modal.
+
+- Match grammar-summary lesson cards to the existing Notebook topic-group paper background using the shared appearance-aware color token.
+
+- Right-align the Grammar reference modal’s Try again action in the shared modal footer after a loading failure.
+
+- Extend the existing book-icon reference to every Notebook pack card, beside its title. Show only that pack’s authored lessons in the existing modal, with one pack heading and scope-unique IDs. Reuse validated lesson-only loading, bounded caching, retry, keyboard dismissal, and focus return; retain the group reference and existing progress/navigation behavior.
+
+- Add a plain book-icon **Grammar reference** control beside each Notebook group’s chevron, matching the chevron’s ink and size without button decoration, with an accessible name, hover title, and keyboard focus. Tighten and align the icon pair near the right edge to give group titles more room. Bound the paper’s corner cuts so the icons remain inside collapsed and expanded cards on wide screens. Open the existing paper modal with every lesson’s associated Focused-test name, short grammar summary, and all worked examples behind collapsed disclosures, grouped by pack in teaching order. Reuse worked-example cards, keyboard dismissal, backdrop dismissal, and focus return.
+- Load validated manifests and lesson fragments only when requested, with bounded compact-reference caching and retry. The reference does not load scored tests or change progress, lesson completion, history, notes, content versions, or storage formats.
+
 ### Collapsible topic groups
+
+- Organize grammar-reference components into their own modal and examples folders, with co-located templates/styles and mirrored unit-test ownership. Record the dedicated component-folder rule in Angular source guidance and the client architecture contract for future work.
+
+- Match Notebook, Stats and grammar-summary Worked examples disclosure headings to the existing Focused tests text style: bold body font, primary ink, authored casing and normal letter spacing, with the existing body font size used by grammar-summary lesson names.
 
 - Start Notebook topic groups collapsed, with a right-aligned chevron and responsive four/two/one-column layout. Expanded groups animate to full-row width and scroll into view when needed; reduced motion applies immediately. Preserve existing topic cards and learning progress.
 

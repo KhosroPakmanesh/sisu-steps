@@ -14,8 +14,9 @@
       @if (disclosure.loaded()) {
         @for (summary of group().packs; track summary.pack.id) {
           <article class="topic-card">
-            <header>
+            <header class="topic-card-header">
               <h4>{{ summary.pack.title }}</h4>
+              <app-grammar-reference [target]="{ kind: 'pack', pack: summary.pack }" />
               <p>{{ summary.pack.summary }}</p>
             </header>
 
@@ -67,6 +68,7 @@
       }
     </div>
   </details>
+  <app-grammar-reference [target]="{ kind: 'group', group: referenceGroup() }" />
   @if (disclosure.loading()) {
     <p role="status">Loading topics…</p>
   }

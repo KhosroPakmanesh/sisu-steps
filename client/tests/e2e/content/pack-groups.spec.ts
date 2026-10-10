@@ -131,6 +131,12 @@ for (const catalogPath of ['/', '/stats']) {
 
       await headers.first().focus();
       await page.keyboard.press('Tab');
+      if (catalogPath === '/') {
+        await expect(
+          page.getByRole('button', { name: 'Grammar reference for Foundations', exact: true }),
+        ).toBeFocused();
+        await page.keyboard.press('Tab');
+      }
       await expect(headers.nth(1)).toBeFocused();
       await headers.first().focus();
       await expect(headers.first()).toHaveCSS('outline-style', 'solid');
@@ -197,6 +203,13 @@ for (const catalogPath of ['/', '/stats']) {
             element.style.fontSize = size + 'px';
           }, pixels);
           await expect(page.locator('html')).toHaveCSS('font-size', pixels + 'px');
+          // Container-query tracks settle on the next rendered frame after a text-scale change.
+          await page.evaluate(
+            () =>
+              new Promise<void>((resolve) =>
+                requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+              ),
+          );
           for (const header of await page.locator('.topic-group-toggle').all()) {
             const geometry = await header.evaluate((element) => {
               const header = element.getBoundingClientRect();

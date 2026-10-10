@@ -55,6 +55,7 @@ main.page-shell .topic-grid::after {
 }
 
 main.lesson-page .example-grid article,
+.grammar-reference .example-grid article,
 main.lesson-page .vocabulary-group,
 main.page-shell .topic-grid .topic-card {
   position: relative;
@@ -76,6 +77,17 @@ main.page-shell .topic-grid .topic-card {
   transition:
     transform var(--motion-standard) ease,
     filter var(--motion-standard) ease;
+}
+
+/* Expanded grammar cards keep all example text inside the paper. */
+.grammar-reference .example-grid article {
+  clip-path: polygon(
+    0.3rem 0,
+    calc(100% - 0.3rem) 0.12rem,
+    100% calc(100% - 0.3rem),
+    calc(100% - 0.3rem) 100%,
+    0 calc(100% - 0.3rem)
+  );
 }
 
 main.lesson-page .vocabulary-group {
@@ -100,6 +112,7 @@ main.page-shell .topic-grid .topic-card {
 }
 
 main.lesson-page .example-grid article:hover,
+.grammar-reference .example-grid article:hover,
 main.lesson-page .vocabulary-group:hover,
 main.page-shell .topic-grid .topic-card:hover,
 main.page-shell .topic-grid .topic-card:focus-within {
@@ -115,6 +128,7 @@ main.page-shell .topic-grid .topic-card:focus-within {
 }
 
 main.lesson-page .example-grid article::before,
+.grammar-reference .example-grid article::before,
 main.lesson-page .vocabulary-group::before,
 main.page-shell .topic-grid .topic-card::before {
   position: absolute;
@@ -258,6 +272,7 @@ main.lesson-page .lesson-practice .practice-card {
 @container workbook (width <= 35rem) {
   main.lesson-page .worked-examples,
   main.lesson-page .example-grid article,
+  .grammar-reference .example-grid article,
   main.lesson-page .vocabulary-group,
   main.page-shell .topic-grid,
   main.page-shell .topic-grid .topic-card {
@@ -276,6 +291,7 @@ main.lesson-page .lesson-practice .practice-card {
   main.lesson-page .worked-examples::before,
   main.lesson-page .worked-examples::after,
   main.lesson-page .example-grid article::before,
+  .grammar-reference .example-grid article::before,
   main.lesson-page .vocabulary-group::before,
   main.page-shell .topic-grid::before,
   main.page-shell .topic-grid::after,

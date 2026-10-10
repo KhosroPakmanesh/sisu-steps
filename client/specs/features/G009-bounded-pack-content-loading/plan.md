@@ -1,5 +1,7 @@
 # G009 — Bounded pack content loading
 
+The additional Notebook grammar-reference path follows root REQ-G003-016/017/018 and REQ-G009-024: validated lesson-only reads, a topics-owned bounded compact-reference repository, and component-owned cancellation without scored-test loading or learner-state writes.
+
 ## Goal
 
 Keep client startup work and steady-state content memory proportional to the catalog summaries and the packs a learner is actively using, while preserving current routes, content, scoring, current-format persistence and backups, and final rendered appearance.

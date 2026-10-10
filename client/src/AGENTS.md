@@ -10,6 +10,7 @@ These rules apply under `client/src/`.
 - Keep cross-workflow Learning behavior, navigation, state contracts, and persistence under `features/learning/shared`; keep root `shared` for product-agnostic browser infrastructure.
 - Treat progress statistics as derived read models. Do not introduce a report entity, report workflow, or persisted report shape.
 - Keep reusable visual primitives and tokens under `design-system/`.
+- Give every Angular component its own dedicated, purpose-named folder. Co-locate its implementation, template, styles, and component-only supporting files there; never leave component files loose in a parent workflow folder. Mirror that component folder under `tests/unit/`.
 - Do not create broad root-level `components`, `pages`, `state`, `data`, `domain`, `core`, `lib`, `utils`, `helpers`, or `common` dumping grounds.
 
 ## Angular and TypeScript

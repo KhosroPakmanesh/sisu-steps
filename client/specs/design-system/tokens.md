@@ -10,7 +10,7 @@ The canonical implementation is `client/src/design-system/tokens.css`.
 - Material roles: red-pencil decoration, amber stationery, shared paper tape, mechanical-switch metal, and page-clip highlights remain separate from danger, warning, and interaction roles even when they resolve to the same primitive hue.
 - Typography: readable body/display stacks plus a decorative note stack, reusable sizes, line heights, and weights.
 - Instructional prose and worked-example explanations share `--text-body` (1rem) and `--line-body` (1.65). Essential captions, metadata and folder labels use at least `--text-caption` (0.75rem); decorative hidden stamps are exempt.
-- Shared detail text, compact titles, summary values and actions use named size/line-height roles rather than repeated literals. These roles preserve the existing hierarchy and font families.
+- Shared detail text, compact titles, summary values and actions use named size/line-height roles rather than repeated literals. Notebook, Stats and grammar-reference disclosure headings share `--text-body` (1rem) with grammar-reference lesson names; their weight, ink, casing and letter spacing follow the topic map's Focused tests text style. These roles preserve the existing hierarchy and font families.
 - Spacing: a consistent step scale for gaps and padding.
 - Radius and shadow: restrained control, pressed-label, card, panel, and pill geometry.
 - Layout: readable page widths, runner width, control heights, touch target, and breakpoints.

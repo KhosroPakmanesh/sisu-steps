@@ -15,7 +15,12 @@ import { LessonProgressService } from './lesson-progress.service';
   selector: 'app-lesson',
   imports: [LessonPracticeComponent, RouterLink, StickyNoteComponent],
   templateUrl: './lesson.page.html',
-  styleUrls: ['./lesson.page.css', './lesson.page-content.css', './lesson.page-responsive.css'],
+  styleUrls: [
+    './lesson.page.css',
+    './lesson.page-content.css',
+    '../../shared/styles/worked-example-cards.css',
+    './lesson.page-responsive.css',
+  ],
 })
 export class LessonPage implements RouteReadiness {
   private readonly route = inject(ActivatedRoute);

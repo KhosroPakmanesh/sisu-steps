@@ -865,7 +865,7 @@ test('reuses the worked-example treatment with notebook-paper topic cards', asyn
     .locator('.topic-grid')
     .evaluate((element) => getComputedStyle(element).backgroundColor);
   await expect(page.locator('.topic-grid > .card-kicker')).toHaveText('Level: 0 - A1.3');
-  await expect(page.locator('.topic-card .card-kicker')).toHaveCount(0);
+  await expect(page.locator('.topic-card .card-kicker:not(dialog .card-kicker)')).toHaveCount(0);
 
   await page.goto(`/learn/${TOPIC_SEGMENT}/vowel-families`);
   const workedExamplesMaterial = await page.locator('.worked-examples').evaluate(material);

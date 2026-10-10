@@ -1,0 +1,97 @@
+<button
+  #trigger
+  class="grammar-reference-trigger"
+  type="button"
+  aria-haspopup="dialog"
+  [attr.aria-label]="'Grammar reference for ' + reference().title"
+  [attr.title]="'Grammar reference for ' + reference().title"
+  (click)="open()"
+>
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path
+      d="M12 5.5C9 3.5 5.5 3.5 2.5 4.5v15c3-1 6.5-1 9.5 1 3-2 6.5-2 9.5-1v-15c-3-1-6.5-1-9.5 1Z"
+    />
+    <path d="M12 5.5v15M5.5 8h3.5M5.5 11.5h3.5M15 8h3.5M15 11.5h3.5" />
+  </svg>
+</button>
+
+<dialog
+  #dialog
+  class="modal-sheet grammar-reference"
+  tabindex="-1"
+  [attr.aria-labelledby]="'grammar-reference-title-' + reference().id"
+  (cancel)="close($event)"
+  (close)="handleClosed()"
+  (click)="dismissFromBackdrop($event)"
+  (keydown.escape)="close($event)"
+>
+  <button
+    #closeButton
+    class="modal-sheet__close"
+    type="button"
+    [attr.aria-label]="'Close grammar reference for ' + reference().title"
+    autofocus
+    (click)="close()"
+  >
+    <span aria-hidden="true"></span>
+  </button>
+  <header class="modal-sheet__header">
+    <p class="card-kicker">Grammar reference</p>
+    <h2 [id]="'grammar-reference-title-' + reference().id">{{ reference().title }}</h2>
+  </header>
+
+  @if (loading()) {
+    <p role="status">Loading grammar reference…</p>
+  } @else if (loadError()) {
+    <div role="alert">
+      <p>The grammar reference could not load.</p>
+      <div class="modal-sheet__actions">
+        <button class="button secondary compact" type="button" (click)="load()">Try again</button>
+      </div>
+    </div>
+  } @else {
+    @for (pack of packs(); track pack.id) {
+      <section
+        class="reference-pack"
+        [attr.aria-labelledby]="
+          target().kind === 'group'
+            ? 'reference-pack-' + reference().id + '-' + pack.id
+            : 'grammar-reference-title-' + reference().id
+        "
+      >
+        @if (target().kind === 'group') {
+          <h3 [id]="'reference-pack-' + reference().id + '-' + pack.id">{{ pack.title }}</h3>
+        }
+        <div class="example-grid">
+          @for (lesson of pack.lessons; track lesson.id) {
+            <article
+              class="reference-lesson"
+              [attr.aria-labelledby]="'reference-lesson-' + reference().id + '-' + lesson.id"
+            >
+              @if (target().kind === 'group') {
+                <h4
+                  class="reference-lesson-title"
+                  [id]="'reference-lesson-' + reference().id + '-' + lesson.id"
+                >
+                  {{ lesson.title }}
+                </h4>
+              } @else {
+                <h3
+                  class="reference-lesson-title"
+                  [id]="'reference-lesson-' + reference().id + '-' + lesson.id"
+                >
+                  {{ lesson.title }}
+                </h3>
+              }
+              <p class="lesson-summary">{{ lesson.summary }}</p>
+              <app-grammar-reference-examples
+                [lesson]="lesson"
+                [headingLevel]="target().kind === 'group' ? 5 : 4"
+              />
+            </article>
+          }
+        </div>
+      </section>
+    }
+  }
+</dialog>

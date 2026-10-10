@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
-import { beforeEach, describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { GrammarReferenceRepository } from '@/features/learning/topics/catalog/grammar-reference/grammar-reference.repository';
 import { TopicCatalogPage } from '@/features/learning/topics/catalog/topic-catalog.page';
 import { LearningStateStore } from '@/features/learning/shared/state/learning-state.store';
 import { FakeLearningStateStore } from '@testing/helpers/unit/fake-learning-state.store';
@@ -11,11 +12,18 @@ describe('TopicCatalogPage', () => {
   let fixture: ComponentFixture<TopicCatalogPage>;
   let store: FakeLearningStateStore;
 
+  afterEach(() => vi.unstubAllGlobals());
+
   beforeEach(async () => {
+    vi.stubGlobal(
+      'matchMedia',
+      vi.fn(() => ({ matches: true })),
+    );
     await TestBed.configureTestingModule({
       imports: [TopicCatalogPage],
       providers: [
         provideRouter([]),
+        { provide: GrammarReferenceRepository, useValue: { load: () => Promise.resolve(null) } },
         { provide: LearningStateStore, useClass: FakeLearningStateStore },
       ],
     }).compileComponents();
@@ -36,7 +44,7 @@ describe('TopicCatalogPage', () => {
     expect(element.querySelectorAll('.topic-card')).toHaveLength(1);
     expect(element.querySelector('.test-card')).toBeNull();
     expect(card?.textContent).toContain('Finnish foundations');
-    expect(card?.querySelector('.card-kicker')).toBeNull();
+    expect(card?.querySelector('.topic-card-header > .card-kicker')).toBeNull();
     expect(element.querySelector('.topic-grid > .card-kicker')?.textContent?.trim()).toBe(
       'Level: A1',
     );

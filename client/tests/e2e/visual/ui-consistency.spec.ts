@@ -382,6 +382,7 @@ for (const theme of ['Day', 'Night']) {
     test('keeps repeated semantic colour roles consistent on every feature page', async ({
       page,
     }) => {
+      test.setTimeout(60_000);
       const samples = {
         stationery: [] as { route: string; element: string; value: string }[],
         primaryAction: [] as string[],
@@ -389,7 +390,12 @@ for (const theme of ['Day', 'Night']) {
         reviewAction: [] as string[],
         dangerAction: [] as string[],
         backLink: [] as string[],
-        sectionLabel: [] as { route: string; element: string; value: string }[],
+        sectionLabel: [] as {
+          route: string;
+          element: string;
+          value: string;
+          disclosure: boolean;
+        }[],
       };
       const collect = async (selector: string, kind: 'action' | 'background' | 'text') =>
         page.locator(selector).evaluateAll(
@@ -463,6 +469,7 @@ for (const theme of ['Day', 'Night']) {
                   route: currentRoute,
                   element: `${element.tagName.toLowerCase()}.${element.className}`,
                   value: getComputedStyle(element).color,
+                  disclosure: element.closest('.topic-group-toggle') !== null,
                 })),
             route,
           )),
@@ -477,13 +484,15 @@ for (const theme of ['Day', 'Night']) {
         probe.remove();
         return value;
       });
-      const sectionLabelToken = await page.evaluate(() => {
+      const sectionTokens = await page.evaluate(() => {
         const probe = document.createElement('span');
-        probe.style.color = 'var(--text-brand)';
         document.body.append(probe);
-        const value = getComputedStyle(probe).color;
+        probe.style.color = 'var(--text-brand)';
+        const label = getComputedStyle(probe).color;
+        probe.style.color = 'var(--text-primary)';
+        const disclosure = getComputedStyle(probe).color;
         probe.remove();
-        return value;
+        return { label, disclosure };
       });
       if (samples.reviewAction.length === 0) {
         samples.reviewAction.push(
@@ -508,7 +517,13 @@ for (const theme of ['Day', 'Night']) {
       expect(samples.stationery.length).toBeGreaterThan(20);
       expect(samples.stationery.filter(({ value }) => value !== stationeryToken)).toEqual([]);
       expect(samples.sectionLabel.length).toBeGreaterThan(20);
-      expect(samples.sectionLabel.filter(({ value }) => value !== sectionLabelToken)).toEqual([]);
+      expect(samples.sectionLabel.filter(({ disclosure }) => disclosure).length).toBeGreaterThan(0);
+      expect(
+        samples.sectionLabel.filter(
+          ({ value, disclosure }) =>
+            value !== (disclosure ? sectionTokens.disclosure : sectionTokens.label),
+        ),
+      ).toEqual([]);
       for (const [name, role] of Object.entries(samples).filter(
         ([name]) => !['stationery', 'sectionLabel'].includes(name),
       )) {

@@ -6,13 +6,17 @@ export function keepTopicGroupVisible(element: HTMLElement): void {
       ? Math.max(0, header.getBoundingClientRect().bottom)
       : 0;
   const gap = Number.parseFloat(getComputedStyle(element).scrollMarginTop);
-  const top = headerBottom + gap;
-  const bottom = window.innerHeight - gap;
+  const dialog = element.closest('dialog');
+  const viewport = dialog?.getBoundingClientRect();
+  const top = viewport ? viewport.top + dialog!.clientTop + gap : headerBottom + gap;
+  const bottom = viewport
+    ? viewport.top + dialog!.clientTop + dialog!.clientHeight - gap
+    : window.innerHeight - gap;
   const bounds = element.getBoundingClientRect();
   if (bounds.top >= top && bounds.bottom <= bottom) return;
   // Fit a short group with the smallest scroll; start taller groups below the header.
   const delta =
     bounds.height > bottom - top || bounds.top < top ? bounds.top - top : bounds.bottom - bottom;
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  window.scrollBy({ top: delta, behavior: reducedMotion ? 'instant' : 'smooth' });
+  (dialog ?? window).scrollBy({ top: delta, behavior: reducedMotion ? 'instant' : 'smooth' });
 }

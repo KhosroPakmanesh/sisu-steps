@@ -1,0 +1,30 @@
+<div class="reference-examples">
+  <details class="topic-group-disclosure" [open]="disclosure.expanded()">
+    <summary
+      class="topic-group-toggle"
+      [attr.aria-label]="'Worked examples for ' + lesson().title"
+      (click)="toggle($event)"
+    >
+      @if (headingLevel() === 4) {
+        <h4 class="card-kicker">Worked examples</h4>
+      } @else {
+        <h5 class="card-kicker">Worked examples</h5>
+      }
+      <svg class="topic-group-chevron" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m9 5 7 7-7 7" />
+      </svg>
+    </summary>
+    <div class="group-cards example-grid">
+      @if (disclosure.loaded()) {
+        @for (example of lesson().examples; track $index) {
+          <article class="reference-example">
+            <p>
+              <strong lang="fi">{{ example.finnish }}</strong>
+              <span>{{ example.english }}</span>
+            </p>
+          </article>
+        }
+      }
+    </div>
+  </details>
+</div>
