@@ -1,6 +1,6 @@
 {
   "id": "aps-fixed-on-plural",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Fixed on with plural owners",
   "summary": "Use fixed on with meillä, teillä, and heillä to say what the owner has.",
   "stage": "focused",
@@ -158,9 +158,9 @@
       "id": "aps-fixed-on-practice-01"
     },
     {
-      "type": "translation-fi",
-      "instruction": "Write in Finnish.",
-      "prompt": "Optional practice: Write “We have a car.” in Finnish. Use meillä (“we as the owner”) and auto (“a car”). Frame: “Meillä ___ auto”.",
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Optional practice: Build “We have a car.” Use meillä (“we as the owner”) and auto (“a car”).",
       "acceptedAnswers": ["Meillä on auto."],
       "explanation": "Possession uses on with every owner. Plural owners still take on; ovat belongs to a different sentence pattern.",
       "tags": ["standard-written-finnish", "sentence", "lesson-practice"],
@@ -195,14 +195,8 @@
           }
         ]
       },
-      "answerDiagnostics": [
-        {
-          "answers": ["Meillä olemme auto."],
-          "category": "Fixed on in possession: predictable form error",
-          "explanation": "The -lla/-llä phrase is the possessor. In this possession pattern the verb stays fixed, so do not conjugate it to match the owner."
-        }
-      ],
-      "id": "aps-fixed-on-practice-03"
+      "id": "aps-fixed-on-practice-03",
+      "tokens": ["auto.", "on", "Meillä"]
     }
   ],
   "numberScope": {

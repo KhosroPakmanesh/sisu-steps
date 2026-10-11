@@ -3,9 +3,7 @@ const ENDINGS = ['ni', 'si', 'nsa', 'mme', 'nne', 'nsa'];
 const BASE_LESSON_SUFFIXES = [
   'owner-forms',
   'personal-endings',
-  'third-person',
   'harmony',
-  'sentences',
   'plural-objects',
   'pronoun-omission',
   'whose',
@@ -42,9 +40,9 @@ export function validatePack(pack) {
   if (pack.id !== 'possessive-pronouns-endings') return [];
   const errors = [];
   if (
-    pack.version !== '2.4.0' ||
+    pack.version !== '2.5.0' ||
     pack.level !== '0 - A1.3' ||
-    pack.lessons.length !== 20 ||
+    pack.lessons.length !== 16 ||
     pack.lessons.some(
       (lesson) =>
         lesson.stage !== 'focused' ||
@@ -52,15 +50,15 @@ export function validatePack(pack) {
           ? lesson.practiceExercises.length < 2 || lesson.practiceExercises.length > 5
           : lesson.practiceExercises.length !== 3),
     ) ||
-    pack.tests.length !== 22 ||
+    pack.tests.length !== 18 ||
     pack.tests.some(
       (test, index) =>
-        test.stage !== (index < 20 ? 'focused' : 'review') ||
+        test.stage !== (index < 16 ? 'focused' : 'review') ||
         test.exercises.length !== TEST_COUNTS[index],
     )
   )
     errors.push(
-      `${pack.id}: preserve equal owner-group counts: twenty 20-question Focused tests and two 32-question Reviews`,
+      `${pack.id}: preserve equal owner-group counts: sixteen 20-question Focused tests and two 32-question Reviews`,
     );
   if (
     pack.lessons.some((lesson, index) => lesson.id !== LESSON_IDS[index]) ||

@@ -1,9 +1,9 @@
 {
   "id": "kpt-t-plural",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "stage": "focused",
   "targetSkills": ["T-plural with KPT"],
-  "prerequisiteSkills": ["Regular T-plural", "KPT T-plural recognition"],
+  "prerequisiteSkills": ["Regular T-plural"],
   "introducedVocabulary": [
     {
       "finnish": "matto",
@@ -44,23 +44,6 @@
       "finnish": "leipä",
       "english": "bread",
       "type": "word"
-    }
-  ],
-  "reusedVocabulary": [
-    {
-      "finnish": "katto",
-      "english": "roof",
-      "type": "word"
-    },
-    {
-      "finnish": "kauppa",
-      "english": "shop",
-      "type": "word"
-    },
-    {
-      "finnish": "keitto",
-      "english": "soup",
-      "type": "word"
     },
     {
       "finnish": "pankki",
@@ -68,13 +51,16 @@
       "type": "word"
     },
     {
-      "finnish": "pelto",
-      "english": "field",
+      "finnish": "kauppa",
+      "english": "shop",
       "type": "word"
-    },
+    }
+  ],
+  "reusedVocabulary": [],
+  "suppliedVocabulary": [
     {
-      "finnish": "ranta",
-      "english": "beach",
+      "finnish": "keitto",
+      "english": "soup",
       "type": "word"
     },
     {
@@ -83,17 +69,36 @@
       "type": "word"
     },
     {
+      "finnish": "kampa",
+      "english": "comb",
+      "type": "word"
+    },
+    {
       "finnish": "takki",
       "english": "coat",
+      "type": "word"
+    },
+    {
+      "finnish": "katto",
+      "english": "roof",
       "type": "word"
     },
     {
       "finnish": "tyttö",
       "english": "girl",
       "type": "word"
+    },
+    {
+      "finnish": "ranta",
+      "english": "beach",
+      "type": "word"
+    },
+    {
+      "finnish": "pelto",
+      "english": "field",
+      "type": "word"
     }
   ],
-  "suppliedVocabulary": [],
   "title": "T-plurals that use KPT",
   "summary": "Change the consonant stem first and add plural -t second.",
   "objectives": [
@@ -113,7 +118,7 @@
     {
       "title": "The same familiar KPT pairs",
       "paragraphs": [
-        "The changes are the same ones shown in this pack’s recognition lesson: double consonants can shorten, a single p can become v, and clusters can change.",
+        "Double consonants can shorten, a single p can become v, and consonant clusters can change. The worked forms below show the weak stem for each supplied noun; learn that stem before adding -t.",
         "The final -t is the plural ending. A t created inside the stem is not the plural ending."
       ],
       "keyPoints": ["kk → k", "p → v", "lt → ll"]
@@ -135,6 +140,78 @@
         "Use the known change pp → p: kauppa → kaupa-.",
         "Add the known plural ending -t: kaupat."
       ]
+    },
+    {
+      "finnish": "keitto → keitot",
+      "english": "soup → soups",
+      "steps": [
+        "keitto (“soup”) is supplied as context.",
+        "tt → t gives the weak stem keito-.",
+        "Add plural -t: keitot (“soups”)."
+      ]
+    },
+    {
+      "finnish": "silta → sillat",
+      "english": "bridge → bridges",
+      "steps": [
+        "silta (“bridge”) is supplied as context.",
+        "lt → ll gives the weak stem silla-.",
+        "Add plural -t: sillat (“bridges”)."
+      ]
+    },
+    {
+      "finnish": "kampa → kammat",
+      "english": "comb → combs",
+      "steps": [
+        "kampa (“comb”) is supplied as context.",
+        "mp → mm gives the weak stem kamma-.",
+        "Add plural -t: kammat (“combs”)."
+      ]
+    },
+    {
+      "finnish": "takki → takit",
+      "english": "coat → coats",
+      "steps": [
+        "takki (“coat”) is supplied as context.",
+        "kk → k gives the weak stem taki-.",
+        "Add plural -t: takit (“coats”)."
+      ]
+    },
+    {
+      "finnish": "katto → katot",
+      "english": "roof → roofs",
+      "steps": [
+        "katto (“roof”) is supplied as context.",
+        "tt → t gives the weak stem kato-.",
+        "Add plural -t: katot (“roofs”)."
+      ]
+    },
+    {
+      "finnish": "tyttö → tytöt",
+      "english": "girl → girls",
+      "steps": [
+        "tyttö (“girl”) is supplied as context.",
+        "tt → t gives the weak stem tytö-.",
+        "Add plural -t: tytöt (“girls”)."
+      ]
+    },
+    {
+      "finnish": "ranta → rannat",
+      "english": "beach → beaches",
+      "steps": [
+        "ranta (“beach”) is supplied as context.",
+        "nt → nn gives the weak stem ranna-.",
+        "Add plural -t: rannat (“beaches”)."
+      ]
+    },
+    {
+      "finnish": "pelto → pellot",
+      "english": "field → fields",
+      "steps": [
+        "pelto (“field”) is supplied as context.",
+        "lt → ll gives the weak stem pello-.",
+        "Add plural -t: pellot (“fields”)."
+      ]
     }
   ],
   "commonMistakes": [
@@ -151,8 +228,8 @@
       "acceptedAnswers": ["pankit"],
       "explanation": "First use kk → k: panki-. Then add plural -t: pankit.",
       "tags": ["lesson-practice", "t-plural", "kpt"],
-      "requiredSkills": ["T-plural with KPT", "KPT T-plural recognition", "Regular T-plural"],
-      "vocabulary": ["pankki", "kauppa", "pelto"]
+      "requiredSkills": ["T-plural with KPT", "Regular T-plural"],
+      "vocabulary": ["pankki", "kauppa"]
     },
     {
       "id": "ff-a1-l-ktp-p02",
@@ -162,8 +239,8 @@
       "acceptedAnswers": ["kaupat"],
       "explanation": "kauppa uses pp → p in the weak stem kaupa-. Add -t: kaupat.",
       "tags": ["lesson-practice", "t-plural", "kpt"],
-      "requiredSkills": ["T-plural with KPT", "KPT T-plural recognition", "Regular T-plural"],
-      "vocabulary": ["pankki", "kauppa", "pelto"]
+      "requiredSkills": ["T-plural with KPT", "Regular T-plural"],
+      "vocabulary": ["pankki", "kauppa"]
     },
     {
       "id": "ff-a1-l-ktp-p03",
@@ -173,8 +250,8 @@
       "acceptedAnswers": ["pellot"],
       "explanation": "First change lt → ll to make pello-. Then add plural -t: pellot.",
       "tags": ["lesson-practice", "t-plural", "kpt"],
-      "requiredSkills": ["T-plural with KPT", "KPT T-plural recognition", "Regular T-plural"],
-      "vocabulary": ["pankki", "kauppa", "pelto"],
+      "requiredSkills": ["T-plural with KPT", "Regular T-plural"],
+      "vocabulary": ["pankki", "kauppa"],
       "options": ["pellot", "peltot", "pelto"],
       "optionFeedback": {
         "pellot": "Correct. First change lt → ll to make pello-. Then add plural -t: pellot.",

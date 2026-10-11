@@ -24,9 +24,7 @@ describe('beginner ownership and possession content', () => {
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);
     }
-    expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(
-      1040,
-    );
+    expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(800);
   });
 
   it('rejects conjugating the possession verb to agree with plural owners', () => {
@@ -85,21 +83,17 @@ describe('beginner ownership and possession content', () => {
     const pack = packs[2];
     const dialogue = exercise(pack, 'pqs-review-e021');
     expect(gradeAnswer(dialogue, 'Onko minulla peli? On.').correct).toBe(true);
-    const noun = exercise(packs[4], 'ppe-third-person-test-e020');
-    expect(gradeAnswer(noun, 'her apple').correct).toBe(true);
-    expect(noun.vocabulary).toEqual(['omena']);
+    const noun = exercise(packs[4], 'ppe-review-e012');
+    expect(gradeAnswer(noun, 'her book').correct).toBe(true);
+    expect(noun.vocabulary).toEqual(['kirja']);
   });
 
-  it('rejects irregular noun scope and untaught harmony in the preceding third-person target', () => {
+  it('rejects irregular nouns outside the taught regular inventory', () => {
     const pack = structuredClone(packs[4]);
     const irregular = exercise(pack, 'ppe-personal-endings-test-e013');
     irregular.tags = ['owner-minun', 'possessive-noun-lumi', 'possessive-ending-only'];
-    const earlyHarmony = exercise(pack, 'ppe-third-person-test-e009');
-    earlyHarmony.tags = ['owner-hänen', 'possessive-noun-kynä'];
-    earlyHarmony.acceptedAnswers = ['hänen kynänsä'];
     const errors = validateOwnershipPack(pack).join('\n');
     expect(errors).toContain('taught regular inventory');
-    expect(errors).toContain('must precede new vowel-harmony decisions');
   });
 
   it('rejects a basic noun in negative possession and incorrect partitive harmony', () => {
@@ -167,10 +161,10 @@ describe('beginner ownership and possession content', () => {
     expect(gradeAnswer(positive, 'Have I got a book?').correct).toBe(false);
     expect(gradeAnswer(negative, "Don't I have a book?").correct).toBe(true);
     expect(gradeAnswer(negative, 'Do I not have a book?').correct).toBe(true);
-    const identity = exercise(packs[4], 'ppe-sentences-test-e019');
-    expect(gradeAnswer(identity, 'This is his game.').correct).toBe(true);
-    expect(gradeAnswer(identity, 'This is her game.').correct).toBe(true);
-    expect(gradeAnswer(identity, 'Ther is her game.').correct).toBe(false);
+    const identity = exercise(packs[4], 'ppe-review-e023');
+    expect(gradeAnswer(identity, 'This is his ball.').correct).toBe(true);
+    expect(gradeAnswer(identity, 'This is her ball.').correct).toBe(true);
+    expect(gradeAnswer(identity, 'Ther is her ball.').correct).toBe(false);
     const neutral = packs[4].tests
       .find((item) => item.id === 'ppe-harmony-test')!
       .exercises.find((item) => item.acceptedAnswers.includes('pelinsä'))!;
@@ -181,12 +175,12 @@ describe('beginner ownership and possession content', () => {
   it('keeps the restored construction steps Focused before the cumulative Review', () => {
     for (const pack of packs.slice(0, 4)) {
       expect(pack.tests.map((item) => item.stage)).toEqual([
-        ...Array<string>(6).fill('focused'),
+        ...Array<string>(4).fill('focused'),
         'review',
       ]);
       expect(pack.lessons.every((lesson) => lesson.stage === 'focused')).toBe(true);
-      const taught = new Set(pack.tests.slice(0, 6).flatMap((item) => item.targetSkills));
-      for (const review of pack.tests.slice(6)) {
+      const taught = new Set(pack.tests.slice(0, 4).flatMap((item) => item.targetSkills));
+      for (const review of pack.tests.slice(4)) {
         expect(review.targetSkills.every((skill) => taught.has(skill))).toBe(true);
       }
       const changed = structuredClone(pack);

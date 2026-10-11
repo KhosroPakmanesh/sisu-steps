@@ -19,7 +19,7 @@ const cases = [
     'aps-possessors-test-e015',
     ['He has a pillow.', 'She has a pillow.', 'He or she has a pillow.'],
   ],
-  ['aps-sentences-test-e009', ['He has a pen.', 'She has a pen.', 'He or she has a pen.']],
+  ['aps-fixed-on-test-e015', ['He has a pillow.', 'She has a pillow.', 'He or she has a pillow.']],
   [
     'nps-fixed-negative-test-e015',
     [
@@ -29,8 +29,12 @@ const cases = [
     ],
   ],
   [
-    'nps-sentences-test-e009',
-    ['He does not have a pen.', 'She does not have a pen.', 'He or she does not have a pen.'],
+    'nps-fixed-negative-test-e015',
+    [
+      'He does not have a pillow.',
+      'She does not have a pillow.',
+      'He or she does not have a pillow.',
+    ],
   ],
   [
     'pqs-onko-test-e009',
@@ -41,12 +45,9 @@ const cases = [
     ['Doesn’t he have a pen?', 'Doesn’t she have a pen?', 'Doesn’t he or she have a pen?'],
   ],
   ['ppe-owner-forms-test-e015', ['his game', 'her game', 'his or her game']],
-  [
-    'ppe-sentences-test-e019',
-    ['This is his game.', 'This is her game.', 'This is his or her game.'],
-  ],
-  ['ppe-third-person-test-e018', ['his dog', 'her dog', 'his or her dog']],
-  ['ppe-third-person-test-e020', ['his apple', 'her apple', 'his or her apple']],
+  ['ppe-review-e023', ['This is his ball.', 'This is her ball.', 'This is his or her ball.']],
+  ['ppe-review-e011', ['his ball', 'her ball', 'his or her ball']],
+  ['ppe-review-e012', ['his book', 'her book', 'his or her book']],
 ] as const;
 
 describe('English gender-neutral pronoun alternatives', () => {
@@ -135,26 +136,22 @@ describe('English gender-neutral pronoun alternatives', () => {
   });
 
   it('rejects missing possessive alternatives in every accepted frame', () => {
-    const exercise = structuredClone(
-      items.find((item) => item.id === 'ppe-third-person-test-e018')!,
-    );
-    exercise.acceptedAnswers = ['his dog', 'her dog'];
+    const exercise = structuredClone(items.find((item) => item.id === 'ppe-review-e011')!);
+    exercise.acceptedAnswers = ['his ball', 'her ball'];
     expect(() => validateExercise(exercise, new Set())).toThrow(
       'missing English pronoun alternative',
     );
-    expect(validateEnglishPronounAnswers([exercise]).join('\n')).toContain('his or her dog');
+    expect(validateEnglishPronounAnswers([exercise]).join('\n')).toContain('his or her ball');
   });
 
-  it.each(['This game is his.', 'This game is hers.', 'This game is his or hers.'])(
+  it.each(['This ball is his.', 'This ball is hers.', 'This ball is his or hers.'])(
     'requires the natural predicative alternative %s without adjective substitutions',
     (missing) => {
-      const exercise = structuredClone(
-        items.find((item) => item.id === 'ppe-sentences-test-e019')!,
-      );
+      const exercise = structuredClone(items.find((item) => item.id === 'ppe-review-e023')!);
       expect(() => validateRuntime(exercise)).not.toThrow();
       expect(validateEnglishPronounAnswers([exercise])).toEqual([]);
       expect(gradeAnswer(exercise, missing).correct).toBe(true);
-      expect(gradeAnswer(exercise, 'This game is her.').correct).toBe(false);
+      expect(gradeAnswer(exercise, 'This ball is her.').correct).toBe(false);
       exercise.acceptedAnswers = exercise.acceptedAnswers.filter((answer) => answer !== missing);
       expect(() => validateRuntime(exercise)).toThrow('missing English pronoun alternative');
       expect(validateEnglishPronounAnswers([exercise]).join('\n')).toContain(

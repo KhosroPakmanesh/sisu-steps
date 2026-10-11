@@ -8,7 +8,7 @@ describe('new number-specific optional task novelty', () => {
   beforeAll(async () => {
     packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   });
-  it('accepts all 23 additions without rejecting preserved retrieval', () => {
+  it('accepts all 17 additions without rejecting preserved retrieval', () => {
     expect(packs.flatMap(validateNumberPracticeNovelty)).toEqual([]);
     expect(
       packs.flatMap((pack) =>
@@ -20,12 +20,12 @@ describe('new number-specific optional task novelty', () => {
             ),
           ),
       ),
-    ).toHaveLength(23);
+    ).toHaveLength(17);
   });
   it.each([
     ['affirmative-possession', 'aps-fixed-on-singular', 'aps-review-e022'],
-    ['affirmative-possession', 'aps-sentences-singular', 'aps-fixed-on-singular-test-e104'],
-    ['negative-possession', 'nps-partitive-singular', 'nps-sentences-singular-test-e108'],
+    ['affirmative-possession', 'aps-fixed-on-singular', 'aps-fixed-on-singular-test-e104'],
+    ['negative-possession', 'nps-partitive-singular', 'nps-fixed-negative-singular-test-e105'],
     ['possession-questions', 'pqs-short-answers-singular', 'pqs-short-answers-test-e005'],
     ['possessive-pronouns-endings', 'ppe-whose-singular', 'pop-whose-singular-test-e102'],
   ])(

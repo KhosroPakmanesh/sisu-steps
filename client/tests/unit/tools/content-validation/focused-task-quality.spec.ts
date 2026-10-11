@@ -50,8 +50,8 @@ describe('Focused task quality', () => {
     packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   });
 
-  it('checks all 103 Focused tests and agrees at both boundaries', () => {
-    expect(packs.flatMap((p) => p.tests).filter((t) => t.stage === 'focused')).toHaveLength(103);
+  it('checks all 77 Focused tests and agrees at both boundaries', () => {
+    expect(packs.flatMap((p) => p.tests).filter((t) => t.stage === 'focused')).toHaveLength(77);
     for (const pack of packs) {
       expect(validateFocusedTaskQuality(pack)).toEqual([]);
       expect(runtimeValidate(pack)).toEqual([]);
@@ -120,7 +120,7 @@ describe('Focused task quality', () => {
       .flatMap((p) => p.tests)
       .flatMap((t) => t.exercises)
       .filter((e) => FOCUSED_QUALITY_REVISION_IDS.has(e.id));
-    expect(exercises).toHaveLength(172);
+    expect(exercises).toHaveLength(159);
     for (const exercise of exercises) {
       for (const answer of exercise.acceptedAnswers)
         expect(gradeAnswer(exercise, answer).correct, exercise.id + ': ' + answer).toBe(true);
@@ -150,8 +150,7 @@ describe('Focused task quality', () => {
     ).toBe(true);
     expect(gradeAnswer(plural, 'Nämä ovat omenatmme.').correct).toBe(false);
     expect(
-      gradeAnswer(find('nds-negative-transformation-plural-test-e101'), 'Nuo kirjat ei ole täällä.')
-        .correct,
+      gradeAnswer(find('nds-plural-negative-test-e001'), 'Nuo kirjat ei ole täällä.').correct,
     ).toBe(false);
   });
 });

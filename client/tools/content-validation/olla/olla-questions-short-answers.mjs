@@ -15,13 +15,7 @@ const baseLessonIds = [
   'ppo-written-short-answers',
 ];
 
-const numberSplit = new Set([
-  'ppo-written-reference',
-  'ppo-affirmative-agreement',
-  'ppo-pronoun-presence',
-  'ppo-negative-transformations',
-  'ppo-written-short-answers',
-]);
+const numberSplit = new Set(['ppo-written-short-answers']);
 const lessonIds = baseLessonIds.flatMap((id) =>
   numberSplit.has(id) ? [id + '-singular', id + '-plural'] : [id],
 );

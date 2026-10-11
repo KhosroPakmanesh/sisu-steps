@@ -1,46 +1,25 @@
 import { validateOllaPack } from './olla-pack-family.mjs';
 
-const skills = [
-  'Singular personal pronouns',
-  'Plural personal pronouns',
-  'Pronoun reference and polite te',
-  'Singular affirmative olla',
-  'Plural affirmative olla',
-  'Affirmative pronoun–verb agreement',
-  'Subject-pronoun use',
-];
-const baseLessonIds = [
-  'ppo-singular-pronouns',
-  'ppo-plural-pronouns',
-  'ppo-written-reference',
-  'ppo-singular-affirmative',
-  'ppo-plural-affirmative',
-  'ppo-affirmative-agreement',
-  'ppo-pronoun-presence',
-];
-
-const numberSplit = new Set([
-  'ppo-written-reference',
-  'ppo-affirmative-agreement',
-  'ppo-pronoun-presence',
-  'ppo-negative-transformations',
-  'ppo-written-short-answers',
-]);
-const lessonIds = baseLessonIds.flatMap((id) =>
-  numberSplit.has(id) ? [id + '-singular', id + '-plural'] : [id],
-);
-const lessonSkills = baseLessonIds.flatMap((id, index) =>
-  numberSplit.has(id) ? [skills[index], skills[index]] : [skills[index]],
-);
-
 export function validatePack(pack) {
   return validateOllaPack(pack, {
-    id: 'personal-pronouns-affirmative-olla',
-    summary:
-      'Standard Finnish only: focused practice with personal pronouns and affirmative present-tense olla statements.',
-    skills,
-    lessonIds,
-    lessonSkills,
+    skills: [
+      'Singular personal pronouns',
+      'Plural personal pronouns',
+      'Pronoun reference and polite te',
+      'Singular affirmative olla',
+      'Plural affirmative olla',
+      'Subject-pronoun use',
+    ],
+    lessonIds: [
+      'ppo-singular-pronouns',
+      'ppo-plural-pronouns',
+      'ppo-written-reference-singular',
+      'ppo-written-reference-plural',
+      'ppo-singular-affirmative',
+      'ppo-plural-affirmative',
+      'ppo-pronoun-presence-singular',
+      'ppo-pronoun-presence-plural',
+    ],
     testIds: [
       'ppo-singular-pronouns-test',
       'ppo-plural-pronouns-test',
@@ -48,19 +27,30 @@ export function validatePack(pack) {
       'ppo-written-reference-plural-test',
       'ppo-singular-affirmative-test',
       'ppo-plural-affirmative-test',
-      'ppo-affirmative-agreement-singular-test',
-      'ppo-affirmative-agreement-plural-test',
       'ppo-pronoun-presence-singular-test',
       'ppo-pronoun-presence-plural-test',
       'ppo-form-and-agreement-review',
       'ppo-affirmative-transfer-review',
     ],
-    focusedCount: 10,
-    exerciseCounts: [24, 24, 20, 20, 24, 24, 20, 20, 20, 20, 40, 34],
-    scoredCount: 290,
-    practiceCount: 30,
-    personMinimum: 30,
-    coverage: { pronoun: 90, affirmative: 140 },
+    focusedCount: 8,
+    scoredCount: 250,
+    practiceCount: 25,
+    id: 'personal-pronouns-affirmative-olla',
+    summary:
+      'Standard Finnish only: focused practice with personal pronouns and affirmative present-tense olla statements.',
+    lessonSkills: [
+      'Singular personal pronouns',
+      'Plural personal pronouns',
+      'Pronoun reference and polite te',
+      'Pronoun reference and polite te',
+      'Singular affirmative olla',
+      'Plural affirmative olla',
+      'Subject-pronoun use',
+      'Subject-pronoun use',
+    ],
+    exerciseCounts: [24, 24, 20, 20, 24, 24, 20, 20, 40, 34],
+    personMinimum: 24,
+    coverage: { pronoun: 90, affirmative: 120 },
     allowedConstructionTags: ['pronoun', 'affirmative'],
     genderNeutralMinimum: 8,
     politeTeMinimum: 12,

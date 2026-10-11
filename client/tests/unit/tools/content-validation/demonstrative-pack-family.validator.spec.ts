@@ -25,11 +25,11 @@ describe('demonstrative-pronoun pack-family validation', () => {
   it('accepts the three packs and preserves the approved family inventory', () => {
     for (const pack of packs) expect(validateDemonstrativePack(pack)).toEqual([]);
 
-    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(548);
+    expect(packs.flatMap((pack) => pack.tests).flatMap((test) => test.exercises)).toHaveLength(436);
     expect(
       packs.flatMap((pack) => pack.lessons).flatMap((lesson) => lesson.practiceExercises),
-    ).toHaveLength(80);
-    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(21);
+    ).toHaveLength(64);
+    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(16);
     expect(
       packs.flatMap((pack) => pack.tests.filter((test) => test.stage === 'review')),
     ).toHaveLength(4);
@@ -44,7 +44,7 @@ describe('demonstrative-pronoun pack-family validation', () => {
 
     expect(validateDemonstrativePack(pack)).toEqual(
       expect.arrayContaining([
-        'demonstrative-pronouns: test counts must remain 20, 20, 24, 24, 20, 20, 20, 20, 24, 20, 20, 24, 24',
+        'demonstrative-pronouns: test counts must remain 20, 20, 20, 20, 20, 20, 20, 20, 24, 24',
         'demonstrative-pronouns: scored exercise total does not match the approved distribution',
         'sdp-review: Review must mix only the previously taught skills',
       ]),

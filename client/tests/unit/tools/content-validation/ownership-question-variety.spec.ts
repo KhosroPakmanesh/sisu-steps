@@ -106,12 +106,12 @@ describe('ownership question variety', () => {
     expect(() => validateRuntimeVariety(pack)).not.toThrow();
   });
 
-  it('grades all 1142 items, every accepted alternative and every wrong choice', () => {
+  it('grades all 874 items, every accepted alternative and every wrong choice', () => {
     const items = packs.flatMap((pack) => [
       ...pack.tests.flatMap((test) => test.exercises),
       ...pack.lessons.flatMap((lesson) => lesson.practiceExercises),
     ]);
-    expect(items).toHaveLength(1142);
+    expect(items).toHaveLength(874);
     for (const item of items) {
       for (const answer of item.acceptedAnswers)
         expect(gradeAnswer(item, answer).correct, `${item.id}: ${answer}`).toBe(true);

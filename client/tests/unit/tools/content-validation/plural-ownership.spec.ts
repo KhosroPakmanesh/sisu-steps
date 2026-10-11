@@ -28,10 +28,10 @@ describe('merged ownership pack with retained owner-number groups', () => {
       expect(validatePack(merged)).toEqual([]);
       expect((await validatePackContent(merged)).errors).toEqual([]);
       expect(pack.tests.map((item) => item.stage)).toEqual([
-        ...Array<string>(10).fill('focused'),
+        ...Array<string>(8).fill('focused'),
         'review',
       ]);
-      for (const test of pack.tests.slice(0, 10)) {
+      for (const test of pack.tests.slice(0, 8)) {
         expect(test.lessonIds).toHaveLength(1);
         expect(
           pack.lessons.find((lesson) => lesson.id === test.lessonIds[0])!.targetSkills,
@@ -40,14 +40,14 @@ describe('merged ownership pack with retained owner-number groups', () => {
     }
   });
 
-  it('keeps equal totals and matching test counts without reducing singular peers', () => {
+  it('keeps equal totals and matching test counts after removing both redundant owner peers', () => {
     for (const pack of packs) {
       expect(pack.tests.map((item) => item.exercises.length)).toEqual([
-        ...Array<number>(10).fill(20),
+        ...Array<number>(8).fill(20),
         32,
       ]);
-      expect(pack.tests.reduce((sum, item) => sum + item.exercises.length, 0)).toBe(232);
-      expect(pack.lessons.reduce((sum, item) => sum + item.practiceExercises.length, 0)).toBe(27);
+      expect(pack.tests.reduce((sum, item) => sum + item.exercises.length, 0)).toBe(192);
+      expect(pack.lessons.reduce((sum, item) => sum + item.practiceExercises.length, 0)).toBe(21);
       expect(pack.tests.at(-1)!.exercises.length).toBeGreaterThanOrEqual(28);
     }
   });
@@ -76,21 +76,21 @@ describe('merged ownership pack with retained owner-number groups', () => {
         ).toBe(true);
       }
       expect(
-        pack.tests[3].exercises.some((item) => item.acceptedAnswers[0].includes('pelinsä')),
+        pack.tests[2].exercises.some((item) => item.acceptedAnswers[0].includes('pelinsä')),
       ).toBe(true);
       expect(
-        pack.tests[3].exercises.some((item) => item.acceptedAnswers[0].includes('autonsa')),
+        pack.tests[2].exercises.some((item) => item.acceptedAnswers[0].includes('autonsa')),
       ).toBe(true);
       expect(pack.tests[6].exercises).toHaveLength(packs[1 - index].tests[6].exercises.length);
     }
   });
 
-  it('grades all 518 items, every natural answer and every authored diagnostic', () => {
+  it('grades all 426 items, every natural answer and every authored diagnostic', () => {
     const items = packs.flatMap((pack) => [
       ...pack.tests.flatMap((test) => test.exercises),
       ...pack.lessons.flatMap((lesson) => lesson.practiceExercises),
     ]);
-    expect(items).toHaveLength(518);
+    expect(items).toHaveLength(426);
     for (const item of items) {
       for (const answer of item.acceptedAnswers)
         expect(gradeAnswer(item, answer).correct, `${item.id}: ${answer}`).toBe(true);
@@ -119,36 +119,26 @@ describe('merged ownership pack with retained owner-number groups', () => {
   });
 
   it.each([
-    [0, 0, 0, 'meidän', 'owner form'],
-    [1, 0, 0, 'minun', 'owner form'],
-    [0, 5, 0, 'autotni', 'drop plural -t'],
-    [1, 5, 0, 'autotmme', 'drop plural -t'],
-    [0, 3, 1, 'kynänsa', 'vowel harmony'],
-    [1, 3, 1, 'kynänsa', 'vowel harmony'],
-    [0, 4, 6, 'Tämä ovat minun palloni.', 'noun-number agreement'],
-    [1, 5, 12, 'kynämme', 'complete ownership'],
-    [0, 6, 16, 'Tämä on kissansa.', 'retain the third-person'],
-    [1, 6, 16, 'Tämä on kissansa.', 'retain the third-person'],
-    [0, 6, 16, 'kissansa', 'complete ownership'],
-    [1, 6, 16, 'kissansa', 'complete ownership'],
-    [0, 7, 2, 'Kenen autonsa nämä ovat?', 'unsuffixed plural noun'],
-    [1, 7, 0, 'Kenen kirja tämä ovat?', 'matching agreement'],
+    [0, 'owner-forms', 0, 'meidän', 'owner form'],
+    [1, 'owner-forms', 0, 'minun', 'owner form'],
+    [0, 'plural-objects', 0, 'autotni', 'drop plural -t'],
+    [1, 'plural-objects', 0, 'autotmme', 'drop plural -t'],
+    [0, 'harmony', 1, 'kynänsa', 'vowel harmony'],
+    [1, 'harmony', 1, 'kynänsa', 'vowel harmony'],
+    [0, 'plural-objects', 6, 'Tämä ovat minun palloni.', 'noun-number agreement'],
+    [1, 'plural-objects', 12, 'kynämme', 'complete ownership'],
+    [0, 'pronoun-omission', 16, 'Tämä on kissansa.', 'retain the third-person'],
+    [1, 'pronoun-omission', 16, 'Tämä on kissansa.', 'retain the third-person'],
+    [0, 'pronoun-omission', 16, 'kissansa', 'complete ownership'],
+    [1, 'pronoun-omission', 16, 'kissansa', 'complete ownership'],
+    [0, 'whose', 2, 'Kenen autonsa nämä ovat?', 'unsuffixed plural noun'],
+    [1, 'whose', 0, 'Kenen kirja tämä ovat?', 'matching agreement'],
   ] as const)(
     'rejects incorrect owner grammar %s/%s/%s at both boundaries',
-    (pack, test, index, answer, message) => {
+    (pack, testSuffix, index, answer, message) => {
       const mutated = structuredClone(merged);
       const prefix = pack === 0 ? 'ppe' : 'pop';
-      const suffix = [
-        'owner-forms',
-        'personal-endings',
-        'third-person',
-        'harmony',
-        'sentences',
-        'plural-objects',
-        'pronoun-omission',
-        'whose',
-      ][test];
-      const id = `${prefix}-${suffix}-test-e${String(index + 1).padStart(3, '0')}`;
+      const id = `${prefix}-${testSuffix}-test-e${String(index + 1).padStart(3, '0')}`;
       mutated.tests
         .flatMap((item) => item.exercises)
         .find((exercise) => exercise.id === id)!.acceptedAnswers = [answer];

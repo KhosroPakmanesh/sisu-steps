@@ -1,12 +1,36 @@
 {
   "id": "pop-harmony",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "title": "Their endings: choosing -nsa or -nsä",
   "summary": "Choose the third-person suffix vowel from back, front, and neutral-only noun bases.",
   "stage": "focused",
   "targetSkills": ["Third-person possessive vowel harmony"],
-  "prerequisiteSkills": ["Shared third-person possessive endings"],
-  "introducedVocabulary": [],
+  "prerequisiteSkills": [
+    "Genitive personal owner forms",
+    "First- and second-person possessive endings"
+  ],
+  "introducedVocabulary": [
+    {
+      "finnish": "kissa",
+      "english": "cat",
+      "type": "word"
+    },
+    {
+      "finnish": "koira",
+      "english": "dog",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "omena",
+      "english": "apple",
+      "type": "word"
+    }
+  ],
   "reusedVocabulary": [
     {
       "finnish": "pallo",
@@ -37,26 +61,6 @@
       "finnish": "peli",
       "english": "game",
       "type": "word"
-    },
-    {
-      "finnish": "kissa",
-      "english": "cat",
-      "type": "word"
-    },
-    {
-      "finnish": "koira",
-      "english": "dog",
-      "type": "word"
-    },
-    {
-      "finnish": "talo",
-      "english": "house",
-      "type": "word"
-    },
-    {
-      "finnish": "omena",
-      "english": "apple",
-      "type": "word"
     }
   ],
   "suppliedVocabulary": [],
@@ -68,6 +72,7 @@
     {
       "title": "How the pattern works",
       "paragraphs": [
+        "The third-person owner heidän uses -nsa or -nsä in these regular noun forms. Add the suffix to the noun base and keep heidän to identify the owner. The suffix does not change with the number of owners; the noun vowels choose its vowel.",
         "Vowel harmony chooses the vowel in the third-person ending. A noun containing back a, o, or u uses -nsa: auto → autonsa, kirja → kirjansa.",
         "A noun with front ä, ö, or y and no back vowel uses -nsä: kynä → kynänsä, tyyny → tyynynsä. Neutral e and i do not change an existing back/front choice.",
         "A noun containing only neutral e/i uses the front ending: peli → pelinsä. Look at the noun, not the owner pronoun or the number of owners.",

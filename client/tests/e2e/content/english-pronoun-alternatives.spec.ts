@@ -15,8 +15,8 @@ test.beforeAll(async () => {
       ...pack.lessons.flatMap((item) => item.practiceExercises),
     ].filter((item) => shouldAudit(pack, item)),
   );
-  expect(applicable).toHaveLength(108);
-  expect(applicable.flatMap(pronounAlternatives)).toHaveLength(196);
+  expect(applicable).toHaveLength(76);
+  expect(applicable.flatMap(pronounAlternatives)).toHaveLength(140);
 });
 
 test('rejects got constructions in scored and optional possession answers', async ({ page }) => {
@@ -38,9 +38,9 @@ test('rejects got constructions in scored and optional possession answers', asyn
     await expect(page.locator('.feedback')).toContainText(exercise.acceptedAnswers[0]);
   }
   const pack = packs.find((item) => item.id === 'affirmative-possession')!;
-  const lesson = pack.lessons.find((item) => item.id === 'aps-sentences-singular')!;
+  const lesson = pack.lessons.find((item) => item.id === 'aps-fixed-on-singular')!;
   const index = lesson.practiceExercises.findIndex((item) => item.type === 'translation-en');
-  await page.goto('/learn/affirmative-possession/aps-sentences-singular-test');
+  await page.goto('/learn/affirmative-possession/aps-fixed-on-singular-test');
   await page.getByRole('button', { name: 'Start optional practice' }).click();
   for (let prior = 0; prior < index; prior += 1) {
     await page.getByRole('button', { name: 'Show answer', exact: true }).click();

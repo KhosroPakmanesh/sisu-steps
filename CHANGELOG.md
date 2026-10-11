@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### Lesson consolidation
+
+- Remove 26 repetitive lessons and their matching Focused tests across twelve topic packs, retaining complete singular/plural pairs and all cumulative Reviews. Consolidate useful teaching and vocabulary in the remaining lessons. Changed pack versions intentionally discard incompatible progress in those twelve packs; removed lesson notes lose their owner. The two unchanged packs retain compatible progress. No migration or compatibility reader is added.
+
+- Clean unused removed-lesson names from validation/test helpers and replace historical links to deleted lesson JSON with recorded IDs. Keep the dated removal evidence and the removed-note regression case.
+
 ### Grammar reference
 
 - Keep long Notebook pack titles clear of their grammar-reference icons at enlarged text. On narrow cards, place the icon at the right of its own row so the title can use the full width without shrinking text.

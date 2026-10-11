@@ -1,6 +1,6 @@
 {
   "id": "ppo-singular-negative",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "stage": "focused",
   "targetSkills": ["Singular negative olla"],
   "prerequisiteSkills": [],
@@ -75,7 +75,7 @@
     },
     {
       "finnish": "vielä",
-      "english": "still",
+      "english": "yet",
       "type": "word"
     }
   ],
@@ -102,6 +102,14 @@
         "Keep both words. A single English word such as “isn’t” still corresponds to two Finnish verb words."
       ],
       "keyPoints": ["negative verb + ole", "person is marked on en/et/ei", "ole stays the same"]
+    },
+    {
+      "title": "Change an affirmative statement",
+      "paragraphs": [
+        "Replace olen, olet or on with en ole, et ole or ei ole. Keep the subject and the rest of the sentence: Minä olen kotona (“I am at home”) becomes Minä en ole kotona (“I am not at home”).",
+        "In an affirmative sentence, vielä means “still”. With a negative verb, vielä commonly means “yet”: Minä en ole kotona vielä means “I am not at home yet”. Keep the context, but translate the negative sentence naturally."
+      ],
+      "keyPoints": ["Keep the subject and context; change the verb to its negative form."]
     }
   ],
   "examples": [
@@ -128,12 +136,11 @@
   ],
   "practiceExercises": [
     {
-      "type": "word-order",
-      "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Read the whole meaning before answering. Build “You are not still here.” Address one person with sinä.",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Optional practice: Read the whole meaning before answering. Choose “You are not here yet.” Address one person with sinä.",
       "acceptedAnswers": ["Sinä et ole täällä vielä."],
       "explanation": "Sinä uses et ole: the negative verb marks the person and olla becomes ole.",
-      "tokens": ["täällä vielä.", "Sinä", "et", "ole"],
       "tags": [
         "lesson-practice",
         "sentence",
@@ -143,7 +150,7 @@
       ],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "You are not still here.",
+        "translation": "You are not here yet.",
         "pattern": "subject + person-marked negative verb + ole + context",
         "parts": [
           {
@@ -169,27 +176,37 @@
           },
           {
             "finnish": "täällä vielä",
-            "meaning": "still here",
+            "meaning": "here yet",
             "role": "context: tells the location or state",
             "baseForm": "täällä vielä",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "täällä (“here”) and vielä (“yet” in this negative sentence) are supplied; keep both words unchanged."
           }
         ]
       },
       "requiredSkills": ["Singular negative olla"],
-      "id": "ppo-l08-p01"
+      "id": "ppo-l08-p01",
+      "options": [
+        "Sinä et ole täällä vielä.",
+        "Sinä ei ole täällä vielä.",
+        "Sinä olet täällä vielä."
+      ],
+      "optionFeedback": {
+        "Sinä et ole täällä vielä.": "Correct. Sinä takes et ole.",
+        "Sinä ei ole täällä vielä.": "Ei ole belongs to hän; use et ole with sinä.",
+        "Sinä olet täällä vielä.": "Olet is affirmative; the negative form is et ole."
+      }
     },
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Optional practice: Read the whole meaning before answering. Build “He or she is not still here.”",
+      "prompt": "Optional practice: Read the whole meaning before answering. Build “He or she is not here yet.”",
       "acceptedAnswers": ["Hän ei ole täällä vielä."],
       "explanation": "Hän uses ei ole: the negative verb marks the person and olla becomes ole.",
       "tokens": ["täällä vielä.", "Hän", "ei", "ole"],
       "tags": ["lesson-practice", "sentence", "person-han", "negative", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "He or she is not still here.",
+        "translation": "He or she is not here yet.",
         "pattern": "subject + person-marked negative verb + ole + context",
         "parts": [
           {
@@ -215,10 +232,10 @@
           },
           {
             "finnish": "täällä vielä",
-            "meaning": "still here",
+            "meaning": "here yet",
             "role": "context: tells the location or state",
             "baseForm": "täällä vielä",
-            "formation": "supplied as a complete fixed expression; no change is required"
+            "formation": "täällä (“here”) and vielä (“yet” in this negative sentence) are supplied; keep both words unchanged."
           }
         ]
       },

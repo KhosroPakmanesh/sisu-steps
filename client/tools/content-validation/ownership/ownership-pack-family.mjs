@@ -25,9 +25,9 @@ export function validateOwnershipPack(pack) {
   if (!mode) return [];
   const errors = mode === 'possessive' ? validateOwnerNumbers(pack) : [];
   const counts =
-    mode === 'possessive' ? [...Array(20).fill(20), 32, 32] : [...Array(6).fill(20), 24];
+    mode === 'possessive' ? [...Array(16).fill(20), 32, 32] : [...Array(4).fill(20), 24];
   if (
-    pack.version !== (mode === 'possessive' ? '2.4.0' : '1.6.0') ||
+    pack.version !== (mode === 'possessive' ? '2.5.0' : '1.7.0') ||
     pack.level !== '0 - A1.3' ||
     pack.tests.length !== counts.length ||
     pack.tests.some((test, index) => test.exercises.length !== counts[index])
@@ -35,7 +35,7 @@ export function validateOwnershipPack(pack) {
     errors.push(
       `${pack.id}: expanded ownership topology, level, and version must match the contract`,
     );
-  const focusedCount = mode === 'possessive' ? 20 : 6;
+  const focusedCount = mode === 'possessive' ? 16 : 4;
   if (
     pack.tests.some((test, index) => test.stage !== (index < focusedCount ? 'focused' : 'review'))
   ) {
@@ -163,15 +163,6 @@ function validatePossessives(exercise, surfaces, errors) {
     ?.slice('possessive-noun-'.length);
   if (noun && !NOUNS.includes(noun)) {
     errors.push(`${exercise.id}: possessive noun must stay within the taught regular inventory`);
-  }
-  if (
-    noun &&
-    exercise.targetSkill === 'Shared third-person possessive endings' &&
-    !/[aou]/u.test(noun)
-  ) {
-    errors.push(
-      `${exercise.id}: third-person ending tasks must precede new vowel-harmony decisions`,
-    );
   }
   if (owner && !noun && exercise.type !== 'translation-en') {
     const supplied = exercise.tags

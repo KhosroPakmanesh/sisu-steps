@@ -9,7 +9,7 @@ test.beforeAll(async () => {
   packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
 });
 
-test('opens all 44 number-specific tests with independent matching preparation at every viewport', async ({
+test('opens all 30 number-specific tests with independent matching preparation at every viewport', async ({
   page,
 }, testInfo) => {
   test.setTimeout(600_000);
@@ -60,7 +60,7 @@ test('opens all 44 number-specific tests with independent matching preparation a
       routes.push(authored.id);
     }
   }
-  expect(routes).toHaveLength(44);
+  expect(routes).toHaveLength(30);
   await page.goto('/topics/affirmative-possession');
   await page.locator('.test-card').first().scrollIntoViewIfNeeded();
   await page.screenshot({
@@ -70,7 +70,7 @@ test('opens all 44 number-specific tests with independent matching preparation a
   await writeFile(testInfo.outputPath('number-test-routes.json'), JSON.stringify(routes));
 });
 
-test('grades all 95 scoped optional questions and shows only their own preparation at every viewport', async ({
+test('grades all 65 scoped optional questions and shows only their own preparation at every viewport', async ({
   page,
 }, testInfo) => {
   test.setTimeout(600_000);
@@ -142,8 +142,8 @@ test('grades all 95 scoped optional questions and shows only their own preparati
       }
       await expect(practice).toContainText('Practice complete');
     }
-  expect(records).toHaveLength(95);
-  expect(new Set(records).size).toBe(95);
+  expect(records).toHaveLength(65);
+  expect(new Set(records).size).toBe(65);
   await writeFile(testInfo.outputPath('number-specific-practice.json'), JSON.stringify(records));
 });
 

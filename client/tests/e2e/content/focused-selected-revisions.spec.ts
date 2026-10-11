@@ -25,11 +25,9 @@ const ids = new Set([
   'ppo-written-short-answers-singular-test-e106',
   'ppo-written-short-answers-plural-test-e104',
   'ppo-written-short-answers-plural-test-e106',
-  'ppo-affirmative-agreement-plural-test-e107',
   'ppo-written-short-answers-plural-test-e103',
   'ppo-written-short-answers-singular-test-e105',
   'ppo-pronoun-presence-singular-test-e104',
-  'ppo-affirmative-agreement-plural-test-e103',
   'ppe-pronoun-omission-singular-test-e102',
   'ppe-pronoun-omission-singular-test-e104',
   'pop-pronoun-omission-singular-test-e102',
@@ -135,7 +133,7 @@ test('renders and grades every selected revision, reachable alternative and diag
         }
       }
     }
-  expect(new Set(records.map((record) => record.id)).size).toBe(32);
+  expect(new Set(records.map((record) => record.id)).size).toBe(30);
   expect(errors).toEqual([]);
   await writeFile(
     testInfo.outputPath('selected-revisions.json'),

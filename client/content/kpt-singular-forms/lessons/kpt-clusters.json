@@ -1,9 +1,13 @@
 {
   "id": "kpt-clusters",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "stage": "focused",
   "targetSkills": ["KPT consonant clusters"],
-  "prerequisiteSkills": ["Strong and weak KPT grades"],
+  "prerequisiteSkills": [
+    "KPT double consonants",
+    "KPT common single consonants",
+    "KPT special k changes"
+  ],
   "introducedVocabulary": [
     {
       "finnish": "kampa",
@@ -39,9 +43,7 @@
       "finnish": "silta",
       "english": "bridge",
       "type": "word"
-    }
-  ],
-  "reusedVocabulary": [
+    },
     {
       "finnish": "kaupunki",
       "english": "city",
@@ -55,6 +57,13 @@
     {
       "finnish": "ranta",
       "english": "beach",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "pankki",
+      "english": "bank",
       "type": "word"
     }
   ],

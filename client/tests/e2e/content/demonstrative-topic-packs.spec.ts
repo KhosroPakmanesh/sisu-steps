@@ -5,25 +5,25 @@ const packs = [
   {
     id: 'demonstrative-pronouns',
     title: 'Demonstrative pronouns',
-    tests: 13,
-    focused: 11,
+    tests: 10,
+    focused: 8,
     reviews: 2,
-    exercises: 280,
+    exercises: 208,
   },
   {
     id: 'negative-demonstrative-statements',
-    reviews: 1,
     title: 'Negative demonstrative statements',
-    tests: 5,
-    focused: 4,
-    exercises: 108,
+    tests: 3,
+    focused: 2,
+    reviews: 1,
+    exercises: 68,
   },
   {
     id: 'demonstrative-questions',
-    reviews: 1,
     title: 'Demonstrative questions',
     tests: 7,
     focused: 6,
+    reviews: 1,
     exercises: 160,
   },
 ];
@@ -33,7 +33,7 @@ test('opens every demonstrative pack with its approved Focused and Review topolo
 }) => {
   await page.goto('/');
   await expect(page.locator('.catalog-stats')).toContainText('14');
-  await expect(page.locator('.catalog-stats')).toContainText('2758');
+  await expect(page.locator('.catalog-stats')).toContainText('2226');
 
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);

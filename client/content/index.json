@@ -40,7 +40,7 @@
     {
       "schemaVersion": 1,
       "id": "vowel-harmony-location-endings",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "title": "Vowel harmony and location endings",
       "level": "0 - A1.3",
       "summary": "Choose harmonic endings and use -ssa/-ssä in controlled written location forms and sentences.",
@@ -50,16 +50,12 @@
           "version": "5.1.0"
         },
         {
-          "id": "neutral-vowel-harmony",
-          "version": "1.1.0"
-        },
-        {
           "id": "inside-ending",
-          "version": "5.2.0"
+          "version": "5.2.1"
         },
         {
           "id": "inessive-location-sentences",
-          "version": "1.1.0"
+          "version": "1.1.1"
         }
       ],
       "tests": [
@@ -89,34 +85,6 @@
             "vhx-vowel-focused-008",
             "vhx-vowel-focused-009",
             "vhx-vowel-focused-010"
-          ]
-        },
-        {
-          "id": "neutral-vowel-harmony-test",
-          "title": "Neutral vowels and endings",
-          "stage": "focused",
-          "lessonIds": ["neutral-vowel-harmony"],
-          "exerciseIds": [
-            "vhx-neutral-focused-001",
-            "vhx-neutral-focused-002",
-            "vhx-neutral-focused-003",
-            "vhx-neutral-focused-004",
-            "vhx-neutral-focused-005",
-            "vhx-neutral-focused-006",
-            "vhx-neutral-focused-007",
-            "vhx-neutral-focused-008",
-            "vhx-neutral-focused-009",
-            "vhx-neutral-focused-010",
-            "vhx-neutral-focused-011",
-            "vhx-neutral-focused-012",
-            "vhx-neutral-focused-013",
-            "vhx-neutral-focused-014",
-            "vhx-neutral-focused-015",
-            "vhx-neutral-focused-016",
-            "vhx-neutral-focused-017",
-            "vhx-neutral-focused-018",
-            "vhx-neutral-focused-019",
-            "vhx-neutral-focused-020"
           ]
         },
         {
@@ -180,12 +148,7 @@
           "id": "vowel-ending-review",
           "title": "Vowel and ending review",
           "stage": "review",
-          "lessonIds": [
-            "vowel-harmony-basics",
-            "neutral-vowel-harmony",
-            "inside-ending",
-            "inessive-location-sentences"
-          ],
+          "lessonIds": ["vowel-harmony-basics", "inside-ending", "inessive-location-sentences"],
           "exerciseIds": [
             "ff-a1-t13-e01",
             "ff-a1-t13-e03",
@@ -207,12 +170,7 @@
           "id": "location-transfer-review",
           "title": "Location transfer review",
           "stage": "review",
-          "lessonIds": [
-            "vowel-harmony-basics",
-            "neutral-vowel-harmony",
-            "inside-ending",
-            "inessive-location-sentences"
-          ],
+          "lessonIds": ["vowel-harmony-basics", "inside-ending", "inessive-location-sentences"],
           "exerciseIds": [
             "ff-a1-t13-e02",
             "ff-a1-review-inessive-e01",
@@ -236,73 +194,37 @@
     {
       "schemaVersion": 1,
       "id": "kpt-singular-forms",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "title": "KPT and singular forms",
       "level": "0 - A1.3",
       "summary": "Learn strong and weak KPT patterns, then apply them in controlled genitive noun and minä verb forms.",
       "lessons": [
         {
-          "id": "strong-weak-kpt-grades",
-          "version": "1.0.0"
-        },
-        {
           "id": "kpt-doubles",
-          "version": "5.3.0"
+          "version": "5.3.1"
         },
         {
           "id": "kpt-singles",
-          "version": "5.2.0"
+          "version": "5.2.1"
         },
         {
           "id": "kpt-special-k",
-          "version": "5.2.0"
+          "version": "5.2.1"
         },
         {
           "id": "kpt-clusters",
-          "version": "5.2.0"
-        },
-        {
-          "id": "kpt-basics",
-          "version": "5.2.0"
+          "version": "5.2.1"
         },
         {
           "id": "genitive-nouns",
-          "version": "5.2.0"
+          "version": "5.2.1"
         },
         {
           "id": "verb-kpt",
-          "version": "6.2.0"
+          "version": "6.2.1"
         }
       ],
       "tests": [
-        {
-          "id": "strong-weak-kpt-grades-test",
-          "title": "Strong and weak grades",
-          "stage": "focused",
-          "lessonIds": ["strong-weak-kpt-grades"],
-          "exerciseIds": [
-            "kptx-grade-focused-001",
-            "kptx-grade-focused-002",
-            "kptx-grade-focused-003",
-            "kptx-grade-focused-004",
-            "kptx-grade-focused-005",
-            "kptx-grade-focused-006",
-            "kptx-grade-focused-007",
-            "kptx-grade-focused-008",
-            "kptx-grade-focused-009",
-            "kptx-grade-focused-010",
-            "kptx-grade-focused-011",
-            "kptx-grade-focused-012",
-            "kptx-grade-focused-013",
-            "kptx-grade-focused-014",
-            "kptx-grade-focused-015",
-            "kptx-grade-focused-016",
-            "kptx-grade-focused-017",
-            "kptx-grade-focused-018",
-            "kptx-grade-focused-019",
-            "kptx-grade-focused-020"
-          ]
-        },
         {
           "id": "test-kpt-doubles",
           "title": "KPT: double consonants",
@@ -416,34 +338,6 @@
           ]
         },
         {
-          "id": "kpt-patterns",
-          "title": "KPT: distinguish the families",
-          "stage": "focused",
-          "lessonIds": ["kpt-basics"],
-          "exerciseIds": [
-            "ff-a1-t06-e01",
-            "ff-a1-t06-e02",
-            "ff-a1-t06-e03",
-            "ff-a1-t06-e04",
-            "ff-a1-t06-e05",
-            "ff-a1-t06-e06",
-            "ff-a1-t06-e07",
-            "ff-a1-t06-e08",
-            "kptx-recognition-focused-001",
-            "kptx-recognition-focused-002",
-            "kptx-recognition-focused-003",
-            "kptx-recognition-focused-004",
-            "kptx-recognition-focused-005",
-            "kptx-recognition-focused-006",
-            "kptx-recognition-focused-007",
-            "kptx-recognition-focused-008",
-            "kptx-recognition-focused-009",
-            "kptx-recognition-focused-010",
-            "kptx-recognition-focused-011",
-            "kptx-recognition-focused-012"
-          ]
-        },
-        {
           "id": "kpt-nouns",
           "title": "KPT in nouns",
           "stage": "focused",
@@ -506,12 +400,10 @@
           "title": "KPT family review",
           "stage": "review",
           "lessonIds": [
-            "strong-weak-kpt-grades",
             "kpt-doubles",
             "kpt-singles",
             "kpt-special-k",
             "kpt-clusters",
-            "kpt-basics",
             "genitive-nouns",
             "verb-kpt"
           ],
@@ -555,12 +447,10 @@
           "title": "Singular form review",
           "stage": "review",
           "lessonIds": [
-            "strong-weak-kpt-grades",
             "kpt-doubles",
             "kpt-singles",
             "kpt-special-k",
             "kpt-clusters",
-            "kpt-basics",
             "genitive-nouns",
             "verb-kpt"
           ],
@@ -604,12 +494,10 @@
           "title": "KPT transfer review",
           "stage": "review",
           "lessonIds": [
-            "strong-weak-kpt-grades",
             "kpt-doubles",
             "kpt-singles",
             "kpt-special-k",
             "kpt-clusters",
-            "kpt-basics",
             "genitive-nouns",
             "verb-kpt"
           ],
@@ -655,26 +543,18 @@
     {
       "schemaVersion": 1,
       "id": "t-plural-agreement",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "title": "T-plural and plural agreement",
       "level": "0 - A1.3",
       "summary": "Recognise and form nominative T-plurals, then use written plural verb agreement in short sentences.",
       "lessons": [
         {
-          "id": "t-plural-recognition",
-          "version": "1.0.0"
-        },
-        {
           "id": "t-plural-basics",
-          "version": "5.2.0"
-        },
-        {
-          "id": "kpt-t-plural-recognition",
-          "version": "1.0.0"
+          "version": "5.2.1"
         },
         {
           "id": "kpt-t-plural",
-          "version": "5.2.0"
+          "version": "5.2.1"
         },
         {
           "id": "he-verbs",
@@ -686,34 +566,6 @@
         }
       ],
       "tests": [
-        {
-          "id": "t-plural-recognition-test",
-          "title": "Recognising T-plurals",
-          "stage": "focused",
-          "lessonIds": ["t-plural-recognition"],
-          "exerciseIds": [
-            "tpx-recognition-focused-001",
-            "tpx-recognition-focused-002",
-            "tpx-recognition-focused-003",
-            "tpx-recognition-focused-004",
-            "tpx-recognition-focused-005",
-            "tpx-recognition-focused-006",
-            "tpx-recognition-focused-007",
-            "tpx-recognition-focused-008",
-            "tpx-recognition-focused-009",
-            "tpx-recognition-focused-010",
-            "tpx-recognition-focused-011",
-            "tpx-recognition-focused-012",
-            "tpx-recognition-focused-013",
-            "tpx-recognition-focused-014",
-            "tpx-recognition-focused-015",
-            "tpx-recognition-focused-016",
-            "tpx-recognition-focused-017",
-            "tpx-recognition-focused-018",
-            "tpx-recognition-focused-019",
-            "tpx-recognition-focused-020"
-          ]
-        },
         {
           "id": "regular-t-plural",
           "title": "Regular T-plurals",
@@ -741,34 +593,6 @@
             "tpx-regular-focused-004",
             "tpx-regular-focused-005",
             "tpx-regular-focused-006"
-          ]
-        },
-        {
-          "id": "kpt-t-plural-recognition-test",
-          "title": "Recognising KPT plurals",
-          "stage": "focused",
-          "lessonIds": ["kpt-t-plural-recognition"],
-          "exerciseIds": [
-            "tpx-kpt-recognition-focused-001",
-            "tpx-kpt-recognition-focused-002",
-            "tpx-kpt-recognition-focused-003",
-            "tpx-kpt-recognition-focused-004",
-            "tpx-kpt-recognition-focused-005",
-            "tpx-kpt-recognition-focused-006",
-            "tpx-kpt-recognition-focused-007",
-            "tpx-kpt-recognition-focused-008",
-            "tpx-kpt-recognition-focused-009",
-            "tpx-kpt-recognition-focused-010",
-            "tpx-kpt-recognition-focused-011",
-            "tpx-kpt-recognition-focused-012",
-            "tpx-kpt-recognition-focused-013",
-            "tpx-kpt-recognition-focused-014",
-            "tpx-kpt-recognition-focused-015",
-            "tpx-kpt-recognition-focused-016",
-            "tpx-kpt-recognition-focused-017",
-            "tpx-kpt-recognition-focused-018",
-            "tpx-kpt-recognition-focused-019",
-            "tpx-kpt-recognition-focused-020"
           ]
         },
         {
@@ -862,14 +686,7 @@
           "id": "t-plural-form-review",
           "title": "T-plural form review",
           "stage": "review",
-          "lessonIds": [
-            "t-plural-recognition",
-            "t-plural-basics",
-            "kpt-t-plural-recognition",
-            "kpt-t-plural",
-            "he-verbs",
-            "plural-sentences"
-          ],
+          "lessonIds": ["t-plural-basics", "kpt-t-plural", "he-verbs", "plural-sentences"],
           "exerciseIds": [
             "ff-a1-t14-e05",
             "ff-a1-t14-e06",
@@ -915,14 +732,7 @@
           "id": "plural-agreement-review",
           "title": "Plural agreement review",
           "stage": "review",
-          "lessonIds": [
-            "t-plural-recognition",
-            "t-plural-basics",
-            "kpt-t-plural-recognition",
-            "kpt-t-plural",
-            "he-verbs",
-            "plural-sentences"
-          ],
+          "lessonIds": ["t-plural-basics", "kpt-t-plural", "he-verbs", "plural-sentences"],
           "exerciseIds": [
             "ff-a1-t14-e12",
             "ff-a1-t14-e13",
@@ -969,7 +779,7 @@
     {
       "schemaVersion": 1,
       "id": "personal-pronouns-affirmative-olla",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "title": "Personal pronouns and affirmative olla",
       "level": "0 - A1.3",
       "summary": "Standard Finnish only: focused practice with personal pronouns and affirmative present-tense olla statements.",
@@ -999,20 +809,12 @@
           "version": "1.1.0"
         },
         {
-          "id": "ppo-affirmative-agreement-singular",
-          "version": "1.0.0"
-        },
-        {
-          "id": "ppo-affirmative-agreement-plural",
-          "version": "1.0.0"
-        },
-        {
           "id": "ppo-pronoun-presence-singular",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "id": "ppo-pronoun-presence-plural",
-          "version": "1.0.0"
+          "version": "1.0.1"
         }
       ],
       "tests": [
@@ -1201,62 +1003,6 @@
           ]
         },
         {
-          "id": "ppo-affirmative-agreement-singular-test",
-          "title": "Singular affirmative agreement",
-          "stage": "focused",
-          "lessonIds": ["ppo-affirmative-agreement-singular"],
-          "exerciseIds": [
-            "ppo-affirmative-agreement-singular-test-e101",
-            "ppo-t06-e01",
-            "ppo-affirmative-agreement-singular-test-e103",
-            "ppo-t06-e02",
-            "ppo-t06-e04",
-            "ppo-affirmative-agreement-singular-test-e102",
-            "ppo-t06-e05",
-            "ppo-affirmative-agreement-singular-test-e104",
-            "ppo-t06-e07",
-            "ppo-t06-e08",
-            "ppo-affirmative-agreement-singular-test-e105",
-            "ppo-t06-e10",
-            "ppo-affirmative-agreement-singular-test-e107",
-            "ppo-t06-e11",
-            "ppo-t06-e19",
-            "ppo-affirmative-agreement-singular-test-e106",
-            "ppo-t06-e22",
-            "ppo-affirmative-agreement-singular-test-e108",
-            "ppo-t06-e16",
-            "ppo-t06-e13"
-          ]
-        },
-        {
-          "id": "ppo-affirmative-agreement-plural-test",
-          "title": "Plural affirmative agreement",
-          "stage": "focused",
-          "lessonIds": ["ppo-affirmative-agreement-plural"],
-          "exerciseIds": [
-            "ppo-affirmative-agreement-plural-test-e101",
-            "ppo-t06-e06",
-            "ppo-affirmative-agreement-plural-test-e103",
-            "ppo-t06-e03",
-            "ppo-t06-e09",
-            "ppo-affirmative-agreement-plural-test-e102",
-            "ppo-t06-e12",
-            "ppo-affirmative-agreement-plural-test-e104",
-            "ppo-t06-e23",
-            "ppo-t06-e21",
-            "ppo-affirmative-agreement-plural-test-e105",
-            "ppo-t06-e24",
-            "ppo-affirmative-agreement-plural-test-e107",
-            "ppo-t06-e20",
-            "ppo-t06-e18",
-            "ppo-affirmative-agreement-plural-test-e106",
-            "ppo-t06-e17",
-            "ppo-affirmative-agreement-plural-test-e108",
-            "ppo-t06-e15",
-            "ppo-t06-e14"
-          ]
-        },
-        {
           "id": "ppo-pronoun-presence-singular-test",
           "title": "Singular subject-pronoun use",
           "stage": "focused",
@@ -1323,8 +1069,6 @@
             "ppo-written-reference-plural",
             "ppo-singular-affirmative",
             "ppo-plural-affirmative",
-            "ppo-affirmative-agreement-singular",
-            "ppo-affirmative-agreement-plural",
             "ppo-pronoun-presence-singular",
             "ppo-pronoun-presence-plural"
           ],
@@ -1382,8 +1126,6 @@
             "ppo-written-reference-plural",
             "ppo-singular-affirmative",
             "ppo-plural-affirmative",
-            "ppo-affirmative-agreement-singular",
-            "ppo-affirmative-agreement-plural",
             "ppo-pronoun-presence-singular",
             "ppo-pronoun-presence-plural"
           ],
@@ -1429,26 +1171,18 @@
     {
       "schemaVersion": 1,
       "id": "negative-olla-statements",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "title": "Negative olla statements",
       "level": "0 - A1.3",
       "summary": "Standard Finnish only: focused practice with negative present-tense olla statements and person agreement.",
       "lessons": [
         {
           "id": "ppo-singular-negative",
-          "version": "1.3.0"
+          "version": "1.3.1"
         },
         {
           "id": "ppo-plural-negative",
-          "version": "1.2.0"
-        },
-        {
-          "id": "ppo-negative-transformations-singular",
-          "version": "1.0.0"
-        },
-        {
-          "id": "ppo-negative-transformations-plural",
-          "version": "1.1.0"
+          "version": "1.2.1"
         }
       ],
       "tests": [
@@ -1517,71 +1251,10 @@
           ]
         },
         {
-          "id": "ppo-negative-transformations-singular-test",
-          "title": "Singular affirmative-to-negative transformations",
-          "stage": "focused",
-          "lessonIds": ["ppo-negative-transformations-singular"],
-          "exerciseIds": [
-            "ppo-negative-transformations-singular-test-e101",
-            "ppo-t10-e01",
-            "ppo-negative-transformations-singular-test-e103",
-            "ppo-t10-e02",
-            "ppo-t10-e04",
-            "ppo-negative-transformations-singular-test-e102",
-            "ppo-t10-e05",
-            "ppo-negative-transformations-singular-test-e104",
-            "ppo-t10-e07",
-            "ppo-t10-e08",
-            "ppo-negative-transformations-singular-test-e105",
-            "ppo-t10-e10",
-            "ppo-negative-transformations-singular-test-e107",
-            "ppo-t10-e11",
-            "ppo-negative-transformations-singular-test-e106",
-            "ppo-t10-e19",
-            "ppo-t10-e22",
-            "ppo-negative-transformations-singular-test-e108",
-            "ppo-t10-e16",
-            "ppo-t10-e13"
-          ]
-        },
-        {
-          "id": "ppo-negative-transformations-plural-test",
-          "title": "Plural affirmative-to-negative transformations",
-          "stage": "focused",
-          "lessonIds": ["ppo-negative-transformations-plural"],
-          "exerciseIds": [
-            "ppo-negative-transformations-plural-test-e101",
-            "ppo-t10-e09",
-            "ppo-negative-transformations-plural-test-e103",
-            "ppo-t10-e03",
-            "ppo-t10-e06",
-            "ppo-negative-transformations-plural-test-e102",
-            "ppo-t10-e12",
-            "ppo-negative-transformations-plural-test-e104",
-            "ppo-t10-e23",
-            "ppo-t10-e21",
-            "ppo-negative-transformations-plural-test-e105",
-            "ppo-t10-e24",
-            "ppo-negative-transformations-plural-test-e107",
-            "ppo-negative-transformations-plural-test-e106",
-            "ppo-t10-e20",
-            "ppo-t10-e18",
-            "ppo-t10-e17",
-            "ppo-negative-transformations-plural-test-e108",
-            "ppo-t10-e15",
-            "ppo-t10-e14"
-          ]
-        },
-        {
           "id": "ppo-negative-statements-review",
           "title": "Negative olla statements review",
           "stage": "review",
-          "lessonIds": [
-            "ppo-singular-negative",
-            "ppo-plural-negative",
-            "ppo-negative-transformations-singular",
-            "ppo-negative-transformations-plural"
-          ],
+          "lessonIds": ["ppo-singular-negative", "ppo-plural-negative"],
           "exerciseIds": [
             "ppo-t17-e02",
             "ppo-t17-e04",
@@ -1926,7 +1599,7 @@
     {
       "schemaVersion": 1,
       "id": "demonstrative-pronouns",
-      "version": "1.2.0",
+      "version": "1.3.0",
       "title": "Demonstrative pronouns",
       "level": "0 - A1.3",
       "summary": "Learn tämä, tuo, se, nämä, nuo, and ne for one or several people and things in standard written Finnish.",
@@ -1940,20 +1613,12 @@
           "version": "1.0.1"
         },
         {
-          "id": "sdp-reference-choice",
-          "version": "1.0.1"
-        },
-        {
-          "id": "pdp-reference-choice",
-          "version": "1.0.1"
-        },
-        {
           "id": "sdp-independent-use",
-          "version": "1.0.1"
+          "version": "1.0.2"
         },
         {
           "id": "pdp-independent-use",
-          "version": "1.0.1"
+          "version": "1.0.2"
         },
         {
           "id": "sdp-noun-modifier",
@@ -1964,16 +1629,12 @@
           "version": "1.1.1"
         },
         {
-          "id": "pdp-number-agreement",
-          "version": "1.1.1"
-        },
-        {
           "id": "sdp-se-han",
           "version": "1.0.1"
         },
         {
           "id": "pdp-ne-he",
-          "version": "1.0.1"
+          "version": "1.0.2"
         }
       ],
       "tests": [
@@ -2031,70 +1692,6 @@
             "pdp-plural-forms-test-e018",
             "pdp-plural-forms-test-e019",
             "pdp-plural-forms-test-e020"
-          ]
-        },
-        {
-          "id": "sdp-reference-choice-test",
-          "title": "Choosing nearby, farther away, or identifiable",
-          "stage": "focused",
-          "lessonIds": ["sdp-reference-choice"],
-          "exerciseIds": [
-            "sdp-reference-choice-test-e001",
-            "sdp-reference-choice-test-e002",
-            "sdp-reference-choice-test-e003",
-            "sdp-reference-choice-test-e004",
-            "sdp-reference-choice-test-e005",
-            "sdp-reference-choice-test-e006",
-            "sdp-reference-choice-test-e007",
-            "sdp-reference-choice-test-e008",
-            "sdp-reference-choice-test-e009",
-            "sdp-reference-choice-test-e010",
-            "sdp-reference-choice-test-e011",
-            "sdp-reference-choice-test-e012",
-            "sdp-reference-choice-test-e013",
-            "sdp-reference-choice-test-e014",
-            "sdp-reference-choice-test-e015",
-            "sdp-reference-choice-test-e016",
-            "sdp-reference-choice-test-e017",
-            "sdp-reference-choice-test-e018",
-            "sdp-reference-choice-test-e019",
-            "sdp-reference-choice-test-e020",
-            "sdp-reference-choice-test-e021",
-            "sdp-reference-choice-test-e022",
-            "sdp-reference-choice-test-e023",
-            "sdp-reference-choice-test-e024"
-          ]
-        },
-        {
-          "id": "pdp-reference-choice-test",
-          "title": "Choosing the correct plural demonstrative",
-          "stage": "focused",
-          "lessonIds": ["pdp-reference-choice"],
-          "exerciseIds": [
-            "pdp-reference-choice-test-e001",
-            "pdp-reference-choice-test-e002",
-            "pdp-reference-choice-test-e003",
-            "pdp-reference-choice-test-e004",
-            "pdp-reference-choice-test-e005",
-            "pdp-reference-choice-test-e006",
-            "pdp-reference-choice-test-e007",
-            "pdp-reference-choice-test-e008",
-            "pdp-reference-choice-test-e009",
-            "pdp-reference-choice-test-e010",
-            "pdp-reference-choice-test-e011",
-            "pdp-reference-choice-test-e012",
-            "pdp-reference-choice-test-e013",
-            "pdp-reference-choice-test-e014",
-            "pdp-reference-choice-test-e015",
-            "pdp-reference-choice-test-e016",
-            "pdp-reference-choice-test-e017",
-            "pdp-reference-choice-test-e018",
-            "pdp-reference-choice-test-e019",
-            "pdp-reference-choice-test-e020",
-            "pdp-reference-choice-test-e021",
-            "pdp-reference-choice-test-e022",
-            "pdp-reference-choice-test-e023",
-            "pdp-reference-choice-test-e024"
           ]
         },
         {
@@ -2210,38 +1807,6 @@
           ]
         },
         {
-          "id": "pdp-number-agreement-test",
-          "title": "Matching demonstratives with plural nouns",
-          "stage": "focused",
-          "lessonIds": ["pdp-number-agreement"],
-          "exerciseIds": [
-            "pdp-number-agreement-test-e001",
-            "pdp-number-agreement-test-e002",
-            "pdp-number-agreement-test-e003",
-            "pdp-number-agreement-test-e004",
-            "pdp-number-agreement-test-e005",
-            "pdp-number-agreement-test-e006",
-            "pdp-number-agreement-test-e007",
-            "pdp-number-agreement-test-e008",
-            "pdp-number-agreement-test-e009",
-            "pdp-number-agreement-test-e010",
-            "pdp-number-agreement-test-e011",
-            "pdp-number-agreement-test-e012",
-            "pdp-number-agreement-test-e013",
-            "pdp-number-agreement-test-e014",
-            "pdp-number-agreement-test-e015",
-            "pdp-number-agreement-test-e016",
-            "pdp-number-agreement-test-e017",
-            "pdp-number-agreement-test-e018",
-            "pdp-number-agreement-test-e019",
-            "pdp-number-agreement-test-e020",
-            "pdp-number-agreement-test-e021",
-            "pdp-number-agreement-test-e022",
-            "pdp-number-agreement-test-e023",
-            "pdp-number-agreement-test-e024"
-          ]
-        },
-        {
           "id": "sdp-se-han-test",
           "title": "Se and hän in standard Finnish",
           "stage": "focused",
@@ -2303,7 +1868,6 @@
           "stage": "review",
           "lessonIds": [
             "sdp-singular-forms",
-            "sdp-reference-choice",
             "sdp-independent-use",
             "sdp-noun-modifier",
             "sdp-se-han"
@@ -2341,10 +1905,8 @@
           "stage": "review",
           "lessonIds": [
             "pdp-plural-forms",
-            "pdp-reference-choice",
             "pdp-independent-use",
             "pdp-noun-modifier",
-            "pdp-number-agreement",
             "pdp-ne-he"
           ],
           "exerciseIds": [
@@ -2379,26 +1941,18 @@
     {
       "schemaVersion": 1,
       "id": "negative-demonstrative-statements",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "title": "Negative demonstrative statements",
       "level": "0 - A1.3",
       "summary": "Standard Finnish singular and plural negative olla statements with demonstrative subjects.",
       "lessons": [
         {
           "id": "nds-singular-negative",
-          "version": "1.1.1"
+          "version": "1.1.2"
         },
         {
           "id": "nds-plural-negative",
-          "version": "1.1.1"
-        },
-        {
-          "id": "nds-negative-transformation-singular",
-          "version": "1.1.0"
-        },
-        {
-          "id": "nds-negative-transformation-plural",
-          "version": "1.0.0"
+          "version": "1.1.2"
         }
       ],
       "tests": [
@@ -2463,71 +2017,10 @@
           ]
         },
         {
-          "id": "nds-negative-transformation-singular-test",
-          "title": "Singular statements into negatives",
-          "stage": "focused",
-          "lessonIds": ["nds-negative-transformation-singular"],
-          "exerciseIds": [
-            "nds-negative-transformation-singular-test-e101",
-            "nds-negative-transformation-test-e005",
-            "nds-negative-transformation-singular-test-e103",
-            "nds-negative-transformation-test-e001",
-            "nds-negative-transformation-singular-test-e102",
-            "nds-negative-transformation-test-e003",
-            "nds-negative-transformation-singular-test-e104",
-            "nds-negative-transformation-test-e007",
-            "nds-negative-transformation-singular-test-e105",
-            "nds-negative-transformation-test-e009",
-            "nds-negative-transformation-singular-test-e107",
-            "nds-negative-transformation-test-e011",
-            "nds-negative-transformation-singular-test-e106",
-            "nds-negative-transformation-test-e013",
-            "nds-negative-transformation-singular-test-e108",
-            "nds-negative-transformation-test-e015",
-            "nds-negative-transformation-singular-test-e109",
-            "nds-negative-transformation-test-e017",
-            "nds-negative-transformation-test-e019",
-            "nds-negative-transformation-singular-test-e110"
-          ]
-        },
-        {
-          "id": "nds-negative-transformation-plural-test",
-          "title": "Plural statements into negatives",
-          "stage": "focused",
-          "lessonIds": ["nds-negative-transformation-plural"],
-          "exerciseIds": [
-            "nds-negative-transformation-plural-test-e101",
-            "nds-negative-transformation-test-e006",
-            "nds-negative-transformation-plural-test-e103",
-            "nds-negative-transformation-test-e002",
-            "nds-negative-transformation-plural-test-e102",
-            "nds-negative-transformation-test-e004",
-            "nds-negative-transformation-plural-test-e104",
-            "nds-negative-transformation-test-e008",
-            "nds-negative-transformation-plural-test-e105",
-            "nds-negative-transformation-test-e010",
-            "nds-negative-transformation-plural-test-e107",
-            "nds-negative-transformation-test-e012",
-            "nds-negative-transformation-plural-test-e106",
-            "nds-negative-transformation-test-e014",
-            "nds-negative-transformation-plural-test-e108",
-            "nds-negative-transformation-test-e016",
-            "nds-negative-transformation-plural-test-e109",
-            "nds-negative-transformation-test-e018",
-            "nds-negative-transformation-test-e020",
-            "nds-negative-transformation-plural-test-e110"
-          ]
-        },
-        {
           "id": "nds-review",
           "title": "Negative demonstrative statements review",
           "stage": "review",
-          "lessonIds": [
-            "nds-singular-negative",
-            "nds-plural-negative",
-            "nds-negative-transformation-singular",
-            "nds-negative-transformation-plural"
-          ],
+          "lessonIds": ["nds-singular-negative", "nds-plural-negative"],
           "exerciseIds": [
             "nds-review-e001",
             "nds-review-e002",
@@ -2819,7 +2312,7 @@
     {
       "schemaVersion": 1,
       "id": "affirmative-possession",
-      "version": "1.6.0",
+      "version": "1.7.0",
       "title": "Affirmative possession",
       "level": "0 - A1.3",
       "summary": "Learn the six owners and practise affirmative possession with one regular singular thing.",
@@ -2834,19 +2327,11 @@
         },
         {
           "id": "aps-fixed-on-singular",
-          "version": "1.1.0"
+          "version": "1.1.1"
         },
         {
           "id": "aps-fixed-on-plural",
-          "version": "1.0.0"
-        },
-        {
-          "id": "aps-sentences-singular",
-          "version": "1.1.0"
-        },
-        {
-          "id": "aps-sentences-plural",
-          "version": "1.0.0"
+          "version": "1.0.1"
         }
       ],
       "tests": [
@@ -2963,62 +2448,6 @@
           ]
         },
         {
-          "id": "aps-sentences-singular-test",
-          "title": "Possession sentences with singular owners",
-          "stage": "focused",
-          "lessonIds": ["aps-sentences-singular"],
-          "exerciseIds": [
-            "aps-sentences-singular-test-e101",
-            "aps-sentences-test-e021",
-            "aps-sentences-singular-test-e103",
-            "aps-sentences-test-e009",
-            "aps-sentences-test-e014",
-            "aps-sentences-singular-test-e102",
-            "aps-sentences-test-e008",
-            "aps-sentences-singular-test-e104",
-            "aps-sentences-test-e015",
-            "aps-sentences-test-e001",
-            "aps-sentences-singular-test-e105",
-            "aps-sentences-test-e019",
-            "aps-sentences-singular-test-e107",
-            "aps-sentences-test-e003",
-            "aps-sentences-test-e013",
-            "aps-sentences-singular-test-e106",
-            "aps-sentences-test-e002",
-            "aps-sentences-singular-test-e108",
-            "aps-sentences-test-e007",
-            "aps-sentences-test-e020"
-          ]
-        },
-        {
-          "id": "aps-sentences-plural-test",
-          "title": "Possession sentences with plural owners",
-          "stage": "focused",
-          "lessonIds": ["aps-sentences-plural"],
-          "exerciseIds": [
-            "aps-sentences-plural-test-e101",
-            "aps-sentences-test-e024",
-            "aps-sentences-plural-test-e103",
-            "aps-sentences-test-e006",
-            "aps-sentences-plural-test-e102",
-            "aps-sentences-test-e004",
-            "aps-sentences-test-e016",
-            "aps-sentences-plural-test-e104",
-            "aps-sentences-test-e011",
-            "aps-sentences-test-e023",
-            "aps-sentences-plural-test-e105",
-            "aps-sentences-test-e018",
-            "aps-sentences-plural-test-e107",
-            "aps-sentences-test-e012",
-            "aps-sentences-test-e022",
-            "aps-sentences-plural-test-e106",
-            "aps-sentences-test-e010",
-            "aps-sentences-plural-test-e108",
-            "aps-sentences-test-e005",
-            "aps-sentences-test-e017"
-          ]
-        },
-        {
           "id": "aps-review",
           "title": "Affirmative possession review",
           "stage": "review",
@@ -3026,9 +2455,7 @@
             "aps-possessors-singular",
             "aps-possessors-plural",
             "aps-fixed-on-singular",
-            "aps-fixed-on-plural",
-            "aps-sentences-singular",
-            "aps-sentences-plural"
+            "aps-fixed-on-plural"
           ],
           "exerciseIds": [
             "aps-review-e008",
@@ -3062,7 +2489,7 @@
     {
       "schemaVersion": 1,
       "id": "negative-possession",
-      "version": "1.6.0",
+      "version": "1.7.0",
       "title": "Negative possession",
       "level": "0 - A1.3",
       "summary": "Learn the six owners and practise negative possession with one regular singular thing.",
@@ -3077,18 +2504,10 @@
         },
         {
           "id": "nps-partitive-singular",
-          "version": "1.1.0"
+          "version": "1.1.1"
         },
         {
           "id": "nps-partitive-plural",
-          "version": "1.0.0"
-        },
-        {
-          "id": "nps-sentences-singular",
-          "version": "1.1.0"
-        },
-        {
-          "id": "nps-sentences-plural",
           "version": "1.0.0"
         }
       ],
@@ -3206,62 +2625,6 @@
           ]
         },
         {
-          "id": "nps-sentences-singular-test",
-          "title": "Negative possession with singular owners",
-          "stage": "focused",
-          "lessonIds": ["nps-sentences-singular"],
-          "exerciseIds": [
-            "nps-sentences-singular-test-e101",
-            "nps-sentences-test-e021",
-            "nps-sentences-singular-test-e103",
-            "nps-sentences-test-e007",
-            "nps-sentences-test-e014",
-            "nps-sentences-singular-test-e102",
-            "nps-sentences-test-e001",
-            "nps-sentences-singular-test-e104",
-            "nps-sentences-test-e015",
-            "nps-sentences-test-e003",
-            "nps-sentences-singular-test-e105",
-            "nps-sentences-test-e009",
-            "nps-sentences-singular-test-e107",
-            "nps-sentences-test-e019",
-            "nps-sentences-test-e013",
-            "nps-sentences-singular-test-e106",
-            "nps-sentences-test-e002",
-            "nps-sentences-singular-test-e108",
-            "nps-sentences-test-e020",
-            "nps-sentences-test-e008"
-          ]
-        },
-        {
-          "id": "nps-sentences-plural-test",
-          "title": "Negative possession with plural owners",
-          "stage": "focused",
-          "lessonIds": ["nps-sentences-plural"],
-          "exerciseIds": [
-            "nps-sentences-plural-test-e101",
-            "nps-sentences-test-e005",
-            "nps-sentences-plural-test-e103",
-            "nps-sentences-test-e017",
-            "nps-sentences-test-e010",
-            "nps-sentences-plural-test-e102",
-            "nps-sentences-test-e004",
-            "nps-sentences-plural-test-e104",
-            "nps-sentences-test-e016",
-            "nps-sentences-test-e023",
-            "nps-sentences-plural-test-e105",
-            "nps-sentences-test-e022",
-            "nps-sentences-plural-test-e107",
-            "nps-sentences-test-e011",
-            "nps-sentences-test-e006",
-            "nps-sentences-plural-test-e106",
-            "nps-sentences-test-e024",
-            "nps-sentences-plural-test-e108",
-            "nps-sentences-test-e018",
-            "nps-sentences-test-e012"
-          ]
-        },
-        {
           "id": "nps-review",
           "title": "Negative possession review",
           "stage": "review",
@@ -3269,9 +2632,7 @@
             "nps-fixed-negative-singular",
             "nps-fixed-negative-plural",
             "nps-partitive-singular",
-            "nps-partitive-plural",
-            "nps-sentences-singular",
-            "nps-sentences-plural"
+            "nps-partitive-plural"
           ],
           "exerciseIds": [
             "nps-review-e019",
@@ -3305,7 +2666,7 @@
     {
       "schemaVersion": 1,
       "id": "possession-questions",
-      "version": "1.6.0",
+      "version": "1.7.0",
       "title": "Possession questions",
       "level": "0 - A1.3",
       "summary": "Learn the six owners and practise possession questions with one regular singular thing.",
@@ -3324,14 +2685,6 @@
         },
         {
           "id": "pqs-short-answers-plural",
-          "version": "1.0.0"
-        },
-        {
-          "id": "pqs-word-order-singular",
-          "version": "1.0.0"
-        },
-        {
-          "id": "pqs-word-order-plural",
           "version": "1.0.0"
         }
       ],
@@ -3449,70 +2802,12 @@
           ]
         },
         {
-          "id": "pqs-word-order-singular-test",
-          "title": "Question order with singular owners",
-          "stage": "focused",
-          "lessonIds": ["pqs-word-order-singular"],
-          "exerciseIds": [
-            "pqs-word-order-singular-test-e101",
-            "pqs-word-order-test-e001",
-            "pqs-word-order-singular-test-e103",
-            "pqs-word-order-test-e015",
-            "pqs-word-order-test-e003",
-            "pqs-word-order-singular-test-e102",
-            "pqs-word-order-singular-test-e104",
-            "pqs-word-order-test-e008",
-            "pqs-word-order-test-e021",
-            "pqs-word-order-test-e014",
-            "pqs-word-order-singular-test-e105",
-            "pqs-word-order-test-e007",
-            "pqs-word-order-singular-test-e107",
-            "pqs-word-order-test-e009",
-            "pqs-word-order-test-e019",
-            "pqs-word-order-singular-test-e106",
-            "pqs-word-order-test-e013",
-            "pqs-word-order-singular-test-e108",
-            "pqs-word-order-test-e002",
-            "pqs-word-order-test-e020"
-          ]
-        },
-        {
-          "id": "pqs-word-order-plural-test",
-          "title": "Question order with plural owners",
-          "stage": "focused",
-          "lessonIds": ["pqs-word-order-plural"],
-          "exerciseIds": [
-            "pqs-word-order-plural-test-e101",
-            "pqs-word-order-test-e022",
-            "pqs-word-order-plural-test-e105",
-            "pqs-word-order-test-e010",
-            "pqs-word-order-plural-test-e102",
-            "pqs-word-order-test-e011",
-            "pqs-word-order-test-e023",
-            "pqs-word-order-plural-test-e103",
-            "pqs-word-order-test-e016",
-            "pqs-word-order-test-e017",
-            "pqs-word-order-plural-test-e104",
-            "pqs-word-order-test-e005",
-            "pqs-word-order-plural-test-e106",
-            "pqs-word-order-plural-test-e107",
-            "pqs-word-order-test-e012",
-            "pqs-word-order-test-e024",
-            "pqs-word-order-test-e006",
-            "pqs-word-order-plural-test-e108",
-            "pqs-word-order-test-e004",
-            "pqs-word-order-test-e018"
-          ]
-        },
-        {
           "id": "pqs-review",
           "title": "Possession questions review",
           "stage": "review",
           "lessonIds": [
             "pqs-onko-singular",
             "pqs-onko-plural",
-            "pqs-word-order-singular",
-            "pqs-word-order-plural",
             "pqs-short-answers-singular",
             "pqs-short-answers-plural"
           ],
@@ -3548,7 +2843,7 @@
     {
       "schemaVersion": 1,
       "id": "negative-possession-questions",
-      "version": "1.6.0",
+      "version": "1.7.0",
       "title": "Negative possession questions",
       "level": "0 - A1.3",
       "summary": "Learn the six owners and practise negative possession questions with one regular singular thing.",
@@ -3567,14 +2862,6 @@
         },
         {
           "id": "npq-short-answers-plural",
-          "version": "1.0.0"
-        },
-        {
-          "id": "npq-word-order-singular",
-          "version": "1.1.0"
-        },
-        {
-          "id": "npq-word-order-plural",
           "version": "1.0.0"
         }
       ],
@@ -3692,70 +2979,12 @@
           ]
         },
         {
-          "id": "npq-word-order-singular-test",
-          "title": "Negative-question order with singular owners",
-          "stage": "focused",
-          "lessonIds": ["npq-word-order-singular"],
-          "exerciseIds": [
-            "npq-word-order-singular-test-e101",
-            "npq-word-order-test-e002",
-            "npq-word-order-singular-test-e103",
-            "npq-word-order-test-e013",
-            "npq-word-order-test-e003",
-            "npq-word-order-singular-test-e102",
-            "npq-word-order-singular-test-e104",
-            "npq-word-order-test-e007",
-            "npq-word-order-test-e019",
-            "npq-word-order-test-e001",
-            "npq-word-order-singular-test-e105",
-            "npq-word-order-test-e015",
-            "npq-word-order-singular-test-e107",
-            "npq-word-order-test-e009",
-            "npq-word-order-test-e020",
-            "npq-word-order-singular-test-e106",
-            "npq-word-order-test-e008",
-            "npq-word-order-singular-test-e108",
-            "npq-word-order-test-e014",
-            "npq-word-order-test-e021"
-          ]
-        },
-        {
-          "id": "npq-word-order-plural-test",
-          "title": "Negative-question order with plural owners",
-          "stage": "focused",
-          "lessonIds": ["npq-word-order-plural"],
-          "exerciseIds": [
-            "npq-word-order-plural-test-e101",
-            "npq-word-order-test-e010",
-            "npq-word-order-plural-test-e103",
-            "npq-word-order-test-e022",
-            "npq-word-order-test-e017",
-            "npq-word-order-plural-test-e102",
-            "npq-word-order-test-e023",
-            "npq-word-order-plural-test-e104",
-            "npq-word-order-test-e011",
-            "npq-word-order-test-e005",
-            "npq-word-order-plural-test-e105",
-            "npq-word-order-test-e018",
-            "npq-word-order-plural-test-e107",
-            "npq-word-order-test-e004",
-            "npq-word-order-test-e024",
-            "npq-word-order-plural-test-e106",
-            "npq-word-order-test-e012",
-            "npq-word-order-plural-test-e108",
-            "npq-word-order-test-e016",
-            "npq-word-order-test-e006"
-          ]
-        },
-        {
           "id": "npq-review",
           "title": "Negative possession questions review",
           "stage": "review",
           "lessonIds": [
             "npq-eiko-singular",
             "npq-eiko-plural",
-            "npq-word-order-singular",
-            "npq-word-order-plural",
             "npq-short-answers-singular",
             "npq-short-answers-plural"
           ],
@@ -3791,7 +3020,7 @@
     {
       "schemaVersion": 1,
       "id": "possessive-pronouns-endings",
-      "version": "2.4.0",
+      "version": "2.5.0",
       "title": "Possessive pronouns and endings",
       "level": "0 - A1.3",
       "summary": "Standard written Finnish possessive forms for singular and plural owners, each covering one or several owned things.",
@@ -3813,40 +3042,24 @@
           "version": "1.0.0"
         },
         {
-          "id": "ppe-third-person",
-          "version": "1.2.0"
-        },
-        {
-          "id": "pop-third-person",
-          "version": "1.0.0"
-        },
-        {
           "id": "ppe-harmony",
-          "version": "1.2.0"
+          "version": "1.2.1"
         },
         {
           "id": "pop-harmony",
-          "version": "1.0.0"
-        },
-        {
-          "id": "ppe-sentences",
-          "version": "1.2.0"
-        },
-        {
-          "id": "pop-sentences",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "id": "ppe-plural-objects",
-          "version": "1.2.0"
+          "version": "1.2.1"
         },
         {
           "id": "pop-plural-objects",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "id": "ppe-pronoun-omission-singular",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "id": "ppe-pronoun-omission-plural",
@@ -3854,7 +3067,7 @@
         },
         {
           "id": "pop-pronoun-omission-singular",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "id": "pop-pronoun-omission-plural",
@@ -3862,7 +3075,7 @@
         },
         {
           "id": "ppe-whose-singular",
-          "version": "1.1.0"
+          "version": "1.1.1"
         },
         {
           "id": "ppe-whose-plural",
@@ -3870,7 +3083,7 @@
         },
         {
           "id": "pop-whose-singular",
-          "version": "1.0.0"
+          "version": "1.0.1"
         },
         {
           "id": "pop-whose-plural",
@@ -3991,62 +3204,6 @@
           ]
         },
         {
-          "id": "ppe-third-person-test",
-          "title": "His and her ending: -nsa",
-          "stage": "focused",
-          "lessonIds": ["ppe-third-person"],
-          "exerciseIds": [
-            "ppe-third-person-test-e001",
-            "ppe-third-person-test-e011",
-            "ppe-third-person-test-e003",
-            "ppe-third-person-test-e010",
-            "ppe-third-person-test-e016",
-            "ppe-third-person-test-e018",
-            "ppe-third-person-test-e008",
-            "ppe-third-person-test-e006",
-            "ppe-third-person-test-e019",
-            "ppe-third-person-test-e012",
-            "ppe-third-person-test-e005",
-            "ppe-third-person-test-e013",
-            "ppe-third-person-test-e002",
-            "ppe-third-person-test-e015",
-            "ppe-third-person-test-e020",
-            "ppe-third-person-test-e009",
-            "ppe-third-person-test-e014",
-            "ppe-third-person-test-e017",
-            "ppe-third-person-test-e007",
-            "ppe-third-person-test-e004"
-          ]
-        },
-        {
-          "id": "pop-third-person-test",
-          "title": "Their ending: -nsa",
-          "stage": "focused",
-          "lessonIds": ["pop-third-person"],
-          "exerciseIds": [
-            "pop-third-person-test-e005",
-            "pop-third-person-test-e007",
-            "pop-third-person-test-e003",
-            "pop-third-person-test-e011",
-            "pop-third-person-test-e014",
-            "pop-third-person-test-e001",
-            "pop-third-person-test-e008",
-            "pop-third-person-test-e017",
-            "pop-third-person-test-e002",
-            "pop-third-person-test-e019",
-            "pop-third-person-test-e016",
-            "pop-third-person-test-e009",
-            "pop-third-person-test-e020",
-            "pop-third-person-test-e015",
-            "pop-third-person-test-e004",
-            "pop-third-person-test-e012",
-            "pop-third-person-test-e013",
-            "pop-third-person-test-e018",
-            "pop-third-person-test-e010",
-            "pop-third-person-test-e006"
-          ]
-        },
-        {
           "id": "ppe-harmony-test",
           "title": "His and her endings: choosing -nsa or -nsä",
           "stage": "focused",
@@ -4100,62 +3257,6 @@
             "pop-harmony-test-e013",
             "pop-harmony-test-e015",
             "pop-harmony-test-e018"
-          ]
-        },
-        {
-          "id": "ppe-sentences-test",
-          "title": "One owned thing: Tämä on …",
-          "stage": "focused",
-          "lessonIds": ["ppe-sentences"],
-          "exerciseIds": [
-            "ppe-sentences-test-e003",
-            "ppe-sentences-test-e008",
-            "ppe-sentences-test-e005",
-            "ppe-sentences-test-e011",
-            "ppe-sentences-test-e018",
-            "ppe-sentences-test-e014",
-            "ppe-sentences-test-e002",
-            "ppe-sentences-test-e007",
-            "ppe-sentences-test-e016",
-            "ppe-sentences-test-e001",
-            "ppe-sentences-test-e019",
-            "ppe-sentences-test-e012",
-            "ppe-sentences-test-e015",
-            "ppe-sentences-test-e006",
-            "ppe-sentences-test-e017",
-            "ppe-sentences-test-e009",
-            "ppe-sentences-test-e020",
-            "ppe-sentences-test-e013",
-            "ppe-sentences-test-e004",
-            "ppe-sentences-test-e010"
-          ]
-        },
-        {
-          "id": "pop-sentences-test",
-          "title": "One owned thing: Tämä on …",
-          "stage": "focused",
-          "lessonIds": ["pop-sentences"],
-          "exerciseIds": [
-            "pop-sentences-test-e006",
-            "pop-sentences-test-e008",
-            "pop-sentences-test-e003",
-            "pop-sentences-test-e009",
-            "pop-sentences-test-e016",
-            "pop-sentences-test-e019",
-            "pop-sentences-test-e002",
-            "pop-sentences-test-e011",
-            "pop-sentences-test-e013",
-            "pop-sentences-test-e004",
-            "pop-sentences-test-e017",
-            "pop-sentences-test-e007",
-            "pop-sentences-test-e001",
-            "pop-sentences-test-e018",
-            "pop-sentences-test-e014",
-            "pop-sentences-test-e012",
-            "pop-sentences-test-e015",
-            "pop-sentences-test-e020",
-            "pop-sentences-test-e005",
-            "pop-sentences-test-e010"
           ]
         },
         {
@@ -4445,9 +3546,7 @@
           "lessonIds": [
             "ppe-owner-forms",
             "ppe-personal-endings",
-            "ppe-third-person",
             "ppe-harmony",
-            "ppe-sentences",
             "ppe-plural-objects",
             "ppe-pronoun-omission-singular",
             "ppe-pronoun-omission-plural",
@@ -4496,9 +3595,7 @@
           "lessonIds": [
             "pop-owner-forms",
             "pop-personal-endings",
-            "pop-third-person",
             "pop-harmony",
-            "pop-sentences",
             "pop-plural-objects",
             "pop-pronoun-omission-singular",
             "pop-pronoun-omission-plural",

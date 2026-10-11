@@ -2,17 +2,11 @@
   "id": "nds-review",
   "title": "Negative demonstrative statements review",
   "focus": "Mix singular negatives, plural negatives, and controlled affirmative-to-negative transformations.",
-  "lessonIds": [
-    "nds-singular-negative",
-    "nds-plural-negative",
-    "nds-negative-transformation-singular",
-    "nds-negative-transformation-plural"
-  ],
+  "lessonIds": ["nds-singular-negative", "nds-plural-negative"],
   "stage": "review",
   "targetSkills": [
     "Singular negative demonstrative statements",
-    "Plural negative demonstrative statements",
-    "Demonstrative affirmative-to-negative transformation"
+    "Plural negative demonstrative statements"
   ],
   "prerequisiteSkills": [],
   "exercises": [
@@ -263,35 +257,35 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “That car is not here.” in Finnish. Start from “Tuo auto on täällä.” (“That car is here.”). Keep tuo and auto unchanged.",
-      "acceptedAnswers": ["Tuo auto ei ole täällä."],
-      "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
+      "prompt": "Write “This book is not here.” Start from “Tämä kirja on täällä.” (“This book is here.”). Keep the subject and location unchanged.",
+      "acceptedAnswers": ["Tämä kirja ei ole täällä."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "That car is not here.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "This book is not here.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Tuo auto",
-            "meaning": "that car",
+            "finnish": "Tämä kirja",
+            "meaning": "this book",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "tuo + auto",
+            "baseForm": "tämä + kirja",
             "formation": "the complete singular subject is supplied"
           },
           {
             "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
             "formation": "third-person singular form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
             "finnish": "täällä",
@@ -302,15 +296,15 @@
           }
         ]
       },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "requiredSkills": ["Singular negative demonstrative statements"],
       "id": "nds-review-e005",
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
       "answerDiagnostics": [
         {
-          "answers": ["Tuo auto eivät ole täällä."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number."
+          "answers": ["Tämä kirja eivät ole täällä."],
+          "category": "Singular negative demonstrative statements: negative agreement confused",
+          "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged."
         }
       ],
       "parallelExerciseId": "nds-review-e006"
@@ -318,54 +312,54 @@
     {
       "type": "translation-fi",
       "instruction": "Write the complete sentence in Finnish.",
-      "prompt": "Write “The cars are not here.” in Finnish. Start from “Ne autot ovat täällä.” (“The cars are here.”). Keep ne and autot unchanged.",
-      "acceptedAnswers": ["Ne autot eivät ole täällä."],
-      "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
+      "prompt": "Write “That book is not at home.” Start from “Tuo kirja on kotona.” (“That book is at home.”). Keep the subject and location unchanged.",
+      "acceptedAnswers": ["Tuo kirja ei ole kotona."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The cars are not here.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "That book is not at home.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Ne autot",
-            "meaning": "the cars",
+            "finnish": "Tuo kirja",
+            "meaning": "that book",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "ne + auto",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tuo + kirja",
+            "formation": "the complete singular subject is supplied"
           },
           {
-            "finnish": "eivät",
+            "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
-            "formation": "third-person plural form"
+            "formation": "third-person singular form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
-            "finnish": "täällä",
-            "meaning": "here",
+            "finnish": "kotona",
+            "meaning": "at home",
             "role": "location",
-            "baseForm": "täällä",
+            "baseForm": "kotona",
             "formation": "unchanged location word"
           }
         ]
       },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "requiredSkills": ["Singular negative demonstrative statements"],
       "id": "nds-review-e006",
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
       "answerDiagnostics": [
         {
-          "answers": ["Ne autot ei ole täällä."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number."
+          "answers": ["Tuo kirja eivät ole kotona."],
+          "category": "Singular negative demonstrative statements: negative agreement confused",
+          "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged."
         }
       ],
       "parallelExerciseId": "nds-review-e005"
@@ -593,35 +587,35 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Translate “Tämä talo ei ole täällä.” into English.",
-      "acceptedAnswers": ["This house is not here."],
-      "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
+      "prompt": "Translate “Tämä kirja ei ole täällä.” into English.",
+      "acceptedAnswers": ["This book is not here."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
-      "vocabulary": ["talo", "täällä"],
+      "vocabulary": ["kirja", "täällä"],
       "sentenceExplanation": {
-        "translation": "This house is not here.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "This book is not here.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Tämä talo",
-            "meaning": "this house",
+            "finnish": "Tämä kirja",
+            "meaning": "this book",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "tämä + talo",
+            "baseForm": "tämä + kirja",
             "formation": "the complete singular subject is supplied"
           },
           {
             "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
             "formation": "third-person singular form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
             "finnish": "täällä",
@@ -632,58 +626,58 @@
           }
         ]
       },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "requiredSkills": ["Singular negative demonstrative statements"],
       "id": "nds-review-e011",
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
       "parallelExerciseId": "nds-review-e012"
     },
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Translate “Nuo talot eivät ole täällä.” into English.",
-      "acceptedAnswers": ["Those houses are not here."],
-      "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
+      "prompt": "Translate “Tuo kirja ei ole kotona.” into English.",
+      "acceptedAnswers": ["That book is not at home."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
-      "vocabulary": ["talo", "täällä"],
+      "vocabulary": ["kirja", "kotona"],
       "sentenceExplanation": {
-        "translation": "Those houses are not here.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "That book is not at home.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Nuo talot",
-            "meaning": "those houses",
+            "finnish": "Tuo kirja",
+            "meaning": "that book",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nuo + talo",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tuo + kirja",
+            "formation": "the complete singular subject is supplied"
           },
           {
-            "finnish": "eivät",
+            "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
-            "formation": "third-person plural form"
+            "formation": "third-person singular form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
-            "finnish": "täällä",
-            "meaning": "here",
+            "finnish": "kotona",
+            "meaning": "at home",
             "role": "location",
-            "baseForm": "täällä",
+            "baseForm": "kotona",
             "formation": "unchanged location word"
           }
         ]
       },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "requiredSkills": ["Singular negative demonstrative statements"],
       "id": "nds-review-e012",
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
       "parallelExerciseId": "nds-review-e011"
     },
     {
@@ -799,41 +793,41 @@
     {
       "type": "translation-en",
       "instruction": "Write the complete English meaning.",
-      "prompt": "Translate “Nuo talot eivät ole täällä.” into English.",
-      "acceptedAnswers": ["Those houses are not here."],
-      "explanation": "Nuo talot is plural and therefore takes eivät ole.",
+      "prompt": "Translate “Nämä kirjat eivät ole kotona.” into English.",
+      "acceptedAnswers": ["These books are not at home."],
+      "explanation": "Use eivät ole with a plural demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
-      "vocabulary": ["talo", "täällä"],
+      "vocabulary": ["kirja", "kotona"],
       "sentenceExplanation": {
-        "translation": "Those houses are not here.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "These books are not at home.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Nuo talot",
-            "meaning": "those houses",
+            "finnish": "Nämä kirjat",
+            "meaning": "these books",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "nuo + talo",
+            "baseForm": "nämä + kirja",
             "formation": "the complete plural subject is supplied"
           },
           {
             "finnish": "eivät",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
             "formation": "third-person plural form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
-            "finnish": "täällä",
-            "meaning": "here",
+            "finnish": "kotona",
+            "meaning": "at home",
             "role": "location",
-            "baseForm": "täällä",
+            "baseForm": "kotona",
             "formation": "unchanged location word"
           }
         ]
@@ -841,7 +835,7 @@
       "requiredSkills": ["Plural negative demonstrative statements"],
       "id": "nds-review-e015",
       "targetSkill": "Plural negative demonstrative statements",
-      "misconceptionCategory": "Plural negative demonstrative statements: form not yet secure",
+      "misconceptionCategory": "Plural negative demonstrative statements: negative agreement confused",
       "parallelExerciseId": "nds-review-e016"
     },
     {
@@ -895,91 +889,35 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “The house is not here.” Start from “Se talo on täällä.” (“The house is here.”). Keep se and talo unchanged.",
-      "acceptedAnswers": ["Se talo ei ole täällä."],
-      "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
+      "prompt": "Build “That book is not at home.” Start from “Tuo kirja on kotona.” (“That book is at home.”). Keep the subject and location unchanged.",
+      "acceptedAnswers": ["Tuo kirja ei ole kotona."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The house is not here.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "That book is not at home.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Se talo",
-            "meaning": "the house",
+            "finnish": "Tuo kirja",
+            "meaning": "that book",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "se + talo",
+            "baseForm": "tuo + kirja",
             "formation": "the complete singular subject is supplied"
           },
           {
             "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
             "formation": "third-person singular form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
-          },
-          {
-            "finnish": "täällä",
-            "meaning": "here",
-            "role": "location",
-            "baseForm": "täällä",
-            "formation": "unchanged location word"
-          }
-        ]
-      },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
-      "id": "nds-review-e017",
-      "tokens": ["talo", "ei", "ole", "täällä.", "Se"],
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-      "answerDiagnostics": [
-        {
-          "answers": ["Se talo eivät ole täällä."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number."
-        }
-      ],
-      "parallelExerciseId": "nds-review-e018"
-    },
-    {
-      "type": "word-order",
-      "instruction": "Put the words in the correct order.",
-      "prompt": "Build “These books are not at home.” Start from “Nämä kirjat ovat kotona.” (“These books are at home.”). Keep nämä and kirjat unchanged.",
-      "acceptedAnswers": ["Nämä kirjat eivät ole kotona."],
-      "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
-      "tags": ["sentence", "standard-written-finnish"],
-      "vocabulary": [],
-      "sentenceExplanation": {
-        "translation": "These books are not at home.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
-        "parts": [
-          {
-            "finnish": "Nämä kirjat",
-            "meaning": "these books",
-            "role": "demonstrative noun phrase subject",
-            "baseForm": "nämä + kirja",
-            "formation": "the complete plural subject is supplied"
-          },
-          {
-            "finnish": "eivät",
-            "meaning": "not",
-            "role": "negative verb carrying number agreement",
-            "baseForm": "ei",
-            "formation": "third-person plural form"
-          },
-          {
-            "finnish": "ole",
-            "meaning": "be",
-            "role": "main verb after the negative verb",
-            "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
             "finnish": "kotona",
@@ -990,16 +928,72 @@
           }
         ]
       },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
-      "id": "nds-review-e018",
-      "tokens": ["eivät", "ole", "kotona.", "Nämä", "kirjat"],
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
+      "requiredSkills": ["Singular negative demonstrative statements"],
+      "id": "nds-review-e017",
+      "tokens": ["kotona.", "ole", "ei", "kirja", "Tuo"],
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
       "answerDiagnostics": [
         {
-          "answers": ["Nämä kirjat ei ole kotona."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number."
+          "answers": ["Tuo kirja eivät ole kotona."],
+          "category": "Singular negative demonstrative statements: negative agreement confused",
+          "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged."
+        }
+      ],
+      "parallelExerciseId": "nds-review-e018"
+    },
+    {
+      "type": "word-order",
+      "instruction": "Put the words in the correct order.",
+      "prompt": "Build “The book is not at home.” Start from “Se kirja on kotona.” (“The book is at home.”). Keep the subject and location unchanged.",
+      "acceptedAnswers": ["Se kirja ei ole kotona."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
+      "tags": ["sentence", "standard-written-finnish"],
+      "vocabulary": [],
+      "sentenceExplanation": {
+        "translation": "The book is not at home.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
+        "parts": [
+          {
+            "finnish": "Se kirja",
+            "meaning": "the book",
+            "role": "demonstrative noun phrase subject",
+            "baseForm": "se + kirja",
+            "formation": "the complete singular subject is supplied"
+          },
+          {
+            "finnish": "ei",
+            "meaning": "not",
+            "role": "negative verb",
+            "baseForm": "ei",
+            "formation": "third-person singular form"
+          },
+          {
+            "finnish": "ole",
+            "meaning": "be",
+            "role": "main verb after negation",
+            "baseForm": "olla",
+            "formation": "fixed ole after the negative verb"
+          },
+          {
+            "finnish": "kotona",
+            "meaning": "at home",
+            "role": "location",
+            "baseForm": "kotona",
+            "formation": "unchanged location word"
+          }
+        ]
+      },
+      "requiredSkills": ["Singular negative demonstrative statements"],
+      "id": "nds-review-e018",
+      "tokens": ["kotona.", "ole", "ei", "kirja", "Se"],
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["Se kirja eivät ole kotona."],
+          "category": "Singular negative demonstrative statements: negative agreement confused",
+          "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged."
         }
       ],
       "parallelExerciseId": "nds-review-e017"
@@ -1103,14 +1097,14 @@
     {
       "type": "word-order",
       "instruction": "Put the words in the correct order.",
-      "prompt": "Build “These books are not at home.” Use nämä kirjat (“these books”) and kotona (“at home”).",
+      "prompt": "Build “These books are not at home.” Start from “Nämä kirjat ovat kotona.” (“These books are at home.”). Keep the subject and location unchanged.",
       "acceptedAnswers": ["Nämä kirjat eivät ole kotona."],
-      "explanation": "Nämä kirjat is plural and therefore takes eivät ole.",
+      "explanation": "Use eivät ole with a plural demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
         "translation": "These books are not at home.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
             "finnish": "Nämä kirjat",
@@ -1122,16 +1116,16 @@
           {
             "finnish": "eivät",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
             "formation": "third-person plural form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
             "finnish": "kotona",
@@ -1144,14 +1138,14 @@
       },
       "requiredSkills": ["Plural negative demonstrative statements"],
       "id": "nds-review-e021",
-      "tokens": ["ole", "kotona.", "Nämä", "kirjat", "eivät"],
+      "tokens": ["kotona.", "ole", "eivät", "kirjat", "Nämä"],
       "targetSkill": "Plural negative demonstrative statements",
-      "misconceptionCategory": "Plural negative demonstrative statements: form not yet secure",
+      "misconceptionCategory": "Plural negative demonstrative statements: negative agreement confused",
       "answerDiagnostics": [
         {
           "answers": ["Nämä kirjat ei ole kotona."],
-          "category": "Plural negative demonstrative statements: form not yet secure",
-          "explanation": "Nämä kirjat is plural and therefore takes eivät ole."
+          "category": "Plural negative demonstrative statements: negative agreement confused",
+          "explanation": "Use eivät ole with a plural demonstrative noun phrase. Keep the noun and location unchanged."
         }
       ],
       "parallelExerciseId": "nds-review-e022"
@@ -1215,35 +1209,35 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “That book is not at home.” Start from “Tuo kirja on kotona.” (“That book is at home.”). Keep tuo and kirja unchanged.",
-      "acceptedAnswers": ["Tuo kirja ei ole kotona."],
-      "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number.",
+      "prompt": "Choose “This book is not at home.” Start from “Tämä kirja on kotona.” (“This book is at home.”). Keep the subject and location unchanged.",
+      "acceptedAnswers": ["Tämä kirja ei ole kotona."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "That book is not at home.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "This book is not at home.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Tuo kirja",
-            "meaning": "that book",
+            "finnish": "Tämä kirja",
+            "meaning": "this book",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "tuo + kirja",
+            "baseForm": "tämä + kirja",
             "formation": "the complete singular subject is supplied"
           },
           {
             "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
             "formation": "third-person singular form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
             "finnish": "kotona",
@@ -1254,27 +1248,27 @@
           }
         ]
       },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "requiredSkills": ["Singular negative demonstrative statements"],
       "id": "nds-review-e023",
       "options": [
-        "Tuo kirja ei ole kotona.",
-        "Tuo kirja eivät ole kotona.",
-        "Tuo kirja on kotona.",
-        "Tuo kirja ei on kotona."
+        "Tämä kirja ei ole kotona.",
+        "Tämä kirja eivät ole kotona.",
+        "Tämä kirja on kotona.",
+        "Tämä kirja ei on kotona."
       ],
       "optionFeedback": {
-        "Tuo kirja ei ole kotona.": "Correct. Replace on with ei ole; the demonstrative and noun keep their singular number.",
-        "Tuo kirja eivät ole kotona.": "“eivät” is the plural negative verb; use “ei”, the singular negative verb.",
-        "Tuo kirja on kotona.": "“on” is the singular affirmative form of olla; use “ei”, the singular negative verb.",
-        "Tuo kirja ei on kotona.": "“on” is the singular affirmative form of olla; use “ole”, the main verb form required after the negative verb."
+        "Tämä kirja ei ole kotona.": "Correct. Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
+        "Tämä kirja eivät ole kotona.": "The negative verb has the wrong number. Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
+        "Tämä kirja on kotona.": "This sentence is affirmative; the intended meaning is negative.",
+        "Tämä kirja ei on kotona.": "Use ole after the negative verb; the affirmative olla form does not belong here."
       },
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
       "answerDiagnostics": [
         {
-          "answers": ["Tuo kirja eivät ole kotona."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace on with ei ole; the demonstrative and noun keep their singular number."
+          "answers": ["Tämä kirja eivät ole kotona."],
+          "category": "Singular negative demonstrative statements: negative agreement confused",
+          "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged."
         }
       ],
       "parallelExerciseId": "nds-review-e024"
@@ -1282,35 +1276,35 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "Choose the sentence that means “The books are not at home.” Start from “Ne kirjat ovat kotona.” (“The books are at home.”). Keep ne and kirjat unchanged.",
-      "acceptedAnswers": ["Ne kirjat eivät ole kotona."],
-      "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
+      "prompt": "Choose “This car is not at home.” Start from “Tämä auto on kotona.” (“This car is at home.”). Keep the subject and location unchanged.",
+      "acceptedAnswers": ["Tämä auto ei ole kotona."],
+      "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
       "tags": ["sentence", "standard-written-finnish"],
       "vocabulary": [],
       "sentenceExplanation": {
-        "translation": "The books are not at home.",
-        "pattern": "demonstrative noun phrase subject + negative verb carrying number agreement + main verb after the negative verb + location",
+        "translation": "This car is not at home.",
+        "pattern": "demonstrative noun phrase + negative verb + ole + location",
         "parts": [
           {
-            "finnish": "Ne kirjat",
-            "meaning": "the books",
+            "finnish": "Tämä auto",
+            "meaning": "this car",
             "role": "demonstrative noun phrase subject",
-            "baseForm": "ne + kirja",
-            "formation": "the complete plural subject is supplied"
+            "baseForm": "tämä + auto",
+            "formation": "the complete singular subject is supplied"
           },
           {
-            "finnish": "eivät",
+            "finnish": "ei",
             "meaning": "not",
-            "role": "negative verb carrying number agreement",
+            "role": "negative verb",
             "baseForm": "ei",
-            "formation": "third-person plural form"
+            "formation": "third-person singular form"
           },
           {
             "finnish": "ole",
             "meaning": "be",
-            "role": "main verb after the negative verb",
+            "role": "main verb after negation",
             "baseForm": "olla",
-            "formation": "fixed form after the negative verb"
+            "formation": "fixed ole after the negative verb"
           },
           {
             "finnish": "kotona",
@@ -1321,27 +1315,27 @@
           }
         ]
       },
-      "requiredSkills": ["Demonstrative affirmative-to-negative transformation"],
+      "requiredSkills": ["Singular negative demonstrative statements"],
       "id": "nds-review-e024",
       "options": [
-        "Ne kirjat eivät ole kotona.",
-        "Ne kirjat ei ole kotona.",
-        "Ne kirjat ovat kotona.",
-        "Ne kirjat eivät ovat kotona."
+        "Tämä auto ei ole kotona.",
+        "Tämä auto eivät ole kotona.",
+        "Tämä auto on kotona.",
+        "Tämä auto ei on kotona."
       ],
       "optionFeedback": {
-        "Ne kirjat eivät ole kotona.": "Correct. Replace ovat with eivät ole; the demonstrative and noun keep their plural number.",
-        "Ne kirjat ei ole kotona.": "“ei” is the singular negative verb; use “eivät”, the plural negative verb.",
-        "Ne kirjat ovat kotona.": "“ovat” is the plural affirmative form of olla; use “eivät”, the plural negative verb.",
-        "Ne kirjat eivät ovat kotona.": "“ovat” is the plural affirmative form of olla; use “ole”, the main verb form required after the negative verb."
+        "Tämä auto ei ole kotona.": "Correct. Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
+        "Tämä auto eivät ole kotona.": "The negative verb has the wrong number. Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged.",
+        "Tämä auto on kotona.": "This sentence is affirmative; the intended meaning is negative.",
+        "Tämä auto ei on kotona.": "Use ole after the negative verb; the affirmative olla form does not belong here."
       },
-      "targetSkill": "Demonstrative affirmative-to-negative transformation",
-      "misconceptionCategory": "Demonstrative affirmative-to-negative transformation: form not yet secure",
+      "targetSkill": "Singular negative demonstrative statements",
+      "misconceptionCategory": "Singular negative demonstrative statements: negative agreement confused",
       "answerDiagnostics": [
         {
-          "answers": ["Ne kirjat ei ole kotona."],
-          "category": "Demonstrative affirmative-to-negative transformation: form not yet secure",
-          "explanation": "Replace ovat with eivät ole; the demonstrative and noun keep their plural number."
+          "answers": ["Tämä auto eivät ole kotona."],
+          "category": "Singular negative demonstrative statements: negative agreement confused",
+          "explanation": "Use ei ole with a singular demonstrative noun phrase. Keep the noun and location unchanged."
         }
       ],
       "parallelExerciseId": "nds-review-e023"

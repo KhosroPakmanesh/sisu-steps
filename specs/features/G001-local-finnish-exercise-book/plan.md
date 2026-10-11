@@ -1,5 +1,9 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-11 lesson consolidation
+
+Implement REQ-G001-151 / VAL-G001-110 with the project-local content skill. Record the actual pre-authoring blueprint; remove the selected 26 lessons and matching Focused tests while preserving whole number pairs. Transfer necessary explanations and lexical provenance, retarget Reviews to actual taught skills and repair mastery links. Advance only the twelve changed packs and changed retained lessons, synchronize summaries and explicit topology guards, update affected fixtures, run the complete client gate and rendered workflows at three widths, then record final assessment and scoped progress consequences. Retain dated prior evidence. Commit only when the user explicitly requests it; publication requires a separate instruction.
+
 This evolving product pack retains dated delivery slices. Use the [requirements](requirements.md), explicit supersession relationships and latest applicable [validation evidence](validation.md); old pack counts and preservation boundaries describe their own baseline. Supporting authoring guidance is canonical in [content policy](../../content-authoring.md). The [2026-10-08 complete Focused quality follow-up](../../content-assessments/focused-exercise-quality.md) records the present corpus review, revisions, actual validation and limitations; earlier selected-revision evidence remains historical.
 
 ## 2026-10-08 Focused exercise quality

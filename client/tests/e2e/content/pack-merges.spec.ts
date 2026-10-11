@@ -107,8 +107,8 @@ test('grades every retained demonstrative question and optional item in its merg
     }
     await expect(page.locator('.result-card')).toContainText('100%');
   }
-  expect(records).toHaveLength(324);
-  expect(new Set(records).size).toBe(324);
+  expect(records).toHaveLength(240);
+  expect(new Set(records).size).toBe(240);
   await writeFile(
     testInfo.outputPath('merged-demonstrative-questions.json'),
     JSON.stringify(records),

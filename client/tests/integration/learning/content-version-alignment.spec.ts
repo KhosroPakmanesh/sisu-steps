@@ -48,6 +48,23 @@ describe('content-pack version alignment', () => {
   );
   it.each([
     [
+      'twelve lesson-consolidated packs',
+      {
+        'vowel-harmony-location-endings': '1.1.0',
+        'kpt-singular-forms': '1.1.0',
+        't-plural-agreement': '1.1.0',
+        'personal-pronouns-affirmative-olla': '1.5.0',
+        'negative-olla-statements': '1.4.0',
+        'demonstrative-pronouns': '1.2.0',
+        'negative-demonstrative-statements': '1.5.0',
+        'affirmative-possession': '1.6.0',
+        'negative-possession': '1.6.0',
+        'possession-questions': '1.6.0',
+        'negative-possession-questions': '1.6.0',
+        'possessive-pronouns-endings': '2.4.0',
+      },
+    ],
+    [
       'nine number-specific preparation revisions',
       {
         'personal-pronouns-affirmative-olla': '1.4.0',
@@ -233,7 +250,7 @@ describe('content-pack version alignment', () => {
       },
     ];
     const aligned = alignLearnerStateWithPacks(state, packs.map(topicPackToSummary));
-    expect(revised.version).toBe('2.4.0');
+    expect(revised.version).toBe('2.5.0');
     expect(aligned.attempts).toEqual([state.attempts[1]]);
     expect(aligned.unresolvedMistakeIds).toEqual([state.unresolvedMistakeIds[1]]);
     expect(aligned.lessonCompletions).toEqual([state.lessonCompletions[1]]);
@@ -242,18 +259,18 @@ describe('content-pack version alignment', () => {
     expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
   });
 
-  it('discards notes for removed mixed lessons and retains notes on still-owned lessons and topics', async () => {
+  it('discards notes for removed lessons and retains notes on still-owned lessons and topics', async () => {
     const source = await loadContentSource('content');
     const packs = source.packs as unknown as TopicPack[];
     const state = createEmptyLearnerState(
       Object.fromEntries(packs.map((pack) => [pack.id, pack.version])),
     );
-    state.contentPackVersions['possession-questions'] = '1.5.0';
+    state.contentPackVersions['possession-questions'] = '1.6.0';
     state.learnerNotes = [
       {
         topicId: 'possession-questions',
-        lessonId: 'pqs-onko',
-        text: 'Removed mixed lesson',
+        lessonId: 'pqs-word-order-singular',
+        text: 'Removed repetitive lesson',
         updatedAt: '2026-10-08T00:00:00.000Z',
       },
       {

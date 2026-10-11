@@ -10,22 +10,6 @@ test.beforeAll(async () => {
 const alternatives = [
   {
     pack: 'personal-pronouns-affirmative-olla',
-    test: 'ppo-affirmative-agreement-plural-test',
-    lesson: 'ppo-affirmative-agreement-plural',
-    kind: 'scored',
-    id: 'ppo-t06-e03',
-    answer: 'Te olette aamulla siellä.',
-  },
-  {
-    pack: 'personal-pronouns-affirmative-olla',
-    test: 'ppo-affirmative-agreement-plural-test',
-    lesson: 'ppo-affirmative-agreement-plural',
-    kind: 'scored',
-    id: 'ppo-t06-e15',
-    answer: 'He ovat aamulla siellä.',
-  },
-  {
-    pack: 'personal-pronouns-affirmative-olla',
     test: 'ppo-pronoun-presence-singular-test',
     lesson: 'ppo-pronoun-presence-singular',
     kind: 'scored',
@@ -63,142 +47,6 @@ const alternatives = [
     kind: 'scored',
     id: 'ppo-pronoun-presence-plural-test-e107',
     answer: 'Olette illalla siellä.',
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-singular-test',
-    lesson: 'nds-negative-transformation-singular',
-    kind: 'scored',
-    id: 'nds-negative-transformation-test-e003',
-    answer: "That car isn't here.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-singular-test',
-    lesson: 'nds-negative-transformation-singular',
-    kind: 'scored',
-    id: 'nds-negative-transformation-singular-test-e105',
-    answer: "That book isn't at home.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-singular-test',
-    lesson: 'nds-negative-transformation-singular',
-    kind: 'scored',
-    id: 'nds-negative-transformation-singular-test-e106',
-    answer: "The car isn't here.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-singular-test',
-    lesson: 'nds-negative-transformation-singular',
-    kind: 'scored',
-    id: 'nds-negative-transformation-singular-test-e106',
-    answer: "That car isn't here.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-singular-test',
-    lesson: 'nds-negative-transformation-singular',
-    kind: 'scored',
-    id: 'nds-negative-transformation-test-e013',
-    answer: "The car isn't at home.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-singular-test',
-    lesson: 'nds-negative-transformation-singular',
-    kind: 'scored',
-    id: 'nds-negative-transformation-test-e013',
-    answer: "That car isn't at home.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-singular-test',
-    lesson: 'nds-negative-transformation-singular',
-    kind: 'practice',
-    id: 'nds-negative-transformation-p01',
-    answer: "That car isn't at home.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-plural-test',
-    lesson: 'nds-negative-transformation-plural',
-    kind: 'scored',
-    id: 'nds-negative-transformation-test-e004',
-    answer: "The cars aren't here.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-plural-test',
-    lesson: 'nds-negative-transformation-plural',
-    kind: 'scored',
-    id: 'nds-negative-transformation-test-e004',
-    answer: "Those cars aren't here.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-plural-test',
-    lesson: 'nds-negative-transformation-plural',
-    kind: 'scored',
-    id: 'nds-negative-transformation-plural-test-e105',
-    answer: "The cars aren't at home.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-plural-test',
-    lesson: 'nds-negative-transformation-plural',
-    kind: 'scored',
-    id: 'nds-negative-transformation-plural-test-e105',
-    answer: "Those cars aren't at home.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-plural-test',
-    lesson: 'nds-negative-transformation-plural',
-    kind: 'scored',
-    id: 'nds-negative-transformation-plural-test-e106',
-    answer: "These cars aren't here.",
-  },
-  {
-    pack: 'negative-demonstrative-statements',
-    test: 'nds-negative-transformation-plural-test',
-    lesson: 'nds-negative-transformation-plural',
-    kind: 'scored',
-    id: 'nds-negative-transformation-test-e014',
-    answer: "These cars aren't at home.",
-  },
-  {
-    pack: 'negative-possession',
-    test: 'nps-sentences-singular-test',
-    lesson: 'nps-sentences-singular',
-    kind: 'practice',
-    id: 'nps-sentences-singular-practice-04',
-    answer: "You don't have a cat.",
-  },
-  {
-    pack: 'negative-possession',
-    test: 'nps-sentences-singular-test',
-    lesson: 'nps-sentences-singular',
-    kind: 'practice',
-    id: 'nps-sentences-singular-practice-04',
-    answer: "You don't have the cat.",
-  },
-  {
-    pack: 'negative-possession-questions',
-    test: 'npq-word-order-singular-test',
-    lesson: 'npq-word-order-singular',
-    kind: 'practice',
-    id: 'npq-word-order-singular-practice-04',
-    answer: "Don't you have a game?",
-  },
-  {
-    pack: 'negative-possession-questions',
-    test: 'npq-word-order-singular-test',
-    lesson: 'npq-word-order-singular',
-    kind: 'practice',
-    id: 'npq-word-order-singular-practice-04',
-    answer: "Don't you have the game?",
   },
 ];
 for (const packId of [...new Set(alternatives.map((item) => item.pack))]) {
@@ -279,13 +127,13 @@ test('keeps fixed-on diagnostics scoped and explains second-person owner contras
   }
 });
 
-test('grades all five replacement optional tasks and their taught corrections', async ({
+test('grades all four retained replacement optional tasks and their taught corrections', async ({
   page,
 }, testInfo) => {
   test.setTimeout(180_000);
   const cases = [
-    ['affirmative-possession', 'aps-fixed-on-singular', 'on', 'olen'],
-    ['affirmative-possession', 'aps-sentences-singular', 'You have a game.', 'You are a game.'],
+    ['affirmative-possession', 'aps-fixed-on-singular', 'You have a ball.', 'You are a ball.'],
+
     [
       'negative-possession',
       'nps-partitive-singular',

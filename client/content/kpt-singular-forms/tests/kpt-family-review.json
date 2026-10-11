@@ -4,23 +4,19 @@
   "focus": "Retrieve the learned KPT families and strong–weak relationship.",
   "stage": "review",
   "targetSkills": [
-    "Strong and weak KPT grades",
     "KPT double consonants",
     "KPT common single consonants",
     "KPT special k changes",
     "KPT consonant clusters",
-    "KPT recognition",
     "Genitive -n",
     "Minä verb forms with KPT"
   ],
   "prerequisiteSkills": [],
   "lessonIds": [
-    "strong-weak-kpt-grades",
     "kpt-doubles",
     "kpt-singles",
     "kpt-special-k",
     "kpt-clusters",
-    "kpt-basics",
     "genitive-nouns",
     "verb-kpt"
   ],
@@ -201,14 +197,19 @@
       "acceptedAnswers": ["strong grade"],
       "explanation": "poika is the strong grade form in the learned pair poika → pojan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["poika"],
       "options": ["strong grade", "weak grade"],
       "optionFeedback": {
         "strong grade": "Correct. poika is the strong grade form in the learned pair poika → pojan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
         "weak grade": "poika is not the weak grade member of this pair. Compare it with pojan."
       },
-      "targetSkill": "Strong and weak KPT grades",
+      "targetSkill": "KPT special k changes",
       "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
       "parallelExerciseId": "kptx-family-review-grade-002"
     },
@@ -216,19 +217,19 @@
       "id": "kptx-family-review-grade-002",
       "type": "multiple-choice",
       "instruction": "Choose the grade.",
-      "prompt": "In the pair leipä (“bread”) → leivän (“of the bread”), which grade is leivän?",
+      "prompt": "In the pair poika (“boy”) → pojan (“of the boy”), which grade is pojan?",
       "acceptedAnswers": ["weak grade"],
-      "explanation": "leivän is the weak grade form in the learned pair leipä → leivän. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "explanation": "pojan is the weak grade form in the learned pair poika → pojan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
-      "vocabulary": ["leipä"],
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika"],
       "options": ["strong grade", "weak grade"],
       "optionFeedback": {
-        "strong grade": "leivän is not the strong grade member of this pair. Compare it with leipä.",
-        "weak grade": "Correct. leivän is the weak grade form in the learned pair leipä → leivän. The labels name consonant patterns; both forms are correct in their own grammatical positions."
+        "strong grade": "pojan is not the strong grade member of this pair. Compare it with poika.",
+        "weak grade": "Correct. pojan is the weak grade form in the learned pair poika → pojan. The labels name consonant patterns; both forms are correct in their own grammatical positions."
       },
-      "targetSkill": "Strong and weak KPT grades",
-      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: consonant grade or change confused",
       "parallelExerciseId": "kptx-family-review-grade-001"
     },
     {
@@ -239,9 +240,14 @@
       "acceptedAnswers": ["strong"],
       "explanation": "puku is the strong grade form in the learned pair puku → puvun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["puku"],
-      "targetSkill": "Strong and weak KPT grades",
+      "targetSkill": "KPT special k changes",
       "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
       "parallelExerciseId": "kptx-family-review-grade-004"
     },
@@ -249,14 +255,14 @@
       "id": "kptx-family-review-grade-004",
       "type": "fill-blank",
       "instruction": "Name the consonant grade.",
-      "prompt": "rannan in ranta (“beach”) → rannan (“of the beach”) is the ____ grade.",
+      "prompt": "puvun in puku (“suit”) → puvun (“of the suit”) is the ____ grade.",
       "acceptedAnswers": ["weak"],
-      "explanation": "rannan is the weak grade form in the learned pair ranta → rannan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "explanation": "puvun is the weak grade form in the learned pair puku → puvun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
-      "vocabulary": ["ranta"],
-      "targetSkill": "Strong and weak KPT grades",
-      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["puku"],
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: consonant grade or change confused",
       "parallelExerciseId": "kptx-family-review-grade-003"
     },
     {
@@ -267,14 +273,19 @@
       "acceptedAnswers": ["strong grade"],
       "explanation": "hattu is the strong grade form in the learned pair hattu → hatun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["hattu"],
       "options": ["strong grade", "weak grade"],
       "optionFeedback": {
         "strong grade": "Correct. hattu is the strong grade form in the learned pair hattu → hatun. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
         "weak grade": "hattu is not the weak grade member of this pair. Compare it with hatun."
       },
-      "targetSkill": "Strong and weak KPT grades",
+      "targetSkill": "KPT double consonants",
       "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
       "parallelExerciseId": "kptx-family-review-grade-006"
     },
@@ -286,14 +297,19 @@
       "acceptedAnswers": ["weak grade"],
       "explanation": "pankin is the weak grade form in the learned pair pankki → pankin. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["pankki"],
       "options": ["strong grade", "weak grade"],
       "optionFeedback": {
         "strong grade": "pankin is not the strong grade member of this pair. Compare it with pankki.",
         "weak grade": "Correct. pankin is the weak grade form in the learned pair pankki → pankin. The labels name consonant patterns; both forms are correct in their own grammatical positions."
       },
-      "targetSkill": "Strong and weak KPT grades",
+      "targetSkill": "KPT double consonants",
       "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
       "parallelExerciseId": "kptx-family-review-grade-005"
     },
@@ -305,9 +321,14 @@
       "acceptedAnswers": ["strong"],
       "explanation": "kaupunki is the strong grade form in the learned pair kaupunki → kaupungin. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["kaupunki"],
-      "targetSkill": "Strong and weak KPT grades",
+      "targetSkill": "KPT consonant clusters",
       "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
       "parallelExerciseId": "kptx-family-review-grade-008"
     },
@@ -315,14 +336,14 @@
       "id": "kptx-family-review-grade-008",
       "type": "fill-blank",
       "instruction": "Name the consonant grade.",
-      "prompt": "kaupan in kauppa (“shop”) → kaupan (“of the shop”) is the ____ grade.",
+      "prompt": "kengän in kenkä (“shoe”) → kengän (“of the shoe”) is the ____ grade.",
       "acceptedAnswers": ["weak"],
-      "explanation": "kaupan is the weak grade form in the learned pair kauppa → kaupan. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
+      "explanation": "kengän is the weak grade form in the learned pair kenkä → kengän. The labels name consonant patterns; both forms are correct in their own grammatical positions.",
       "tags": ["kpt", "grade-recognition"],
-      "requiredSkills": ["Strong and weak KPT grades"],
-      "vocabulary": ["kauppa"],
-      "targetSkill": "Strong and weak KPT grades",
-      "misconceptionCategory": "Strong and weak KPT grades: form not yet correct",
+      "requiredSkills": ["KPT consonant clusters"],
+      "vocabulary": ["kenkä"],
+      "targetSkill": "KPT consonant clusters",
+      "misconceptionCategory": "KPT consonant clusters: consonant grade or change confused",
       "parallelExerciseId": "kptx-family-review-grade-007"
     },
     {

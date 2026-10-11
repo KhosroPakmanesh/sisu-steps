@@ -5,18 +5,18 @@ const packs = [
   {
     id: 'personal-pronouns-affirmative-olla',
     title: 'Personal pronouns and affirmative olla',
-    tests: 12,
-    focused: 10,
+    tests: 10,
+    focused: 8,
     reviews: 2,
-    exercises: 290,
+    exercises: 250,
   },
   {
     id: 'negative-olla-statements',
     title: 'Negative olla statements',
-    tests: 5,
-    focused: 4,
+    tests: 3,
+    focused: 2,
     reviews: 1,
-    exercises: 116,
+    exercises: 76,
   },
   {
     id: 'olla-questions-short-answers',
@@ -28,13 +28,13 @@ const packs = [
   },
 ];
 
-test('opens each smaller pronoun and olla topic pack without reducing the content', async ({
+test('opens each smaller pronoun and olla topic pack with the consolidated lesson inventory', async ({
   page,
 }) => {
   await page.goto('/');
 
   await expect(page.locator('.catalog-stats')).toContainText('14');
-  await expect(page.locator('.catalog-stats')).toContainText('2758');
+  await expect(page.locator('.catalog-stats')).toContainText('2226');
 
   for (const pack of packs) {
     await expandTopicGroup(page, 'pronouns-and-olla');

@@ -138,7 +138,7 @@ for (const inventory of FOCUSED_EXPANSION_INVENTORY) {
   });
 }
 
-test('checks all eight final editorial corrections and alternatives at every viewport', async ({
+test('checks all seven retained editorial corrections and alternatives at every viewport', async ({
   page,
 }, testInfo) => {
   test.setTimeout(180_000);
@@ -150,13 +150,11 @@ test('checks all eight final editorial corrections and alternatives at every vie
     'aps-possessors-plural-test-e105',
     'aps-possessors-plural-test-e106',
     'aps-possessors-singular-test-e103',
-    'nds-negative-transformation-singular-test-e105',
   ]);
   const oldModels: Record<string, string> = {
     'aps-possessors-plural-test-e105': 'They have a pillow.',
     'aps-possessors-plural-test-e106': 'You have a dog.',
     'aps-possessors-singular-test-e103': 'I have a dog.',
-    'nds-negative-transformation-singular-test-e105': 'That car is not at home.',
   };
   const records: Array<{ id: string; answer: string; correct: boolean }> = [];
   const captured = new Set<string>();
@@ -201,8 +199,8 @@ test('checks all eight final editorial corrections and alternatives at every vie
         }
       }
     }
-  expect(new Set(records.map((r) => r.id)).size).toBe(8);
-  expect(records.filter((r) => r.correct)).toHaveLength(17);
-  expect(records.filter((r) => !r.correct)).toHaveLength(4);
+  expect(new Set(records.map((r) => r.id)).size).toBe(7);
+  expect(records.filter((r) => r.correct)).toHaveLength(16);
+  expect(records.filter((r) => !r.correct)).toHaveLength(3);
   await writeFile(testInfo.outputPath('final-editorial-grading.json'), JSON.stringify(records));
 });

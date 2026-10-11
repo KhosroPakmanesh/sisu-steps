@@ -17,7 +17,7 @@ for (const appearance of ['Day', 'Night']) {
     await expect(card).toHaveCount(1);
     await expect(card).toContainText(`${review.exercises.length} exercises`);
     await card.getByRole('link', { name: 'Learn first' }).click();
-    await expect(page.locator('.lesson-list button')).toHaveCount(4);
+    await expect(page.locator('.lesson-list button')).toHaveCount(3);
     await expect(page.locator('.lesson-hero h1')).toHaveText(review.title);
     await page.goto(`/study/${topic}/${review.id}`);
 

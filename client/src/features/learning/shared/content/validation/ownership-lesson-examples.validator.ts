@@ -3,15 +3,11 @@ import { Lesson } from '../lesson.models';
 const POSSESSION_TARGETS = new Set([
   'Personal possessor forms',
   'Fixed on in possession',
-  'Affirmative possession sentences',
   'Fixed ei ole in possession',
   'Regular singular partitive in negative possession',
-  'Negative possession sentences',
   'Fixed onko in possession questions',
-  'Possession question word order',
   'Possession question short answers',
   'Fixed eikö ole in possession questions',
-  'Negative possession question word order',
   'Negative possession question short answers',
 ]);
 const OWNERS = ['minulla', 'sinulla', 'hänellä', 'meillä', 'teillä', 'heillä'];
@@ -66,13 +62,7 @@ export function validateOwnershipLessonExamples(lessons: readonly Lesson[]): voi
         if (!hasEnding(omitted, ending)) errors.push(`missing worked omission of -${ending}`);
       }
     }
-    if (
-      [
-        'Shared third-person possessive endings',
-        'Possessive pronoun omission and clear reference',
-        'Simple ownership identity sentences',
-      ].includes(target)
-    ) {
+    if (['Possessive pronoun omission and clear reference'].includes(target)) {
       for (const owner of thirdOwners) {
         if (!containsWord(finnish, owner))
           errors.push(`missing worked third-person owner ${owner}`);
@@ -95,7 +85,6 @@ export function validateOwnershipLessonExamples(lessons: readonly Lesson[]): voi
       target.startsWith('Possessive') ||
       target.includes('possessive') ||
       target === 'Genitive personal owner forms' ||
-      target === 'Simple ownership identity sentences' ||
       target === 'Whose questions with kenen'
     ) {
       const key = JSON.stringify(lesson.examples);

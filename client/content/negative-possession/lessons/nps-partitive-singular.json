@@ -1,6 +1,6 @@
 {
   "id": "nps-partitive-singular",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "title": "Regular negative noun forms with singular owners",
   "summary": "Practise the regular singular partitive with singular owners.",
   "stage": "focused",
@@ -220,14 +220,21 @@
     },
     {
       "id": "nps-partitive-singular-practice-04",
-      "type": "translation-fi",
-      "instruction": "Write the corrected sentence.",
-      "prompt": "Optional practice: Repair “Sinulla ei ole kynä.” to mean “You do not have a pen.” Address one person. Keep sinulla ei ole (“you do not have”); form the noun from kynä (“pen”).",
-      "acceptedAnswers": ["Sinulla ei ole kynää."],
+      "type": "translation-en",
+      "instruction": "Translate into English.",
+      "prompt": "Optional practice: Translate “Sinulla ei ole kynää.” into English.",
+      "acceptedAnswers": [
+        "You do not have a pen.",
+        "You do not have the pen.",
+        "You don't have a pen.",
+        "You don't have the pen.",
+        "You don’t have a pen.",
+        "You don’t have the pen."
+      ],
       "explanation": "Kynä has front vowels, so add -ä: kynää. Keep the supplied sinulla ei ole unchanged.",
       "tags": ["lesson-practice", "standard-written-finnish", "sentence"],
       "requiredSkills": ["Regular singular partitive in negative possession"],
-      "vocabulary": [],
+      "vocabulary": ["kynä"],
       "targetSkill": "Regular singular partitive in negative possession",
       "misconceptionCategory": "Regular singular partitive in negative possession: form or meaning confused",
       "sentenceExplanation": {
@@ -263,14 +270,7 @@
             "formation": "kynä + -ä = kynää; negative possession uses this regular singular partitive."
           }
         ]
-      },
-      "answerDiagnostics": [
-        {
-          "answers": ["Sinulla ei ole kynä."],
-          "category": "Regular singular partitive in negative possession: form or meaning confused",
-          "explanation": "Negative possession needs the singular partitive: kynä + -ä = kynää. The basic noun kynä does not fit after ei ole here."
-        }
-      ]
+      }
     }
   ],
   "numberScope": {

@@ -11,53 +11,34 @@ const RESPONSE_TYPES = [
 const SINGULAR = {
   skills: [
     'Singular demonstrative forms',
-    'Singular demonstrative reference',
     'Independent singular demonstratives',
     'Singular demonstratives before nouns',
     'Standard singular person reference',
   ],
-  lessonIds: [
-    'sdp-singular-forms',
-    'sdp-reference-choice',
-    'sdp-independent-use',
-    'sdp-noun-modifier',
-    'sdp-se-han',
-  ],
-  testCounts: [20, 24, 20, 20, 20, 24],
+  lessonIds: ['sdp-singular-forms', 'sdp-independent-use', 'sdp-noun-modifier', 'sdp-se-han'],
+  testCounts: [20, 20, 20, 20, 24],
   reviewId: 'sdp-review',
   validateBoundary: validateSingularBoundary,
 };
 const PLURAL = {
   skills: [
     'Plural demonstrative forms',
-    'Plural demonstrative reference',
     'Independent plural demonstratives',
     'Plural demonstratives before nouns',
-    'Plural demonstrative-noun agreement',
     'Standard plural person reference',
   ],
-  lessonIds: [
-    'pdp-plural-forms',
-    'pdp-reference-choice',
-    'pdp-independent-use',
-    'pdp-noun-modifier',
-    'pdp-number-agreement',
-    'pdp-ne-he',
-  ],
-  testCounts: [20, 24, 20, 20, 24, 20, 24],
+  lessonIds: ['pdp-plural-forms', 'pdp-independent-use', 'pdp-noun-modifier', 'pdp-ne-he'],
+  testCounts: [20, 20, 20, 20, 24],
   reviewId: 'pdp-review',
   validateBoundary: validatePluralBoundary,
 };
 const PAIRED_LESSON_IDS = [
   'sdp-singular-forms',
   'pdp-plural-forms',
-  'sdp-reference-choice',
-  'pdp-reference-choice',
   'sdp-independent-use',
   'pdp-independent-use',
   'sdp-noun-modifier',
   'pdp-noun-modifier',
-  'pdp-number-agreement',
   'sdp-se-han',
   'pdp-ne-he',
 ];
@@ -69,7 +50,7 @@ const PACKS = {
       const scope = id.startsWith('sdp-') ? SINGULAR : PLURAL;
       return scope.skills[scope.lessonIds.indexOf(id)];
     }),
-    testCounts: [20, 20, 24, 24, 20, 20, 20, 20, 24, 20, 20, 24, 24],
+    testCounts: [20, 20, 20, 20, 20, 20, 20, 20, 24, 24],
     reviewScopes: [SINGULAR, PLURAL],
     validateBoundary: validateNumberBoundaries,
   },
@@ -77,28 +58,15 @@ const PACKS = {
     skills: [
       'Singular negative demonstrative statements',
       'Plural negative demonstrative statements',
-      'Demonstrative affirmative-to-negative transformation',
     ],
-    lessonIds: [
-      'nds-singular-negative',
-      'nds-plural-negative',
-      'nds-negative-transformation-singular',
-      'nds-negative-transformation-plural',
-    ],
+    lessonIds: ['nds-singular-negative', 'nds-plural-negative'],
     focusedSkills: [
       'Singular negative demonstrative statements',
       'Plural negative demonstrative statements',
-      'Demonstrative affirmative-to-negative transformation',
-      'Demonstrative affirmative-to-negative transformation',
     ],
-    practiceCount: 12,
-    focusedTestIds: [
-      'nds-singular-negative-test',
-      'nds-plural-negative-test',
-      'nds-negative-transformation-singular-test',
-      'nds-negative-transformation-plural-test',
-    ],
-    testCounts: [20, 24, 20, 20, 24],
+    practiceCount: 8,
+    focusedTestIds: ['nds-singular-negative-test', 'nds-plural-negative-test'],
+    testCounts: [20, 24, 24],
     reviewId: 'nds-review',
     validateBoundary: validateNegativeBoundary,
   },
@@ -394,11 +362,7 @@ function validatePluralBoundary(pack, errors) {
 
 function validateNegativeBoundary(pack, errors) {
   const [singular, plural] = pack.tests;
-  const transformations = pack.tests.filter(
-    (test) =>
-      test.stage === 'focused' &&
-      test.targetSkills?.includes('Demonstrative affirmative-to-negative transformation'),
-  );
+  const transformations = pack.tests.filter((test) => test.stage === 'review');
   if (singular?.exercises?.some((exercise) => !/\bei ole\b/iu.test(finnishAnswer(exercise))))
     errors.push(`${singular?.id}: every answer must keep singular ei ole`);
   if (plural?.exercises?.some((exercise) => !/\beivät ole\b/iu.test(finnishAnswer(exercise))))
@@ -420,12 +384,6 @@ function validateNegativeBoundary(pack, errors) {
         !/\beivät ole\b/iu.test(finnish)
       ) {
         errors.push(`${exercise.id}: plural negative target must keep eivät ole`);
-      }
-      if (
-        exercise.targetSkill === 'Demonstrative affirmative-to-negative transformation' &&
-        !/\b(?:ei|eivät) ole\b/iu.test(finnish)
-      ) {
-        errors.push(`${exercise.id}: transformation target must produce a negative olla frame`);
       }
     }
   }

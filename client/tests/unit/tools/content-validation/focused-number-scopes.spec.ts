@@ -13,20 +13,20 @@ describe('Focused tests separated by grammatical number', () => {
     packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   });
 
-  it('keeps the full inventory and 44 groups with 44 independently owned preparation lessons', async () => {
+  it('keeps the full inventory and 30 groups with 30 independently owned preparation lessons', async () => {
     expect(packs).toHaveLength(14);
-    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(103);
-    expect(packs.flatMap((pack) => pack.tests)).toHaveLength(125);
+    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(77);
+    expect(packs.flatMap((pack) => pack.tests)).toHaveLength(99);
     expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(
-      2758,
+      2226,
     );
     expect(
       packs.flatMap((pack) => pack.lessons.flatMap((lesson) => lesson.practiceExercises)),
-    ).toHaveLength(313);
+    ).toHaveLength(239);
     const groups = packs.flatMap((pack) => pack.tests.filter((test) => test.numberScope));
-    expect(groups).toHaveLength(44);
-    expect(new Set(groups.flatMap((test) => test.lessonIds)).size).toBe(44);
-    expect(new Set(groups.flatMap((test) => test.exercises.map((item) => item.id))).size).toBe(880);
+    expect(groups).toHaveLength(30);
+    expect(new Set(groups.flatMap((test) => test.lessonIds)).size).toBe(30);
+    expect(new Set(groups.flatMap((test) => test.exercises.map((item) => item.id))).size).toBe(600);
     for (const pack of packs) {
       expect(validateSource(pack)).toEqual([]);
       expect(() => validateRuntime(pack)).not.toThrow();
@@ -160,11 +160,11 @@ describe('Focused tests separated by grammatical number', () => {
     }
   });
 
-  it('grades all 95 optional questions in independently scoped lessons', () => {
+  it('grades all 65 optional questions in independently scoped lessons', () => {
     const lessons = packs.flatMap((pack) => pack.lessons.filter((lesson) => lesson.numberScope));
     const practice = lessons.flatMap((lesson) => lesson.practiceExercises);
-    expect(practice).toHaveLength(95);
-    expect(new Set(practice.map((exercise) => exercise.id)).size).toBe(95);
+    expect(practice).toHaveLength(65);
+    expect(new Set(practice.map((exercise) => exercise.id)).size).toBe(65);
     for (const lesson of lessons) {
       expect(lesson.practiceExercises.length).toBeGreaterThanOrEqual(2);
       expect(lesson.practiceExercises.length).toBeLessThanOrEqual(5);
@@ -186,11 +186,11 @@ describe('Focused tests separated by grammatical number', () => {
     expect(() => validateRuntime(pack)).toThrow('declared person singular group');
   });
 
-  it('grades all 880 repartitioned questions, alternatives, and authored diagnostics', () => {
+  it('grades all 600 repartitioned questions, alternatives, and authored diagnostics', () => {
     const items = packs.flatMap((pack) =>
       pack.tests.filter((test) => test.numberScope).flatMap((test) => test.exercises),
     );
-    expect(items).toHaveLength(880);
+    expect(items).toHaveLength(600);
     for (const item of items) {
       for (const answer of item.acceptedAnswers)
         expect(gradeAnswer(item, answer).correct, item.id).toBe(true);

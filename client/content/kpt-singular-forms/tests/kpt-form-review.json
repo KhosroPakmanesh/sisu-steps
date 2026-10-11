@@ -4,23 +4,19 @@
   "focus": "Apply learned KPT patterns in controlled genitive and minä forms.",
   "stage": "review",
   "targetSkills": [
-    "Strong and weak KPT grades",
     "KPT double consonants",
     "KPT common single consonants",
     "KPT special k changes",
     "KPT consonant clusters",
-    "KPT recognition",
     "Genitive -n",
     "Minä verb forms with KPT"
   ],
   "prerequisiteSkills": [],
   "lessonIds": [
-    "strong-weak-kpt-grades",
     "kpt-doubles",
     "kpt-singles",
     "kpt-special-k",
     "kpt-clusters",
-    "kpt-basics",
     "genitive-nouns",
     "verb-kpt"
   ],
@@ -33,9 +29,14 @@
       "acceptedAnswers": ["kk → k"],
       "explanation": "Compare pankki with pankin. The double kk becomes a single k; the separate -n ending marks the genitive.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["pankki"],
-      "targetSkill": "KPT recognition",
+      "targetSkill": "KPT double consonants",
       "misconceptionCategory": "KPT recognition: form not yet correct",
       "parallelExerciseId": "ff-a1-t13-e11",
       "options": ["k → ∅", "kk → k", "nk → ng"],
@@ -49,20 +50,20 @@
       "id": "ff-a1-t13-e11",
       "type": "multiple-choice",
       "instruction": "Identify the consonant change in the supplied forms.",
-      "prompt": "leipä (“bread”) → leivän (“of the bread”): which consonant change is shown?",
-      "acceptedAnswers": ["p → v"],
-      "explanation": "Compare leipä with leivän. The single p becomes v; the separate -n ending marks the genitive.",
+      "prompt": "matto (“rug”) → maton (“of the rug”): which consonant change is shown?",
+      "acceptedAnswers": ["tt → t"],
+      "explanation": "Compare matto with maton. The single p becomes v; the separate -n ending marks the genitive.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
-      "vocabulary": ["leipä"],
-      "targetSkill": "KPT recognition",
-      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "requiredSkills": ["KPT double consonants"],
+      "vocabulary": ["matto"],
+      "targetSkill": "KPT double consonants",
+      "misconceptionCategory": "KPT double consonants: consonant grade or change confused",
       "parallelExerciseId": "ff-a1-t13-e10",
-      "options": ["p → v", "pp → p", "t → d"],
+      "options": ["tt → t", "pp → p", "t → d"],
       "optionFeedback": {
-        "p → v": "Correct. The p in leipä corresponds to v in leivän.",
+        "tt → t": "Correct. The p in matto corresponds to v in maton.",
         "pp → p": "Leipä has one p, not pp. Here the single p becomes v.",
-        "t → d": "There is no t or d in this pair. Compare the p in leipä with v in leivän."
+        "t → d": "There is no t or d in this pair. Compare the p in matto with v in maton."
       }
     },
     {
@@ -285,7 +286,12 @@
       "acceptedAnswers": ["p → v"],
       "explanation": "tapa → tavan uses p → v. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["tapa"],
       "options": ["p → v", "kk → k", "pp → p"],
       "optionFeedback": {
@@ -293,7 +299,7 @@
         "kk → k": "kk → k does not describe the visible consonants in this pair.",
         "pp → p": "pp → p does not describe the visible consonants in this pair."
       },
-      "targetSkill": "KPT recognition",
+      "targetSkill": "KPT common single consonants",
       "misconceptionCategory": "KPT recognition: form not yet correct",
       "parallelExerciseId": "kptx-form-review-recognition-002"
     },
@@ -305,7 +311,12 @@
       "acceptedAnswers": ["t → d"],
       "explanation": "satu → sadun uses t → d. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["satu"],
       "options": ["t → d", "kk → k", "pp → p"],
       "optionFeedback": {
@@ -313,7 +324,7 @@
         "kk → k": "kk → k does not describe the visible consonants in this pair.",
         "pp → p": "pp → p does not describe the visible consonants in this pair."
       },
-      "targetSkill": "KPT recognition",
+      "targetSkill": "KPT common single consonants",
       "misconceptionCategory": "KPT recognition: form not yet correct",
       "parallelExerciseId": "kptx-form-review-recognition-001"
     },
@@ -325,9 +336,14 @@
       "acceptedAnswers": ["p → v"],
       "explanation": "lupa → luvan uses p → v. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["lupa"],
-      "targetSkill": "KPT recognition",
+      "targetSkill": "KPT common single consonants",
       "misconceptionCategory": "KPT recognition: form not yet correct",
       "parallelExerciseId": "kptx-form-review-recognition-004"
     },
@@ -335,14 +351,14 @@
       "id": "kptx-form-review-recognition-004",
       "type": "fill-blank",
       "instruction": "Name the KPT change.",
-      "prompt": "poika (“boy”) → pojan (“of the boy”): write the consonant change.",
-      "acceptedAnswers": ["k disappears and i becomes j"],
-      "explanation": "poika → pojan uses k disappears and i becomes j. The ending is already present; identify only the consonant change.",
+      "prompt": "lukea (“to read”) → luen (“I read”): write the consonant change.",
+      "acceptedAnswers": ["k disappears"],
+      "explanation": "lukea → luen uses k disappears. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
-      "vocabulary": ["poika"],
-      "targetSkill": "KPT recognition",
-      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "requiredSkills": ["KPT common single consonants"],
+      "vocabulary": ["lukea"],
+      "targetSkill": "KPT common single consonants",
+      "misconceptionCategory": "KPT common single consonants: consonant grade or change confused",
       "parallelExerciseId": "kptx-form-review-recognition-003"
     },
     {
@@ -353,7 +369,12 @@
       "acceptedAnswers": ["k → v"],
       "explanation": "puku → puvun uses k → v. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["puku"],
       "options": ["k → v", "kk → k", "pp → p"],
       "optionFeedback": {
@@ -361,7 +382,7 @@
         "kk → k": "kk → k does not describe the visible consonants in this pair.",
         "pp → p": "pp → p does not describe the visible consonants in this pair."
       },
-      "targetSkill": "KPT recognition",
+      "targetSkill": "KPT special k changes",
       "misconceptionCategory": "KPT recognition: form not yet correct",
       "parallelExerciseId": "kptx-form-review-recognition-006"
     },
@@ -373,7 +394,12 @@
       "acceptedAnswers": ["k disappears and i becomes j"],
       "explanation": "aika → ajan uses k disappears and i becomes j. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["aika"],
       "options": ["k disappears and i becomes j", "kk → k", "pp → p"],
       "optionFeedback": {
@@ -381,7 +407,7 @@
         "kk → k": "kk → k does not describe the visible consonants in this pair.",
         "pp → p": "pp → p does not describe the visible consonants in this pair."
       },
-      "targetSkill": "KPT recognition",
+      "targetSkill": "KPT special k changes",
       "misconceptionCategory": "KPT recognition: form not yet correct",
       "parallelExerciseId": "kptx-form-review-recognition-005"
     },
@@ -393,9 +419,14 @@
       "acceptedAnswers": ["k → v"],
       "explanation": "luku → luvun uses k → v. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
+      "requiredSkills": [
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["luku"],
-      "targetSkill": "KPT recognition",
+      "targetSkill": "KPT special k changes",
       "misconceptionCategory": "KPT recognition: form not yet correct",
       "parallelExerciseId": "kptx-form-review-recognition-008"
     },
@@ -403,14 +434,14 @@
       "id": "kptx-form-review-recognition-008",
       "type": "fill-blank",
       "instruction": "Name the KPT change.",
-      "prompt": "kaupunki (“city”) → kaupungin (“of the city”): write the consonant change.",
-      "acceptedAnswers": ["nk → ng"],
-      "explanation": "kaupunki → kaupungin uses nk → ng. The ending is already present; identify only the consonant change.",
+      "prompt": "poika (“boy”) → pojan (“of the boy”): write the consonant change.",
+      "acceptedAnswers": ["k disappears and i becomes j"],
+      "explanation": "poika → pojan uses k disappears and i becomes j. The ending is already present; identify only the consonant change.",
       "tags": ["kpt", "recognition"],
-      "requiredSkills": ["KPT recognition"],
-      "vocabulary": ["kaupunki"],
-      "targetSkill": "KPT recognition",
-      "misconceptionCategory": "KPT recognition: form not yet correct",
+      "requiredSkills": ["KPT special k changes"],
+      "vocabulary": ["poika"],
+      "targetSkill": "KPT special k changes",
+      "misconceptionCategory": "KPT special k changes: consonant grade or change confused",
       "parallelExerciseId": "kptx-form-review-recognition-007"
     },
     {

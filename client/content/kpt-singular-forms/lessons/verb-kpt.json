@@ -1,9 +1,15 @@
 {
   "id": "verb-kpt",
-  "version": "6.2.0",
+  "version": "6.2.1",
   "stage": "focused",
   "targetSkills": ["Minä verb forms with KPT"],
-  "prerequisiteSkills": ["KPT recognition"],
+  "prerequisiteSkills": [
+    "KPT double consonants",
+    "KPT common single consonants",
+    "KPT special k changes",
+    "KPT consonant clusters",
+    "Genitive -n"
+  ],
   "introducedVocabulary": [
     {
       "finnish": "odottaa",
@@ -99,7 +105,7 @@
     {
       "title": "One grammar decision at a time",
       "paragraphs": [
-        "This lesson uses only strong-to-weak changes already shown in the KPT recognition lesson: a double consonant shortens, k can disappear, p can become v, or a familiar cluster can weaken.",
+        "This lesson uses only strong-to-weak changes already shown in the preceding KPT family lessons: a double consonant shortens, k can disappear, p can become v, or a familiar cluster can weaken.",
         "The time, place, or manner word is always shown with its English meaning. Copy it unchanged and focus only on the KPT verb form.",
         "Verbs that need an object are left out here so the sentences do not require a new object-ending rule. Other verb types and strong-grade building are also left for later topics."
       ],
@@ -153,7 +159,13 @@
       "acceptedAnswers": ["nukun"],
       "explanation": "The complete sentence Minä nukun nyt means “I am sleeping now”. In nukkua, kk weakens to k. Form nuku-, then add the minä ending -n: nukun.",
       "tags": ["lesson-practice", "kpt", "verb", "sentence"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "requiredSkills": [
+        "Minä verb forms with KPT",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["nukkua", "nyt"],
       "sentenceExplanation": {
         "translation": "I am sleeping now.",
@@ -191,7 +203,13 @@
       "acceptedAnswers": ["Minä piirrän täällä"],
       "explanation": "Minä piirrän täällä means “I am drawing here”. The dictionary form is piirtää. Its stem is piirtä-. Change rt to rr to make piirrä-, then add the minä ending -n: piirrän. Minä and täällä stay unchanged.",
       "tags": ["lesson-practice", "kpt", "verb", "sentence"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "requiredSkills": [
+        "Minä verb forms with KPT",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["piirtää", "täällä"],
       "sentenceExplanation": {
         "translation": "I am drawing here.",
@@ -229,7 +247,13 @@
       "acceptedAnswers": ["Minä saavun tänään."],
       "explanation": "Minä saavun tänään means “I am arriving today”. In saapua, p weakens to v. Form saavu-, then add the minä ending -n: saavun.",
       "tags": ["lesson-practice", "kpt", "verb", "sentence"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "requiredSkills": [
+        "Minä verb forms with KPT",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["saapua", "tänään"],
       "options": ["Minä saavun tänään.", "Minä saapun tänään.", "Minä saapua tänään."],
       "optionFeedback": {
@@ -273,7 +297,13 @@
       "acceptedAnswers": ["I understand well"],
       "explanation": "Minä ymmärrän hyvin means “I understand well”. The dictionary form is ymmärtää. Its stem is ymmärtä-. Change rt to rr to make ymmärrä-, then add the minä ending -n: ymmärrän.",
       "tags": ["lesson-practice", "kpt", "verb", "sentence"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "requiredSkills": [
+        "Minä verb forms with KPT",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["ymmärtää", "hyvin"],
       "sentenceExplanation": {
         "translation": "I understand well.",
@@ -311,7 +341,13 @@
       "acceptedAnswers": ["opin"],
       "explanation": "The complete sentence Minä opin nopeasti means “I learn quickly”. In oppia, pp weakens to p. Form opi-, then add the minä ending -n: opin.",
       "tags": ["lesson-practice", "kpt", "verb", "sentence"],
-      "requiredSkills": ["Minä verb forms with KPT", "KPT recognition"],
+      "requiredSkills": [
+        "Minä verb forms with KPT",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["oppia", "nopeasti"],
       "sentenceExplanation": {
         "translation": "I learn quickly.",

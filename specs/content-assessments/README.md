@@ -1,5 +1,7 @@
 # Content assessment index
 
+The [2026-10-11 lesson consolidation](lesson-consolidation.md) governs the removal of 26 repeated lessons and matching Focused tests, whole singular/plural pairs, revised preparation and current counts. Read it alongside the inherited quality and number-specific preparation records; earlier counts remain dated evidence.
+
 These records retain dated decisions and evidence, not a continuously updated count inventory or independent language certification. Read the latest applicable shared correction alongside each pack record. The [content policy](../content-authoring.md) owns assessment criteria; the [project-local skill](../../.agents/skills/finnish-grammar-content-creator/SKILL.md) supplies the workflow and record template.
 
 The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records the complete 103-test review, current corrections, validation and limitations. It supersedes the incomplete whole-expansion disposition of the [selected-revision record](focused-test-minimum.md#selected-independent-audit-revisions--2026-10-07) for the present corpus; dated earlier results remain evidence of their original scope.
@@ -22,6 +24,8 @@ The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records 
 - [possessive-pronouns-endings](possessive-pronouns-endings.md)
 
 ## Shared assessments and corrections
+
+- [lesson-consolidation](lesson-consolidation.md)
 
 - [demonstrative-practice-expansion](demonstrative-practice-expansion.md)
 - [english-pronoun-alternatives](english-pronoun-alternatives.md)

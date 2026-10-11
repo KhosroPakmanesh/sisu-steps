@@ -21,8 +21,8 @@ describe('ownership worked-example coverage', () => {
   });
 
   it('accepts every authored lesson through both complete content boundaries', async () => {
-    expect(lessons).toHaveLength(44);
-    expect(lessons.flatMap((lesson) => lesson.examples)).toHaveLength(203);
+    expect(lessons).toHaveLength(32);
+    expect(lessons.flatMap((lesson) => lesson.examples)).toHaveLength(148);
     expect(validateSource(lessons)).toEqual([]);
     expect(() => validateRuntime(lessons)).not.toThrow();
     for (const pack of packs) {

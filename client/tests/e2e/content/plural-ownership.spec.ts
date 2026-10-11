@@ -25,7 +25,7 @@ test('retains both owner lesson groups in the merged pack at every viewport', as
   ] as const) {
     await page.goto(`/topics/${id}`);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(title);
-    await expect(page.locator('.test-card:not(.review-test)')).toHaveCount(20);
+    await expect(page.locator('.test-card:not(.review-test)')).toHaveCount(16);
     await expect(page.locator('.review-test')).toHaveCount(2);
     await page.goto(`/learn/${id}/${prefix}-owner-forms-test`);
     for (const owner of allowed) await expect(page.locator('.lesson-reader')).toContainText(owner);

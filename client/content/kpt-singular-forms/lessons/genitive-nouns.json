@@ -1,9 +1,14 @@
 {
   "id": "genitive-nouns",
-  "version": "5.2.0",
+  "version": "5.2.1",
   "stage": "focused",
   "targetSkills": ["Genitive -n"],
-  "prerequisiteSkills": ["KPT recognition"],
+  "prerequisiteSkills": [
+    "KPT double consonants",
+    "KPT common single consonants",
+    "KPT special k changes",
+    "KPT consonant clusters"
+  ],
   "introducedVocabulary": [
     {
       "finnish": "tyttö",
@@ -156,7 +161,13 @@
       "acceptedAnswers": ["pankin"],
       "explanation": "Use the known kk → k change, then add -n: pankki → panki- → pankin.",
       "tags": ["lesson-practice", "kpt", "noun", "genitive"],
-      "requiredSkills": ["Genitive -n", "KPT recognition"],
+      "requiredSkills": [
+        "Genitive -n",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["pankki", "kauppa", "matto"]
     },
     {
@@ -167,7 +178,13 @@
       "acceptedAnswers": ["kaupan"],
       "explanation": "Use the known pp → p change, then add -n: kauppa → kaupa- → kaupan.",
       "tags": ["lesson-practice", "kpt", "noun", "genitive"],
-      "requiredSkills": ["Genitive -n", "KPT recognition"],
+      "requiredSkills": [
+        "Genitive -n",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["pankki", "kauppa", "matto"]
     },
     {
@@ -178,7 +195,13 @@
       "acceptedAnswers": ["maton"],
       "explanation": "Use the known tt → t change, then add -n: matto → mato- → maton.",
       "tags": ["lesson-practice", "kpt", "noun", "genitive"],
-      "requiredSkills": ["Genitive -n", "KPT recognition"],
+      "requiredSkills": [
+        "Genitive -n",
+        "KPT double consonants",
+        "KPT common single consonants",
+        "KPT special k changes",
+        "KPT consonant clusters"
+      ],
       "vocabulary": ["pankki", "kauppa", "matto"],
       "options": ["maton", "matton", "matto"],
       "optionFeedback": {

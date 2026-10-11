@@ -13,7 +13,7 @@ let packs: TopicPack[];
 test.beforeAll(async () => {
   packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   expect(packs.map((pack) => pack.id)).toEqual(packIds);
-  expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(103);
+  expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(77);
 });
 for (const packId of packIds) {
   test(

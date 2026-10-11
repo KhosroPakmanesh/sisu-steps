@@ -17,7 +17,7 @@ describe('grammar-foundation successor pack validation', () => {
     plural = requirePack(source.packs as unknown as TopicPack[], 't-plural-agreement');
   });
 
-  it('accepts all three installed packs and preserves every legacy exercise id once', () => {
+  it('accepts all three installed packs and preserves every retained legacy exercise id once', () => {
     expect(validateHarmony(harmony)).toEqual([]);
     expect(validateKpt(kpt)).toEqual([]);
     expect(validatePlural(plural)).toEqual([]);
@@ -29,8 +29,8 @@ describe('grammar-foundation successor pack validation', () => {
       ])
       .map((exercise) => exercise.id)
       .filter((id) => id.startsWith('ff-a1-'));
-    expect(legacyIds).toHaveLength(246);
-    expect(new Set(legacyIds).size).toBe(246);
+    expect(legacyIds).toHaveLength(234);
+    expect(new Set(legacyIds).size).toBe(234);
   });
 
   it('rejects a duplicate scored task even when its id differs', () => {
@@ -49,8 +49,8 @@ describe('grammar-foundation successor pack validation', () => {
     pack.tests[0].exercises.pop();
     expect(validateKpt(pack)).toEqual(
       expect.arrayContaining([
-        'kpt-singular-forms: test counts must remain 20, 20, 20, 20, 20, 20, 21, 21, 32, 32, 34',
-        'kpt-singular-forms: pack needs exactly 260 scored exercises',
+        'kpt-singular-forms: test counts must remain 20, 20, 20, 20, 21, 21, 32, 32, 34',
+        'kpt-singular-forms: pack needs exactly 220 scored exercises',
       ]),
     );
   });

@@ -23,7 +23,7 @@ describe('split personal-pronoun and olla content validation', () => {
     questions = find('olla-questions-short-answers');
   });
 
-  it('accepts all three focused pack boundaries and preserves the complete exercise inventory', () => {
+  it('accepts all three focused pack boundaries and preserves the consolidated exercise inventory', () => {
     expect(validateAffirmative(affirmative)).toEqual([]);
     expect(validateNegative(negative)).toEqual([]);
     expect(validateQuestions(questions)).toEqual([]);
@@ -33,8 +33,8 @@ describe('split personal-pronoun and olla content validation', () => {
     const practiceCount = [affirmative, negative, questions]
       .flatMap((pack) => pack.lessons)
       .flatMap((lesson) => lesson.practiceExercises).length;
-    expect(scoredCount).toBe(600);
-    expect(practiceCount).toBe(65);
+    expect(scoredCount).toBe(520);
+    expect(practiceCount).toBe(55);
   });
 
   it('rejects changed counts and Focused/Review order', () => {
@@ -45,8 +45,8 @@ describe('split personal-pronoun and olla content validation', () => {
     expect(validateAffirmative(pack)).toEqual(
       expect.arrayContaining([
         'personal-pronouns-affirmative-olla: all declared Focused tests must precede Reviews',
-        'personal-pronouns-affirmative-olla: authored test counts must remain 24, 24, 20, 20, 24, 24, 20, 20, 20, 20, 40, 34',
-        'personal-pronouns-affirmative-olla: pack needs exactly 290 scored exercises',
+        'personal-pronouns-affirmative-olla: authored test counts must remain 24, 24, 20, 20, 24, 24, 20, 20, 40, 34',
+        'personal-pronouns-affirmative-olla: pack needs exactly 250 scored exercises',
       ]),
     );
   });

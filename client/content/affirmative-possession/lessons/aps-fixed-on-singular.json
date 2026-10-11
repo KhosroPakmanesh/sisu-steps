@@ -1,6 +1,6 @@
 {
   "id": "aps-fixed-on-singular",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "title": "Fixed on with singular owners",
   "summary": "Use fixed on with minulla, sinulla, and hänellä to say what the owner has.",
   "stage": "focused",
@@ -164,18 +164,18 @@
     },
     {
       "id": "aps-fixed-on-singular-practice-04",
-      "type": "fill-blank",
-      "instruction": "Write the possession verb.",
-      "prompt": "Optional practice: In “Sinulla on tyyny.” (“You have a pillow.”), which word means “have”? Address one person. Write only that word.",
-      "acceptedAnswers": ["on"],
-      "explanation": "On expresses possession. Sinulla identifies the owner, and tyyny names the pillow.",
+      "type": "translation-en",
+      "instruction": "Translate into English.",
+      "prompt": "Optional practice: Translate “Sinulla on pallo.” into English.",
+      "acceptedAnswers": ["You have a ball.", "You have the ball."],
+      "explanation": "On expresses possession. Sinulla identifies the owner, and pallo names the ball.",
       "tags": ["lesson-practice", "standard-written-finnish", "sentence"],
       "requiredSkills": ["Fixed on in possession"],
-      "vocabulary": [],
+      "vocabulary": ["pallo"],
       "targetSkill": "Fixed on in possession",
       "misconceptionCategory": "Fixed on in possession: form or meaning confused",
       "sentenceExplanation": {
-        "translation": "You have a pillow.",
+        "translation": "You have a ball.",
         "pattern": "possessor + on + basic singular noun",
         "parts": [
           {
@@ -193,11 +193,11 @@
             "formation": "fixed on in possession"
           },
           {
-            "finnish": "tyyny.",
-            "meaning": "a pillow",
+            "finnish": "pallo.",
+            "meaning": "a ball",
             "role": "thing possessed",
-            "baseForm": "tyyny",
-            "formation": "tyyny stays in its basic singular form."
+            "baseForm": "pallo",
+            "formation": "pallo stays in its basic singular form."
           }
         ]
       }

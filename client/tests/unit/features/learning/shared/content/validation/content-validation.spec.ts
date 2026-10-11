@@ -379,23 +379,23 @@ describe('content-pack validation', () => {
     const pack = structuredClone(
       source.packs.find((candidate) => candidate['id'] === 'demonstrative-pronouns'),
     ) as unknown as TopicPack;
-    const lesson = pack.lessons.find((candidate) => candidate.id === 'pdp-reference-choice')!;
+    const lesson = pack.lessons.find((candidate) => candidate.id === 'pdp-noun-modifier')!;
     const question = pack.tests
       .flatMap((test) => test.exercises)
-      .find((exercise) => exercise.id === 'pdp-reference-choice-test-e006')!;
+      .find((exercise) => exercise.id === 'pdp-noun-modifier-test-e011')!;
     expect(vocabularyForExercise(pack, question)).toContainEqual({
-      finnish: 'avain',
-      english: 'key',
+      finnish: 'kirja',
+      english: 'book',
       type: 'word',
     });
-    lesson.reusedVocabulary = lesson.reusedVocabulary.filter((item) => item.finnish !== 'avain');
+    lesson.reusedVocabulary = lesson.reusedVocabulary.filter((item) => item.finnish !== 'kirja');
 
     expect(() => validateTopicPack(pack)).toThrowError(
-      'Exercise pdp-reference-choice-test-e006 uses vocabulary not listed by a lesson for test pdp-reference-choice-test.',
+      'Exercise pdp-noun-modifier-test-e011 uses vocabulary not listed by a lesson for test pdp-noun-modifier-test.',
     );
     const result = await validatePackContent(pack);
     expect(result.errors).toContain(
-      'pdp-reference-choice-test-e006: vocabulary avain is not listed by a lesson for pdp-reference-choice-test',
+      'pdp-noun-modifier-test-e011: vocabulary kirja is not listed by a lesson for pdp-noun-modifier-test',
     );
   });
   it('rejects a translation word omitted from vocabulary even when its lesson lists it', async () => {
@@ -405,13 +405,13 @@ describe('content-pack validation', () => {
     ) as unknown as TopicPack;
     const question = pack.tests
       .flatMap((test) => test.exercises)
-      .find((exercise) => exercise.id === 'pdp-reference-choice-test-e006')!;
+      .find((exercise) => exercise.id === 'pdp-noun-modifier-test-e011')!;
     question.vocabulary = [];
 
     expect(() => validateTopicPack(pack)).not.toThrow();
     const result = await validatePackContent(pack);
     expect(result.errors).toContain(
-      'pdp-reference-choice-test-e006: recall word avain (avaimet) is missing from vocabulary',
+      'pdp-noun-modifier-test-e011: recall word kirja (kirjat) is missing from vocabulary',
     );
   });
   it('rejects a missing sentence part that would conceal a recall word', async () => {
@@ -421,12 +421,12 @@ describe('content-pack validation', () => {
     ) as unknown as TopicPack;
     const question = pack.tests
       .flatMap((test) => test.exercises)
-      .find((exercise) => exercise.id === 'pdp-reference-choice-test-e006')!;
+      .find((exercise) => exercise.id === 'pdp-noun-modifier-test-e011')!;
     question.sentenceExplanation!.parts.pop();
 
     const result = await validatePackContent(pack);
     expect(result.errors).toContain(
-      'pdp-reference-choice-test-e006: Finnish translation source is not fully covered by sentence parts',
+      'pdp-noun-modifier-test-e011: Finnish translation source is not fully covered by sentence parts',
     );
   });
   it('rejects incomplete feedback for a multiple-choice option', () => {

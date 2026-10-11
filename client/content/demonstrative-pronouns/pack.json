@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "demonstrative-pronouns",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "title": "Demonstrative pronouns",
   "level": "0 - A1.3",
   "summary": "Learn tämä, tuo, se, nämä, nuo, and ne for one or several people and things in standard written Finnish.",
@@ -16,15 +16,12 @@
   "grammarBaseForms": ["tämä", "tuo", "se", "hän", "olla", "nämä", "nuo", "ne", "he"],
   "importantSkills": [
     "Singular demonstrative forms",
-    "Singular demonstrative reference",
     "Independent singular demonstratives",
     "Singular demonstratives before nouns",
     "Standard singular person reference",
     "Plural demonstrative forms",
-    "Plural demonstrative reference",
     "Independent plural demonstratives",
     "Plural demonstratives before nouns",
-    "Plural demonstrative-noun agreement",
     "Standard plural person reference"
   ],
   "sources": [
@@ -44,26 +41,20 @@
   "lessonIds": [
     "sdp-singular-forms",
     "pdp-plural-forms",
-    "sdp-reference-choice",
-    "pdp-reference-choice",
     "sdp-independent-use",
     "pdp-independent-use",
     "sdp-noun-modifier",
     "pdp-noun-modifier",
-    "pdp-number-agreement",
     "sdp-se-han",
     "pdp-ne-he"
   ],
   "testIds": [
     "sdp-singular-forms-test",
     "pdp-plural-forms-test",
-    "sdp-reference-choice-test",
-    "pdp-reference-choice-test",
     "sdp-independent-use-test",
     "pdp-independent-use-test",
     "sdp-noun-modifier-test",
     "pdp-noun-modifier-test",
-    "pdp-number-agreement-test",
     "sdp-se-han-test",
     "pdp-ne-he-test",
     "sdp-review",
@@ -79,20 +70,12 @@
       "version": "1.0.1"
     },
     {
-      "id": "sdp-reference-choice",
-      "version": "1.0.1"
-    },
-    {
-      "id": "pdp-reference-choice",
-      "version": "1.0.1"
-    },
-    {
       "id": "sdp-independent-use",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "id": "pdp-independent-use",
-      "version": "1.0.1"
+      "version": "1.0.2"
     },
     {
       "id": "sdp-noun-modifier",
@@ -103,16 +86,12 @@
       "version": "1.1.1"
     },
     {
-      "id": "pdp-number-agreement",
-      "version": "1.1.1"
-    },
-    {
       "id": "sdp-se-han",
       "version": "1.0.1"
     },
     {
       "id": "pdp-ne-he",
-      "version": "1.0.1"
+      "version": "1.0.2"
     }
   ],
   "testSummaries": [
@@ -170,70 +149,6 @@
         "pdp-plural-forms-test-e018",
         "pdp-plural-forms-test-e019",
         "pdp-plural-forms-test-e020"
-      ]
-    },
-    {
-      "id": "sdp-reference-choice-test",
-      "title": "Choosing nearby, farther away, or identifiable",
-      "stage": "focused",
-      "lessonIds": ["sdp-reference-choice"],
-      "exerciseIds": [
-        "sdp-reference-choice-test-e001",
-        "sdp-reference-choice-test-e002",
-        "sdp-reference-choice-test-e003",
-        "sdp-reference-choice-test-e004",
-        "sdp-reference-choice-test-e005",
-        "sdp-reference-choice-test-e006",
-        "sdp-reference-choice-test-e007",
-        "sdp-reference-choice-test-e008",
-        "sdp-reference-choice-test-e009",
-        "sdp-reference-choice-test-e010",
-        "sdp-reference-choice-test-e011",
-        "sdp-reference-choice-test-e012",
-        "sdp-reference-choice-test-e013",
-        "sdp-reference-choice-test-e014",
-        "sdp-reference-choice-test-e015",
-        "sdp-reference-choice-test-e016",
-        "sdp-reference-choice-test-e017",
-        "sdp-reference-choice-test-e018",
-        "sdp-reference-choice-test-e019",
-        "sdp-reference-choice-test-e020",
-        "sdp-reference-choice-test-e021",
-        "sdp-reference-choice-test-e022",
-        "sdp-reference-choice-test-e023",
-        "sdp-reference-choice-test-e024"
-      ]
-    },
-    {
-      "id": "pdp-reference-choice-test",
-      "title": "Choosing the correct plural demonstrative",
-      "stage": "focused",
-      "lessonIds": ["pdp-reference-choice"],
-      "exerciseIds": [
-        "pdp-reference-choice-test-e001",
-        "pdp-reference-choice-test-e002",
-        "pdp-reference-choice-test-e003",
-        "pdp-reference-choice-test-e004",
-        "pdp-reference-choice-test-e005",
-        "pdp-reference-choice-test-e006",
-        "pdp-reference-choice-test-e007",
-        "pdp-reference-choice-test-e008",
-        "pdp-reference-choice-test-e009",
-        "pdp-reference-choice-test-e010",
-        "pdp-reference-choice-test-e011",
-        "pdp-reference-choice-test-e012",
-        "pdp-reference-choice-test-e013",
-        "pdp-reference-choice-test-e014",
-        "pdp-reference-choice-test-e015",
-        "pdp-reference-choice-test-e016",
-        "pdp-reference-choice-test-e017",
-        "pdp-reference-choice-test-e018",
-        "pdp-reference-choice-test-e019",
-        "pdp-reference-choice-test-e020",
-        "pdp-reference-choice-test-e021",
-        "pdp-reference-choice-test-e022",
-        "pdp-reference-choice-test-e023",
-        "pdp-reference-choice-test-e024"
       ]
     },
     {
@@ -349,38 +264,6 @@
       ]
     },
     {
-      "id": "pdp-number-agreement-test",
-      "title": "Matching demonstratives with plural nouns",
-      "stage": "focused",
-      "lessonIds": ["pdp-number-agreement"],
-      "exerciseIds": [
-        "pdp-number-agreement-test-e001",
-        "pdp-number-agreement-test-e002",
-        "pdp-number-agreement-test-e003",
-        "pdp-number-agreement-test-e004",
-        "pdp-number-agreement-test-e005",
-        "pdp-number-agreement-test-e006",
-        "pdp-number-agreement-test-e007",
-        "pdp-number-agreement-test-e008",
-        "pdp-number-agreement-test-e009",
-        "pdp-number-agreement-test-e010",
-        "pdp-number-agreement-test-e011",
-        "pdp-number-agreement-test-e012",
-        "pdp-number-agreement-test-e013",
-        "pdp-number-agreement-test-e014",
-        "pdp-number-agreement-test-e015",
-        "pdp-number-agreement-test-e016",
-        "pdp-number-agreement-test-e017",
-        "pdp-number-agreement-test-e018",
-        "pdp-number-agreement-test-e019",
-        "pdp-number-agreement-test-e020",
-        "pdp-number-agreement-test-e021",
-        "pdp-number-agreement-test-e022",
-        "pdp-number-agreement-test-e023",
-        "pdp-number-agreement-test-e024"
-      ]
-    },
-    {
       "id": "sdp-se-han-test",
       "title": "Se and hän in standard Finnish",
       "stage": "focused",
@@ -440,13 +323,7 @@
       "id": "sdp-review",
       "title": "Singular demonstratives review",
       "stage": "review",
-      "lessonIds": [
-        "sdp-singular-forms",
-        "sdp-reference-choice",
-        "sdp-independent-use",
-        "sdp-noun-modifier",
-        "sdp-se-han"
-      ],
+      "lessonIds": ["sdp-singular-forms", "sdp-independent-use", "sdp-noun-modifier", "sdp-se-han"],
       "exerciseIds": [
         "sdp-review-e001",
         "sdp-review-e002",
@@ -478,14 +355,7 @@
       "id": "pdp-review",
       "title": "Plural demonstratives review",
       "stage": "review",
-      "lessonIds": [
-        "pdp-plural-forms",
-        "pdp-reference-choice",
-        "pdp-independent-use",
-        "pdp-noun-modifier",
-        "pdp-number-agreement",
-        "pdp-ne-he"
-      ],
+      "lessonIds": ["pdp-plural-forms", "pdp-independent-use", "pdp-noun-modifier", "pdp-ne-he"],
       "exerciseIds": [
         "pdp-review-e001",
         "pdp-review-e002",

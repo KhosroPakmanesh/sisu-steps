@@ -9,8 +9,6 @@
     "ppo-written-reference-plural",
     "ppo-singular-affirmative",
     "ppo-plural-affirmative",
-    "ppo-affirmative-agreement-singular",
-    "ppo-affirmative-agreement-plural",
     "ppo-pronoun-presence-singular",
     "ppo-pronoun-presence-plural"
   ],
@@ -21,7 +19,6 @@
     "Plural personal pronouns",
     "Plural affirmative olla",
     "Pronoun reference and polite te",
-    "Affirmative pronoun–verb agreement",
     "Subject-pronoun use"
   ],
   "prerequisiteSkills": [],
@@ -211,8 +208,8 @@
           }
         ]
       },
-      "requiredSkills": ["Affirmative pronoun–verb agreement"],
-      "targetSkill": "Affirmative pronoun–verb agreement",
+      "requiredSkills": ["Singular affirmative olla", "Plural affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t16-e06",
       "parallelExerciseId": "ppo-t16-e26"
@@ -382,8 +379,8 @@
           }
         ]
       },
-      "requiredSkills": ["Affirmative pronoun–verb agreement"],
-      "targetSkill": "Affirmative pronoun–verb agreement",
+      "requiredSkills": ["Singular affirmative olla", "Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t16-e11",
       "parallelExerciseId": "ppo-t16-e31"
@@ -553,8 +550,8 @@
           }
         ]
       },
-      "requiredSkills": ["Affirmative pronoun–verb agreement"],
-      "targetSkill": "Affirmative pronoun–verb agreement",
+      "requiredSkills": ["Singular affirmative olla", "Plural affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t16-e16",
       "parallelExerciseId": "ppo-t16-e36"
@@ -792,26 +789,26 @@
     {
       "type": "multiple-choice",
       "instruction": "Choose the best answer.",
-      "prompt": "In the form-and-agreement review: Keep the person agreement exact. Complete “We are at work tomorrow.” Me ____ työssä huomenna.",
-      "acceptedAnswers": ["olemme"],
-      "explanation": "Me takes olemme, the matching present-tense form of olla.",
-      "options": ["olemme", "olette", "ovat"],
+      "prompt": "In the form-and-agreement review: Keep the person agreement exact. Complete “You are at work tomorrow.” Sinä ____ työssä huomenna. Address one person.",
+      "acceptedAnswers": ["olet"],
+      "explanation": "Sinä takes olet, the matching present-tense form of olla.",
+      "options": ["olen", "olet", "on"],
       "optionFeedback": {
-        "olemme": "Correct. Me takes olemme, the matching present-tense form of olla.",
-        "olette": "“olette” does not fit this subject or construction. Me takes olemme, the matching present-tense form of olla.",
-        "ovat": "“ovat” does not fit this subject or construction. Me takes olemme, the matching present-tense form of olla."
+        "olen": "Olen is for minä; sinä takes olet.",
+        "olet": "Correct. Sinä takes olet.",
+        "on": "On is for hän; sinä takes olet."
       },
-      "tags": ["sentence", "person-me", "affirmative", "standard-written-finnish"],
+      "tags": ["sentence", "person-sina", "affirmative", "standard-written-finnish"],
       "vocabulary": ["työssä", "huomenna"],
       "sentenceExplanation": {
-        "translation": "We are at work tomorrow.",
+        "translation": "You are at work tomorrow.",
         "pattern": "subject + present-tense olla + context",
         "parts": [
           {
-            "finnish": "Me",
-            "meaning": "we",
+            "finnish": "Sinä",
+            "meaning": "you",
             "role": "subject: the person or people described by the sentence",
-            "baseForm": "me",
+            "baseForm": "sinä",
             "formation": "subject pronoun; no ending is added"
           },
           {
@@ -819,7 +816,7 @@
             "meaning": "are",
             "role": "verb: links the subject to the context",
             "baseForm": "olla",
-            "formation": "me takes the present-tense form olemme"
+            "formation": "sinä takes the present-tense form olet"
           },
           {
             "finnish": "työssä huomenna",
@@ -830,8 +827,8 @@
           }
         ]
       },
-      "requiredSkills": ["Affirmative pronoun–verb agreement"],
-      "targetSkill": "Affirmative pronoun–verb agreement",
+      "requiredSkills": ["Singular affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t16-e36",
       "parallelExerciseId": "ppo-t16-e16"
@@ -987,8 +984,8 @@
           }
         ]
       },
-      "requiredSkills": ["Affirmative pronoun–verb agreement"],
-      "targetSkill": "Affirmative pronoun–verb agreement",
+      "requiredSkills": ["Singular affirmative olla", "Plural affirmative olla"],
+      "targetSkill": "Plural affirmative olla",
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t16-e31",
       "parallelExerciseId": "ppo-t16-e11"
@@ -1151,8 +1148,8 @@
           }
         ]
       },
-      "requiredSkills": ["Affirmative pronoun–verb agreement"],
-      "targetSkill": "Affirmative pronoun–verb agreement",
+      "requiredSkills": ["Singular affirmative olla", "Plural affirmative olla"],
+      "targetSkill": "Singular affirmative olla",
       "misconceptionCategory": "Affirmative pronoun–verb agreement: form not yet secure",
       "id": "ppo-t16-e26",
       "parallelExerciseId": "ppo-t16-e06"

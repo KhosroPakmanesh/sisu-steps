@@ -273,7 +273,7 @@ for (const appearance of ['Day', 'Night']) {
         }
         await trigger.click();
         const dialog = page.getByRole('dialog', { name: group.title, exact: true });
-        await expect(dialog.locator('.reference-lesson')).toHaveCount(44);
+        await expect(dialog.locator('.reference-lesson')).toHaveCount(32);
         const paperColor = await page
           .locator('.pack-group')
           .first()

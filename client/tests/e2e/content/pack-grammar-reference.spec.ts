@@ -184,7 +184,7 @@ for (const appearance of ['Day', 'Night']) {
           name: 'Possessive pronouns and endings',
           exact: true,
         });
-        await expect(dialog.locator('.reference-lesson')).toHaveCount(20);
+        await expect(dialog.locator('.reference-lesson')).toHaveCount(16);
         const paperColor = await page
           .locator('.pack-group')
           .first()
@@ -257,7 +257,7 @@ for (const motion of ['reduce', 'no-preference'] as const) {
       await trigger.click();
       const dialog = page.getByRole('dialog', { name: 'Ownership and possession', exact: true });
       const lessons = dialog.locator('.reference-lesson');
-      await expect(lessons).toHaveCount(44);
+      await expect(lessons).toHaveCount(32);
       const first = lessons.first();
       const second = lessons.nth(1);
       const summary = first.locator('summary');
@@ -327,7 +327,7 @@ for (const motion of ['reduce', 'no-preference'] as const) {
       await expect(dialog).toBeHidden();
       await expect(trigger).toBeFocused();
       await trigger.click();
-      await expect(dialog.locator('.reference-lesson')).toHaveCount(44);
+      await expect(dialog.locator('.reference-lesson')).toHaveCount(32);
       await expect(dialog.locator('.topic-group-disclosure[open]')).toHaveCount(0);
       await expect(dialog.locator('.reference-example')).toHaveCount(0);
       await page.keyboard.press('Escape');
