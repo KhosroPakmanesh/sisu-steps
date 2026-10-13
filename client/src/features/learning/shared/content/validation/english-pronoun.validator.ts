@@ -12,6 +12,10 @@ const PREDICATIVE_GROUP = {
   pattern: /\b(?:his or hers|his|hers)\b/gu,
   alternatives: ['his', 'hers', 'his or hers'],
 };
+const OBJECT_GROUP = {
+  pattern: /\b(?:him or her|him|her)\b/gu,
+  alternatives: ['him', 'her', 'him or her'],
+};
 
 export function validateEnglishPronounAnswers(exercise: Exercise): void {
   if (exercise.type !== 'translation-en' || !FINNISH_PRONOUN.test(exercise.prompt)) return;
@@ -22,7 +26,9 @@ export function validateEnglishPronounAnswers(exercise: Exercise): void {
   for (const answer of answers) {
     for (const group of /\b(?:is|are) (?:his|hers|his or hers)$/u.test(answer)
       ? [PRONOUN_GROUPS[0], PREDICATIVE_GROUP]
-      : PRONOUN_GROUPS) {
+      : /(?<![\p{L}\p{N}])häntä(?![\p{L}\p{N}])/iu.test(exercise.prompt)
+        ? [PRONOUN_GROUPS[0], OBJECT_GROUP]
+        : PRONOUN_GROUPS) {
       for (const match of answer.matchAll(group.pattern)) {
         for (const alternative of group.alternatives) {
           const variant =

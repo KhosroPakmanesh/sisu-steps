@@ -13,7 +13,7 @@ describe('new number-specific optional task novelty', () => {
     expect(
       packs.flatMap((pack) =>
         pack.lessons
-          .filter((lesson) => lesson.numberScope)
+          .filter((lesson) => lesson.numberScope && lesson.numberScope.axis !== 'form')
           .flatMap((lesson) =>
             lesson.practiceExercises.filter((exercise) =>
               exercise.id.startsWith(lesson.id + '-practice-'),

@@ -49,7 +49,10 @@ export function validateFocusedNumberScopes(pack) {
     );
     if (owners.length !== 1 || owners[0].id !== lesson.id + '-test')
       errors.push(lesson.id + ': number-specific preparation must belong to one Focused test');
-    if (lesson.examples.some((example) => textNumber(example.finnish, scope.axis) !== scope.number))
+    if (
+      scope.axis !== 'form' &&
+      lesson.examples.some((example) => textNumber(example.finnish, scope.axis) !== scope.number)
+    )
       errors.push(lesson.id + ': worked examples must match the declared number');
     if (teachingLeaks(lesson, scope))
       errors.push(lesson.id + ': teaching and summary must stay within the declared number');
@@ -76,7 +79,7 @@ function validScope(scope) {
     typeof scope === 'object' &&
     !Array.isArray(scope) &&
     Object.keys(scope).length === 2 &&
-    ['person', 'owner', 'object'].includes(scope.axis) &&
+    ['person', 'owner', 'object', 'form'].includes(scope.axis) &&
     ['singular', 'plural'].includes(scope.number)
   );
 }
@@ -141,6 +144,7 @@ function finnishFor(exercise) {
 }
 
 function exerciseNumber(exercise, axis) {
+  if (axis === 'form') return taggedNumber(exercise, ['form-singular'], ['form-plural']);
   const finnish = finnishFor(exercise);
   if (axis === 'object') {
     const tagged = taggedNumber(exercise, ['objects-singular'], ['objects-plural']);
@@ -183,6 +187,7 @@ function teachingLeaks(lesson, scope) {
 }
 
 function textLeaks(text, scope) {
+  if (scope.axis === 'form') return false; // The partitive guard checks actual nominal forms.
   if (scope.axis === 'owner') {
     const forbidden =
       scope.number === 'singular'

@@ -1,4 +1,5 @@
 import { validateNumberPracticeNovelty } from './number-practice-novelty.mjs';
+import { validatePartitiveFamily } from '../partitives/partitive-family.mjs';
 import { validateFocusedTaskQuality } from './focused-task-quality.mjs';
 import { validateFocusedNumberScopes } from './focused-number-scopes.mjs';
 import { existsSync } from 'node:fs';
@@ -40,6 +41,7 @@ export async function validatePackContent(pack) {
   const scoredFingerprints = new Set(exercises.map(exerciseFingerprint));
   const errors = [...validateFocusedTaskQuality(pack)];
   errors.push(...validateFocusedNumberScopes(pack));
+  errors.push(...validatePartitiveFamily(pack));
   errors.push(...validateNumberPracticeNovelty(pack));
   errors.push(...validateOwnershipQuestionVariety(pack));
   const hasTextArray = (value) =>

@@ -69,7 +69,7 @@ describe('English gender-neutral pronoun alternatives', () => {
   });
 
   it('audits all installed packs and both optional-practice pronoun translations', async () => {
-    expect(packs).toHaveLength(14);
+    expect(packs).toHaveLength(19);
     for (const pack of packs) {
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);
@@ -83,7 +83,7 @@ describe('English gender-neutral pronoun alternatives', () => {
         expect(gradeAnswer(exercise, answer).correct).toBe(true);
       }
     }
-  });
+  }, 20_000);
 
   it('keeps permitted articles and negative contractions while rejecting wrong meanings', () => {
     const pillow = items.find((item) => item.id === 'aps-possessors-test-e015')!;

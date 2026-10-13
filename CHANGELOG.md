@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+### Partitive pack family
+
+- Add five `0 - A1.3` Partitive packs covering forms, quantities, everyday sentence uses, adjectives, and pronouns/questions. Keep singular and plural together by topic, with independent Focused preparation and standard written Finnish throughout. Add 30 lessons, 808 scored questions and 90 optional questions; preserve existing pack versions and compatible progress.
+- Distinguish the grammatical number of a practised word form from the number of people or things it describes, including singular partitive after counting numbers. Validate the new content at source and runtime boundaries.
+
 ### Lesson consolidation
 
 - Remove 26 repetitive lessons and their matching Focused tests across twelve topic packs, retaining complete singular/plural pairs and all cumulative Reviews. Consolidate useful teaching and vocabulary in the remaining lessons. Changed pack versions intentionally discard incompatible progress in those twelve packs; removed lesson notes lose their owner. The two unchanged packs retain compatible progress. No migration or compatibility reader is added.

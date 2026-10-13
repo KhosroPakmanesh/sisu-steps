@@ -324,6 +324,17 @@ describe('pack-owned content source loader', () => {
           'possessive-pronouns-endings',
         ],
       },
+      {
+        id: 'partitive',
+        title: 'Partitive',
+        packs: [
+          'partitive-forms',
+          'partitive-quantities',
+          'partitive-sentences',
+          'partitive-adjectives',
+          'partitive-pronouns-questions',
+        ],
+      },
     ]);
     expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
       '1.2.0',

@@ -1,5 +1,9 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-11 partitive pack family
+
+Implement REQ-G001-152 using the project-local content creator skill. Save the five-pack, 30-lesson coverage and vocabulary blueprint before bulk authoring. Author pack-owned pure JSON, with paired singular/plural preparation and standard written Finnish; add the form-number validation axis and aligned family guards. Register the Partitive group and matching startup summaries. Preserve all fourteen installed packs and compatible progress. Complete the client gate, actual grading and rendered lesson/exercise checks at 320/768/1440 pixels, then record the final assessment and actual inventories under VAL-G001-111. Do not commit or publish.
+
 ## 2026-10-11 lesson consolidation
 
 Implement REQ-G001-151 / VAL-G001-110 with the project-local content skill. Record the actual pre-authoring blueprint; remove the selected 26 lessons and matching Focused tests while preserving whole number pairs. Transfer necessary explanations and lexical provenance, retarget Reviews to actual taught skills and repair mastery links. Advance only the twelve changed packs and changed retained lessons, synchronize summaries and explicit topology guards, update affected fixtures, run the complete client gate and rendered workflows at three widths, then record final assessment and scoped progress consequences. Retain dated prior evidence. Commit only when the user explicitly requests it; publication requires a separate instruction.

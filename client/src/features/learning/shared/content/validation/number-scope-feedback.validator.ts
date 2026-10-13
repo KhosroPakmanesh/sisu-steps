@@ -1,7 +1,10 @@
 import { Exercise } from '../exercise.models';
 import { NumberScope } from '../number-scope.models';
 
-const FORMS: Record<NumberScope['axis'], Record<NumberScope['number'], string[]>> = {
+const FORMS: Record<
+  Exclude<NumberScope['axis'], 'form'>,
+  Record<NumberScope['number'], string[]>
+> = {
   person: {
     singular: ['minä', 'sinä', 'hän', 'tämä', 'tuo'],
     plural: ['me', 'te', 'he', 'nämä', 'nuo'],
@@ -11,6 +14,7 @@ const FORMS: Record<NumberScope['axis'], Record<NumberScope['number'], string[]>
 };
 
 export function supplementalFeedbackLeaks(exercise: Exercise, scope: NumberScope): boolean {
+  if (scope.axis === 'form') return false;
   const explanations = [
     ...Object.entries(exercise.optionFeedback ?? {}).map(([answer, text]) => ({
       answers: exercise.acceptedAnswers.includes(answer) ? [] : [answer],

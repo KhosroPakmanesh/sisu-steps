@@ -1,5 +1,7 @@
 # Content assessment index
 
+The [2026-10-11 partitive family](partitive-family.md) adds five beginner packs with 30 lessons, 808 scored questions and 90 optional questions. It preserves the previous fourteen packs and their compatible progress; its final disposition is recorded separately from the pre-authoring approval.
+
 The [2026-10-11 lesson consolidation](lesson-consolidation.md) governs the removal of 26 repeated lessons and matching Focused tests, whole singular/plural pairs, revised preparation and current counts. Read it alongside the inherited quality and number-specific preparation records; earlier counts remain dated evidence.
 
 These records retain dated decisions and evidence, not a continuously updated count inventory or independent language certification. Read the latest applicable shared correction alongside each pack record. The [content policy](../content-authoring.md) owns assessment criteria; the [project-local skill](../../.agents/skills/finnish-grammar-content-creator/SKILL.md) supplies the workflow and record template.
@@ -7,6 +9,12 @@ These records retain dated decisions and evidence, not a continuously updated co
 The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records the complete 103-test review, current corrections, validation and limitations. It supersedes the incomplete whole-expansion disposition of the [selected-revision record](focused-test-minimum.md#selected-independent-audit-revisions--2026-10-07) for the present corpus; dated earlier results remain evidence of their original scope.
 
 ## Installed-pack entry records
+
+- [partitive-forms](partitive-forms.md)
+- [partitive-quantities](partitive-quantities.md)
+- [partitive-sentences](partitive-sentences.md)
+- [partitive-adjectives](partitive-adjectives.md)
+- [partitive-pronouns-questions](partitive-pronouns-questions.md)
 
 - [vowel-harmony-location-endings](vowel-harmony-location-endings.md)
 - [kpt-singular-forms](kpt-singular-forms.md)
@@ -24,6 +32,8 @@ The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records 
 - [possessive-pronouns-endings](possessive-pronouns-endings.md)
 
 ## Shared assessments and corrections
+
+- [partitive-family](partitive-family.md)
 
 - [lesson-consolidation](lesson-consolidation.md)
 

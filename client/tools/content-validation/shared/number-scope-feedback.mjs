@@ -8,6 +8,7 @@ const FORMS = {
 };
 
 export function supplementalFeedbackLeaks(exercise, scope) {
+  if (scope.axis === 'form') return false;
   const explanations = [
     ...Object.entries(exercise.optionFeedback ?? {}).map(([answer, text]) => ({
       answers: exercise.acceptedAnswers.includes(answer) ? [] : [answer],

@@ -10,7 +10,7 @@ import { expandTopicGroup } from '../support/topic-groups';
 test('opens every pack’s authored lessons only, with unchanged navigation and learner data', async ({
   page,
 }) => {
-  test.setTimeout(90000);
+  test.setTimeout(180000);
   const requests: string[] = [];
   page.on('request', (request) => {
     const path = new URL(request.url()).pathname;

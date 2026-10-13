@@ -1,4 +1,5 @@
 import { validateFocusedTaskQuality } from './focused-task-quality.validator';
+import { validatePartitiveFamily } from './partitive-family.validator';
 import { validateDemonstrativePractice } from './demonstrative-practice-expansion.validator';
 import { validateFocusedNumberScopes } from './focused-number-scopes.validator';
 import { TopicPack } from '../topic-pack.models';
@@ -84,6 +85,13 @@ export function validateTopicPack(value: unknown): TopicPack {
     tests: validatedTests,
     lessons: validatedLessons,
   });
+  qualityErrors.push(
+    ...validatePartitiveFamily({
+      ...(value as unknown as TopicPack),
+      lessons: validatedLessons,
+      tests: validatedTests,
+    }),
+  );
   if (qualityErrors.length) throw new Error(qualityErrors.join('\n'));
   return {
     ...(value as unknown as TopicPack),

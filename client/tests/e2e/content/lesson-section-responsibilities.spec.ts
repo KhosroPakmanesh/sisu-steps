@@ -13,13 +13,14 @@ let packs: TopicPack[];
 test.beforeAll(async () => {
   packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   expect(packs.map((pack) => pack.id)).toEqual(packIds);
-  expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(77);
+  expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(107);
 });
 for (const packId of packIds) {
   test(
     'keeps section responsibilities and vocabulary consistent in ' + packId,
     async ({ page }, testInfo) => {
       test.setTimeout(180_000);
+      await page.emulateMedia({ reducedMotion: 'reduce' });
       const pack = packs.find((item) => item.id === packId)!;
       const audit: Array<{ pack: string; lesson: string; rendered: string }> = [];
       const grammarForms = collectGrammarForms(
@@ -57,7 +58,10 @@ for (const packId of packIds) {
           await expect(group.locator('dt')).toHaveText(entries.map((entry) => entry.finnish));
           await expect(group.locator('dd')).toHaveText(entries.map((entry) => entry.english));
         }
-        for (const section of lesson.sections) {
+        for (const [sectionIndex, section] of lesson.sections.entries()) {
+          await expect(
+            reader.locator('.teaching-section').nth(sectionIndex).locator(':scope > p'),
+          ).toHaveText(section.paragraphs);
           for (const point of section.keyPoints) {
             await expect(reader.locator('.teaching-section')).toContainText([point]);
           }

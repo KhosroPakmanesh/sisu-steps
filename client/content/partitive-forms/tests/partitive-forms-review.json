@@ -1,0 +1,669 @@
+{
+  "id": "partitive-forms-review",
+  "title": "Partitive forms review",
+  "focus": "Retrieve the taught partitive patterns in mixed practice.",
+  "stage": "review",
+  "targetSkills": [
+    "Regular singular partitive: -a/-ä",
+    "Regular plural partitive: -ja/-jä",
+    "Singular partitive: -ta/-tä",
+    "Singular partitive of common -e words",
+    "Singular partitive of -nen words",
+    "Singular partitive with i → e",
+    "Frequent singular -si partitives",
+    "Other frequent changing singular forms"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "ptf-regular-singular",
+    "ptf-regular-plural",
+    "ptf-ta-singular",
+    "ptf-e-singular",
+    "ptf-nen-singular",
+    "ptf-i-e-singular",
+    "ptf-si-singular",
+    "ptf-changing-singular"
+  ],
+  "exercises": [
+    {
+      "id": "ptf-regular-singular-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: talo (“house”) and lelu (“toy”).",
+      "acceptedAnswers": ["taloa, lelua"],
+      "explanation": "Keep talo and add -a: talo + a = taloa. Keep lelu and add -a because u is a back vowel: lelua.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Regular singular partitive: -a/-ä"],
+      "vocabulary": [],
+      "targetSkill": "Regular singular partitive: -a/-ä",
+      "misconceptionCategory": "Regular singular partitive: -a/-ä: form or use confused",
+      "options": ["taloa, leluä", "talo, lelua", "taloa, lelua"],
+      "optionFeedback": {
+        "taloa, lelua": "Keep talo and add -a: talo + a = taloa. Keep lelu and add -a because u is a back vowel: lelua.",
+        "talo, lelua": "The first word is still the dictionary form. Keep talo and add -a: talo + a = taloa.",
+        "taloa, leluä": "The second word is not formed correctly. Keep lelu and add -a because u is a back vowel: lelua."
+      },
+      "parallelExerciseId": "ptf-regular-singular-review-03"
+    },
+    {
+      "id": "ptf-regular-plural-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both plural partitives: talo (“house”) and lelu (“toy”).",
+      "acceptedAnswers": ["taloja, leluja"],
+      "explanation": "Keep talo and add -ja: taloja. Keep lelu and add -ja: leluja.",
+      "tags": ["standard-written-finnish", "form-plural", "paired-forms"],
+      "requiredSkills": ["Regular plural partitive: -ja/-jä"],
+      "vocabulary": [],
+      "targetSkill": "Regular plural partitive: -ja/-jä",
+      "misconceptionCategory": "Regular plural partitive: -ja/-jä: form or use confused",
+      "options": ["taloja, lelut", "talo, leluja", "taloja, leluja"],
+      "optionFeedback": {
+        "taloja, leluja": "Keep talo and add -ja: taloja. Keep lelu and add -ja: leluja.",
+        "talo, leluja": "The first word is still the dictionary form. Keep talo and add -ja: taloja.",
+        "taloja, lelut": "The second word is not formed correctly. Keep lelu and add -ja: leluja."
+      },
+      "parallelExerciseId": "ptf-regular-plural-review-03"
+    },
+    {
+      "id": "ptf-ta-singular-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: maa (“country”) and tee (“tea”).",
+      "acceptedAnswers": ["maata, teetä"],
+      "explanation": "maa + ta = maata; keep both a vowels in the base. tee has only neutral vowels, so tee + tä = teetä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive: -ta/-tä"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive: -ta/-tä",
+      "misconceptionCategory": "Singular partitive: -ta/-tä: form or use confused",
+      "options": ["maata, teetä", "maata, teeä", "maa, teetä"],
+      "optionFeedback": {
+        "maata, teetä": "maa + ta = maata; keep both a vowels in the base. tee has only neutral vowels, so tee + tä = teetä.",
+        "maa, teetä": "The first word is still the dictionary form. maa + ta = maata; keep both a vowels in the base.",
+        "maata, teeä": "The second word is not formed correctly. tee has only neutral vowels, so tee + tä = teetä."
+      },
+      "parallelExerciseId": "ptf-ta-singular-review-03"
+    },
+    {
+      "id": "ptf-e-singular-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: perhe (“family”) and kirje (“letter”).",
+      "acceptedAnswers": ["perhettä, kirjettä"],
+      "explanation": "perhe + ttä = perhettä; keep e and write double tt. kirje + ttä = kirjettä; keep e and write double tt.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of common -e words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of common -e words",
+      "misconceptionCategory": "Singular partitive of common -e words: form or use confused",
+      "options": ["perhe, kirjettä", "perhettä, kirjettä", "perhettä, kirjetä"],
+      "optionFeedback": {
+        "perhettä, kirjettä": "perhe + ttä = perhettä; keep e and write double tt. kirje + ttä = kirjettä; keep e and write double tt.",
+        "perhe, kirjettä": "The first word is still the dictionary form. perhe + ttä = perhettä; keep e and write double tt.",
+        "perhettä, kirjetä": "The second word is not formed correctly. kirje + ttä = kirjettä; keep e and write double tt."
+      },
+      "parallelExerciseId": "ptf-e-singular-review-03"
+    },
+    {
+      "id": "ptf-nen-singular-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: nainen (“woman”) and ihminen (“person”).",
+      "acceptedAnswers": ["naista, ihmistä"],
+      "explanation": "Remove -nen from nainen and add sta: naista. Remove -nen from ihminen and add stä: ihmistä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of -nen words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of -nen words",
+      "misconceptionCategory": "Singular partitive of -nen words: form or use confused",
+      "options": ["naista, ihmistä", "naista, ihminena", "nainen, ihmistä"],
+      "optionFeedback": {
+        "naista, ihmistä": "Remove -nen from nainen and add sta: naista. Remove -nen from ihminen and add stä: ihmistä.",
+        "nainen, ihmistä": "The first word is still the dictionary form. Remove -nen from nainen and add sta: naista.",
+        "naista, ihminena": "The second word is not formed correctly. Remove -nen from ihminen and add stä: ihmistä."
+      },
+      "parallelExerciseId": "ptf-nen-singular-review-03"
+    },
+    {
+      "id": "ptf-i-e-singular-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: ovi (“door”) and järvi (“lake”).",
+      "acceptedAnswers": ["ovea, järveä"],
+      "explanation": "Change final i in ovi to e, keep the strong consonants, and add -a: ovea. Change final i in järvi to e, keep the strong consonants, and add -ä: järveä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive with i → e"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive with i → e",
+      "misconceptionCategory": "Singular partitive with i → e: form or use confused",
+      "options": ["ovi, järveä", "ovea, järveä", "ovea, järviä"],
+      "optionFeedback": {
+        "ovea, järveä": "Change final i in ovi to e, keep the strong consonants, and add -a: ovea. Change final i in järvi to e, keep the strong consonants, and add -ä: järveä.",
+        "ovi, järveä": "The first word is still the dictionary form. Change final i in ovi to e, keep the strong consonants, and add -a: ovea.",
+        "ovea, järviä": "The second word is not formed correctly. Change final i in järvi to e, keep the strong consonants, and add -ä: järveä."
+      },
+      "parallelExerciseId": "ptf-i-e-singular-review-03"
+    },
+    {
+      "id": "ptf-si-singular-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: vesi (“water”) and uusi (“new”).",
+      "acceptedAnswers": ["vettä, uutta"],
+      "explanation": "vesi uses vet- + -tä, written vettä. uusi uses uut- + -ta, written uutta; keep the long uu.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Frequent singular -si partitives"],
+      "vocabulary": [],
+      "targetSkill": "Frequent singular -si partitives",
+      "misconceptionCategory": "Frequent singular -si partitives: form or use confused",
+      "options": ["vettä, uusia", "vesi, uutta", "vettä, uutta"],
+      "optionFeedback": {
+        "vettä, uutta": "vesi uses vet- + -tä, written vettä. uusi uses uut- + -ta, written uutta; keep the long uu.",
+        "vesi, uutta": "The first word is still the dictionary form. vesi uses vet- + -tä, written vettä.",
+        "vettä, uusia": "The second word is not formed correctly. uusi uses uut- + -ta, written uutta; keep the long uu."
+      },
+      "parallelExerciseId": "ptf-si-singular-review-03"
+    },
+    {
+      "id": "ptf-changing-singular-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: pieni (“small”) and kieli (“language”).",
+      "acceptedAnswers": ["pientä, kieltä"],
+      "explanation": "pieni uses pien- + -tä = pientä. kieli uses kiel- + -tä = kieltä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Other frequent changing singular forms"],
+      "vocabulary": [],
+      "targetSkill": "Other frequent changing singular forms",
+      "misconceptionCategory": "Other frequent changing singular forms: form or use confused",
+      "options": ["pientä, kieltä", "pientä, kieleä", "pieni, kieltä"],
+      "optionFeedback": {
+        "pientä, kieltä": "pieni uses pien- + -tä = pientä. kieli uses kiel- + -tä = kieltä.",
+        "pieni, kieltä": "The first word is still the dictionary form. pieni uses pien- + -tä = pientä.",
+        "pientä, kieleä": "The second word is not formed correctly. kieli uses kiel- + -tä = kieltä."
+      },
+      "parallelExerciseId": "ptf-changing-singular-review-03"
+    },
+    {
+      "id": "ptf-regular-singular-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: auto (“car”) and pallo (“ball”).",
+      "acceptedAnswers": ["autoa, palloa"],
+      "explanation": "Add -a to auto: autoa. The ending is selected from the word’s back vowels. Keep pallo unchanged and add -a: palloa.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Regular singular partitive: -a/-ä"],
+      "vocabulary": [],
+      "targetSkill": "Regular singular partitive: -a/-ä",
+      "misconceptionCategory": "Regular singular partitive: -a/-ä: form or use confused",
+      "options": ["auto, palloa", "autoa, palloa", "autoa, pallöä"],
+      "optionFeedback": {
+        "autoa, palloa": "Add -a to auto: autoa. The ending is selected from the word’s back vowels. Keep pallo unchanged and add -a: palloa.",
+        "auto, palloa": "The first word is still the dictionary form. Add -a to auto: autoa. The ending is selected from the word’s back vowels.",
+        "autoa, pallöä": "The second word is not formed correctly. Keep pallo unchanged and add -a: palloa."
+      },
+      "parallelExerciseId": "ptf-regular-singular-review-04"
+    },
+    {
+      "id": "ptf-regular-plural-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both plural partitives: auto (“car”) and pallo (“ball”).",
+      "acceptedAnswers": ["autoja, palloja"],
+      "explanation": "Keep auto and add -ja: autoja. Keep pallo and add -ja: palloja.",
+      "tags": ["standard-written-finnish", "form-plural", "paired-forms"],
+      "requiredSkills": ["Regular plural partitive: -ja/-jä"],
+      "vocabulary": [],
+      "targetSkill": "Regular plural partitive: -ja/-jä",
+      "misconceptionCategory": "Regular plural partitive: -ja/-jä: form or use confused",
+      "options": ["auto, palloja", "autoja, palloja", "autoja, pallot"],
+      "optionFeedback": {
+        "autoja, palloja": "Keep auto and add -ja: autoja. Keep pallo and add -ja: palloja.",
+        "auto, palloja": "The first word is still the dictionary form. Keep auto and add -ja: autoja.",
+        "autoja, pallot": "The second word is not formed correctly. Keep pallo and add -ja: palloja."
+      },
+      "parallelExerciseId": "ptf-regular-plural-review-04"
+    },
+    {
+      "id": "ptf-ta-singular-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: puu (“tree”) and työ (“work”).",
+      "acceptedAnswers": ["puuta, työtä"],
+      "explanation": "puu + ta = puuta; keep both u vowels. työ has front vowels, so työ + tä = työtä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive: -ta/-tä"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive: -ta/-tä",
+      "misconceptionCategory": "Singular partitive: -ta/-tä: form or use confused",
+      "options": ["puuta, työä", "puu, työtä", "puuta, työtä"],
+      "optionFeedback": {
+        "puuta, työtä": "puu + ta = puuta; keep both u vowels. työ has front vowels, so työ + tä = työtä.",
+        "puu, työtä": "The first word is still the dictionary form. puu + ta = puuta; keep both u vowels.",
+        "puuta, työä": "The second word is not formed correctly. työ has front vowels, so työ + tä = työtä."
+      },
+      "parallelExerciseId": "ptf-ta-singular-review-04"
+    },
+    {
+      "id": "ptf-e-singular-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: huone (“room”) and vene (“boat”).",
+      "acceptedAnswers": ["huonetta, venettä"],
+      "explanation": "huone + tta = huonetta; keep e and write double tt. vene + ttä = venettä; keep e and write double tt.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of common -e words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of common -e words",
+      "misconceptionCategory": "Singular partitive of common -e words: form or use confused",
+      "options": ["huonetta, venettä", "huonetta, venetä", "huone, venettä"],
+      "optionFeedback": {
+        "huonetta, venettä": "huone + tta = huonetta; keep e and write double tt. vene + ttä = venettä; keep e and write double tt.",
+        "huone, venettä": "The first word is still the dictionary form. huone + tta = huonetta; keep e and write double tt.",
+        "huonetta, venetä": "The second word is not formed correctly. vene + ttä = venettä; keep e and write double tt."
+      },
+      "parallelExerciseId": "ptf-e-singular-review-04"
+    },
+    {
+      "id": "ptf-nen-singular-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: suomalainen (“Finnish”) and hevonen (“horse”).",
+      "acceptedAnswers": ["suomalaista, hevosta"],
+      "explanation": "Remove -nen from suomalainen and add sta: suomalaista. Remove -nen from hevonen and add sta: hevosta.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of -nen words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of -nen words",
+      "misconceptionCategory": "Singular partitive of -nen words: form or use confused",
+      "options": ["suomalaista, hevonena", "suomalainen, hevosta", "suomalaista, hevosta"],
+      "optionFeedback": {
+        "suomalaista, hevosta": "Remove -nen from suomalainen and add sta: suomalaista. Remove -nen from hevonen and add sta: hevosta.",
+        "suomalainen, hevosta": "The first word is still the dictionary form. Remove -nen from suomalainen and add sta: suomalaista.",
+        "suomalaista, hevonena": "The second word is not formed correctly. Remove -nen from hevonen and add sta: hevosta."
+      },
+      "parallelExerciseId": "ptf-nen-singular-review-04"
+    },
+    {
+      "id": "ptf-i-e-singular-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: nimi (“name”) and lehti (“newspaper”).",
+      "acceptedAnswers": ["nimeä, lehteä"],
+      "explanation": "Change final i in nimi to e, keep the strong consonants, and add -ä: nimeä. Change final i in lehti to e, keep the strong consonants, and add -ä: lehteä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive with i → e"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive with i → e",
+      "misconceptionCategory": "Singular partitive with i → e: form or use confused",
+      "options": ["nimeä, lehteä", "nimeä, lehtiä", "nimi, lehteä"],
+      "optionFeedback": {
+        "nimeä, lehteä": "Change final i in nimi to e, keep the strong consonants, and add -ä: nimeä. Change final i in lehti to e, keep the strong consonants, and add -ä: lehteä.",
+        "nimi, lehteä": "The first word is still the dictionary form. Change final i in nimi to e, keep the strong consonants, and add -ä: nimeä.",
+        "nimeä, lehtiä": "The second word is not formed correctly. Change final i in lehti to e, keep the strong consonants, and add -ä: lehteä."
+      },
+      "parallelExerciseId": "ptf-i-e-singular-review-04"
+    },
+    {
+      "id": "ptf-si-singular-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: käsi (“hand”) and vuosi (“year”).",
+      "acceptedAnswers": ["kättä, vuotta"],
+      "explanation": "käsi uses kät- + -tä, written kättä. vuosi uses vuot- + -ta, written vuotta; keep uo.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Frequent singular -si partitives"],
+      "vocabulary": [],
+      "targetSkill": "Frequent singular -si partitives",
+      "misconceptionCategory": "Frequent singular -si partitives: form or use confused",
+      "options": ["käsi, vuotta", "kättä, vuotta", "kättä, vuosia"],
+      "optionFeedback": {
+        "kättä, vuotta": "käsi uses kät- + -tä, written kättä. vuosi uses vuot- + -ta, written vuotta; keep uo.",
+        "käsi, vuotta": "The first word is still the dictionary form. käsi uses kät- + -tä, written kättä.",
+        "kättä, vuosia": "The second word is not formed correctly. vuosi uses vuot- + -ta, written vuotta; keep uo."
+      },
+      "parallelExerciseId": "ptf-si-singular-review-04"
+    },
+    {
+      "id": "ptf-changing-singular-review-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: suuri (“large”) and lapsi (“child”).",
+      "acceptedAnswers": ["suurta, lasta"],
+      "explanation": "suuri uses suur- + -ta = suurta. lapsi uses the consonant stem las- + -ta = lasta; ps is simplified in this form.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Other frequent changing singular forms"],
+      "vocabulary": [],
+      "targetSkill": "Other frequent changing singular forms",
+      "misconceptionCategory": "Other frequent changing singular forms: form or use confused",
+      "options": ["suurta, lapsia", "suuri, lasta", "suurta, lasta"],
+      "optionFeedback": {
+        "suurta, lasta": "suuri uses suur- + -ta = suurta. lapsi uses the consonant stem las- + -ta = lasta; ps is simplified in this form.",
+        "suuri, lasta": "The first word is still the dictionary form. suuri uses suur- + -ta = suurta.",
+        "suurta, lapsia": "The second word is not formed correctly. lapsi uses the consonant stem las- + -ta = lasta; ps is simplified in this form."
+      },
+      "parallelExerciseId": "ptf-changing-singular-review-04"
+    },
+    {
+      "id": "ptf-regular-singular-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: lelu (“toy”) and kahvi (“coffee”).",
+      "acceptedAnswers": ["lelua, kahvia"],
+      "explanation": "Keep lelu and add -a because u is a back vowel: lelua. This i-word keeps i: kahvi + a = kahvia. The back vowel a determines the ending.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Regular singular partitive: -a/-ä"],
+      "vocabulary": [],
+      "targetSkill": "Regular singular partitive: -a/-ä",
+      "misconceptionCategory": "Regular singular partitive: -a/-ä: form or use confused",
+      "options": ["lelua, kahvia", "lelua, kahvea", "lelu, kahvia"],
+      "optionFeedback": {
+        "lelua, kahvia": "Keep lelu and add -a because u is a back vowel: lelua. This i-word keeps i: kahvi + a = kahvia. The back vowel a determines the ending.",
+        "lelu, kahvia": "The first word is still the dictionary form. Keep lelu and add -a because u is a back vowel: lelua.",
+        "lelua, kahvea": "The second word is not formed correctly. This i-word keeps i: kahvi + a = kahvia. The back vowel a determines the ending."
+      },
+      "parallelExerciseId": "ptf-regular-singular-review-01"
+    },
+    {
+      "id": "ptf-regular-plural-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both plural partitives: lelu (“toy”) and koulu (“school”).",
+      "acceptedAnswers": ["leluja, kouluja"],
+      "explanation": "Keep lelu and add -ja: leluja. Keep koulu and add -ja: kouluja.",
+      "tags": ["standard-written-finnish", "form-plural", "paired-forms"],
+      "requiredSkills": ["Regular plural partitive: -ja/-jä"],
+      "vocabulary": [],
+      "targetSkill": "Regular plural partitive: -ja/-jä",
+      "misconceptionCategory": "Regular plural partitive: -ja/-jä: form or use confused",
+      "options": ["leluja, kouluja", "leluja, koulut", "lelu, kouluja"],
+      "optionFeedback": {
+        "leluja, kouluja": "Keep lelu and add -ja: leluja. Keep koulu and add -ja: kouluja.",
+        "lelu, kouluja": "The first word is still the dictionary form. Keep lelu and add -ja: leluja.",
+        "leluja, koulut": "The second word is not formed correctly. Keep koulu and add -ja: kouluja."
+      },
+      "parallelExerciseId": "ptf-regular-plural-review-01"
+    },
+    {
+      "id": "ptf-ta-singular-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: tee (“tea”) and radio (“radio”).",
+      "acceptedAnswers": ["teetä, radiota"],
+      "explanation": "tee has only neutral vowels, so tee + tä = teetä. radio + ta = radiota; keep the final io.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive: -ta/-tä"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive: -ta/-tä",
+      "misconceptionCategory": "Singular partitive: -ta/-tä: form or use confused",
+      "options": ["tee, radiota", "teetä, radiota", "teetä, radioa"],
+      "optionFeedback": {
+        "teetä, radiota": "tee has only neutral vowels, so tee + tä = teetä. radio + ta = radiota; keep the final io.",
+        "tee, radiota": "The first word is still the dictionary form. tee has only neutral vowels, so tee + tä = teetä.",
+        "teetä, radioa": "The second word is not formed correctly. radio + ta = radiota; keep the final io."
+      },
+      "parallelExerciseId": "ptf-ta-singular-review-01"
+    },
+    {
+      "id": "ptf-e-singular-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: kirje (“letter”) and kone (“machine”).",
+      "acceptedAnswers": ["kirjettä, konetta"],
+      "explanation": "kirje + ttä = kirjettä; keep e and write double tt. kone + tta = konetta; keep e and write double tt.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of common -e words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of common -e words",
+      "misconceptionCategory": "Singular partitive of common -e words: form or use confused",
+      "options": ["kirjettä, koneta", "kirje, konetta", "kirjettä, konetta"],
+      "optionFeedback": {
+        "kirjettä, konetta": "kirje + ttä = kirjettä; keep e and write double tt. kone + tta = konetta; keep e and write double tt.",
+        "kirje, konetta": "The first word is still the dictionary form. kirje + ttä = kirjettä; keep e and write double tt.",
+        "kirjettä, koneta": "The second word is not formed correctly. kone + tta = konetta; keep e and write double tt."
+      },
+      "parallelExerciseId": "ptf-e-singular-review-01"
+    },
+    {
+      "id": "ptf-nen-singular-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: ihminen (“person”) and lautanen (“plate”).",
+      "acceptedAnswers": ["ihmistä, lautasta"],
+      "explanation": "Remove -nen from ihminen and add stä: ihmistä. Remove -nen from lautanen and add sta: lautasta.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of -nen words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of -nen words",
+      "misconceptionCategory": "Singular partitive of -nen words: form or use confused",
+      "options": ["ihminen, lautasta", "ihmistä, lautasta", "ihmistä, lautanena"],
+      "optionFeedback": {
+        "ihmistä, lautasta": "Remove -nen from ihminen and add stä: ihmistä. Remove -nen from lautanen and add sta: lautasta.",
+        "ihminen, lautasta": "The first word is still the dictionary form. Remove -nen from ihminen and add stä: ihmistä.",
+        "ihmistä, lautanena": "The second word is not formed correctly. Remove -nen from lautanen and add sta: lautasta."
+      },
+      "parallelExerciseId": "ptf-nen-singular-review-01"
+    },
+    {
+      "id": "ptf-i-e-singular-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: järvi (“lake”) and mäki (“hill”).",
+      "acceptedAnswers": ["järveä, mäkeä"],
+      "explanation": "Change final i in järvi to e, keep the strong consonants, and add -ä: järveä. Change final i in mäki to e, keep the strong consonants, and add -ä: mäkeä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive with i → e"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive with i → e",
+      "misconceptionCategory": "Singular partitive with i → e: form or use confused",
+      "options": ["järveä, mäkiä", "järvi, mäkeä", "järveä, mäkeä"],
+      "optionFeedback": {
+        "järveä, mäkeä": "Change final i in järvi to e, keep the strong consonants, and add -ä: järveä. Change final i in mäki to e, keep the strong consonants, and add -ä: mäkeä.",
+        "järvi, mäkeä": "The first word is still the dictionary form. Change final i in järvi to e, keep the strong consonants, and add -ä: järveä.",
+        "järveä, mäkiä": "The second word is not formed correctly. Change final i in mäki to e, keep the strong consonants, and add -ä: mäkeä."
+      },
+      "parallelExerciseId": "ptf-i-e-singular-review-01"
+    },
+    {
+      "id": "ptf-si-singular-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: uusi (“new”) and kuukausi (“month”).",
+      "acceptedAnswers": ["uutta, kuukautta"],
+      "explanation": "uusi uses uut- + -ta, written uutta; keep the long uu. kuukausi uses kuukaut- + -ta, written kuukautta.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Frequent singular -si partitives"],
+      "vocabulary": [],
+      "targetSkill": "Frequent singular -si partitives",
+      "misconceptionCategory": "Frequent singular -si partitives: form or use confused",
+      "options": ["uutta, kuukautta", "uutta, kuukausia", "uusi, kuukautta"],
+      "optionFeedback": {
+        "uutta, kuukautta": "uusi uses uut- + -ta, written uutta; keep the long uu. kuukausi uses kuukaut- + -ta, written kuukautta.",
+        "uusi, kuukautta": "The first word is still the dictionary form. uusi uses uut- + -ta, written uutta; keep the long uu.",
+        "uutta, kuukausia": "The second word is not formed correctly. kuukausi uses kuukaut- + -ta, written kuukautta."
+      },
+      "parallelExerciseId": "ptf-si-singular-review-01"
+    },
+    {
+      "id": "ptf-changing-singular-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: kieli (“language”) and lohi (“salmon”).",
+      "acceptedAnswers": ["kieltä, lohta"],
+      "explanation": "kieli uses kiel- + -tä = kieltä. lohi uses loh- + -ta = lohta.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Other frequent changing singular forms"],
+      "vocabulary": [],
+      "targetSkill": "Other frequent changing singular forms",
+      "misconceptionCategory": "Other frequent changing singular forms: form or use confused",
+      "options": ["kieli, lohta", "kieltä, lohta", "kieltä, lohia"],
+      "optionFeedback": {
+        "kieltä, lohta": "kieli uses kiel- + -tä = kieltä. lohi uses loh- + -ta = lohta.",
+        "kieli, lohta": "The first word is still the dictionary form. kieli uses kiel- + -tä = kieltä.",
+        "kieltä, lohia": "The second word is not formed correctly. lohi uses loh- + -ta = lohta."
+      },
+      "parallelExerciseId": "ptf-changing-singular-review-01"
+    },
+    {
+      "id": "ptf-regular-singular-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: pallo (“ball”) and leipä (“bread”).",
+      "acceptedAnswers": ["palloa, leipää"],
+      "explanation": "Keep pallo unchanged and add -a: palloa. Keep the final ä and add another ä: leipä + ä = leipää.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Regular singular partitive: -a/-ä"],
+      "vocabulary": [],
+      "targetSkill": "Regular singular partitive: -a/-ä",
+      "misconceptionCategory": "Regular singular partitive: -a/-ä: form or use confused",
+      "options": ["palloa, leipäa", "pallo, leipää", "palloa, leipää"],
+      "optionFeedback": {
+        "palloa, leipää": "Keep pallo unchanged and add -a: palloa. Keep the final ä and add another ä: leipä + ä = leipää.",
+        "pallo, leipää": "The first word is still the dictionary form. Keep pallo unchanged and add -a: palloa.",
+        "palloa, leipäa": "The second word is not formed correctly. Keep the final ä and add another ä: leipä + ä = leipää."
+      },
+      "parallelExerciseId": "ptf-regular-singular-review-02"
+    },
+    {
+      "id": "ptf-regular-plural-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both plural partitives: pallo (“ball”) and hylly (“shelf”).",
+      "acceptedAnswers": ["palloja, hyllyjä"],
+      "explanation": "Keep pallo and add -ja: palloja. Front vowels select -jä: hylly + jä = hyllyjä.",
+      "tags": ["standard-written-finnish", "form-plural", "paired-forms"],
+      "requiredSkills": ["Regular plural partitive: -ja/-jä"],
+      "vocabulary": [],
+      "targetSkill": "Regular plural partitive: -ja/-jä",
+      "misconceptionCategory": "Regular plural partitive: -ja/-jä: form or use confused",
+      "options": ["palloja, hyllyja", "pallo, hyllyjä", "palloja, hyllyjä"],
+      "optionFeedback": {
+        "palloja, hyllyjä": "Keep pallo and add -ja: palloja. Front vowels select -jä: hylly + jä = hyllyjä.",
+        "pallo, hyllyjä": "The first word is still the dictionary form. Keep pallo and add -ja: palloja.",
+        "palloja, hyllyja": "The second word is not formed correctly. Front vowels select -jä: hylly + jä = hyllyjä."
+      },
+      "parallelExerciseId": "ptf-regular-plural-review-02"
+    },
+    {
+      "id": "ptf-ta-singular-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: työ (“work”) and televisio (“television”).",
+      "acceptedAnswers": ["työtä, televisiota"],
+      "explanation": "työ has front vowels, so työ + tä = työtä. televisio contains back vowel o: televisio + ta = televisiota.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive: -ta/-tä"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive: -ta/-tä",
+      "misconceptionCategory": "Singular partitive: -ta/-tä: form or use confused",
+      "options": ["työtä, televisiota", "työtä, televisioä", "työ, televisiota"],
+      "optionFeedback": {
+        "työtä, televisiota": "työ has front vowels, so työ + tä = työtä. televisio contains back vowel o: televisio + ta = televisiota.",
+        "työ, televisiota": "The first word is still the dictionary form. työ has front vowels, so työ + tä = työtä.",
+        "työtä, televisioä": "The second word is not formed correctly. televisio contains back vowel o: televisio + ta = televisiota."
+      },
+      "parallelExerciseId": "ptf-ta-singular-review-02"
+    },
+    {
+      "id": "ptf-e-singular-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: vene (“boat”) and hame (“skirt”).",
+      "acceptedAnswers": ["venettä, hametta"],
+      "explanation": "vene + ttä = venettä; keep e and write double tt. hame + tta = hametta; keep e and write double tt.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of common -e words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of common -e words",
+      "misconceptionCategory": "Singular partitive of common -e words: form or use confused",
+      "options": ["vene, hametta", "venettä, hametta", "venettä, hameta"],
+      "optionFeedback": {
+        "venettä, hametta": "vene + ttä = venettä; keep e and write double tt. hame + tta = hametta; keep e and write double tt.",
+        "vene, hametta": "The first word is still the dictionary form. vene + ttä = venettä; keep e and write double tt.",
+        "venettä, hameta": "The second word is not formed correctly. hame + tta = hametta; keep e and write double tt."
+      },
+      "parallelExerciseId": "ptf-e-singular-review-02"
+    },
+    {
+      "id": "ptf-nen-singular-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: hevonen (“horse”) and punainen (“red”).",
+      "acceptedAnswers": ["hevosta, punaista"],
+      "explanation": "Remove -nen from hevonen and add sta: hevosta. Remove -nen from punainen and add sta: punaista.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive of -nen words"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive of -nen words",
+      "misconceptionCategory": "Singular partitive of -nen words: form or use confused",
+      "options": ["hevosta, punaista", "hevosta, punainena", "hevonen, punaista"],
+      "optionFeedback": {
+        "hevosta, punaista": "Remove -nen from hevonen and add sta: hevosta. Remove -nen from punainen and add sta: punaista.",
+        "hevonen, punaista": "The first word is still the dictionary form. Remove -nen from hevonen and add sta: hevosta.",
+        "hevosta, punainena": "The second word is not formed correctly. Remove -nen from punainen and add sta: punaista."
+      },
+      "parallelExerciseId": "ptf-nen-singular-review-02"
+    },
+    {
+      "id": "ptf-i-e-singular-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: lehti (“newspaper”) and joki (“river”).",
+      "acceptedAnswers": ["lehteä, jokea"],
+      "explanation": "Change final i in lehti to e, keep the strong consonants, and add -ä: lehteä. Change final i in joki to e, keep the strong consonants, and add -a: jokea.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Singular partitive with i → e"],
+      "vocabulary": [],
+      "targetSkill": "Singular partitive with i → e",
+      "misconceptionCategory": "Singular partitive with i → e: form or use confused",
+      "options": ["lehti, jokea", "lehteä, jokea", "lehteä, jokia"],
+      "optionFeedback": {
+        "lehteä, jokea": "Change final i in lehti to e, keep the strong consonants, and add -ä: lehteä. Change final i in joki to e, keep the strong consonants, and add -a: jokea.",
+        "lehti, jokea": "The first word is still the dictionary form. Change final i in lehti to e, keep the strong consonants, and add -ä: lehteä.",
+        "lehteä, jokia": "The second word is not formed correctly. Change final i in joki to e, keep the strong consonants, and add -a: jokea."
+      },
+      "parallelExerciseId": "ptf-i-e-singular-review-02"
+    },
+    {
+      "id": "ptf-si-singular-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: vuosi (“year”) and vesi (“water”).",
+      "acceptedAnswers": ["vuotta, vettä"],
+      "explanation": "vuosi uses vuot- + -ta, written vuotta; keep uo. vesi uses vet- + -tä, written vettä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Frequent singular -si partitives"],
+      "vocabulary": [],
+      "targetSkill": "Frequent singular -si partitives",
+      "misconceptionCategory": "Frequent singular -si partitives: form or use confused",
+      "options": ["vuotta, vesiä", "vuosi, vettä", "vuotta, vettä"],
+      "optionFeedback": {
+        "vuotta, vettä": "vuosi uses vuot- + -ta, written vuotta; keep uo. vesi uses vet- + -tä, written vettä.",
+        "vuosi, vettä": "The first word is still the dictionary form. vuosi uses vuot- + -ta, written vuotta; keep uo.",
+        "vuotta, vesiä": "The second word is not formed correctly. vesi uses vet- + -tä, written vettä."
+      },
+      "parallelExerciseId": "ptf-si-singular-review-02"
+    },
+    {
+      "id": "ptf-changing-singular-review-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose both singular partitives: lapsi (“child”) and pieni (“small”).",
+      "acceptedAnswers": ["lasta, pientä"],
+      "explanation": "lapsi uses the consonant stem las- + -ta = lasta; ps is simplified in this form. pieni uses pien- + -tä = pientä.",
+      "tags": ["standard-written-finnish", "form-singular", "paired-forms"],
+      "requiredSkills": ["Other frequent changing singular forms"],
+      "vocabulary": [],
+      "targetSkill": "Other frequent changing singular forms",
+      "misconceptionCategory": "Other frequent changing singular forms: form or use confused",
+      "options": ["lasta, pientä", "lasta, pieniä", "lapsi, pientä"],
+      "optionFeedback": {
+        "lasta, pientä": "lapsi uses the consonant stem las- + -ta = lasta; ps is simplified in this form. pieni uses pien- + -tä = pientä.",
+        "lapsi, pientä": "The first word is still the dictionary form. lapsi uses the consonant stem las- + -ta = lasta; ps is simplified in this form.",
+        "lasta, pieniä": "The second word is not formed correctly. pieni uses pien- + -tä = pientä."
+      },
+      "parallelExerciseId": "ptf-changing-singular-review-02"
+    }
+  ]
+}

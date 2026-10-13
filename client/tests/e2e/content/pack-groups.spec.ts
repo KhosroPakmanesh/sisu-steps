@@ -42,6 +42,17 @@ const expectedGroups: ExpectedGroup[] = [
       'possessive-pronouns-endings',
     ],
   },
+  {
+    id: 'partitive',
+    title: 'Partitive',
+    packs: [
+      'partitive-forms',
+      'partitive-quantities',
+      'partitive-sentences',
+      'partitive-adjectives',
+      'partitive-pronouns-questions',
+    ],
+  },
 ];
 
 test('groups catalog topic cards into labeled sections in pack order', async ({ page }) => {
@@ -65,7 +76,7 @@ test('groups catalog topic cards into labeled sections in pack order', async ({ 
     }
   }
 
-  await expect(page.locator('.topic-card')).toHaveCount(14);
+  await expect(page.locator('.topic-card')).toHaveCount(19);
 });
 
 test('mirrors the same grouping on the stats catalog', async ({ page }) => {
@@ -237,7 +248,7 @@ for (const catalogPath of ['/', '/stats']) {
         element.style.fontSize = '16px';
       });
       await expandTopicGroups(page);
-      await expect(page.locator('.topic-catalog .topic-card:visible')).toHaveCount(14);
+      await expect(page.locator('.topic-catalog .topic-card:visible')).toHaveCount(19);
       await page.screenshot({ path: testInfo.outputPath('catalog-expanded.png'), fullPage: true });
     });
 

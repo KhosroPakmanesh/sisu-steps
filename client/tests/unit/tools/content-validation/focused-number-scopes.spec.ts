@@ -14,16 +14,18 @@ describe('Focused tests separated by grammatical number', () => {
   });
 
   it('keeps the full inventory and 30 groups with 30 independently owned preparation lessons', async () => {
-    expect(packs).toHaveLength(14);
-    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(77);
-    expect(packs.flatMap((pack) => pack.tests)).toHaveLength(99);
+    expect(packs).toHaveLength(19);
+    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(107);
+    expect(packs.flatMap((pack) => pack.tests)).toHaveLength(134);
     expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(
-      2226,
+      3034,
     );
     expect(
       packs.flatMap((pack) => pack.lessons.flatMap((lesson) => lesson.practiceExercises)),
-    ).toHaveLength(239);
-    const groups = packs.flatMap((pack) => pack.tests.filter((test) => test.numberScope));
+    ).toHaveLength(329);
+    const groups = packs.flatMap((pack) =>
+      pack.tests.filter((test) => test.numberScope && test.numberScope.axis !== 'form'),
+    );
     expect(groups).toHaveLength(30);
     expect(new Set(groups.flatMap((test) => test.lessonIds)).size).toBe(30);
     expect(new Set(groups.flatMap((test) => test.exercises.map((item) => item.id))).size).toBe(600);
@@ -32,7 +34,9 @@ describe('Focused tests separated by grammatical number', () => {
       expect(() => validateRuntime(pack)).not.toThrow();
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);
-      for (const test of pack.tests.filter((item) => item.numberScope?.number === 'singular')) {
+      for (const test of pack.tests.filter(
+        (item) => item.numberScope?.number === 'singular' && item.numberScope.axis !== 'form',
+      )) {
         const plural = pack.tests.find(
           (item) => item.id === test.id.replace('-singular-test', '-plural-test'),
         )!;
@@ -46,7 +50,7 @@ describe('Focused tests separated by grammatical number', () => {
         expect(lesson.practiceExercises.length).toBeGreaterThanOrEqual(2);
       }
     }
-  });
+  }, 20_000);
 
   it.each(['person', 'owner', 'object'] as const)(
     'rejects leaked %s examples, practice and prevention notes in both directions',
@@ -161,7 +165,9 @@ describe('Focused tests separated by grammatical number', () => {
   });
 
   it('grades all 65 optional questions in independently scoped lessons', () => {
-    const lessons = packs.flatMap((pack) => pack.lessons.filter((lesson) => lesson.numberScope));
+    const lessons = packs.flatMap((pack) =>
+      pack.lessons.filter((lesson) => lesson.numberScope && lesson.numberScope.axis !== 'form'),
+    );
     const practice = lessons.flatMap((lesson) => lesson.practiceExercises);
     expect(practice).toHaveLength(65);
     expect(new Set(practice.map((exercise) => exercise.id)).size).toBe(65);
@@ -188,7 +194,9 @@ describe('Focused tests separated by grammatical number', () => {
 
   it('grades all 600 repartitioned questions, alternatives, and authored diagnostics', () => {
     const items = packs.flatMap((pack) =>
-      pack.tests.filter((test) => test.numberScope).flatMap((test) => test.exercises),
+      pack.tests
+        .filter((test) => test.numberScope && test.numberScope.axis !== 'form')
+        .flatMap((test) => test.exercises),
     );
     expect(items).toHaveLength(600);
     for (const item of items) {
