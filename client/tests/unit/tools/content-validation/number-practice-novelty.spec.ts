@@ -21,7 +21,7 @@ describe('new number-specific optional task novelty', () => {
           ),
       ),
     ).toHaveLength(17);
-  });
+  }, 20_000);
   it.each([
     ['affirmative-possession', 'aps-fixed-on-singular', 'aps-review-e022'],
     ['affirmative-possession', 'aps-fixed-on-singular', 'aps-fixed-on-singular-test-e104'],

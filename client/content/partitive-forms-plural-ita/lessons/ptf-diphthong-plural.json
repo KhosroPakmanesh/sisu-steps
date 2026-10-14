@@ -1,0 +1,143 @@
+{
+  "id": "ptf-diphthong-plural",
+  "version": "1.0.1",
+  "title": "Plural of one-syllable diphthong words",
+  "summary": "For these one-syllable diphthong words, drop the first vowel and add -ita/-itä: työ (“work”) → töitä.",
+  "stage": "focused",
+  "targetSkills": ["Plural of one-syllable diphthong words"],
+  "prerequisiteSkills": ["Plural of long-vowel words"],
+  "introducedVocabulary": [
+    {
+      "finnish": "tie",
+      "english": "road",
+      "type": "word"
+    },
+    {
+      "finnish": "yö",
+      "english": "night",
+      "type": "word"
+    },
+    {
+      "finnish": "vyö",
+      "english": "belt",
+      "type": "word"
+    },
+    {
+      "finnish": "suo",
+      "english": "swamp",
+      "type": "word"
+    },
+    {
+      "finnish": "työ",
+      "english": "work",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [],
+  "suppliedVocabulary": [],
+  "objectives": ["Form the plural partitive in this bounded word family."],
+  "sections": [
+    {
+      "title": "Meaning and pattern",
+      "paragraphs": [
+        "A case is a word form used for a grammatical job. The dictionary form is the form used to look up a word. The partitive has several uses; it does not always mean “some”. Here you practise forming the word, so no sentence construction is required.",
+        "A diphthong is two different vowels pronounced in one syllable. In these words ending in ie, uo or yö, drop the first vowel of the diphthong and add -ita/-itä to the remaining vowel. This rule concerns the selected one-syllable family, not longer words ending in two vowels."
+      ],
+      "keyPoints": [
+        "Learn each word with its pattern; a similar final letter does not guarantee the same stem."
+      ]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "työ → töitä",
+      "english": "work · drop y from yö; add -itä",
+      "steps": [
+        "Drop y from yö and add -itä: työ → töitä.",
+        "The word’s meaning stays connected to “work”; its plural case form changes its grammatical use."
+      ]
+    },
+    {
+      "finnish": "tie → teitä",
+      "english": "road · drop i from ie; add -itä",
+      "steps": [
+        "Drop i from ie and add -itä: tie → teitä.",
+        "The word’s meaning stays connected to “road”; its plural case form changes its grammatical use."
+      ]
+    },
+    {
+      "finnish": "yö → öitä",
+      "english": "night · drop y from yö; add -itä",
+      "steps": [
+        "Drop y from yö and add -itä: yö → öitä.",
+        "The word’s meaning stays connected to “night”; its plural case form changes its grammatical use."
+      ]
+    },
+    {
+      "finnish": "vyö → vöitä",
+      "english": "belt · drop y from yö; add -itä",
+      "steps": [
+        "Drop y from yö and add -itä: vyö → vöitä.",
+        "The word’s meaning stays connected to “belt”; its plural case form changes its grammatical use."
+      ]
+    },
+    {
+      "finnish": "suo → soita",
+      "english": "swamp · drop u from uo; add -ita",
+      "steps": [
+        "Drop u from uo and add -ita: suo → soita.",
+        "The word’s meaning stays connected to “swamp”; its plural case form changes its grammatical use."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Drop the first vowel, not the second.",
+    "Do not copy the unchanged-base singular -ta/-tä form.",
+    "Keep ö and ä in töitä, öitä and vöitä."
+  ],
+  "practiceExercises": [
+    {
+      "id": "ptf-diphthong-plural-practice-01",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Complete the last letter of the plural partitive of yö (“night”): öit_.",
+      "acceptedAnswers": ["ä"],
+      "explanation": "Drop y from yö and add -itä: yö → öitä.",
+      "tags": ["standard-written-finnish", "form-plural", "ending-completion", "lesson-practice"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused"
+    },
+    {
+      "id": "ptf-diphthong-plural-practice-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Complete the last letter of the plural partitive of vyö (“belt”): vöit_.",
+      "acceptedAnswers": ["ä"],
+      "explanation": "Drop y from yö and add -itä: vyö → vöitä.",
+      "tags": ["standard-written-finnish", "form-plural", "ending-completion", "lesson-practice"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused"
+    },
+    {
+      "id": "ptf-diphthong-plural-practice-03",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Complete the last letter of the plural partitive of suo (“swamp”): soit_.",
+      "acceptedAnswers": ["a"],
+      "explanation": "Drop u from uo and add -ita: suo → soita.",
+      "tags": ["standard-written-finnish", "form-plural", "ending-completion", "lesson-practice"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused"
+    }
+  ],
+  "numberScope": {
+    "axis": "form",
+    "number": "plural"
+  }
+}

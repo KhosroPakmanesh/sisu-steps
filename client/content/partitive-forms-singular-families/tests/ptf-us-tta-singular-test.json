@@ -1,0 +1,475 @@
+{
+  "id": "ptf-us-tta-singular-test",
+  "title": "Singular -us/-ys words changing s to tt",
+  "focus": "For this -us/-ys family, replace final s with -tta/-ttä: rakkaus (“love”) → rakkautta.",
+  "stage": "focused",
+  "targetSkills": ["Singular -us/-ys words changing s to tt"],
+  "prerequisiteSkills": ["Singular -us/-ys words retaining s"],
+  "lessonIds": ["ptf-us-tta-singular"],
+  "exercises": [
+    {
+      "id": "ptf-us-tta-singular-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the singular partitive of rakkaus (“love”).",
+      "acceptedAnswers": ["rakkautta"],
+      "explanation": "Remove final s and add -tta: rakkaus → rakkautta. This is the singular partitive of rakkaus (“love”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["rakkaus", "rakkautta", "rakkausta"],
+      "optionFeedback": {
+        "rakkautta": "Remove final s and add -tta: rakkaus → rakkautta. This is the singular partitive of rakkaus (“love”).",
+        "rakkaus": "rakkaus is the dictionary form. Remove final s and add -tta: rakkaus → rakkautta.",
+        "rakkausta": "This form does not express the requested case and number. Remove final s and add -tta: rakkaus → rakkautta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-reverse-03"
+    },
+    {
+      "id": "ptf-us-tta-singular-produce-01",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the singular partitive: rakkaus (“love”) → ____ (“love”, singular partitive).",
+      "acceptedAnswers": ["rakkautta"],
+      "explanation": "Remove final s and add -tta: rakkaus → rakkautta. This is the singular partitive of rakkaus (“love”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["rakkausta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s and add -tta: rakkaus → rakkautta."
+        },
+        {
+          "answers": ["rakkaus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is rakkautta. Remove final s and add -tta: rakkaus → rakkautta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-repair-03"
+    },
+    {
+      "id": "ptf-us-tta-singular-repair-01",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect singular partitive “rakkausta”. Use rakkaus (“love”).",
+      "acceptedAnswers": ["rakkautta"],
+      "explanation": "Remove final s and add -tta: rakkaus → rakkautta. This is the singular partitive of rakkaus (“love”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["rakkausta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s and add -tta: rakkaus → rakkautta."
+        },
+        {
+          "answers": ["rakkaus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is rakkautta. Remove final s and add -tta: rakkaus → rakkautta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-produce-04"
+    },
+    {
+      "id": "ptf-us-tta-singular-reverse-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the singular partitive rakkautta (“love”)?",
+      "acceptedAnswers": ["rakkaus"],
+      "explanation": "Remove final s and add -tta: rakkaus → rakkautta. This is the singular partitive of rakkaus (“love”).",
+      "tags": ["standard-written-finnish", "form-singular", "base-recognition"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["ystävyys", "rakkaus", "vapaus"],
+      "optionFeedback": {
+        "rakkaus": "Remove final s and add -tta: rakkaus → rakkautta. This is the singular partitive of rakkaus (“love”).",
+        "ystävyys": "The singular partitive of ystävyys (“friendship”) is ystävyyttä.",
+        "vapaus": "The singular partitive of vapaus (“freedom”) is vapautta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-choice-04"
+    },
+    {
+      "id": "ptf-us-tta-singular-choice-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the singular partitive of ystävyys (“friendship”).",
+      "acceptedAnswers": ["ystävyyttä"],
+      "explanation": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä. This is the singular partitive of ystävyys (“friendship”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["ystävyyttä", "ystävyystä", "ystävyys"],
+      "optionFeedback": {
+        "ystävyyttä": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä. This is the singular partitive of ystävyys (“friendship”).",
+        "ystävyys": "ystävyys is the dictionary form. Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä.",
+        "ystävyystä": "This form does not express the requested case and number. Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-reverse-04"
+    },
+    {
+      "id": "ptf-us-tta-singular-produce-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the singular partitive: ystävyys (“friendship”) → ____ (“friendship”, singular partitive).",
+      "acceptedAnswers": ["ystävyyttä"],
+      "explanation": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä. This is the singular partitive of ystävyys (“friendship”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["ystävyystä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä."
+        },
+        {
+          "answers": ["ystävyys"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is ystävyyttä. Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-repair-04"
+    },
+    {
+      "id": "ptf-us-tta-singular-repair-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect singular partitive “ystävyystä”. Use ystävyys (“friendship”).",
+      "acceptedAnswers": ["ystävyyttä"],
+      "explanation": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä. This is the singular partitive of ystävyys (“friendship”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["ystävyystä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä."
+        },
+        {
+          "answers": ["ystävyys"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is ystävyyttä. Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-produce-05"
+    },
+    {
+      "id": "ptf-us-tta-singular-reverse-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the singular partitive ystävyyttä (“friendship”)?",
+      "acceptedAnswers": ["ystävyys"],
+      "explanation": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä. This is the singular partitive of ystävyys (“friendship”).",
+      "tags": ["standard-written-finnish", "form-singular", "base-recognition"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["ystävyys", "totuus", "vapaus"],
+      "optionFeedback": {
+        "ystävyys": "Remove final s, keep yy and add -ttä: ystävyys → ystävyyttä. This is the singular partitive of ystävyys (“friendship”).",
+        "vapaus": "The singular partitive of vapaus (“freedom”) is vapautta.",
+        "totuus": "The singular partitive of totuus (“truth”) is totuutta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-choice-05"
+    },
+    {
+      "id": "ptf-us-tta-singular-choice-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the singular partitive of vapaus (“freedom”).",
+      "acceptedAnswers": ["vapautta"],
+      "explanation": "Remove final s and add -tta: vapaus → vapautta. This is the singular partitive of vapaus (“freedom”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["vapausta", "vapaus", "vapautta"],
+      "optionFeedback": {
+        "vapautta": "Remove final s and add -tta: vapaus → vapautta. This is the singular partitive of vapaus (“freedom”).",
+        "vapaus": "vapaus is the dictionary form. Remove final s and add -tta: vapaus → vapautta.",
+        "vapausta": "This form does not express the requested case and number. Remove final s and add -tta: vapaus → vapautta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-reverse-05"
+    },
+    {
+      "id": "ptf-us-tta-singular-produce-03",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the singular partitive: vapaus (“freedom”) → ____ (“freedom”, singular partitive).",
+      "acceptedAnswers": ["vapautta"],
+      "explanation": "Remove final s and add -tta: vapaus → vapautta. This is the singular partitive of vapaus (“freedom”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["vapausta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s and add -tta: vapaus → vapautta."
+        },
+        {
+          "answers": ["vapaus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is vapautta. Remove final s and add -tta: vapaus → vapautta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-repair-05"
+    },
+    {
+      "id": "ptf-us-tta-singular-repair-03",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect singular partitive “vapausta”. Use vapaus (“freedom”).",
+      "acceptedAnswers": ["vapautta"],
+      "explanation": "Remove final s and add -tta: vapaus → vapautta. This is the singular partitive of vapaus (“freedom”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["vapausta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s and add -tta: vapaus → vapautta."
+        },
+        {
+          "answers": ["vapaus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is vapautta. Remove final s and add -tta: vapaus → vapautta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-produce-01"
+    },
+    {
+      "id": "ptf-us-tta-singular-reverse-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the singular partitive vapautta (“freedom”)?",
+      "acceptedAnswers": ["vapaus"],
+      "explanation": "Remove final s and add -tta: vapaus → vapautta. This is the singular partitive of vapaus (“freedom”).",
+      "tags": ["standard-written-finnish", "form-singular", "base-recognition"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["mahdollisuus", "totuus", "vapaus"],
+      "optionFeedback": {
+        "vapaus": "Remove final s and add -tta: vapaus → vapautta. This is the singular partitive of vapaus (“freedom”).",
+        "totuus": "The singular partitive of totuus (“truth”) is totuutta.",
+        "mahdollisuus": "The singular partitive of mahdollisuus (“possibility”) is mahdollisuutta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-choice-01"
+    },
+    {
+      "id": "ptf-us-tta-singular-choice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the singular partitive of totuus (“truth”).",
+      "acceptedAnswers": ["totuutta"],
+      "explanation": "Remove final s, keep uu and add -tta: totuus → totuutta. This is the singular partitive of totuus (“truth”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["totuus", "totuutta", "totuusta"],
+      "optionFeedback": {
+        "totuutta": "Remove final s, keep uu and add -tta: totuus → totuutta. This is the singular partitive of totuus (“truth”).",
+        "totuus": "totuus is the dictionary form. Remove final s, keep uu and add -tta: totuus → totuutta.",
+        "totuusta": "This form does not express the requested case and number. Remove final s, keep uu and add -tta: totuus → totuutta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-reverse-01"
+    },
+    {
+      "id": "ptf-us-tta-singular-produce-04",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the singular partitive: totuus (“truth”) → ____ (“truth”, singular partitive).",
+      "acceptedAnswers": ["totuutta"],
+      "explanation": "Remove final s, keep uu and add -tta: totuus → totuutta. This is the singular partitive of totuus (“truth”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["totuusta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s, keep uu and add -tta: totuus → totuutta."
+        },
+        {
+          "answers": ["totuus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is totuutta. Remove final s, keep uu and add -tta: totuus → totuutta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-repair-01"
+    },
+    {
+      "id": "ptf-us-tta-singular-repair-04",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect singular partitive “totuusta”. Use totuus (“truth”).",
+      "acceptedAnswers": ["totuutta"],
+      "explanation": "Remove final s, keep uu and add -tta: totuus → totuutta. This is the singular partitive of totuus (“truth”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["totuusta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s, keep uu and add -tta: totuus → totuutta."
+        },
+        {
+          "answers": ["totuus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is totuutta. Remove final s, keep uu and add -tta: totuus → totuutta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-produce-02"
+    },
+    {
+      "id": "ptf-us-tta-singular-reverse-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the singular partitive totuutta (“truth”)?",
+      "acceptedAnswers": ["totuus"],
+      "explanation": "Remove final s, keep uu and add -tta: totuus → totuutta. This is the singular partitive of totuus (“truth”).",
+      "tags": ["standard-written-finnish", "form-singular", "base-recognition"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["mahdollisuus", "totuus", "rakkaus"],
+      "optionFeedback": {
+        "totuus": "Remove final s, keep uu and add -tta: totuus → totuutta. This is the singular partitive of totuus (“truth”).",
+        "mahdollisuus": "The singular partitive of mahdollisuus (“possibility”) is mahdollisuutta.",
+        "rakkaus": "The singular partitive of rakkaus (“love”) is rakkautta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-choice-02"
+    },
+    {
+      "id": "ptf-us-tta-singular-choice-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the singular partitive of mahdollisuus (“possibility”).",
+      "acceptedAnswers": ["mahdollisuutta"],
+      "explanation": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta. This is the singular partitive of mahdollisuus (“possibility”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["mahdollisuutta", "mahdollisuusta", "mahdollisuus"],
+      "optionFeedback": {
+        "mahdollisuutta": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta. This is the singular partitive of mahdollisuus (“possibility”).",
+        "mahdollisuus": "mahdollisuus is the dictionary form. Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta.",
+        "mahdollisuusta": "This form does not express the requested case and number. Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-reverse-02"
+    },
+    {
+      "id": "ptf-us-tta-singular-produce-05",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the singular partitive: mahdollisuus (“possibility”) → ____ (“possibility”, singular partitive).",
+      "acceptedAnswers": ["mahdollisuutta"],
+      "explanation": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta. This is the singular partitive of mahdollisuus (“possibility”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["mahdollisuusta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta."
+        },
+        {
+          "answers": ["mahdollisuus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is mahdollisuutta. Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-repair-02"
+    },
+    {
+      "id": "ptf-us-tta-singular-repair-05",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect singular partitive “mahdollisuusta”. Use mahdollisuus (“possibility”).",
+      "acceptedAnswers": ["mahdollisuutta"],
+      "explanation": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta. This is the singular partitive of mahdollisuus (“possibility”).",
+      "tags": ["standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["mahdollisuusta"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta."
+        },
+        {
+          "answers": ["mahdollisuus"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested singular partitive is mahdollisuutta. Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta."
+        }
+      ],
+      "parallelExerciseId": "ptf-us-tta-singular-produce-03"
+    },
+    {
+      "id": "ptf-us-tta-singular-reverse-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the singular partitive mahdollisuutta (“possibility”)?",
+      "acceptedAnswers": ["mahdollisuus"],
+      "explanation": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta. This is the singular partitive of mahdollisuus (“possibility”).",
+      "tags": ["standard-written-finnish", "form-singular", "base-recognition"],
+      "requiredSkills": ["Singular -us/-ys words changing s to tt"],
+      "vocabulary": [],
+      "targetSkill": "Singular -us/-ys words changing s to tt",
+      "misconceptionCategory": "Singular -us/-ys words changing s to tt: form or use confused",
+      "options": ["mahdollisuus", "ystävyys", "rakkaus"],
+      "optionFeedback": {
+        "mahdollisuus": "Remove final s, keep uu and add -tta: mahdollisuus → mahdollisuutta. This is the singular partitive of mahdollisuus (“possibility”).",
+        "rakkaus": "The singular partitive of rakkaus (“love”) is rakkautta.",
+        "ystävyys": "The singular partitive of ystävyys (“friendship”) is ystävyyttä."
+      },
+      "parallelExerciseId": "ptf-us-tta-singular-choice-03"
+    }
+  ],
+  "numberScope": {
+    "axis": "form",
+    "number": "singular"
+  }
+}

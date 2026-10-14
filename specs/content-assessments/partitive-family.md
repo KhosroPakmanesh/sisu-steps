@@ -1,5 +1,7 @@
 # Partitive family pedagogy assessment
 
+The [2026-10-14 expansion](partitive-expansion.md) owns the later Forms/Adjectives additions, new prerequisite order and two version changes. This record retains the actual earlier thirty-lesson creation and subsequent wording assessments.
+
 ## Topic, scope and actual state
 
 Blueprint date: 2026-10-11; final assessment date: 2026-10-12. Governing contract: REQ-G001-152 / VAL-G001-111. The user approved the proposed curriculum, requested singular/plural together in each topic pack, and required standard written Finnish throughout. Instruction and explanatory prose remain English. This record retains the actual approval before bulk authoring and the completed final assessment.

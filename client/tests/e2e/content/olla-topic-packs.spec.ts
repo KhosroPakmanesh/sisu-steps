@@ -33,8 +33,8 @@ test('opens each smaller pronoun and olla topic pack with the consolidated lesso
 }) => {
   await page.goto('/');
 
-  await expect(page.locator('.catalog-stats')).toContainText('19');
-  await expect(page.locator('.catalog-stats')).toContainText('3034');
+  await expect(page.locator('.catalog-stats')).toContainText('22');
+  await expect(page.locator('.catalog-stats')).toContainText('3576');
 
   for (const pack of packs) {
     await expandTopicGroup(page, 'pronouns-and-olla');

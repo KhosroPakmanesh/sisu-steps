@@ -69,7 +69,7 @@ describe('English gender-neutral pronoun alternatives', () => {
   });
 
   it('audits all installed packs and both optional-practice pronoun translations', async () => {
-    expect(packs).toHaveLength(19);
+    expect(packs).toHaveLength(22);
     for (const pack of packs) {
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);

@@ -15,18 +15,18 @@ describe('beginner standard-written partitive family', () => {
   });
 
   it('validates every source and runtime pack and the complete coverage inventory', async () => {
-    expect(packs).toHaveLength(5);
-    expect(packs.flatMap((p) => p.lessons)).toHaveLength(30);
-    expect(packs.flatMap((p) => p.tests)).toHaveLength(35);
-    expect(packs.flatMap((p) => p.tests.flatMap((t) => t.exercises))).toHaveLength(808);
-    expect(packs.flatMap((p) => p.lessons.flatMap((l) => l.practiceExercises))).toHaveLength(90);
+    expect(packs).toHaveLength(8);
+    expect(packs.flatMap((p) => p.lessons)).toHaveLength(50);
+    expect(packs.flatMap((p) => p.tests)).toHaveLength(58);
+    expect(packs.flatMap((p) => p.tests.flatMap((t) => t.exercises))).toHaveLength(1350);
+    expect(packs.flatMap((p) => p.lessons.flatMap((l) => l.practiceExercises))).toHaveLength(150);
     for (const pack of packs) {
       expect(validatePartitiveFamily(pack)).toEqual([]);
       expect(validateSource(pack)).toEqual([]);
       expect(validateTopicPack(pack).id).toBe(pack.id);
       expect((await validatePackContent(pack)).errors).toEqual([]);
     }
-  });
+  }, 20_000);
 
   it('grades every declared alternative and diagnostic, preserving diacritics', () => {
     for (const pack of packs) {
@@ -69,7 +69,7 @@ describe('beginner standard-written partitive family', () => {
     'missing vocabulary',
     'broken pair',
   ])('rejects %s at both content boundaries', async (mutation) => {
-    const pack = structuredClone(packs[1]);
+    const pack = structuredClone(packs.find((p) => p.id === 'partitive-quantities')!);
     const test = pack.tests[0];
     const item = test.exercises[0];
     if (mutation === 'wrong form') item.acceptedAnswers[0] = 'kirjat';
@@ -90,15 +90,46 @@ describe('beginner standard-written partitive family', () => {
   });
 
   it('distinguishes singular form number after two from the plural referents', () => {
-    const pack = packs[1];
+    const pack = packs.find((p) => p.id === 'partitive-quantities')!;
     const test = pack.tests[0];
     expect(test.numberScope).toEqual({ axis: 'form', number: 'singular' });
     expect(gradeAnswer(test.exercises[0], 'kirjaa').correct).toBe(true);
     expect(gradeAnswer(test.exercises[0], 'kirjoja').correct).toBe(false);
   });
 
+  it.each([
+    ['ptf-a-oja-plural', 'hinnoja'],
+    ['ptf-long-vowel-plural', 'maaita'],
+    ['ptf-diphthong-plural', 'työitä'],
+    ['ptf-in-plural', 'soitimia'],
+    ['ptf-e-plural', 'tuoteita'],
+    ['ptf-as-plural', 'hammaita'],
+    ['ptf-is-plural', 'kaunita'],
+    ['ptf-us-ks-plural', 'kysymysiä'],
+    ['ptf-ton-plural', 'työtömiä'],
+    ['ptf-long-a-plural', 'mansikkoita'],
+  ])('rejects an incorrect stem in %s at both form boundaries', (id, wrong) => {
+    const altered = structuredClone(packs.find((p) => p.lessons.some((l) => l.id === id))!);
+    altered.tests.find((t) => t.id === id + '-test')!.exercises[0].acceptedAnswers = [wrong];
+    expect(validatePartitiveFamily(altered).length).toBeGreaterThan(0);
+    expect(validateSource(altered).length).toBeGreaterThan(0);
+  });
+
+  it('accepts taught longer-word alternatives and rejects mixed consonant grades', () => {
+    const test = packs
+      .find((p) => p.id === 'partitive-forms-plural-ita')!
+      .tests.find((t) => t.id === 'ptf-long-a-plural-test')!;
+    const potato = test.exercises.find((e) => e.id === 'ptf-long-a-plural-produce-01')!;
+    for (const answer of ['perunoita', 'perunia', 'perunoja'])
+      expect(gradeAnswer(potato, answer).correct).toBe(true);
+    const strawberry = test.exercises.find((e) => e.id === 'ptf-long-a-plural-produce-02')!;
+    for (const answer of ['mansikoita', 'mansikkoja'])
+      expect(gradeAnswer(strawberry, answer).correct).toBe(true);
+    expect(gradeAnswer(strawberry, 'mansikkoita').correct).toBe(false);
+  });
+
   it('accepts all object-gender alternatives without confusing her with a possessive', async () => {
-    const pack = packs[4];
+    const pack = packs.find((p) => p.id === 'partitive-pronouns-questions')!;
     const original = pack.tests[0].exercises.find((e) => e.id === 'ptp-personal-singular-en-03')!;
     for (const pronoun of ['him', 'her', 'him or her'])
       expect(gradeAnswer(original, `I am waiting for ${pronoun}.`).correct).toBe(true);

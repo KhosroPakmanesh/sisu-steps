@@ -29,7 +29,7 @@ test('shows all ownership packs and target-specific preparation at every viewpor
   await expandTopicGroup(page, 'ownership-and-possession');
   const group = page.locator('.pack-group').filter({ hasText: 'Ownership and possession' });
   await expect(group.locator('.topic-card')).toHaveCount(5);
-  await expect(page.locator('.catalog-stats')).toContainText('3034');
+  await expect(page.locator('.catalog-stats')).toContainText('3576');
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);
     await expect(page.getByRole('heading', { level: 1 })).toHaveText(pack.title);

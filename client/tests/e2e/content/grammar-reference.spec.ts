@@ -10,7 +10,7 @@ import { expandTopicGroup } from '../support/topic-groups';
 test('shows every group’s exact authored grammar in order without loading scored tests or changing data', async ({
   page,
 }) => {
-  test.setTimeout(90000);
+  test.setTimeout(180000);
   await page.emulateMedia({ reducedMotion: 'reduce' });
   const requests: string[] = [];
   page.on('request', (request) => {

@@ -8,6 +8,9 @@ import { loadContentSource } from '../../../tools/content-source-loader.mjs';
 
 const ids = [
   'partitive-forms',
+  'partitive-forms-singular-families',
+  'partitive-forms-plural-ia-ja',
+  'partitive-forms-plural-ita',
   'partitive-quantities',
   'partitive-sentences',
   'partitive-adjectives',
@@ -21,14 +24,16 @@ const loadPack = (id: string) => packs.find((p) => p.id === id)!;
 
 for (const id of ids) {
   test('renders and grades every scored partitive item in ' + id, async ({ page }, testInfo) => {
-    test.setTimeout(600_000);
     const pack = loadPack(id);
+    const count = pack.tests.flatMap((t) => t.exercises).length;
+    test.setTimeout(Math.max(600_000, count * 2_000));
     const records: Array<{ id: string; prompt: string; feedback: string }> = [];
     const errors: string[] = [];
     page.on('pageerror', (error) => errors.push(error.message));
     await page.emulateMedia({ reducedMotion: 'reduce' });
     for (const authored of pack.tests) {
       await page.goto(`/study/${id}/${authored.id}`);
+      await expect(page.locator('.exercise-card')).toBeVisible({ timeout: 20_000 });
       for (const [index, exercise] of authored.exercises.entries()) {
         await expect(page.locator('.exercise-card h2')).toHaveText(exercise.prompt);
         await submit(page, exercise, exercise.acceptedAnswers[0]);
@@ -59,7 +64,9 @@ for (const id of ids) {
           });
         if (index === 1) {
           await page.reload();
-          await expect(page.locator('.exercise-card h2')).toHaveText(exercise.prompt);
+          await expect(page.locator('.exercise-card h2')).toHaveText(exercise.prompt, {
+            timeout: 20_000,
+          });
           await expect(page.locator('.feedback')).toHaveClass(/(?:^|\s)correct(?:\s|$)/u);
         }
         await page
@@ -155,7 +162,7 @@ test('shows partitive diagnostics and fallback and accepts object-pronoun altern
         exercise.answerDiagnostics![0].explanation,
       );
   }
-  const pack = loadPack(ids[4]);
+  const pack = loadPack('partitive-pronouns-questions');
   const pronouns = pack.tests[0];
   const position = pronouns.exercises.findIndex((e) => e.id === 'ptp-personal-singular-en-03');
   await page.goto(`/study/${pack.id}/${pronouns.id}`);
@@ -164,4 +171,66 @@ test('shows partitive diagnostics and fallback and accepts object-pronoun altern
     await submit(page, pronouns.exercises[position], `I am waiting for ${pronoun}.`);
     await expect(page.locator('.feedback')).toHaveClass(/(?:^|\s)correct(?:\s|$)/u);
   }
+});
+
+test('grades expanded form alternatives and specific stem feedback', async ({ page }) => {
+  test.setTimeout(120_000);
+  const pack = loadPack('partitive-forms-plural-ita');
+  const authored = pack.tests.find((t) => t.id === 'ptf-long-a-plural-test')!;
+  for (const [index, exercise] of authored.exercises.entries()) {
+    if (exercise.type !== 'fill-blank' || !exercise.id.includes('-produce-')) continue;
+    await page.goto(`/study/${pack.id}/${authored.id}`);
+    await expect(page.locator('.exercise-card')).toBeVisible({ timeout: 20_000 });
+    for (const answer of exercise.acceptedAnswers) {
+      await positionSession(page, pack.id, authored.id, index);
+      await submit(page, exercise, answer);
+      await expect(page.locator('.feedback')).toHaveClass(/(?:^|\s)correct(?:\s|$)/u);
+    }
+    const wrong = exercise.answerDiagnostics![0].answers[0];
+    await positionSession(page, pack.id, authored.id, index);
+    await submit(page, exercise, wrong);
+    await expect(page.locator('.feedback')).toHaveClass(/(?:^|\s)incorrect(?:\s|$)/u);
+    await expect(page.locator('.feedback')).toContainText(
+      exercise.answerDiagnostics![0].explanation,
+    );
+    await positionSession(page, pack.id, authored.id, index);
+    await submit(page, exercise, 'xyz');
+    await expect(page.locator('.feedback .diagnostic')).toHaveCount(0);
+    await expect(page.locator('.feedback .explanation')).toHaveCount(1);
+  }
+});
+
+test('keeps expanded Partitive maps and reference preparations in authored order', async ({
+  page,
+}, testInfo) => {
+  for (const id of [
+    ...ids.filter((id) => id.startsWith('partitive-forms')),
+    'partitive-adjectives',
+  ]) {
+    const pack = loadPack(id);
+    await page.goto(`/topics/${id}`);
+    await expect(page.locator('.test-card .test-title-row h3')).toHaveText(
+      pack.tests.map((t) => t.title),
+    );
+    await expect(page.locator('.test-card').last()).toHaveClass(/review-test/u);
+    await expect(page.locator('.test-card.review-test')).toHaveCount(1);
+    await page.locator('.test-card').nth(2).scrollIntoViewIfNeeded();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(
+      true,
+    );
+    await page.screenshot({ path: testInfo.outputPath(id + '-ordered-map.png') });
+  }
+  await page.goto('/');
+  const button = page.getByRole('button', { name: 'Grammar reference for Partitive', exact: true });
+  await expect(button).toBeVisible();
+  const before = await learnerState(page);
+  await button.click();
+  const dialog = page.getByRole('dialog');
+  await expect(dialog.locator('.reference-lesson-title')).toHaveText(
+    ids.flatMap((id) => loadPack(id).lessons.map((l) => l.title)),
+  );
+  await page.keyboard.press('Escape');
+  await expect(dialog).toHaveCount(0);
+  await expect(button).toBeFocused();
+  expect(await learnerState(page)).toEqual(before);
 });

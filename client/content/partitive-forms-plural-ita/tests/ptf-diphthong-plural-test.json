@@ -1,0 +1,475 @@
+{
+  "id": "ptf-diphthong-plural-test",
+  "title": "Plural of one-syllable diphthong words",
+  "focus": "For these one-syllable diphthong words, drop the first vowel and add -ita/-itä: työ (“work”) → töitä.",
+  "stage": "focused",
+  "targetSkills": ["Plural of one-syllable diphthong words"],
+  "prerequisiteSkills": ["Plural of long-vowel words"],
+  "lessonIds": ["ptf-diphthong-plural"],
+  "exercises": [
+    {
+      "id": "ptf-diphthong-plural-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of työ (“work”).",
+      "acceptedAnswers": ["töitä"],
+      "explanation": "Drop y from yö and add -itä: työ → töitä. This is the plural partitive of työ (“work”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["työ", "töitä", "työitä"],
+      "optionFeedback": {
+        "töitä": "Drop y from yö and add -itä: työ → töitä. This is the plural partitive of työ (“work”).",
+        "työ": "työ is the dictionary form. Drop y from yö and add -itä: työ → töitä.",
+        "työitä": "This form does not express the requested case and number. Drop y from yö and add -itä: työ → töitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-reverse-03"
+    },
+    {
+      "id": "ptf-diphthong-plural-produce-01",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: työ (“work”) → ____ (“work”, plural partitive).",
+      "acceptedAnswers": ["töitä"],
+      "explanation": "Drop y from yö and add -itä: työ → töitä. This is the plural partitive of työ (“work”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["työitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop y from yö and add -itä: työ → töitä."
+        },
+        {
+          "answers": ["työ"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is töitä. Drop y from yö and add -itä: työ → töitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-repair-03"
+    },
+    {
+      "id": "ptf-diphthong-plural-repair-01",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “työitä”. Use työ (“work”).",
+      "acceptedAnswers": ["töitä"],
+      "explanation": "Drop y from yö and add -itä: työ → töitä. This is the plural partitive of työ (“work”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["työitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop y from yö and add -itä: työ → töitä."
+        },
+        {
+          "answers": ["työ"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is töitä. Drop y from yö and add -itä: työ → töitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-produce-04"
+    },
+    {
+      "id": "ptf-diphthong-plural-reverse-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive töitä (“work”)?",
+      "acceptedAnswers": ["työ"],
+      "explanation": "Drop y from yö and add -itä: työ → töitä. This is the plural partitive of työ (“work”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["tie", "työ", "yö"],
+      "optionFeedback": {
+        "työ": "Drop y from yö and add -itä: työ → töitä. This is the plural partitive of työ (“work”).",
+        "tie": "The plural partitive of tie (“road”) is teitä.",
+        "yö": "The plural partitive of yö (“night”) is öitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-choice-04"
+    },
+    {
+      "id": "ptf-diphthong-plural-choice-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of tie (“road”).",
+      "acceptedAnswers": ["teitä"],
+      "explanation": "Drop i from ie and add -itä: tie → teitä. This is the plural partitive of tie (“road”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["teitä", "tieitä", "tie"],
+      "optionFeedback": {
+        "teitä": "Drop i from ie and add -itä: tie → teitä. This is the plural partitive of tie (“road”).",
+        "tie": "tie is the dictionary form. Drop i from ie and add -itä: tie → teitä.",
+        "tieitä": "This form does not express the requested case and number. Drop i from ie and add -itä: tie → teitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-reverse-04"
+    },
+    {
+      "id": "ptf-diphthong-plural-produce-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: tie (“road”) → ____ (“road”, plural partitive).",
+      "acceptedAnswers": ["teitä"],
+      "explanation": "Drop i from ie and add -itä: tie → teitä. This is the plural partitive of tie (“road”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["tieitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop i from ie and add -itä: tie → teitä."
+        },
+        {
+          "answers": ["tie"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is teitä. Drop i from ie and add -itä: tie → teitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-repair-04"
+    },
+    {
+      "id": "ptf-diphthong-plural-repair-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “tieitä”. Use tie (“road”).",
+      "acceptedAnswers": ["teitä"],
+      "explanation": "Drop i from ie and add -itä: tie → teitä. This is the plural partitive of tie (“road”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["tieitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop i from ie and add -itä: tie → teitä."
+        },
+        {
+          "answers": ["tie"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is teitä. Drop i from ie and add -itä: tie → teitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-produce-05"
+    },
+    {
+      "id": "ptf-diphthong-plural-reverse-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive teitä (“road”)?",
+      "acceptedAnswers": ["tie"],
+      "explanation": "Drop i from ie and add -itä: tie → teitä. This is the plural partitive of tie (“road”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["tie", "vyö", "yö"],
+      "optionFeedback": {
+        "tie": "Drop i from ie and add -itä: tie → teitä. This is the plural partitive of tie (“road”).",
+        "yö": "The plural partitive of yö (“night”) is öitä.",
+        "vyö": "The plural partitive of vyö (“belt”) is vöitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-choice-05"
+    },
+    {
+      "id": "ptf-diphthong-plural-choice-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of yö (“night”).",
+      "acceptedAnswers": ["öitä"],
+      "explanation": "Drop y from yö and add -itä: yö → öitä. This is the plural partitive of yö (“night”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["yöitä", "yö", "öitä"],
+      "optionFeedback": {
+        "öitä": "Drop y from yö and add -itä: yö → öitä. This is the plural partitive of yö (“night”).",
+        "yö": "yö is the dictionary form. Drop y from yö and add -itä: yö → öitä.",
+        "yöitä": "This form does not express the requested case and number. Drop y from yö and add -itä: yö → öitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-reverse-05"
+    },
+    {
+      "id": "ptf-diphthong-plural-produce-03",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: yö (“night”) → ____ (“night”, plural partitive).",
+      "acceptedAnswers": ["öitä"],
+      "explanation": "Drop y from yö and add -itä: yö → öitä. This is the plural partitive of yö (“night”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["yöitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop y from yö and add -itä: yö → öitä."
+        },
+        {
+          "answers": ["yö"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is öitä. Drop y from yö and add -itä: yö → öitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-repair-05"
+    },
+    {
+      "id": "ptf-diphthong-plural-repair-03",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “yöitä”. Use yö (“night”).",
+      "acceptedAnswers": ["öitä"],
+      "explanation": "Drop y from yö and add -itä: yö → öitä. This is the plural partitive of yö (“night”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["yöitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop y from yö and add -itä: yö → öitä."
+        },
+        {
+          "answers": ["yö"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is öitä. Drop y from yö and add -itä: yö → öitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-produce-01"
+    },
+    {
+      "id": "ptf-diphthong-plural-reverse-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive öitä (“night”)?",
+      "acceptedAnswers": ["yö"],
+      "explanation": "Drop y from yö and add -itä: yö → öitä. This is the plural partitive of yö (“night”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["suo", "vyö", "yö"],
+      "optionFeedback": {
+        "yö": "Drop y from yö and add -itä: yö → öitä. This is the plural partitive of yö (“night”).",
+        "vyö": "The plural partitive of vyö (“belt”) is vöitä.",
+        "suo": "The plural partitive of suo (“swamp”) is soita."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-choice-01"
+    },
+    {
+      "id": "ptf-diphthong-plural-choice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of vyö (“belt”).",
+      "acceptedAnswers": ["vöitä"],
+      "explanation": "Drop y from yö and add -itä: vyö → vöitä. This is the plural partitive of vyö (“belt”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["vyö", "vöitä", "vyöitä"],
+      "optionFeedback": {
+        "vöitä": "Drop y from yö and add -itä: vyö → vöitä. This is the plural partitive of vyö (“belt”).",
+        "vyö": "vyö is the dictionary form. Drop y from yö and add -itä: vyö → vöitä.",
+        "vyöitä": "This form does not express the requested case and number. Drop y from yö and add -itä: vyö → vöitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-reverse-01"
+    },
+    {
+      "id": "ptf-diphthong-plural-produce-04",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: vyö (“belt”) → ____ (“belt”, plural partitive).",
+      "acceptedAnswers": ["vöitä"],
+      "explanation": "Drop y from yö and add -itä: vyö → vöitä. This is the plural partitive of vyö (“belt”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["vyöitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop y from yö and add -itä: vyö → vöitä."
+        },
+        {
+          "answers": ["vyö"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is vöitä. Drop y from yö and add -itä: vyö → vöitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-repair-01"
+    },
+    {
+      "id": "ptf-diphthong-plural-repair-04",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “vyöitä”. Use vyö (“belt”).",
+      "acceptedAnswers": ["vöitä"],
+      "explanation": "Drop y from yö and add -itä: vyö → vöitä. This is the plural partitive of vyö (“belt”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["vyöitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop y from yö and add -itä: vyö → vöitä."
+        },
+        {
+          "answers": ["vyö"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is vöitä. Drop y from yö and add -itä: vyö → vöitä."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-produce-02"
+    },
+    {
+      "id": "ptf-diphthong-plural-reverse-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive vöitä (“belt”)?",
+      "acceptedAnswers": ["vyö"],
+      "explanation": "Drop y from yö and add -itä: vyö → vöitä. This is the plural partitive of vyö (“belt”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["suo", "vyö", "työ"],
+      "optionFeedback": {
+        "vyö": "Drop y from yö and add -itä: vyö → vöitä. This is the plural partitive of vyö (“belt”).",
+        "suo": "The plural partitive of suo (“swamp”) is soita.",
+        "työ": "The plural partitive of työ (“work”) is töitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-choice-02"
+    },
+    {
+      "id": "ptf-diphthong-plural-choice-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of suo (“swamp”).",
+      "acceptedAnswers": ["soita"],
+      "explanation": "Drop u from uo and add -ita: suo → soita. This is the plural partitive of suo (“swamp”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["soita", "suoita", "suo"],
+      "optionFeedback": {
+        "soita": "Drop u from uo and add -ita: suo → soita. This is the plural partitive of suo (“swamp”).",
+        "suo": "suo is the dictionary form. Drop u from uo and add -ita: suo → soita.",
+        "suoita": "This form does not express the requested case and number. Drop u from uo and add -ita: suo → soita."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-reverse-02"
+    },
+    {
+      "id": "ptf-diphthong-plural-produce-05",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: suo (“swamp”) → ____ (“swamp”, plural partitive).",
+      "acceptedAnswers": ["soita"],
+      "explanation": "Drop u from uo and add -ita: suo → soita. This is the plural partitive of suo (“swamp”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["suoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop u from uo and add -ita: suo → soita."
+        },
+        {
+          "answers": ["suo"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is soita. Drop u from uo and add -ita: suo → soita."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-repair-02"
+    },
+    {
+      "id": "ptf-diphthong-plural-repair-05",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “suoita”. Use suo (“swamp”).",
+      "acceptedAnswers": ["soita"],
+      "explanation": "Drop u from uo and add -ita: suo → soita. This is the plural partitive of suo (“swamp”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["suoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Drop u from uo and add -ita: suo → soita."
+        },
+        {
+          "answers": ["suo"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is soita. Drop u from uo and add -ita: suo → soita."
+        }
+      ],
+      "parallelExerciseId": "ptf-diphthong-plural-produce-03"
+    },
+    {
+      "id": "ptf-diphthong-plural-reverse-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive soita (“swamp”)?",
+      "acceptedAnswers": ["suo"],
+      "explanation": "Drop u from uo and add -ita: suo → soita. This is the plural partitive of suo (“swamp”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of one-syllable diphthong words"],
+      "vocabulary": [],
+      "targetSkill": "Plural of one-syllable diphthong words",
+      "misconceptionCategory": "Plural of one-syllable diphthong words: form or use confused",
+      "options": ["suo", "tie", "työ"],
+      "optionFeedback": {
+        "suo": "Drop u from uo and add -ita: suo → soita. This is the plural partitive of suo (“swamp”).",
+        "työ": "The plural partitive of työ (“work”) is töitä.",
+        "tie": "The plural partitive of tie (“road”) is teitä."
+      },
+      "parallelExerciseId": "ptf-diphthong-plural-choice-03"
+    }
+  ],
+  "numberScope": {
+    "axis": "form",
+    "number": "plural"
+  }
+}

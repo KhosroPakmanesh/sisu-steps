@@ -329,6 +329,9 @@ describe('pack-owned content source loader', () => {
         title: 'Partitive',
         packs: [
           'partitive-forms',
+          'partitive-forms-singular-families',
+          'partitive-forms-plural-ia-ja',
+          'partitive-forms-plural-ita',
           'partitive-quantities',
           'partitive-sentences',
           'partitive-adjectives',

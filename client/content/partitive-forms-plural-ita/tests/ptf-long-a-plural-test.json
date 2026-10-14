@@ -1,0 +1,475 @@
+{
+  "id": "ptf-long-a-plural-test",
+  "title": "Plural of selected longer words: -oita/-öitä",
+  "focus": "For these selected longer words, form the taught -oita/-öitä plural: peruna (“potato”) → perunoita.",
+  "stage": "focused",
+  "targetSkills": ["Plural of selected longer words: -oita/-öitä"],
+  "prerequisiteSkills": ["Plural of long-vowel words"],
+  "lessonIds": ["ptf-long-a-plural"],
+  "exercises": [
+    {
+      "id": "ptf-long-a-plural-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of peruna (“potato”).",
+      "acceptedAnswers": ["perunoita"],
+      "explanation": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively. This is the plural partitive of peruna (“potato”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["peruna", "perunoita", "perunaita"],
+      "optionFeedback": {
+        "perunoita": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively. This is the plural partitive of peruna (“potato”).",
+        "peruna": "peruna is the dictionary form. Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively.",
+        "perunaita": "This form does not express the requested case and number. Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-reverse-03"
+    },
+    {
+      "id": "ptf-long-a-plural-produce-01",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: peruna (“potato”) → ____ (“potato”, plural partitive).",
+      "acceptedAnswers": ["perunoita", "perunia", "perunoja"],
+      "explanation": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively. This is the plural partitive of peruna (“potato”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["perunaita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively."
+        },
+        {
+          "answers": ["peruna"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is perunoita. Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-repair-03"
+    },
+    {
+      "id": "ptf-long-a-plural-repair-01",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “perunaita”. Use peruna (“potato”).",
+      "acceptedAnswers": ["perunoita", "perunia", "perunoja"],
+      "explanation": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively. This is the plural partitive of peruna (“potato”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["perunaita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively."
+        },
+        {
+          "answers": ["peruna"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is perunoita. Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-produce-04"
+    },
+    {
+      "id": "ptf-long-a-plural-reverse-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive perunoita (“potato”)?",
+      "acceptedAnswers": ["peruna"],
+      "explanation": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively. This is the plural partitive of peruna (“potato”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["mansikka", "peruna", "lusikka"],
+      "optionFeedback": {
+        "peruna": "Replace final -a with -oita: peruna → perunoita. The standard alternatives perunia and perunoja are also accepted; they replace -a with -ia and -oja respectively. This is the plural partitive of peruna (“potato”).",
+        "mansikka": "The plural partitive of mansikka (“strawberry”) is mansikoita.",
+        "lusikka": "The plural partitive of lusikka (“spoon”) is lusikoita."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-choice-04"
+    },
+    {
+      "id": "ptf-long-a-plural-choice-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of mansikka (“strawberry”).",
+      "acceptedAnswers": ["mansikoita"],
+      "explanation": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja. This is the plural partitive of mansikka (“strawberry”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["mansikoita", "mansikkoita", "mansikka"],
+      "optionFeedback": {
+        "mansikoita": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja. This is the plural partitive of mansikka (“strawberry”).",
+        "mansikka": "mansikka is the dictionary form. Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja.",
+        "mansikkoita": "This form does not express the requested case and number. Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-reverse-04"
+    },
+    {
+      "id": "ptf-long-a-plural-produce-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: mansikka (“strawberry”) → ____ (“strawberry”, plural partitive).",
+      "acceptedAnswers": ["mansikoita", "mansikkoja"],
+      "explanation": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja. This is the plural partitive of mansikka (“strawberry”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["mansikkoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja."
+        },
+        {
+          "answers": ["mansikka"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is mansikoita. Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-repair-04"
+    },
+    {
+      "id": "ptf-long-a-plural-repair-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “mansikkoita”. Use mansikka (“strawberry”).",
+      "acceptedAnswers": ["mansikoita", "mansikkoja"],
+      "explanation": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja. This is the plural partitive of mansikka (“strawberry”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["mansikkoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja."
+        },
+        {
+          "answers": ["mansikka"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is mansikoita. Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-produce-05"
+    },
+    {
+      "id": "ptf-long-a-plural-reverse-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive mansikoita (“strawberry”)?",
+      "acceptedAnswers": ["mansikka"],
+      "explanation": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja. This is the plural partitive of mansikka (“strawberry”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["mansikka", "laatikko", "lusikka"],
+      "optionFeedback": {
+        "mansikka": "Replace -kka with -koita: mansikka → mansikoita. Alternatively replace -a with -oja and retain kk: mansikkoja. This is the plural partitive of mansikka (“strawberry”).",
+        "lusikka": "The plural partitive of lusikka (“spoon”) is lusikoita.",
+        "laatikko": "The plural partitive of laatikko (“box”) is laatikoita."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-choice-05"
+    },
+    {
+      "id": "ptf-long-a-plural-choice-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of lusikka (“spoon”).",
+      "acceptedAnswers": ["lusikoita"],
+      "explanation": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja. This is the plural partitive of lusikka (“spoon”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["lusikkoita", "lusikka", "lusikoita"],
+      "optionFeedback": {
+        "lusikoita": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja. This is the plural partitive of lusikka (“spoon”).",
+        "lusikka": "lusikka is the dictionary form. Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja.",
+        "lusikkoita": "This form does not express the requested case and number. Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-reverse-05"
+    },
+    {
+      "id": "ptf-long-a-plural-produce-03",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: lusikka (“spoon”) → ____ (“spoon”, plural partitive).",
+      "acceptedAnswers": ["lusikoita", "lusikkoja"],
+      "explanation": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja. This is the plural partitive of lusikka (“spoon”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["lusikkoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja."
+        },
+        {
+          "answers": ["lusikka"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is lusikoita. Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-repair-05"
+    },
+    {
+      "id": "ptf-long-a-plural-repair-03",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “lusikkoita”. Use lusikka (“spoon”).",
+      "acceptedAnswers": ["lusikoita", "lusikkoja"],
+      "explanation": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja. This is the plural partitive of lusikka (“spoon”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["lusikkoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja."
+        },
+        {
+          "answers": ["lusikka"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is lusikoita. Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-produce-01"
+    },
+    {
+      "id": "ptf-long-a-plural-reverse-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive lusikoita (“spoon”)?",
+      "acceptedAnswers": ["lusikka"],
+      "explanation": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja. This is the plural partitive of lusikka (“spoon”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["kännykkä", "laatikko", "lusikka"],
+      "optionFeedback": {
+        "lusikka": "Replace -kka with -koita: lusikka → lusikoita. Alternatively replace -a with -oja and retain kk: lusikkoja. This is the plural partitive of lusikka (“spoon”).",
+        "laatikko": "The plural partitive of laatikko (“box”) is laatikoita.",
+        "kännykkä": "The plural partitive of kännykkä (“mobile phone”) is kännyköitä."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-choice-01"
+    },
+    {
+      "id": "ptf-long-a-plural-choice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of laatikko (“box”).",
+      "acceptedAnswers": ["laatikoita"],
+      "explanation": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja. This is the plural partitive of laatikko (“box”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["laatikko", "laatikoita", "laatikkoita"],
+      "optionFeedback": {
+        "laatikoita": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja. This is the plural partitive of laatikko (“box”).",
+        "laatikko": "laatikko is the dictionary form. Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja.",
+        "laatikkoita": "This form does not express the requested case and number. Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-reverse-01"
+    },
+    {
+      "id": "ptf-long-a-plural-produce-04",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: laatikko (“box”) → ____ (“box”, plural partitive).",
+      "acceptedAnswers": ["laatikoita", "laatikkoja"],
+      "explanation": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja. This is the plural partitive of laatikko (“box”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["laatikkoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja."
+        },
+        {
+          "answers": ["laatikko"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is laatikoita. Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-repair-01"
+    },
+    {
+      "id": "ptf-long-a-plural-repair-04",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “laatikkoita”. Use laatikko (“box”).",
+      "acceptedAnswers": ["laatikoita", "laatikkoja"],
+      "explanation": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja. This is the plural partitive of laatikko (“box”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["laatikkoita"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja."
+        },
+        {
+          "answers": ["laatikko"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is laatikoita. Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-produce-02"
+    },
+    {
+      "id": "ptf-long-a-plural-reverse-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive laatikoita (“box”)?",
+      "acceptedAnswers": ["laatikko"],
+      "explanation": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja. This is the plural partitive of laatikko (“box”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["kännykkä", "laatikko", "peruna"],
+      "optionFeedback": {
+        "laatikko": "Replace -kko with -koita: laatikko → laatikoita. Alternatively add -ja to the dictionary form: laatikkoja. This is the plural partitive of laatikko (“box”).",
+        "kännykkä": "The plural partitive of kännykkä (“mobile phone”) is kännyköitä.",
+        "peruna": "The plural partitive of peruna (“potato”) is perunoita."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-choice-02"
+    },
+    {
+      "id": "ptf-long-a-plural-choice-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the plural partitive of kännykkä (“mobile phone”).",
+      "acceptedAnswers": ["kännyköitä"],
+      "explanation": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä. This is the plural partitive of kännykkä (“mobile phone”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["kännyköitä", "kännykköitä", "kännykkä"],
+      "optionFeedback": {
+        "kännyköitä": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä. This is the plural partitive of kännykkä (“mobile phone”).",
+        "kännykkä": "kännykkä is the dictionary form. Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä.",
+        "kännykköitä": "This form does not express the requested case and number. Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-reverse-02"
+    },
+    {
+      "id": "ptf-long-a-plural-produce-05",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Form the plural partitive: kännykkä (“mobile phone”) → ____ (“mobile phone”, plural partitive).",
+      "acceptedAnswers": ["kännyköitä", "kännykköjä"],
+      "explanation": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä. This is the plural partitive of kännykkä (“mobile phone”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["kännykköitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä."
+        },
+        {
+          "answers": ["kännykkä"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is kännyköitä. Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-repair-02"
+    },
+    {
+      "id": "ptf-long-a-plural-repair-05",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Correct the incorrect plural partitive “kännykköitä”. Use kännykkä (“mobile phone”).",
+      "acceptedAnswers": ["kännyköitä", "kännykköjä"],
+      "explanation": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä. This is the plural partitive of kännykkä (“mobile phone”).",
+      "tags": ["standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "answerDiagnostics": [
+        {
+          "answers": ["kännykköitä"],
+          "category": "Incorrect partitive formation",
+          "explanation": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä."
+        },
+        {
+          "answers": ["kännykkä"],
+          "category": "Dictionary form instead of partitive",
+          "explanation": "The requested plural partitive is kännyköitä. Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä."
+        }
+      ],
+      "parallelExerciseId": "ptf-long-a-plural-produce-03"
+    },
+    {
+      "id": "ptf-long-a-plural-reverse-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Which dictionary word has the plural partitive kännyköitä (“mobile phone”)?",
+      "acceptedAnswers": ["kännykkä"],
+      "explanation": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä. This is the plural partitive of kännykkä (“mobile phone”).",
+      "tags": ["standard-written-finnish", "form-plural", "base-recognition"],
+      "requiredSkills": ["Plural of selected longer words: -oita/-öitä"],
+      "vocabulary": [],
+      "targetSkill": "Plural of selected longer words: -oita/-öitä",
+      "misconceptionCategory": "Plural of selected longer words: -oita/-öitä: form or use confused",
+      "options": ["kännykkä", "mansikka", "peruna"],
+      "optionFeedback": {
+        "kännykkä": "Replace -kkä with -köitä: kännykkä → kännyköitä. Alternatively replace -ä with -öjä and retain kk: kännykköjä. This is the plural partitive of kännykkä (“mobile phone”).",
+        "peruna": "The plural partitive of peruna (“potato”) is perunoita.",
+        "mansikka": "The plural partitive of mansikka (“strawberry”) is mansikoita."
+      },
+      "parallelExerciseId": "ptf-long-a-plural-choice-03"
+    }
+  ],
+  "numberScope": {
+    "axis": "form",
+    "number": "plural"
+  }
+}

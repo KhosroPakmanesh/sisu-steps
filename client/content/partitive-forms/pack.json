@@ -1,29 +1,16 @@
 {
   "schemaVersion": 1,
   "id": "partitive-forms",
-  "version": "1.0.0",
-  "title": "Partitive forms",
+  "version": "1.2.0",
+  "title": "Partitive Forms: Singular, First patterns",
   "level": "0 - A1.3",
-  "summary": "Build common singular partitives and a bounded regular plural family.",
-  "objectives": [
-    "Form the singular partitive in this bounded word family.",
-    "Form the plural partitive in this bounded word family.",
-    "Form the singular partitive in this bounded word family.",
-    "Form the singular partitive in this bounded word family.",
-    "Form the singular partitive in this bounded word family.",
-    "Form the singular partitive in this bounded word family.",
-    "Form the singular partitive in this bounded word family.",
-    "Form the singular partitive in this bounded word family."
-  ],
+  "summary": "Build singular partitives with -a/-ä and -ta/-tä, then practise common -e and -nen words.",
+  "objectives": ["Form the singular partitive in this bounded word family."],
   "importantSkills": [
     "Regular singular partitive: -a/-ä",
-    "Regular plural partitive: -ja/-jä",
     "Singular partitive: -ta/-tä",
     "Singular partitive of common -e words",
-    "Singular partitive of -nen words",
-    "Singular partitive with i → e",
-    "Frequent singular -si partitives",
-    "Other frequent changing singular forms"
+    "Singular partitive of -nen words"
   ],
   "grammarBaseForms": [],
   "sources": [
@@ -50,27 +37,38 @@
     {
       "title": "University of Helsinki: describing substances",
       "url": "https://blogs.helsinki.fi/kielenoppijantyokalupakki/kopulalause-kahvi-on-kuumaa/"
+    },
+    {
+      "title": "Uusi kielemme: singular partitive formation",
+      "url": "https://uusikielemme.fi/finnish-grammar/finnish-cases/grammatical-cases/the-partitive-case-partitiivi"
+    },
+    {
+      "title": "Uusi kielemme: plural partitive formation",
+      "url": "https://uusikielemme.fi/finnish-grammar/finnish-cases/grammatical-cases/the-partitive-plural-monikon-partitiivi"
+    },
+    {
+      "title": "Uusi kielemme: plural partitive of longer words and standard alternatives",
+      "url": "https://uusikielemme.fi/finnish-grammar/finnish-cases/grammatical-cases/plural-partitive-of-long-words"
+    },
+    {
+      "title": "Osaan suomea: plural descriptions and case use",
+      "url": "https://www.osaansuomea.fi/osaan-suomea-2/osaan-monikot/"
+    },
+    {
+      "title": "Kielitoimiston ohjepankki: kaunis/tiivis types",
+      "url": "https://kielitoimistonohjepankki.fi/ohje/taivutustyyppeja-kauniiden-tiiviiden/"
+    },
+    {
+      "title": "Wikisanakirja: peruna alternative inventory",
+      "url": "https://fi.wiktionary.org/wiki/peruna"
     }
   ],
-  "lessonIds": [
-    "ptf-regular-singular",
-    "ptf-regular-plural",
-    "ptf-ta-singular",
-    "ptf-e-singular",
-    "ptf-nen-singular",
-    "ptf-i-e-singular",
-    "ptf-si-singular",
-    "ptf-changing-singular"
-  ],
+  "lessonIds": ["ptf-regular-singular", "ptf-ta-singular", "ptf-e-singular", "ptf-nen-singular"],
   "testIds": [
     "ptf-regular-singular-test",
-    "ptf-regular-plural-test",
     "ptf-ta-singular-test",
     "ptf-e-singular-test",
     "ptf-nen-singular-test",
-    "ptf-i-e-singular-test",
-    "ptf-si-singular-test",
-    "ptf-changing-singular-test",
     "partitive-forms-review"
   ],
   "lessonSummaries": [
@@ -79,32 +77,16 @@
       "version": "1.0.0"
     },
     {
-      "id": "ptf-regular-plural",
-      "version": "1.0.0"
-    },
-    {
       "id": "ptf-ta-singular",
-      "version": "1.0.0"
+      "version": "1.0.2"
     },
     {
       "id": "ptf-e-singular",
-      "version": "1.0.0"
+      "version": "1.0.2"
     },
     {
       "id": "ptf-nen-singular",
-      "version": "1.0.0"
-    },
-    {
-      "id": "ptf-i-e-singular",
-      "version": "1.0.0"
-    },
-    {
-      "id": "ptf-si-singular",
-      "version": "1.0.0"
-    },
-    {
-      "id": "ptf-changing-singular",
-      "version": "1.0.0"
+      "version": "1.0.2"
     }
   ],
   "testSummaries": [
@@ -138,38 +120,6 @@
         "ptf-regular-singular-choice-08",
         "ptf-regular-singular-produce-08",
         "ptf-regular-singular-repair-08"
-      ]
-    },
-    {
-      "id": "ptf-regular-plural-test",
-      "title": "Regular plural partitive: -ja/-jä",
-      "stage": "focused",
-      "lessonIds": ["ptf-regular-plural"],
-      "exerciseIds": [
-        "ptf-regular-plural-choice-01",
-        "ptf-regular-plural-produce-01",
-        "ptf-regular-plural-repair-01",
-        "ptf-regular-plural-choice-02",
-        "ptf-regular-plural-produce-02",
-        "ptf-regular-plural-repair-02",
-        "ptf-regular-plural-choice-03",
-        "ptf-regular-plural-produce-03",
-        "ptf-regular-plural-repair-03",
-        "ptf-regular-plural-choice-04",
-        "ptf-regular-plural-produce-04",
-        "ptf-regular-plural-repair-04",
-        "ptf-regular-plural-choice-05",
-        "ptf-regular-plural-produce-05",
-        "ptf-regular-plural-repair-05",
-        "ptf-regular-plural-choice-06",
-        "ptf-regular-plural-produce-06",
-        "ptf-regular-plural-repair-06",
-        "ptf-regular-plural-choice-07",
-        "ptf-regular-plural-produce-07",
-        "ptf-regular-plural-repair-07",
-        "ptf-regular-plural-choice-08",
-        "ptf-regular-plural-produce-08",
-        "ptf-regular-plural-repair-08"
       ]
     },
     {
@@ -269,140 +219,32 @@
       ]
     },
     {
-      "id": "ptf-i-e-singular-test",
-      "title": "Singular partitive with i → e",
-      "stage": "focused",
-      "lessonIds": ["ptf-i-e-singular"],
-      "exerciseIds": [
-        "ptf-i-e-singular-choice-01",
-        "ptf-i-e-singular-produce-01",
-        "ptf-i-e-singular-repair-01",
-        "ptf-i-e-singular-choice-02",
-        "ptf-i-e-singular-produce-02",
-        "ptf-i-e-singular-repair-02",
-        "ptf-i-e-singular-choice-03",
-        "ptf-i-e-singular-produce-03",
-        "ptf-i-e-singular-repair-03",
-        "ptf-i-e-singular-choice-04",
-        "ptf-i-e-singular-produce-04",
-        "ptf-i-e-singular-repair-04",
-        "ptf-i-e-singular-choice-05",
-        "ptf-i-e-singular-produce-05",
-        "ptf-i-e-singular-repair-05",
-        "ptf-i-e-singular-choice-06",
-        "ptf-i-e-singular-produce-06",
-        "ptf-i-e-singular-repair-06",
-        "ptf-i-e-singular-choice-07",
-        "ptf-i-e-singular-produce-07",
-        "ptf-i-e-singular-repair-07",
-        "ptf-i-e-singular-choice-08",
-        "ptf-i-e-singular-produce-08",
-        "ptf-i-e-singular-repair-08"
-      ]
-    },
-    {
-      "id": "ptf-si-singular-test",
-      "title": "Frequent singular -si partitives",
-      "stage": "focused",
-      "lessonIds": ["ptf-si-singular"],
-      "exerciseIds": [
-        "ptf-si-singular-choice-01",
-        "ptf-si-singular-produce-01",
-        "ptf-si-singular-repair-01",
-        "ptf-si-singular-reverse-01",
-        "ptf-si-singular-choice-02",
-        "ptf-si-singular-produce-02",
-        "ptf-si-singular-repair-02",
-        "ptf-si-singular-reverse-02",
-        "ptf-si-singular-choice-03",
-        "ptf-si-singular-produce-03",
-        "ptf-si-singular-repair-03",
-        "ptf-si-singular-reverse-03",
-        "ptf-si-singular-choice-04",
-        "ptf-si-singular-produce-04",
-        "ptf-si-singular-repair-04",
-        "ptf-si-singular-reverse-04",
-        "ptf-si-singular-choice-05",
-        "ptf-si-singular-produce-05",
-        "ptf-si-singular-repair-05",
-        "ptf-si-singular-reverse-05"
-      ]
-    },
-    {
-      "id": "ptf-changing-singular-test",
-      "title": "Other frequent changing singular forms",
-      "stage": "focused",
-      "lessonIds": ["ptf-changing-singular"],
-      "exerciseIds": [
-        "ptf-changing-singular-choice-01",
-        "ptf-changing-singular-produce-01",
-        "ptf-changing-singular-repair-01",
-        "ptf-changing-singular-reverse-01",
-        "ptf-changing-singular-choice-02",
-        "ptf-changing-singular-produce-02",
-        "ptf-changing-singular-repair-02",
-        "ptf-changing-singular-reverse-02",
-        "ptf-changing-singular-choice-03",
-        "ptf-changing-singular-produce-03",
-        "ptf-changing-singular-repair-03",
-        "ptf-changing-singular-reverse-03",
-        "ptf-changing-singular-choice-04",
-        "ptf-changing-singular-produce-04",
-        "ptf-changing-singular-repair-04",
-        "ptf-changing-singular-reverse-04",
-        "ptf-changing-singular-choice-05",
-        "ptf-changing-singular-produce-05",
-        "ptf-changing-singular-repair-05",
-        "ptf-changing-singular-reverse-05"
-      ]
-    },
-    {
       "id": "partitive-forms-review",
-      "title": "Partitive forms review",
+      "title": "Partitive Forms: Singular, First patterns review",
       "stage": "review",
       "lessonIds": [
         "ptf-regular-singular",
-        "ptf-regular-plural",
         "ptf-ta-singular",
         "ptf-e-singular",
-        "ptf-nen-singular",
-        "ptf-i-e-singular",
-        "ptf-si-singular",
-        "ptf-changing-singular"
+        "ptf-nen-singular"
       ],
       "exerciseIds": [
         "ptf-regular-singular-review-01",
-        "ptf-regular-plural-review-01",
         "ptf-ta-singular-review-01",
         "ptf-e-singular-review-01",
         "ptf-nen-singular-review-01",
-        "ptf-i-e-singular-review-01",
-        "ptf-si-singular-review-01",
-        "ptf-changing-singular-review-01",
         "ptf-regular-singular-review-02",
-        "ptf-regular-plural-review-02",
         "ptf-ta-singular-review-02",
         "ptf-e-singular-review-02",
         "ptf-nen-singular-review-02",
-        "ptf-i-e-singular-review-02",
-        "ptf-si-singular-review-02",
-        "ptf-changing-singular-review-02",
         "ptf-regular-singular-review-03",
-        "ptf-regular-plural-review-03",
         "ptf-ta-singular-review-03",
         "ptf-e-singular-review-03",
         "ptf-nen-singular-review-03",
-        "ptf-i-e-singular-review-03",
-        "ptf-si-singular-review-03",
-        "ptf-changing-singular-review-03",
         "ptf-regular-singular-review-04",
-        "ptf-regular-plural-review-04",
         "ptf-ta-singular-review-04",
         "ptf-e-singular-review-04",
-        "ptf-nen-singular-review-04",
-        "ptf-i-e-singular-review-04",
-        "ptf-si-singular-review-04",
-        "ptf-changing-singular-review-04"
+        "ptf-nen-singular-review-04"
       ]
     }
   ]

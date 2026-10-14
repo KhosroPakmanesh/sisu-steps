@@ -14,15 +14,15 @@ describe('Focused tests separated by grammatical number', () => {
   });
 
   it('keeps the full inventory and 30 groups with 30 independently owned preparation lessons', async () => {
-    expect(packs).toHaveLength(19);
-    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(107);
-    expect(packs.flatMap((pack) => pack.tests)).toHaveLength(134);
+    expect(packs).toHaveLength(22);
+    expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(127);
+    expect(packs.flatMap((pack) => pack.tests)).toHaveLength(157);
     expect(packs.flatMap((pack) => pack.tests.flatMap((test) => test.exercises))).toHaveLength(
-      3034,
+      3576,
     );
     expect(
       packs.flatMap((pack) => pack.lessons.flatMap((lesson) => lesson.practiceExercises)),
-    ).toHaveLength(329);
+    ).toHaveLength(389);
     const groups = packs.flatMap((pack) =>
       pack.tests.filter((test) => test.numberScope && test.numberScope.axis !== 'form'),
     );

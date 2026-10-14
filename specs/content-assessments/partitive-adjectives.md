@@ -1,5 +1,11 @@
 # Adjectives and the partitive — pedagogy assessment
 
+## Expansion — 2026-10-14
+
+Version 1.1.0 adds the independently prepared plural predicate lesson after the singular substance predicate lesson. It describes ordinary plural items individually after ovat, with subject forms and complete adjective alternatives supplied for case choice. Plural-only nouns and whole-group descriptions remain outside the target. The pack now contains four lessons, four Focused tests and one cumulative Review, with **92 Focused / 16 Review / 12 optional** questions. The [expansion assessment](partitive-expansion.md) records the vocabulary, sentence-feedback, alternative, preservation and validation evidence. Both its pre-authoring and final dispositions are approved with limitations; all Adjectives scored, optional and lesson-reader audits pass at three widths. Original teaching/question objects remain intact. The changed pack version intentionally clears old scored progress and completions while retaining notes.
+
+The sections below retain the original 1.0.0 assessment as dated evidence.
+
 ## Topic, level and scope
 
 Pack `partitive-adjectives`, version 1.0.0; beginner written grammar within `0 - A1.3`. The approved topic contains singular and plural material with independent Focused preparation. All Finnish is standard written Finnish; explanatory prose is English.

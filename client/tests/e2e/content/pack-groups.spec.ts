@@ -47,6 +47,9 @@ const expectedGroups: ExpectedGroup[] = [
     title: 'Partitive',
     packs: [
       'partitive-forms',
+      'partitive-forms-singular-families',
+      'partitive-forms-plural-ia-ja',
+      'partitive-forms-plural-ita',
       'partitive-quantities',
       'partitive-sentences',
       'partitive-adjectives',
@@ -76,7 +79,7 @@ test('groups catalog topic cards into labeled sections in pack order', async ({ 
     }
   }
 
-  await expect(page.locator('.topic-card')).toHaveCount(19);
+  await expect(page.locator('.topic-card')).toHaveCount(22);
 });
 
 test('mirrors the same grouping on the stats catalog', async ({ page }) => {
@@ -248,7 +251,7 @@ for (const catalogPath of ['/', '/stats']) {
         element.style.fontSize = '16px';
       });
       await expandTopicGroups(page);
-      await expect(page.locator('.topic-catalog .topic-card:visible')).toHaveCount(19);
+      await expect(page.locator('.topic-catalog .topic-card:visible')).toHaveCount(22);
       await page.screenshot({ path: testInfo.outputPath('catalog-expanded.png'), fullPage: true });
     });
 

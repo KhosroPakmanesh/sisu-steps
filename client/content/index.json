@@ -40,6 +40,9 @@
       "title": "Partitive",
       "packs": [
         "partitive-forms",
+        "partitive-forms-singular-families",
+        "partitive-forms-plural-ia-ja",
+        "partitive-forms-plural-ita",
         "partitive-quantities",
         "partitive-sentences",
         "partitive-adjectives",
@@ -3653,42 +3656,26 @@
     {
       "schemaVersion": 1,
       "id": "partitive-forms",
-      "version": "1.0.0",
-      "title": "Partitive forms",
+      "version": "1.2.0",
+      "title": "Partitive Forms: Singular, First patterns",
       "level": "0 - A1.3",
-      "summary": "Build common singular partitives and a bounded regular plural family.",
+      "summary": "Build singular partitives with -a/-ä and -ta/-tä, then practise common -e and -nen words.",
       "lessons": [
         {
           "id": "ptf-regular-singular",
           "version": "1.0.0"
         },
         {
-          "id": "ptf-regular-plural",
-          "version": "1.0.0"
-        },
-        {
           "id": "ptf-ta-singular",
-          "version": "1.0.0"
+          "version": "1.0.2"
         },
         {
           "id": "ptf-e-singular",
-          "version": "1.0.0"
+          "version": "1.0.2"
         },
         {
           "id": "ptf-nen-singular",
-          "version": "1.0.0"
-        },
-        {
-          "id": "ptf-i-e-singular",
-          "version": "1.0.0"
-        },
-        {
-          "id": "ptf-si-singular",
-          "version": "1.0.0"
-        },
-        {
-          "id": "ptf-changing-singular",
-          "version": "1.0.0"
+          "version": "1.0.2"
         }
       ],
       "tests": [
@@ -3722,38 +3709,6 @@
             "ptf-regular-singular-choice-08",
             "ptf-regular-singular-produce-08",
             "ptf-regular-singular-repair-08"
-          ]
-        },
-        {
-          "id": "ptf-regular-plural-test",
-          "title": "Regular plural partitive: -ja/-jä",
-          "stage": "focused",
-          "lessonIds": ["ptf-regular-plural"],
-          "exerciseIds": [
-            "ptf-regular-plural-choice-01",
-            "ptf-regular-plural-produce-01",
-            "ptf-regular-plural-repair-01",
-            "ptf-regular-plural-choice-02",
-            "ptf-regular-plural-produce-02",
-            "ptf-regular-plural-repair-02",
-            "ptf-regular-plural-choice-03",
-            "ptf-regular-plural-produce-03",
-            "ptf-regular-plural-repair-03",
-            "ptf-regular-plural-choice-04",
-            "ptf-regular-plural-produce-04",
-            "ptf-regular-plural-repair-04",
-            "ptf-regular-plural-choice-05",
-            "ptf-regular-plural-produce-05",
-            "ptf-regular-plural-repair-05",
-            "ptf-regular-plural-choice-06",
-            "ptf-regular-plural-produce-06",
-            "ptf-regular-plural-repair-06",
-            "ptf-regular-plural-choice-07",
-            "ptf-regular-plural-produce-07",
-            "ptf-regular-plural-repair-07",
-            "ptf-regular-plural-choice-08",
-            "ptf-regular-plural-produce-08",
-            "ptf-regular-plural-repair-08"
           ]
         },
         {
@@ -3853,6 +3808,79 @@
           ]
         },
         {
+          "id": "partitive-forms-review",
+          "title": "Partitive Forms: Singular, First patterns review",
+          "stage": "review",
+          "lessonIds": [
+            "ptf-regular-singular",
+            "ptf-ta-singular",
+            "ptf-e-singular",
+            "ptf-nen-singular"
+          ],
+          "exerciseIds": [
+            "ptf-regular-singular-review-01",
+            "ptf-ta-singular-review-01",
+            "ptf-e-singular-review-01",
+            "ptf-nen-singular-review-01",
+            "ptf-regular-singular-review-02",
+            "ptf-ta-singular-review-02",
+            "ptf-e-singular-review-02",
+            "ptf-nen-singular-review-02",
+            "ptf-regular-singular-review-03",
+            "ptf-ta-singular-review-03",
+            "ptf-e-singular-review-03",
+            "ptf-nen-singular-review-03",
+            "ptf-regular-singular-review-04",
+            "ptf-ta-singular-review-04",
+            "ptf-e-singular-review-04",
+            "ptf-nen-singular-review-04"
+          ]
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "partitive-forms-singular-families",
+      "version": "1.0.0",
+      "title": "Partitive Forms: Singular, -i and consonant-ending families",
+      "level": "0 - A1.3",
+      "summary": "Build singular partitives in the taught older -i, -as/-äs, -is, -us/-ys and -ton/-tön word families.",
+      "lessons": [
+        {
+          "id": "ptf-i-e-singular",
+          "version": "1.0.2"
+        },
+        {
+          "id": "ptf-si-singular",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-changing-singular",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-as-singular",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-is-singular",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-us-ta-singular",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-us-tta-singular",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-ton-singular",
+          "version": "1.0.1"
+        }
+      ],
+      "tests": [
+        {
           "id": "ptf-i-e-singular-test",
           "title": "Singular partitive with i → e",
           "stage": "focused",
@@ -3941,52 +3969,851 @@
           ]
         },
         {
-          "id": "partitive-forms-review",
-          "title": "Partitive forms review",
+          "id": "ptf-as-singular-test",
+          "title": "Singular partitive of common -as/-äs words",
+          "stage": "focused",
+          "lessonIds": ["ptf-as-singular"],
+          "exerciseIds": [
+            "ptf-as-singular-choice-01",
+            "ptf-as-singular-produce-01",
+            "ptf-as-singular-repair-01",
+            "ptf-as-singular-choice-02",
+            "ptf-as-singular-produce-02",
+            "ptf-as-singular-repair-02",
+            "ptf-as-singular-choice-03",
+            "ptf-as-singular-produce-03",
+            "ptf-as-singular-repair-03",
+            "ptf-as-singular-choice-04",
+            "ptf-as-singular-produce-04",
+            "ptf-as-singular-repair-04",
+            "ptf-as-singular-choice-05",
+            "ptf-as-singular-produce-05",
+            "ptf-as-singular-repair-05",
+            "ptf-as-singular-choice-06",
+            "ptf-as-singular-produce-06",
+            "ptf-as-singular-repair-06",
+            "ptf-as-singular-choice-07",
+            "ptf-as-singular-produce-07",
+            "ptf-as-singular-repair-07",
+            "ptf-as-singular-choice-08",
+            "ptf-as-singular-produce-08",
+            "ptf-as-singular-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-is-singular-test",
+          "title": "Singular partitive of common -is words",
+          "stage": "focused",
+          "lessonIds": ["ptf-is-singular"],
+          "exerciseIds": [
+            "ptf-is-singular-choice-01",
+            "ptf-is-singular-produce-01",
+            "ptf-is-singular-repair-01",
+            "ptf-is-singular-reverse-01",
+            "ptf-is-singular-choice-02",
+            "ptf-is-singular-produce-02",
+            "ptf-is-singular-repair-02",
+            "ptf-is-singular-reverse-02",
+            "ptf-is-singular-choice-03",
+            "ptf-is-singular-produce-03",
+            "ptf-is-singular-repair-03",
+            "ptf-is-singular-reverse-03",
+            "ptf-is-singular-choice-04",
+            "ptf-is-singular-produce-04",
+            "ptf-is-singular-repair-04",
+            "ptf-is-singular-reverse-04",
+            "ptf-is-singular-choice-05",
+            "ptf-is-singular-produce-05",
+            "ptf-is-singular-repair-05",
+            "ptf-is-singular-reverse-05"
+          ]
+        },
+        {
+          "id": "ptf-us-ta-singular-test",
+          "title": "Singular -us/-ys words retaining s",
+          "stage": "focused",
+          "lessonIds": ["ptf-us-ta-singular"],
+          "exerciseIds": [
+            "ptf-us-ta-singular-choice-01",
+            "ptf-us-ta-singular-produce-01",
+            "ptf-us-ta-singular-repair-01",
+            "ptf-us-ta-singular-reverse-01",
+            "ptf-us-ta-singular-choice-02",
+            "ptf-us-ta-singular-produce-02",
+            "ptf-us-ta-singular-repair-02",
+            "ptf-us-ta-singular-reverse-02",
+            "ptf-us-ta-singular-choice-03",
+            "ptf-us-ta-singular-produce-03",
+            "ptf-us-ta-singular-repair-03",
+            "ptf-us-ta-singular-reverse-03",
+            "ptf-us-ta-singular-choice-04",
+            "ptf-us-ta-singular-produce-04",
+            "ptf-us-ta-singular-repair-04",
+            "ptf-us-ta-singular-reverse-04",
+            "ptf-us-ta-singular-choice-05",
+            "ptf-us-ta-singular-produce-05",
+            "ptf-us-ta-singular-repair-05",
+            "ptf-us-ta-singular-reverse-05"
+          ]
+        },
+        {
+          "id": "ptf-us-tta-singular-test",
+          "title": "Singular -us/-ys words changing s to tt",
+          "stage": "focused",
+          "lessonIds": ["ptf-us-tta-singular"],
+          "exerciseIds": [
+            "ptf-us-tta-singular-choice-01",
+            "ptf-us-tta-singular-produce-01",
+            "ptf-us-tta-singular-repair-01",
+            "ptf-us-tta-singular-reverse-01",
+            "ptf-us-tta-singular-choice-02",
+            "ptf-us-tta-singular-produce-02",
+            "ptf-us-tta-singular-repair-02",
+            "ptf-us-tta-singular-reverse-02",
+            "ptf-us-tta-singular-choice-03",
+            "ptf-us-tta-singular-produce-03",
+            "ptf-us-tta-singular-repair-03",
+            "ptf-us-tta-singular-reverse-03",
+            "ptf-us-tta-singular-choice-04",
+            "ptf-us-tta-singular-produce-04",
+            "ptf-us-tta-singular-repair-04",
+            "ptf-us-tta-singular-reverse-04",
+            "ptf-us-tta-singular-choice-05",
+            "ptf-us-tta-singular-produce-05",
+            "ptf-us-tta-singular-repair-05",
+            "ptf-us-tta-singular-reverse-05"
+          ]
+        },
+        {
+          "id": "ptf-ton-singular-test",
+          "title": "Singular partitive of -ton/-tön words",
+          "stage": "focused",
+          "lessonIds": ["ptf-ton-singular"],
+          "exerciseIds": [
+            "ptf-ton-singular-choice-01",
+            "ptf-ton-singular-produce-01",
+            "ptf-ton-singular-repair-01",
+            "ptf-ton-singular-choice-02",
+            "ptf-ton-singular-produce-02",
+            "ptf-ton-singular-repair-02",
+            "ptf-ton-singular-choice-03",
+            "ptf-ton-singular-produce-03",
+            "ptf-ton-singular-repair-03",
+            "ptf-ton-singular-choice-04",
+            "ptf-ton-singular-produce-04",
+            "ptf-ton-singular-repair-04",
+            "ptf-ton-singular-choice-05",
+            "ptf-ton-singular-produce-05",
+            "ptf-ton-singular-repair-05",
+            "ptf-ton-singular-choice-06",
+            "ptf-ton-singular-produce-06",
+            "ptf-ton-singular-repair-06",
+            "ptf-ton-singular-choice-07",
+            "ptf-ton-singular-produce-07",
+            "ptf-ton-singular-repair-07",
+            "ptf-ton-singular-choice-08",
+            "ptf-ton-singular-produce-08",
+            "ptf-ton-singular-repair-08"
+          ]
+        },
+        {
+          "id": "partitive-forms-singular-families-review",
+          "title": "Partitive Forms: Singular, -i and consonant-ending families review",
           "stage": "review",
           "lessonIds": [
-            "ptf-regular-singular",
-            "ptf-regular-plural",
-            "ptf-ta-singular",
-            "ptf-e-singular",
-            "ptf-nen-singular",
             "ptf-i-e-singular",
             "ptf-si-singular",
-            "ptf-changing-singular"
+            "ptf-changing-singular",
+            "ptf-as-singular",
+            "ptf-is-singular",
+            "ptf-us-ta-singular",
+            "ptf-us-tta-singular",
+            "ptf-ton-singular"
           ],
           "exerciseIds": [
-            "ptf-regular-singular-review-01",
-            "ptf-regular-plural-review-01",
-            "ptf-ta-singular-review-01",
-            "ptf-e-singular-review-01",
-            "ptf-nen-singular-review-01",
             "ptf-i-e-singular-review-01",
             "ptf-si-singular-review-01",
             "ptf-changing-singular-review-01",
-            "ptf-regular-singular-review-02",
-            "ptf-regular-plural-review-02",
-            "ptf-ta-singular-review-02",
-            "ptf-e-singular-review-02",
-            "ptf-nen-singular-review-02",
+            "ptf-as-singular-review-01",
+            "ptf-is-singular-review-01",
+            "ptf-us-ta-singular-review-01",
+            "ptf-us-tta-singular-review-01",
+            "ptf-ton-singular-review-01",
             "ptf-i-e-singular-review-02",
             "ptf-si-singular-review-02",
             "ptf-changing-singular-review-02",
-            "ptf-regular-singular-review-03",
-            "ptf-regular-plural-review-03",
-            "ptf-ta-singular-review-03",
-            "ptf-e-singular-review-03",
-            "ptf-nen-singular-review-03",
+            "ptf-as-singular-review-02",
+            "ptf-is-singular-review-02",
+            "ptf-us-ta-singular-review-02",
+            "ptf-us-tta-singular-review-02",
+            "ptf-ton-singular-review-02",
             "ptf-i-e-singular-review-03",
             "ptf-si-singular-review-03",
             "ptf-changing-singular-review-03",
-            "ptf-regular-singular-review-04",
-            "ptf-regular-plural-review-04",
-            "ptf-ta-singular-review-04",
-            "ptf-e-singular-review-04",
-            "ptf-nen-singular-review-04",
+            "ptf-as-singular-review-03",
+            "ptf-is-singular-review-03",
+            "ptf-us-ta-singular-review-03",
+            "ptf-us-tta-singular-review-03",
+            "ptf-ton-singular-review-03",
             "ptf-i-e-singular-review-04",
             "ptf-si-singular-review-04",
-            "ptf-changing-singular-review-04"
+            "ptf-changing-singular-review-04",
+            "ptf-as-singular-review-04",
+            "ptf-is-singular-review-04",
+            "ptf-us-ta-singular-review-04",
+            "ptf-us-tta-singular-review-04",
+            "ptf-ton-singular-review-04"
+          ]
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "partitive-forms-plural-ia-ja",
+      "version": "1.0.0",
+      "title": "Partitive Forms: Plural, -ia/-iä and -ja/-jä patterns",
+      "level": "0 - A1.3",
+      "summary": "Build plural partitives in the taught -ia/-iä and -ja/-jä families, including their vowel and consonant changes.",
+      "lessons": [
+        {
+          "id": "ptf-regular-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-a-oja-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-a-ia-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-new-i-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-in-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-nen-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-old-i-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-us-ks-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-ton-plural",
+          "version": "1.0.1"
+        }
+      ],
+      "tests": [
+        {
+          "id": "ptf-regular-plural-test",
+          "title": "Regular plural partitive: -ja/-jä",
+          "stage": "focused",
+          "lessonIds": ["ptf-regular-plural"],
+          "exerciseIds": [
+            "ptf-regular-plural-choice-01",
+            "ptf-regular-plural-produce-01",
+            "ptf-regular-plural-repair-01",
+            "ptf-regular-plural-choice-02",
+            "ptf-regular-plural-produce-02",
+            "ptf-regular-plural-repair-02",
+            "ptf-regular-plural-choice-03",
+            "ptf-regular-plural-produce-03",
+            "ptf-regular-plural-repair-03",
+            "ptf-regular-plural-choice-04",
+            "ptf-regular-plural-produce-04",
+            "ptf-regular-plural-repair-04",
+            "ptf-regular-plural-choice-05",
+            "ptf-regular-plural-produce-05",
+            "ptf-regular-plural-repair-05",
+            "ptf-regular-plural-choice-06",
+            "ptf-regular-plural-produce-06",
+            "ptf-regular-plural-repair-06",
+            "ptf-regular-plural-choice-07",
+            "ptf-regular-plural-produce-07",
+            "ptf-regular-plural-repair-07",
+            "ptf-regular-plural-choice-08",
+            "ptf-regular-plural-produce-08",
+            "ptf-regular-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-a-oja-plural-test",
+          "title": "Plural of short -a words: -oja",
+          "stage": "focused",
+          "lessonIds": ["ptf-a-oja-plural"],
+          "exerciseIds": [
+            "ptf-a-oja-plural-choice-01",
+            "ptf-a-oja-plural-produce-01",
+            "ptf-a-oja-plural-repair-01",
+            "ptf-a-oja-plural-choice-02",
+            "ptf-a-oja-plural-produce-02",
+            "ptf-a-oja-plural-repair-02",
+            "ptf-a-oja-plural-choice-03",
+            "ptf-a-oja-plural-produce-03",
+            "ptf-a-oja-plural-repair-03",
+            "ptf-a-oja-plural-choice-04",
+            "ptf-a-oja-plural-produce-04",
+            "ptf-a-oja-plural-repair-04",
+            "ptf-a-oja-plural-choice-05",
+            "ptf-a-oja-plural-produce-05",
+            "ptf-a-oja-plural-repair-05",
+            "ptf-a-oja-plural-choice-06",
+            "ptf-a-oja-plural-produce-06",
+            "ptf-a-oja-plural-repair-06",
+            "ptf-a-oja-plural-choice-07",
+            "ptf-a-oja-plural-produce-07",
+            "ptf-a-oja-plural-repair-07",
+            "ptf-a-oja-plural-choice-08",
+            "ptf-a-oja-plural-produce-08",
+            "ptf-a-oja-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-a-ia-plural-test",
+          "title": "Plural with final a/ä → ia/iä",
+          "stage": "focused",
+          "lessonIds": ["ptf-a-ia-plural"],
+          "exerciseIds": [
+            "ptf-a-ia-plural-choice-01",
+            "ptf-a-ia-plural-produce-01",
+            "ptf-a-ia-plural-repair-01",
+            "ptf-a-ia-plural-choice-02",
+            "ptf-a-ia-plural-produce-02",
+            "ptf-a-ia-plural-repair-02",
+            "ptf-a-ia-plural-choice-03",
+            "ptf-a-ia-plural-produce-03",
+            "ptf-a-ia-plural-repair-03",
+            "ptf-a-ia-plural-choice-04",
+            "ptf-a-ia-plural-produce-04",
+            "ptf-a-ia-plural-repair-04",
+            "ptf-a-ia-plural-choice-05",
+            "ptf-a-ia-plural-produce-05",
+            "ptf-a-ia-plural-repair-05",
+            "ptf-a-ia-plural-choice-06",
+            "ptf-a-ia-plural-produce-06",
+            "ptf-a-ia-plural-repair-06",
+            "ptf-a-ia-plural-choice-07",
+            "ptf-a-ia-plural-produce-07",
+            "ptf-a-ia-plural-repair-07",
+            "ptf-a-ia-plural-choice-08",
+            "ptf-a-ia-plural-produce-08",
+            "ptf-a-ia-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-new-i-plural-test",
+          "title": "Plural of short newer -i words: -eja/-ejä",
+          "stage": "focused",
+          "lessonIds": ["ptf-new-i-plural"],
+          "exerciseIds": [
+            "ptf-new-i-plural-choice-01",
+            "ptf-new-i-plural-produce-01",
+            "ptf-new-i-plural-repair-01",
+            "ptf-new-i-plural-choice-02",
+            "ptf-new-i-plural-produce-02",
+            "ptf-new-i-plural-repair-02",
+            "ptf-new-i-plural-choice-03",
+            "ptf-new-i-plural-produce-03",
+            "ptf-new-i-plural-repair-03",
+            "ptf-new-i-plural-choice-04",
+            "ptf-new-i-plural-produce-04",
+            "ptf-new-i-plural-repair-04",
+            "ptf-new-i-plural-choice-05",
+            "ptf-new-i-plural-produce-05",
+            "ptf-new-i-plural-repair-05",
+            "ptf-new-i-plural-choice-06",
+            "ptf-new-i-plural-produce-06",
+            "ptf-new-i-plural-repair-06",
+            "ptf-new-i-plural-choice-07",
+            "ptf-new-i-plural-produce-07",
+            "ptf-new-i-plural-repair-07",
+            "ptf-new-i-plural-choice-08",
+            "ptf-new-i-plural-produce-08",
+            "ptf-new-i-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-in-plural-test",
+          "title": "Plural of common -in words",
+          "stage": "focused",
+          "lessonIds": ["ptf-in-plural"],
+          "exerciseIds": [
+            "ptf-in-plural-choice-01",
+            "ptf-in-plural-produce-01",
+            "ptf-in-plural-repair-01",
+            "ptf-in-plural-choice-02",
+            "ptf-in-plural-produce-02",
+            "ptf-in-plural-repair-02",
+            "ptf-in-plural-choice-03",
+            "ptf-in-plural-produce-03",
+            "ptf-in-plural-repair-03",
+            "ptf-in-plural-choice-04",
+            "ptf-in-plural-produce-04",
+            "ptf-in-plural-repair-04",
+            "ptf-in-plural-choice-05",
+            "ptf-in-plural-produce-05",
+            "ptf-in-plural-repair-05",
+            "ptf-in-plural-choice-06",
+            "ptf-in-plural-produce-06",
+            "ptf-in-plural-repair-06",
+            "ptf-in-plural-choice-07",
+            "ptf-in-plural-produce-07",
+            "ptf-in-plural-repair-07",
+            "ptf-in-plural-choice-08",
+            "ptf-in-plural-produce-08",
+            "ptf-in-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-nen-plural-test",
+          "title": "Plural partitive of -nen words",
+          "stage": "focused",
+          "lessonIds": ["ptf-nen-plural"],
+          "exerciseIds": [
+            "ptf-nen-plural-choice-01",
+            "ptf-nen-plural-produce-01",
+            "ptf-nen-plural-repair-01",
+            "ptf-nen-plural-choice-02",
+            "ptf-nen-plural-produce-02",
+            "ptf-nen-plural-repair-02",
+            "ptf-nen-plural-choice-03",
+            "ptf-nen-plural-produce-03",
+            "ptf-nen-plural-repair-03",
+            "ptf-nen-plural-choice-04",
+            "ptf-nen-plural-produce-04",
+            "ptf-nen-plural-repair-04",
+            "ptf-nen-plural-choice-05",
+            "ptf-nen-plural-produce-05",
+            "ptf-nen-plural-repair-05",
+            "ptf-nen-plural-choice-06",
+            "ptf-nen-plural-produce-06",
+            "ptf-nen-plural-repair-06",
+            "ptf-nen-plural-choice-07",
+            "ptf-nen-plural-produce-07",
+            "ptf-nen-plural-repair-07",
+            "ptf-nen-plural-choice-08",
+            "ptf-nen-plural-produce-08",
+            "ptf-nen-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-old-i-plural-test",
+          "title": "Plural of older -i word families",
+          "stage": "focused",
+          "lessonIds": ["ptf-old-i-plural"],
+          "exerciseIds": [
+            "ptf-old-i-plural-choice-01",
+            "ptf-old-i-plural-produce-01",
+            "ptf-old-i-plural-repair-01",
+            "ptf-old-i-plural-choice-02",
+            "ptf-old-i-plural-produce-02",
+            "ptf-old-i-plural-repair-02",
+            "ptf-old-i-plural-choice-03",
+            "ptf-old-i-plural-produce-03",
+            "ptf-old-i-plural-repair-03",
+            "ptf-old-i-plural-choice-04",
+            "ptf-old-i-plural-produce-04",
+            "ptf-old-i-plural-repair-04",
+            "ptf-old-i-plural-choice-05",
+            "ptf-old-i-plural-produce-05",
+            "ptf-old-i-plural-repair-05",
+            "ptf-old-i-plural-choice-06",
+            "ptf-old-i-plural-produce-06",
+            "ptf-old-i-plural-repair-06",
+            "ptf-old-i-plural-choice-07",
+            "ptf-old-i-plural-produce-07",
+            "ptf-old-i-plural-repair-07",
+            "ptf-old-i-plural-choice-08",
+            "ptf-old-i-plural-produce-08",
+            "ptf-old-i-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-us-ks-plural-test",
+          "title": "Plural of the taught -us/-ys families",
+          "stage": "focused",
+          "lessonIds": ["ptf-us-ks-plural"],
+          "exerciseIds": [
+            "ptf-us-ks-plural-choice-01",
+            "ptf-us-ks-plural-produce-01",
+            "ptf-us-ks-plural-repair-01",
+            "ptf-us-ks-plural-choice-02",
+            "ptf-us-ks-plural-produce-02",
+            "ptf-us-ks-plural-repair-02",
+            "ptf-us-ks-plural-choice-03",
+            "ptf-us-ks-plural-produce-03",
+            "ptf-us-ks-plural-repair-03",
+            "ptf-us-ks-plural-choice-04",
+            "ptf-us-ks-plural-produce-04",
+            "ptf-us-ks-plural-repair-04",
+            "ptf-us-ks-plural-choice-05",
+            "ptf-us-ks-plural-produce-05",
+            "ptf-us-ks-plural-repair-05",
+            "ptf-us-ks-plural-choice-06",
+            "ptf-us-ks-plural-produce-06",
+            "ptf-us-ks-plural-repair-06",
+            "ptf-us-ks-plural-choice-07",
+            "ptf-us-ks-plural-produce-07",
+            "ptf-us-ks-plural-repair-07",
+            "ptf-us-ks-plural-choice-08",
+            "ptf-us-ks-plural-produce-08",
+            "ptf-us-ks-plural-repair-08",
+            "ptf-us-ks-plural-choice-09",
+            "ptf-us-ks-plural-produce-09",
+            "ptf-us-ks-plural-repair-09",
+            "ptf-us-ks-plural-choice-10",
+            "ptf-us-ks-plural-produce-10",
+            "ptf-us-ks-plural-repair-10"
+          ]
+        },
+        {
+          "id": "ptf-ton-plural-test",
+          "title": "Plural partitive of -ton/-tön words",
+          "stage": "focused",
+          "lessonIds": ["ptf-ton-plural"],
+          "exerciseIds": [
+            "ptf-ton-plural-choice-01",
+            "ptf-ton-plural-produce-01",
+            "ptf-ton-plural-repair-01",
+            "ptf-ton-plural-choice-02",
+            "ptf-ton-plural-produce-02",
+            "ptf-ton-plural-repair-02",
+            "ptf-ton-plural-choice-03",
+            "ptf-ton-plural-produce-03",
+            "ptf-ton-plural-repair-03",
+            "ptf-ton-plural-choice-04",
+            "ptf-ton-plural-produce-04",
+            "ptf-ton-plural-repair-04",
+            "ptf-ton-plural-choice-05",
+            "ptf-ton-plural-produce-05",
+            "ptf-ton-plural-repair-05",
+            "ptf-ton-plural-choice-06",
+            "ptf-ton-plural-produce-06",
+            "ptf-ton-plural-repair-06",
+            "ptf-ton-plural-choice-07",
+            "ptf-ton-plural-produce-07",
+            "ptf-ton-plural-repair-07",
+            "ptf-ton-plural-choice-08",
+            "ptf-ton-plural-produce-08",
+            "ptf-ton-plural-repair-08"
+          ]
+        },
+        {
+          "id": "partitive-forms-plural-ia-ja-review",
+          "title": "Partitive Forms: Plural, -ia/-iä and -ja/-jä patterns review",
+          "stage": "review",
+          "lessonIds": [
+            "ptf-regular-plural",
+            "ptf-a-oja-plural",
+            "ptf-a-ia-plural",
+            "ptf-new-i-plural",
+            "ptf-in-plural",
+            "ptf-nen-plural",
+            "ptf-old-i-plural",
+            "ptf-us-ks-plural",
+            "ptf-ton-plural"
+          ],
+          "exerciseIds": [
+            "ptf-regular-plural-review-01",
+            "ptf-a-oja-plural-review-01",
+            "ptf-a-ia-plural-review-01",
+            "ptf-new-i-plural-review-01",
+            "ptf-in-plural-review-01",
+            "ptf-nen-plural-review-01",
+            "ptf-old-i-plural-review-01",
+            "ptf-us-ks-plural-review-01",
+            "ptf-ton-plural-review-01",
+            "ptf-regular-plural-review-02",
+            "ptf-a-oja-plural-review-02",
+            "ptf-a-ia-plural-review-02",
+            "ptf-new-i-plural-review-02",
+            "ptf-in-plural-review-02",
+            "ptf-nen-plural-review-02",
+            "ptf-old-i-plural-review-02",
+            "ptf-us-ks-plural-review-02",
+            "ptf-ton-plural-review-02",
+            "ptf-regular-plural-review-03",
+            "ptf-a-oja-plural-review-03",
+            "ptf-a-ia-plural-review-03",
+            "ptf-new-i-plural-review-03",
+            "ptf-in-plural-review-03",
+            "ptf-nen-plural-review-03",
+            "ptf-old-i-plural-review-03",
+            "ptf-us-ks-plural-review-03",
+            "ptf-ton-plural-review-03",
+            "ptf-regular-plural-review-04",
+            "ptf-a-oja-plural-review-04",
+            "ptf-a-ia-plural-review-04",
+            "ptf-new-i-plural-review-04",
+            "ptf-in-plural-review-04",
+            "ptf-nen-plural-review-04",
+            "ptf-old-i-plural-review-04",
+            "ptf-us-ks-plural-review-04",
+            "ptf-ton-plural-review-04"
+          ]
+        }
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "partitive-forms-plural-ita",
+      "version": "1.0.0",
+      "title": "Partitive Forms: Plural, -ita/-itä patterns",
+      "level": "0 - A1.3",
+      "summary": "Build plural partitives with -ita/-itä in the taught vowel and word-type families, retaining standard longer-word alternatives.",
+      "lessons": [
+        {
+          "id": "ptf-long-vowel-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-diphthong-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-e-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-as-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-is-plural",
+          "version": "1.0.1"
+        },
+        {
+          "id": "ptf-long-a-plural",
+          "version": "1.0.1"
+        }
+      ],
+      "tests": [
+        {
+          "id": "ptf-long-vowel-plural-test",
+          "title": "Plural of long-vowel words",
+          "stage": "focused",
+          "lessonIds": ["ptf-long-vowel-plural"],
+          "exerciseIds": [
+            "ptf-long-vowel-plural-choice-01",
+            "ptf-long-vowel-plural-produce-01",
+            "ptf-long-vowel-plural-repair-01",
+            "ptf-long-vowel-plural-choice-02",
+            "ptf-long-vowel-plural-produce-02",
+            "ptf-long-vowel-plural-repair-02",
+            "ptf-long-vowel-plural-choice-03",
+            "ptf-long-vowel-plural-produce-03",
+            "ptf-long-vowel-plural-repair-03",
+            "ptf-long-vowel-plural-choice-04",
+            "ptf-long-vowel-plural-produce-04",
+            "ptf-long-vowel-plural-repair-04",
+            "ptf-long-vowel-plural-choice-05",
+            "ptf-long-vowel-plural-produce-05",
+            "ptf-long-vowel-plural-repair-05",
+            "ptf-long-vowel-plural-choice-06",
+            "ptf-long-vowel-plural-produce-06",
+            "ptf-long-vowel-plural-repair-06",
+            "ptf-long-vowel-plural-choice-07",
+            "ptf-long-vowel-plural-produce-07",
+            "ptf-long-vowel-plural-repair-07",
+            "ptf-long-vowel-plural-choice-08",
+            "ptf-long-vowel-plural-produce-08",
+            "ptf-long-vowel-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-diphthong-plural-test",
+          "title": "Plural of one-syllable diphthong words",
+          "stage": "focused",
+          "lessonIds": ["ptf-diphthong-plural"],
+          "exerciseIds": [
+            "ptf-diphthong-plural-choice-01",
+            "ptf-diphthong-plural-produce-01",
+            "ptf-diphthong-plural-repair-01",
+            "ptf-diphthong-plural-reverse-01",
+            "ptf-diphthong-plural-choice-02",
+            "ptf-diphthong-plural-produce-02",
+            "ptf-diphthong-plural-repair-02",
+            "ptf-diphthong-plural-reverse-02",
+            "ptf-diphthong-plural-choice-03",
+            "ptf-diphthong-plural-produce-03",
+            "ptf-diphthong-plural-repair-03",
+            "ptf-diphthong-plural-reverse-03",
+            "ptf-diphthong-plural-choice-04",
+            "ptf-diphthong-plural-produce-04",
+            "ptf-diphthong-plural-repair-04",
+            "ptf-diphthong-plural-reverse-04",
+            "ptf-diphthong-plural-choice-05",
+            "ptf-diphthong-plural-produce-05",
+            "ptf-diphthong-plural-repair-05",
+            "ptf-diphthong-plural-reverse-05"
+          ]
+        },
+        {
+          "id": "ptf-e-plural-test",
+          "title": "Plural partitive of common -e words",
+          "stage": "focused",
+          "lessonIds": ["ptf-e-plural"],
+          "exerciseIds": [
+            "ptf-e-plural-choice-01",
+            "ptf-e-plural-produce-01",
+            "ptf-e-plural-repair-01",
+            "ptf-e-plural-choice-02",
+            "ptf-e-plural-produce-02",
+            "ptf-e-plural-repair-02",
+            "ptf-e-plural-choice-03",
+            "ptf-e-plural-produce-03",
+            "ptf-e-plural-repair-03",
+            "ptf-e-plural-choice-04",
+            "ptf-e-plural-produce-04",
+            "ptf-e-plural-repair-04",
+            "ptf-e-plural-choice-05",
+            "ptf-e-plural-produce-05",
+            "ptf-e-plural-repair-05",
+            "ptf-e-plural-choice-06",
+            "ptf-e-plural-produce-06",
+            "ptf-e-plural-repair-06",
+            "ptf-e-plural-choice-07",
+            "ptf-e-plural-produce-07",
+            "ptf-e-plural-repair-07",
+            "ptf-e-plural-choice-08",
+            "ptf-e-plural-produce-08",
+            "ptf-e-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-as-plural-test",
+          "title": "Plural partitive of common -as/-äs words",
+          "stage": "focused",
+          "lessonIds": ["ptf-as-plural"],
+          "exerciseIds": [
+            "ptf-as-plural-choice-01",
+            "ptf-as-plural-produce-01",
+            "ptf-as-plural-repair-01",
+            "ptf-as-plural-choice-02",
+            "ptf-as-plural-produce-02",
+            "ptf-as-plural-repair-02",
+            "ptf-as-plural-choice-03",
+            "ptf-as-plural-produce-03",
+            "ptf-as-plural-repair-03",
+            "ptf-as-plural-choice-04",
+            "ptf-as-plural-produce-04",
+            "ptf-as-plural-repair-04",
+            "ptf-as-plural-choice-05",
+            "ptf-as-plural-produce-05",
+            "ptf-as-plural-repair-05",
+            "ptf-as-plural-choice-06",
+            "ptf-as-plural-produce-06",
+            "ptf-as-plural-repair-06",
+            "ptf-as-plural-choice-07",
+            "ptf-as-plural-produce-07",
+            "ptf-as-plural-repair-07",
+            "ptf-as-plural-choice-08",
+            "ptf-as-plural-produce-08",
+            "ptf-as-plural-repair-08"
+          ]
+        },
+        {
+          "id": "ptf-is-plural-test",
+          "title": "Plural partitive of common -is words",
+          "stage": "focused",
+          "lessonIds": ["ptf-is-plural"],
+          "exerciseIds": [
+            "ptf-is-plural-choice-01",
+            "ptf-is-plural-produce-01",
+            "ptf-is-plural-repair-01",
+            "ptf-is-plural-reverse-01",
+            "ptf-is-plural-choice-02",
+            "ptf-is-plural-produce-02",
+            "ptf-is-plural-repair-02",
+            "ptf-is-plural-reverse-02",
+            "ptf-is-plural-choice-03",
+            "ptf-is-plural-produce-03",
+            "ptf-is-plural-repair-03",
+            "ptf-is-plural-reverse-03",
+            "ptf-is-plural-choice-04",
+            "ptf-is-plural-produce-04",
+            "ptf-is-plural-repair-04",
+            "ptf-is-plural-reverse-04",
+            "ptf-is-plural-choice-05",
+            "ptf-is-plural-produce-05",
+            "ptf-is-plural-repair-05",
+            "ptf-is-plural-reverse-05"
+          ]
+        },
+        {
+          "id": "ptf-long-a-plural-test",
+          "title": "Plural of selected longer words: -oita/-öitä",
+          "stage": "focused",
+          "lessonIds": ["ptf-long-a-plural"],
+          "exerciseIds": [
+            "ptf-long-a-plural-choice-01",
+            "ptf-long-a-plural-produce-01",
+            "ptf-long-a-plural-repair-01",
+            "ptf-long-a-plural-reverse-01",
+            "ptf-long-a-plural-choice-02",
+            "ptf-long-a-plural-produce-02",
+            "ptf-long-a-plural-repair-02",
+            "ptf-long-a-plural-reverse-02",
+            "ptf-long-a-plural-choice-03",
+            "ptf-long-a-plural-produce-03",
+            "ptf-long-a-plural-repair-03",
+            "ptf-long-a-plural-reverse-03",
+            "ptf-long-a-plural-choice-04",
+            "ptf-long-a-plural-produce-04",
+            "ptf-long-a-plural-repair-04",
+            "ptf-long-a-plural-reverse-04",
+            "ptf-long-a-plural-choice-05",
+            "ptf-long-a-plural-produce-05",
+            "ptf-long-a-plural-repair-05",
+            "ptf-long-a-plural-reverse-05"
+          ]
+        },
+        {
+          "id": "partitive-forms-plural-ita-review",
+          "title": "Partitive Forms: Plural, -ita/-itä patterns review",
+          "stage": "review",
+          "lessonIds": [
+            "ptf-long-vowel-plural",
+            "ptf-diphthong-plural",
+            "ptf-e-plural",
+            "ptf-as-plural",
+            "ptf-is-plural",
+            "ptf-long-a-plural"
+          ],
+          "exerciseIds": [
+            "ptf-long-vowel-plural-review-01",
+            "ptf-diphthong-plural-review-01",
+            "ptf-e-plural-review-01",
+            "ptf-as-plural-review-01",
+            "ptf-is-plural-review-01",
+            "ptf-long-a-plural-review-01",
+            "ptf-long-vowel-plural-review-02",
+            "ptf-diphthong-plural-review-02",
+            "ptf-e-plural-review-02",
+            "ptf-as-plural-review-02",
+            "ptf-is-plural-review-02",
+            "ptf-long-a-plural-review-02",
+            "ptf-long-vowel-plural-review-03",
+            "ptf-diphthong-plural-review-03",
+            "ptf-e-plural-review-03",
+            "ptf-as-plural-review-03",
+            "ptf-is-plural-review-03",
+            "ptf-long-a-plural-review-03",
+            "ptf-long-vowel-plural-review-04",
+            "ptf-diphthong-plural-review-04",
+            "ptf-e-plural-review-04",
+            "ptf-as-plural-review-04",
+            "ptf-is-plural-review-04",
+            "ptf-long-a-plural-review-04"
           ]
         }
       ]
@@ -4594,10 +5421,10 @@
     {
       "schemaVersion": 1,
       "id": "partitive-adjectives",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "title": "Adjectives and the partitive",
       "level": "0 - A1.3",
-      "summary": "Match singular and plural adjectives to nouns and describe familiar substances.",
+      "summary": "Match adjectives to partitive nouns and describe substances or ordinary plural items.",
       "lessons": [
         {
           "id": "pta-agreement-singular",
@@ -4609,6 +5436,10 @@
         },
         {
           "id": "pta-predicate-singular",
+          "version": "1.0.0"
+        },
+        {
+          "id": "pta-predicate-plural",
           "version": "1.0.0"
         }
       ],
@@ -4706,23 +5537,64 @@
           ]
         },
         {
+          "id": "pta-predicate-plural-test",
+          "title": "Describing several things: plural adjective",
+          "stage": "focused",
+          "lessonIds": ["pta-predicate-plural"],
+          "exerciseIds": [
+            "pta-predicate-plural-mc-01",
+            "pta-predicate-plural-typed-01",
+            "pta-predicate-plural-en-01",
+            "pta-predicate-plural-mc-02",
+            "pta-predicate-plural-typed-02",
+            "pta-predicate-plural-en-02",
+            "pta-predicate-plural-mc-03",
+            "pta-predicate-plural-typed-03",
+            "pta-predicate-plural-en-03",
+            "pta-predicate-plural-mc-04",
+            "pta-predicate-plural-typed-04",
+            "pta-predicate-plural-en-04",
+            "pta-predicate-plural-mc-05",
+            "pta-predicate-plural-typed-05",
+            "pta-predicate-plural-en-05",
+            "pta-predicate-plural-mc-06",
+            "pta-predicate-plural-typed-06",
+            "pta-predicate-plural-en-06",
+            "pta-predicate-plural-mc-07",
+            "pta-predicate-plural-typed-07",
+            "pta-predicate-plural-en-07",
+            "pta-predicate-plural-mc-08",
+            "pta-predicate-plural-typed-08",
+            "pta-predicate-plural-en-08"
+          ]
+        },
+        {
           "id": "partitive-adjectives-review",
           "title": "Adjectives and the partitive review",
           "stage": "review",
-          "lessonIds": ["pta-agreement-singular", "pta-agreement-plural", "pta-predicate-singular"],
+          "lessonIds": [
+            "pta-agreement-singular",
+            "pta-agreement-plural",
+            "pta-predicate-singular",
+            "pta-predicate-plural"
+          ],
           "exerciseIds": [
             "pta-agreement-singular-review-1",
             "pta-agreement-plural-review-1",
             "pta-predicate-singular-review-1",
+            "pta-predicate-plural-review-01",
             "pta-agreement-singular-review-2",
             "pta-agreement-plural-review-2",
             "pta-predicate-singular-review-2",
+            "pta-predicate-plural-review-02",
             "pta-agreement-singular-review-3",
             "pta-agreement-plural-review-3",
             "pta-predicate-singular-review-3",
+            "pta-predicate-plural-review-03",
             "pta-agreement-singular-review-4",
             "pta-agreement-plural-review-4",
-            "pta-predicate-singular-review-4"
+            "pta-predicate-singular-review-4",
+            "pta-predicate-plural-review-04"
           ]
         }
       ]

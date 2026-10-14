@@ -13,7 +13,7 @@ let packs: TopicPack[];
 test.beforeAll(async () => {
   packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   expect(packs.map((pack) => pack.id)).toEqual(packIds);
-  expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(107);
+  expect(packs.flatMap((pack) => pack.lessons)).toHaveLength(127);
 });
 for (const packId of packIds) {
   test(
@@ -77,6 +77,12 @@ for (const packId of packIds) {
           true,
         );
         audit.push({ pack: pack.id, lesson: lesson.id, rendered: await reader.innerText() });
+        if (['ptf-as-plural', 'ptf-long-a-plural', 'pta-predicate-plural'].includes(lesson.id)) {
+          await page.screenshot({
+            path: testInfo.outputPath(lesson.id + '.png'),
+            fullPage: true,
+          });
+        }
         if (lesson.id === 'aps-possessors-singular') {
           await page.screenshot({
             path: testInfo.outputPath('corrected-possession.png'),

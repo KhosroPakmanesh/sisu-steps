@@ -1,19 +1,21 @@
 {
   "schemaVersion": 1,
   "id": "partitive-adjectives",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "title": "Adjectives and the partitive",
   "level": "0 - A1.3",
-  "summary": "Match singular and plural adjectives to nouns and describe familiar substances.",
+  "summary": "Match adjectives to partitive nouns and describe substances or ordinary plural items.",
   "objectives": [
     "Match an adjective to a singular partitive noun inside a phrase.",
     "Match an adjective to a plural partitive noun inside a phrase.",
-    "Use a singular partitive adjective to describe a familiar substance."
+    "Use a singular partitive adjective to describe a familiar substance.",
+    "Choose a plural partitive adjective when describing individual ordinary plural items after ovat."
   ],
   "importantSkills": [
     "Singular adjective agreement in partitive",
     "Plural adjective agreement in partitive",
-    "Describing a substance: singular adjective"
+    "Describing a substance: singular adjective",
+    "Describing several things: plural adjective"
   ],
   "grammarBaseForms": [],
   "sources": [
@@ -40,13 +42,23 @@
     {
       "title": "University of Helsinki: describing substances",
       "url": "https://blogs.helsinki.fi/kielenoppijantyokalupakki/kopulalause-kahvi-on-kuumaa/"
+    },
+    {
+      "title": "Osaan suomea: plural descriptions",
+      "url": "https://www.osaansuomea.fi/osaan-suomea-2/osaan-monikot/"
     }
   ],
-  "lessonIds": ["pta-agreement-singular", "pta-agreement-plural", "pta-predicate-singular"],
+  "lessonIds": [
+    "pta-agreement-singular",
+    "pta-agreement-plural",
+    "pta-predicate-singular",
+    "pta-predicate-plural"
+  ],
   "testIds": [
     "pta-agreement-singular-test",
     "pta-agreement-plural-test",
     "pta-predicate-singular-test",
+    "pta-predicate-plural-test",
     "partitive-adjectives-review"
   ],
   "lessonSummaries": [
@@ -60,6 +72,10 @@
     },
     {
       "id": "pta-predicate-singular",
+      "version": "1.0.0"
+    },
+    {
+      "id": "pta-predicate-plural",
       "version": "1.0.0"
     }
   ],
@@ -157,23 +173,64 @@
       ]
     },
     {
+      "id": "pta-predicate-plural-test",
+      "title": "Describing several things: plural adjective",
+      "stage": "focused",
+      "lessonIds": ["pta-predicate-plural"],
+      "exerciseIds": [
+        "pta-predicate-plural-mc-01",
+        "pta-predicate-plural-typed-01",
+        "pta-predicate-plural-en-01",
+        "pta-predicate-plural-mc-02",
+        "pta-predicate-plural-typed-02",
+        "pta-predicate-plural-en-02",
+        "pta-predicate-plural-mc-03",
+        "pta-predicate-plural-typed-03",
+        "pta-predicate-plural-en-03",
+        "pta-predicate-plural-mc-04",
+        "pta-predicate-plural-typed-04",
+        "pta-predicate-plural-en-04",
+        "pta-predicate-plural-mc-05",
+        "pta-predicate-plural-typed-05",
+        "pta-predicate-plural-en-05",
+        "pta-predicate-plural-mc-06",
+        "pta-predicate-plural-typed-06",
+        "pta-predicate-plural-en-06",
+        "pta-predicate-plural-mc-07",
+        "pta-predicate-plural-typed-07",
+        "pta-predicate-plural-en-07",
+        "pta-predicate-plural-mc-08",
+        "pta-predicate-plural-typed-08",
+        "pta-predicate-plural-en-08"
+      ]
+    },
+    {
       "id": "partitive-adjectives-review",
       "title": "Adjectives and the partitive review",
       "stage": "review",
-      "lessonIds": ["pta-agreement-singular", "pta-agreement-plural", "pta-predicate-singular"],
+      "lessonIds": [
+        "pta-agreement-singular",
+        "pta-agreement-plural",
+        "pta-predicate-singular",
+        "pta-predicate-plural"
+      ],
       "exerciseIds": [
         "pta-agreement-singular-review-1",
         "pta-agreement-plural-review-1",
         "pta-predicate-singular-review-1",
+        "pta-predicate-plural-review-01",
         "pta-agreement-singular-review-2",
         "pta-agreement-plural-review-2",
         "pta-predicate-singular-review-2",
+        "pta-predicate-plural-review-02",
         "pta-agreement-singular-review-3",
         "pta-agreement-plural-review-3",
         "pta-predicate-singular-review-3",
+        "pta-predicate-plural-review-03",
         "pta-agreement-singular-review-4",
         "pta-agreement-plural-review-4",
-        "pta-predicate-singular-review-4"
+        "pta-predicate-singular-review-4",
+        "pta-predicate-plural-review-04"
       ]
     }
   ]

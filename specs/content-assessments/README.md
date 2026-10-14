@@ -1,5 +1,7 @@
 # Content assessment index
 
+The [2026-10-14 Partitive expansion](partitive-expansion.md) adds nineteen form preparations and one plural adjective-description preparation, with paired word-family teaching, coherent prerequisites, expanded Reviews and two scoped pack-version resets. Read its actual pre-authoring and final evidence alongside the original family assessment.
+
 The [2026-10-11 partitive family](partitive-family.md) adds five beginner packs with 30 lessons, 808 scored questions and 90 optional questions. It preserves the previous fourteen packs and their compatible progress; its final disposition is recorded separately from the pre-authoring approval.
 
 The [2026-10-11 lesson consolidation](lesson-consolidation.md) governs the removal of 26 repeated lessons and matching Focused tests, whole singular/plural pairs, revised preparation and current counts. Read it alongside the inherited quality and number-specific preparation records; earlier counts remain dated evidence.
@@ -10,7 +12,12 @@ The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records 
 
 ## Installed-pack entry records
 
+The [2026-10-14 four-pack Forms split](partitive-forms-split.md) governs the user-approved 4/8/9/6 grouping, local vocabulary/prerequisite ownership, preserved question inventory and scoped compatibility consequences. Read it alongside the original Forms and expansion records; their earlier single-pack inventories remain dated evidence.
+
 - [partitive-forms](partitive-forms.md)
+- [partitive-forms-singular-families](partitive-forms-split.md)
+- [partitive-forms-plural-ia-ja](partitive-forms-split.md)
+- [partitive-forms-plural-ita](partitive-forms-split.md)
 - [partitive-quantities](partitive-quantities.md)
 - [partitive-sentences](partitive-sentences.md)
 - [partitive-adjectives](partitive-adjectives.md)
@@ -34,6 +41,7 @@ The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records 
 ## Shared assessments and corrections
 
 - [partitive-family](partitive-family.md)
+- [partitive-expansion](partitive-expansion.md)
 
 - [lesson-consolidation](lesson-consolidation.md)
 

@@ -48,6 +48,10 @@ describe('content-pack version alignment', () => {
   );
   it.each([
     [
+      'two expanded Partitive packs',
+      { 'partitive-forms': '1.0.0', 'partitive-adjectives': '1.0.0' },
+    ],
+    [
       'twelve lesson-consolidated packs',
       {
         'vowel-harmony-location-endings': '1.1.0',

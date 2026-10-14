@@ -6,10 +6,16 @@
   "targetSkills": [
     "Singular adjective agreement in partitive",
     "Plural adjective agreement in partitive",
-    "Describing a substance: singular adjective"
+    "Describing a substance: singular adjective",
+    "Describing several things: plural adjective"
   ],
   "prerequisiteSkills": [],
-  "lessonIds": ["pta-agreement-singular", "pta-agreement-plural", "pta-predicate-singular"],
+  "lessonIds": [
+    "pta-agreement-singular",
+    "pta-agreement-plural",
+    "pta-predicate-singular",
+    "pta-predicate-plural"
+  ],
   "exercises": [
     {
       "id": "pta-agreement-singular-review-1",
@@ -160,6 +166,53 @@
       "parallelExerciseId": "pta-predicate-singular-review-2"
     },
     {
+      "id": "pta-predicate-plural-review-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Describe each item individually: complete “The rooms are cold.” Huoneet ovat ____.",
+      "acceptedAnswers": ["kylmiä"],
+      "explanation": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Drop final ä before plural i and add -ä: kylmiä.",
+      "tags": ["standard-written-finnish", "form-plural", "sentence"],
+      "requiredSkills": ["Describing several things: plural adjective"],
+      "vocabulary": [],
+      "targetSkill": "Describing several things: plural adjective",
+      "misconceptionCategory": "Describing several things: plural adjective: case or number confused",
+      "sentenceExplanation": {
+        "translation": "The rooms are cold.",
+        "pattern": "plural nominative noun naming the things + ovat (“are”) + plural partitive adjective describing each thing",
+        "parts": [
+          {
+            "finnish": "Huoneet",
+            "meaning": "rooms",
+            "role": "plural nominative noun used as the subject",
+            "baseForm": "huone",
+            "formation": "Lengthen final e to ee and add -t: huoneet."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "verb agreeing with the plural subject",
+            "baseForm": "olla",
+            "formation": "ovat is the present third-person plural of olla (“to be”). The supplied verb agrees with the plural subject."
+          },
+          {
+            "finnish": "kylmiä",
+            "meaning": "cold",
+            "role": "plural partitive adjective describing each thing",
+            "baseForm": "kylmä",
+            "formation": "Drop final ä before plural i and add -ä: kylmiä."
+          }
+        ]
+      },
+      "options": ["kylmät", "kylmiä", "kylmää"],
+      "optionFeedback": {
+        "kylmiä": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Drop final ä before plural i and add -ä: kylmiä.",
+        "kylmät": "kylmät is a nominative plural. This prompt describes each ordinary item individually and requires kylmiä. When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things.",
+        "kylmää": "kylmää is singular partitive. Several ordinary items require the plural adjective kylmiä in this pattern."
+      },
+      "parallelExerciseId": "pta-predicate-plural-review-03"
+    },
+    {
       "id": "pta-agreement-singular-review-2",
       "type": "multiple-choice",
       "instruction": "Choose one answer.",
@@ -306,6 +359,59 @@
         ]
       },
       "parallelExerciseId": "pta-predicate-singular-review-1"
+    },
+    {
+      "id": "pta-predicate-plural-review-02",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Describe each item individually: complete “The cups are big.” Kupit ovat ____. Forms: isot / isoa / isoja.",
+      "acceptedAnswers": ["isoja"],
+      "explanation": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Keep iso and add -ja: isoja.",
+      "tags": ["standard-written-finnish", "form-plural", "sentence"],
+      "requiredSkills": ["Describing several things: plural adjective"],
+      "vocabulary": [],
+      "targetSkill": "Describing several things: plural adjective",
+      "misconceptionCategory": "Describing several things: plural adjective: case or number confused",
+      "sentenceExplanation": {
+        "translation": "The cups are big.",
+        "pattern": "plural nominative noun naming the things + ovat (“are”) + plural partitive adjective describing each thing",
+        "parts": [
+          {
+            "finnish": "Kupit",
+            "meaning": "cups",
+            "role": "plural nominative noun used as the subject",
+            "baseForm": "kuppi",
+            "formation": "Use the weak consonant pp → p and add -t: kupit."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "verb agreeing with the plural subject",
+            "baseForm": "olla",
+            "formation": "ovat is the present third-person plural of olla (“to be”). The supplied verb agrees with the plural subject."
+          },
+          {
+            "finnish": "isoja",
+            "meaning": "big",
+            "role": "plural partitive adjective describing each thing",
+            "baseForm": "iso",
+            "formation": "Keep iso and add -ja: isoja."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["isot"],
+          "category": "Nominative instead of partitive",
+          "explanation": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Keep iso and add -ja: isoja."
+        },
+        {
+          "answers": ["isoa"],
+          "category": "Singular instead of plural",
+          "explanation": "The prompt describes several ordinary items individually. Use isoja, a plural partitive adjective. Keep iso and add -ja: isoja."
+        }
+      ],
+      "parallelExerciseId": "pta-predicate-plural-review-04"
     },
     {
       "id": "pta-agreement-singular-review-3",
@@ -459,6 +565,53 @@
       "parallelExerciseId": "pta-predicate-singular-review-4"
     },
     {
+      "id": "pta-predicate-plural-review-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Describe each item individually: complete “The books are good.” Kirjat ovat ____.",
+      "acceptedAnswers": ["hyviä"],
+      "explanation": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Drop final ä before plural i and add -ä: hyviä.",
+      "tags": ["standard-written-finnish", "form-plural", "sentence"],
+      "requiredSkills": ["Describing several things: plural adjective"],
+      "vocabulary": [],
+      "targetSkill": "Describing several things: plural adjective",
+      "misconceptionCategory": "Describing several things: plural adjective: case or number confused",
+      "sentenceExplanation": {
+        "translation": "The books are good.",
+        "pattern": "plural nominative noun naming the things + ovat (“are”) + plural partitive adjective describing each thing",
+        "parts": [
+          {
+            "finnish": "Kirjat",
+            "meaning": "books",
+            "role": "plural nominative noun used as the subject",
+            "baseForm": "kirja",
+            "formation": "Add -t to kirja: kirjat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "verb agreeing with the plural subject",
+            "baseForm": "olla",
+            "formation": "ovat is the present third-person plural of olla (“to be”). The supplied verb agrees with the plural subject."
+          },
+          {
+            "finnish": "hyviä",
+            "meaning": "good",
+            "role": "plural partitive adjective describing each thing",
+            "baseForm": "hyvä",
+            "formation": "Drop final ä before plural i and add -ä: hyviä."
+          }
+        ]
+      },
+      "options": ["hyvää", "hyvät", "hyviä"],
+      "optionFeedback": {
+        "hyviä": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Drop final ä before plural i and add -ä: hyviä.",
+        "hyvät": "hyvät is a nominative plural. This prompt describes each ordinary item individually and requires hyviä. When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things.",
+        "hyvää": "hyvää is singular partitive. Several ordinary items require the plural adjective hyviä in this pattern."
+      },
+      "parallelExerciseId": "pta-predicate-plural-review-01"
+    },
+    {
       "id": "pta-agreement-singular-review-4",
       "type": "translation-fi",
       "instruction": "Write in Finnish.",
@@ -608,6 +761,59 @@
         ]
       },
       "parallelExerciseId": "pta-predicate-singular-review-3"
+    },
+    {
+      "id": "pta-predicate-plural-review-04",
+      "type": "fill-blank",
+      "instruction": "Complete the missing form.",
+      "prompt": "Describe each item individually: complete “The cars are small.” Autot ovat ____. Forms: pienet / pientä / pieniä.",
+      "acceptedAnswers": ["pieniä"],
+      "explanation": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Keep dictionary-form pieni and add -ä: pieniä.",
+      "tags": ["standard-written-finnish", "form-plural", "sentence"],
+      "requiredSkills": ["Describing several things: plural adjective"],
+      "vocabulary": [],
+      "targetSkill": "Describing several things: plural adjective",
+      "misconceptionCategory": "Describing several things: plural adjective: case or number confused",
+      "sentenceExplanation": {
+        "translation": "The cars are small.",
+        "pattern": "plural nominative noun naming the things + ovat (“are”) + plural partitive adjective describing each thing",
+        "parts": [
+          {
+            "finnish": "Autot",
+            "meaning": "cars",
+            "role": "plural nominative noun used as the subject",
+            "baseForm": "auto",
+            "formation": "Add -t to auto: autot."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "role": "verb agreeing with the plural subject",
+            "baseForm": "olla",
+            "formation": "ovat is the present third-person plural of olla (“to be”). The supplied verb agrees with the plural subject."
+          },
+          {
+            "finnish": "pieniä",
+            "meaning": "small",
+            "role": "plural partitive adjective describing each thing",
+            "baseForm": "pieni",
+            "formation": "Keep dictionary-form pieni and add -ä: pieniä."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["pienet"],
+          "category": "Nominative instead of partitive",
+          "explanation": "When describing the individual members of an ordinary plural group after ovat (“are”), use a plural partitive adjective. The subject noun remains plural nominative, the form naming the things. Keep dictionary-form pieni and add -ä: pieniä."
+        },
+        {
+          "answers": ["pientä"],
+          "category": "Singular instead of plural",
+          "explanation": "The prompt describes several ordinary items individually. Use pieniä, a plural partitive adjective. Keep dictionary-form pieni and add -ä: pieniä."
+        }
+      ],
+      "parallelExerciseId": "pta-predicate-plural-review-02"
     }
   ]
 }

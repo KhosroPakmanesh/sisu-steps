@@ -4,6 +4,11 @@
 
 ### Partitive pack family
 
+- Use commas in the four new Partitive Forms pack names and matching Review titles throughout the catalog and current documentation. This punctuation change preserves lesson and exercise content, IDs, versions and compatible learner data.
+- Divide the 27 Partitive Forms lessons into four packs: Singular, First patterns; Singular, -i and consonant-ending families; Plural, -ia/-iä and -ja/-jä patterns; Plural, -ita/-itä patterns. Preserve all 730 scored and 81 optional questions, with smaller 16/32/36/24-question Reviews and independent local preparation/vocabulary ownership. Retain the original Forms ID at 1.2.0 and add three 1.0.0 packs. Existing alignment discards old Forms attempts/sessions and retained-subset progress, requires renewed obsolete lesson completions, and discards old-topic notes for moved lessons; compatible moved-question mistake/mastery records and the other eighteen packs remain intact. Older backups containing moved-item progress without the new owning pack versions are atomically rejected; no migration or application-structure change is introduced.
+
+- Expand Partitive forms with common plural stem families and paired consonant-ending singular/plural teaching, and add plural adjective descriptions after `ovat`. Reorder preparations around local prerequisites and extend the two cumulative Reviews. Forms and Adjectives advance to 1.1.0; their old scored history, sessions, mistakes, mastery and lesson completions are intentionally discarded under existing alignment, while learner notes and the other seventeen packs remain compatible.
+
 - Shorten all 30 Partitive lesson summaries and matching preparation headings to the core rule and one Finnish example with its English meaning. Keep the full teaching and compact worked-example cards available separately, with compatible content versions and learner progress.
 
 - Replace 58 repetitive Partitive forms worked-example labels with short English meanings and concrete formation cues. Keep each label no longer than its previous text, and retain the taught Finnish forms, detailed explanations, content versions and learner progress.
