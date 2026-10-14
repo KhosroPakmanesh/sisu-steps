@@ -4,6 +4,8 @@
 
 ### Partitive pack family
 
+- Shorten all 30 Partitive lesson summaries and matching preparation headings to the core rule and one Finnish example with its English meaning. Keep the full teaching and compact worked-example cards available separately, with compatible content versions and learner progress.
+
 - Replace 58 repetitive Partitive forms worked-example labels with short English meanings and concrete formation cues. Keep each label no longer than its previous text, and retain the taught Finnish forms, detailed explanations, content versions and learner progress.
 
 - Replace all 30 Partitive lesson summaries with concise rules, taught Finnish examples and English meanings, including useful limits and common pitfalls. Show the improved descriptions in Grammar reference and lesson reading; preserve content versions and learner progress.

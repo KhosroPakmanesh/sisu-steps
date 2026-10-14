@@ -1,5 +1,9 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-14 one-example partitive summaries
+
+Apply the user's core-rule-plus-one-example pattern to all 30 summaries under REQ-G001-152. Use the approved regular-singular before/after as the preview for this single wording issue. Retain necessary word-family and grammatical scope in the rule, remove secondary examples and explanatory tails, and synchronize matching preparation headings. Preserve all other content and versions, including the completed compact worked-example labels. Compare every changed property with the committed baseline, complete the client gate and three-width rendered summary checks, and record actual evidence under VAL-G001-111. Do not commit or publish without a new user instruction.
+
 ## 2026-10-14 compact partitive worked-example labels
 
 Apply the user-approved meaning-and-formation fragments under REQ-G001-152. Snapshot the current sources including the completed uncommitted summary revision, inventory all 146 Partitive worked examples, and revise the 58 repetitive morphology labels in eight lessons. Use each example's existing construction steps, assert every replacement's character count is at most its own prior count, and verify every cue produces the unchanged Finnish form. Preserve all other properties, sources and versions. Complete the client gate and inspect all revised examples in group/pack references and lesson readers at 320/768/1440 pixels, then record the scoped assessment and actual VAL-G001-111 evidence. Do not commit or publish.

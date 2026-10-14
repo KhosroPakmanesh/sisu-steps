@@ -1,5 +1,11 @@
 # G001 requirements
 
+## One-example Partitive summaries — 2026-10-14
+
+Amend REQ-G001-152 after the compact-label revision: shorten all 30 Partitive lesson summaries to the core rule and exactly one already taught Finnish example with its English meaning. Follow the user's regular-singular model, ending after `talo (“house”) → taloa.` Remove secondary examples and follow-up elaboration; retain necessary scope in the rule itself. This supersedes the earlier summary amendment's extended explanation length. Detailed teaching and the separate worked-example cards continue to own the full explanations and contrasts.
+
+Synchronize all matching Focused preparation `focus` fields. Preserve every other lesson/test property, including the 58 compact worked-example labels, all 146 worked examples, exercises, ordering, IDs and versions. This is a wording-only reduction of existing teaching; scored progress, completions and notes remain compatible. Validate the complete one-example inventory and source preservation under VAL-G001-111.
+
 ## Compact Partitive worked-example labels — 2026-10-14
 
 Amend REQ-G001-152 after the summary revision: replace the 58 repetitive morphology example labels in the eight Partitive forms lessons with the approved compact format, English word meaning plus a concrete formation cue (for example, `house · add -a`, `cup · keep pp; add -a`, `woman · -nen → -sta`). Each replacement must contain no more characters than its own previous label and use fragments rather than lengthy sentences. Review every Partitive example; the other 88 already useful phrase/sentence translations remain outside this repetitive-label class.

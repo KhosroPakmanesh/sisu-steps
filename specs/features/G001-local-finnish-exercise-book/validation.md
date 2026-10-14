@@ -1,5 +1,15 @@
 # G001 validation
 
+## One-example Partitive summaries — 2026-10-14
+
+VAL-G001-111 / REQ-G001-152 one-example amendment: verify all 30 summaries contain the core rule and exactly one taught Finnish example with its English meaning, end after that example, and match their Focused preparation headings. Compare every other content property with the committed baseline and inspect all three summary surfaces at 320/768/1440 pixels.
+
+Execution evidence:
+
+- All 30 summaries and matching headings are shorter, with 8–23 words per summary. The regular-singular summary matches the user's exact model. Every example resolves to existing taught Finnish and its English meaning; no secondary example or explanatory tail remains. Only 60 `summary`/`focus` fields change. All other source properties, including the 146 worked examples, 58 compact labels, question objects, versions and ordering, are preserved. All 60 deployed fragments match their authored sources byte-for-byte.
+- The uninterrupted client gate passes all static/style/format/type/source/build checks, 466 unit tests and 30 integration tests under Node 24.19.0. The scoped Playwright audit passes 270 summary instances across group reference, pack reference and lesson reader at three widths, with exact text, no overflow/clipping/page errors, initially collapsed reference examples, focus return and preserved reference learner state. Representative captures at all three widths were inspected.
+- The [one-example assessment](../../content-assessments/partitive-family.md#one-example-summaries--2026-10-14) records both actual gates, the complete inventory, preservation and limitations. Evidence is saved in ignored `client/tmp/partitive-one-example-*` files without replacing earlier records. Full unrelated browser coverage, physical devices, native zoom, assistive technology and independent native-teacher review were not repeated. Final formatting, local-link and whitespace checks are completed at handoff. This slice was not committed or published.
+
 ## Compact Partitive worked-example labels — 2026-10-14
 
 VAL-G001-111 / REQ-G001-152 compact-label amendment: inventory every Partitive example, replace only repetitive morphology labels with approved meaning-and-formation fragments, assert each replacement is no longer than its original, verify its cue produces the unchanged Finnish form, preserve the prior summary revision and all other source properties, and inspect reference/reader examples at 320/768/1440 pixels.
