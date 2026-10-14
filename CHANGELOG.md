@@ -4,6 +4,10 @@
 
 ### Partitive pack family
 
+- Replace 58 repetitive Partitive forms worked-example labels with short English meanings and concrete formation cues. Keep each label no longer than its previous text, and retain the taught Finnish forms, detailed explanations, content versions and learner progress.
+
+- Replace all 30 Partitive lesson summaries with concise rules, taught Finnish examples and English meanings, including useful limits and common pitfalls. Show the improved descriptions in Grammar reference and lesson reading; preserve content versions and learner progress.
+
 - Add five `0 - A1.3` Partitive packs covering forms, quantities, everyday sentence uses, adjectives, and pronouns/questions. Keep singular and plural together by topic, with independent Focused preparation and standard written Finnish throughout. Add 30 lessons, 808 scored questions and 90 optional questions; preserve existing pack versions and compatible progress.
 - Distinguish the grammatical number of a practised word form from the number of people or things it describes, including singular partitive after counting numbers. Validate the new content at source and runtime boundaries.
 

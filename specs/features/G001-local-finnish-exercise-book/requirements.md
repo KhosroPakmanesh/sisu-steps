@@ -1,5 +1,17 @@
 # G001 requirements
 
+## Compact Partitive worked-example labels — 2026-10-14
+
+Amend REQ-G001-152 after the summary revision: replace the 58 repetitive morphology example labels in the eight Partitive forms lessons with the approved compact format, English word meaning plus a concrete formation cue (for example, `house · add -a`, `cup · keep pp; add -a`, `woman · -nen → -sta`). Each replacement must contain no more characters than its own previous label and use fragments rather than lengthy sentences. Review every Partitive example; the other 88 already useful phrase/sentence translations remain outside this repetitive-label class.
+
+The cue restates the existing construction steps for the displayed Finnish transformation. Keep the base-word meaning accurate; the grammatical number and case remain explicit in the lesson heading and taught forms, without inventing a fixed English translation for partitive. Preserve Finnish examples, detailed steps, all other lesson content, the completed summary/preparation-heading revision, question objects, manifests, IDs, ordering and versions. This compact wording does not change scored interpretation or lesson-completion meaning, so learner progress, completions and notes remain compatible. Validate length, morphology, source preservation and rendered examples under VAL-G001-111.
+
+## Partitive lesson summaries — 2026-10-14
+
+Amend REQ-G001-152: give all 30 lessons in the five Partitive packs a useful short grammar summary for the pack/group reference and lesson reader. State the existing formation or usage rule, include an already taught Finnish example with its English meaning, and retain any essential word-family, number, reference or completion limitation. Replace generic task instructions with explanations a learner can use without expanding Worked examples.
+
+This is a summary-only wording revision of already taught material. Synchronize each matching Focused test's preparation `focus` with its lesson `summary`, as required by the existing source/runtime contract. Preserve lesson and pack versions, IDs, objectives, detailed teaching, vocabulary declarations, worked examples, optional practice, scored questions, accepted answers and ordering. No scored interpretation or lesson-completion meaning changes; current progress, completions and notes remain compatible. Validate the complete 30-summary inventory, source preservation and responsive pack/group references under VAL-G001-111.
+
 ## Partitive pack family — 2026-10-11
 
 - **REQ-G001-152:** Add five independently versioned `1.0.0` packs in one **Partitive** catalog group: `partitive-forms`, `partitive-quantities`, `partitive-sentences`, `partitive-adjectives`, and `partitive-pronouns-questions`, all labelled `0 - A1.3`. Group singular and plural by grammatical topic within each pack. Order corresponding singular/plural preparations together where prerequisites allow; each scoped Focused test owns independently authored matching teaching, examples and practice. Use standard written Finnish throughout Finnish teaching, prompts, answers and accepted alternatives. English remains the instructional language. Existing pack content, versions and compatible learner progress are preserved.

@@ -98,3 +98,77 @@ Limitations: this is an authorial written-grammar assessment grounded in the lis
 ## Compatibility
 
 Five new pack IDs at version 1.0.0 and lesson versions 1.0.0. SHA-256 comparison confirms all 190 original JSON files across fourteen packs are byte-for-byte unchanged. The installation integration test preserves attempts, unfinished sessions, unresolved mistakes, correction records, lesson completions, notes and backup data. No obsolete data path, reset, migration, backend or runtime generation is needed. Both pedagogy gates are approved with the written-practice and independent-review limitations stated above. No commit or publication was performed.
+
+## Summary-only revision — 2026-10-14
+
+### Pre-authoring assessment
+
+Disposition: **approved with limitations**, before editing the lesson JSON. The complete affected class is all 30 lesson summaries: eight forms, four quantities, ten sentence uses, three adjective lessons and five pronoun/question lessons. Representative before/after previews were shown for formation, usage and pronouns. The revision compresses existing teaching into useful reference text; it introduces no new skill, vocabulary, exercise, prerequisite or scored demand.
+
+The existing 30-target blueprint, 688 Focused / 120 Review / 90 optional questions, vocabulary map and final question inventories above remain the boundary. Summaries will explain the rule, use already taught forms or sentences with English meanings, and retain key limitations: selected word families, singular noun form after basic counting numbers, object rather than subject case, substance rather than whole-item descriptions, reference distance, object number independent of the actor, and open completion. The dedicated vocabulary lists and detailed lesson sections retain their responsibilities.
+
+Rechecked the existing [Yle partitive lesson](https://yle.fi/a/20-156324), [Osaan suomea word types](https://www.osaansuomea.fi/osaan-sanatyypit/), [pronouns](https://www.osaansuomea.fi/pronominit/), [Kielitoimiston object-case guidance](https://kielitoimistonohjepankki.fi/ohje/objekti-han-luki-kirjaa-kirjan-milloin-partitiivi-milloin-ei/), [A Taste of Finnish grammar](https://tasteoffinnish.fi/grammar/) and [Helsinki substance descriptions](https://blogs.helsinki.fi/kielenoppijantyokalupakki/kopulalause-kahvi-on-kuumaa/) against the existing lesson rules. This remains an authorial written-grammar review, without independent native-teacher or learner-trial certification.
+
+Summary-only wording preserves all versions under the explicit REQ-G001-152 amendment: there is no new lesson-completion meaning or scored interpretation, so no progress or completion reset is appropriate. Final rendered assessment and technical checks were pending at this pre-authoring gate.
+
+### Final assessment and complete inventory
+
+Disposition: **approved with limitations** after the rendered audit and successful test reruns on 2026-10-14. All 30 summaries explain the existing rule, show already taught Finnish with an English meaning, and retain relevant limits. The 30 Focused preparation headings mirror these summaries as required by existing validation. There is no new grammar or lexical-recall demand.
+
+| Pack                         | Audited summaries and synchronized preparation headings                                                                                                                                                                                | Count |
+| ---------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----: |
+| partitive-forms              | `ptf-regular-singular`, `ptf-regular-plural`, `ptf-ta-singular`, `ptf-e-singular`, `ptf-nen-singular`, `ptf-i-e-singular`, `ptf-si-singular`, `ptf-changing-singular`                                                                  |     8 |
+| partitive-quantities         | `ptq-counting-singular`, `ptq-measure-singular`, `ptq-amount-singular`, `ptq-amount-plural`                                                                                                                                            |     4 |
+| partitive-sentences          | `pts-amount-singular`, `pts-amount-plural`, `pts-languages-singular`, `pts-verbs-singular`, `pts-verbs-plural`, `pts-negative-singular`, `pts-negative-plural`, `pts-process-singular`, `pts-absence-singular`, `pts-existence-plural` |    10 |
+| partitive-adjectives         | `pta-agreement-singular`, `pta-agreement-plural`, `pta-predicate-singular`                                                                                                                                                             |     3 |
+| partitive-pronouns-questions | `ptp-personal-singular`, `ptp-personal-plural`, `ptp-demonstrative-singular`, `ptp-demonstrative-plural`, `ptp-object-questions`                                                                                                       |     5 |
+
+Summaries contain 27–41 words each and remain explanatory prose rather than objectives or standalone vocabulary lists. The eight morphology summaries intentionally use word transformations; their English glosses match existing lexical meanings. The other 22 summaries reuse a taught phrase or complete sentence, with phrase capitalization/punctuation adapted to running prose. Existing grammatical paradigms in pronoun summaries are grammar teaching. Selected word-family warnings, case/number agreement, singular counting forms, substance quantities, negative object roles, open completion, location-first verb frames and person/distance reference cues were reviewed across the complete inventory. No summary treats all negative-sentence nouns as objects, all food words as invariably partitive, every -i word as one family, or an ongoing action as unable to finish.
+
+The final rendered audit checks 270 summary instances: all 30 on three surfaces (group reference, pack reference, lesson reader) at three widths (320/768/1440). The exact text renders without horizontal overflow, clipped text or page errors. Reference examples remain collapsed, keyboard dismissal returns focus, and reference viewing preserves learner state. Four representative screenshots were inspected. The actual summary inventory and rendered geometry records are saved under ignored `client/tmp/partitive-summary-inventory.json` and `client/tmp/partitive-summary-render/inventory.json`.
+
+Deep baseline comparison confirms only each lesson's `summary` and each matching Focused test's `focus` change. Preserve all 146 worked-example objects, 688 Focused questions, 90 optional questions, five Reviews/120 Review questions, objectives, detailed teaching, vocabulary, diagnostics, answer alternatives, mastery pairs, IDs, order, versions and all other sources. The unchanged lexical inventory remains 158 new / 96 reused / one supplied declaration, with 254 word declarations and one fixed expression. The earlier independent 898-question recall audit and formation/feedback judgments remain inherited evidence for unchanged content; this narrow revision does not claim a fresh question-by-question grading or independent native-teacher audit.
+
+### Technical validation and final decision
+
+Every client-gate stage is complete using Node 24.19.0. The aggregate command passes static/style/module/reachability/architecture/format/type checks, all 19 direct sources and the production build, then stops on one five-second unit timeout while browser auditing runs concurrently. With that audit finished, the standalone unit rerun passes all **466 tests** and the subsequent integration run passes all **30 tests**. An earlier direct-source failure caught the required preparation-heading synchronization; the content metadata was corrected and the existing validators remain intact. The 60 changed fragments match deployed sources byte-for-byte. Formatting, local-link and whitespace checks are completed at handoff.
+
+Logs and the temporary browser audit live under ignored `client/tmp/partitive-summary-*` paths. No maintained generator or new test fixture is shipped. All 270 scoped Playwright checks pass. The complete unrelated browser suite, native zoom, assistive technology, physical devices, listening, speaking and independent native-teacher review were not repeated. No high-impact finding remains within the summary-only scope. Versions, scored history, completions and notes stay compatible; no reset, migration, commit or publication was performed.
+
+## Compact worked-example labels — 2026-10-14
+
+### Pre-authoring assessment
+
+Disposition: **approved with limitations**, before editing example labels. The user approved the previewed meaning-and-formation fragments and explicitly requires every replacement to fit within its own current text length. Inventory all 146 Partitive examples: the affected class is 58 repetitive word-to-word case labels across the eight `partitive-forms` lessons. The other 88 phrase/sentence translations already convey useful meaning and are outside this class. A source snapshot retains the completed uncommitted summary/preparation-heading changes and all 261 current content files.
+
+The compact label keeps each base-word English meaning and restates its existing construction step: added endings, retained consonants/vowels, or a precise ending/stem replacement. The Finnish transformation and number-specific heading identify the target form. No cue claims a context-free English equivalent of partitive, adds a grammatical decision, or expands the approved word-family boundary. All labels use fragments, not added sentences. Character counts will be checked individually; arithmetic reconstruction will verify that each cue produces its unchanged target form.
+
+Inherit the verified sources, 30-target blueprint, vocabulary and question inventories, and detailed Finnish formation judgments above. This wording revision preserves lesson-completion meaning and scored interpretation; retain all lesson/pack versions and compatible progress. The final 688 Focused / 120 Review / 90 optional question inventory remains the boundary. This is an authorial review of already taught forms, without new independent native-teacher certification. Rendered assessment and technical checks were pending at this pre-authoring gate.
+
+### Final assessment and label inventory
+
+Disposition: **approved with limitations** on 2026-10-14 after the complete client gate and rendered audit. The affected inventory is:
+
+| Lesson                  | Revised labels |
+| ----------------------- | -------------: |
+| `ptf-regular-singular`  |              8 |
+| `ptf-regular-plural`    |              8 |
+| `ptf-ta-singular`       |              8 |
+| `ptf-e-singular`        |              8 |
+| `ptf-nen-singular`      |              8 |
+| `ptf-i-e-singular`      |              8 |
+| `ptf-si-singular`       |              5 |
+| `ptf-changing-singular` |              5 |
+| Total                   |             58 |
+
+Every label is strictly shorter than its own original: replacements contain 12–32 characters, compared with 27–55 previously. The English base-word meaning is retained exactly; short fragments identify an added ending, a retained vowel/consonant, or a precise stem/ending change. Examples include `house · add -a`, `coffee · keep i; add -a`, `cup · keep pp; add -a`, `door · i → e; add -a`, `woman · -nen → -sta`, `water · -si → -ttä`, and `child · -psi → -sta`. Applying each cue to its displayed base reconstructs the exact unchanged target form for all 58 examples, including all vowel-harmony choices. Manual comparison with the existing construction steps confirms the intended teaching and bounded word-family scope. No label adds a full sentence or claims that partitive universally translates as “some”.
+
+The complete 146-example inventory has 58 revised morphology labels and 88 unchanged phrase/sentence translations. Hash comparison with this slice's snapshot changes only eight lesson files among 261 content sources; deep comparison changes only their examples' `english` properties. All Finnish transformations, step arrays, summaries, preparation headings, objectives, vocabulary, questions, answers, diagnostics, mastery links, manifests, ordering and versions retain the immediately preceding content state. The earlier summary revision is preserved. The inherited 158 new / 96 reused / one supplied lexical declaration inventory, word/fixed-expression classifications and 898-question recall audit remain unchanged evidence; no new vocabulary or scored demand is introduced.
+
+### Technical validation and final decision
+
+The uninterrupted `npm --prefix client run check` **passes** with Node 24.19.0, including lint/CSS, module size, reachability, architecture, formatting, both type checks, all 19 direct sources, production build, **466 unit tests** and **30 integration tests**. All eight revised authored lesson fragments match the production build byte-for-byte. Character counts, retained meanings, cue-to-form reconstruction and complete source preservation are verified against the snapshot saved before this slice.
+
+The scoped Playwright audit passes **522 rendered label checks**: all 58 labels in group references, pack references and full lesson readers at 320/768/1440 pixels. Actual Finnish/English text and preserved reader construction steps match their sources. All labels are visible without horizontal overflow or clipped text; disclosure opening and keyboard focus return work, reference viewing preserves learner state, and no page errors are reported. Phone, tablet and desktop regular-example captures plus a phone -nen capture were inspected. Inventory, snapshot, logs and the temporary audit are retained under ignored `client/tmp/partitive-example-label-*` paths; no maintained generator or test fixture is shipped.
+
+No high-impact finding remains within the approved label scope. Both scoped pedagogy gates are approved with the inherited written-practice limitations. The complete unrelated browser suite, physical devices, native zoom, assistive technology, learner trials and independent native-teacher review were not repeated. Formatting, local links and whitespace are checked at handoff. The 688 Focused / 120 Review / 90 optional inventory and Focused/Review boundaries are retained; scored progress, completions and notes remain compatible. No reset, migration, commit or publication was performed.

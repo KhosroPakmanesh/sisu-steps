@@ -1,5 +1,13 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-14 compact partitive worked-example labels
+
+Apply the user-approved meaning-and-formation fragments under REQ-G001-152. Snapshot the current sources including the completed uncommitted summary revision, inventory all 146 Partitive worked examples, and revise the 58 repetitive morphology labels in eight lessons. Use each example's existing construction steps, assert every replacement's character count is at most its own prior count, and verify every cue produces the unchanged Finnish form. Preserve all other properties, sources and versions. Complete the client gate and inspect all revised examples in group/pack references and lesson readers at 320/768/1440 pixels, then record the scoped assessment and actual VAL-G001-111 evidence. Do not commit or publish.
+
+## 2026-10-14 partitive lesson summaries
+
+Apply the summary-only amendment to REQ-G001-152. Inventory all 30 lessons, preview representative formation, usage and pronoun corrections, and retain the existing family assessment as the boundary for grammar, vocabulary and exercises. Rewrite each lesson's `summary` using its already taught rules and examples, and synchronize the matching Focused test's preparation `focus`. Preserve versions and compatible learner data. Compare every other lesson/test property and all other content files to the baseline, complete the client gate and responsive rendered references/lessons, and record the actual scoped assessment and validation under VAL-G001-111. Do not commit or publish.
+
 ## 2026-10-11 partitive pack family
 
 Implement REQ-G001-152 using the project-local content creator skill. Save the five-pack, 30-lesson coverage and vocabulary blueprint before bulk authoring. Author pack-owned pure JSON, with paired singular/plural preparation and standard written Finnish; add the form-number validation axis and aligned family guards. Register the Partitive group and matching startup summaries. Preserve all fourteen installed packs and compatible progress. Complete the client gate, actual grading and rendered lesson/exercise checks at 320/768/1440 pixels, then record the final assessment and actual inventories under VAL-G001-111. Do not commit or publish.
