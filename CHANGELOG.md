@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Completed-stage persistence
+
+- Fix saved progress disappearing after refresh when a completed stage has a fractional score. Validate saved and backed-up percentages using the same one-decimal rounding as scoring, preserving current learner data and backup formats. Data already overwritten by the faulty startup reset requires an existing backup to recover.
+
 ### Partitive pack family
 
 - Use commas in the four new Partitive Forms pack names and matching Review titles throughout the catalog and current documentation. This punctuation change preserves lesson and exercise content, IDs, versions and compatible learner data.

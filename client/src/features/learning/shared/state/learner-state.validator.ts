@@ -1,4 +1,5 @@
 import { LearnerState } from './learner-state.models';
+import { rounded } from '../progress/percentage';
 
 const STATE_KEYS = new Set([
   'schemaVersion',
@@ -88,7 +89,7 @@ function hasConsistentAttemptCounts(value: Record<string, unknown>): boolean {
     value['incorrectCount'] === incorrect &&
     value['skippedCount'] === skipped &&
     value['total'] === answers.length &&
-    value['percentage'] === (answers.length ? Math.round((correct / answers.length) * 100) : 0)
+    value['percentage'] === (answers.length ? rounded((correct / answers.length) * 100) : 0)
   );
 }
 

@@ -133,7 +133,7 @@ Acceptance: 14 packs, 103 lessons and 125 tests remain; all 44 scoped preparatio
 
 ## Data requirements
 
-- **REQ-G001-017:** The system shall store completed attempts, submitted answers, mistake status, and unfinished-session state in native IndexedDB.
+- **REQ-G001-017:** The system shall store completed attempts, submitted answers, mistake status, and unfinished-session state in native IndexedDB. Completed attempts with percentages rounded to one decimal place shall remain valid after refresh and through backup export/restore. Validation shall use the same rounding as completed-session scoring and shall continue to reject inconsistent answer counts or percentages.
 - **REQ-G001-018:** Bundled exercise content shall remain separate from mutable learner data.
 - **REQ-G001-019:** Stored records shall include schema version, content-pack version, stable exercise IDs, and timestamps needed for migration and progress statistics.
 - **REQ-G001-020:** The system shall export learner data as a versioned JSON backup without exporting executable content.

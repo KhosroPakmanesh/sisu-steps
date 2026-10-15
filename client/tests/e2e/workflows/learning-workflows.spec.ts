@@ -2048,7 +2048,7 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   );
   await expect(page.getByRole('heading', { name: 'Progress by topic' })).toBeVisible();
   await expandTopicGroups(page);
-  await expect(page.locator('.stats-topic-card')).toHaveCount(14);
+  await expect(page.locator('.stats-topic-card')).toHaveCount(22);
   await expect(page.locator('.backup-archive .clear-all-action-row')).toBeVisible();
   await expect(page.locator('.clear-all-slip')).toHaveCount(0);
   await expect(page.locator('.settings-card')).toHaveCount(0);
