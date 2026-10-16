@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Study feedback scrolling
+
+- Gently scroll to answer feedback after **Check answer** or **Show answer**, and back to the next question after **Continue**, in Study and optional lesson practice. Preserve keyboard focus, keep the forward action visible, and use immediate movement with reduced motion.
+
 ### Completed-stage persistence
 
 - Fix saved progress disappearing after refresh when a completed stage has a fractional score. Validate saved and backed-up percentages using the same one-decimal rounding as scoring, preserving current learner data and backup formats. Data already overwritten by the faulty startup reset requires an existing backup to recover.

@@ -11,6 +11,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { scrollElementIntoView } from '@/shared/browser/element-scroll.adapter';
 import { AnswerDraft } from '../../shared/answer-entry/answer-draft';
 import { answerEnterAction } from '../../shared/answer-entry/answer-enter-key.policy';
 import {
@@ -39,6 +40,7 @@ export class LessonPracticeComponent implements OnChanges {
 
   private readonly injector = inject(Injector);
   private readonly practiceCard = viewChild<ElementRef<HTMLElement>>('practiceCard');
+  private readonly feedbackCard = viewChild<ElementRef<HTMLElement>>('feedbackCard');
   private readonly wordTokenBank = viewChild<ElementRef<HTMLElement>>('wordTokenBank');
   private readonly checkAnswerButton =
     viewChild<ElementRef<HTMLButtonElement>>('checkAnswerButton');
@@ -159,17 +161,18 @@ export class LessonPracticeComponent implements OnChanges {
     afterNextRender(
       () => {
         queueMicrotask(() => {
-          if (target === 'continue') return this.continueButton()?.nativeElement.focus();
           if (target === 'complete') return this.completeAction()?.nativeElement.focus();
+          if (target === 'continue') {
+            this.continueButton()?.nativeElement.focus({ preventScroll: true });
+            scrollElementIntoView(this.feedbackCard()?.nativeElement);
+            return;
+          }
           this.practiceCard()
             ?.nativeElement.querySelector<HTMLElement>(
               'input:not(:disabled), .practice-token-bank button:not(:disabled)',
             )
-            ?.focus();
-          this.practiceCard()?.nativeElement.scrollIntoView({
-            block: 'start',
-            behavior: 'instant',
-          });
+            ?.focus({ preventScroll: true });
+          scrollElementIntoView(this.practiceCard()?.nativeElement);
         });
       },
       { injector: this.injector },

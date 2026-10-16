@@ -35,6 +35,7 @@ Use a clearly labelled action for backup download, restore, answer reveal, lesso
 - Explain that reveal records a skip, grants no score credit, and does not create or resolve a mistake.
 - Use text plus an icon/symbol for correct, incorrect, and skipped states.
 - Show the correct answer and first-principles explanation before continuing.
+- In Study and optional lesson practice, smoothly reveal feedback after **Check answer** or **Show answer**, keeping the focused forward action visible above it. Smoothly return to the next question after **Continue** and focus its first answer control. Prevent automatic focus scrolling from competing with this movement, reserve space for the sticky header and forward action, and apply the destination immediately with reduced motion.
 
 ## Empty and error states
 

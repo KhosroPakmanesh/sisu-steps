@@ -4,6 +4,7 @@
   grid-template-columns: auto minmax(0, 1fr);
   gap: var(--space-4);
   margin-top: var(--space-6);
+  scroll-margin-top: calc(var(--header-height) + var(--control-height) + 3 * var(--space-6));
   padding: 1.2rem;
   border: 1px solid currentcolor;
   border-left-width: 0.35rem;
@@ -16,6 +17,12 @@
     var(--notebook-rule) var(--notebook-line-height)
   );
   box-shadow: 0.18rem 0.18rem 0 var(--notebook-shadow);
+}
+
+@media (width < 48rem) {
+  .feedback {
+    scroll-margin-top: calc(var(--control-height) + 3 * var(--space-6));
+  }
 }
 
 .feedback.correct {

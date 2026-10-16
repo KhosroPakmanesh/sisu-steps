@@ -1,5 +1,9 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-16 gentle answer and question scrolling
+
+Refine REQ-G001-129 in scored Study and optional lesson practice. After rendered submission/reveal feedback, retain keyboard focus on the forward action without native focus scrolling, then smoothly reveal the feedback with room for the action and sticky header. After advancement, focus the first answer control without scrolling and smoothly reveal the next question. Share the browser scrolling boundary and reduced-motion decision, retain result/completion focus and word-token navigation, and verify actual viewport positions and requested motion in browser tests at 320/768/1440 pixels. Preserve scoring, learner state, content and routes. Complete the client gate and affected keyboard/scroll browser workflows, record actual evidence under VAL-G001-087 and update the changelog. Do not commit or deploy without a new request.
+
 ## 2026-10-15 completed-stage persistence correction
 
 Correct REQ-G001-017 by aligning current-state percentage validation with the existing one-decimal scoring policy. A fractional score currently causes IndexedDB loading and backup parsing to reject otherwise valid current-format data. Preserve the database identity, learner-state and backup shapes, content versions, scoring and strict incompatible-data policy. Add fractional-score acceptance and inconsistent-score rejection checks, then reproduce and verify completed-stage refresh and backup restoration using native browser storage. Complete the client gate and affected browser workflows; record actual evidence under VAL-G001-004 and update the changelog. No migration or data reset is required by this correction; data already overwritten by the faulty startup reset cannot be reconstructed without a backup.

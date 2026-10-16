@@ -1,5 +1,13 @@
 # G001 validation
 
+## Gentle answer and question scrolling — 2026-10-16
+
+**REQ-G001-129 / VAL-G001-087:** browser coverage checks both **Check answer** and **Show answer** in scored Study and optional lesson practice. Feedback, its correct answer and the focused forward action remain within the viewport below any sticky header; **Continue** restores the next prompt and first-control focus. Native scrolling requests use `smooth` normally and `instant` with reduced motion, without delaying interaction.
+
+The 30 affected Chromium cases pass across 320/768/1440 pixels after the focused rerun. The initial run passes 25; five new smooth-motion assertions fail because rotated paper produces intersection ratios such as 0.999999 despite visible content. Replace the exact-1 intersection assertion with checks of all four actual viewport bounds and the sticky header, using a one-pixel geometry tolerance; the twelve focused scroll cases then pass. Existing all-response keyboard interactions, optional-practice completion/restart, the full 20-question focus/result journey and route-scroll restoration pass at every width. Phone Study/practice, tablet Study and desktop practice captures were visually inspected. Logs and six normal-motion captures remain under ignored `client/tmp/study-feedback-scroll/`. Unrelated browser coverage, native zoom, screen-reader and physical-device testing were not performed.
+
+The complete `npm --prefix client run check` gate passes under Node 24.14.0: lint/CSS, module size, reachability, architecture, formatting, both type checks, all 22 source validations, production build, **489 unit tests and 34 integration tests**. Scoring, learner-state/backup formats, content versions and routes are unchanged. No commit or deployment was made.
+
 ## Completed-stage persistence correction — 2026-10-15
 
 **REQ-G001-017 / VAL-G001-004:** the saved-state validator used whole-number rounding while completed attempts use one decimal place. Before the fix, unit checks reject valid 33.3% attempts in all three session modes and incorrectly accept 33% for one of three correct answers. A native IndexedDB browser reproduction completes the authored 21-question **Harmony in real forms** stage at 4.8%, shows one completed attempt before refresh and zero afterward. Its trace and failure context are retained under ignored `client/tmp/completed-stage-persistence/`.

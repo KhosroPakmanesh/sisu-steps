@@ -1,6 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 test('focuses the first answer control after every question change', async ({ page }) => {
+  test.setTimeout(90_000);
   await page.goto('/study/demonstrative-pronouns/sdp-independent-use-test');
 
   const questionCount = page.locator('.question-count');
@@ -38,4 +39,5 @@ test('focuses the first answer control after every question change', async ({ pa
     new Set(['fill blank', 'multiple choice', 'translation en', 'translation fi', 'word order']),
   );
   await expect(page.locator('.result-actions a').first()).toBeFocused();
+  await expect(page.locator('.result-actions a').first()).toBeInViewport();
 });

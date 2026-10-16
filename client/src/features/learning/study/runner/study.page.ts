@@ -9,6 +9,7 @@ import {
   viewChild,
 } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { scrollElementIntoView } from '@/shared/browser/element-scroll.adapter';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { learningPaths } from '../../shared/navigation/learning.paths';
 import { RouteReadiness } from '../../shared/navigation/route-readiness';
@@ -49,6 +50,7 @@ export class StudyPage implements RouteReadiness {
   private readonly textAnswer = viewChild<ElementRef<HTMLInputElement>>('textAnswer');
   private readonly answerChoice = viewChild<ElementRef<HTMLInputElement>>('answerChoice');
   private readonly questionCard = viewChild<ElementRef<HTMLElement>>('questionCard');
+  private readonly feedbackCard = viewChild<ElementRef<HTMLElement>>('feedbackCard');
   private readonly availableWordToken = viewChild<ElementRef<HTMLButtonElement>>('wordToken');
   private readonly wordTokenBank = viewChild<ElementRef<HTMLElement>>('wordTokenBank');
   private readonly checkAnswerButton =
@@ -234,12 +236,11 @@ export class StudyPage implements RouteReadiness {
       () => {
         // NgModel updates disabled controls in a microtask after the view renders.
         queueMicrotask(() => {
-          this.focusState(target);
-          if (target === 'question') {
-            this.questionCard()?.nativeElement.scrollIntoView({
-              block: 'start',
-              behavior: 'instant',
-            });
+          this.focusState(target, true);
+          if (target !== 'result') {
+            scrollElementIntoView(
+              (target === 'question' ? this.questionCard() : this.feedbackCard())?.nativeElement,
+            );
           }
         });
       },
@@ -264,8 +265,8 @@ export class StudyPage implements RouteReadiness {
     if (button instanceof HTMLButtonElement && !button.disabled) button.focus();
   }
 
-  private focusState(target: 'question' | 'continue' | 'result'): void {
-    if (target === 'continue') return this.continueButton()?.nativeElement.focus();
+  private focusState(target: 'question' | 'continue' | 'result', preventScroll = false): void {
+    if (target === 'continue') return this.continueButton()?.nativeElement.focus({ preventScroll });
     if (target === 'result') {
       this.result()?.focusPrimaryAction();
       return;
@@ -274,6 +275,6 @@ export class StudyPage implements RouteReadiness {
       this.textAnswer()?.nativeElement ??
       this.answerChoice()?.nativeElement ??
       this.availableWordToken()?.nativeElement;
-    control?.focus();
+    control?.focus({ preventScroll });
   }
 }
