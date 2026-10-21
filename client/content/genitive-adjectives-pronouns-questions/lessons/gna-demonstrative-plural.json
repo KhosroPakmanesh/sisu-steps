@@ -1,0 +1,259 @@
+{
+  "id": "gna-demonstrative-plural",
+  "version": "1.0.0",
+  "title": "Demonstratives in the plural genitive",
+  "summary": "Use näiden, noiden or niiden before a plural genitive noun: näiden talojen ovet (“the doors of these houses”).",
+  "stage": "focused",
+  "targetSkills": ["Demonstratives in the plural genitive"],
+  "prerequisiteSkills": ["Adjective agreement in the singular genitive"],
+  "introducedVocabulary": [],
+  "reusedVocabulary": [
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "ovi",
+      "english": "door",
+      "type": "word"
+    },
+    {
+      "finnish": "ikkuna",
+      "english": "window",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Use näiden, noiden or niiden before a plural genitive noun: näiden talojen ovet (“the doors of these houses”)."
+  ],
+  "sections": [
+    {
+      "title": "Meaning and pattern",
+      "paragraphs": [
+        "A demonstrative identifies which noun is meant. Its case and number agree with that noun, while its reference distinguishes near, farther away, and already mentioned.",
+        "Use nämä → näiden/näitten (“these”), nuo → noiden/noitten (“those” farther away), ne → niiden/niitten (“the/those” already mentioned). Both forms in each pair are standard.",
+        "The noun genitives and surrounding head nouns are provided. Reference cues choose among demonstratives; the genitive ending alone does not choose the reference."
+      ],
+      "keyPoints": ["Keep the reference shown in the question."]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Näiden talojen ovet.",
+      "english": "The doors of these houses.",
+      "steps": [
+        "For the reference near the speaker, use näiden/näitten. The demonstrative and talojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Noiden talojen ovet.",
+      "english": "The doors of those houses.",
+      "steps": [
+        "For the reference farther away and being pointed out, use noiden/noitten. The demonstrative and talojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Niiden talojen ovet.",
+      "english": "The doors of the houses.",
+      "steps": [
+        "For the reference already mentioned, use niiden/niitten. The demonstrative and talojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Näiden talojen ikkunat.",
+      "english": "The windows of these houses.",
+      "steps": [
+        "For the reference near the speaker, use näiden/näitten. The demonstrative and talojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Noiden autojen ikkunat.",
+      "english": "The windows of those cars.",
+      "steps": [
+        "For the reference farther away and being pointed out, use noiden/noitten. The demonstrative and autojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Niiden autojen ikkunat.",
+      "english": "The windows of the cars.",
+      "steps": [
+        "For the reference already mentioned, use niiden/niitten. The demonstrative and autojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Näiden autojen ikkunat.",
+      "english": "The windows of these cars.",
+      "steps": [
+        "For the reference near the speaker, use näiden/näitten. The demonstrative and autojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Noiden autojen ovet.",
+      "english": "The doors of those cars.",
+      "steps": [
+        "For the reference farther away and being pointed out, use noiden/noitten. The demonstrative and autojen share plural genitive case.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Keep the reference shown in the question.",
+    "Use genitive agreement on both words.",
+    "Do not confuse the genitive modifier with the head noun."
+  ],
+  "numberScope": {
+    "axis": "form",
+    "number": "plural"
+  },
+  "practiceExercises": [
+    {
+      "id": "gna-demonstrative-plural-practice-01",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “ne autojen” in: Ne autojen ikkunat. Meaning: “The windows of the cars.” Reference: already mentioned. Noun: autojen.",
+      "acceptedAnswers": ["niiden autojen", "niitten autojen"],
+      "explanation": "For the reference already mentioned, use niiden/niitten. The demonstrative and autojen share plural genitive case. Also accepted here: niitten autojen.",
+      "tags": ["genitive", "form-plural", "sentence", "lesson-practice"],
+      "requiredSkills": ["Demonstratives in the plural genitive"],
+      "vocabulary": [],
+      "targetSkill": "Demonstratives in the plural genitive",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The windows of the cars.",
+        "pattern": "Use näiden, noiden or niiden before a plural genitive noun: näiden talojen ovet (“the doors of these houses”).",
+        "parts": [
+          {
+            "finnish": "Niiden autojen",
+            "meaning": "of the cars",
+            "baseForm": "ne auto",
+            "role": "genitive target",
+            "formation": "For the reference already mentioned, use niiden/niitten. The demonstrative and autojen share plural genitive case."
+          },
+          {
+            "finnish": "ikkunat.",
+            "meaning": "windows",
+            "baseForm": "ikkuna",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["ne autojen"],
+          "category": "case-or-number",
+          "explanation": "ne autojen does not fit this genitive pattern."
+        },
+        {
+          "answers": ["niiden auto"],
+          "category": "case-or-number",
+          "explanation": "niiden auto does not fit this genitive pattern."
+        }
+      ]
+    },
+    {
+      "id": "gna-demonstrative-plural-practice-02",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “nämä autojen” in: Nämä autojen ikkunat. Meaning: “The windows of these cars.” Reference: near the speaker. Noun: autojen.",
+      "acceptedAnswers": ["näiden autojen", "näitten autojen"],
+      "explanation": "For the reference near the speaker, use näiden/näitten. The demonstrative and autojen share plural genitive case. Also accepted here: näitten autojen.",
+      "tags": ["genitive", "form-plural", "sentence", "lesson-practice"],
+      "requiredSkills": ["Demonstratives in the plural genitive"],
+      "vocabulary": [],
+      "targetSkill": "Demonstratives in the plural genitive",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The windows of these cars.",
+        "pattern": "Use näiden, noiden or niiden before a plural genitive noun: näiden talojen ovet (“the doors of these houses”).",
+        "parts": [
+          {
+            "finnish": "Näiden autojen",
+            "meaning": "of these cars",
+            "baseForm": "nämä auto",
+            "role": "genitive target",
+            "formation": "For the reference near the speaker, use näiden/näitten. The demonstrative and autojen share plural genitive case."
+          },
+          {
+            "finnish": "ikkunat.",
+            "meaning": "windows",
+            "baseForm": "ikkuna",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["nämä autojen"],
+          "category": "case-or-number",
+          "explanation": "nämä autojen does not fit this genitive pattern."
+        },
+        {
+          "answers": ["näiden auto"],
+          "category": "case-or-number",
+          "explanation": "näiden auto does not fit this genitive pattern."
+        }
+      ]
+    },
+    {
+      "id": "gna-demonstrative-plural-practice-03",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “nuo autojen” in: Nuo autojen ovet. Meaning: “The doors of those cars.” Reference: farther away and being pointed out. Noun: autojen.",
+      "acceptedAnswers": ["noiden autojen", "noitten autojen"],
+      "explanation": "For the reference farther away and being pointed out, use noiden/noitten. The demonstrative and autojen share plural genitive case. Also accepted here: noitten autojen.",
+      "tags": ["genitive", "form-plural", "sentence", "lesson-practice"],
+      "requiredSkills": ["Demonstratives in the plural genitive"],
+      "vocabulary": [],
+      "targetSkill": "Demonstratives in the plural genitive",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The doors of those cars.",
+        "pattern": "Use näiden, noiden or niiden before a plural genitive noun: näiden talojen ovet (“the doors of these houses”).",
+        "parts": [
+          {
+            "finnish": "Noiden autojen",
+            "meaning": "of those cars",
+            "baseForm": "nuo auto",
+            "role": "genitive target",
+            "formation": "For the reference farther away and being pointed out, use noiden/noitten. The demonstrative and autojen share plural genitive case."
+          },
+          {
+            "finnish": "ovet.",
+            "meaning": "doors",
+            "baseForm": "ovi",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["nuo autojen"],
+          "category": "case-or-number",
+          "explanation": "nuo autojen does not fit this genitive pattern."
+        },
+        {
+          "answers": ["noiden auto"],
+          "category": "case-or-number",
+          "explanation": "noiden auto does not fit this genitive pattern."
+        }
+      ]
+    }
+  ]
+}

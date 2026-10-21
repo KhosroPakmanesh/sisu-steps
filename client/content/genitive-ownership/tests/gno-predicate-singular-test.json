@@ -1,0 +1,999 @@
+{
+  "id": "gno-predicate-singular-test",
+  "title": "Ownership after olla: one owner",
+  "focus": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+  "stage": "focused",
+  "targetSkills": ["Ownership after olla: one owner"],
+  "prerequisiteSkills": ["Singular genitive before a noun"],
+  "lessonIds": ["gno-predicate-singular"],
+  "numberScope": {
+    "axis": "form",
+    "number": "singular"
+  },
+  "exercises": [
+    {
+      "id": "gno-predicate-singular-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The book is Anna's.” Kirja on ____. Use Anna.",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "After on, Annan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Anna's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Annan.",
+            "meaning": "Anna's",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "After on, Annan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["Annan", "Anna", "Annat"],
+      "optionFeedback": {
+        "Annan": "After on, Annan names one owner. The singular thing owned keeps on.",
+        "Anna": "Anna does not express the required singular genitive relationship.",
+        "Annat": "Annat does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-06"
+    },
+    {
+      "id": "gno-predicate-singular-produce-01",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The book is Anna's.” Kirja on ____. Use Anna.",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "After on, Annan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Anna's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Annan.",
+            "meaning": "Anna's",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "After on, Annan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Anna"],
+          "category": "case-or-number",
+          "explanation": "Anna does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Annat"],
+          "category": "case-or-number",
+          "explanation": "Annat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-06"
+    },
+    {
+      "id": "gno-predicate-singular-interpret-01",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kirja on Annan.” into English.",
+      "acceptedAnswers": [
+        "The book is Anna's.",
+        "The book belongs to Anna.",
+        "A book is Anna's.",
+        "A book belongs to Anna."
+      ],
+      "explanation": "After on, Annan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": ["kirja", "olla", "Anna"],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Anna's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Annan.",
+            "meaning": "Anna's",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "After on, Annan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-predicate-singular-interpret-03"
+    },
+    {
+      "id": "gno-predicate-singular-choice-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The book is Liisa's.” Kirja on ____. Use Liisa.",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "After on, Liisan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Liisa's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Liisan.",
+            "meaning": "Liisa's",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "After on, Liisan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["Liisa", "Liisat", "Liisan"],
+      "optionFeedback": {
+        "Liisa": "Liisa does not express the required singular genitive relationship.",
+        "Liisat": "Liisat does not express the required singular genitive relationship.",
+        "Liisan": "After on, Liisan names one owner. The singular thing owned keeps on."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-05"
+    },
+    {
+      "id": "gno-predicate-singular-produce-02",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The book is Liisa's.” Kirja on ____. Use Liisa.",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "After on, Liisan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Liisa's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Liisan.",
+            "meaning": "Liisa's",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "After on, Liisan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Liisa"],
+          "category": "case-or-number",
+          "explanation": "Liisa does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Liisat"],
+          "category": "case-or-number",
+          "explanation": "Liisat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-05"
+    },
+    {
+      "id": "gno-predicate-singular-interpret-02",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kirja on Liisan.” into English.",
+      "acceptedAnswers": [
+        "The book is Liisa's.",
+        "The book belongs to Liisa.",
+        "A book is Liisa's.",
+        "A book belongs to Liisa."
+      ],
+      "explanation": "After on, Liisan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": ["kirja", "olla", "Liisa"],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Liisa's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Liisan.",
+            "meaning": "Liisa's",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "After on, Liisan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-predicate-singular-interpret-04"
+    },
+    {
+      "id": "gno-predicate-singular-choice-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The book is the child's.” Kirja on ____. Use lapsi.",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "After on, lapsen names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the child's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "lapsen.",
+            "meaning": "the child's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "After on, lapsen names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["lapsit", "lapsen", "lapsi"],
+      "optionFeedback": {
+        "lapsit": "lapsit does not express the required singular genitive relationship.",
+        "lapsen": "After on, lapsen names one owner. The singular thing owned keeps on.",
+        "lapsi": "lapsi does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-08"
+    },
+    {
+      "id": "gno-predicate-singular-produce-03",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The book is the child's.” Kirja on ____. Use lapsi.",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "After on, lapsen names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the child's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "lapsen.",
+            "meaning": "the child's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "After on, lapsen names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["lapsi"],
+          "category": "case-or-number",
+          "explanation": "lapsi does not fit this genitive pattern."
+        },
+        {
+          "answers": ["lapsit"],
+          "category": "case-or-number",
+          "explanation": "lapsit does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-08"
+    },
+    {
+      "id": "gno-predicate-singular-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kirja on lapsen.” into English.",
+      "acceptedAnswers": [
+        "The book is the child's.",
+        "The book belongs to the child.",
+        "A book is the child's.",
+        "A book belongs to the child."
+      ],
+      "explanation": "After on, lapsen names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": ["kirja", "olla", "lapsi"],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the child's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "lapsen.",
+            "meaning": "the child's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "After on, lapsen names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-predicate-singular-interpret-01"
+    },
+    {
+      "id": "gno-predicate-singular-choice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The book is the teacher's.” Kirja on ____. Use opettaja.",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "After on, opettajan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the teacher's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opettajan.",
+            "meaning": "the teacher's",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "After on, opettajan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["opettajan", "opettaja", "opettajat"],
+      "optionFeedback": {
+        "opettajan": "After on, opettajan names one owner. The singular thing owned keeps on.",
+        "opettaja": "opettaja does not express the required singular genitive relationship.",
+        "opettajat": "opettajat does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-07"
+    },
+    {
+      "id": "gno-predicate-singular-produce-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The book is the teacher's.” Kirja on ____. Use opettaja.",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "After on, opettajan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the teacher's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opettajan.",
+            "meaning": "the teacher's",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "After on, opettajan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["opettaja"],
+          "category": "case-or-number",
+          "explanation": "opettaja does not fit this genitive pattern."
+        },
+        {
+          "answers": ["opettajat"],
+          "category": "case-or-number",
+          "explanation": "opettajat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-07"
+    },
+    {
+      "id": "gno-predicate-singular-interpret-04",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kirja on opettajan.” into English.",
+      "acceptedAnswers": [
+        "The book is the teacher's.",
+        "The book belongs to the teacher.",
+        "A book is the teacher's.",
+        "A book belongs to the teacher."
+      ],
+      "explanation": "After on, opettajan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": ["kirja", "olla", "opettaja"],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the teacher's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opettajan.",
+            "meaning": "the teacher's",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "After on, opettajan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-predicate-singular-interpret-02"
+    },
+    {
+      "id": "gno-predicate-singular-choice-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The car is Anna's.” Auto on ____. Use Anna.",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "After on, Annan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is Anna's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Annan.",
+            "meaning": "Anna's",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "After on, Annan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["Anna", "Annat", "Annan"],
+      "optionFeedback": {
+        "Anna": "Anna does not express the required singular genitive relationship.",
+        "Annat": "Annat does not express the required singular genitive relationship.",
+        "Annan": "After on, Annan names one owner. The singular thing owned keeps on."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-02"
+    },
+    {
+      "id": "gno-predicate-singular-produce-05",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The car is Anna's.” Auto on ____. Use Anna.",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "After on, Annan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is Anna's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Annan.",
+            "meaning": "Anna's",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "After on, Annan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Anna"],
+          "category": "case-or-number",
+          "explanation": "Anna does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Annat"],
+          "category": "case-or-number",
+          "explanation": "Annat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-02"
+    },
+    {
+      "id": "gno-predicate-singular-choice-06",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The car is Liisa's.” Auto on ____. Use Liisa.",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "After on, Liisan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is Liisa's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Liisan.",
+            "meaning": "Liisa's",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "After on, Liisan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["Liisat", "Liisan", "Liisa"],
+      "optionFeedback": {
+        "Liisat": "Liisat does not express the required singular genitive relationship.",
+        "Liisan": "After on, Liisan names one owner. The singular thing owned keeps on.",
+        "Liisa": "Liisa does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-01"
+    },
+    {
+      "id": "gno-predicate-singular-produce-06",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The car is Liisa's.” Auto on ____. Use Liisa.",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "After on, Liisan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is Liisa's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Liisan.",
+            "meaning": "Liisa's",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "After on, Liisan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Liisa"],
+          "category": "case-or-number",
+          "explanation": "Liisa does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Liisat"],
+          "category": "case-or-number",
+          "explanation": "Liisat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-01"
+    },
+    {
+      "id": "gno-predicate-singular-choice-07",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The car is the child's.” Auto on ____. Use lapsi.",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "After on, lapsen names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is the child's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "lapsen.",
+            "meaning": "the child's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "After on, lapsen names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["lapsen", "lapsi", "lapsit"],
+      "optionFeedback": {
+        "lapsen": "After on, lapsen names one owner. The singular thing owned keeps on.",
+        "lapsi": "lapsi does not express the required singular genitive relationship.",
+        "lapsit": "lapsit does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-04"
+    },
+    {
+      "id": "gno-predicate-singular-produce-07",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The car is the child's.” Auto on ____. Use lapsi.",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "After on, lapsen names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is the child's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "lapsen.",
+            "meaning": "the child's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "After on, lapsen names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["lapsi"],
+          "category": "case-or-number",
+          "explanation": "lapsi does not fit this genitive pattern."
+        },
+        {
+          "answers": ["lapsit"],
+          "category": "case-or-number",
+          "explanation": "lapsit does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-04"
+    },
+    {
+      "id": "gno-predicate-singular-choice-08",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The car is the teacher's.” Auto on ____. Use opettaja.",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "After on, opettajan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is the teacher's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opettajan.",
+            "meaning": "the teacher's",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "After on, opettajan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["opettaja", "opettajat", "opettajan"],
+      "optionFeedback": {
+        "opettaja": "opettaja does not express the required singular genitive relationship.",
+        "opettajat": "opettajat does not express the required singular genitive relationship.",
+        "opettajan": "After on, opettajan names one owner. The singular thing owned keeps on."
+      },
+      "parallelExerciseId": "gno-predicate-singular-choice-03"
+    },
+    {
+      "id": "gno-predicate-singular-produce-08",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “The car is the teacher's.” Auto on ____. Use opettaja.",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "After on, opettajan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The car is the teacher's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Auto",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opettajan.",
+            "meaning": "the teacher's",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "After on, opettajan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["opettaja"],
+          "category": "case-or-number",
+          "explanation": "opettaja does not fit this genitive pattern."
+        },
+        {
+          "answers": ["opettajat"],
+          "category": "case-or-number",
+          "explanation": "opettajat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-produce-03"
+    }
+  ]
+}

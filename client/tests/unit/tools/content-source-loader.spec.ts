@@ -338,6 +338,20 @@ describe('pack-owned content source loader', () => {
           'partitive-pronouns-questions',
         ],
       },
+      {
+        id: 'genitive',
+        title: 'Genitive',
+        packs: [
+          'genitive-forms',
+          'genitive-forms-singular-families',
+          'genitive-forms-plural-jen-ien',
+          'genitive-forms-plural-iden',
+          'genitive-forms-plural-ten',
+          'genitive-ownership',
+          'genitive-adjectives-pronouns-questions',
+          'genitive-constructions',
+        ],
+      },
     ]);
     expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
       '1.2.0',

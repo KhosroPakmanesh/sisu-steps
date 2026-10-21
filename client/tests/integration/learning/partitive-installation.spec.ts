@@ -9,7 +9,9 @@ import { loadContentSource } from '../../../tools/content-source-loader.mjs';
 describe('installing the partitive family', () => {
   it('preserves all fourteen existing packs’ study data and backup data', async () => {
     const packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
-    const previous = packs.filter((p) => !p.id.startsWith('partitive-'));
+    const previous = packs.filter(
+      (p) => !p.id.startsWith('partitive-') && !p.id.startsWith('genitive-'),
+    );
     expect(previous).toHaveLength(14);
     const state = createEmptyLearnerState(
       Object.fromEntries(previous.map((p) => [p.id, p.version])),

@@ -1,0 +1,998 @@
+{
+  "id": "gna-which-singular-test",
+  "title": "Minkä with a singular genitive noun",
+  "focus": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+  "stage": "focused",
+  "targetSkills": ["Minkä with a singular genitive noun"],
+  "prerequisiteSkills": [
+    "Adjective agreement in the singular genitive",
+    "Kenen: asking about one owner"
+  ],
+  "lessonIds": ["gna-which-singular"],
+  "numberScope": {
+    "axis": "form",
+    "number": "singular"
+  },
+  "exercises": [
+    {
+      "id": "gna-which-singular-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which country's flag is this?” ____ tämä on? Use maa (singular); lippu.",
+      "acceptedAnswers": ["Minkä maan lippu"],
+      "explanation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which country's flag is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä maan lippu",
+            "meaning": "which country's flag",
+            "baseForm": "mikä maa lippu",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Minkä maan lippu", "Mikä maan lippu", "Minkä maa lippu"],
+      "optionFeedback": {
+        "Minkä maan lippu": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form.",
+        "Mikä maan lippu": "Mikä maan lippu does not express the required singular genitive relationship.",
+        "Minkä maa lippu": "Minkä maa lippu does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-06"
+    },
+    {
+      "id": "gna-which-singular-produce-01",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which country's flag is this?” ____ tämä on? Use maa (singular); lippu.",
+      "acceptedAnswers": ["Minkä maan lippu"],
+      "explanation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which country's flag is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä maan lippu",
+            "meaning": "which country's flag",
+            "baseForm": "mikä maa lippu",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä maan lippu"],
+          "category": "case-or-number",
+          "explanation": "Mikä maan lippu does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä maa lippu"],
+          "category": "case-or-number",
+          "explanation": "Minkä maa lippu does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-06"
+    },
+    {
+      "id": "gna-which-singular-interpret-01",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Minkä maan lippu tämä on?” into English.",
+      "acceptedAnswers": [
+        "Which country's flag is this?",
+        "The flag of which country is this?",
+        "A flag of which country is this?"
+      ],
+      "explanation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": ["maa", "lippu", "olla"],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which country's flag is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä maan lippu",
+            "meaning": "which country's flag",
+            "baseForm": "mikä maa lippu",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-which-singular-interpret-03"
+    },
+    {
+      "id": "gna-which-singular-choice-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which school's door is this?” ____ tämä on? Use koulu (singular); ovi.",
+      "acceptedAnswers": ["Minkä koulun ovi"],
+      "explanation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which school's door is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä koulun ovi",
+            "meaning": "which school's door",
+            "baseForm": "mikä koulu ovi",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Mikä koulun ovi", "Minkä koulu ovi", "Minkä koulun ovi"],
+      "optionFeedback": {
+        "Mikä koulun ovi": "Mikä koulun ovi does not express the required singular genitive relationship.",
+        "Minkä koulu ovi": "Minkä koulu ovi does not express the required singular genitive relationship.",
+        "Minkä koulun ovi": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-05"
+    },
+    {
+      "id": "gna-which-singular-produce-02",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which school's door is this?” ____ tämä on? Use koulu (singular); ovi.",
+      "acceptedAnswers": ["Minkä koulun ovi"],
+      "explanation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which school's door is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä koulun ovi",
+            "meaning": "which school's door",
+            "baseForm": "mikä koulu ovi",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä koulun ovi"],
+          "category": "case-or-number",
+          "explanation": "Mikä koulun ovi does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä koulu ovi"],
+          "category": "case-or-number",
+          "explanation": "Minkä koulu ovi does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-05"
+    },
+    {
+      "id": "gna-which-singular-interpret-02",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Minkä koulun ovi tämä on?” into English.",
+      "acceptedAnswers": [
+        "Which school's door is this?",
+        "The door of which school is this?",
+        "A door of which school is this?"
+      ],
+      "explanation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": ["koulu", "ovi", "olla"],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which school's door is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä koulun ovi",
+            "meaning": "which school's door",
+            "baseForm": "mikä koulu ovi",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-which-singular-interpret-04"
+    },
+    {
+      "id": "gna-which-singular-choice-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which house's window is this?” ____ tämä on? Use talo (singular); ikkuna.",
+      "acceptedAnswers": ["Minkä talon ikkuna"],
+      "explanation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which house's window is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä talon ikkuna",
+            "meaning": "which house's window",
+            "baseForm": "mikä talo ikkuna",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Minkä talo ikkuna", "Minkä talon ikkuna", "Mikä talon ikkuna"],
+      "optionFeedback": {
+        "Minkä talo ikkuna": "Minkä talo ikkuna does not express the required singular genitive relationship.",
+        "Minkä talon ikkuna": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form.",
+        "Mikä talon ikkuna": "Mikä talon ikkuna does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-08"
+    },
+    {
+      "id": "gna-which-singular-produce-03",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which house's window is this?” ____ tämä on? Use talo (singular); ikkuna.",
+      "acceptedAnswers": ["Minkä talon ikkuna"],
+      "explanation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which house's window is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä talon ikkuna",
+            "meaning": "which house's window",
+            "baseForm": "mikä talo ikkuna",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä talon ikkuna"],
+          "category": "case-or-number",
+          "explanation": "Mikä talon ikkuna does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä talo ikkuna"],
+          "category": "case-or-number",
+          "explanation": "Minkä talo ikkuna does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-08"
+    },
+    {
+      "id": "gna-which-singular-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Minkä talon ikkuna tämä on?” into English.",
+      "acceptedAnswers": [
+        "Which house's window is this?",
+        "The window of which house is this?",
+        "A window of which house is this?"
+      ],
+      "explanation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": ["talo", "ikkuna", "olla"],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which house's window is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä talon ikkuna",
+            "meaning": "which house's window",
+            "baseForm": "mikä talo ikkuna",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-which-singular-interpret-01"
+    },
+    {
+      "id": "gna-which-singular-choice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which car's key is this?” ____ tämä on? Use auto (singular); avain.",
+      "acceptedAnswers": ["Minkä auton avain"],
+      "explanation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which car's key is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä auton avain",
+            "meaning": "which car's key",
+            "baseForm": "mikä auto avain",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Minkä auton avain", "Mikä auton avain", "Minkä auto avain"],
+      "optionFeedback": {
+        "Minkä auton avain": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form.",
+        "Mikä auton avain": "Mikä auton avain does not express the required singular genitive relationship.",
+        "Minkä auto avain": "Minkä auto avain does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-07"
+    },
+    {
+      "id": "gna-which-singular-produce-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which car's key is this?” ____ tämä on? Use auto (singular); avain.",
+      "acceptedAnswers": ["Minkä auton avain"],
+      "explanation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which car's key is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä auton avain",
+            "meaning": "which car's key",
+            "baseForm": "mikä auto avain",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä auton avain"],
+          "category": "case-or-number",
+          "explanation": "Mikä auton avain does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä auto avain"],
+          "category": "case-or-number",
+          "explanation": "Minkä auto avain does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-07"
+    },
+    {
+      "id": "gna-which-singular-interpret-04",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Minkä auton avain tämä on?” into English.",
+      "acceptedAnswers": [
+        "Which car's key is this?",
+        "The key of which car is this?",
+        "A key of which car is this?"
+      ],
+      "explanation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": ["auto", "avain", "olla"],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which car's key is this?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä auton avain",
+            "meaning": "which car's key",
+            "baseForm": "mikä auto avain",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-which-singular-interpret-02"
+    },
+    {
+      "id": "gna-which-singular-choice-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which country's flag is here?” ____ on tässä? Use maa (singular); lippu.",
+      "acceptedAnswers": ["Minkä maan lippu"],
+      "explanation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which country's flag is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä maan lippu",
+            "meaning": "which country's flag",
+            "baseForm": "mikä maa lippu",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Mikä maan lippu", "Minkä maa lippu", "Minkä maan lippu"],
+      "optionFeedback": {
+        "Mikä maan lippu": "Mikä maan lippu does not express the required singular genitive relationship.",
+        "Minkä maa lippu": "Minkä maa lippu does not express the required singular genitive relationship.",
+        "Minkä maan lippu": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-02"
+    },
+    {
+      "id": "gna-which-singular-produce-05",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which country's flag is here?” ____ on tässä? Use maa (singular); lippu.",
+      "acceptedAnswers": ["Minkä maan lippu"],
+      "explanation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which country's flag is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä maan lippu",
+            "meaning": "which country's flag",
+            "baseForm": "mikä maa lippu",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun maa must be in the singular genitive: maan. The head lippu stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä maan lippu"],
+          "category": "case-or-number",
+          "explanation": "Mikä maan lippu does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä maa lippu"],
+          "category": "case-or-number",
+          "explanation": "Minkä maa lippu does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-02"
+    },
+    {
+      "id": "gna-which-singular-choice-06",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which school's door is here?” ____ on tässä? Use koulu (singular); ovi.",
+      "acceptedAnswers": ["Minkä koulun ovi"],
+      "explanation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which school's door is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä koulun ovi",
+            "meaning": "which school's door",
+            "baseForm": "mikä koulu ovi",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Minkä koulu ovi", "Minkä koulun ovi", "Mikä koulun ovi"],
+      "optionFeedback": {
+        "Minkä koulu ovi": "Minkä koulu ovi does not express the required singular genitive relationship.",
+        "Minkä koulun ovi": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form.",
+        "Mikä koulun ovi": "Mikä koulun ovi does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-01"
+    },
+    {
+      "id": "gna-which-singular-produce-06",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which school's door is here?” ____ on tässä? Use koulu (singular); ovi.",
+      "acceptedAnswers": ["Minkä koulun ovi"],
+      "explanation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which school's door is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä koulun ovi",
+            "meaning": "which school's door",
+            "baseForm": "mikä koulu ovi",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun koulu must be in the singular genitive: koulun. The head ovi stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä koulun ovi"],
+          "category": "case-or-number",
+          "explanation": "Mikä koulun ovi does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä koulu ovi"],
+          "category": "case-or-number",
+          "explanation": "Minkä koulu ovi does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-01"
+    },
+    {
+      "id": "gna-which-singular-choice-07",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which house's window is here?” ____ on tässä? Use talo (singular); ikkuna.",
+      "acceptedAnswers": ["Minkä talon ikkuna"],
+      "explanation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which house's window is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä talon ikkuna",
+            "meaning": "which house's window",
+            "baseForm": "mikä talo ikkuna",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Minkä talon ikkuna", "Mikä talon ikkuna", "Minkä talo ikkuna"],
+      "optionFeedback": {
+        "Minkä talon ikkuna": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form.",
+        "Mikä talon ikkuna": "Mikä talon ikkuna does not express the required singular genitive relationship.",
+        "Minkä talo ikkuna": "Minkä talo ikkuna does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-04"
+    },
+    {
+      "id": "gna-which-singular-produce-07",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which house's window is here?” ____ on tässä? Use talo (singular); ikkuna.",
+      "acceptedAnswers": ["Minkä talon ikkuna"],
+      "explanation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which house's window is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä talon ikkuna",
+            "meaning": "which house's window",
+            "baseForm": "mikä talo ikkuna",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun talo must be in the singular genitive: talon. The head ikkuna stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä talon ikkuna"],
+          "category": "case-or-number",
+          "explanation": "Mikä talon ikkuna does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä talo ikkuna"],
+          "category": "case-or-number",
+          "explanation": "Minkä talo ikkuna does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-04"
+    },
+    {
+      "id": "gna-which-singular-choice-08",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Which car's key is here?” ____ on tässä? Use auto (singular); avain.",
+      "acceptedAnswers": ["Minkä auton avain"],
+      "explanation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which car's key is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä auton avain",
+            "meaning": "which car's key",
+            "baseForm": "mikä auto avain",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Mikä auton avain", "Minkä auto avain", "Minkä auton avain"],
+      "optionFeedback": {
+        "Mikä auton avain": "Mikä auton avain does not express the required singular genitive relationship.",
+        "Minkä auto avain": "Minkä auto avain does not express the required singular genitive relationship.",
+        "Minkä auton avain": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form."
+      },
+      "parallelExerciseId": "gna-which-singular-choice-03"
+    },
+    {
+      "id": "gna-which-singular-produce-08",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Which car's key is here?” ____ on tässä? Use auto (singular); avain.",
+      "acceptedAnswers": ["Minkä auton avain"],
+      "explanation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Minkä with a singular genitive noun"],
+      "vocabulary": [],
+      "targetSkill": "Minkä with a singular genitive noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Which car's key is here?",
+        "pattern": "Use minkä with a singular genitive noun: Minkä maan lippu tämä on? (“Which country's flag is this?”).",
+        "parts": [
+          {
+            "finnish": "Minkä auton avain",
+            "meaning": "which car's key",
+            "baseForm": "mikä auto avain",
+            "role": "genitive target",
+            "formation": "Minkä stays the same. The noun auto must be in the singular genitive: auton. The head avain stays in its supplied form."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "tässä?",
+            "meaning": "here",
+            "baseForm": "tässä",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä auton avain"],
+          "category": "case-or-number",
+          "explanation": "Mikä auton avain does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Minkä auto avain"],
+          "category": "case-or-number",
+          "explanation": "Minkä auto avain does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-which-singular-produce-03"
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 # Content assessment index
 
+The [2026-10-20–21 Genitive family](genitive-family.md) records the eight-pack,
+42-lesson blueprint, level boundaries and completed grading/rendered assessment.
+Both the pre-authoring and final dispositions are approved with limitations; read
+their separate dated evidence and the plural-level scope.
+
 The [2026-10-14 Partitive expansion](partitive-expansion.md) adds nineteen form preparations and one plural adjective-description preparation, with paired word-family teaching, coherent prerequisites, expanded Reviews and two scoped pack-version resets. Read its actual pre-authoring and final evidence alongside the original family assessment.
 
 The [2026-10-11 partitive family](partitive-family.md) adds five beginner packs with 30 lessons, 808 scored questions and 90 optional questions. It preserves the previous fourteen packs and their compatible progress; its final disposition is recorded separately from the pre-authoring approval.
@@ -11,6 +16,15 @@ These records retain dated decisions and evidence, not a continuously updated co
 The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records the complete 103-test review, current corrections, validation and limitations. It supersedes the incomplete whole-expansion disposition of the [selected-revision record](focused-test-minimum.md#selected-independent-audit-revisions--2026-10-07) for the present corpus; dated earlier results remain evidence of their original scope.
 
 ## Installed-pack entry records
+
+- [genitive-adjectives-pronouns-questions](genitive-adjectives-pronouns-questions.md)
+- [genitive-constructions](genitive-constructions.md)
+- [genitive-forms](genitive-forms.md)
+- [genitive-forms-plural-iden](genitive-forms-plural-iden.md)
+- [genitive-forms-plural-jen-ien](genitive-forms-plural-jen-ien.md)
+- [genitive-forms-plural-ten](genitive-forms-plural-ten.md)
+- [genitive-forms-singular-families](genitive-forms-singular-families.md)
+- [genitive-ownership](genitive-ownership.md)
 
 The [2026-10-14 four-pack Forms split](partitive-forms-split.md) governs the user-approved 4/8/9/6 grouping, local vocabulary/prerequisite ownership, preserved question inventory and scoped compatibility consequences. Read it alongside the original Forms and expansion records; their earlier single-pack inventories remain dated evidence.
 

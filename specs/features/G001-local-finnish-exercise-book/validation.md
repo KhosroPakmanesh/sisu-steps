@@ -1,5 +1,36 @@
 # G001 validation
 
+## Genitive pack family — 2026-10-20
+
+**VAL-G001-113 / REQ-G001-154:** Validate all eight new packs and the exact
+42-lesson coverage blueprint, 1,104 scored and 126 optional items, independently
+matching number scopes, local prerequisites, vocabulary provenance and recall,
+standard alternatives and reciprocal mastery partners. Reject malformed content
+at source and runtime boundaries. Grade every answer, distractor and diagnostic;
+verify unchanged installed content and compatible state/backup alignment. Render
+the new lessons, examples, vocabulary, optional practice and scored feedback at
+320/768/1440 pixels; check catalog/reference integration, keyboard, reload and
+optional isolation. Complete the client gate.
+
+Final verification, **2026-10-21**: the eight new `1.0.0` packs contain 42 lessons,
+42 Focused tests, eight Reviews, 1,104 scored questions and 126 optional items.
+Source/runtime validation and actual grading cover 1,845 accepted answers, 1,017
+choices and 954 diagnostic answers. All 30 installed sources validate; lint/CSS,
+module size, reachability, architecture, formatting, both type checks and the
+production build pass. The full 512-unit/35-integration suite passes with temporary
+two-worker Vitest configuration after two default-concurrency catalog-I/O timeouts.
+
+Responsive coverage completes all 3,312 scored and 378 optional submissions and
+126 lesson preparations across 320/768/1440 pixels. The initial browser run passes
+77/78 cases; the one phone startup timeout passes when the complete 188-question
+Constructions journey is rerun alone. All 15 final diagnostic, plural-alternative,
+feedback-duplication and existing-family catalog cases pass. Ninety distinct
+successful affected browser scenarios are covered after the focused rerun.
+Representative captures were visually inspected. The [final assessment](../../content-assessments/genitive-family.md#final-assessment-and-technical-evidence)
+records the exact inventories, paths, corrections and **approved with limitations**
+disposition. Existing 306 source files and all 22 previous packs' compatible state
+and backups are preserved. No storage reset, commit or publication occurs.
+
 ## Gentle answer and question scrolling — 2026-10-16
 
 **REQ-G001-129 / VAL-G001-087:** browser coverage checks both **Check answer** and **Show answer** in scored Study and optional lesson practice. Feedback, its correct answer and the focused forward action remain within the viewport below any sticky header; **Continue** restores the next prompt and first-control focus. Native scrolling requests use `smooth` normally and `instant` with reduced motion, without delaying interaction.

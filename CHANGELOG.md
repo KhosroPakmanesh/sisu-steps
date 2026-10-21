@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+### Genitive pack family
+
+- Add a Genitive topic with eight packs, 42 lessons, 42 Focused tests, eight cumulative Reviews, 1,104 scored questions and 126 optional practice items. Follow the Partitive lesson presentation, with singular stems, selected plural patterns and standard alternatives, ownership, agreement, questions, postpositions, necessity and a bounded singular-object introduction.
+- Label the singular formation packs `0 - A1.3`, the systematic plural formation packs `A1.3 - A2.2`, and the mixed usage packs `0 - A2.2`. These are instructional estimates; the complete plural curriculum extends beyond essential A1.3 coverage.
+- Validate the new family at source and runtime boundaries, including accepted form alternatives, grammatical number, preparation ownership and translated-sentence vocabulary. Preserve all 22 existing packs, their versions and compatible learner progress; no storage change or reset is required.
+
 ### Study feedback scrolling
 
 - Gently scroll to answer feedback after **Check answer** or **Show answer**, and back to the next question after **Continue**, in Study and optional lesson practice. Preserve keyboard focus, keep the forward action visible, and use immediate movement with reduced motion.

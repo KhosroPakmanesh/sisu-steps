@@ -7,7 +7,9 @@ describe('consolidated authored answer contracts', () => {
   let packs: TopicPack[];
   beforeAll(async () => {
     const installed = (await loadContentSource('content')).packs as unknown as TopicPack[];
-    packs = installed.filter((pack) => !pack.id.startsWith('partitive-'));
+    packs = installed.filter(
+      (pack) => !pack.id.startsWith('partitive-') && !pack.id.startsWith('genitive-'),
+    );
   });
 
   it('grades every retained model and alternative and rejects every authored diagnostic', () => {

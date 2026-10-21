@@ -1,5 +1,30 @@
 # G001 requirements
 
+## Genitive pack family — 2026-10-20
+
+- **REQ-G001-154:** Add the user-approved eight-pack Genitive group with 42 focused
+  lessons and matching tests, followed by one Review per pack. The exact scope,
+  order, levels, question counts, prerequisites and limitations belong to the
+  [Genitive assessment](../../content-assessments/genitive-family.md).
+- Author standard written Finnish in pack-owned JSON, following the Partitive
+  lesson style and canonical content-authoring policy. Provide 936 Focused and
+  168 Review questions, plus 126 optional practice items. Each Focused test has
+  at least 20 distinct meaningful demands and independently matching preparation.
+  Accept common standard alternatives, supply non-target forms and complete
+  meanings, and keep vocabulary ownership and sentence explanations explicit.
+- Use `0 - A1.3` for the two singular Forms packs, `A1.3 - A2.2` for the three
+  plural Forms packs, and `0 - A2.2` for the three mixed usage packs. These are
+  instructional estimates; do not claim complete CEFR proficiency. Preserve the
+  user's formation-first pack order and paired number-specific usage lessons.
+- Start new pack and lesson versions at 1.0.0. Preserve all twenty-two existing
+  packs, versions and compatible learner data. No reset, migration, alias,
+  fallback format, server dependency or application behavior change is authorized.
+- Validate authored and runtime content boundaries, actual grading and accepted
+  alternatives, independent vocabulary inventories, reciprocal mastery partners,
+  unchanged-source preservation and rendered lessons/exercises at 320/768/1440.
+  Record actual pre-authoring and final assessments under VAL-G001-113 and update
+  the changelog. Do not commit or publish without a further user instruction.
+
 ## Four Partitive Forms packs — 2026-10-14
 
 - **REQ-G001-153:** Apply the user-approved content-only division of the expanded 27-lesson Forms pack into four consecutive packs in the existing Partitive group: `partitive-forms` (**Partitive Forms: Singular, First patterns**, four lessons), `partitive-forms-singular-families` (**Partitive Forms: Singular, -i and consonant-ending families**, eight), `partitive-forms-plural-ia-ja` (**Partitive Forms: Plural, -ia/-iä and -ja/-jä patterns**, nine), and `partitive-forms-plural-ita` (**Partitive Forms: Plural, -ita/-itä patterns**, six). The exact partition and teaching order are recorded in [the split assessment](../../content-assessments/partitive-forms-split.md). This explicit number-first choice supersedes the Forms pack's paired progression and single-pack ownership in REQ-G001-152. Preserve the existing level metadata; reassessing levels is outside the user's selected scope.

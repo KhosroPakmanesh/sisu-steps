@@ -121,7 +121,7 @@ describe('four-pack Partitive Forms content ownership', () => {
       state.learnerNotes[1],
       state.learnerNotes[3],
     ]);
-    expect(Object.keys(aligned.contentPackVersions)).toHaveLength(22);
+    expect(Object.keys(aligned.contentPackVersions)).toHaveLength(packs.length);
     expect(alignLearnerStateWithPacks(aligned, packs.map(topicPackToSummary))).toEqual(aligned);
     expect(prepareBackupState(backup(aligned), packs).state).toEqual(aligned);
     expect(state).toEqual(original);

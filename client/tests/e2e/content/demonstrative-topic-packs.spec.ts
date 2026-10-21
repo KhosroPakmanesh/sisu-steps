@@ -32,8 +32,8 @@ test('opens every demonstrative pack with its approved Focused and Review topolo
   page,
 }) => {
   await page.goto('/');
-  await expect(page.locator('.catalog-stats')).toContainText('22');
-  await expect(page.locator('.catalog-stats')).toContainText('3576');
+  await expect(page.locator('.catalog-stats')).toContainText('30');
+  await expect(page.locator('.catalog-stats')).toContainText('4680');
 
   for (const pack of packs) {
     await page.goto(`/topics/${pack.id}`);

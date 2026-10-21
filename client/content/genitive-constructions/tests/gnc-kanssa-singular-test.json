@@ -1,0 +1,979 @@
+{
+  "id": "gnc-kanssa-singular-test",
+  "title": "Kanssa with one companion",
+  "focus": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+  "stage": "focused",
+  "targetSkills": ["Kanssa with one companion"],
+  "prerequisiteSkills": ["Location postpositions with a singular genitive"],
+  "lessonIds": ["gnc-kanssa-singular"],
+  "numberScope": {
+    "axis": "form",
+    "number": "singular"
+  },
+  "exercises": [
+    {
+      "id": "gnc-kanssa-singular-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I am with Anna.” Olen ____ kanssa. Use Anna (singular).",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with Anna.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "Annan",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["Annan", "Anna", "Annat"],
+      "optionFeedback": {
+        "Annan": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+        "Anna": "Anna does not express the required singular genitive relationship.",
+        "Annat": "Annat does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-06"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-01",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I am with Anna.” Olen ____ kanssa. Use Anna (singular).",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with Anna.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "Annan",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Anna"],
+          "category": "case-or-number",
+          "explanation": "Anna does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Annat"],
+          "category": "case-or-number",
+          "explanation": "Annat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-06"
+    },
+    {
+      "id": "gnc-kanssa-singular-interpret-01",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Olen Annan kanssa.” into English.",
+      "acceptedAnswers": ["I am with Anna.", "I'm with Anna."],
+      "explanation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": ["olla", "Anna", "kanssa"],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with Anna.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "Annan",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-interpret-03"
+    },
+    {
+      "id": "gnc-kanssa-singular-choice-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I am with Liisa.” Olen ____ kanssa. Use Liisa (singular).",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with Liisa.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "Liisan",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["Liisa", "Liisat", "Liisan"],
+      "optionFeedback": {
+        "Liisa": "Liisa does not express the required singular genitive relationship.",
+        "Liisat": "Liisat does not express the required singular genitive relationship.",
+        "Liisan": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-05"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-02",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I am with Liisa.” Olen ____ kanssa. Use Liisa (singular).",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with Liisa.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "Liisan",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Liisa"],
+          "category": "case-or-number",
+          "explanation": "Liisa does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Liisat"],
+          "category": "case-or-number",
+          "explanation": "Liisat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-05"
+    },
+    {
+      "id": "gnc-kanssa-singular-interpret-02",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Olen Liisan kanssa.” into English.",
+      "acceptedAnswers": ["I am with Liisa.", "I'm with Liisa."],
+      "explanation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": ["olla", "Liisa", "kanssa"],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with Liisa.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "Liisan",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-interpret-04"
+    },
+    {
+      "id": "gnc-kanssa-singular-choice-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I am with the child.” Olen ____ kanssa. Use lapsi (singular).",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with the child.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "lapsen",
+            "meaning": "the child",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["lapsit", "lapsen", "lapsi"],
+      "optionFeedback": {
+        "lapsit": "lapsit does not express the required singular genitive relationship.",
+        "lapsen": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+        "lapsi": "lapsi does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-08"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-03",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I am with the child.” Olen ____ kanssa. Use lapsi (singular).",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with the child.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "lapsen",
+            "meaning": "the child",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["lapsi"],
+          "category": "case-or-number",
+          "explanation": "lapsi does not fit this genitive pattern."
+        },
+        {
+          "answers": ["lapsit"],
+          "category": "case-or-number",
+          "explanation": "lapsit does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-08"
+    },
+    {
+      "id": "gnc-kanssa-singular-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Olen lapsen kanssa.” into English.",
+      "acceptedAnswers": ["I am with the child.", "I'm with the child."],
+      "explanation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": ["olla", "lapsi", "kanssa"],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with the child.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "lapsen",
+            "meaning": "the child",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-interpret-01"
+    },
+    {
+      "id": "gnc-kanssa-singular-choice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I am with the teacher.” Olen ____ kanssa. Use opettaja (singular).",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with the teacher.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "opettajan",
+            "meaning": "the teacher",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["opettajan", "opettaja", "opettajat"],
+      "optionFeedback": {
+        "opettajan": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+        "opettaja": "opettaja does not express the required singular genitive relationship.",
+        "opettajat": "opettajat does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-07"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I am with the teacher.” Olen ____ kanssa. Use opettaja (singular).",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with the teacher.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "opettajan",
+            "meaning": "the teacher",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["opettaja"],
+          "category": "case-or-number",
+          "explanation": "opettaja does not fit this genitive pattern."
+        },
+        {
+          "answers": ["opettajat"],
+          "category": "case-or-number",
+          "explanation": "opettajat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-07"
+    },
+    {
+      "id": "gnc-kanssa-singular-interpret-04",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Olen opettajan kanssa.” into English.",
+      "acceptedAnswers": ["I am with the teacher.", "I'm with the teacher."],
+      "explanation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": ["olla", "opettaja", "kanssa"],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I am with the teacher.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Olen is the supplied first-person singular present form of olla; it already includes “I”."
+          },
+          {
+            "finnish": "opettajan",
+            "meaning": "the teacher",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-interpret-02"
+    },
+    {
+      "id": "gnc-kanssa-singular-choice-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I come with Anna.” Tulen ____ kanssa. Use Anna (singular).",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with Anna.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "Annan",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["Anna", "Annat", "Annan"],
+      "optionFeedback": {
+        "Anna": "Anna does not express the required singular genitive relationship.",
+        "Annat": "Annat does not express the required singular genitive relationship.",
+        "Annan": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-02"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-05",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I come with Anna.” Tulen ____ kanssa. Use Anna (singular).",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with Anna.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "Annan",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "Use Annan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Anna"],
+          "category": "case-or-number",
+          "explanation": "Anna does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Annat"],
+          "category": "case-or-number",
+          "explanation": "Annat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-02"
+    },
+    {
+      "id": "gnc-kanssa-singular-choice-06",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I come with Liisa.” Tulen ____ kanssa. Use Liisa (singular).",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with Liisa.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "Liisan",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["Liisat", "Liisan", "Liisa"],
+      "optionFeedback": {
+        "Liisat": "Liisat does not express the required singular genitive relationship.",
+        "Liisan": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+        "Liisa": "Liisa does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-01"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-06",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I come with Liisa.” Tulen ____ kanssa. Use Liisa (singular).",
+      "acceptedAnswers": ["Liisan"],
+      "explanation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with Liisa.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "Liisan",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "Use Liisan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Liisa"],
+          "category": "case-or-number",
+          "explanation": "Liisa does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Liisat"],
+          "category": "case-or-number",
+          "explanation": "Liisat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-01"
+    },
+    {
+      "id": "gnc-kanssa-singular-choice-07",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I come with the child.” Tulen ____ kanssa. Use lapsi (singular).",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with the child.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "lapsen",
+            "meaning": "the child",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["lapsen", "lapsi", "lapsit"],
+      "optionFeedback": {
+        "lapsen": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+        "lapsi": "lapsi does not express the required singular genitive relationship.",
+        "lapsit": "lapsit does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-04"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-07",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I come with the child.” Tulen ____ kanssa. Use lapsi (singular).",
+      "acceptedAnswers": ["lapsen"],
+      "explanation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with the child.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "lapsen",
+            "meaning": "the child",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "Use lapsen before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["lapsi"],
+          "category": "case-or-number",
+          "explanation": "lapsi does not fit this genitive pattern."
+        },
+        {
+          "answers": ["lapsit"],
+          "category": "case-or-number",
+          "explanation": "lapsit does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-04"
+    },
+    {
+      "id": "gnc-kanssa-singular-choice-08",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “I come with the teacher.” Tulen ____ kanssa. Use opettaja (singular).",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with the teacher.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "opettajan",
+            "meaning": "the teacher",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "options": ["opettaja", "opettajat", "opettajan"],
+      "optionFeedback": {
+        "opettaja": "opettaja does not express the required singular genitive relationship.",
+        "opettajat": "opettajat does not express the required singular genitive relationship.",
+        "opettajan": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+      },
+      "parallelExerciseId": "gnc-kanssa-singular-choice-03"
+    },
+    {
+      "id": "gnc-kanssa-singular-produce-08",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “I come with the teacher.” Tulen ____ kanssa. Use opettaja (singular).",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kanssa with one companion"],
+      "vocabulary": [],
+      "targetSkill": "Kanssa with one companion",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "I come with the teacher.",
+        "pattern": "Put a singular genitive before kanssa (“with”): Annan kanssa (“with Anna”).",
+        "parts": [
+          {
+            "finnish": "Tulen",
+            "meaning": "I come",
+            "baseForm": "tulla",
+            "role": "supporting context",
+            "formation": "Tulen is the supplied first-person singular present form of tulla; it already includes “I”."
+          },
+          {
+            "finnish": "opettajan",
+            "meaning": "the teacher",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "Use opettajan before kanssa. The companion expression is a singular genitive; the speaker remains one person."
+          },
+          {
+            "finnish": "kanssa.",
+            "meaning": "with",
+            "baseForm": "kanssa",
+            "role": "supporting context",
+            "formation": "Put kanssa after the genitive noun or name."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["opettaja"],
+          "category": "case-or-number",
+          "explanation": "opettaja does not fit this genitive pattern."
+        },
+        {
+          "answers": ["opettajat"],
+          "category": "case-or-number",
+          "explanation": "opettajat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gnc-kanssa-singular-produce-03"
+    }
+  ]
+}

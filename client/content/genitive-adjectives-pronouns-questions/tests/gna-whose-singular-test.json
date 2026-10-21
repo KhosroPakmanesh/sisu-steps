@@ -1,0 +1,979 @@
+{
+  "id": "gna-whose-singular-test",
+  "title": "Kenen: asking about one owner",
+  "focus": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+  "stage": "focused",
+  "targetSkills": ["Kenen: asking about one owner"],
+  "prerequisiteSkills": ["Adjective agreement in the singular genitive"],
+  "lessonIds": ["gna-whose-singular"],
+  "numberScope": {
+    "axis": "form",
+    "number": "singular"
+  },
+  "exercises": [
+    {
+      "id": "gna-whose-singular-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose book is this?” ____ tämä on? Ask about one owner. Use kirja.",
+      "acceptedAnswers": ["Kenen kirja"],
+      "explanation": "Use kenen to ask about one owner. kirja names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose book is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen kirja",
+            "meaning": "whose book",
+            "baseForm": "kuka kirja",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. kirja names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Kenen kirja", "Keiden kirja", "Kuka kirja"],
+      "optionFeedback": {
+        "Kenen kirja": "Use kenen to ask about one owner. kirja names the single thing owned.",
+        "Keiden kirja": "Keiden kirja does not express the required singular genitive relationship.",
+        "Kuka kirja": "Kuka kirja does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-05"
+    },
+    {
+      "id": "gna-whose-singular-produce-01",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose book is this?” ____ tämä on? Ask about one owner. Use kirja.",
+      "acceptedAnswers": ["Kenen kirja"],
+      "explanation": "Use kenen to ask about one owner. kirja names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose book is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen kirja",
+            "meaning": "whose book",
+            "baseForm": "kuka kirja",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. kirja names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden kirja"],
+          "category": "case-or-number",
+          "explanation": "Keiden kirja does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka kirja"],
+          "category": "case-or-number",
+          "explanation": "Kuka kirja does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-05"
+    },
+    {
+      "id": "gna-whose-singular-interpret-01",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kenen kirja tämä on?” into English.",
+      "acceptedAnswers": ["Whose book is this?", "Who does this book belong to?"],
+      "explanation": "Use kenen to ask about one owner. kirja names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": ["kirja", "olla"],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose book is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen kirja",
+            "meaning": "whose book",
+            "baseForm": "kuka kirja",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. kirja names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-whose-singular-interpret-03"
+    },
+    {
+      "id": "gna-whose-singular-choice-02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose car is this?” ____ tämä on? Ask about one owner. Use auto.",
+      "acceptedAnswers": ["Kenen auto"],
+      "explanation": "Use kenen to ask about one owner. auto names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose car is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen auto",
+            "meaning": "whose car",
+            "baseForm": "kuka auto",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. auto names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Keiden auto", "Kuka auto", "Kenen auto"],
+      "optionFeedback": {
+        "Keiden auto": "Keiden auto does not express the required singular genitive relationship.",
+        "Kuka auto": "Kuka auto does not express the required singular genitive relationship.",
+        "Kenen auto": "Use kenen to ask about one owner. auto names the single thing owned."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-06"
+    },
+    {
+      "id": "gna-whose-singular-produce-02",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose car is this?” ____ tämä on? Ask about one owner. Use auto.",
+      "acceptedAnswers": ["Kenen auto"],
+      "explanation": "Use kenen to ask about one owner. auto names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose car is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen auto",
+            "meaning": "whose car",
+            "baseForm": "kuka auto",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. auto names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden auto"],
+          "category": "case-or-number",
+          "explanation": "Keiden auto does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka auto"],
+          "category": "case-or-number",
+          "explanation": "Kuka auto does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-06"
+    },
+    {
+      "id": "gna-whose-singular-interpret-02",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kenen auto tämä on?” into English.",
+      "acceptedAnswers": ["Whose car is this?", "Who does this car belong to?"],
+      "explanation": "Use kenen to ask about one owner. auto names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": ["auto", "olla"],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose car is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen auto",
+            "meaning": "whose car",
+            "baseForm": "kuka auto",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. auto names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-whose-singular-interpret-04"
+    },
+    {
+      "id": "gna-whose-singular-choice-03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose toy is this?” ____ tämä on? Ask about one owner. Use lelu.",
+      "acceptedAnswers": ["Kenen lelu"],
+      "explanation": "Use kenen to ask about one owner. lelu names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose toy is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen lelu",
+            "meaning": "whose toy",
+            "baseForm": "kuka lelu",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. lelu names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Kuka lelu", "Kenen lelu", "Keiden lelu"],
+      "optionFeedback": {
+        "Kuka lelu": "Kuka lelu does not express the required singular genitive relationship.",
+        "Kenen lelu": "Use kenen to ask about one owner. lelu names the single thing owned.",
+        "Keiden lelu": "Keiden lelu does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-07"
+    },
+    {
+      "id": "gna-whose-singular-produce-03",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose toy is this?” ____ tämä on? Ask about one owner. Use lelu.",
+      "acceptedAnswers": ["Kenen lelu"],
+      "explanation": "Use kenen to ask about one owner. lelu names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose toy is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen lelu",
+            "meaning": "whose toy",
+            "baseForm": "kuka lelu",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. lelu names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden lelu"],
+          "category": "case-or-number",
+          "explanation": "Keiden lelu does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka lelu"],
+          "category": "case-or-number",
+          "explanation": "Kuka lelu does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-07"
+    },
+    {
+      "id": "gna-whose-singular-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kenen lelu tämä on?” into English.",
+      "acceptedAnswers": ["Whose toy is this?", "Who does this toy belong to?"],
+      "explanation": "Use kenen to ask about one owner. lelu names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": ["lelu", "olla"],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose toy is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen lelu",
+            "meaning": "whose toy",
+            "baseForm": "kuka lelu",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. lelu names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-whose-singular-interpret-01"
+    },
+    {
+      "id": "gna-whose-singular-choice-04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose pen is this?” ____ tämä on? Ask about one owner. Use kynä.",
+      "acceptedAnswers": ["Kenen kynä"],
+      "explanation": "Use kenen to ask about one owner. kynä names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose pen is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen kynä",
+            "meaning": "whose pen",
+            "baseForm": "kuka kynä",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. kynä names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Kenen kynä", "Keiden kynä", "Kuka kynä"],
+      "optionFeedback": {
+        "Kenen kynä": "Use kenen to ask about one owner. kynä names the single thing owned.",
+        "Keiden kynä": "Keiden kynä does not express the required singular genitive relationship.",
+        "Kuka kynä": "Kuka kynä does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-08"
+    },
+    {
+      "id": "gna-whose-singular-produce-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose pen is this?” ____ tämä on? Ask about one owner. Use kynä.",
+      "acceptedAnswers": ["Kenen kynä"],
+      "explanation": "Use kenen to ask about one owner. kynä names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose pen is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen kynä",
+            "meaning": "whose pen",
+            "baseForm": "kuka kynä",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. kynä names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden kynä"],
+          "category": "case-or-number",
+          "explanation": "Keiden kynä does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka kynä"],
+          "category": "case-or-number",
+          "explanation": "Kuka kynä does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-08"
+    },
+    {
+      "id": "gna-whose-singular-interpret-04",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kenen kynä tämä on?” into English.",
+      "acceptedAnswers": ["Whose pen is this?", "Who does this pen belong to?"],
+      "explanation": "Use kenen to ask about one owner. kynä names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": ["kynä", "olla"],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose pen is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen kynä",
+            "meaning": "whose pen",
+            "baseForm": "kuka kynä",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. kynä names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "parallelExerciseId": "gna-whose-singular-interpret-02"
+    },
+    {
+      "id": "gna-whose-singular-choice-05",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose bag is this?” ____ tämä on? Ask about one owner. Use laukku.",
+      "acceptedAnswers": ["Kenen laukku"],
+      "explanation": "Use kenen to ask about one owner. laukku names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose bag is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen laukku",
+            "meaning": "whose bag",
+            "baseForm": "kuka laukku",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. laukku names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Keiden laukku", "Kuka laukku", "Kenen laukku"],
+      "optionFeedback": {
+        "Keiden laukku": "Keiden laukku does not express the required singular genitive relationship.",
+        "Kuka laukku": "Kuka laukku does not express the required singular genitive relationship.",
+        "Kenen laukku": "Use kenen to ask about one owner. laukku names the single thing owned."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-01"
+    },
+    {
+      "id": "gna-whose-singular-produce-05",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose bag is this?” ____ tämä on? Ask about one owner. Use laukku.",
+      "acceptedAnswers": ["Kenen laukku"],
+      "explanation": "Use kenen to ask about one owner. laukku names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose bag is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen laukku",
+            "meaning": "whose bag",
+            "baseForm": "kuka laukku",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. laukku names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden laukku"],
+          "category": "case-or-number",
+          "explanation": "Keiden laukku does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka laukku"],
+          "category": "case-or-number",
+          "explanation": "Kuka laukku does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-01"
+    },
+    {
+      "id": "gna-whose-singular-choice-06",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose phone is this?” ____ tämä on? Ask about one owner. Use puhelin.",
+      "acceptedAnswers": ["Kenen puhelin"],
+      "explanation": "Use kenen to ask about one owner. puhelin names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose phone is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen puhelin",
+            "meaning": "whose phone",
+            "baseForm": "kuka puhelin",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. puhelin names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Kuka puhelin", "Kenen puhelin", "Keiden puhelin"],
+      "optionFeedback": {
+        "Kuka puhelin": "Kuka puhelin does not express the required singular genitive relationship.",
+        "Kenen puhelin": "Use kenen to ask about one owner. puhelin names the single thing owned.",
+        "Keiden puhelin": "Keiden puhelin does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-02"
+    },
+    {
+      "id": "gna-whose-singular-produce-06",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose phone is this?” ____ tämä on? Ask about one owner. Use puhelin.",
+      "acceptedAnswers": ["Kenen puhelin"],
+      "explanation": "Use kenen to ask about one owner. puhelin names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose phone is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen puhelin",
+            "meaning": "whose phone",
+            "baseForm": "kuka puhelin",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. puhelin names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden puhelin"],
+          "category": "case-or-number",
+          "explanation": "Keiden puhelin does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka puhelin"],
+          "category": "case-or-number",
+          "explanation": "Kuka puhelin does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-02"
+    },
+    {
+      "id": "gna-whose-singular-choice-07",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose key is this?” ____ tämä on? Ask about one owner. Use avain.",
+      "acceptedAnswers": ["Kenen avain"],
+      "explanation": "Use kenen to ask about one owner. avain names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose key is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen avain",
+            "meaning": "whose key",
+            "baseForm": "kuka avain",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. avain names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Kenen avain", "Keiden avain", "Kuka avain"],
+      "optionFeedback": {
+        "Kenen avain": "Use kenen to ask about one owner. avain names the single thing owned.",
+        "Keiden avain": "Keiden avain does not express the required singular genitive relationship.",
+        "Kuka avain": "Kuka avain does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-03"
+    },
+    {
+      "id": "gna-whose-singular-produce-07",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose key is this?” ____ tämä on? Ask about one owner. Use avain.",
+      "acceptedAnswers": ["Kenen avain"],
+      "explanation": "Use kenen to ask about one owner. avain names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose key is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen avain",
+            "meaning": "whose key",
+            "baseForm": "kuka avain",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. avain names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden avain"],
+          "category": "case-or-number",
+          "explanation": "Keiden avain does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka avain"],
+          "category": "case-or-number",
+          "explanation": "Kuka avain does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-03"
+    },
+    {
+      "id": "gna-whose-singular-choice-08",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Whose ball is this?” ____ tämä on? Ask about one owner. Use pallo.",
+      "acceptedAnswers": ["Kenen pallo"],
+      "explanation": "Use kenen to ask about one owner. pallo names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose ball is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen pallo",
+            "meaning": "whose ball",
+            "baseForm": "kuka pallo",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. pallo names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "options": ["Keiden pallo", "Kuka pallo", "Kenen pallo"],
+      "optionFeedback": {
+        "Keiden pallo": "Keiden pallo does not express the required singular genitive relationship.",
+        "Kuka pallo": "Kuka pallo does not express the required singular genitive relationship.",
+        "Kenen pallo": "Use kenen to ask about one owner. pallo names the single thing owned."
+      },
+      "parallelExerciseId": "gna-whose-singular-choice-04"
+    },
+    {
+      "id": "gna-whose-singular-produce-08",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Complete “Whose ball is this?” ____ tämä on? Ask about one owner. Use pallo.",
+      "acceptedAnswers": ["Kenen pallo"],
+      "explanation": "Use kenen to ask about one owner. pallo names the single thing owned.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Kenen: asking about one owner"],
+      "vocabulary": [],
+      "targetSkill": "Kenen: asking about one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Whose ball is this?",
+        "pattern": "Ask about one owner with kenen: Kenen kirja tämä on? (“Whose book is this?”).",
+        "parts": [
+          {
+            "finnish": "Kenen pallo",
+            "meaning": "whose ball",
+            "baseForm": "kuka pallo",
+            "role": "genitive target",
+            "formation": "Use kenen to ask about one owner. pallo names the single thing owned."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "supporting context",
+            "formation": "Tämä refers to the single thing whose owner is being asked about."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "On agrees with the single thing."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Keiden pallo"],
+          "category": "case-or-number",
+          "explanation": "Keiden pallo does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Kuka pallo"],
+          "category": "case-or-number",
+          "explanation": "Kuka pallo does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gna-whose-singular-produce-04"
+    }
+  ]
+}

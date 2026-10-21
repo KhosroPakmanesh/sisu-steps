@@ -1,0 +1,751 @@
+{
+  "id": "genitive-ownership-review",
+  "title": "Genitive ownership and relationships review",
+  "focus": "Retrieve the taught genitive patterns in a mixed review.",
+  "stage": "review",
+  "targetSkills": [
+    "Singular genitive before a noun",
+    "Plural genitive before a noun",
+    "Ownership after olla: one owner",
+    "Ownership after olla: several owners"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "gno-modifier-singular",
+    "gno-modifier-plural",
+    "gno-predicate-singular",
+    "gno-predicate-plural"
+  ],
+  "exercises": [
+    {
+      "id": "gno-modifier-singular-review-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “Anna's book.” ____ kirja. Use Anna.",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "Put Annan before kirja. Anna becomes Annan to identify one owner or a singular whole.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Singular genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Singular genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Anna's book.",
+        "pattern": "Put a singular genitive before the thing owned or related to it: Annan kirja (“Anna's book”).",
+        "parts": [
+          {
+            "finnish": "Annan",
+            "meaning": "Anna's",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "Put Annan before kirja. Anna becomes Annan to identify one owner or a singular whole."
+          },
+          {
+            "finnish": "kirja.",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "options": ["Annan", "Anna", "Annat"],
+      "optionFeedback": {
+        "Annan": "Put Annan before kirja. Anna becomes Annan to identify one owner or a singular whole.",
+        "Anna": "Anna does not express the required singular genitive relationship.",
+        "Annat": "Annat does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gno-modifier-singular-review-interpret-03"
+    },
+    {
+      "id": "gno-modifier-plural-review-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The children's toy.” ____ lelu. Use lapsi (plural).",
+      "acceptedAnswers": ["lasten"],
+      "explanation": "Use lasten for more than one lapsi. The number of the following noun is independent. Also accepted here: lapsien.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Plural genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Plural genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The children's toy.",
+        "pattern": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+        "parts": [
+          {
+            "finnish": "Lasten",
+            "meaning": "the children's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "Use lasten for more than one lapsi. The number of the following noun is independent."
+          },
+          {
+            "finnish": "lelu.",
+            "meaning": "toy",
+            "baseForm": "lelu",
+            "role": "supporting context",
+            "formation": "Use the head noun as shown; ovet and ikkunat are plural, while kirja, auto and lelu are singular."
+          }
+        ]
+      },
+      "options": ["lasten", "lapsen", "lapsi"],
+      "optionFeedback": {
+        "lasten": "Use lasten for more than one lapsi. The number of the following noun is independent. Also accepted here: lapsien.",
+        "lapsen": "lapsen does not express the required plural genitive relationship.",
+        "lapsi": "lapsi does not express the required plural genitive relationship."
+      },
+      "parallelExerciseId": "gno-modifier-plural-review-interpret-03"
+    },
+    {
+      "id": "gno-predicate-singular-review-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The book is Anna's.” Kirja on ____. Use Anna.",
+      "acceptedAnswers": ["Annan"],
+      "explanation": "After on, Annan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Anna's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Annan.",
+            "meaning": "Anna's",
+            "baseForm": "Anna",
+            "role": "genitive target",
+            "formation": "After on, Annan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["Annan", "Anna", "Annat"],
+      "optionFeedback": {
+        "Annan": "After on, Annan names one owner. The singular thing owned keeps on.",
+        "Anna": "Anna does not express the required singular genitive relationship.",
+        "Annat": "Annat does not express the required singular genitive relationship."
+      },
+      "parallelExerciseId": "gno-predicate-singular-review-interpret-03"
+    },
+    {
+      "id": "gno-predicate-plural-review-choice-01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Complete “The book is the children's.” Kirja on ____. Use lapsi (plural).",
+      "acceptedAnswers": ["lasten"],
+      "explanation": "After on, lasten names several owners. The singular thing owned keeps on. Also accepted here: lapsien.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Ownership after olla: several owners"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: several owners",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the children's.",
+        "pattern": "Name several owners after olla: Kirja on lasten (“The book is the children's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "lasten.",
+            "meaning": "the children's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "After on, lasten names several owners. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "options": ["lasten", "lapsi", "lapsit"],
+      "optionFeedback": {
+        "lasten": "After on, lasten names several owners. The singular thing owned keeps on. Also accepted here: lapsien.",
+        "lapsi": "lapsi does not express the required plural genitive relationship.",
+        "lapsit": "lapsit does not express the required plural genitive relationship."
+      },
+      "parallelExerciseId": "gno-predicate-plural-review-interpret-03"
+    },
+    {
+      "id": "gno-modifier-singular-review-write-02",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “Liisa's car.” in Finnish. Use: ____ auto. Use Liisa.",
+      "acceptedAnswers": ["Liisan auto."],
+      "explanation": "Put Liisan before auto. Liisa becomes Liisan to identify one owner or a singular whole.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Singular genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Singular genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "Liisa's car.",
+        "pattern": "Put a singular genitive before the thing owned or related to it: Annan kirja (“Anna's book”).",
+        "parts": [
+          {
+            "finnish": "Liisan",
+            "meaning": "Liisa's",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "Put Liisan before auto. Liisa becomes Liisan to identify one owner or a singular whole."
+          },
+          {
+            "finnish": "auto.",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Liisa"],
+          "category": "case-or-number",
+          "explanation": "Liisa does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Liisat"],
+          "category": "case-or-number",
+          "explanation": "Liisat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-modifier-singular-review-repair-04"
+    },
+    {
+      "id": "gno-modifier-plural-review-write-02",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “The women's car.” in Finnish. Use: ____ auto. Use nainen (plural).",
+      "acceptedAnswers": ["Naisten auto.", "Naisien auto."],
+      "explanation": "Use naisten for more than one nainen. The number of the following noun is independent. Also accepted here: naisien.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Plural genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Plural genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The women's car.",
+        "pattern": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+        "parts": [
+          {
+            "finnish": "Naisten",
+            "meaning": "the women's",
+            "baseForm": "nainen",
+            "role": "genitive target",
+            "formation": "Use naisten for more than one nainen. The number of the following noun is independent."
+          },
+          {
+            "finnish": "auto.",
+            "meaning": "car",
+            "baseForm": "auto",
+            "role": "supporting context",
+            "formation": "Use the head noun as shown; ovet and ikkunat are plural, while kirja, auto and lelu are singular."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["naisen"],
+          "category": "case-or-number",
+          "explanation": "naisen does not fit this genitive pattern."
+        },
+        {
+          "answers": ["nainen"],
+          "category": "case-or-number",
+          "explanation": "nainen does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-modifier-plural-review-repair-04"
+    },
+    {
+      "id": "gno-predicate-singular-review-write-02",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “The book is Liisa's.” in Finnish. Use: Kirja on ____. Use Liisa.",
+      "acceptedAnswers": ["Kirja on Liisan."],
+      "explanation": "After on, Liisan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is Liisa's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "Liisan.",
+            "meaning": "Liisa's",
+            "baseForm": "Liisa",
+            "role": "genitive target",
+            "formation": "After on, Liisan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Liisa"],
+          "category": "case-or-number",
+          "explanation": "Liisa does not fit this genitive pattern."
+        },
+        {
+          "answers": ["Liisat"],
+          "category": "case-or-number",
+          "explanation": "Liisat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-review-repair-04"
+    },
+    {
+      "id": "gno-predicate-plural-review-write-02",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “The book is the women's.” in Finnish. Use: Kirja on ____. Use nainen (plural).",
+      "acceptedAnswers": ["Kirja on naisten.", "Kirja on naisien."],
+      "explanation": "After on, naisten names several owners. The singular thing owned keeps on. Also accepted here: naisien.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Ownership after olla: several owners"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: several owners",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the women's.",
+        "pattern": "Name several owners after olla: Kirja on lasten (“The book is the children's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "naisten.",
+            "meaning": "the women's",
+            "baseForm": "nainen",
+            "role": "genitive target",
+            "formation": "After on, naisten names several owners. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["nainen"],
+          "category": "case-or-number",
+          "explanation": "nainen does not fit this genitive pattern."
+        },
+        {
+          "answers": ["nainent"],
+          "category": "case-or-number",
+          "explanation": "nainent does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-plural-review-repair-04"
+    },
+    {
+      "id": "gno-modifier-singular-review-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Lapsen lelu.” into English.",
+      "acceptedAnswers": ["The child's toy.", "A child's toy."],
+      "explanation": "Put lapsen before lelu. lapsi becomes lapsen to identify one owner or a singular whole.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Singular genitive before a noun"],
+      "vocabulary": ["lapsi", "lelu"],
+      "targetSkill": "Singular genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The child's toy.",
+        "pattern": "Put a singular genitive before the thing owned or related to it: Annan kirja (“Anna's book”).",
+        "parts": [
+          {
+            "finnish": "Lapsen",
+            "meaning": "the child's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "Put lapsen before lelu. lapsi becomes lapsen to identify one owner or a singular whole."
+          },
+          {
+            "finnish": "lelu.",
+            "meaning": "toy",
+            "baseForm": "lelu",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-modifier-singular-review-choice-01"
+    },
+    {
+      "id": "gno-modifier-plural-review-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Talojen ovet.” into English.",
+      "acceptedAnswers": ["The houses' doors."],
+      "explanation": "Use talojen for more than one talo. The number of the following noun is independent.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Plural genitive before a noun"],
+      "vocabulary": ["talo", "ovi"],
+      "targetSkill": "Plural genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The houses' doors.",
+        "pattern": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+        "parts": [
+          {
+            "finnish": "Talojen",
+            "meaning": "the houses'",
+            "baseForm": "talo",
+            "role": "genitive target",
+            "formation": "Use talojen for more than one talo. The number of the following noun is independent."
+          },
+          {
+            "finnish": "ovet.",
+            "meaning": "doors",
+            "baseForm": "ovi",
+            "role": "supporting context",
+            "formation": "Use the head noun as shown; ovet and ikkunat are plural, while kirja, auto and lelu are singular."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-modifier-plural-review-choice-01"
+    },
+    {
+      "id": "gno-predicate-singular-review-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kirja on lapsen.” into English.",
+      "acceptedAnswers": [
+        "The book is the child's.",
+        "The book belongs to the child.",
+        "A book is the child's.",
+        "A book belongs to the child."
+      ],
+      "explanation": "After on, lapsen names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": ["kirja", "olla", "lapsi"],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the child's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "lapsen.",
+            "meaning": "the child's",
+            "baseForm": "lapsi",
+            "role": "genitive target",
+            "formation": "After on, lapsen names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-predicate-singular-review-choice-01"
+    },
+    {
+      "id": "gno-predicate-plural-review-interpret-03",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Kirja on opettajien.” into English.",
+      "acceptedAnswers": [
+        "The book is the teachers'.",
+        "The book belongs to the teachers.",
+        "A book is the teachers'.",
+        "A book belongs to the teachers."
+      ],
+      "explanation": "After on, opettajien names several owners. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Ownership after olla: several owners"],
+      "vocabulary": ["kirja", "olla", "opettaja"],
+      "targetSkill": "Ownership after olla: several owners",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the teachers'.",
+        "pattern": "Name several owners after olla: Kirja on lasten (“The book is the children's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opettajien.",
+            "meaning": "the teachers'",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "After on, opettajien names several owners. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "parallelExerciseId": "gno-predicate-plural-review-choice-01"
+    },
+    {
+      "id": "gno-modifier-singular-review-repair-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “talo” in: Talo ovi. Meaning: “The house's door.” Use talo.",
+      "acceptedAnswers": ["talon"],
+      "explanation": "Put talon before ovi. talo becomes talon to identify one owner or a singular whole.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Singular genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Singular genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The house's door.",
+        "pattern": "Put a singular genitive before the thing owned or related to it: Annan kirja (“Anna's book”).",
+        "parts": [
+          {
+            "finnish": "Talon",
+            "meaning": "the house's",
+            "baseForm": "talo",
+            "role": "genitive target",
+            "formation": "Put talon before ovi. talo becomes talon to identify one owner or a singular whole."
+          },
+          {
+            "finnish": "ovi.",
+            "meaning": "door",
+            "baseForm": "ovi",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["talo"],
+          "category": "case-or-number",
+          "explanation": "talo does not fit this genitive pattern."
+        },
+        {
+          "answers": ["talot"],
+          "category": "case-or-number",
+          "explanation": "talot does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-modifier-singular-review-write-02"
+    },
+    {
+      "id": "gno-modifier-plural-review-repair-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “koulun” in: Koulun ovet. Meaning: “The schools' doors.” Use koulu (plural).",
+      "acceptedAnswers": ["koulujen"],
+      "explanation": "Use koulujen for more than one koulu. The number of the following noun is independent.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Plural genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Plural genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The schools' doors.",
+        "pattern": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+        "parts": [
+          {
+            "finnish": "Koulujen",
+            "meaning": "the schools'",
+            "baseForm": "koulu",
+            "role": "genitive target",
+            "formation": "Use koulujen for more than one koulu. The number of the following noun is independent."
+          },
+          {
+            "finnish": "ovet.",
+            "meaning": "doors",
+            "baseForm": "ovi",
+            "role": "supporting context",
+            "formation": "Use the head noun as shown; ovet and ikkunat are plural, while kirja, auto and lelu are singular."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["koulun"],
+          "category": "case-or-number",
+          "explanation": "koulun does not fit this genitive pattern."
+        },
+        {
+          "answers": ["koulu"],
+          "category": "case-or-number",
+          "explanation": "koulu does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-modifier-plural-review-write-02"
+    },
+    {
+      "id": "gno-predicate-singular-review-repair-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “opettaja” in: Kirja on opettaja. Meaning: “The book is the teacher's.” Use opettaja.",
+      "acceptedAnswers": ["opettajan"],
+      "explanation": "After on, opettajan names one owner. The singular thing owned keeps on.",
+      "tags": ["genitive", "form-singular", "sentence"],
+      "requiredSkills": ["Ownership after olla: one owner"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: one owner",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the teacher's.",
+        "pattern": "Name one owner after olla: Kirja on Annan (“The book is Anna's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opettajan.",
+            "meaning": "the teacher's",
+            "baseForm": "opettaja",
+            "role": "genitive target",
+            "formation": "After on, opettajan names one owner. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["opettaja"],
+          "category": "case-or-number",
+          "explanation": "opettaja does not fit this genitive pattern."
+        },
+        {
+          "answers": ["opettajat"],
+          "category": "case-or-number",
+          "explanation": "opettajat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-singular-review-write-02"
+    },
+    {
+      "id": "gno-predicate-plural-review-repair-04",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “opiskelija” in: Kirja on opiskelija. Meaning: “The book is the students'.” Use opiskelija (plural).",
+      "acceptedAnswers": ["opiskelijoiden", "opiskelijoitten"],
+      "explanation": "After on, opiskelijoiden names several owners. The singular thing owned keeps on. Also accepted here: opiskelijoitten.",
+      "tags": ["genitive", "form-plural", "sentence"],
+      "requiredSkills": ["Ownership after olla: several owners"],
+      "vocabulary": [],
+      "targetSkill": "Ownership after olla: several owners",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The book is the students'.",
+        "pattern": "Name several owners after olla: Kirja on lasten (“The book is the children's”).",
+        "parts": [
+          {
+            "finnish": "Kirja",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Keep this context word in the form shown in the sentence."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "supporting context",
+            "formation": "Use on, the third-person singular present form of olla, with a singular subject."
+          },
+          {
+            "finnish": "opiskelijoiden.",
+            "meaning": "the students'",
+            "baseForm": "opiskelija",
+            "role": "genitive target",
+            "formation": "After on, opiskelijoiden names several owners. The singular thing owned keeps on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["opiskelija"],
+          "category": "case-or-number",
+          "explanation": "opiskelija does not fit this genitive pattern."
+        },
+        {
+          "answers": ["opiskelijat"],
+          "category": "case-or-number",
+          "explanation": "opiskelijat does not fit this genitive pattern."
+        }
+      ],
+      "parallelExerciseId": "gno-predicate-plural-review-write-02"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { PARTITIVE_TARGETS as TARGETS } from './partitive-family-targets.mjs';
+import { GENITIVE_TARGETS } from '../genitives/genitive-family-targets.mjs';
 
 const words = (text) => text.toLocaleLowerCase('fi-FI').match(/[\p{L}]+/gu) ?? [];
 const formSets = (number) =>
@@ -14,7 +15,7 @@ const SPOKEN = /(?:^|[^\p{L}])(?:mä|sä|mua|sua|tää|toi|nää|noi|oon|oot)(?=
 export function validatePartitiveFamily(pack) {
   const targets = TARGETS[pack.id];
   if (!targets)
-    return pack.lessons.some((l) => l.numberScope?.axis === 'form')
+    return !GENITIVE_TARGETS[pack.id] && pack.lessons.some((l) => l.numberScope?.axis === 'form')
       ? ['Unsupported form-number content family.']
       : [];
   const errors = [];

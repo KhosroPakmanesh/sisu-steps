@@ -1,0 +1,285 @@
+{
+  "id": "gno-modifier-plural",
+  "version": "1.0.0",
+  "title": "Plural genitive before a noun",
+  "summary": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+  "stage": "focused",
+  "targetSkills": ["Plural genitive before a noun"],
+  "prerequisiteSkills": ["Singular genitive before a noun"],
+  "introducedVocabulary": [
+    {
+      "finnish": "nainen",
+      "english": "woman",
+      "type": "word"
+    },
+    {
+      "finnish": "koulu",
+      "english": "school",
+      "type": "word"
+    }
+  ],
+  "reusedVocabulary": [
+    {
+      "finnish": "lapsi",
+      "english": "child",
+      "type": "word"
+    },
+    {
+      "finnish": "talo",
+      "english": "house",
+      "type": "word"
+    },
+    {
+      "finnish": "lelu",
+      "english": "toy",
+      "type": "word"
+    },
+    {
+      "finnish": "auto",
+      "english": "car",
+      "type": "word"
+    },
+    {
+      "finnish": "kirja",
+      "english": "book",
+      "type": "word"
+    },
+    {
+      "finnish": "ovi",
+      "english": "door",
+      "type": "word"
+    },
+    {
+      "finnish": "ikkuna",
+      "english": "window",
+      "type": "word"
+    }
+  ],
+  "suppliedVocabulary": [],
+  "objectives": [
+    "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”)."
+  ],
+  "sections": [
+    {
+      "title": "Meaning and pattern",
+      "paragraphs": [
+        "The modifier is plural when it refers to several people or things. The thing owned can still be singular: several children can share one book.",
+        "The local models are lapsi → lasten/lapsien, nainen → naisten/naisien, talo → talojen and koulu → koulujen. Both alternatives shown for the person words are standard.",
+        "The head nouns ovet (“doors”) and ikkunat (“windows”) are supplied plural forms of ovi and ikkuna. Choose the modifier's number independently."
+      ],
+      "keyPoints": ["Plural owners do not require a plural thing owned."]
+    }
+  ],
+  "examples": [
+    {
+      "finnish": "Lasten lelu.",
+      "english": "The children's toy.",
+      "steps": [
+        "Use lasten for more than one lapsi. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Naisten auto.",
+      "english": "The women's car.",
+      "steps": [
+        "Use naisten for more than one nainen. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Talojen ovet.",
+      "english": "The houses' doors.",
+      "steps": [
+        "Use talojen for more than one talo. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Koulujen ovet.",
+      "english": "The schools' doors.",
+      "steps": [
+        "Use koulujen for more than one koulu. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Lasten kirja.",
+      "english": "The children's book.",
+      "steps": [
+        "Use lasten for more than one lapsi. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Naisten kirja.",
+      "english": "The women's book.",
+      "steps": [
+        "Use naisten for more than one nainen. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Talojen ikkunat.",
+      "english": "The houses' windows.",
+      "steps": [
+        "Use talojen for more than one talo. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    },
+    {
+      "finnish": "Koulujen ikkunat.",
+      "english": "The schools' windows.",
+      "steps": [
+        "Use koulujen for more than one koulu. The number of the following noun is independent.",
+        "The surrounding words keep the forms shown; the genitive target expresses this lesson's relationship."
+      ]
+    }
+  ],
+  "commonMistakes": [
+    "Plural owners do not require a plural thing owned.",
+    "Use the genitive, not the plural dictionary form, before the head noun.",
+    "Keep the modifier before the head noun."
+  ],
+  "numberScope": {
+    "axis": "form",
+    "number": "plural"
+  },
+  "practiceExercises": [
+    {
+      "id": "gno-modifier-plural-practice-01",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “naisen” in: Naisen kirja. Meaning: “The women's book.” Use nainen (plural).",
+      "acceptedAnswers": ["naisten", "naisien"],
+      "explanation": "Use naisten for more than one nainen. The number of the following noun is independent. Also accepted here: naisien.",
+      "tags": ["genitive", "form-plural", "sentence", "lesson-practice"],
+      "requiredSkills": ["Plural genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Plural genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The women's book.",
+        "pattern": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+        "parts": [
+          {
+            "finnish": "Naisten",
+            "meaning": "the women's",
+            "baseForm": "nainen",
+            "role": "genitive target",
+            "formation": "Use naisten for more than one nainen. The number of the following noun is independent."
+          },
+          {
+            "finnish": "kirja.",
+            "meaning": "book",
+            "baseForm": "kirja",
+            "role": "supporting context",
+            "formation": "Use the head noun as shown; ovet and ikkunat are plural, while kirja, auto and lelu are singular."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["naisen"],
+          "category": "case-or-number",
+          "explanation": "naisen does not fit this genitive pattern."
+        },
+        {
+          "answers": ["nainen"],
+          "category": "case-or-number",
+          "explanation": "nainen does not fit this genitive pattern."
+        }
+      ]
+    },
+    {
+      "id": "gno-modifier-plural-practice-02",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “talon” in: Talon ikkunat. Meaning: “The houses' windows.” Use talo (plural).",
+      "acceptedAnswers": ["talojen"],
+      "explanation": "Use talojen for more than one talo. The number of the following noun is independent.",
+      "tags": ["genitive", "form-plural", "sentence", "lesson-practice"],
+      "requiredSkills": ["Plural genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Plural genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The houses' windows.",
+        "pattern": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+        "parts": [
+          {
+            "finnish": "Talojen",
+            "meaning": "the houses'",
+            "baseForm": "talo",
+            "role": "genitive target",
+            "formation": "Use talojen for more than one talo. The number of the following noun is independent."
+          },
+          {
+            "finnish": "ikkunat.",
+            "meaning": "windows",
+            "baseForm": "ikkuna",
+            "role": "supporting context",
+            "formation": "Use the head noun as shown; ovet and ikkunat are plural, while kirja, auto and lelu are singular."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["talon"],
+          "category": "case-or-number",
+          "explanation": "talon does not fit this genitive pattern."
+        },
+        {
+          "answers": ["talo"],
+          "category": "case-or-number",
+          "explanation": "talo does not fit this genitive pattern."
+        }
+      ]
+    },
+    {
+      "id": "gno-modifier-plural-practice-03",
+      "type": "fill-blank",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “koulun” in: Koulun ikkunat. Meaning: “The schools' windows.” Use koulu (plural).",
+      "acceptedAnswers": ["koulujen"],
+      "explanation": "Use koulujen for more than one koulu. The number of the following noun is independent.",
+      "tags": ["genitive", "form-plural", "sentence", "lesson-practice"],
+      "requiredSkills": ["Plural genitive before a noun"],
+      "vocabulary": [],
+      "targetSkill": "Plural genitive before a noun",
+      "misconceptionCategory": "genitive-form",
+      "sentenceExplanation": {
+        "translation": "The schools' windows.",
+        "pattern": "Use a plural genitive for several owners or related things: lasten kirja (“the children's book”).",
+        "parts": [
+          {
+            "finnish": "Koulujen",
+            "meaning": "the schools'",
+            "baseForm": "koulu",
+            "role": "genitive target",
+            "formation": "Use koulujen for more than one koulu. The number of the following noun is independent."
+          },
+          {
+            "finnish": "ikkunat.",
+            "meaning": "windows",
+            "baseForm": "ikkuna",
+            "role": "supporting context",
+            "formation": "Use the head noun as shown; ovet and ikkunat are plural, while kirja, auto and lelu are singular."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["koulun"],
+          "category": "case-or-number",
+          "explanation": "koulun does not fit this genitive pattern."
+        },
+        {
+          "answers": ["koulu"],
+          "category": "case-or-number",
+          "explanation": "koulu does not fit this genitive pattern."
+        }
+      ]
+    }
+  ]
+}

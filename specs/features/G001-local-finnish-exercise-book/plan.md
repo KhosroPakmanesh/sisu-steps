@@ -1,5 +1,22 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-20 Genitive pack family
+
+Implement REQ-G001-154 with the repository content creator skill and the saved
+[Genitive blueprint](../../content-assessments/genitive-family.md). Preserve a
+hash baseline of the current catalog and all existing sources. Author eight
+independently versioned JSON packs with the approved 42 lessons, matching Focused
+tests and eight final Reviews; keep local vocabulary provenance and explicit
+number scope. Register the catalog group and matching startup summaries. Add
+independent Genitive checks at authored/runtime boundaries and grading/preservation
+coverage without weakening existing guards. Complete the client gate and affected
+responsive browser workflows, then record actual inventories, checks, limitations
+and final pedagogy disposition under VAL-G001-113. No commit or publication.
+
+Completed 2026-10-21. The final assessment is approved with limitations; executed
+source, grading, preservation and responsive evidence is recorded under
+VAL-G001-113 and in the linked family assessment.
+
 ## 2026-10-16 gentle answer and question scrolling
 
 Refine REQ-G001-129 in scored Study and optional lesson practice. After rendered submission/reveal feedback, retain keyboard focus on the forward action without native focus scrolling, then smoothly reveal the feedback with room for the action and sticky header. After advancement, focus the first answer control without scrolling and smoothly reveal the next question. Share the browser scrolling boundary and reduced-motion decision, retain result/completion focus and word-token navigation, and verify actual viewport positions and requested motion in browser tests at 320/768/1440 pixels. Preserve scoring, learner state, content and routes. Complete the client gate and affected keyboard/scroll browser workflows, record actual evidence under VAL-G001-087 and update the changelog. Do not commit or deploy without a new request.
