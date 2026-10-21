@@ -12,10 +12,15 @@
   at least 20 distinct meaningful demands and independently matching preparation.
   Accept common standard alternatives, supply non-target forms and complete
   meanings, and keep vocabulary ownership and sentence explanations explicit.
-- Use `0 - A1.3` for the two singular Forms packs, `A1.3 - A2.2` for the three
-  plural Forms packs, and `0 - A2.2` for the three mixed usage packs. These are
-  instructional estimates; do not claim complete CEFR proficiency. Preserve the
-  user's formation-first pack order and paired number-specific usage lessons.
+- Per the user's 2026-10-21 clarification, every existing pack and its lessons
+  shall be classified at stored level `0 - A1.3`, including all eight Genitive
+  packs. All 30 installed pack manifests and catalog summaries shall use exactly
+  `"level": "0 - A1.3"`; the shared Notebook and Stats label is `Level: 0 - A1.3`.
+  This instructional label does not certify general CEFR proficiency. Preserve
+  the user's formation-first pack order and paired number-specific usage lessons.
+- This metadata-only amendment preserves all pack/lesson versions, teaching,
+  exercises, scoring, learner progress and backup compatibility. It supersedes
+  the original Genitive level ranges without reassessing the curriculum.
 - Start new pack and lesson versions at 1.0.0. Preserve all twenty-two existing
   packs, versions and compatible learner data. No reset, migration, alias,
   fallback format, server dependency or application behavior change is authorized.

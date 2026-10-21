@@ -1,5 +1,27 @@
 # G001 validation
 
+## Uniform installed level — 2026-10-21
+
+**VAL-G001-113 / REQ-G001-154:** all 30 pack manifests and catalog summaries
+store exactly `"level": "0 - A1.3"`, classifying all 169 existing lessons at that
+level. Comparison with HEAD confirms only the six former plural/mixed Genitive
+level fields and their catalog copies changed in authored content. All other
+manifest properties, versions, lesson/test sources and compatible learner data
+are preserved; both original pedagogy dispositions and limitations still apply.
+
+The client aggregate passes lint/CSS, module size, reachability, architecture,
+formatting, both type checks, all 30 direct-source validations and production
+build, then stops at a 5-second unrelated header-test timeout with a teardown
+error. Full reruns with the existing ignored two-worker runner configuration
+pass **513 unit and 35 integration tests** without changing tests or app behavior.
+The seven targeted browser cases pass across 320/768/1440 pixels, verifying the
+single `Level: 0 - A1.3` Notebook/Stats label, existing per-topic labels, all eight
+Genitive maps and reference ordering. Two desktop-only layout cases are skipped
+on smaller projects as authored. Phone and desktop Genitive captures were
+visually inspected. Logs and captures remain under ignored `client/tmp/level-label*`.
+Exhaustive exercise/pedagogy audits and unrelated browser cases were not repeated
+for this metadata-only amendment. No commit or publication occurs.
+
 ## Genitive pack family — 2026-10-20
 
 **VAL-G001-113 / REQ-G001-154:** Validate all eight new packs and the exact

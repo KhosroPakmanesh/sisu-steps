@@ -14,12 +14,7 @@ export function validateGenitiveFamily(pack) {
   if (!targets) return [];
   const errors = [];
   const ids = targets.map((target) => target[0]);
-  const level = ['genitive-forms', 'genitive-forms-singular-families'].includes(pack.id)
-    ? '0 - A1.3'
-    : pack.id.startsWith('genitive-forms-plural-')
-      ? 'A1.3 - A2.2'
-      : '0 - A2.2';
-  if (pack.level !== level) errors.push(pack.id + ': incorrect genitive level');
+  if (pack.level !== '0 - A1.3') errors.push(pack.id + ': incorrect genitive level');
   if (
     !same(
       pack.lessons.map((lesson) => lesson.id),

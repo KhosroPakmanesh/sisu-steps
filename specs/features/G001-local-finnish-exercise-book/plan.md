@@ -1,5 +1,15 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-21 catalog level labels
+
+Apply the user's clarified REQ-G001-154 metadata amendment: classify all existing
+packs and their lessons at `0 - A1.3`. Update the six plural/mixed Genitive pack
+manifests and startup summaries, retaining that level on the other 24 packs.
+Align source/runtime Genitive guards. Preserve all teaching, questions, versions
+and compatible learner data. Verify the shared `Level: 0 - A1.3` Notebook/Stats label,
+source preservation, the client gate and affected responsive browser workflows;
+record actual evidence under VAL-G001-113 and in the shared Genitive assessment.
+
 ## 2026-10-20 Genitive pack family
 
 Implement REQ-G001-154 with the repository content creator skill and the saved

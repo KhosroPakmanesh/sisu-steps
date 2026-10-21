@@ -1,5 +1,23 @@
 # Genitive family — pedagogy assessment
 
+## 2026-10-21 level-label amendment
+
+The user explicitly clarified that all existing lessons shall be classified at
+`0 - A1.3`. Every one of the 30 installed packs, including all eight Genitive
+packs, stores exactly `"level": "0 - A1.3"` in its manifest and catalog summary.
+Lessons use their owning pack's level; the shared label is `Level: 0 - A1.3`.
+This supersedes the original displayed ranges recorded below and in the dated
+pack assessments. It changes classification metadata only; the original
+curriculum scope and pedagogy limitations still apply. No new general CEFR
+proficiency claim or curriculum reassessment is made.
+
+Both original pedagogy dispositions remain applicable: no lessons, examples,
+questions, answers, vocabulary, progression, IDs or versions change. All 42
+Focused tests, eight Reviews, 1,104 scored and 126 optional items are retained.
+Saved progress, lesson completions, notes and backup compatibility are preserved.
+Technical evidence for this amendment is recorded under
+[VAL-G001-113](../features/G001-local-finnish-exercise-book/validation.md).
+
 ## Scope and authorization
 
 Date: 2026-10-20. The user approved the revised eight-pack, 42-lesson outline and
