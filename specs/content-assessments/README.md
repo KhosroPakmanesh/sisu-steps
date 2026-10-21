@@ -1,5 +1,9 @@
 # Content assessment index
 
+The [2026-10-21 Partitive worked-example correction](partitive-worked-example-repetition.md)
+records the removal of 96 duplicated opening rules from 23 lessons, preserving
+sentence-specific explanations, existing teaching and compatible learner data.
+
 The [2026-10-20–21 Genitive family](genitive-family.md) records the eight-pack,
 42-lesson blueprint, level boundaries and completed grading/rendered assessment.
 Both the pre-authoring and final dispositions are approved with limitations; read

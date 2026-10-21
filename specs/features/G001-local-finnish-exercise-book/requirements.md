@@ -1,5 +1,19 @@
 # G001 requirements
 
+## Partitive worked-example repetition — 2026-10-21
+
+Amend REQ-G001-152 under the section responsibilities in REQ-G001-136: remove the
+duplicated opening grammar rule from all 96 worked examples in the 23 lessons
+inventoried in [the scoped assessment](../../content-assessments/partitive-worked-example-repetition.md).
+Keep the rule in its existing grammar paragraph or key point. Preserve each
+example's Finnish, English meaning and remaining sentence-specific construction
+steps, plus all other lesson properties, exercises, manifests and unrelated packs.
+This explicitly supersedes earlier construction-step preservation for these 96
+redundant lines only. It is an editorial reduction with unchanged teaching and
+scored interpretation: retain pack/lesson versions, progress, completions and notes.
+Validate exact source preservation and the affected rendered lessons at
+320/768/1440 pixels under VAL-G001-111; complete the client gate.
+
 ## Genitive pack family — 2026-10-20
 
 - **REQ-G001-154:** Add the user-approved eight-pack Genitive group with 42 focused

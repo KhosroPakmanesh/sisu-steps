@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Partitive worked examples
+
+- Remove the repeated opening grammar rule from 96 worked examples across 23 Partitive lessons. Keep the rule in the grammar teaching and preserve each example's meaning and sentence-specific construction notes. Content versions and learner progress remain compatible.
+
 ### Backup navigation
 
 - Move the complete Backup & restore and Google Drive checkpoint sections from Stats to a dedicated `/backup` page with the standard bottom page spacing after its final container. Add a green Backup tab after Notebook and Stats, and send the header cloud shortcut to the moved Drive section. Preserve all existing controls, confirmations, operation behavior, saved learner data, and backup formats.

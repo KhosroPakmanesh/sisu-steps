@@ -1,5 +1,16 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-21 Partitive worked-example repetition
+
+Apply the approved removal of 96 duplicated opening rules in 23 lessons under
+REQ-G001-152/136. Snapshot the complete current content and record the scoped
+pre-authoring decision before editing. Remove only the inventoried leading step,
+retain grammar rules and all sentence-specific construction notes, and preserve
+all other content and versions. Compare all sources with the snapshot, complete
+the client gate, inspect the affected rendered lessons at 320/768/1440 pixels and
+record actual results under VAL-G001-111 and in the scoped assessment. No commit
+or publication.
+
 ## 2026-10-21 catalog level labels
 
 Apply the user's clarified REQ-G001-154 metadata amendment: classify all existing

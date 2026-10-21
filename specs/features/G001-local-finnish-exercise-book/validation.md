@@ -1,5 +1,25 @@
 # G001 validation
 
+## Partitive worked-example repetition — 2026-10-21
+
+VAL-G001-111 / REQ-G001-152/136: the [scoped assessment](../../content-assessments/partitive-worked-example-repetition.md)
+records both pedagogy decisions and the complete 23-lesson/96-example inventory.
+The 407-file baseline comparison confirms exactly 96 leading duplicate rules
+removed, all 244 sentence-specific steps preserved and all other lesson
+properties unchanged; 384 other content files are byte-identical. Versions,
+exercises, vocabulary, manifests and compatible learner data are preserved.
+
+The uninterrupted client gate passes under Node 24.19.0 with process-local
+`VITEST_MAX_WORKERS=2`, including all 30 source validations, production build,
+513 unit tests and 35 integration tests. All 407 deployed files match source.
+Ad hoc Playwright inspection at 320/768/1440 pixels passes 69 affected lesson
+reads, 288 example checks and 732 exact ordered-step checks: each removed rule
+remains in grammar teaching and is absent from worked examples, with no page
+errors or horizontal overflow. Four representative mobile/desktop captures
+were visually inspected. The shared assessment retains actual limitations;
+evidence is saved in ignored `client/tmp/partitive-worked-example-repetition/`.
+No commit or publication.
+
 ## Uniform installed level — 2026-10-21
 
 **VAL-G001-113 / REQ-G001-154:** all 30 pack manifests and catalog summaries
