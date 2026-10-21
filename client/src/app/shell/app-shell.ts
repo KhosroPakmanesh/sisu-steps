@@ -48,7 +48,7 @@ export class AppShell {
   }
 
   protected async openDriveBackup(): Promise<void> {
-    await this.router.navigateByUrl(`${this.paths.stats}#google-drive-checkpoint`);
+    await this.router.navigateByUrl(`${this.paths.backup}#google-drive-checkpoint`);
     queueMicrotask(() => {
       const heading = this.host.nativeElement.querySelector<HTMLElement>(
         '#google-drive-checkpoint',
@@ -62,7 +62,7 @@ export class AppShell {
     const status = savedAt
       ? `Saved ${new Intl.DateTimeFormat(undefined, { dateStyle: 'medium' }).format(new Date(savedAt))}.`
       : 'Not set up.';
-    return `Open Google Drive backup controls under Stats. ${status}`;
+    return `Open Google Drive backup controls under Backup. ${status}`;
   }
 
   protected driveShortStatus(): string {

@@ -1,6 +1,7 @@
 export const learningPaths = {
   home: '/',
   stats: '/stats',
+  backup: '/backup',
   topicStats: (topicId: string) => ['/stats', topicId] as const,
   topic: (topicId: string) => ['/topics', topicId] as const,
   learn: (topicId: string, testId: string) => ['/learn', topicId, testId] as const,

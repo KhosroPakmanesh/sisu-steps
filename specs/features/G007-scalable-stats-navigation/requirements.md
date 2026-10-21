@@ -1,17 +1,17 @@
 # G007 requirements
 
-Stats overview topic groups follow [REQ-G003-015](../G003-scalable-topic-navigation/requirements.md). The card requirements below apply when their owning group is expanded; cumulative statistics and data controls remain directly visible.
+Stats overview topic groups follow [REQ-G003-015](../G003-scalable-topic-navigation/requirements.md). The card requirements below apply when their owning group is expanded; cumulative statistics remain directly visible on Stats and global data controls remain directly visible on Backup.
 
 ## Navigation requirements
 
-- **REQ-G007-001:** Primary workbook navigation shall contain exactly two destinations in order: **Notebook**, which opens the existing topic catalog, and **Stats**, which opens `/stats`.
+- **REQ-G007-001:** Primary workbook navigation shall contain exactly three destinations in order: **Notebook**, which opens the existing topic catalog, **Stats**, which opens `/stats`, and **Backup**, which opens `/backup`. Backup shall use a green divider tab below Notebook and Stats at desktop/tablet widths and after Stats in the existing horizontal phone navigation.
 - **REQ-G007-002:** The former `/reports` and `/data` routes shall be removed without redirects or compatibility aliases; `/stats` and `/stats/:topicId` shall be the only Stats routes.
-- **REQ-G007-003:** Both Stats routes shall remain lazy-loaded and their segments and path construction shall remain centralized in typed route configuration.
+- **REQ-G007-003:** Both Stats routes and `/backup` shall remain lazy-loaded and their segments and path construction shall remain centralized in typed route configuration.
 
 ## Stats overview requirements
 
-- **REQ-G007-004:** `/stats` shall use **Statistics** as its page heading beneath **Your progress and data**. Its hero shall place a cumulative all-topic summary in the same compact attached assignment-sheet style as topic progress, aligned with the introduction when space permits, center **progress, not perfection** beneath the hero content, and then present the existing **Backup & restore** archive before the **Progress by topic** catalog.
-- **REQ-G007-005:** **Backup & restore** shall retain **Download backup**, **Restore backup**, and **Clear all history**, including their validation, confirmation, feedback, and learner-data consequences. Its section heading shall sit above and outside one complete warm ruled-paper container, matching the hierarchy of **Progress by topic**; the container shall retain its clipped outline, left binding marks, layered right paper edge, and original three-row ordering. G008 adds its optional Google Drive checkpoint in a separate following container.
+- **REQ-G007-004:** `/stats` shall use **Statistics** as its page heading beneath **Your progress**. Its hero shall place a cumulative all-topic summary in the same compact attached assignment-sheet style as topic progress, aligned with the introduction when space permits, center **progress, not perfection** beneath the hero content, and then present the **Progress by topic** catalog. Global backup, restore, Drive, and clear-all controls shall appear only on `/backup`; topic/test history controls remain on their topic Stats pages.
+- **REQ-G007-005:** `/backup` shall use **Backup** as its page heading and compose the existing **Backup & restore** section followed by G008's separate **Google Drive checkpoint** section. **Backup & restore** shall retain **Download backup**, **Restore backup**, and **Clear all history**, including their validation, confirmation, feedback, and learner-data consequences. Its section heading shall sit above and outside one complete warm ruled-paper container; the container shall retain its clipped outline, left binding marks, layered right paper edge, and original three-row ordering. Both sections shall move intact, preserving their existing wording, controls, styling, order, spacing, and operation behavior. The page shall use the canonical bottom inset after its final container, matching other workbook pages. This relocation shall preserve stored learner data, IndexedDB identity/schema, backup formats, and Google authorization behavior without a reset or migration.
 - **REQ-G007-006:** **Progress by topic** shall show the installed packs' shared level range once at the top of the topic container, then present every installed topic pack once in authored order as a compact card showing the pack title, completed-attempt count, average score, unresolved-mistake count, and a **View stats** link. Catalog-owned groups shall render as labeled sections matching the home catalog's authored group and pack order so the two pack lists do not diverge.
 - **REQ-G007-007:** Selecting **View stats** shall open `/stats/:topicId` for only the selected pack without rendering other packs' test ledgers.
 
@@ -25,16 +25,17 @@ Stats overview topic groups follow [REQ-G003-015](../G003-scalable-topic-navigat
 
 ## Quality requirements
 
-- **REQ-G007-013:** Stats shall reuse the existing complete bound backup archive, topic-card grid, assignment summary, ledger, cut-paper action, confirmation, heading hierarchy, and canonical spacing patterns; preserve semantic headings, tables, links, buttons, focus, non-color labels, reduced motion, and remain usable without horizontal overflow from 320 pixels upward.
+- **REQ-G007-013:** Stats and Backup shall reuse the existing complete bound backup archive, topic-card grid, assignment summary, ledger, cut-paper action, confirmation, heading hierarchy, and canonical spacing patterns where applicable; preserve semantic headings, tables, links, buttons, focus, non-color labels, reduced motion, and remain usable without horizontal overflow from 320 pixels upward.
 
 ## Acceptance criteria
 
-- Given any route, when primary navigation is inspected, then only **Notebook** and **Stats** are present in that order.
+- Given any route, when primary navigation is inspected, then **Notebook**, **Stats**, and green **Backup** are present in that order, retaining the existing active-page and focus treatment.
 - Given `/reports` or `/data`, when navigation resolves, then no legacy Reports or Data page or redirect is provided.
-- Given `/stats`, when content is read in document order, then **Backup & restore** precedes **Progress by topic**.
+- Given `/stats`, when content is read in document order, then the cumulative hero precedes **Progress by topic** and global backup controls are absent.
+- Given `/backup`, when content is read in document order, then **Backup & restore** precedes **Google Drive checkpoint**, with all existing local and Drive actions directly available.
 - Given the Statistics hero, when learner state changes, then its cumulative completed attempts, average score, and unresolved mistakes truthfully summarize all installed topics; the handwritten progress note remains centered beneath the introduction and summary.
 - Given **Backup & restore**, when its visual structure is inspected, then its heading sits immediately above and outside one complete ruled, clipped, bound-paper container containing all three action rows.
-- Given the backup archive followed by **Progress by topic**, when their layout is inspected, then the inter-section gap uses balanced canonical section spacing rather than either crowding the heading or recreating the former large empty band.
+- Given the backup archive followed by **Google Drive checkpoint**, when their layout is inspected, then the existing inter-section spacing and complete paper containers are preserved on `/backup`.
 - Given multiple installed packs, when their Stats groups are expanded, then one compact card per pack shows truthful attempts, average, and unresolved mistakes.
 - Given a selected pack, when **View stats** is activated, then only that pack's summary and authored test ledger appear.
 - Given confirmed test-history clearing, when the operation completes, then that test's progress values reset while shared lesson completions, private notes, other tests, and other packs remain unchanged.

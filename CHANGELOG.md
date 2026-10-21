@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+### Backup navigation
+
+- Move the complete Backup & restore and Google Drive checkpoint sections from Stats to a dedicated `/backup` page with the standard bottom page spacing after its final container. Add a green Backup tab after Notebook and Stats, and send the header cloud shortcut to the moved Drive section. Preserve all existing controls, confirmations, operation behavior, saved learner data, and backup formats.
+
 ### Genitive pack family
 
 - Add a Genitive topic with eight packs, 42 lessons, 42 Focused tests, eight cumulative Reviews, 1,104 scored questions and 126 optional practice items. Follow the Partitive lesson presentation, with singular stems, selected plural patterns and standard alternatives, ownership, agreement, questions, postpositions, necessity and a bounded singular-object introduction.

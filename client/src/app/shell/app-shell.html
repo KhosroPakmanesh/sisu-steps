@@ -130,6 +130,13 @@
       ariaCurrentWhenActive="page"
       ><span>Stats</span></a
     >
+    <a
+      class="workbook-folder-tab tab-green"
+      [routerLink]="paths.backup"
+      routerLinkActive="active"
+      ariaCurrentWhenActive="page"
+      ><span>Backup</span></a
+    >
   </nav>
   <router-outlet (activate)="activateRoutedContent($event)" />
   <div class="workbook-page-hardware" aria-hidden="true">

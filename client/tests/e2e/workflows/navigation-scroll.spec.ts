@@ -2,6 +2,7 @@ import { expect, type Page, test } from '@playwright/test';
 import { expandTopicGroup } from '../support/topic-groups';
 
 async function scrollAwayFromTop(page: Page) {
+  if (await page.locator('main.stats-page').count()) await expandTopicGroup(page, 'foundations');
   await page.evaluate(() => window.scrollTo({ top: 600, behavior: 'instant' }));
   await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(100);
 }
@@ -23,6 +24,7 @@ for (const reducedMotion of ['no-preference', 'reduce'] as const) {
 
     for (const [name, path] of [
       ['Stats', '/stats'],
+      ['Backup', '/backup'],
       ['Notebook', '/'],
     ]) {
       await scrollAwayFromTop(page);

@@ -7,6 +7,7 @@ export const routeSegments = {
   review: 'review/:topicId',
   stats: 'stats',
   topicStats: 'stats/:topicId',
+  backup: 'backup',
   privacy: 'privacy',
   terms: 'terms',
 } as const;

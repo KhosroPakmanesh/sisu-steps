@@ -46,9 +46,9 @@
 - **REQ-G008-028:** **Disconnect Google Drive** shall end or revoke current Google authorization without deleting local data or the Drive checkpoint.
 - **REQ-G008-029:** Drive deletion, local clearing, and disconnection shall remain separate operations with separate controls and consequence text.
 
-## Stats archive UI
+## Backup archive UI
 
-- **REQ-G008-030:** The existing **Backup & restore** bound archive shall remain one complete ruled, clipped, left-bound sheet containing only its original **Download backup**, **Restore backup**, and **Clear all history** rows in that order.
+- **REQ-G008-030:** The existing **Backup & restore** bound archive shall appear on `/backup` and remain one complete ruled, clipped, left-bound sheet containing only its original **Download backup**, **Restore backup**, and **Clear all history** rows in that order.
 - **REQ-G008-031:** A separate **Google Drive checkpoint** section shall appear immediately after the existing archive. Its heading and optional-account explanation shall sit above and outside its own complete ruled, clipped, left-bound container, which shall expose **Back up to Google Drive**, **Restore from Google Drive**, and **Delete Drive backup** without an accordion, disclosure, hidden menu, or settings route.
 - **REQ-G008-032:** **Disconnect Google Drive** shall be a lower-emphasis, non-destructive Drive-management action.
 - **REQ-G008-033:** The Drive group shall disclose that the checkpoint includes private notes, uses hidden application storage, does not read the Google profile, and has no additional Sisu Steps password encryption.
@@ -65,7 +65,7 @@
 - **REQ-G008-039:** The control shall align its compact status with the Day/Automatic/Night icon row, place its cloud form in the lower hardware row, and match the Appearance switch hardware's visible size, bottom alignment, boldness, silver-metal palette, highlights, dark edge, and cast shadow while retaining a background-free outer control; it shall use upload and check marks for its two saved states.
 - **REQ-G008-040:** Before a successful backup observed by the current browser, the control shall use the neutral cloud-upload form with compact **Not set** text and without warning, failure, or disconnected styling; its accessible name shall include **Not set up**.
 - **REQ-G008-041:** After success, the control shall use the cloud-check form and show only the locally observed short date; its accessible name shall include **Saved** and that date without claiming current authorization or remote verification.
-- **REQ-G008-042:** Activating the header control shall navigate to the Drive checkpoint group under Stats and focus its heading. It shall not upload from the shell.
+- **REQ-G008-042:** Activating the header control shall navigate to `/backup#google-drive-checkpoint` and focus its heading. The accessible name shall identify Backup as the destination. It shall not upload from the shell.
 - **REQ-G008-043:** The brand, Drive control, and Appearance switch shall remain on one header row whenever their measured widths fit, including at 375 pixels, and shall wrap only when necessary without overlap, clipping, horizontal scrolling, reduced touch targets, or hidden labels from 320 pixels upward and under enlarged text.
 - **REQ-G008-044:** Loading, success, compatibility, authorization, empty, and failure feedback shall use accessible live regions and shall not expose tokens, raw provider responses, backup contents, answers, or note text.
 - **REQ-G008-045:** Overwrite, restore, Drive deletion, and local clearing confirmations shall use the shared loose-sheet dialog. Its close control, Escape, and backdrop shall cancel safely and restore focus.

@@ -57,6 +57,14 @@ export const routes: Routes = [
     title: 'Stats · Sisu Steps',
   },
   {
+    path: routeSegments.backup,
+    loadComponent: () =>
+      import('@/features/learning/learner-data/overview/backup.page').then(
+        (module) => module.BackupPage,
+      ),
+    title: 'Backup · Sisu Steps',
+  },
+  {
     path: routeSegments.privacy,
     loadComponent: () =>
       import('@/features/legal/privacy/privacy.page').then((module) => module.PrivacyPage),

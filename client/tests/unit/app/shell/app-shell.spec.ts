@@ -23,7 +23,7 @@ class TestRoutePage implements RouteReadiness {
 }
 
 @Component({ template: '<main><h2 id="google-drive-checkpoint" tabindex="-1">Drive</h2></main>' })
-class StatsAnchorPage {}
+class BackupAnchorPage {}
 
 describe('AppShell', () => {
   afterEach(() => {
@@ -79,8 +79,13 @@ describe('AppShell', () => {
     expect(folder?.querySelector('.shell-route-loading')).toBeNull();
     expect(element.querySelector('.site-header nav')).toBeNull();
     expect(folder?.querySelector('nav[aria-label="Primary navigation"]')).not.toBeNull();
-    expect(tabs.map((tab) => tab.classList.item(1))).toEqual(['tab-blue', 'tab-yellow']);
-    expect(tabs.map((tab) => tab.textContent?.trim())).toEqual(['Notebook', 'Stats']);
+    expect(tabs.map((tab) => tab.classList.item(1))).toEqual([
+      'tab-blue',
+      'tab-yellow',
+      'tab-green',
+    ]);
+    expect(tabs.map((tab) => tab.textContent?.trim())).toEqual(['Notebook', 'Stats', 'Backup']);
+    expect(tabs.map((tab) => tab.getAttribute('href'))).toEqual(['/', '/stats', '/backup']);
     expect(folder?.querySelector('.workbook-page-clip')).not.toBeNull();
     const driveControl = element.querySelector('.drive-backup-control');
     expect(driveControl?.textContent?.trim()).toBe('Not set');
@@ -159,7 +164,7 @@ describe('AppShell', () => {
     window.localStorage.setItem(driveBackupStatusStorageKey, '2026-09-22T10:00:00.000Z');
     await TestBed.configureTestingModule({
       imports: [AppShell],
-      providers: [provideRouter([{ path: 'stats', component: StatsAnchorPage }])],
+      providers: [provideRouter([{ path: 'backup', component: BackupAnchorPage }])],
     }).compileComponents();
     const fixture = TestBed.createComponent(AppShell);
     fixture.detectChanges();
@@ -174,7 +179,7 @@ describe('AppShell', () => {
 
     await vi.waitFor(() => {
       fixture.detectChanges();
-      expect(TestBed.inject(Router).url).toBe('/stats#google-drive-checkpoint');
+      expect(TestBed.inject(Router).url).toBe('/backup#google-drive-checkpoint');
       expect((document.activeElement as HTMLElement | null)?.id).toBe('google-drive-checkpoint');
     });
   });

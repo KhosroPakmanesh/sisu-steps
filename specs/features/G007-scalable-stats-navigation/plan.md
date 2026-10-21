@@ -11,8 +11,9 @@ Keep progress statistics and learner-data controls usable as the installed langu
 
 ## Included
 
-- Two primary workbook destinations named **Notebook** and **Stats**.
-- A new lazy `/stats` route whose **Statistics** hero pairs its introduction with cumulative all-topic statistics, centers the handwritten progress note beneath them, and presents **Backup & restore** before **Progress by topic**.
+- Three primary workbook destinations named **Notebook**, **Stats**, and **Backup**, using blue, yellow, and green tabs.
+- A new lazy `/stats` route whose **Statistics** hero pairs its introduction with cumulative all-topic statistics, centers the handwritten progress note beneath them, and presents **Progress by topic** without global backup controls.
+- A lazy `/backup` route that composes the existing **Backup & restore** and **Google Drive checkpoint** sections intact, including Clear all history and all Drive management actions. The header cloud shortcut targets and focuses the moved Drive heading.
 - One compact Stats card per installed topic pack with attempts, average, unresolved mistakes, and a dedicated-page action.
 - The same validated, catalog-owned group sections used by the topic catalog, preserving authored group and pack order.
 - A new lazy `/stats/:topicId` route with pack-scoped summary statistics, authored test rows, mistake practice, test-history clearing, and topic-history clearing.
@@ -29,11 +30,11 @@ Keep progress statistics and learner-data controls usable as the installed langu
 
 ## Implementation steps
 
-1. Add typed Stats routes and replace the primary navigation labels and destinations.
-2. Extract the existing backup/restore/clear-all archive into a reusable Stats-owned composition, retain the complete ruled, clipped, bound container around its actions, and preserve the data-management services.
-3. Build the Stats overview with a reference-style cumulative assignment sheet in the hero, the centered handwritten progress note, the archive first, and a responsive grouped topic summary grid second.
+1. Keep typed Stats routes and add the lazy typed Backup route and green third primary tab after Stats.
+2. Compose the existing backup/restore/clear-all archive and following Drive checkpoint component on the learner-data-owned Backup page, preserving their complete containers, contents, behavior, services, and stored data.
+3. Build the Stats overview with a reference-style cumulative assignment sheet in the hero, the centered handwritten progress note, and a responsive grouped topic summary grid. Remove global data controls and adjust only the introduction that referred to them.
 4. Move the progress ledger into a topic-scoped Stats page and place existing test/topic clearing actions with their owning statistics.
-5. Add unknown-topic recovery, focused component coverage, and end-to-end navigation, clearing, responsive, and keyboard checks.
+5. Preserve unknown-topic recovery, move archive composition coverage to Backup, and update end-to-end navigation, header focus, backup/restore, clearing, responsive, and keyboard checks.
 6. Update design-system guidance, validation evidence, and the changelog.
 
 ## Risks

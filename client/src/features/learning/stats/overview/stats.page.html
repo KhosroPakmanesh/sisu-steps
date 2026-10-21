@@ -2,11 +2,9 @@
   <header class="stats-hero">
     <a class="back-link" [routerLink]="paths.home">← Back to Notebook</a>
     <div class="stats-hero-copy">
-      <p class="eyebrow">Your progress and data</p>
+      <p class="eyebrow">Your progress</p>
       <h1>Statistics</h1>
-      <p>
-        Keep a safe copy of your work, or choose one topic to inspect and manage its saved history.
-      </p>
+      <p>Choose one topic to inspect and manage its saved history.</p>
     </div>
 
     <section class="cumulative-summary" aria-labelledby="cumulative-stats-heading">
@@ -29,9 +27,6 @@
 
     <p class="notebook-note" aria-hidden="true">progress, not perfection</p>
   </header>
-
-  <app-backup-restore />
-  <app-drive-checkpoint />
 
   @if (store.packSummaries().length > 0) {
     <section class="topic-catalog stats-catalog" aria-labelledby="topic-stats-heading">

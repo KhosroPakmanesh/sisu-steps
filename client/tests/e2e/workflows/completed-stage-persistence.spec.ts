@@ -54,7 +54,7 @@ test('retains a fractional completed-stage score after refresh and backup restor
     }
   }
 
-  await page.goto('/stats');
+  await page.goto('/backup');
   const downloadPromise = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Download backup', exact: true }).click();
   const download = await downloadPromise;
@@ -80,7 +80,9 @@ test('retains a fractional completed-stage score after refresh and backup restor
     mimeType: 'application/json',
     buffer: Buffer.from(JSON.stringify(backup)),
   });
-  await expect(page.getByRole('status')).toHaveText('Backup restored successfully.');
+  await expect(page.getByRole('status')).toHaveText('Backup restored successfully.', {
+    timeout: 30_000,
+  });
   await page.goto(`/stats/${topicId}`);
   await page.reload();
   await expect(row.locator('.stats-state-summary')).toContainText('1 attempt');

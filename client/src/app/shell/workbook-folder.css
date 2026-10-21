@@ -151,6 +151,10 @@
   background-color: var(--folder-tab-yellow);
 }
 
+.workbook-folder-tab.tab-green {
+  background-color: var(--folder-tab-green);
+}
+
 .workbook-folder > router-outlet + * {
   display: contents;
 }
@@ -298,7 +302,7 @@
     position: static;
     z-index: 12;
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: var(--space-2);
     width: 100%;
     height: auto;

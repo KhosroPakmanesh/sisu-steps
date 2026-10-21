@@ -1,0 +1,28 @@
+:host {
+  display: block;
+}
+
+.backup-page {
+  padding-bottom: var(--space-8);
+}
+
+.backup-hero {
+  display: grid;
+  gap: var(--space-5);
+  padding: 3rem 0 var(--space-8);
+}
+
+.backup-hero .back-link {
+  justify-self: start;
+}
+
+.backup-hero h1 {
+  margin: var(--space-2) 0;
+}
+
+@media (width < 48rem) {
+  .backup-hero {
+    gap: var(--space-4);
+    padding: var(--space-5) 0 var(--space-4);
+  }
+}

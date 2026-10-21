@@ -103,6 +103,7 @@ for (const appearance of ['Day', 'Night']) {
           `/learn/${TOPIC}/location-transfer-review`,
           STUDY,
           '/stats',
+          '/backup',
           `/stats/${TOPIC}`,
           `/mistakes/${TOPIC}`,
           `/review/${TOPIC}`,
@@ -161,7 +162,7 @@ for (const appearance of ['Day', 'Night']) {
       await automatic.focus();
       await page.keyboard.press('ArrowRight');
       await expect(page.getByRole('radio', { name: 'Night', exact: true })).toBeChecked();
-      for (const name of ['Notebook', 'Stats']) {
+      for (const name of ['Notebook', 'Stats', 'Backup']) {
         const link = page.getByRole('link', { name, exact: true });
         await link.scrollIntoViewIfNeeded();
         const bounds = await link.locator('span').boundingBox();

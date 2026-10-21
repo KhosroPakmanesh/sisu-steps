@@ -39,6 +39,7 @@ client/
           backup-restore/
           confirmation/
           drive/
+          overview/
         shared/
           answer-entry/
           content/
@@ -81,7 +82,7 @@ client/
 
 - Keep `client/src/main.ts` small; compose providers, routes, and shell behavior under `client/src/app`.
 - Keep learning behavior under `learning` and choose `topics`, `lessons`, `study`, `stats`, or `learner-data` before a technical role.
-- Keep public Privacy Policy and Terms of Service pages under `features/legal`. Keep optional manual Drive recovery under `features/learning/learner-data/drive`; Stats composes its controls without a separate learner-data route.
+- Keep public Privacy Policy and Terms of Service pages under `features/legal`. Keep optional manual Drive recovery under `features/learning/learner-data/drive`. The learner-data overview composes global file and Drive controls on the lazy `/backup` route; Stats retains topic/test history controls.
 - Keep topic catalog summaries, continue-learning selection, and topic details under `topics`; keep computed progress summaries and their presentation under learning-shared progress and `stats` respectively.
 - Keep backup, restore, and scoped history clearing under `learner-data`. Sisu Steps has no report entity or report workflow.
 - Keep modules used by several learning workflows under `features/learning/shared`; learner state, IndexedDB, learning navigation, notes, content, and progress contracts are product-specific and belong there.
@@ -99,7 +100,7 @@ client/
 
 - App composition may import learning entry points, learning-shared providers, design-system foundations, and root browser infrastructure.
 - A learning workflow may import its own modules, `features/learning/shared`, design-system foundations, and root browser adapters.
-- `stats` may compose learner-data controls; no other sibling-workflow implementation dependency is allowed.
+- `stats` may compose learner-data topic/test history controls; the Backup page composes global controls within `learner-data`. No other sibling-workflow implementation dependency is allowed.
 - `features/learning/shared` must not import a workflow implementation.
 - Root `shared` and `design-system` must not import from `app` or `features`.
 - Features must not import app implementations, and circular workflow dependencies are prohibited.

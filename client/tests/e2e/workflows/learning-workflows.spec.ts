@@ -211,8 +211,8 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }, t
   await expect(paper).toBeVisible();
   await expect(page.locator('.site-header nav')).toHaveCount(0);
   await expect(navigation).toBeVisible();
-  await expect(tabs).toHaveCount(2);
-  await expect(tabs).toHaveText(['Notebook', 'Stats']);
+  await expect(tabs).toHaveCount(3);
+  await expect(tabs).toHaveText(['Notebook', 'Stats', 'Backup']);
   await expect(clip).toBeVisible();
 
   const [brandBox, appearanceBox] = await Promise.all([
@@ -290,7 +290,7 @@ test('wraps the unchanged paper in a compact clipped folder', async ({ page }, t
   expect(tabBoxes.map((tab) => tab.y)).toEqual(
     [...tabBoxes.map((tab) => tab.y)].sort((a, b) => a - b),
   );
-  expect(tabColors).toEqual(['rgb(90, 155, 213)', 'rgb(224, 185, 41)']);
+  expect(tabColors).toEqual(['rgb(90, 155, 213)', 'rgb(224, 185, 41)', 'rgb(134, 185, 120)']);
   expect(clipBox?.x ?? 0).toBeGreaterThan((paperBox?.x ?? 0) + (paperBox?.width ?? 0) - 40);
   expect(clipBox?.width ?? 0).toBeGreaterThanOrEqual(viewportWidth <= 560 ? 22 : 34);
   const clipGripInsets = await clip.evaluate((element) => {
@@ -397,7 +397,7 @@ test('gives phones a full-width paper-only shell', async ({ page }, testInfo) =>
       await expect(deskObject, `hidden desk object at ${width}px`).toBeHidden();
     }
     await expect(navigation, `navigation at ${width}px`).toBeVisible();
-    await expect(tabs, `navigation links at ${width}px`).toHaveCount(2);
+    await expect(tabs, `navigation links at ${width}px`).toHaveCount(3);
 
     const [paperBox, navigationBox, tabBoxes, paperSpacing] = await Promise.all([
       paper.boundingBox(),
@@ -512,7 +512,7 @@ test('keeps phone navigation in flow and study actions within reach without chan
       return (box?.y ?? 0) + (box?.height ?? 0);
     })
     .toBeLessThanOrEqual(0);
-  await expect(navigation.getByRole('link')).toHaveCount(2);
+  await expect(navigation.getByRole('link')).toHaveCount(3);
 
   await page.goto(`/topics/${TOPIC_SEGMENT}`);
   const topicOverview = page.locator('.topic-overview');
@@ -906,7 +906,7 @@ test('sizes cut-paper actions to their labels across app routes', async ({ page 
     await expectLabelSizedAction(page.getByRole('button', { name: 'Check answer' }));
     await expectLabelSizedAction(page.getByRole('button', { name: /Show answer/ }));
 
-    await page.goto('/stats');
+    await page.goto('/backup');
     await expectLabelSizedAction(page.getByRole('button', { name: 'Download backup' }));
     await expectLabelSizedAction(page.locator('.file-button'));
     const clearAll = page.getByRole('button', { name: 'Clear all history' });
@@ -1049,7 +1049,7 @@ test('shares responsive modal and vocabulary-card styling with safe dismissal', 
     cheatVocabularyCard,
   );
 
-  await page.goto('/stats');
+  await page.goto('/backup');
   const clearHistory = page.getByRole('button', { name: 'Clear all history' });
   await clearHistory.click();
   const confirmation = page.getByRole('dialog', { name: 'Clear all learner history?' });
@@ -1099,7 +1099,7 @@ test('places compact action groups according to their page role', async ({ page 
     await page.goto(`/study/${TOPIC_SEGMENT}/vowel-families`);
     await expectActionGroupPlacement(page.locator('.answer-actions'), 'end');
 
-    await page.goto('/stats');
+    await page.goto('/backup');
     await expectActionGroupPlacement(page.locator('.archive-action-row').first(), 'end');
     await page.getByRole('button', { name: 'Clear all history' }).click();
     await expectActionGroupPlacement(page.locator('.confirmation-actions'), 'end');
@@ -1842,6 +1842,7 @@ test('uses dedicated notebook objects for repeated surfaces and return links', a
       await cumulativeOverview.evaluate((element) => element.getBoundingClientRect().height),
     ).toBeLessThan(200);
   }
+  await page.goto('/backup');
   const backupArchive = page.locator('.backup-archive');
   await expectClippedPaper(backupArchive);
   const backupPattern = await backupArchive.evaluate((element) => ({
@@ -1879,7 +1880,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation).toContainText('Notebook');
   await expect(primaryNavigation).toContainText('Stats');
-  await expect(primaryNavigation.getByRole('link')).toHaveCount(2);
+  await expect(primaryNavigation.getByRole('link')).toHaveCount(3);
   await expect(page.locator('.site-header nav')).toHaveCount(0);
   const headerLayout = await page.locator('.header-tools').evaluate((header) => {
     const controls = [...header.querySelectorAll('.appearance-options label')];
@@ -1961,7 +1962,7 @@ test('keeps required content inside clipped surfaces at 320 pixels', async ({ pa
     await expectHorizontallyInside(overview, summary);
   }
 
-  await page.goto('/stats');
+  await page.goto('/backup');
   await expect(page.getByRole('link', { name: 'Back to Notebook' })).toBeVisible();
   const archive = page.locator('.backup-archive');
   await expectNoInternalHorizontalOverflow(archive);
@@ -2011,7 +2012,7 @@ test('keeps topic stats usable at the 320-pixel minimum width', async ({ page })
   );
 });
 
-test('uses a deliberate confirmation sheet for destructive clearing', async ({ page }) => {
+test('keeps cumulative statistics and topic progress on the Stats overview', async ({ page }) => {
   await page.goto('/stats');
 
   await expect(page.getByRole('heading', { level: 1 })).toHaveText('Statistics');
@@ -2037,6 +2038,17 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
   if (heroGeometry.columns > 1) {
     expect(heroGeometry.summaryLeft).toBeGreaterThan(heroGeometry.copyRight);
   }
+  await expect(page.locator('app-backup-restore, app-drive-checkpoint')).toHaveCount(0);
+  await expect(page.getByRole('heading', { name: 'Progress by topic' })).toBeVisible();
+  await expandTopicGroups(page);
+  const catalog = await page.request.get('/content/index.json');
+  const { packs } = (await catalog.json()) as { packs: unknown[] };
+  await expect(page.locator('.stats-topic-card')).toHaveCount(packs.length);
+});
+
+test('uses a deliberate confirmation sheet for destructive clearing', async ({ page }) => {
+  await page.goto('/backup');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Backup');
   await expect(page.getByRole('region', { name: 'Backup & restore' })).toBeVisible();
   const backupHeading = page.getByRole('heading', { name: 'Backup & restore' });
   const backupArchive = page.locator('.backup-archive');
@@ -2046,9 +2058,6 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     'accept',
     'application/json,.json',
   );
-  await expect(page.getByRole('heading', { name: 'Progress by topic' })).toBeVisible();
-  await expandTopicGroups(page);
-  await expect(page.locator('.stats-topic-card')).toHaveCount(22);
   await expect(page.locator('.backup-archive .clear-all-action-row')).toBeVisible();
   await expect(page.locator('.clear-all-slip')).toHaveCount(0);
   await expect(page.locator('.settings-card')).toHaveCount(0);
@@ -2079,7 +2088,6 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     backupArchive.boundingBox(),
     page.locator('.drive-section-heading').boundingBox(),
     page.locator('.drive-checkpoint-archive').boundingBox(),
-    page.getByRole('heading', { name: 'Progress by topic' }).boundingBox(),
   ]);
   expect(sectionSpacing.every(Boolean)).toBe(true);
   expect(sectionSpacing[1]!.y).toBeGreaterThan(sectionSpacing[0]!.y + sectionSpacing[0]!.height);
@@ -2087,14 +2095,10 @@ test('uses a deliberate confirmation sheet for destructive clearing', async ({ p
     sectionSpacing[2]!.y - (sectionSpacing[1]!.y + sectionSpacing[1]!.height);
   const driveHeadingToArchiveGap =
     sectionSpacing[3]!.y - (sectionSpacing[2]!.y + sectionSpacing[2]!.height);
-  const driveArchiveToProgressGap =
-    sectionSpacing[4]!.y - (sectionSpacing[3]!.y + sectionSpacing[3]!.height);
   expect(localArchiveToDriveHeadingGap).toBeGreaterThanOrEqual(24);
   expect(localArchiveToDriveHeadingGap).toBeLessThanOrEqual(96);
   expect(driveHeadingToArchiveGap).toBeGreaterThanOrEqual(16);
   expect(driveHeadingToArchiveGap).toBeLessThanOrEqual(96);
-  expect(driveArchiveToProgressGap).toBeGreaterThanOrEqual(24);
-  expect(driveArchiveToProgressGap).toBeLessThanOrEqual(96);
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(
     true,
   );
@@ -2419,12 +2423,13 @@ test('keeps the workbook world immediate when reduced motion is requested', asyn
     .poll(() => noteEditorLabel.evaluate((element) => getComputedStyle(element).transform))
     .toBe('none');
 
-  await page.goto('/stats');
-  await expandTopicGroup(page, 'foundations');
-  for (const surface of [
-    page.locator('.backup-archive'),
-    page.locator('.stats-topic-card').first(),
+  for (const [path, selector] of [
+    ['/backup', '.backup-archive'],
+    ['/stats', '.stats-topic-card'],
   ]) {
+    await page.goto(path);
+    if (path === '/stats') await expandTopicGroup(page, 'foundations');
+    const surface = page.locator(selector).first();
     await surface.hover();
     await expect
       .poll(() => surface.evaluate((element) => getComputedStyle(element).transform))

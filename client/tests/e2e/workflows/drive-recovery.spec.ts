@@ -13,6 +13,22 @@ test('keeps Google Drive recovery explicit, optional, and focused from the heade
 
   await page.goto('/stats');
   await expect(page.locator('.topic-group-toggle').first()).toBeVisible();
+  await expect(page.locator('app-backup-restore, app-drive-checkpoint')).toHaveCount(0);
+  const navigation = page.getByRole('navigation', { name: 'Primary navigation' });
+  await expect(navigation.getByRole('link')).toHaveText(['Notebook', 'Stats', 'Backup']);
+  const backupTab = navigation.getByRole('link', { name: 'Backup', exact: true });
+  await expect(backupTab).toHaveClass(/tab-green/u);
+  await backupTab.focus();
+  await page.keyboard.press('Enter');
+  await expect(page).toHaveURL('/backup');
+  await expect(backupTab).toHaveAttribute('aria-current', 'page');
+  await expect(navigation.getByRole('link', { name: 'Stats', exact: true })).not.toHaveAttribute(
+    'aria-current',
+    'page',
+  );
+  await expect(page.locator('main')).toBeFocused();
+  await page.reload();
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Backup');
   expect(
     await page.evaluate(
       () =>
@@ -48,10 +64,16 @@ test('keeps Google Drive recovery explicit, optional, and focused from the heade
   ).toBe(true);
   expect(googleRequests).toEqual([]);
 
-  await page.getByRole('button', { name: 'Open Google Drive backup controls under Stats' }).click();
-  await expect(page).toHaveURL(/\/stats#google-drive-checkpoint$/u);
+  await page.goto('/stats');
+  await page
+    .getByRole('button', { name: 'Open Google Drive backup controls under Backup' })
+    .click();
+  await expect(page).toHaveURL(/\/backup#google-drive-checkpoint$/u);
   await expect(page.locator('#google-drive-checkpoint')).toBeFocused();
   expect(googleRequests).toEqual([]);
+
+  await page.reload();
+  await expect(driveHeading).toBeFocused();
 
   await driveArchive.getByRole('button', { name: 'Back up to Google Drive' }).click();
   await expect(driveArchive.getByRole('alert')).toContainText(

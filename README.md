@@ -22,9 +22,9 @@ Sisu Steps is therefore designed as an interactive exercise book rather than a c
 
 The same learning journey is available at both sizes: choose a topic in **Notebook**, read a lesson or try optional unscored practice, complete a Focused test or mixed Review, revisit mistakes, and check progress in **Stats**. The app keeps the same content, feedback, and progress behavior across desktop and mobile layouts.
 
-On wide screens, Notebook and Stats appear as tabs beside an open folder and workbook. On phones, the folder decoration gives way to a simpler paper layout with a horizontal, touch-friendly navigation row. During a phone study session, the answer and continue actions stay within reach without covering the exercise or feedback. Controls remain usable with a keyboard and with touch.
+On wide screens, Notebook, Stats, and Backup appear as tabs beside an open folder and workbook. On phones, the folder decoration gives way to a simpler paper layout with a horizontal, touch-friendly navigation row. During a phone study session, the answer and continue actions stay within reach without covering the exercise or feedback. Controls remain usable with a keyboard and with touch.
 
-Progress is stored for the browser profile and origin (scheme, hostname and port) in use; it does not automatically move between devices. The JSON backup and restore controls let learners preserve or transfer it deliberately.
+Progress is stored for the browser profile and origin (scheme, hostname and port) in use; it does not automatically move between devices. The Backup tab contains the JSON backup and restore controls and optional Google Drive checkpoint controls so learners can preserve or transfer it deliberately.
 
 ## Content accuracy and contributing
 
@@ -111,7 +111,7 @@ The client uses a feature-slice structure. This is similar to vertical-slice arc
 - **Stats:** progress overview, topic statistics, test progress, and history-derived summaries.
 - **Learner data:** backup, restore, and history clearing.
 
-The separate Legal feature owns the public Privacy Policy and Terms of Service pages. Topics, Lessons, Study, and Stats keep their route pages and workflow code together; Stats composes the Learner data controls. Code used by several learning journeys—including learner-state contracts, IndexedDB persistence, navigation, and derived progress summaries—lives in Learning-shared. Product-agnostic browser infrastructure lives in root shared; the app and design-system areas own the shell and reusable presentation.
+The separate Legal feature owns the public Privacy Policy and Terms of Service pages. Topics, Lessons, Study, and Stats keep their route pages and workflow code together; Learner data owns the dedicated Backup page and its global controls; Stats composes only topic/test history controls. Code used by several learning journeys—including learner-state contracts, IndexedDB persistence, navigation, and derived progress summaries—lives in Learning-shared. Product-agnostic browser infrastructure lives in root shared; the app and design-system areas own the shell and reusable presentation.
 
 ```mermaid
 flowchart TB

@@ -3,7 +3,7 @@ import { routes } from '@/app/app.routes';
 import { routeSegments } from '@/app/routes.config';
 
 describe('application routes', () => {
-  it('keeps the public learning, Stats, and policy route contract', () => {
+  it('keeps the public learning, Stats, Backup, and policy route contract', () => {
     expect(routeSegments).toEqual({
       home: '',
       topic: 'topics/:topicId',
@@ -13,6 +13,7 @@ describe('application routes', () => {
       review: 'review/:topicId',
       stats: 'stats',
       topicStats: 'stats/:topicId',
+      backup: 'backup',
       privacy: 'privacy',
       terms: 'terms',
     });
@@ -25,6 +26,7 @@ describe('application routes', () => {
       routeSegments.review,
       routeSegments.topicStats,
       routeSegments.stats,
+      routeSegments.backup,
       routeSegments.privacy,
       routeSegments.terms,
       '**',

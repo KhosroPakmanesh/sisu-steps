@@ -8,6 +8,7 @@ const LESSON = `/learn/${TOPIC}/vowel-families`;
 const REVIEW_LESSON = `/learn/${TOPIC}/location-transfer-review`;
 const STUDY = `/study/${TOPIC}/vowel-families`;
 const STATS = '/stats';
+const BACKUP = '/backup';
 const TOPIC_STATS = `/stats/${TOPIC}`;
 
 async function open(page: Page, path: string) {
@@ -200,7 +201,7 @@ for (const theme of ['Day', 'Night']) {
         );
       }
 
-      for (const route of [TOPIC_PAGE, LESSON, STUDY, STATS, TOPIC_STATS]) {
+      for (const route of [TOPIC_PAGE, LESSON, STUDY, STATS, BACKUP, TOPIC_STATS]) {
         await open(page, route);
       }
 
@@ -429,13 +430,14 @@ for (const theme of ['Day', 'Night']) {
           '.reader-heading, .teaching-section, .worked-examples, .lesson-vocabulary, .mistake-notes, .lesson-practice',
         ],
         [STUDY, '.exercise-card'],
-        [STATS, '.backup-archive, .topic-grid'],
+        [STATS, '.topic-grid'],
+        [BACKUP, '.backup-archive, .drive-checkpoint-archive'],
         [TOPIC_STATS, '.stats-overview, .ledger-sheet'],
       ];
 
       for (const [route, stationerySelector] of routes) {
         await open(page, route);
-        if (route === STATS) {
+        if (route === BACKUP) {
           await page.locator('.button.danger:not(:disabled)').first().waitFor();
         }
         samples.stationery.push(
@@ -590,7 +592,7 @@ for (const theme of ['Day', 'Night']) {
         await page.locator('.stats-name > .sequence-marker').first().evaluate(markerRecipe),
       ).toEqual(expected);
 
-      await open(page, STATS);
+      await open(page, BACKUP);
       const archiveMarkers = page.locator('.archive-number.sequence-marker');
       await expect(
         page.locator('.archive-actions > .archive-action-row > .archive-number.sequence-marker'),
@@ -790,7 +792,7 @@ for (const theme of ['Day', 'Night']) {
     test('keeps danger semantic across sizes and correction actions in the shared family', async ({
       page,
     }) => {
-      await open(page, STATS);
+      await open(page, BACKUP);
       const standard = page.getByRole('button', { name: 'Clear all history', exact: true });
       const danger = await standard.evaluate((element) => getComputedStyle(element).color);
       await open(page, TOPIC_STATS);
@@ -904,13 +906,13 @@ for (const theme of ['Day', 'Night']) {
           ? page.locator('.lesson-picker select')
           : page.locator('.lesson-list button').first();
       await expectVisibleInsetFocus(page, lessonControl);
-      await open(page, STATS);
+      await open(page, BACKUP);
       await expectVisibleInsetFocus(
         page,
         page.locator('.file-button'),
         page.locator('.file-button input'),
       );
-      await expectVisibleInsetFocus(page, page.getByRole('link', { name: 'Stats', exact: true }));
+      await expectVisibleInsetFocus(page, page.getByRole('link', { name: 'Backup', exact: true }));
       await open(page, '/');
       await expectVisibleInsetFocus(page, page.locator('.topic-group-toggle').first());
     });

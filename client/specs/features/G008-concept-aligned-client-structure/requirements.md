@@ -3,7 +3,7 @@
 ## Product-language requirements
 
 - **REQ-G008-001:** Client production code, tests, and current technical guidance shall describe the learner-facing concepts as topics, lessons, study, progress statistics, and learner data; they shall not model a persisted or generated `Report` entity.
-- **REQ-G008-002:** The existing `/`, `/topics/:topicId`, `/learn/:topicId/:testId`, `/study/:topicId/:testId`, `/mistakes/:topicId`, `/review/:topicId`, `/stats`, and `/stats/:topicId` routes and their learner-visible behavior shall remain unchanged.
+- **REQ-G008-002:** The existing `/`, `/topics/:topicId`, `/learn/:topicId/:testId`, `/study/:topicId/:testId`, `/mistakes/:topicId`, `/review/:topicId`, `/stats`, and `/stats/:topicId` routes and their learner-visible behavior shall remain unchanged except for the global backup controls moved to the added `/backup` route under root REQ-G007-001/005.
 - **REQ-G008-003:** The refactor shall preserve IndexedDB database names, object stores, keys, record shapes, schema versions, backup compatibility, stable content IDs, authored content, and content versions.
 
 ## Source-ownership requirements

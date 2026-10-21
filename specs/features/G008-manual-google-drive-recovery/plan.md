@@ -35,7 +35,7 @@ Let one local learner manually save one recovery checkpoint in Google Drive and 
 - Client learner-data backup parsing, validation, normalization, and atomic replacement.
 - Browser Google authorization and Drive I/O adapters.
 - Generated local and deployment runtime configuration for the public OAuth client ID.
-- Stats local backup archive, separate following Drive checkpoint container, and shared confirmation sheet.
+- Dedicated Backup page with the intact local backup archive, separate following Drive checkpoint container, and shared confirmation sheet.
 - Application header, footer wording, design-system guidance, and responsive behavior.
 - Directly loadable public Privacy Policy and Terms of Service pages for the existing OAuth project's production consent screen.
 - Unit, integration, and browser validation plus deployment documentation.
@@ -46,8 +46,8 @@ Let one local learner manually save one recovery checkpoint in Google Drive and 
 2. Make file and Drive restore share one canonical parser, compatibility policy, preview, and atomic replacement operation.
 3. Add browser-only Google authorization and hidden-app-data Drive adapters behind client I/O boundaries, with the public client ID generated from ignored local or deployment configuration rather than tracked source edits.
 4. Add a manual checkpoint service for inspect, create, replace, restore, delete, and disconnect operations.
-5. Preserve the existing bound Stats archive, add a separate bound Drive container immediately after it, and reuse the shared confirmation workflow without adding another route or settings page.
-6. Add the compact header shortcut and make local-versus-Drive wording truthful.
+5. Preserve the existing bound local archive and separate following Drive container intact on `/backup`, reusing the shared confirmation workflow and all existing operation behavior.
+6. Keep the compact header shortcut targeting `/backup#google-drive-checkpoint` with heading focus and truthful local-versus-Drive wording.
 7. Validate local independence, token privacy, provider failures, compatibility loss, atomicity, accessibility, and responsive layout.
 
 ## Risks
