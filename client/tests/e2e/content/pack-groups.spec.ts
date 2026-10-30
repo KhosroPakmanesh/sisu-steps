@@ -56,6 +56,33 @@ const expectedGroups: ExpectedGroup[] = [
       'partitive-pronouns-questions',
     ],
   },
+  {
+    id: 'genitive',
+    title: 'Genitive',
+    packs: [
+      'genitive-forms',
+      'genitive-forms-singular-families',
+      'genitive-forms-plural-jen-ien',
+      'genitive-forms-plural-iden',
+      'genitive-forms-plural-ten',
+      'genitive-ownership',
+      'genitive-adjectives-pronouns-questions',
+      'genitive-constructions',
+    ],
+  },
+  {
+    id: 'question-words-and-answers',
+    title: 'Question words and answers',
+    packs: [
+      'who-and-what-questions',
+      'place-and-direction-questions',
+      'time-questions',
+      'how-and-why-questions',
+      'description-colour-appearance-questions',
+      'nationality-questions',
+      'negative-information-questions',
+    ],
+  },
 ];
 
 test('groups catalog topic cards into labeled sections in pack order', async ({ page }) => {
@@ -79,7 +106,7 @@ test('groups catalog topic cards into labeled sections in pack order', async ({ 
     }
   }
 
-  await expect(page.locator('.topic-card')).toHaveCount(22);
+  await expect(page.locator('.topic-card')).toHaveCount(37);
 });
 
 test('mirrors the same grouping on the stats catalog', async ({ page }) => {
@@ -203,106 +230,111 @@ for (const catalogPath of ['/', '/stats']) {
       await expect(page.locator('.topic-catalog .topic-card:visible')).toHaveCount(0);
     });
 
-    test('keeps right-aligned chevrons and headers readable with enlarged text in both appearances', async ({
-      page,
-    }, testInfo) => {
-      await page.emulateMedia({ reducedMotion: 'reduce' });
-      await page.goto(catalogPath);
-      await expect(page.locator('.topic-group-toggle')).toHaveCount(expectedGroups.length);
-      for (const appearance of ['Day', 'Night']) {
-        const radio = page.getByRole('radio', { name: appearance, exact: true });
-        await page.locator('.appearance-options label').filter({ has: radio }).click();
-        for (const pixels of [16, 24, 32]) {
-          await page.locator('html').evaluate((element, size) => {
-            element.style.fontSize = size + 'px';
-          }, pixels);
-          await expect(page.locator('html')).toHaveCSS('font-size', pixels + 'px');
-          // Container-query tracks settle on the next rendered frame after a text-scale change.
-          await page.evaluate(
-            () =>
-              new Promise<void>((resolve) =>
-                requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
-              ),
-          );
-          for (const header of await page.locator('.topic-group-toggle').all()) {
-            const geometry = await header.evaluate((element) => {
-              const header = element.getBoundingClientRect();
-              const title = element.querySelector('h3')!.getBoundingClientRect();
-              const icon = element.querySelector('svg')!.getBoundingClientRect();
-              return {
-                header: header.toJSON(),
-                title: title.toJSON(),
-                icon: icon.toJSON(),
-                overflow: element.scrollWidth - element.clientWidth,
-              };
+    for (const appearance of ['Day', 'Night']) {
+      test(
+        'keeps right-aligned chevrons and enlarged headers readable in ' + appearance,
+        async ({ page }, testInfo) => {
+          await page.emulateMedia({ reducedMotion: 'reduce' });
+          await page.goto(catalogPath);
+          await expect(page.locator('.topic-group-toggle')).toHaveCount(expectedGroups.length);
+          const radio = page.getByRole('radio', { name: appearance, exact: true });
+          await page.locator('.appearance-options label').filter({ has: radio }).click();
+          for (const pixels of [16, 24, 32]) {
+            await page.locator('html').evaluate((element, size) => {
+              element.style.fontSize = size + 'px';
+            }, pixels);
+            await expect(page.locator('html')).toHaveCSS('font-size', pixels + 'px');
+            // Container-query tracks settle on the next rendered frame after a text-scale change.
+            await page.evaluate(
+              () =>
+                new Promise<void>((resolve) =>
+                  requestAnimationFrame(() => requestAnimationFrame(() => resolve())),
+                ),
+            );
+            for (const header of await page.locator('.topic-group-toggle').all()) {
+              const geometry = await header.evaluate((element) => {
+                const header = element.getBoundingClientRect();
+                const title = element.querySelector('h3')!.getBoundingClientRect();
+                const icon = element.querySelector('svg')!.getBoundingClientRect();
+                return {
+                  header: header.toJSON(),
+                  title: title.toJSON(),
+                  icon: icon.toJSON(),
+                  overflow: element.scrollWidth - element.clientWidth,
+                };
+              });
+              expect(geometry.header.height).toBeGreaterThanOrEqual(pixels * 3);
+              expect(geometry.icon.left).toBeGreaterThanOrEqual(geometry.title.right);
+              expect(geometry.icon.right).toBeLessThanOrEqual(geometry.header.right);
+              expect(geometry.icon.bottom).toBeLessThanOrEqual(geometry.header.bottom);
+              expect(geometry.overflow).toBeLessThanOrEqual(1);
+            }
+            expect(
+              await page.evaluate(() => document.documentElement.scrollWidth),
+            ).toBeLessThanOrEqual(page.viewportSize()!.width);
+          }
+          await page.locator('html').evaluate((element) => {
+            element.style.fontSize = '16px';
+          });
+          await expandTopicGroups(page);
+          await expect(page.locator('.topic-catalog .topic-card:visible')).toHaveCount(37);
+          await page.screenshot({
+            path: testInfo.outputPath('catalog-expanded.png'),
+            fullPage: true,
+          });
+        },
+      );
+    }
+
+    for (const [width, columns] of [
+      [1440, 4],
+      [900, 2],
+      [650, 1],
+      [320, 1],
+    ]) {
+      test(
+        'uses the expected collapsed columns and full expanded rows at ' + width,
+        async ({ page }, testInfo) => {
+          test.skip(testInfo.project.name !== 'chromium-wide');
+          await page.emulateMedia({ reducedMotion: 'reduce' });
+          await page.setViewportSize({ width, height: 1000 });
+          await page.goto(catalogPath);
+          await expect(page.locator('.topic-group-toggle')).toHaveCount(expectedGroups.length);
+          const stack = page.locator('.pack-group-stack');
+          expect(
+            await stack.evaluate(
+              (element) => getComputedStyle(element).gridTemplateColumns.split(' ').length,
+            ),
+          ).toBe(columns);
+          for (const group of expectedGroups) {
+            await expandTopicGroup(page, group.id);
+            const component = page.locator('.topic-group').filter({
+              has: page.locator('[id$="group-heading-' + group.id + '"]'),
             });
-            expect(geometry.header.height).toBeGreaterThanOrEqual(pixels * 3);
-            expect(geometry.icon.left).toBeGreaterThanOrEqual(geometry.title.right);
-            expect(geometry.icon.right).toBeLessThanOrEqual(geometry.header.right);
-            expect(geometry.icon.bottom).toBeLessThanOrEqual(geometry.header.bottom);
-            expect(geometry.overflow).toBeLessThanOrEqual(1);
+            const geometry = await component.evaluate((element) => ({
+              width: (element as HTMLElement).offsetWidth,
+              rowWidth: element.parentElement!.clientWidth,
+              animations: element
+                .getAnimations()
+                .filter((animation) =>
+                  (animation.effect as KeyframeEffect)
+                    .getKeyframes()
+                    .some((frame) => frame.width !== undefined),
+                ).length,
+            }));
+            expect(Math.abs(geometry.width - geometry.rowWidth)).toBeLessThanOrEqual(1);
+            expect(geometry.animations).toBe(0);
+            await expect(component.locator('.topic-card').first()).toBeVisible();
+            await component.locator('summary').click();
+            await expect(component.locator('details')).toHaveJSProperty('open', false);
+            await expect(page.locator('.topic-group-disclosure[open]')).toHaveCount(0);
           }
           expect(
             await page.evaluate(() => document.documentElement.scrollWidth),
-          ).toBeLessThanOrEqual(page.viewportSize()!.width);
-        }
-      }
-      await page.locator('html').evaluate((element) => {
-        element.style.fontSize = '16px';
-      });
-      await expandTopicGroups(page);
-      await expect(page.locator('.topic-catalog .topic-card:visible')).toHaveCount(22);
-      await page.screenshot({ path: testInfo.outputPath('catalog-expanded.png'), fullPage: true });
-    });
-
-    test('uses four, two, and one collapsed-group columns and gives every expanded group the full row', async ({
-      page,
-    }, testInfo) => {
-      test.skip(testInfo.project.name !== 'chromium-wide');
-      await page.emulateMedia({ reducedMotion: 'reduce' });
-      for (const [width, columns] of [
-        [1440, 4],
-        [900, 2],
-        [650, 1],
-        [320, 1],
-      ]) {
-        await page.setViewportSize({ width, height: 1000 });
-        await page.goto(catalogPath);
-        await expect(page.locator('.topic-group-toggle')).toHaveCount(expectedGroups.length);
-        const stack = page.locator('.pack-group-stack');
-        expect(
-          await stack.evaluate(
-            (element) => getComputedStyle(element).gridTemplateColumns.split(' ').length,
-          ),
-        ).toBe(columns);
-        for (const group of expectedGroups) {
-          await expandTopicGroup(page, group.id);
-          const component = page.locator('.topic-group').filter({
-            has: page.locator('[id$="group-heading-' + group.id + '"]'),
-          });
-          const geometry = await component.evaluate((element) => ({
-            width: (element as HTMLElement).offsetWidth,
-            rowWidth: element.parentElement!.clientWidth,
-            animations: element
-              .getAnimations()
-              .filter((animation) =>
-                (animation.effect as KeyframeEffect)
-                  .getKeyframes()
-                  .some((frame) => frame.width !== undefined),
-              ).length,
-          }));
-          expect(Math.abs(geometry.width - geometry.rowWidth)).toBeLessThanOrEqual(1);
-          expect(geometry.animations).toBe(0);
-          await expect(component.locator('.topic-card').first()).toBeVisible();
-          await component.locator('summary').click();
-          await expect(component.locator('details')).toHaveJSProperty('open', false);
-          await expect(page.locator('.topic-group-disclosure[open]')).toHaveCount(0);
-        }
-        expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(
-          width,
-        );
-      }
-    });
+          ).toBeLessThanOrEqual(width);
+        },
+      );
+    }
 
     test('widens before revealing cards and cancels obsolete animation on rapid toggles', async ({
       page,

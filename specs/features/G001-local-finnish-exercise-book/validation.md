@@ -1,5 +1,71 @@
 # G001 validation
 
+## Question family audit corrections — 2026-10-29
+
+**VAL-G001-114 / amended REQ-G001-155:** Verify 36 lessons, 36 Focused tests,
+seven Reviews, 864 scored and 108 optional items; both semantic boundaries,
+independent natural-answer probes, negative mastery operations, plural classification,
+full reason teaching, complete supplied forms and vocabulary inventories. Verify
+1.0.0 → 1.1.0 scoped state discard and still-owned notes, original 30-pack state,
+backup compatibility, original content hashes, deployed bytes and affected rendered
+workflows at 320/768/1440 pixels. Completion evidence is recorded in the
+[correction assessment](../../content-assessments/question-words-corrections.md).
+Completed 2026-10-29: all 37 sources validate; the full client gate passes with
+547 unit and 37 integration cases. The strengthened question-family regression
+also passes its 34-case run. The actual grader passes all 1,362 authored answers,
+624 choices and 470 diagnostics; all 972 recall inventories and 432 mastery pairs
+are reconciled. Original 406 pack-owned files, six groups and 30 summaries are
+preserved; all 493 deployed sources match.
+
+Main browser verification passes 108 cases with 24 configured desktop-only skips.
+The final content/section/loading/ledger pass adds 64 passing cases and exposes
+five fixture/workload failures; their route/title and text-size scenario fixes
+pass all 15 subsequent cases without removing assertions or increasing timeouts.
+The additional 320-pixel catalog/map case and all 63 native feedback/access cases
+pass. Final rendered records match 36 lessons, 864 scored and 108 optional items
+at every width, including all 2,016 vocabulary declaration appearances, with zero
+missing fields/IDs or page errors. Ten screenshots were inspected. The linked
+assessment records exact scope, retained failures, commands, compatibility loss
+and limits; it approves both correction gates with limitations.
+
+The earlier completion narrative below is historical and superseded by the audit.
+
+## Question words and answers — 2026-10-28
+
+**VAL-G001-114 / REQ-G001-155:** Validate seven independent packs, their 35
+Focused preparations/tests, seven cumulative Reviews, 840 scored and 105 optional
+items. Check source/runtime agreement, every accepted answer, distractor and
+diagnostic through grading, local vocabulary provenance and independent recall
+inventories, grammatical number and explicit answer teaching. Reject malformed
+number forms, missing answer preparation, short Focused tests and unknown
+form-number families. Verify preservation of the original 406 pack-owned files
+and all 30 original catalog summaries, plus compatible state and backup alignment.
+Complete the client gate and rendered lessons, optional answers, every scored
+question/feedback item, maps, reference, diagnostics, keyboard and reload workflows
+at 320/768/1440 pixels. Record actual results and limitations in the
+[family assessment](../../content-assessments/question-words-family.md).
+
+Completed 2026-10-28. All 37 direct-source packs validate; static checks, type
+checks, the production build and all 491 deployed-source byte comparisons pass.
+All 523 distinct unit cases and 36 integration cases pass. The full unit run's
+single 20-second inventory timeout is resolved by a 60-second budget and an
+isolated 33-case rerun, retaining every assertion. The family assessment records
+the earlier worker-startup failures and the exact command/scheduling boundaries.
+
+All 48 question-family browser cases pass at 320/768/1440 pixels: 105 lesson
+reads, 315 optional and 2,520 scored submissions, full feedback, 100% results,
+reload, diagnostics/fallback, maps and reference. Saved records match every
+expected ID; all 1,764 rendered vocabulary declaration appearances match their
+Finnish/English source. The catalog adds 45 passing cases and 12 authored
+desktop-only skips on smaller viewports. Six supplemental captures were visually
+inspected. Corrected findings include two capitalized word tiles, adjacent
+mastery partners, generic feedback roles and a decorative paper clip that blocked
+the last catalog heading. Both pedagogy decisions are approved with limitations.
+All original 406 pack-owned files, six groups, 30 summaries and compatible learner
+data remain preserved. Native zoom, assistive technology and physical devices
+were not tested; listening, speech and general CEFR certification remain outside
+this written content scope. No commit or publication.
+
 ## Partitive worked-example repetition — 2026-10-21
 
 VAL-G001-111 / REQ-G001-152/136: the [scoped assessment](../../content-assessments/partitive-worked-example-repetition.md)

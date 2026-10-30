@@ -689,13 +689,13 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   await page.goto('/');
 
   await expect(page.getByRole('heading', { level: 1 })).toContainText('Take one clear step');
-  await expect(page.locator('.catalog-stats')).toContainText('14');
+  await expect(page.locator('.catalog-stats')).toContainText('37');
   await expect(page.locator('.test-card')).toHaveCount(0);
   await expandTopicGroup(page, 'foundations');
   await vowelHarmonyTopicLink(page).click();
 
   await expect(page).toHaveURL(new RegExp(`/topics/${TOPIC_SEGMENT}$`));
-  await expect(page.locator('.test-card')).toHaveCount(6);
+  await expect(page.locator('.test-card')).toHaveCount(5);
   await expect(page.locator('.test-group-heading h3')).toHaveText(['Focused tests', 'Reviews']);
   await expect(page.locator('.set-badge, .stage-badge')).toHaveCount(0);
   await expect(page.locator('body')).not.toContainText('Core set');
@@ -732,17 +732,17 @@ test('opens the catalog and exposes stable learning routes', async ({ page }) =>
   }
 
   await page.goto(`/learn/${TOPIC_SEGMENT}/location-transfer-review`);
-  await expect(page.locator('.lesson-list button')).toHaveCount(4);
+  await expect(page.locator('.lesson-list button')).toHaveCount(3);
   await expect(page.locator('.lesson-hero .eyebrow')).toContainText('Review');
   await expect(page.locator('.lesson-hero h1')).toHaveText('Location transfer review');
 
   if ((page.viewportSize()?.width ?? 0) <= 800) {
     await expect(page.locator('.lesson-list')).toBeHidden();
     await expect(page.locator('.lesson-picker')).toBeVisible();
-    await expect(page.locator('.lesson-picker option')).toHaveCount(4);
+    await expect(page.locator('.lesson-picker option')).toHaveCount(3);
     await page.locator('.lesson-picker select').selectOption('1');
     await expect(page.locator('.reader-heading h2')).toContainText(
-      'Neutral vowels in ending choice',
+      'Saying “in” with -ssa and -ssä',
     );
 
     const pickerBox = await page.locator('.lesson-picker').boundingBox();
@@ -1876,7 +1876,7 @@ test('keeps the topic catalog and learning map usable at the 320-pixel minimum w
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto('/');
 
-  await expect(page.locator('.catalog-stats')).toContainText('14');
+  await expect(page.locator('.catalog-stats')).toContainText('37');
   const primaryNavigation = page.getByRole('navigation', { name: 'Primary navigation' });
   await expect(primaryNavigation).toContainText('Notebook');
   await expect(primaryNavigation).toContainText('Stats');

@@ -1,5 +1,38 @@
 # G001 — Local Finnish exercise book
 
+## 2026-10-29 Question family audit corrections
+
+Implement the ten independently verified findings under amended REQ-G001-155 and
+[the correction gate](../../content-assessments/question-words-corrections.md).
+Add plural classification as the seventh who/what target: 36 lessons/Focused tests,
+seven Reviews, 864 scored and 108 optional items. Correct the complete affected
+classes, strengthen both semantic validation boundaries, validate ordinary replies
+independently of authored answer arrays, and verify strict scoped compatibility.
+Preserve all original 30 packs. Completed 2026-10-29. Both correction pedagogy gates are approved with
+limitations. The full client gate, source/runtime and grading inventories,
+compatibility/preservation checks and final affected rendered/native workflows
+pass. Actual results, resolved intermediate failures and limitations are recorded
+in the correction assessment. No commit or publication.
+
+## 2026-10-28 Question words and answers
+
+Implement REQ-G001-155 with the repository content creator skill and saved
+[35-target assessment](../../content-assessments/question-words-family.md).
+Snapshot all existing sources before edits, author seven independent JSON packs
+using the established lesson sections, and explicitly teach answering as well as
+asking. Supply supporting forms and retain local vocabulary provenance. Register
+the catalog group/summaries and independent source/runtime question-family checks.
+Validate all alternatives and diagnostics through grading, preserve existing
+content and compatible installation/backup state, complete the client gate and
+affected responsive rendered workflows, then record actual final inventories and
+pedagogy disposition under VAL-G001-114. Do not commit or publish.
+
+Initial completion recorded 2026-10-28, superseded by the independent audit and
+2026-10-29 correction assessment. All seven packs, 35 lessons, 840 scored questions and
+105 optional items are integrated. Both pedagogy gates are approved with
+limitations. Actual preservation, grading, build, test and complete three-viewport
+rendered evidence is recorded under VAL-G001-114 and in the linked assessment.
+
 ## 2026-10-21 Partitive worked-example repetition
 
 Apply the approved removal of 96 duplicated opening rules in 23 lessons under

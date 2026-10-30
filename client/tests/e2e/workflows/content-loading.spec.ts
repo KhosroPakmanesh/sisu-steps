@@ -139,7 +139,7 @@ test('loads only the startup index, then group metadata, then selected topic con
 
   const startupRequests = [...contentRequests];
   expect(startupRequests).toEqual(['/content/index.json']);
-  await expect(page.locator('.catalog-stats')).toContainText('2758');
+  await expect(page.locator('.catalog-stats')).toContainText('5544');
   await expect(page.locator('.continue-card a').first()).toBeVisible();
   expect(startupRequests.filter(isPackFragment)).toEqual([]);
   expect(startupRequests.filter((path) => path.endsWith('/pack.json'))).toHaveLength(0);

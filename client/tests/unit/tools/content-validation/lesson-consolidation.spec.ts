@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
+import { QUESTION_TARGETS } from '@/features/learning/shared/content/validation/question-family-targets';
 import { gradeAnswer } from '@/features/learning/shared/progress/grading.policy';
 import { loadContentSource } from '../../../../tools/content-source-loader.mjs';
 
@@ -8,7 +9,10 @@ describe('consolidated authored answer contracts', () => {
   beforeAll(async () => {
     const installed = (await loadContentSource('content')).packs as unknown as TopicPack[];
     packs = installed.filter(
-      (pack) => !pack.id.startsWith('partitive-') && !pack.id.startsWith('genitive-'),
+      (pack) =>
+        !pack.id.startsWith('partitive-') &&
+        !pack.id.startsWith('genitive-') &&
+        !QUESTION_TARGETS[pack.id],
     );
   });
 

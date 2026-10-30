@@ -1,5 +1,45 @@
 # G001 requirements
 
+## Question words and answers — 2026-10-28
+
+- **REQ-G001-155:** Add the seven user-approved packs in the **Question words and
+  answers** group: `who-and-what-questions`, `place-and-direction-questions`,
+  `time-questions`, `how-and-why-questions`,
+  `description-colour-appearance-questions`, `nationality-questions`, and
+  `negative-information-questions`. Use the ordered 36-target
+  [coverage and pedagogy assessment](../../content-assessments/question-words-corrections.md),
+  `0 - A1.3`, standard written Finnish and the existing lesson/response formats.
+  Explicitly teach full answers, natural short replies, negative answers and
+  correction of a negative question's assumption. Keep new grammatical decisions
+  focused; supply supporting forms and control vocabulary locally.
+- Author 36 matching Focused preparations/tests with at least 20 meaningful unique
+  questions each, seven final cumulative Reviews and two to five independent
+  optional items per lesson. The blueprint proposes 864 scored and 108 optional
+  items; any justified audit adjustment must be recorded with the final inventory.
+  Number-scoped preparation is independent. Preserve grammatical selection versus
+  classification, singular/plural/substance descriptions, and nationality versus
+  residence/origin. Do not teach a blanket exact/inexact or olla/other-verb rule
+  for mikä/mitä. Accept natural standard alternatives supported by the prompt.
+- Register pure pack-owned JSON and matching catalog summaries. Add independent
+  question-family guards at source and runtime boundaries without weakening
+  existing form-number families or unknown-family rejection. Complete both saved
+  pedagogy gates, source/runtime/grading and preservation checks, the client gate,
+  and rendered lessons/answers at 320/768/1440 pixels under VAL-G001-114.
+  Keep every new group header operable after the preceding groups expand: bound
+  paper corner cuts must not grow with sheet height and clip the last heading or
+  final worked example. Preserve the established paper material and layout.
+- Preserve all 30 existing packs, their 169 lessons, source objects, versions and
+  compatible state/backups. Advance the seven corrected family packs from `1.0.0` to `1.1.0`. Changed
+  answer interpretation and mastery evidence intentionally discard attempts,
+  sessions, mistakes, corrections and obsolete lesson completions for these
+  seven packs through the existing strict alignment and backup contracts.
+  Preserve still-owned notes and all original 30 packs’ compatible state; no
+  migration, alias, storage-format change or fallback reader is introduced.
+  Add a separate plural classification preparation/test after plural selection;
+  teach both short and full because replies, supply complete supporting forms,
+  and enforce bounded noun/verb agreement and semantic mastery pairing. No commit or
+  publication without a separate user request.
+
 ## Partitive worked-example repetition — 2026-10-21
 
 Amend REQ-G001-152 under the section responsibilities in REQ-G001-136: remove the

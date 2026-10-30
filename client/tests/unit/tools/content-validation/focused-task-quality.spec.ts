@@ -50,8 +50,8 @@ describe('Focused task quality', () => {
     packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   });
 
-  it('checks all 127 Focused tests and agrees at both boundaries', () => {
-    expect(packs.flatMap((p) => p.tests).filter((t) => t.stage === 'focused')).toHaveLength(169);
+  it('checks all 205 Focused tests and agrees at both boundaries', () => {
+    expect(packs.flatMap((p) => p.tests).filter((t) => t.stage === 'focused')).toHaveLength(205);
     for (const pack of packs) {
       expect(validateFocusedTaskQuality(pack)).toEqual([]);
       expect(runtimeValidate(pack)).toEqual([]);

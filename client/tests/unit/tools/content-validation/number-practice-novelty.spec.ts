@@ -8,7 +8,7 @@ describe('new number-specific optional task novelty', () => {
   beforeAll(async () => {
     packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
   });
-  it('accepts all 17 additions without rejecting preserved retrieval', () => {
+  it('accepts all 35 additions without rejecting preserved retrieval', () => {
     expect(packs.flatMap(validateNumberPracticeNovelty)).toEqual([]);
     expect(
       packs.flatMap((pack) =>
@@ -20,7 +20,7 @@ describe('new number-specific optional task novelty', () => {
             ),
           ),
       ),
-    ).toHaveLength(17);
+    ).toHaveLength(35);
   }, 20_000);
   it.each([
     ['affirmative-possession', 'aps-fixed-on-singular', 'aps-review-e022'],

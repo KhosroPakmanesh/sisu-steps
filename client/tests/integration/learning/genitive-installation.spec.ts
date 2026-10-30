@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
+import { QUESTION_TARGETS } from '@/features/learning/shared/content/validation/question-family-targets';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { alignLearnerStateWithPacks } from '@/features/learning/shared/state/align-learner-state.policy';
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
@@ -9,7 +10,7 @@ import { loadContentSource } from '../../../tools/content-source-loader.mjs';
 describe('installing the Genitive family', () => {
   it('preserves all twenty-two existing packs’ study data and backup data', async () => {
     const packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
-    const previous = packs.filter((p) => !p.id.startsWith('genitive-'));
+    const previous = packs.filter((p) => !p.id.startsWith('genitive-') && !QUESTION_TARGETS[p.id]);
     expect(previous).toHaveLength(22);
     const state = createEmptyLearnerState(
       Object.fromEntries(previous.map((p) => [p.id, p.version])),

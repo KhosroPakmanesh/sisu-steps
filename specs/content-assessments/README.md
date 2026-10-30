@@ -21,6 +21,14 @@ The [2026-10-08 Focused quality follow-up](focused-exercise-quality.md) records 
 
 ## Installed-pack entry records
 
+- [who-and-what-questions](who-and-what-questions.md)
+- [place-and-direction-questions](place-and-direction-questions.md)
+- [time-questions](time-questions.md)
+- [how-and-why-questions](how-and-why-questions.md)
+- [description-colour-appearance-questions](description-colour-appearance-questions.md)
+- [nationality-questions](nationality-questions.md)
+- [negative-information-questions](negative-information-questions.md)
+
 - [genitive-adjectives-pronouns-questions](genitive-adjectives-pronouns-questions.md)
 - [genitive-constructions](genitive-constructions.md)
 - [genitive-forms](genitive-forms.md)
@@ -57,6 +65,9 @@ The [2026-10-14 four-pack Forms split](partitive-forms-split.md) governs the use
 - [possessive-pronouns-endings](possessive-pronouns-endings.md)
 
 ## Shared assessments and corrections
+
+- [Question words and answers: seven-pack family](question-words-family.md)
+- [Question words and answers: audit corrections](question-words-corrections.md) — 2026-10-29 correction gate and current validation.
 
 - [partitive-family](partitive-family.md)
 - [partitive-expansion](partitive-expansion.md)

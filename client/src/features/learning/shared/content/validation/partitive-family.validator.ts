@@ -2,6 +2,7 @@ import { Exercise } from '../exercise.models';
 import { Lesson } from '../lesson.models';
 import { TopicPack } from '../topic-pack.models';
 import { GENITIVE_TARGETS } from './genitive-family-targets';
+import { QUESTION_TARGETS } from './question-family-targets';
 
 import {
   PARTITIVE_TARGETS as TARGETS,
@@ -23,7 +24,9 @@ const SPOKEN = /(?:^|[^\p{L}])(?:mä|sä|mua|sua|tää|toi|nää|noi|oon|oot)(?=
 export function validatePartitiveFamily(pack: TopicPack): string[] {
   const targets = TARGETS[pack.id];
   if (!targets)
-    return !GENITIVE_TARGETS[pack.id] && pack.lessons.some((l) => l.numberScope?.axis === 'form')
+    return !GENITIVE_TARGETS[pack.id] &&
+      !QUESTION_TARGETS[pack.id] &&
+      pack.lessons.some((l) => l.numberScope?.axis === 'form')
       ? ['Unsupported form-number content family.']
       : [];
   const errors: string[] = [];

@@ -352,6 +352,19 @@ describe('pack-owned content source loader', () => {
           'genitive-constructions',
         ],
       },
+      {
+        id: 'question-words-and-answers',
+        title: 'Question words and answers',
+        packs: [
+          'who-and-what-questions',
+          'place-and-direction-questions',
+          'time-questions',
+          'how-and-why-questions',
+          'description-colour-appearance-questions',
+          'nationality-questions',
+          'negative-information-questions',
+        ],
+      },
     ]);
     expect(source.packs.slice(0, 3).map((pack) => pack['version'])).toEqual([
       '1.2.0',

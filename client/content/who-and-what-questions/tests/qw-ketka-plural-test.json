@@ -1,0 +1,989 @@
+{
+  "id": "qw-ketka-plural-test",
+  "title": "Ketkä: asking and answering about several people",
+  "focus": "Ketkä asks which people or who several people are. Ketkä te olette? — Me olemme opettajia.",
+  "stage": "focused",
+  "targetSkills": ["Ketkä: asking and answering about several people"],
+  "prerequisiteSkills": ["Kuka: asking and answering about one person"],
+  "lessonIds": ["qw-ketka-plural"],
+  "numberScope": {
+    "axis": "person",
+    "number": "plural"
+  },
+  "exercises": [
+    {
+      "id": "qw-ketka-plural-e01",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the question meaning “Who are you?”  Address a group (te).",
+      "acceptedAnswers": ["Ketkä te olette?"],
+      "explanation": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are you”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who are you?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Ketkä",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka has the irregular plural basic form ketkä."
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "baseForm": "te",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Te addresses more than one person in these dialogues."
+          },
+          {
+            "finnish": "olette?",
+            "meaning": "you are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the plural you-form olette: ole- + -tte."
+          }
+        ]
+      },
+      "options": ["Ketkä te olette?", "Kuka te olette?", "Mitkä te olette?"],
+      "optionFeedback": {
+        "Ketkä te olette?": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are you”.",
+        "Kuka te olette?": "Kuka asks who a person is or who acts. The requested question is “Ketkä te olette?”",
+        "Mitkä te olette?": "Mitkä selects several things. The requested question is “Ketkä te olette?”"
+      },
+      "parallelExerciseId": "qw-ketka-plural-e02"
+    },
+    {
+      "id": "qw-ketka-plural-e03",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Answer “Ketkä me olemme?”: choose “You are Anna and Mikko.” Address a group (te).",
+      "acceptedAnswers": ["Te olette Anna ja Mikko."],
+      "explanation": "Plural means more than one in this grammatical pattern. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “You are Anna and Mikko”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "You are Anna and Mikko.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla + connector joining the two names + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "baseForm": "te",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Te addresses more than one person in these dialogues."
+          },
+          {
+            "finnish": "olette",
+            "meaning": "you are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the plural you-form olette: ole- + -tte."
+          },
+          {
+            "finnish": "Anna",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "identity or category given after olla",
+            "formation": "Anna is a person's name and keeps its basic form as a subject or identity."
+          },
+          {
+            "finnish": "ja",
+            "meaning": "and",
+            "baseForm": "ja",
+            "role": "connector joining the two names",
+            "formation": "Ja links the names without changing their forms."
+          },
+          {
+            "finnish": "Mikko.",
+            "meaning": "Mikko",
+            "baseForm": "Mikko",
+            "role": "identity or category given after olla",
+            "formation": "Mikko is a person's name and keeps its basic form here."
+          }
+        ]
+      },
+      "options": ["Te olette Anna ja Mikko.", "Me on Anna ja Mikko.", "He on Anna ja Mikko."],
+      "optionFeedback": {
+        "Te olette Anna ja Mikko.": "Plural means more than one in this grammatical pattern. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “You are Anna and Mikko”.",
+        "Me on Anna ja Mikko.": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “Te olette Anna ja Mikko.”",
+        "He on Anna ja Mikko.": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “Te olette Anna ja Mikko.”"
+      },
+      "parallelExerciseId": "qw-ketka-plural-e04"
+    },
+    {
+      "id": "qw-ketka-plural-e02",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Choose the question meaning “Who are they?” ",
+      "acceptedAnswers": ["Ketkä he ovat?"],
+      "explanation": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are they”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who are they?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Ketkä",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka has the irregular plural basic form ketkä."
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          }
+        ]
+      },
+      "options": ["Mitkä he ovat?", "Kuka he ovat?", "Ketkä he ovat?"],
+      "optionFeedback": {
+        "Ketkä he ovat?": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are they”.",
+        "Kuka he ovat?": "Kuka asks who a person is or who acts. The requested question is “Ketkä he ovat?”",
+        "Mitkä he ovat?": "Mitkä selects several things. The requested question is “Ketkä he ovat?”"
+      },
+      "parallelExerciseId": "qw-ketka-plural-e01"
+    },
+    {
+      "id": "qw-ketka-plural-e04",
+      "type": "multiple-choice",
+      "instruction": "Choose one answer.",
+      "prompt": "Answer “Ketkä he ovat?”: choose “They are doctors.”",
+      "acceptedAnswers": ["He ovat lääkäreitä."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are doctors”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are doctors.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "lääkäreitä.",
+            "meaning": "doctors",
+            "baseForm": "lääkäri",
+            "role": "identity or category given after olla",
+            "formation": "Lääkäri has the plural partitive lääkäreitä: lääkär- + -eitä."
+          }
+        ]
+      },
+      "options": ["He on lääkäreitä.", "Me on lääkäreitä.", "He ovat lääkäreitä."],
+      "optionFeedback": {
+        "He ovat lääkäreitä.": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are doctors”.",
+        "Me on lääkäreitä.": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “He ovat lääkäreitä.”",
+        "He on lääkäreitä.": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “He ovat lääkäreitä.”"
+      },
+      "parallelExerciseId": "qw-ketka-plural-e03"
+    },
+    {
+      "id": "qw-ketka-plural-e05",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “Who are we?” in Finnish. Use me (“we”), olemme (“we are”).",
+      "acceptedAnswers": ["Ketkä me olemme?", "Ketkä olemme?"],
+      "explanation": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are we”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who are we?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Ketkä",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka has the irregular plural basic form ketkä."
+          },
+          {
+            "finnish": "me",
+            "meaning": "we",
+            "baseForm": "me",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Me includes the speaker and at least one other person."
+          },
+          {
+            "finnish": "olemme?",
+            "meaning": "we are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the we-form olemme: ole- + -mme."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Kuka me olemme?"],
+          "category": "question-answer-relationship",
+          "explanation": "Kuka asks who a person is or who acts. The requested question is “Ketkä me olemme?”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e06"
+    },
+    {
+      "id": "qw-ketka-plural-e07",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Answer “Ketkä te olette?”: write “We are teachers.” in Finnish. Use opettajia (“teachers”).",
+      "acceptedAnswers": ["Me olemme opettajia.", "Olemme opettajia."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “We are teachers”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "We are teachers.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "baseForm": "me",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Me includes the speaker and at least one other person."
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "we are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the we-form olemme: ole- + -mme."
+          },
+          {
+            "finnish": "opettajia.",
+            "meaning": "teachers",
+            "baseForm": "opettaja",
+            "role": "identity or category given after olla",
+            "formation": "Opettaja takes the plural partitive form opettajia: replace the final a with i and add a."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on opettajia."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “Me olemme opettajia.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e10"
+    },
+    {
+      "id": "qw-ketka-plural-e06",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “Who are they?” in Finnish. Use he (“they”), ovat (“are”).",
+      "acceptedAnswers": ["Ketkä he ovat?"],
+      "explanation": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are they”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who are they?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Ketkä",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka has the irregular plural basic form ketkä."
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Kuka he ovat?"],
+          "category": "question-answer-relationship",
+          "explanation": "Kuka asks who a person is or who acts. The requested question is “Ketkä he ovat?”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e05"
+    },
+    {
+      "id": "qw-ketka-plural-e08",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Answer “Ketkä he ovat?”: write “They are students.” in Finnish. Use opiskelijoita (“students”).",
+      "acceptedAnswers": ["He ovat opiskelijoita."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are students”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are students.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "opiskelijoita.",
+            "meaning": "students",
+            "baseForm": "opiskelija",
+            "role": "identity or category given after olla",
+            "formation": "Opiskelija has the taught plural partitive opiskelijoita: opiskelij- + -oita."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on opiskelijoita."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “He ovat opiskelijoita.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e11"
+    },
+    {
+      "id": "qw-ketka-plural-e09",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Answer “Ketkä me olemme?”: write “You are Anna and Mikko.” in Finnish. Use Anna (“Anna”), ja (“and”), Mikko (“Mikko”). Address a group (te).",
+      "acceptedAnswers": ["Te olette Anna ja Mikko.", "Olette Anna ja Mikko."],
+      "explanation": "Plural means more than one in this grammatical pattern. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “You are Anna and Mikko”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "You are Anna and Mikko.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla + connector joining the two names + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "baseForm": "te",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Te addresses more than one person in these dialogues."
+          },
+          {
+            "finnish": "olette",
+            "meaning": "you are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the plural you-form olette: ole- + -tte."
+          },
+          {
+            "finnish": "Anna",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "identity or category given after olla",
+            "formation": "Anna is a person's name and keeps its basic form as a subject or identity."
+          },
+          {
+            "finnish": "ja",
+            "meaning": "and",
+            "baseForm": "ja",
+            "role": "connector joining the two names",
+            "formation": "Ja links the names without changing their forms."
+          },
+          {
+            "finnish": "Mikko.",
+            "meaning": "Mikko",
+            "baseForm": "Mikko",
+            "role": "identity or category given after olla",
+            "formation": "Mikko is a person's name and keeps its basic form here."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on Anna ja Mikko."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “Te olette Anna ja Mikko.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e12"
+    },
+    {
+      "id": "qw-ketka-plural-e10",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Answer “Ketkä he ovat?”: write “They are doctors.” in Finnish. Use lääkäreitä (“doctors”).",
+      "acceptedAnswers": ["He ovat lääkäreitä."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are doctors”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are doctors.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "lääkäreitä.",
+            "meaning": "doctors",
+            "baseForm": "lääkäri",
+            "role": "identity or category given after olla",
+            "formation": "Lääkäri has the plural partitive lääkäreitä: lääkär- + -eitä."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on lääkäreitä."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “He ovat lääkäreitä.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e07"
+    },
+    {
+      "id": "qw-ketka-plural-e11",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Answer “Ketkä te olette?”: write “We are doctors.” in Finnish. Use lääkäreitä (“doctors”).",
+      "acceptedAnswers": ["Me olemme lääkäreitä.", "Olemme lääkäreitä."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “We are doctors”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "We are doctors.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "baseForm": "me",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Me includes the speaker and at least one other person."
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "we are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the we-form olemme: ole- + -mme."
+          },
+          {
+            "finnish": "lääkäreitä.",
+            "meaning": "doctors",
+            "baseForm": "lääkäri",
+            "role": "identity or category given after olla",
+            "formation": "Lääkäri has the plural partitive lääkäreitä: lääkär- + -eitä."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on lääkäreitä."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “Me olemme lääkäreitä.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e08"
+    },
+    {
+      "id": "qw-ketka-plural-e12",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Answer “Ketkä he ovat?”: write “They are teachers.” in Finnish. Use opettajia (“teachers”).",
+      "acceptedAnswers": ["He ovat opettajia."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are teachers”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are teachers.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "opettajia.",
+            "meaning": "teachers",
+            "baseForm": "opettaja",
+            "role": "identity or category given after olla",
+            "formation": "Opettaja takes the plural partitive form opettajia: replace the final a with i and add a."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on opettajia."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “He ovat opettajia.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e09"
+    },
+    {
+      "id": "qw-ketka-plural-e13",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “You are students.” in Finnish. Address a group (te).",
+      "acceptedAnswers": ["Te olette opiskelijoita."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “You are students”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "You are students.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "baseForm": "te",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Te addresses more than one person in these dialogues."
+          },
+          {
+            "finnish": "olette",
+            "meaning": "you are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the plural you-form olette: ole- + -tte."
+          },
+          {
+            "finnish": "opiskelijoita.",
+            "meaning": "students",
+            "baseForm": "opiskelija",
+            "role": "identity or category given after olla",
+            "formation": "Opiskelija has the taught plural partitive opiskelijoita: opiskelij- + -oita."
+          }
+        ]
+      },
+      "tokens": ["opiskelijoita.", "olette", "Te"],
+      "parallelExerciseId": "qw-ketka-plural-e15"
+    },
+    {
+      "id": "qw-ketka-plural-e14",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “They are Anna and Liisa.” in Finnish.",
+      "acceptedAnswers": ["He ovat Anna ja Liisa."],
+      "explanation": "Plural means more than one in this grammatical pattern. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are Anna and Liisa”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are Anna and Liisa.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla + connector joining the two names + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "Anna",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "identity or category given after olla",
+            "formation": "Anna is a person's name and keeps its basic form as a subject or identity."
+          },
+          {
+            "finnish": "ja",
+            "meaning": "and",
+            "baseForm": "ja",
+            "role": "connector joining the two names",
+            "formation": "Ja links the names without changing their forms."
+          },
+          {
+            "finnish": "Liisa.",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "identity or category given after olla",
+            "formation": "Liisa is a person's name and keeps its basic form here."
+          }
+        ]
+      },
+      "tokens": ["Liisa.", "ja", "Anna", "ovat", "He"],
+      "parallelExerciseId": "qw-ketka-plural-e16"
+    },
+    {
+      "id": "qw-ketka-plural-e15",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “We are doctors.” in Finnish.",
+      "acceptedAnswers": ["Me olemme lääkäreitä."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “We are doctors”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "We are doctors.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "baseForm": "me",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Me includes the speaker and at least one other person."
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "we are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the we-form olemme: ole- + -mme."
+          },
+          {
+            "finnish": "lääkäreitä.",
+            "meaning": "doctors",
+            "baseForm": "lääkäri",
+            "role": "identity or category given after olla",
+            "formation": "Lääkäri has the plural partitive lääkäreitä: lääkär- + -eitä."
+          }
+        ]
+      },
+      "tokens": ["lääkäreitä.", "olemme", "Me"],
+      "parallelExerciseId": "qw-ketka-plural-e13"
+    },
+    {
+      "id": "qw-ketka-plural-e16",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “They are teachers.” in Finnish.",
+      "acceptedAnswers": ["He ovat opettajia."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are teachers”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are teachers.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "opettajia.",
+            "meaning": "teachers",
+            "baseForm": "opettaja",
+            "role": "identity or category given after olla",
+            "formation": "Opettaja takes the plural partitive form opettajia: replace the final a with i and add a."
+          }
+        ]
+      },
+      "tokens": ["opettajia.", "ovat", "He"],
+      "parallelExerciseId": "qw-ketka-plural-e14"
+    },
+    {
+      "id": "qw-ketka-plural-e17",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Me olemme opettajia.” into English.",
+      "acceptedAnswers": ["We are teachers.", "We're teachers."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “We are teachers”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": ["opettaja"],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "We are teachers.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "baseForm": "me",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Me includes the speaker and at least one other person."
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "we are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the we-form olemme: ole- + -mme."
+          },
+          {
+            "finnish": "opettajia.",
+            "meaning": "teachers",
+            "baseForm": "opettaja",
+            "role": "identity or category given after olla",
+            "formation": "Opettaja takes the plural partitive form opettajia: replace the final a with i and add a."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-ketka-plural-e18"
+    },
+    {
+      "id": "qw-ketka-plural-e19",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “Me on opiskelijoita.” to mean “They are students.” Use opiskelijoita (“students”).",
+      "acceptedAnswers": ["He ovat opiskelijoita."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are students”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are students.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "opiskelijoita.",
+            "meaning": "students",
+            "baseForm": "opiskelija",
+            "role": "identity or category given after olla",
+            "formation": "Opiskelija has the taught plural partitive opiskelijoita: opiskelij- + -oita."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on opiskelijoita."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “He ovat opiskelijoita.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e20"
+    },
+    {
+      "id": "qw-ketka-plural-e18",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Te olette opiskelijoita.” into English.",
+      "acceptedAnswers": ["You are students.", "You're students."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “You are students”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": ["opiskelija"],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "You are students.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Te",
+            "meaning": "you",
+            "baseForm": "te",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Te addresses more than one person in these dialogues."
+          },
+          {
+            "finnish": "olette",
+            "meaning": "you are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the plural you-form olette: ole- + -tte."
+          },
+          {
+            "finnish": "opiskelijoita.",
+            "meaning": "students",
+            "baseForm": "opiskelija",
+            "role": "identity or category given after olla",
+            "formation": "Opiskelija has the taught plural partitive opiskelijoita: opiskelij- + -oita."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-ketka-plural-e17"
+    },
+    {
+      "id": "qw-ketka-plural-e20",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Repair “Me on Anna ja Liisa.” to mean “They are Anna and Liisa.” Use Anna (“Anna”), ja (“and”), Liisa (“Liisa”).",
+      "acceptedAnswers": ["He ovat Anna ja Liisa."],
+      "explanation": "Plural means more than one in this grammatical pattern. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are Anna and Liisa”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are Anna and Liisa.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla + connector joining the two names + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "Anna",
+            "meaning": "Anna",
+            "baseForm": "Anna",
+            "role": "identity or category given after olla",
+            "formation": "Anna is a person's name and keeps its basic form as a subject or identity."
+          },
+          {
+            "finnish": "ja",
+            "meaning": "and",
+            "baseForm": "ja",
+            "role": "connector joining the two names",
+            "formation": "Ja links the names without changing their forms."
+          },
+          {
+            "finnish": "Liisa.",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "identity or category given after olla",
+            "formation": "Liisa is a person's name and keeps its basic form here."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Me on Anna ja Liisa."],
+          "category": "question-answer-relationship",
+          "explanation": "Use the requested plural person: me olemme, te olette or he ovat. A reply addressing the original speakers uses te olette; a group speaking about itself uses me olemme. The requested reply is “He ovat Anna ja Liisa.”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-e19"
+    }
+  ]
+}

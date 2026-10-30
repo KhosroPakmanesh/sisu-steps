@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { TopicPack } from '@/features/learning/shared/content/topic-pack.models';
+import { QUESTION_TARGETS } from '@/features/learning/shared/content/validation/question-family-targets';
 import { topicPackToSummary } from '@/features/learning/shared/content/pack-summary.mapper';
 import { alignLearnerStateWithPacks } from '@/features/learning/shared/state/align-learner-state.policy';
 import { createEmptyLearnerState } from '@/features/learning/shared/state/learner-state.factory';
@@ -10,7 +11,8 @@ describe('installing the partitive family', () => {
   it('preserves all fourteen existing packs’ study data and backup data', async () => {
     const packs = (await loadContentSource('content')).packs as unknown as TopicPack[];
     const previous = packs.filter(
-      (p) => !p.id.startsWith('partitive-') && !p.id.startsWith('genitive-'),
+      (p) =>
+        !p.id.startsWith('partitive-') && !p.id.startsWith('genitive-') && !QUESTION_TARGETS[p.id],
     );
     expect(previous).toHaveLength(14);
     const state = createEmptyLearnerState(

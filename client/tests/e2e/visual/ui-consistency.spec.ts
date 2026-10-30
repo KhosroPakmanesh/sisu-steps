@@ -334,8 +334,8 @@ for (const theme of ['Day', 'Night']) {
       expect(expected.punchedMargin.content).not.toBe('none');
       expect(expected.punchedMargin.backgroundImage).toContain('radial-gradient');
       await expectNoInternalOverflow(statsLedger);
-      await expect(statsLedger.locator('.stats-row')).toHaveCount(6);
-      await expect(statsLedger.getByRole('button', { name: 'Clear test history' })).toHaveCount(6);
+      await expect(statsLedger.locator('.stats-row')).toHaveCount(5);
+      await expect(statsLedger.getByRole('button', { name: 'Clear test history' })).toHaveCount(5);
       expect(
         await statsLedger
           .locator('.stats-clear-cell')

@@ -2,6 +2,28 @@
 
 ## Unreleased
 
+### Question words and answers
+
+- Add seven `0 - A1.3` packs covering who/what/which, place and direction, time,
+  how/why, description/colour/appearance, nationality, and negative information
+  questions. Teach full replies, natural short answers and negative/corrective
+  replies as well as questions,
+  including nobody/nothing replies and correcting an assumed negative situation.
+  The family contains 36 lessons, 36 Focused tests, seven Reviews, 864 scored
+  questions and 108 independent optional items.
+- Preserve all original 30 packs and their compatible learner progress. New packs use the
+  established lesson format, Focused tests and final Reviews, with independent
+  source/runtime checks and recorded pedagogy assessments.
+- Correct natural answer alternatives, negative mastery pairs and options, full
+  reason replies, plural classification, supporting forms, vocabulary declarations,
+  Review retrievals, origin feedback and noun/verb agreement guards. Advance all
+  seven family packs to `1.1.0`. Their old scored history, sessions, mistakes,
+  corrections and lesson completions are intentionally discarded by existing
+  alignment/backup handling; still-owned notes and all original 30 packs’ data
+  remain compatible. No storage migration is introduced.
+- Keep the final group heading and worked examples accessible on long paper
+  sheets by making decorative corner cuts independent of sheet height.
+
 ### Partitive worked examples
 
 - Remove the repeated opening grammar rule from 96 worked examples across 23 Partitive lessons. Keep the rule in the grammar teaching and preserve each example's meaning and sentence-specific construction notes. Content versions and learner progress remain compatible.

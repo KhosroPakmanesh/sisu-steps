@@ -13,7 +13,16 @@ main.page-shell .topic-grid {
     transparent 0 1.95rem,
     var(--notebook-rule) 1.95rem 2rem
   );
-  clip-path: polygon(0 0.2rem, 1rem 0, 99.4% 0.16rem, 100% 97%, 98% 100%, 0 99%);
+
+  /* Fixed corner cuts keep long catalogs and worked examples inside the paper. */
+  clip-path: polygon(
+    0 0.2rem,
+    1rem 0,
+    calc(100% - 0.3rem) 0.16rem,
+    100% calc(100% - 0.8rem),
+    calc(100% - 0.8rem) 100%,
+    0 calc(100% - 0.3rem)
+  );
   box-shadow: none;
   filter: drop-shadow(0.3rem 0.4rem 0 var(--paper-edge))
     drop-shadow(0.55rem 0.75rem 0.8rem var(--notebook-shadow));

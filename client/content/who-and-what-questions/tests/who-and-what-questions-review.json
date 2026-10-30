@@ -1,0 +1,1353 @@
+{
+  "id": "who-and-what-questions-review",
+  "title": "Who and what questions review",
+  "focus": "Ask and answer bounded who-, what- and which-questions about people, things, activities and substances.",
+  "stage": "review",
+  "targetSkills": [
+    "Kuka: asking and answering about one person",
+    "Ketkä: asking and answering about several people",
+    "Mikä: identifying or choosing one thing",
+    "Mitkä: selecting several things",
+    "Mitä: classifying several things",
+    "Mitä: asking and answering about actions and objects",
+    "Mitä: identifying a substance"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": [
+    "qw-kuka-singular",
+    "qw-ketka-plural",
+    "qw-mika-singular",
+    "qw-mitka-plural",
+    "qw-mita-plural-classification",
+    "qw-mita-actions",
+    "qw-mita-substances"
+  ],
+  "exercises": [
+    {
+      "id": "qw-kuka-singular-review-q1",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “Who are you?” in Finnish. Use olet (“you are”), sinä (“you”). Address one person (sinä).",
+      "acceptedAnswers": ["Kuka sinä olet?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. A pronoun stands in place of a name or noun. Kuka asks who a person is. In a neutral question, put kuka first: Kuka sinä olet? (“Who are you?”). Do not add -ko/-kö. The complete question means “Who are you”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-sina"],
+      "requiredSkills": ["Kuka: asking and answering about one person"],
+      "vocabulary": [],
+      "targetSkill": "Kuka: asking and answering about one person",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who are you?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Kuka",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka is the basic singular human question pronoun."
+          },
+          {
+            "finnish": "sinä",
+            "meaning": "you",
+            "baseForm": "sinä",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Sinä addresses one person informally."
+          },
+          {
+            "finnish": "olet?",
+            "meaning": "you are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the singular you-form olet: ole- + -t."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-kuka-singular-review-q2",
+      "options": ["Missä sinä olet?", "Kuka sinä olet?", "Miksi sinä olet?"],
+      "optionFeedback": {
+        "Kuka sinä olet?": "Singular refers to one person or one thing in these patterns. A pronoun stands in place of a name or noun. Kuka asks who a person is. In a neutral question, put kuka first: Kuka sinä olet? (“Who are you?”). Do not add -ko/-kö. The complete question means “Who are you”.",
+        "Missä sinä olet?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi sinä olet?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-kuka-singular-review-a1",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Minä olen lääkäri.” into English.",
+      "acceptedAnswers": ["I am a doctor.", "I'm a doctor."],
+      "explanation": "Singular refers to one person or one thing in these patterns. A pronoun stands in place of a name or noun. Answer from your own point of view: sinä olet (“you are”) in the question becomes minä olen (“I am”) in your reply. Hän on stays hän on when both speakers mean the same other person. Minä and sinä may be omitted with olen and olet; keep hän when referring to another person. In a role game, Kuka minä olen? (“Who am I?”) receives Sinä olet… (“You are…”), because the reply addresses the original speaker. The complete reply means “I am a doctor”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-sina"],
+      "requiredSkills": ["Kuka: asking and answering about one person"],
+      "vocabulary": ["lääkäri"],
+      "targetSkill": "Kuka: asking and answering about one person",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "I am a doctor.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Minä",
+            "meaning": "I",
+            "baseForm": "minä",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Minä is the singular first-person subject pronoun, used by a speaker about themself."
+          },
+          {
+            "finnish": "olen",
+            "meaning": "I am",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the I-form olen: ole- + -n. The ending identifies the speaker."
+          },
+          {
+            "finnish": "lääkäri.",
+            "meaning": "doctor",
+            "baseForm": "lääkäri",
+            "role": "identity or category given after olla",
+            "formation": "Lääkäri is the basic singular noun meaning doctor."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-kuka-singular-review-a2"
+    },
+    {
+      "id": "qw-ketka-plural-review-q1",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “Who are you?” in Finnish. Use olette (“you are”), te (“you”).",
+      "acceptedAnswers": ["Ketkä te olette?", "Ketkä olette?"],
+      "explanation": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are you”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who are you?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Ketkä",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka has the irregular plural basic form ketkä."
+          },
+          {
+            "finnish": "te",
+            "meaning": "you",
+            "baseForm": "te",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Te addresses more than one person in these dialogues."
+          },
+          {
+            "finnish": "olette?",
+            "meaning": "you are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the plural you-form olette: ole- + -tte."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Kuka te olette?"],
+          "category": "question-answer-relationship",
+          "explanation": "Kuka asks who a person is or who acts. The requested question is “Ketkä te olette?”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-review-q2"
+    },
+    {
+      "id": "qw-ketka-plural-review-a1",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “We are Liisa and Matti.” in Finnish.",
+      "acceptedAnswers": ["Me olemme Liisa ja Matti."],
+      "explanation": "When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “We are Liisa and Matti”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "We are Liisa and Matti.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla + connector joining the two names + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Me",
+            "meaning": "we",
+            "baseForm": "me",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Me includes the speaker and at least one other person."
+          },
+          {
+            "finnish": "olemme",
+            "meaning": "we are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the we-form olemme: ole- + -mme."
+          },
+          {
+            "finnish": "Liisa",
+            "meaning": "Liisa",
+            "baseForm": "Liisa",
+            "role": "identity or category given after olla",
+            "formation": "Liisa is a person's name and keeps its basic form here."
+          },
+          {
+            "finnish": "ja",
+            "meaning": "and",
+            "baseForm": "ja",
+            "role": "connector joining the two names",
+            "formation": "Ja links the names without changing their forms."
+          },
+          {
+            "finnish": "Matti.",
+            "meaning": "Matti",
+            "baseForm": "Matti",
+            "role": "identity or category given after olla",
+            "formation": "Matti is a person's name and keeps its basic form here."
+          }
+        ]
+      },
+      "tokens": ["Matti.", "ja", "Liisa", "olemme", "Me"],
+      "parallelExerciseId": "qw-ketka-plural-review-a2"
+    },
+    {
+      "id": "qw-mika-singular-review-q1",
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Complete “Which bag is new?”: ____ laukku on uusi? Write the full sentence. Use laukku (“bag”), on (“is”), uusi (“new”). Ask about one countable thing.",
+      "acceptedAnswers": ["Mikä laukku on uusi?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. An adjective is a word that describes a quality. Use mikä to identify one countable thing or select one item. Mikä tämä on? (“What is this?”) asks for an identity; Mikä kirja on uusi? (“Which book is new?”) selects a book. The complete question means “Which bag is new”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mikä: identifying or choosing one thing"],
+      "vocabulary": [],
+      "targetSkill": "Mikä: identifying or choosing one thing",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Which bag is new?",
+        "pattern": "question modifier (asks which item or group) + subject (who or what this sentence is about) + verb (the action or state) + description of what the subject is like",
+        "parts": [
+          {
+            "finnish": "Mikä",
+            "meaning": "what or which",
+            "baseForm": "mikä",
+            "role": "question modifier (asks which item or group)",
+            "formation": "Mikä identifies or selects one thing in its basic form."
+          },
+          {
+            "finnish": "laukku",
+            "meaning": "bag",
+            "baseForm": "laukku",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Laukku is the basic singular form with strong kk."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          },
+          {
+            "finnish": "uusi?",
+            "meaning": "new",
+            "baseForm": "uusi",
+            "role": "description of what the subject is like",
+            "formation": "Uusi is the basic singular adjective meaning new."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mitä laukku on uusi?"],
+          "category": "question-answer-relationship",
+          "explanation": "Mitä asks about the substance or the object/activity in the taught patterns. The requested question is “Mikä laukku on uusi?”"
+        }
+      ],
+      "parallelExerciseId": "qw-mika-singular-review-q2"
+    },
+    {
+      "id": "qw-mika-singular-review-a1",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “That bag is new.” in Finnish.",
+      "acceptedAnswers": ["Tuo laukku on uusi."],
+      "explanation": "Singular refers to one person or one thing in these patterns. An adjective is a word that describes a quality. Replace the missing identity or selection with the requested noun phrase. A single countable thing stays in the basic form: Tämä on kirja (“This is a book”). In a selection answer, give the distinguishing description: Tämä kirja on uusi (“This book is new”). The complete reply means “That bag is new”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mikä: identifying or choosing one thing"],
+      "vocabulary": [],
+      "targetSkill": "Mikä: identifying or choosing one thing",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "That bag is new.",
+        "pattern": "modifier identifying which subject is meant + subject (who or what this sentence is about) + verb (the action or state) + description of what the subject is like",
+        "parts": [
+          {
+            "finnish": "Tuo",
+            "meaning": "that",
+            "baseForm": "tuo",
+            "role": "modifier identifying which subject is meant",
+            "formation": "Tuo points to one person or thing farther from the speaker."
+          },
+          {
+            "finnish": "laukku",
+            "meaning": "bag",
+            "baseForm": "laukku",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Laukku is the basic singular form with strong kk."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          },
+          {
+            "finnish": "uusi.",
+            "meaning": "new",
+            "baseForm": "uusi",
+            "role": "description of what the subject is like",
+            "formation": "Uusi is the basic singular adjective meaning new."
+          }
+        ]
+      },
+      "tokens": ["uusi.", "on", "laukku", "Tuo"],
+      "parallelExerciseId": "qw-mika-singular-review-a2"
+    },
+    {
+      "id": "qw-mitka-plural-review-q1",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “Which cars are new?” in Finnish. Use autot (“cars”), ovat (“are”), uusia (“new”).",
+      "acceptedAnswers": ["Mitkä autot ovat uusia?"],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Mitkä selects several identifiable things from a group: Mitkä kirjat ovat uusia? (“Which books are new?”). The accompanying noun takes its plural basic form. The complete question means “Which cars are new”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitkä: selecting several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitkä: selecting several things",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Which cars are new?",
+        "pattern": "question modifier (asks which item or group) + subject (who or what this sentence is about) + verb (the action or state) + description of what the subject is like",
+        "parts": [
+          {
+            "finnish": "Mitkä",
+            "meaning": "which",
+            "baseForm": "mikä",
+            "role": "question modifier (asks which item or group)",
+            "formation": "Mitkä is the plural basic form of mikä, selecting several identifiable things."
+          },
+          {
+            "finnish": "autot",
+            "meaning": "cars",
+            "baseForm": "auto",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Auto + plural -t gives autot."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "uusia?",
+            "meaning": "new",
+            "baseForm": "uusi",
+            "role": "description of what the subject is like",
+            "formation": "Uusi has the taught plural partitive uusia."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-mitka-plural-review-q2",
+      "options": ["Missä autot ovat uusia?", "Mitkä autot ovat uusia?", "Miksi autot ovat uusia?"],
+      "optionFeedback": {
+        "Mitkä autot ovat uusia?": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Mitkä selects several identifiable things from a group: Mitkä kirjat ovat uusia? (“Which books are new?”). The accompanying noun takes its plural basic form. The complete question means “Which cars are new”.",
+        "Missä autot ovat uusia?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi autot ovat uusia?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-mitka-plural-review-a1",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “These cars are new.” in Finnish.",
+      "acceptedAnswers": ["Nämä autot ovat uusia."],
+      "explanation": "Plural means more than one in this grammatical pattern. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Identify the selected group with a plural phrase: Nämä kirjat ovat uusia (“These books are new”). The supplied descriptive forms explain the selected items. This is selection, distinct from Mitä nämä ovat? (“What are these?”), which asks for classification. The complete reply means “These cars are new”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitkä: selecting several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitkä: selecting several things",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "These cars are new.",
+        "pattern": "modifier identifying which subject is meant + subject (who or what this sentence is about) + verb (the action or state) + description of what the subject is like",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "baseForm": "tämä",
+            "role": "modifier identifying which subject is meant",
+            "formation": "Nämä is the plural basic form of tämä and agrees with the following plural noun."
+          },
+          {
+            "finnish": "autot",
+            "meaning": "cars",
+            "baseForm": "auto",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Auto + plural -t gives autot."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "uusia.",
+            "meaning": "new",
+            "baseForm": "uusi",
+            "role": "description of what the subject is like",
+            "formation": "Uusi has the taught plural partitive uusia."
+          }
+        ]
+      },
+      "tokens": ["uusia.", "ovat", "autot", "Nämä"],
+      "parallelExerciseId": "qw-mitka-plural-review-a2"
+    },
+    {
+      "id": "qw-mita-plural-classification-review-q1",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “What are they?” in Finnish. Use ne (“they (things)”), ovat (“are”). Ask for a category.",
+      "acceptedAnswers": ["Mitä ne ovat?"],
+      "explanation": "Mitä ne ovat? means “What are they?” Mitä asks for a category; the plural subject uses ovat and the category takes the supplied plural partitive.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitä: classifying several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: classifying several things",
+      "misconceptionCategory": "plural-classification",
+      "sentenceExplanation": {
+        "translation": "What are they?",
+        "pattern": "question asking for the objects’ category + plural subject (the things being classified) + verb",
+        "parts": [
+          {
+            "finnish": "Mitä",
+            "meaning": "what",
+            "baseForm": "mikä",
+            "role": "question asking for the objects’ category",
+            "formation": "Mitä is the partitive form of mikä. With a plural subject and ovat, it asks for the category of the objects here; mitkä selects identifiable objects instead."
+          },
+          {
+            "finnish": "ne",
+            "meaning": "they (things)",
+            "baseForm": "se",
+            "role": "plural subject (the things being classified)",
+            "formation": "Ne is the plural subject pronoun for things here; use the plural verb ovat."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä ne ovat?"],
+          "category": "plural-classification",
+          "explanation": "Use mitä for the category question and ovat with a plural subject. The category reply uses the supplied plural partitive."
+        }
+      ],
+      "parallelExerciseId": "qw-mita-plural-classification-review-q2"
+    },
+    {
+      "id": "qw-mita-plural-classification-review-a1",
+      "type": "word-order",
+      "instruction": "Order the words.",
+      "prompt": "Write “They are cups.” in Finnish. Use Ne (“they (things)”), kuppeja (“cups”).",
+      "acceptedAnswers": ["Ne ovat kuppeja."],
+      "explanation": "Ne ovat kuppeja. means “They are cups.” Mitä asks for a category; the plural subject uses ovat and the category takes the supplied plural partitive.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitä: classifying several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: classifying several things",
+      "misconceptionCategory": "plural-classification",
+      "sentenceExplanation": {
+        "translation": "They are cups.",
+        "pattern": "plural subject (the things being classified) + verb + category of the plural subject",
+        "parts": [
+          {
+            "finnish": "Ne",
+            "meaning": "they (things)",
+            "baseForm": "se",
+            "role": "plural subject (the things being classified)",
+            "formation": "Ne is the plural subject pronoun for things here; use the plural verb ovat."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "kuppeja.",
+            "meaning": "cups",
+            "baseForm": "kuppi",
+            "role": "category of the plural subject",
+            "formation": "Use the supplied complete plural form kuppeja for the category reply."
+          }
+        ]
+      },
+      "tokens": ["kuppeja.", "ovat", "Ne"],
+      "parallelExerciseId": "qw-mita-plural-classification-review-a2"
+    },
+    {
+      "id": "qw-mita-actions-review-q1",
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Complete “What are you eating?”: ____ sinä syöt? Write the full sentence. Use sinä (“you”), syöt (“you eat”). Address one person (sinä).",
+      "acceptedAnswers": ["Mitä sinä syöt?", "Mitä syöt?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Mitä is the partitive form of mikä. It asks about the thing in these familiar action patterns: Mitä juot? (“What are you drinking?”). Mitä teet? asks what activity you are doing. The complete verb forms are provided. The complete question means “What are you eating”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mitä: asking and answering about actions and objects"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: asking and answering about actions and objects",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "What are you eating?",
+        "pattern": "object question (asks what the action concerns) + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Mitä",
+            "meaning": "what",
+            "baseForm": "mikä",
+            "role": "object question (asks what the action concerns)",
+            "formation": "Mitä is the partitive form of mikä; its use follows the taught object or substance pattern."
+          },
+          {
+            "finnish": "sinä",
+            "meaning": "you",
+            "baseForm": "sinä",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Sinä addresses one person informally."
+          },
+          {
+            "finnish": "syöt?",
+            "meaning": "you eat",
+            "baseForm": "syödä",
+            "role": "verb (the action or state)",
+            "formation": "Syö- + singular second-person -t gives syöt."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä sinä syöt?"],
+          "category": "question-answer-relationship",
+          "explanation": "Mikä identifies or selects one countable thing. The requested question is “Mitä sinä syöt?”"
+        }
+      ],
+      "parallelExerciseId": "qw-mita-actions-review-q2"
+    },
+    {
+      "id": "qw-mita-actions-review-a1",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “I am eating porridge.” in Finnish.",
+      "acceptedAnswers": ["Syön puuroa."],
+      "explanation": "Answer with the corresponding activity or object, not kyllä (“yes”). Here juoda (“drink”) and syödä (“eat”) describe an unspecified amount, and lukea (“read”) describes an activity in progress, so the object uses the partitive. Use vettä (“water”), leipää (“bread”) and kirjaa (“a book”) in these bounded situations. The complete reply means “I am eating porridge”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mitä: asking and answering about actions and objects"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: asking and answering about actions and objects",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "I am eating porridge.",
+        "pattern": "verb (the action or state) + object (the thing the action concerns)",
+        "parts": [
+          {
+            "finnish": "Syön",
+            "meaning": "I eat",
+            "baseForm": "syödä",
+            "role": "verb (the action or state)",
+            "formation": "Syödä removes -dä and adds -n: syö- + -n gives syön."
+          },
+          {
+            "finnish": "puuroa.",
+            "meaning": "porridge",
+            "baseForm": "puuro",
+            "role": "object (the thing the action concerns)",
+            "formation": "Puuro + -a gives puuroa."
+          }
+        ]
+      },
+      "tokens": ["puuroa.", "Syön"],
+      "parallelExerciseId": "qw-mita-actions-review-a2"
+    },
+    {
+      "id": "qw-mita-substances-review-q1",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “What is this?” in Finnish. Use on (“is”), tämä (“this”). Ask about a substance.",
+      "acceptedAnswers": ["Mitä tämä on?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Use mitä with olla when asking what a substance is: Mitä tämä on? (“What is this?” about an unidentified substance). This is why mikä with olla and mitä with other verbs is not a universal rule. The complete question means “What is this”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mitä: identifying a substance"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: identifying a substance",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "What is this?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Mitä",
+            "meaning": "what",
+            "baseForm": "mikä",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Mitä is the partitive form of mikä; its use follows the taught object or substance pattern."
+          },
+          {
+            "finnish": "tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Tämä identifies one nearby person or thing; it stays in its basic form here."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-mita-substances-review-q2",
+      "options": ["Missä tämä on?", "Mitä tämä on?", "Miksi tämä on?"],
+      "optionFeedback": {
+        "Mitä tämä on?": "Singular refers to one person or one thing in these patterns. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Use mitä with olla when asking what a substance is: Mitä tämä on? (“What is this?” about an unidentified substance). This is why mikä with olla and mitä with other verbs is not a universal rule. The complete question means “What is this”.",
+        "Missä tämä on?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi tämä on?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-mita-substances-review-a1",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “This is cheese.” in Finnish.",
+      "acceptedAnswers": ["Tämä on juustoa."],
+      "explanation": "Singular refers to one person or one thing in these patterns. Name the substance in the singular partitive: Tämä on vettä (“This is water”). A short reply Vettä is also natural. The question is about what the material is, not how much there is or what one countable object is. The complete reply means “This is cheese”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mitä: identifying a substance"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: identifying a substance",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "This is cheese.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Tämä",
+            "meaning": "this",
+            "baseForm": "tämä",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Tämä identifies one nearby person or thing; it stays in its basic form here."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          },
+          {
+            "finnish": "juustoa.",
+            "meaning": "cheese",
+            "baseForm": "juusto",
+            "role": "identity or category given after olla",
+            "formation": "Juusto + -a gives juustoa."
+          }
+        ]
+      },
+      "tokens": ["juustoa.", "on", "Tämä"],
+      "parallelExerciseId": "qw-mita-substances-review-a2"
+    },
+    {
+      "id": "qw-kuka-singular-review-q2",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “Who is she?” in Finnish. Use hän (“he or she”), on (“is”).",
+      "acceptedAnswers": ["Kuka hän on?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. A pronoun stands in place of a name or noun. Kuka asks who a person is. In a neutral question, put kuka first: Kuka sinä olet? (“Who are you?”). Do not add -ko/-kö. The complete question means “Who is she”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-sina"],
+      "requiredSkills": ["Kuka: asking and answering about one person"],
+      "vocabulary": [],
+      "targetSkill": "Kuka: asking and answering about one person",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who is she?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Kuka",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka is the basic singular human question pronoun."
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-kuka-singular-review-q1",
+      "options": ["Missä hän on?", "Kuka hän on?", "Miksi hän on?"],
+      "optionFeedback": {
+        "Kuka hän on?": "Singular refers to one person or one thing in these patterns. A pronoun stands in place of a name or noun. Kuka asks who a person is. In a neutral question, put kuka first: Kuka sinä olet? (“Who are you?”). Do not add -ko/-kö. The complete question means “Who is she”.",
+        "Missä hän on?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi hän on?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-kuka-singular-review-a2",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Hän on opiskelija.” into English.",
+      "acceptedAnswers": [
+        "She is a student.",
+        "He is a student.",
+        "He or she is a student.",
+        "He's a student.",
+        "She's a student.",
+        "He or she's a student."
+      ],
+      "explanation": "Singular refers to one person or one thing in these patterns. Answer from your own point of view: sinä olet (“you are”) in the question becomes minä olen (“I am”) in your reply. Hän on stays hän on when both speakers mean the same other person. Minä and sinä may be omitted with olen and olet; keep hän when referring to another person. In a role game, Kuka minä olen? (“Who am I?”) receives Sinä olet… (“You are…”), because the reply addresses the original speaker. The complete reply means “She is a student”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-sina"],
+      "requiredSkills": ["Kuka: asking and answering about one person"],
+      "vocabulary": ["opiskelija"],
+      "targetSkill": "Kuka: asking and answering about one person",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "She is a student.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          },
+          {
+            "finnish": "opiskelija.",
+            "meaning": "student",
+            "baseForm": "opiskelija",
+            "role": "identity or category given after olla",
+            "formation": "Opiskelija is the basic singular noun meaning student."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-kuka-singular-review-a1"
+    },
+    {
+      "id": "qw-ketka-plural-review-q2",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “Who are they?” in Finnish. Use he (“they”), ovat (“are”).",
+      "acceptedAnswers": ["Ketkä he ovat?"],
+      "explanation": "Plural means more than one in this grammatical pattern. Ketkä asks which people or who several people are. Use plural olla forms: Ketkä te olette? (“Who are you?” addressed to a group). The complete question means “Who are they”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Who are they?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Ketkä",
+            "meaning": "who",
+            "baseForm": "kuka",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Kuka has the irregular plural basic form ketkä."
+          },
+          {
+            "finnish": "he",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Kuka he ovat?"],
+          "category": "question-answer-relationship",
+          "explanation": "Kuka asks who a person is or who acts. The requested question is “Ketkä he ovat?”"
+        }
+      ],
+      "parallelExerciseId": "qw-ketka-plural-review-q1"
+    },
+    {
+      "id": "qw-ketka-plural-review-a2",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “They are Mikko and Matti.” in Finnish.",
+      "acceptedAnswers": ["He ovat Mikko ja Matti."],
+      "explanation": "Plural means more than one in this grammatical pattern. When a group is addressed as te, its reply uses me olemme (“we are”). When both speakers mean another group, keep he ovat (“they are”). Profession words describing the members normally take the plural partitive: opettajia (“teachers”). The complete profession forms are provided here. In a role game, Ketkä me olemme? (“Who are we?”) receives Te olette… (“You are…” addressed to the group). The complete reply means “They are Mikko and Matti”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "person-te"],
+      "requiredSkills": ["Ketkä: asking and answering about several people"],
+      "vocabulary": [],
+      "targetSkill": "Ketkä: asking and answering about several people",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "They are Mikko and Matti.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla + connector joining the two names + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "He",
+            "meaning": "they",
+            "baseForm": "he",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "He refers to other people; this is Finnish plural he."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "Mikko",
+            "meaning": "Mikko",
+            "baseForm": "Mikko",
+            "role": "identity or category given after olla",
+            "formation": "Mikko is a person's name and keeps its basic form here."
+          },
+          {
+            "finnish": "ja",
+            "meaning": "and",
+            "baseForm": "ja",
+            "role": "connector joining the two names",
+            "formation": "Ja links the names without changing their forms."
+          },
+          {
+            "finnish": "Matti.",
+            "meaning": "Matti",
+            "baseForm": "Matti",
+            "role": "identity or category given after olla",
+            "formation": "Matti is a person's name and keeps its basic form here."
+          }
+        ]
+      },
+      "tokens": ["Matti.", "ja", "Mikko", "ovat", "He"],
+      "parallelExerciseId": "qw-ketka-plural-review-a1"
+    },
+    {
+      "id": "qw-mika-singular-review-q2",
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Complete “What is that?”: ____ tuo on? Write the full sentence. Use on (“is”), tuo (“that”). Ask about one countable thing.",
+      "acceptedAnswers": ["Mikä tuo on?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. Use mikä to identify one countable thing or select one item. Mikä tämä on? (“What is this?”) asks for an identity; Mikä kirja on uusi? (“Which book is new?”) selects a book. The complete question means “What is that”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mikä: identifying or choosing one thing"],
+      "vocabulary": [],
+      "targetSkill": "Mikä: identifying or choosing one thing",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "What is that?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Mikä",
+            "meaning": "what or which",
+            "baseForm": "mikä",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Mikä identifies or selects one thing in its basic form."
+          },
+          {
+            "finnish": "tuo",
+            "meaning": "that",
+            "baseForm": "tuo",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Tuo points to one person or thing farther from the speaker."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mitä tuo on?"],
+          "category": "question-answer-relationship",
+          "explanation": "Mitä asks about the substance or the object/activity in the taught patterns. The requested question is “Mikä tuo on?”"
+        }
+      ],
+      "parallelExerciseId": "qw-mika-singular-review-q1"
+    },
+    {
+      "id": "qw-mika-singular-review-a2",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “That is a key.” in Finnish.",
+      "acceptedAnswers": ["Tuo on avain."],
+      "explanation": "Singular refers to one person or one thing in these patterns. Replace the missing identity or selection with the requested noun phrase. A single countable thing stays in the basic form: Tämä on kirja (“This is a book”). In a selection answer, give the distinguishing description: Tämä kirja on uusi (“This book is new”). The complete reply means “That is a key”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mikä: identifying or choosing one thing"],
+      "vocabulary": [],
+      "targetSkill": "Mikä: identifying or choosing one thing",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "That is a key.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Tuo",
+            "meaning": "that",
+            "baseForm": "tuo",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Tuo points to one person or thing farther from the speaker."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          },
+          {
+            "finnish": "avain.",
+            "meaning": "key",
+            "baseForm": "avain",
+            "role": "identity or category given after olla",
+            "formation": "Avain stays in its basic singular form here."
+          }
+        ]
+      },
+      "tokens": ["avain.", "on", "Tuo"],
+      "parallelExerciseId": "qw-mika-singular-review-a1"
+    },
+    {
+      "id": "qw-mitka-plural-review-q2",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “Which bags are red?” in Finnish. Use laukut (“bags”), ovat (“are”), punaisia (“red”).",
+      "acceptedAnswers": ["Mitkä laukut ovat punaisia?"],
+      "explanation": "Plural means more than one in this grammatical pattern. Mitkä selects several identifiable things from a group: Mitkä kirjat ovat uusia? (“Which books are new?”). The accompanying noun takes its plural basic form. The complete question means “Which bags are red”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitkä: selecting several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitkä: selecting several things",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Which bags are red?",
+        "pattern": "question modifier (asks which item or group) + subject (who or what this sentence is about) + verb (the action or state) + description of what the subject is like",
+        "parts": [
+          {
+            "finnish": "Mitkä",
+            "meaning": "which",
+            "baseForm": "mikä",
+            "role": "question modifier (asks which item or group)",
+            "formation": "Mitkä is the plural basic form of mikä, selecting several identifiable things."
+          },
+          {
+            "finnish": "laukut",
+            "meaning": "bags",
+            "baseForm": "laukku",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Laukku changes kk to k before plural -t: laukut."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "punaisia?",
+            "meaning": "red",
+            "baseForm": "punainen",
+            "role": "description of what the subject is like",
+            "formation": "Punainen changes -nen to -sia: punaisia."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-mitka-plural-review-q1",
+      "options": [
+        "Missä laukut ovat punaisia?",
+        "Mitkä laukut ovat punaisia?",
+        "Miksi laukut ovat punaisia?"
+      ],
+      "optionFeedback": {
+        "Mitkä laukut ovat punaisia?": "Plural means more than one in this grammatical pattern. Mitkä selects several identifiable things from a group: Mitkä kirjat ovat uusia? (“Which books are new?”). The accompanying noun takes its plural basic form. The complete question means “Which bags are red”.",
+        "Missä laukut ovat punaisia?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi laukut ovat punaisia?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-mitka-plural-review-a2",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “Those bags are red.” in Finnish.",
+      "acceptedAnswers": ["Nuo laukut ovat punaisia."],
+      "explanation": "Plural means more than one in this grammatical pattern. Identify the selected group with a plural phrase: Nämä kirjat ovat uusia (“These books are new”). The supplied descriptive forms explain the selected items. This is selection, distinct from Mitä nämä ovat? (“What are these?”), which asks for classification. The complete reply means “Those bags are red”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitkä: selecting several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitkä: selecting several things",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "Those bags are red.",
+        "pattern": "modifier identifying which subject is meant + subject (who or what this sentence is about) + verb (the action or state) + description of what the subject is like",
+        "parts": [
+          {
+            "finnish": "Nuo",
+            "meaning": "those",
+            "baseForm": "tuo",
+            "role": "modifier identifying which subject is meant",
+            "formation": "Nuo is the plural basic form of tuo and agrees with the following plural noun."
+          },
+          {
+            "finnish": "laukut",
+            "meaning": "bags",
+            "baseForm": "laukku",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Laukku changes kk to k before plural -t: laukut."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "punaisia.",
+            "meaning": "red",
+            "baseForm": "punainen",
+            "role": "description of what the subject is like",
+            "formation": "Punainen changes -nen to -sia: punaisia."
+          }
+        ]
+      },
+      "tokens": ["punaisia.", "ovat", "laukut", "Nuo"],
+      "parallelExerciseId": "qw-mitka-plural-review-a1"
+    },
+    {
+      "id": "qw-mita-plural-classification-review-q2",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “What are these?” in Finnish. Use nämä (“these”), ovat (“are”). Ask for a category.",
+      "acceptedAnswers": ["Mitä nämä ovat?"],
+      "explanation": "Mitä nämä ovat? means “What are these?” Mitä asks for a category; the plural subject uses ovat and the category takes the supplied plural partitive.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitä: classifying several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: classifying several things",
+      "misconceptionCategory": "plural-classification",
+      "sentenceExplanation": {
+        "translation": "What are these?",
+        "pattern": "question asking for the objects’ category + plural subject (the objects being classified) + verb",
+        "parts": [
+          {
+            "finnish": "Mitä",
+            "meaning": "what",
+            "baseForm": "mikä",
+            "role": "question asking for the objects’ category",
+            "formation": "Mitä is the partitive form of mikä. With a plural subject and ovat, it asks for the category of the objects here; mitkä selects identifiable objects instead."
+          },
+          {
+            "finnish": "nämä",
+            "meaning": "these",
+            "baseForm": "tämä",
+            "role": "plural subject (the objects being classified)",
+            "formation": "Nämä is the plural of tämä (“this”). It stands alone as the subject here and takes the plural verb ovat or eivät ole."
+          },
+          {
+            "finnish": "ovat?",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä nämä ovat?"],
+          "category": "plural-classification",
+          "explanation": "Use mitä for the category question and ovat with a plural subject. The category reply uses the supplied plural partitive."
+        }
+      ],
+      "parallelExerciseId": "qw-mita-plural-classification-review-q1"
+    },
+    {
+      "id": "qw-mita-plural-classification-review-a2",
+      "type": "word-order",
+      "instruction": "Order the words.",
+      "prompt": "Write “These are chairs.” in Finnish. Use Nämä (“these”), tuoleja (“chairs”).",
+      "acceptedAnswers": ["Nämä ovat tuoleja."],
+      "explanation": "Nämä ovat tuoleja. means “These are chairs.” Mitä asks for a category; the plural subject uses ovat and the category takes the supplied plural partitive.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-plural"],
+      "requiredSkills": ["Mitä: classifying several things"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: classifying several things",
+      "misconceptionCategory": "plural-classification",
+      "sentenceExplanation": {
+        "translation": "These are chairs.",
+        "pattern": "plural subject (the objects being classified) + verb + category of the plural subject",
+        "parts": [
+          {
+            "finnish": "Nämä",
+            "meaning": "these",
+            "baseForm": "tämä",
+            "role": "plural subject (the objects being classified)",
+            "formation": "Nämä is the plural of tämä (“this”). It stands alone as the subject here and takes the plural verb ovat or eivät ole."
+          },
+          {
+            "finnish": "ovat",
+            "meaning": "are",
+            "baseForm": "olla",
+            "role": "verb",
+            "formation": "Olla has the irregular plural third-person form ovat."
+          },
+          {
+            "finnish": "tuoleja.",
+            "meaning": "chairs",
+            "baseForm": "tuoli",
+            "role": "category of the plural subject",
+            "formation": "Use the supplied complete plural form tuoleja for the category reply."
+          }
+        ]
+      },
+      "tokens": ["tuoleja.", "ovat", "Nämä"],
+      "parallelExerciseId": "qw-mita-plural-classification-review-a1"
+    },
+    {
+      "id": "qw-mita-actions-review-q2",
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Complete “What is she reading?”: ____ hän lukee? Write the full sentence. Use hän (“he or she”), lukee (“reads”).",
+      "acceptedAnswers": ["Mitä hän lukee?"],
+      "explanation": "A stem is the part of a word to which an ending is attached. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Mitä is the partitive form of mikä. It asks about the thing in these familiar action patterns: Mitä juot? (“What are you drinking?”). Mitä teet? asks what activity you are doing. The complete verb forms are provided. The complete question means “What is she reading”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mitä: asking and answering about actions and objects"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: asking and answering about actions and objects",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "What is she reading?",
+        "pattern": "object question (asks what the action concerns) + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Mitä",
+            "meaning": "what",
+            "baseForm": "mikä",
+            "role": "object question (asks what the action concerns)",
+            "formation": "Mitä is the partitive form of mikä; its use follows the taught object or substance pattern."
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "lukee?",
+            "meaning": "reads",
+            "baseForm": "lukea",
+            "role": "verb (the action or state)",
+            "formation": "Use the strong stem luke- and lengthen final e: lukee."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Mikä hän lukee?"],
+          "category": "question-answer-relationship",
+          "explanation": "Mikä identifies or selects one countable thing. The requested question is “Mitä hän lukee?”"
+        }
+      ],
+      "parallelExerciseId": "qw-mita-actions-review-q1"
+    },
+    {
+      "id": "qw-mita-actions-review-a2",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “She is reading a newspaper.” in Finnish.",
+      "acceptedAnswers": ["Hän lukee lehteä."],
+      "explanation": "A stem is the part of a word to which an ending is attached. Answer with the corresponding activity or object, not kyllä (“yes”). Here juoda (“drink”) and syödä (“eat”) describe an unspecified amount, and lukea (“read”) describes an activity in progress, so the object uses the partitive. Use vettä (“water”), leipää (“bread”) and kirjaa (“a book”) in these bounded situations. The complete reply means “She is reading a newspaper”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mitä: asking and answering about actions and objects"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: asking and answering about actions and objects",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "She is reading a newspaper.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + object (the thing the action concerns)",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "lukee",
+            "meaning": "reads",
+            "baseForm": "lukea",
+            "role": "verb (the action or state)",
+            "formation": "Use the strong stem luke- and lengthen final e: lukee."
+          },
+          {
+            "finnish": "lehteä.",
+            "meaning": "a newspaper",
+            "baseForm": "lehti",
+            "role": "object (the thing the action concerns)",
+            "formation": "Lehti uses the stem lehte- with -ä: lehteä."
+          }
+        ]
+      },
+      "tokens": ["lehteä.", "lukee", "Hän"],
+      "parallelExerciseId": "qw-mita-actions-review-a1"
+    },
+    {
+      "id": "qw-mita-substances-review-q2",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “What is it?” in Finnish. Use on (“is”), se (“it”). Ask about a substance.",
+      "acceptedAnswers": ["Mitä se on?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Use mitä with olla when asking what a substance is: Mitä tämä on? (“What is this?” about an unidentified substance). This is why mikä with olla and mitä with other verbs is not a universal rule. The complete question means “What is it”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mitä: identifying a substance"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: identifying a substance",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "What is it?",
+        "pattern": "question asking a person's or thing's identity + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Mitä",
+            "meaning": "what",
+            "baseForm": "mikä",
+            "role": "question asking a person's or thing's identity",
+            "formation": "Mitä is the partitive form of mikä; its use follows the taught object or substance pattern."
+          },
+          {
+            "finnish": "se",
+            "meaning": "it",
+            "baseForm": "se",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Se refers to the thing already being discussed in these replies."
+          },
+          {
+            "finnish": "on?",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-mita-substances-review-q1",
+      "options": ["Missä se on?", "Mitä se on?", "Miksi se on?"],
+      "optionFeedback": {
+        "Mitä se on?": "Singular refers to one person or one thing in these patterns. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Use mitä with olla when asking what a substance is: Mitä tämä on? (“What is this?” about an unidentified substance). This is why mikä with olla and mitä with other verbs is not a universal rule. The complete question means “What is it”.",
+        "Missä se on?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi se on?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-mita-substances-review-a2",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “It is water.” in Finnish.",
+      "acceptedAnswers": ["Se on vettä."],
+      "explanation": "Singular refers to one person or one thing in these patterns. The partitive is a word form used here for an amount, an action's object, or a substance or group description. Name the substance in the singular partitive: Tämä on vettä (“This is water”). A short reply Vettä is also natural. The question is about what the material is, not how much there is or what one countable object is. The complete reply means “It is water”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish", "form-singular"],
+      "requiredSkills": ["Mitä: identifying a substance"],
+      "vocabulary": [],
+      "targetSkill": "Mitä: identifying a substance",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "It is water.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + identity or category given after olla",
+        "parts": [
+          {
+            "finnish": "Se",
+            "meaning": "it",
+            "baseForm": "se",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Se refers to the thing already being discussed in these replies."
+          },
+          {
+            "finnish": "on",
+            "meaning": "is",
+            "baseForm": "olla",
+            "role": "verb (the action or state)",
+            "formation": "Olla has the irregular singular third-person form on."
+          },
+          {
+            "finnish": "vettä.",
+            "meaning": "water",
+            "baseForm": "vesi",
+            "role": "identity or category given after olla",
+            "formation": "Vesi has the irregular singular partitive vettä. Learn this common form directly."
+          }
+        ]
+      },
+      "tokens": ["vettä.", "on", "Se"],
+      "parallelExerciseId": "qw-mita-substances-review-a1"
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "id": "time-questions-review",
+  "title": "Time questions review",
+  "focus": "Ask when and at what time, and answer with everyday time expressions, weekdays and bounded clock times.",
+  "stage": "review",
+  "targetSkills": [
+    "Milloin: answering with everyday time expressions",
+    "Milloin: answering with weekdays",
+    "Mihin aikaan: answering with clock times"
+  ],
+  "prerequisiteSkills": [],
+  "lessonIds": ["qw-milloin-times", "qw-milloin-weekdays", "qw-clock-times"],
+  "exercises": [
+    {
+      "id": "qw-milloin-times-review-q1",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “When do you eat?” in Finnish. Use sinä (“you”), syöt (“you eat”). Address one person (sinä).",
+      "acceptedAnswers": ["Milloin sinä syöt?"],
+      "explanation": "Singular refers to one person or one thing in these patterns. Milloin asks when something happens. Put it before the supplied clause: Milloin sinä tulet? (“When are you coming?”). Present-tense Finnish can describe a planned future event when a time word makes the meaning clear. The complete question means “When do you eat”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with everyday time expressions"],
+      "vocabulary": [],
+      "targetSkill": "Milloin: answering with everyday time expressions",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "When do you eat?",
+        "pattern": "question asking for the time + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Milloin",
+            "meaning": "when",
+            "baseForm": "milloin",
+            "role": "question asking for the time",
+            "formation": "Milloin asks for the time of an event."
+          },
+          {
+            "finnish": "sinä",
+            "meaning": "you",
+            "baseForm": "sinä",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Sinä addresses one person informally."
+          },
+          {
+            "finnish": "syöt?",
+            "meaning": "you eat",
+            "baseForm": "syödä",
+            "role": "verb (the action or state)",
+            "formation": "Syö- + singular second-person -t gives syöt."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-milloin-times-review-q2",
+      "options": ["Missä sinä syöt?", "Milloin sinä syöt?", "Miksi sinä syöt?"],
+      "optionFeedback": {
+        "Milloin sinä syöt?": "Singular refers to one person or one thing in these patterns. Milloin asks when something happens. Put it before the supplied clause: Milloin sinä tulet? (“When are you coming?”). Present-tense Finnish can describe a planned future event when a time word makes the meaning clear. The complete question means “When do you eat”.",
+        "Missä sinä syöt?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi sinä syöt?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-milloin-times-review-a1",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Syön aamulla.” into English.",
+      "acceptedAnswers": ["I eat in the morning."],
+      "explanation": "Answer with a time expression such as tänään (“today”), huomenna (“tomorrow”), nyt (“now”), aamulla (“in the morning”) or illalla (“in the evening”). These taught expressions are learned as complete forms. A full reply includes the appropriate verb; a short time expression also answers milloin. The complete reply means “I eat in the morning”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with everyday time expressions"],
+      "vocabulary": ["syödä", "aamu"],
+      "targetSkill": "Milloin: answering with everyday time expressions",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "I eat in the morning.",
+        "pattern": "verb (the action or state) + time",
+        "parts": [
+          {
+            "finnish": "Syön",
+            "meaning": "I eat",
+            "baseForm": "syödä",
+            "role": "verb (the action or state)",
+            "formation": "Syödä removes -dä and adds -n: syö- + -n gives syön."
+          },
+          {
+            "finnish": "aamulla.",
+            "meaning": "in the morning",
+            "baseForm": "aamu",
+            "role": "time",
+            "formation": "Aamu + -lla gives the conventional time expression aamulla."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-milloin-times-review-a2"
+    },
+    {
+      "id": "qw-milloin-weekdays-review-q1",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “She reads on Wednesday.” in Finnish. Use Hän (“he or she”), lukee (“reads”). Use keskiviikko (“Wednesday”).",
+      "acceptedAnswers": ["Hän lukee keskiviikkona."],
+      "explanation": "Hän lukee keskiviikkona. means “She reads on Wednesday.” Koska introduces the reason; the verb agrees with its subject.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with weekdays"],
+      "vocabulary": [],
+      "targetSkill": "Milloin: answering with weekdays",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "She reads on Wednesday.",
+        "pattern": "subject + verb + time",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "lukee",
+            "meaning": "reads",
+            "baseForm": "lukea",
+            "role": "verb",
+            "formation": "Use the strong stem luke- and lengthen final e: lukee."
+          },
+          {
+            "finnish": "keskiviikkona.",
+            "meaning": "on Wednesday",
+            "baseForm": "keskiviikko",
+            "role": "time",
+            "formation": "Keskiviikko retains kk before -na: keskiviikkona."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-milloin-weekdays-review-q2"
+    },
+    {
+      "id": "qw-milloin-weekdays-review-a1",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “I read on Saturday.” in Finnish.",
+      "acceptedAnswers": ["Luen lauantaina."],
+      "explanation": "A stem is the part of a word to which an ending is attached. A weak stem uses the changed consonants shown in the construction steps; the strong stem keeps the corresponding strong consonants. Use the complete weekday form after the supplied verb: Tulen tiistaina (“I am coming on Tuesday”). A short reply Tiistaina is natural. The ordinary weekday names in this lesson all take -na; do not add an English-style preposition. The complete reply means “I read on Saturday”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with weekdays"],
+      "vocabulary": [],
+      "targetSkill": "Milloin: answering with weekdays",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "I read on Saturday.",
+        "pattern": "verb (the action or state) + time",
+        "parts": [
+          {
+            "finnish": "Luen",
+            "meaning": "I read",
+            "baseForm": "lukea",
+            "role": "verb (the action or state)",
+            "formation": "Lukea removes final -a, drops k in the weak stem, and adds -n: lue- + -n gives luen."
+          },
+          {
+            "finnish": "lauantaina.",
+            "meaning": "on Saturday",
+            "baseForm": "lauantai",
+            "role": "time",
+            "formation": "Lauantai + -na gives lauantaina."
+          }
+        ]
+      },
+      "tokens": ["lauantaina.", "Luen"],
+      "parallelExerciseId": "qw-milloin-weekdays-review-a2"
+    },
+    {
+      "id": "qw-clock-times-review-q1",
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Complete “At what time are you going?”: ____ aikaan sinä menet? Write the full sentence. Use menet (“you go”), sinä (“you”). Address one person (sinä).",
+      "acceptedAnswers": [
+        "Mihin aikaan sinä menet?",
+        "Mihin aikaan menet?",
+        "Milloin sinä menet?",
+        "Milloin menet?"
+      ],
+      "explanation": "Singular refers to one person or one thing in these patterns. The illative is an into/to form; mihin aikaan uses that form in a time expression. Mihin aikaan asks at what time. Here the phrase asks about time rather than a destination. Use the complete phrase before the supplied clause. Milloin can also request a clock time; mihin aikaan makes that request explicit. The complete question means “At what time are you going”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mihin aikaan: answering with clock times"],
+      "vocabulary": [],
+      "targetSkill": "Mihin aikaan: answering with clock times",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "At what time are you going?",
+        "pattern": "modifier asking at what time + time noun in the clock-time question + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Mihin",
+            "meaning": "at what",
+            "baseForm": "mikä",
+            "role": "modifier asking at what time",
+            "formation": "Mihin is the illative question form; in mihin aikaan it instead asks at what time."
+          },
+          {
+            "finnish": "aikaan",
+            "meaning": "at a time",
+            "baseForm": "aika",
+            "role": "time noun in the clock-time question",
+            "formation": "Aika keeps strong k and takes the illative -an: aikaan, in the complete question phrase mihin aikaan."
+          },
+          {
+            "finnish": "sinä",
+            "meaning": "you",
+            "baseForm": "sinä",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Sinä addresses one person informally."
+          },
+          {
+            "finnish": "menet?",
+            "meaning": "you go",
+            "baseForm": "mennä",
+            "role": "verb (the action or state)",
+            "formation": "Mene- + singular second-person -t gives menet."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Missä sinä menet?"],
+          "category": "question-answer-relationship",
+          "explanation": "Missä asks for a location: where. The requested question is “Mihin aikaan sinä menet?”"
+        }
+      ],
+      "parallelExerciseId": "qw-clock-times-review-q2"
+    },
+    {
+      "id": "qw-clock-times-review-a1",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “I am going at ten o'clock.” in Finnish.",
+      "acceptedAnswers": ["Menen kello kymmenen."],
+      "explanation": "For the whole-hour times in this lesson, answer kello + number: kello kaksi (“at two o'clock”). Do not add a separate Finnish word for at. The numbers are supplied; calculating, half-hours and quarter-hours are outside this target. The complete reply means “I am going at ten o'clock”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mihin aikaan: answering with clock times"],
+      "vocabulary": [],
+      "targetSkill": "Mihin aikaan: answering with clock times",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "I am going at ten o'clock.",
+        "pattern": "verb (the action or state) + marker introducing a clock time + hour number in the clock-time answer",
+        "parts": [
+          {
+            "finnish": "Menen",
+            "meaning": "I go",
+            "baseForm": "mennä",
+            "role": "verb (the action or state)",
+            "formation": "Mennä removes -nä and adds e to form mene-, then adds -n: menen."
+          },
+          {
+            "finnish": "kello",
+            "meaning": "at a clock time",
+            "baseForm": "kello",
+            "role": "marker introducing a clock time",
+            "formation": "Kello before a number introduces a clock time; do not add a separate word for at."
+          },
+          {
+            "finnish": "kymmenen.",
+            "meaning": "ten",
+            "baseForm": "kymmenen",
+            "role": "hour number in the clock-time answer",
+            "formation": "Kymmenen is the supplied number ten."
+          }
+        ]
+      },
+      "tokens": ["kymmenen.", "kello", "Menen"],
+      "parallelExerciseId": "qw-clock-times-review-a2"
+    },
+    {
+      "id": "qw-milloin-times-review-q2",
+      "type": "multiple-choice",
+      "instruction": "Choose the correct sentence.",
+      "prompt": "Write “When does she read?” in Finnish. Use hän (“he or she”), lukee (“reads”).",
+      "acceptedAnswers": ["Milloin hän lukee?"],
+      "explanation": "A stem is the part of a word to which an ending is attached. Milloin asks when something happens. Put it before the supplied clause: Milloin sinä tulet? (“When are you coming?”). Present-tense Finnish can describe a planned future event when a time word makes the meaning clear. The complete question means “When does she read”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with everyday time expressions"],
+      "vocabulary": [],
+      "targetSkill": "Milloin: answering with everyday time expressions",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "When does she read?",
+        "pattern": "question asking for the time + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Milloin",
+            "meaning": "when",
+            "baseForm": "milloin",
+            "role": "question asking for the time",
+            "formation": "Milloin asks for the time of an event."
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "lukee?",
+            "meaning": "reads",
+            "baseForm": "lukea",
+            "role": "verb (the action or state)",
+            "formation": "Use the strong stem luke- and lengthen final e: lukee."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-milloin-times-review-q1",
+      "options": ["Missä hän lukee?", "Milloin hän lukee?", "Miksi hän lukee?"],
+      "optionFeedback": {
+        "Milloin hän lukee?": "A stem is the part of a word to which an ending is attached. Milloin asks when something happens. Put it before the supplied clause: Milloin sinä tulet? (“When are you coming?”). Present-tense Finnish can describe a planned future event when a time word makes the meaning clear. The complete question means “When does she read”.",
+        "Missä hän lukee?": "This form asks for a different relationship or gives a location instead of the requested source. Match the complete intended meaning.",
+        "Miksi hän lukee?": "Choose the question word for the requested information; keep the complete intended meaning."
+      }
+    },
+    {
+      "id": "qw-milloin-times-review-a2",
+      "type": "translation-en",
+      "instruction": "Write your answer.",
+      "prompt": "Translate “Hän lukee illalla.” into English.",
+      "acceptedAnswers": [
+        "She reads in the evening.",
+        "He reads in the evening.",
+        "He or she reads in the evening."
+      ],
+      "explanation": "A stem is the part of a word to which an ending is attached. Answer with a time expression such as tänään (“today”), huomenna (“tomorrow”), nyt (“now”), aamulla (“in the morning”) or illalla (“in the evening”). These taught expressions are learned as complete forms. A full reply includes the appropriate verb; a short time expression also answers milloin. The complete reply means “She reads in the evening”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with everyday time expressions"],
+      "vocabulary": ["hän", "lukea", "ilta"],
+      "targetSkill": "Milloin: answering with everyday time expressions",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "She reads in the evening.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + time",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "lukee",
+            "meaning": "reads",
+            "baseForm": "lukea",
+            "role": "verb (the action or state)",
+            "formation": "Use the strong stem luke- and lengthen final e: lukee."
+          },
+          {
+            "finnish": "illalla.",
+            "meaning": "in the evening",
+            "baseForm": "ilta",
+            "role": "time",
+            "formation": "Ilta changes lt to ll and adds -lla: illalla."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-milloin-times-review-a1"
+    },
+    {
+      "id": "qw-milloin-weekdays-review-q2",
+      "type": "translation-fi",
+      "instruction": "Write your answer.",
+      "prompt": "Write “She reads on Saturday.” in Finnish. Use Hän (“he or she”), lukee (“reads”). Use lauantai (“Saturday”).",
+      "acceptedAnswers": ["Hän lukee lauantaina."],
+      "explanation": "Hän lukee lauantaina. means “She reads on Saturday.” Koska introduces the reason; the verb agrees with its subject.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with weekdays"],
+      "vocabulary": [],
+      "targetSkill": "Milloin: answering with weekdays",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "She reads on Saturday.",
+        "pattern": "subject + verb + time",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "lukee",
+            "meaning": "reads",
+            "baseForm": "lukea",
+            "role": "verb",
+            "formation": "Use the strong stem luke- and lengthen final e: lukee."
+          },
+          {
+            "finnish": "lauantaina.",
+            "meaning": "on Saturday",
+            "baseForm": "lauantai",
+            "role": "time",
+            "formation": "Lauantai + -na gives lauantaina."
+          }
+        ]
+      },
+      "parallelExerciseId": "qw-milloin-weekdays-review-q1"
+    },
+    {
+      "id": "qw-milloin-weekdays-review-a2",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “She reads on Sunday.” in Finnish.",
+      "acceptedAnswers": ["Hän lukee sunnuntaina."],
+      "explanation": "A stem is the part of a word to which an ending is attached. Use the complete weekday form after the supplied verb: Tulen tiistaina (“I am coming on Tuesday”). A short reply Tiistaina is natural. The ordinary weekday names in this lesson all take -na; do not add an English-style preposition. The complete reply means “She reads on Sunday”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Milloin: answering with weekdays"],
+      "vocabulary": [],
+      "targetSkill": "Milloin: answering with weekdays",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "She reads on Sunday.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + time",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "lukee",
+            "meaning": "reads",
+            "baseForm": "lukea",
+            "role": "verb (the action or state)",
+            "formation": "Use the strong stem luke- and lengthen final e: lukee."
+          },
+          {
+            "finnish": "sunnuntaina.",
+            "meaning": "on Sunday",
+            "baseForm": "sunnuntai",
+            "role": "time",
+            "formation": "Sunnuntai + -na gives sunnuntaina."
+          }
+        ]
+      },
+      "tokens": ["sunnuntaina.", "lukee", "Hän"],
+      "parallelExerciseId": "qw-milloin-weekdays-review-a1"
+    },
+    {
+      "id": "qw-clock-times-review-q2",
+      "type": "fill-blank",
+      "instruction": "Write the complete sentence.",
+      "prompt": "Complete “At what time is she going?”: ____ aikaan hän menee? Write the full sentence. Use hän (“he or she”), menee (“goes”).",
+      "acceptedAnswers": ["Mihin aikaan hän menee?", "Milloin hän menee?"],
+      "explanation": "The illative is an into/to form; mihin aikaan uses that form in a time expression. Mihin aikaan asks at what time. Here the phrase asks about time rather than a destination. Use the complete phrase before the supplied clause. Milloin can also request a clock time; mihin aikaan makes that request explicit. The complete question means “At what time is she going”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mihin aikaan: answering with clock times"],
+      "vocabulary": [],
+      "targetSkill": "Mihin aikaan: answering with clock times",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "At what time is she going?",
+        "pattern": "modifier asking at what time + time noun in the clock-time question + subject (who or what this sentence is about) + verb (the action or state)",
+        "parts": [
+          {
+            "finnish": "Mihin",
+            "meaning": "at what",
+            "baseForm": "mikä",
+            "role": "modifier asking at what time",
+            "formation": "Mihin is the illative question form; in mihin aikaan it instead asks at what time."
+          },
+          {
+            "finnish": "aikaan",
+            "meaning": "at a time",
+            "baseForm": "aika",
+            "role": "time noun in the clock-time question",
+            "formation": "Aika keeps strong k and takes the illative -an: aikaan, in the complete question phrase mihin aikaan."
+          },
+          {
+            "finnish": "hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "menee?",
+            "meaning": "goes",
+            "baseForm": "mennä",
+            "role": "verb (the action or state)",
+            "formation": "Lengthen the final e of mene-: menee."
+          }
+        ]
+      },
+      "answerDiagnostics": [
+        {
+          "answers": ["Missä hän menee?"],
+          "category": "question-answer-relationship",
+          "explanation": "Missä asks for a location: where. The requested question is “Mihin aikaan hän menee?”"
+        }
+      ],
+      "parallelExerciseId": "qw-clock-times-review-q1"
+    },
+    {
+      "id": "qw-clock-times-review-a2",
+      "type": "word-order",
+      "instruction": "Put the words in order.",
+      "prompt": "Build “She is going at one o'clock.” in Finnish.",
+      "acceptedAnswers": ["Hän menee kello yksi."],
+      "explanation": "For the whole-hour times in this lesson, answer kello + number: kello kaksi (“at two o'clock”). Do not add a separate Finnish word for at. The numbers are supplied; calculating, half-hours and quarter-hours are outside this target. The complete reply means “She is going at one o'clock”.",
+      "tags": ["question-words", "sentence", "standard-written-finnish"],
+      "requiredSkills": ["Mihin aikaan: answering with clock times"],
+      "vocabulary": [],
+      "targetSkill": "Mihin aikaan: answering with clock times",
+      "misconceptionCategory": "question-answer-relationship",
+      "sentenceExplanation": {
+        "translation": "She is going at one o'clock.",
+        "pattern": "subject (who or what this sentence is about) + verb (the action or state) + marker introducing a clock time + hour number in the clock-time answer",
+        "parts": [
+          {
+            "finnish": "Hän",
+            "meaning": "he or she",
+            "baseForm": "hän",
+            "role": "subject (who or what this sentence is about)",
+            "formation": "Hän refers to one other person without specifying gender."
+          },
+          {
+            "finnish": "menee",
+            "meaning": "goes",
+            "baseForm": "mennä",
+            "role": "verb (the action or state)",
+            "formation": "Lengthen the final e of mene-: menee."
+          },
+          {
+            "finnish": "kello",
+            "meaning": "at a clock time",
+            "baseForm": "kello",
+            "role": "marker introducing a clock time",
+            "formation": "Kello before a number introduces a clock time; do not add a separate word for at."
+          },
+          {
+            "finnish": "yksi.",
+            "meaning": "one",
+            "baseForm": "yksi",
+            "role": "hour number in the clock-time answer",
+            "formation": "Yksi is the supplied number one."
+          }
+        ]
+      },
+      "tokens": ["yksi.", "kello", "menee", "Hän"],
+      "parallelExerciseId": "qw-clock-times-review-a1"
+    }
+  ]
+}

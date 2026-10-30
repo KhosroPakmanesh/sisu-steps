@@ -2,6 +2,7 @@ import { validateNumberPracticeNovelty } from './number-practice-novelty.mjs';
 import { validatePartitiveFamily } from '../partitives/partitive-family.mjs';
 import { validateFocusedTaskQuality } from './focused-task-quality.mjs';
 import { validateGenitiveFamily } from '../genitives/genitive-family.mjs';
+import { validateQuestionFamily } from '../questions/question-family.mjs';
 import { validateFocusedNumberScopes } from './focused-number-scopes.mjs';
 import { existsSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
@@ -44,6 +45,7 @@ export async function validatePackContent(pack) {
   errors.push(...validateFocusedNumberScopes(pack));
   errors.push(...validatePartitiveFamily(pack));
   errors.push(...validateGenitiveFamily(pack));
+  errors.push(...validateQuestionFamily(pack));
   errors.push(...validateNumberPracticeNovelty(pack));
   errors.push(...validateOwnershipQuestionVariety(pack));
   const hasTextArray = (value) =>

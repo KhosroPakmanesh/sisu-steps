@@ -93,45 +93,48 @@ for (const appearance of ['Day', 'Night']) {
       await expect(radio).toBeChecked();
     });
 
-    test('reflows routed content at 150% and 200% without reducing text', async ({ page }) => {
-      test.setTimeout(120_000);
-      for (const pixels of [24, 32]) {
-        for (const route of [
-          '/',
-          `/topics/${TOPIC}`,
-          LESSON,
-          `/learn/${TOPIC}/location-transfer-review`,
-          STUDY,
-          '/stats',
-          '/backup',
-          `/stats/${TOPIC}`,
-          `/mistakes/${TOPIC}`,
-          `/review/${TOPIC}`,
-        ]) {
-          await page.goto(route);
-          await page.locator('main h1').first().waitFor();
-          await resizeText(page, pixels);
-          await expectReadablePage(page);
-          const picker = page.locator('.lesson-picker select');
-          if (route.endsWith('/location-transfer-review') && (await picker.isVisible())) {
-            await picker.focus();
-            await page.keyboard.press('Home');
-            await page.keyboard.press('ArrowDown');
-            await page.keyboard.press('Enter');
-            await expect(picker).toHaveValue('1');
-            await expect(page.locator('.reader-heading h2')).toHaveText(
-              'Neutral vowels in ending choice',
-            );
+    for (const pixels of [24, 32]) {
+      test(
+        'reflows routed content at ' + (pixels / 16) * 100 + '% without reducing text',
+        async ({ page }) => {
+          test.setTimeout(120_000);
+          for (const route of [
+            '/',
+            `/topics/${TOPIC}`,
+            LESSON,
+            `/learn/${TOPIC}/location-transfer-review`,
+            STUDY,
+            '/stats',
+            '/backup',
+            `/stats/${TOPIC}`,
+            `/mistakes/${TOPIC}`,
+            `/review/${TOPIC}`,
+          ]) {
+            await page.goto(route);
+            await page.locator('main h1').first().waitFor();
+            await resizeText(page, pixels);
+            await expectReadablePage(page);
+            const picker = page.locator('.lesson-picker select');
+            if (route.endsWith('/location-transfer-review') && (await picker.isVisible())) {
+              await picker.focus();
+              await page.keyboard.press('Home');
+              await page.keyboard.press('ArrowDown');
+              await page.keyboard.press('Enter');
+              await expect(picker).toHaveValue('1');
+              await expect(page.locator('.reader-heading h2')).toHaveText(
+                'Saying “in” with -ssa and -ssä',
+              );
+            }
+            if (route === LESSON) {
+              await expect(page.locator('.teaching-section p').first()).toHaveCSS(
+                'font-size',
+                `${pixels}px`,
+              );
+            }
           }
-          if (route === LESSON) {
-            await expect(page.locator('.teaching-section p').first()).toHaveCSS(
-              'font-size',
-              `${pixels}px`,
-            );
-          }
-        }
-      }
-    });
+        },
+      );
+    }
 
     test('keeps navigation and Appearance operable and restores normal geometry', async ({
       page,
